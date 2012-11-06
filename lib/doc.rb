@@ -1,11 +1,12 @@
-require 'pathname'
-ROOT = Pathname.new(File.expand_path('../../', __FILE__))
-#$:.unshift((ROOT + 'lib').to_s)
-#require 'cocoapods-core'
+require 'yard'
+require 'redcarpet'
+require 'pygments'
 
 module Pod
   module Doc
     class Base
+      TEMPLATE = File.expand_path('../template.erb', __FILE__)
+
       attr_reader :source_file
 
       def initialize(source_file)
@@ -215,14 +216,3 @@ module Pod
   end
 end
 
-desc "Genereates the documentation"
-task :doc do
-  require 'yard'
-  require 'redcarpet'
-  require 'pygments'
-
-  dsl_file = (ROOT + 'lib/cocoapods-core/specification/dsl.rb').to_s
-  html_file = ROOT + 'doc/specification.html'
-  Pod::Doc::Specification.new(dsl_file).render(html_file)
-  sh "open #{html_file}"
-end
