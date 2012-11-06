@@ -1,6 +1,7 @@
 require 'yard'
 require 'redcarpet'
 require 'pygments'
+require 'active_support/core_ext/string/inflections'
 
 module Pod
   module Doc
@@ -13,6 +14,10 @@ module Pod
         @source_file = source_file
       end
 
+      def output_file
+        File.expand_path("../../#{name.underscore}.html", __FILE__)
+      end
+
       def sections
         %w{ Podfile Specification Commands }
       end
@@ -21,9 +26,9 @@ module Pod
         self.class.name.split('::').last
       end
 
-      def render(output_file)
+      def render
         require 'erb'
-        template = ERB.new(File.read(ROOT + 'doc/template.erb'))
+        template = ERB.new(File.read(TEMPLATE))
         File.open(output_file, 'w') { |f| f.puts(template.result(binding)) }
       end
 
@@ -198,17 +203,6 @@ module Pod
     end
 
     class Podfile < DSL
-    end
-
-    class Specification < DSL
-      def group_sort_order
-        [
-          ['Root specification'],
-          ['File patterns', 'Dependencies'],
-          ['Build configuration'],
-          ['Platform', 'Multi-Platform support', 'Hooks']
-        ]
-      end
     end
 
     class Commands < Base
