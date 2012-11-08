@@ -5,6 +5,7 @@ require 'active_support/core_ext/string/inflections'
 
 module Pod
   module Doc
+
     class Base
       TEMPLATE = File.expand_path('../template.erb', __FILE__)
 
@@ -24,6 +25,60 @@ module Pod
 
       def name
         self.class.name.split('::').last
+      end
+
+      def description
+        yard_dsl_module ? yard_dsl_module.docstring : yard_object.docstring
+      end
+
+      def yard_object
+        yard_registry.at("Pod::#{name}")
+      end
+
+      # Currently nil for the specification class
+      #
+      def yard_dsl_module
+        yard_registry.at("Pod::#{name}::DSL")
+      end
+
+      # @return [Array<YARD::CodeObjects::MethodObject>]
+      #
+      def yard_methods
+        objets = [yard_object, yard_dsl_module]
+        objets.compact.map(&:meths).flatten
+      end
+
+      def groups
+        unless @groups
+          @groups = []
+
+          yard_methods.each do |yard_method|
+            group = DSL::Group.new(yard_method.group)
+            if existing = @groups.find { |g| g.name == group.name }
+              group = existing
+            else
+              @groups << group
+            end
+            method = group.add_method(yard_method)
+          end
+        end
+        @groups
+      end
+
+      def group_sort_order
+        []
+      end
+
+      def columns
+        group_sort_order.map do |column|
+          column.map do |group_name|
+            if group = groups.find { |g| g.name == group_name }
+              group
+            else
+              raise "Unable to find group with name: #{group_name}"
+            end
+          end
+        end
       end
 
       def render
@@ -51,12 +106,25 @@ module Pod
       def self.syntax_highlight(code, lang = 'ruby')
         Pygments.highlight(code, :lexer => lang, :options => { :encoding => 'utf-8' })
       end
+
+      private
+
+      def yard_registry
+        @registry ||= begin
+          YARD::Registry.load([@source_file], true)
+          YARD::Registry
+        end
+      end
     end
 
+    # Provides suppor for the DSLs
+    #
     class DSL < Base
 
-      #------------------------------------------------------------------------#
+      #-----------------------------------------------------------------------#
 
+      #
+      #
       class Group
         attr_reader :methods
 
@@ -83,8 +151,10 @@ module Pod
         end
       end
 
-      #------------------------------------------------------------------------#
+      #-----------------------------------------------------------------------#
 
+      #
+      #
       class Method
         attr_accessor :group
 
@@ -97,7 +167,7 @@ module Pod
         end
 
         def to_param
-          name
+          name.parameterize
         end
 
         def description
@@ -152,58 +222,9 @@ module Pod
           @attribute ||= Pod::Specification.attributes.find { |attr| attr.reader_name.to_s == name }
         end
       end
-
-      #------------------------------------------------------------------------#
-
-      def description
-        yard_registry.at("Pod::#{name}").docstring
-      end
-
-      def group_sort_order
-        []
-      end
-
-      def columns
-        group_sort_order.map do |column|
-          column.map do |group_name|
-            if group = groups.find { |g| g.name == group_name }
-              group
-            else
-              raise "Unable to find group with name: #{group_name}"
-            end
-          end
-        end
-      end
-
-      def groups
-        unless @groups
-          @groups = []
-
-          yard_registry.all(:method).each do |yard_method|
-            group = Group.new(yard_method.group)
-            if existing = @groups.find { |g| g.name == group.name }
-              group = existing
-            else
-              @groups << group
-            end
-            method = group.add_method(yard_method)
-          end
-        end
-        @groups
-      end
-
-      private
-
-      def yard_registry
-        @registry ||= begin
-          YARD::Registry.load([@source_file], true)
-          YARD::Registry
-        end
-      end
     end
 
-    class Podfile < DSL
-    end
+    #--------------------------------------------------------------------------#
 
     class Commands < Base
     end

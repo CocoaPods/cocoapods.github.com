@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Podfile Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+
+<!-- BODY ******************************************************************-->
+
+<body>
+<div class="container">
+<div id="body">
+
+  <div id="sections-container">
+      <ul>
+        
+          
+            <li id="current_section">
+            <h3><a href="#tab_podfile">Podfile</a></h1>
+            </li>
+          
+        
+          
+            <li>
+            <h3><a href="specification.html">Specification</a></h1>
+            </li>
+          
+        
+          
+            <li>
+            <h3><a href="commands.html">Commands</a></h1>
+            </li>
+          
+        
+      </ul>
+  </div>
+
+
+  <!-- HEADER **************************************************************-->
+
+  <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+            
+              <h2><a class="select-tab" href="#tab_dependencies-group">Dependencies</a></h2>
+              
+                <p><a class="select-tab" href="#tab_target">target</a></p>
+              
+                <p><a class="select-tab" href="#tab_pod">pod</a></p>
+              
+                <p><a class="select-tab" href="#tab_podspec">podspec</a></p>
+              
+            
+            </div>
+          
+            <div class="span3">
+            
+              <h2><a class="select-tab" href="#tab_target-configuration-group">Target configuration</a></h2>
+              
+                <p><a class="select-tab" href="#tab_platform">platform</a></p>
+              
+                <p><a class="select-tab" href="#tab_xcodeproj">xcodeproj</a></p>
+              
+                <p><a class="select-tab" href="#tab_link_with">link_with</a></p>
+              
+                <p><a class="select-tab" href="#tab_inhibit_all_warnings">inhibit_all_warnings!</a></p>
+              
+            
+            </div>
+          
+            <div class="span3">
+            
+              <h2><a class="select-tab" href="#tab_workspace-group">Workspace</a></h2>
+              
+                <p><a class="select-tab" href="#tab_workspace">workspace</a></p>
+              
+                <p><a class="select-tab" href="#tab_generate_bridge_support">generate_bridge_support!</a></p>
+              
+                <p><a class="select-tab" href="#tab_set_arc_compatibility_flag">set_arc_compatibility_flag!</a></p>
+              
+            
+            </div>
+          
+            <div class="span3">
+            
+              <h2><a class="select-tab" href="#tab_hooks-group">Hooks</a></h2>
+              
+                <p><a class="select-tab" href="#tab_pre_install">pre_install</a></p>
+              
+                <p><a class="select-tab" href="#tab_post_install">post_install</a></p>
+              
+            
+            </div>
+          
+        </div>
+      </div>
+  </div>
+
+  <div id="content-container">
+
+      <!-- TABS *************************************************************-->
+
+      <div class="tab-content">
+        <div id="tab_podfile" class="tab-pane">
+          <h2>Podfile</h2>
+          <p><p>The Podfile is a specification that describes the dependencies of the
+targets of an Xcode project.</p>
+</p>
+        </div>
+
+        
+          <div id="tab_dependencies-group" class="tab-pane">
+            <h2>Dependencies</h2>
+            <p></p>
+          </div>
+
+          
+            <div id="tab_target" class="tab-pane">
+              <h2>
+                target
+                
+                
+              </h2>
+              <p><p>Defines a new static library target and scopes dependencies defined from
+the given block. The target will by default include the dependencies
+defined outside of the block, unless the <code>:exclusive =&gt; true</code> option is
+given.</p>
+
+<hr>
+
+<p>The Podfile creates a global target named <code>:default</code> which produces the
+<code>libPods.a</code> file. This target is linked with the first target of user
+project if not value is specified for the <code>link_with</code> attribute.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+                <hr>
+                <h3>Examples:</h3>
+                
+                  <div class="highlight"><pre><span class="n">target</span> <span class="ss">:debug</span> <span class="k">do</span>
+  <span class="n">pod</span> <span class="s1">&#39;SSZipArchive&#39;</span>
+<span class="k">end</span>
+</pre></div>
+                
+                  <div class="highlight"><pre><span class="n">target</span> <span class="ss">:test</span><span class="p">,</span> <span class="ss">:exclusive</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span>
+  <span class="n">pod</span> <span class="s1">&#39;JSONKit&#39;</span>
+<span class="k">end</span>
+</pre></div>
+                
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+            <div id="tab_pod" class="tab-pane">
+              <h2>
+                pod
+                
+                
+              </h2>
+              <p><p>Specifies a dependency of the project.</p>
+
+<p>A dependency requirement is defined by the name of the Pod and optionally
+a list of version requirements.</p>
+
+<hr>
+
+<p>External sources (except <code>:podspec</code>) require a podspec in the root of
+the library.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+                <hr>
+                <h3>Examples:</h3>
+                
+                  <div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;SSZipArchive&#39;</span>
+</pre></div>
+                
+                  <div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;Objection&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;  0.9&#39;</span>
+<span class="n">pod</span> <span class="s1">&#39;Objection&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 0.9&#39;</span>
+<span class="n">pod</span> <span class="s1">&#39;Objection&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 0.5&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt; 0.9&#39;</span>
+</pre></div>
+                
+                  <div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;TTTFormatterKit&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/gowalla/AFNetworking.git&#39;</span>
+<span class="n">pod</span> <span class="s1">&#39;TTTFormatterKit&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/gowalla/AFNetworking.git&#39;</span><span class="p">,</span> <span class="ss">:commit</span> <span class="o">=&gt;</span> <span class="s1">&#39;082f8319af&#39;</span>
+<span class="n">pod</span> <span class="s1">&#39;JSONKit&#39;</span><span class="p">,</span> <span class="ss">:podspec</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://raw.github.com/gist/1346394/1d26570f68ca27377a27430c65841a0880395d72/JSONKit.podspec&#39;</span>
+<span class="n">pod</span> <span class="s1">&#39;JSONKit&#39;</span><span class="p">,</span> <span class="ss">:local</span> <span class="o">=&gt;</span> <span class="s1">&#39;path/to/JSONKit&#39;</span>
+</pre></div>
+                
+                  <div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;TTTFormatterKit&#39;</span><span class="p">,</span> <span class="ss">:head</span>
+</pre></div>
+                
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+            <div id="tab_podspec" class="tab-pane">
+              <h2>
+                podspec
+                
+                
+              </h2>
+              <p><p>Use the dependencies of a Pod defined in the given podspec file.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+        
+          <div id="tab_target-configuration-group" class="tab-pane">
+            <h2>Target configuration</h2>
+            <p></p>
+          </div>
+
+          
+            <div id="tab_platform" class="tab-pane">
+              <h2>
+                platform
+                
+                
+              </h2>
+              <p><p>Specifies the platform for which a static library should be build.</p>
+
+<hr>
+
+<p>CocoaPods provides a default deployment target if one is not specified.
+The current default values are <code>4.3</code> for iOS and <code>10.6</code> for OS X.</p>
+
+<hr>
+
+<p>If the deployment target requires it (iOS &lt; <code>4.3</code>), <code>armv6</code>
+architecture will be added to <code>ARCHS</code>.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+                <hr>
+                <h3>Examples:</h3>
+                
+                  <div class="highlight"><pre><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s2">&quot;4.0&quot;</span>
+<span class="n">platform</span> <span class="ss">:ios</span>
+</pre></div>
+                
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+            <div id="tab_xcodeproj" class="tab-pane">
+              <h2>
+                xcodeproj
+                
+                
+              </h2>
+              <p><p>Specifies the Xcode project that contains the target that the Pods library
+should be linked with.</p>
+
+<hr>
+
+<p>If no explicit project is specified, it will use the Xcode project of
+the parent target. If none of the target definitions specify an
+explicit project and there is only <strong>one</strong> project in the same
+directory as the Podfile then that project will be used.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+                <hr>
+                <h3>Examples:</h3>
+                
+                  <div class="highlight"><pre><span class="c1"># Look for target to link with in an Xcode project called</span>
+<span class="c1"># `MyProject.xcodeproj`.</span>
+<span class="n">xcodeproj</span> <span class="sb">`MyProject`</span>
+
+<span class="n">target</span> <span class="ss">:test</span> <span class="k">do</span>
+  <span class="c1"># This Pods library links with a target in another project.</span>
+  <span class="n">xcodeproj</span> <span class="sb">`TestProject`</span>
+<span class="k">end</span>
+</pre></div>
+                
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+            <div id="tab_link_with" class="tab-pane">
+              <h2>
+                link_with
+                
+                
+              </h2>
+              <p><p>Specifies the target(s) in the user’s project that this Pods library
+should be linked in.</p>
+
+<hr>
+
+<p>If no explicit target is specified, then the Pods target will be linked
+with the first target in your project. So if you only have one target
+you do not need to specify the target to link with.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+                <hr>
+                <h3>Examples:</h3>
+                
+                  <div class="highlight"><pre><span class="n">link_with</span> <span class="s1">&#39;MyApp&#39;</span>
+</pre></div>
+                
+                  <div class="highlight"><pre><span class="n">link_with</span> <span class="o">[</span><span class="s1">&#39;MyApp&#39;</span><span class="p">,</span> <span class="s1">&#39;MyOtherApp&#39;</span><span class="o">]</span>
+</pre></div>
+                
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+            <div id="tab_inhibit_all_warnings" class="tab-pane">
+              <h2>
+                inhibit_all_warnings!
+                
+                
+              </h2>
+              <p><p>Inhibits <strong>all</strong> the warnings from the CocoaPods libraries.</p>
+
+<hr>
+
+<p>This attribute is inherited by child target definitions.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+        
+          <div id="tab_workspace-group" class="tab-pane">
+            <h2>Workspace</h2>
+            <p></p>
+          </div>
+
+          
+            <div id="tab_workspace" class="tab-pane">
+              <h2>
+                workspace
+                
+                
+              </h2>
+              <p><p>Specifies the Xcode workspace that should contain all the projects.</p>
+
+<hr>
+
+<p>If no explicit Xcode workspace is specified and only <strong>one</strong> project
+exists in the same directory as the Podfile, then the name of that
+project is used as the workspace’s name.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+                <hr>
+                <h3>Examples:</h3>
+                
+                  <div class="highlight"><pre><span class="n">workspace</span> <span class="s1">&#39;MyWorkspace&#39;</span>
+</pre></div>
+                
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+            <div id="tab_generate_bridge_support" class="tab-pane">
+              <h2>
+                generate_bridge_support!
+                
+                
+              </h2>
+              <p><p>Specifies that a BridgeSupport metadata document should be generated from
+the headers of all installed Pods.</p>
+
+<hr>
+
+<p>This is for scripting languages such as <a href="http://macruby.org">MacRuby</a>,
+<a href="http://programming.nu/index">Nu</a>, and
+<a href="http://inexdo.com/JSCocoa">JSCocoa</a>, which use it to bridge types,
+functions, etc better.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+            <div id="tab_set_arc_compatibility_flag" class="tab-pane">
+              <h2>
+                set_arc_compatibility_flag!
+                
+                
+              </h2>
+              <p><p>Specifies that the -fobjc-arc flag should be added to the <code>OTHER_LD_FLAGS</code>.</p>
+
+<hr>
+
+<p>This is used as a workaround for a compiler bug with non-ARC projects
+(see #142). This was originally done automatically but libtool as of
+Xcode 4.3.2 no longer seems to support the <code>-fobjc-arc</code> flag. Therefore
+it now has to be enabled explicitly using this method.</p>
+
+<p>Support for this method might be dropped in a future release.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+        
+          <div id="tab_hooks-group" class="tab-pane">
+            <h2>Hooks</h2>
+            <p></p>
+          </div>
+
+          
+            <div id="tab_pre_install" class="tab-pane">
+              <h2>
+                pre_install
+                
+                
+              </h2>
+              <p><p>This hook allows you to make any changes to the Pods after they have been
+downloaded but before they are installed.</p>
+
+<hr>
+
+<p>Hooks are global and not stored per target definition.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+                <hr>
+                <h3>Examples:</h3>
+                
+                  <div class="highlight"><pre><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer</span><span class="o">|</span>
+  <span class="c1"># Do something fancy!</span>
+<span class="k">end</span>
+</pre></div>
+                
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+            <div id="tab_post_install" class="tab-pane">
+              <h2>
+                post_install
+                
+                
+              </h2>
+              <p><p>This hook allows you to make any last changes to the generated Xcode project
+before it is written to disk, or any other tasks you might want to perform.</p>
+
+<hr>
+
+<p>Hooks are global and not stored per target definition.</p>
+</p>
+
+              <!-- Defaul values ******************************************* -->
+
+              
+
+              <!-- Examples *************************************************-->
+
+              
+                <hr>
+                <h3>Examples:</h3>
+                
+                  <div class="highlight"><pre><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer</span><span class="o">|</span>
+  <span class="n">installer</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">build_configurations</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+      <span class="n">config</span><span class="o">.</span><span class="n">build_settings</span><span class="o">[</span><span class="s1">&#39;GCC_ENABLE_OBJC_GC&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;supported&#39;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+                
+              
+
+              <!-- Keys *****************************************************-->
+
+              
+
+            </div>
+          
+        
+      </div>
+
+      <!-- FOOTER ************************************************************-->
+
+      <div id="footer">
+        <hr>
+        <p class="note">Generated for CocoaPods Core HEAD.</p>
+      </div>
+
+    </div><!-- .container -->
+  </div><!-- #body -->
+
+  <!-- SCRIPTS *************************************************************-->
+
+  <script>
+    function tabLinkByName(name) {
+      return $('#methods_list a[href=#tab_' + name.replace('#', '') + ']');
+    }
+
+    function selectTabByName(name) {
+      // de-select previous
+      $('#methods_list .active').removeClass('active');
+      // select new
+      var tabLink = tabLinkByName(name);
+      tabLink.parent().addClass('active')
+      tabLink.tab('show');
+      document.location.hash = name;
+    }
+
+    function selectTab(clickedLink) {
+      selectTabByName(clickedLink.attr("href").replace('#tab_', ''));
+    }
+
+    $('a.select-tab').click(function (e) {
+      e.preventDefault();
+      selectTab($(this));
+    })
+
+    $('#current_section a:first').click(function (e) {
+      e.preventDefault();
+      $('#methods_list .active').removeClass('active');
+      $(this).tab('show');
+      document.location.hash = '';
+    })
+
+    // Shows the tab associated with the current fragment or the description of
+    // the sections on page load.
+    //
+    $(function () {
+      var tabLink = tabLinkByName(document.location.hash);
+      if (tabLink.size() == 1) {
+        selectTab(tabLink);
+      } else {
+        $('#current_section a:first').tab('show');
+      }
+    });
+  </script>
+</body>
+
