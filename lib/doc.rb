@@ -219,7 +219,7 @@ module Pod
         #
         # TODO fix for Podfile
         def attribute
-          @attribute ||= Pod::Specification.attributes.find { |attr| attr.reader_name.to_s == name }
+          @attribute ||= Pod::Specification::DSL.attributes.find { |attr| attr.reader_name.to_s == name }
         end
       end
     end
