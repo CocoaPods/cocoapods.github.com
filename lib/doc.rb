@@ -27,42 +27,24 @@ module Pod
         self.class.name.split('::').last
       end
 
-      def description
-        yard_dsl_module ? yard_dsl_module.docstring : yard_object.docstring
-      end
+      #--------------------#
 
+      # @!group YARD information
+
+      # @return [YARD::CodeObjects::Base]
+      #
       def yard_object
         yard_registry.at("Pod::#{name}")
       end
 
-      # Currently nil for the specification class
+      # @return [String]
       #
-      def yard_dsl_module
-        yard_registry.at("Pod::#{name}::DSL")
-      end
-
-      # @return [Array<YARD::CodeObjects::MethodObject>]
-      #
-      def yard_methods
-        objets = [yard_object, yard_dsl_module]
-        objets.compact.map(&:meths).flatten
+      def description
+        yard_object.docstring
       end
 
       def groups
-        unless @groups
-          @groups = []
-
-          yard_methods.each do |yard_method|
-            group = DSL::Group.new(yard_method.group)
-            if existing = @groups.find { |g| g.name == group.name }
-              group = existing
-            else
-              @groups << group
-            end
-            method = group.add_method(yard_method)
-          end
-        end
-        @groups
+        [] # TODO
       end
 
       def group_sort_order
@@ -87,7 +69,9 @@ module Pod
         File.open(output_file, 'w') { |f| f.puts(template.result(binding)) }
       end
 
-      # Helpers
+      #--------------------#
+
+      # @!group ERB Helpers
 
       def markdown(input)
         @markdown ||= Redcarpet::Markdown.new(Class.new(Redcarpet::Render::HTML) do
@@ -107,6 +91,10 @@ module Pod
         Pygments.highlight(code, :lexer => lang, :options => { :encoding => 'utf-8' })
       end
 
+      #--------------------#
+
+      # @!group YARD Registry
+
       private
 
       def yard_registry
@@ -120,6 +108,29 @@ module Pod
     # Provides suppor for the DSLs
     #
     class DSL < Base
+
+      def yard_object
+        yard_registry.at("Pod::#{name}::DSL")
+      end
+
+      # @return [DSL::Group]
+      #
+      def groups
+        unless @groups
+          @groups = []
+          yard_methods = yard_object.meths.reject{ |m| m.name.to_s =~ /^_/ }
+          yard_methods.each do |yard_method|
+            group = DSL::Group.new(yard_method.group)
+            if existing = @groups.find { |g| g.name == group.name }
+              group = existing
+            else
+              @groups << group
+            end
+            method = group.add_method(yard_method)
+          end
+        end
+        @groups
+      end
 
       #-----------------------------------------------------------------------#
 
