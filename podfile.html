@@ -132,21 +132,22 @@ targets of an Xcode project.</p>
               </h2>
               <p><p>Specifies a dependency of the project.</p>
 
-<p>A dependency requirement is defined by the name of the Pod and optionally
-a list of version requirements.</p>
+<p>A dependency requirement is defined by the name of the Pod and
+optionally a list of version requirements.</p>
 
 <hr>
 
-<p>When starting out with a project it is likely that you will want to use the
-latest version of a Pod. If this is the case, simply omit the version
-requirements.</p>
+<p>When starting out with a project it is likely that you will want to use
+the latest version of a Pod. If this is the case, simply omit the
+version requirements.</p>
 <div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;SSZipArchive&#39;</span>
 </pre></div>
-<p>Later on in the project you may want to freeze to a specific version of a
-Pod, in which case you can specify that version number.</p>
+<p>Later on in the project you may want to freeze to a specific version of
+a Pod, in which case you can specify that version number.</p>
 <div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;Objection&#39;</span><span class="p">,</span> <span class="s1">&#39;0.9&#39;</span>
 </pre></div>
-<p>Besides no version, or a specific one, it is also possible to use operators:</p>
+<p>Besides no version, or a specific one, it is also possible to use
+operators:</p>
 
 <ul>
 <li><code>&gt; 0.1</code>    Any version higher than 0.1</li>
@@ -166,10 +167,10 @@ grained control.</p>
 <li><a href="http://docs.rubygems.org/read/chapter/7">RubyGems Versioning Policies</a></li>
 </ul>
 
-<p>Finally, instead of a version, you can specify the <code>:head</code> flag. This will
-use the pod’s latest version spec version, but force the download of the
-‘bleeding edge’ version. Use this with caution, as the spec might not be
-compatible anymore.</p>
+<p>Finally, instead of a version, you can specify the <code>:head</code> flag. This
+will use the pod’s latest version spec version, but force the download
+of the ‘bleeding edge’ version. Use this with caution, as the spec
+might not be compatible anymore.</p>
 <div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;Objection&#39;</span><span class="p">,</span> <span class="ss">:head</span>
 </pre></div>
 <hr>
@@ -193,8 +194,8 @@ pod declaration.</p>
 have to satisfy any other dependencies on the Pod by other Pods.</p>
 
 <p>The <code>podspec</code> file is expected to be in the root of the repo, if this
-library does not have a <code>podspec</code> file in its repo yet, you will have to
-use one of the approaches outlined in the sections below.</p>
+library does not have a <code>podspec</code> file in its repo yet, you will have
+to use one of the approaches outlined in the sections below.</p>
 
 <h3>From a podspec outside a spec repo, for a library without podspec.</h3>
 
