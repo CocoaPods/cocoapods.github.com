@@ -4,12 +4,29 @@
 <meta charset="utf-8">
 <title><%= name %> Documenation</title>
 
-<link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href="style.css">
+<link type="text/css" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../style.css">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
+<style>
+.namespace-container {
+  padding: 0 42px;
+  background-color: #fcf3e5;
+  border-bottom: 1px solid hsl(24, 30%, 82%);
+  border-top: 1px solid hsl(26, 43%, 90%);
+  background-image: -webkit-linear-gradient(top, #FCF3E5, #EEE2D0);
+  margin-top: 40px;
+}
+
+.namespace-container h3 {
+  margin: 0px;
+}
+#methods_list h2 {
+  margin-top: 0;
+}
+</style>
 </head>
 
 <!-- BODY ******************************************************************-->
@@ -19,104 +36,63 @@
 <div id="body">
 
   <div id="sections-container">
-      <ul>
-        <% sections.each do |section| %>
-          <% if section == name %>
-            <li id="current_section">
-            <h3><a href="#tab_<%= section.parameterize %>"><%= section %></a></h1>
-            </li>
-          <% else %>
-            <li>
-            <h3><a href="<%= section.underscore %>.html"><%= section %></a></h1>
-            </li>
-          <% end %>
-        <% end %>
-      </ul>
+    <ul>
+      <li id="current_section">
+        <h3><a><%= name %></a></h3>
+      </li>
+    </ul>
   </div>
 
-
-  <!-- HEADER **************************************************************-->
-
-  <div id="methods-container">
-      <div id="header">
-        <div class="row" id="methods_list">
-          <% columns.each do |groups| %>
-            <div class="span3">
-            <% groups.each do |group| %>
-              <h2><a class="select-tab" href="#tab_<%= group.to_param %>"><%= group.name %></a></h2>
-              <% group.methods.each do |method| %>
-                <p><a class="select-tab" href="#tab_<%= method.to_param %>"><%= method.name %><%= ' <span class="label label-small">R</span>' if method.required? %></a></p>
-              <% end %>
-            <% end %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-  </div>
+  <!-- DESCRIPTION *************************************************************-->
 
   <div id="content-container">
+    <div class="tab-content">
+      <h2><%= name %></h2>
+      <p><%= description %></p>
+      <h3>Version</h3>
+      <p><%= version %></p>
+      <h3>Authors</h3>
+      <p><%= authors %></p>
+    </div>
+  </div>
 
-      <!-- TABS *************************************************************-->
+  <!-- CLASSES **************************************************************-->
 
-      <div class="tab-content">
-        <div id="tab_<%= name.parameterize %>" class="tab-pane">
-          <h2><%= name %></h2>
-          <p><%= markdown description %></p>
-        </div>
+  <% name_spaces.each do |name_space| %>
+  <div class="namespace-container">
+      <h3><%= name_space %></h3>
+  </div>
 
-        <% groups.each do |group| %>
-          <div id="tab_<%= group.to_param %>" class="tab-pane">
-            <h2><%= group.name %></h2>
-            <p><%= markdown group.description %></p>
+  <div id="methods-container">
+    <div id="header">
+      <div class="row" id="methods_list">
+        <% name_space.columns.each do |entries| %>
+          <div class="span3">
+            <% entries.each do |group_or_method| %>
+              <% if group_or_method.is_a?(String) %>
+              <h2><a><%= group_or_method %></a></h2>
+              <% else %>
+                <p><a><%= group_or_method.name %></a></p>
+              <% end %>
+            <% end %>
           </div>
-
-          <% group.methods.each do |method| %>
-            <div id="tab_<%= method.to_param %>" class="tab-pane">
-              <h2>
-                <%= method.name %>
-                <%= '<a class="select-tab" href="#tab_root-specification-group"><span class="label label-big"> required </span></a>' if method.required? %>
-                <%= '<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>' if method.multi_platform? %>
-              </h2>
-              <p><%= markdown method.description %></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              <% unless method.default_values.empty? %>
-                <hr>
-                <h3>Defaults to:</h3>
-                <% method.default_values.each do |default_value| %>
-                  <%= syntax_highlight default_value %>
-                <% end %>
-              <% end %>
-
-              <!-- Examples *************************************************-->
-
-              <% unless method.examples.empty? %>
-                <hr>
-                <h3>Examples:</h3>
-                <% method.examples.each do |example| %>
-                  <%= syntax_highlight example %>
-                <% end %>
-              <% end %>
-
-              <!-- Keys *****************************************************-->
-
-              <% unless method.keys.empty? %>
-                <hr>
-                <h3>Supported Keys:</h3>
-                <ul class="method_keys">
-                  <% method.keys.each do |key| %>
-                    <li><%= markdown key %></li>
-                  <% end %>
-                </ul>
-              <% end %>
-
-            </div>
-          <% end %>
         <% end %>
       </div>
+    </div>
+  </div>
+  <% end %>
 
-      <!-- FOOTER ************************************************************-->
+  <!-- README *************************************************************-->
+
+  <div id="content-container">
+    <!-- <div class="tab-content"> -->
+      <%# <%= readme %>
+    <!-- </div> -->
+  <!-- </div> -->
+
+  <!-- FOOTER ************************************************************-->
+
+  <!-- <div id="content-container"> -->
 
       <div id="footer">
         <hr>

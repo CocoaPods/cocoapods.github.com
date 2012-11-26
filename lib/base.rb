@@ -58,9 +58,13 @@ module Pod
         end
       end
 
+      def template_path
+        TEMPLATE
+      end
+
       def render
         require 'erb'
-        template = ERB.new(File.read(TEMPLATE))
+        template = ERB.new(File.read(template_path))
         File.open(output_file, 'w') { |f| f.puts(template.result(binding)) }
       end
 
@@ -92,9 +96,14 @@ module Pod
 
       private
 
+      def source_files
+        [@source_file]
+      end
+
+
       def yard_registry
         @registry ||= begin
-          YARD::Registry.load([@source_file], true)
+          YARD::Registry.load(source_files, true)
           YARD::Registry
         end
       end
