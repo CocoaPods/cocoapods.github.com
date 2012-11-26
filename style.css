@@ -267,3 +267,21 @@ code {
   color: #8C7A73;
   background-color: #fdfaf2;
 }
+
+/* Index *****************/
+
+#index p {
+  font-weight: lighter;
+  font-size:13px;
+  color: hsl(16, 16%, 74%);
+}
+
+#index #content-container h3 {
+margin: 20px 0;
+font-size: 18px;
+color: hsl(36, 43%, 75%);
+}
+
+#index #content-container a {
+  color: hsl(36, 77%, 57%);
+}

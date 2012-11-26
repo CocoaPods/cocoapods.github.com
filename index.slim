@@ -8,7 +8,7 @@ html
     link rel="stylesheet" type="text/css" href="style.css"
 
   body
-    .container
+    #index.container
       #body
         #sections-container
           ul
@@ -17,46 +17,71 @@ html
                 a href="#" Index
 
         #content-container
-          markdown:
+          .row
+            .span11.offset1
+              h2 User
+          .row
+            .span5.offset1
+              h3 Docs
+              p
+                a href="podfile.html" Podfile
+              p Learn how to write dependencies requirements for CocoaPods.
+              p
+                a href="specification.html" Specification
+              p Learn how to write specifications for libraries.
+              p
+                a href="commands.html" Command line
+              p For command line ninjas.
 
-            ## User
+            .span5.offset1
+              h3 Guides
+              p
+                a href="workflows/adopting_cocoapods.html" Adopting CocoaPods
+              p
+                a href="workflows/dependency_version_workflow.html" Dependency versioning
+              p
+                a Working with teams
+              p
+                a Creating and maintaining a Pod
+              p
+                a Creating your own repository of specifications
 
-            ### Docs
+        #content-container
+          .row
+            .span5.offset1
+              h2 Developer
+          .row
+            .span5.offset1
+              h3 Gems
+              p
+                a href="developer/cocoapods.html" CocoaPods
+              p The CocoaPods gem which includes the command line support and the installer.
+              p
+                a href="developer/cocoapods_core.html" CocoaPods-Core
+              p The CocoaPods-Core gem provides support to work with the models of CocoaPods.
+              p
+                a href="developer/xcodeproj.html" Xcodeproj
+              p Xcodeproj lets you create and modify Xcode projects from Ruby. Script boring management tasks or build Xcode-friendly libraries. Also includes support for Xcode workspaces (.xcworkspace) and configuration files (.xcconfig).
+              p
+                a href="developer/claide.html" CLAide
+              p I was born out of a need for a simple option and command parser, while still providing an API that allows you to quickly create a full featured command-line interface.
+            .span3.offset1
+              h3 Other Resources
+              p
+                a href="https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md" Changelog
+              p
+                a href="https://github.com/CocoaPods/Specs" Specs Repo
 
-            [Podfile](podfile.html)
+              hr
+              p
+                a href="https://github.com/CocoaPods/cocoapods.org" cocoapods.org
+              p
+                a href="https://github.com/CocoaPods/feeds.cocoapods.org" feeds.cocoapods.org
 
-            Learn how to write dependencies requirements for CocoaPods.
-
-            [Specification](specification.html)
-
-            Learn how to write specifications for libraries.
-
-            Command Line
-
-            For command line ninjas.
-
-            ### Workflows
-
-            [Adopting CocoaPods](workflows/adopting_cocoapods.html)
-
-            [Dependency version workflow](workflows/dependency_version_workflow.html)
-
-            Working with teams
-
-            Working on a library
-
-            Creating and maintaining a Pod
-
-            Creating your own repository of specifications
-
-            ---
-
-            ## Developer Documentation
-
-            [CocoaPods-Core](./developer/cocoapods_core.html)
-
-            CocoaPods
-
-            [Xcodeproj](./developer/xcodeproj.html)
-
-            CLAide
+              hr
+              p
+                a href="http://rubygems.org" RubyGems
+              p
+                a href="http://gembundler.com" Bundler
+              p
+                a href="http://florianhanke.com/picky/" Picky
