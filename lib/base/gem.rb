@@ -134,8 +134,8 @@ module Pod
         # @return [Array<YARD::CodeObjects::MethodObject>] the methods of the
         #         namespace
         #
-        def methods
-          all_methods = yard_object.meths(:visibility => :public, :scope => :instance, :included => true )
+        def methods(included = false)
+          all_methods = yard_object.meths(:visibility => :public, :scope => :instance, :included => included )
           method_names = all_methods.map { |m| m.name.to_s }
           # Attributes
           methods = all_methods.reject do |method|

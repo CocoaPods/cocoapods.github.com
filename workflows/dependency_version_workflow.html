@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><meta charset="utf-8" /><title>CocoaPods Documentation</title><link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="../style.css" rel="stylesheet" type="text/css" /></head><body><div class="container"><div id="body"><div id="sections-container"><ul><li id="current_section"><h3><a href="../index.html">Index</a></h3></li></ul></div><div id="content-container"><h2>Dependency version workflow</h2>
+
+<p>There is, unfortunately, often an issue of devs not interpreting version numbers well or assigning emotional value to certain version numbers.</p>
+
+<p>However, arbitrary revisions as version is not a good idea for a library manager vs a proper version number (see <a href="http://semver.org">Semantic Versioning</a>). Let me explain how, in an ideal world ;), I’d prefer people to interact with it:</p>
+
+<ul>
+<li><p>“I want to start using CocoaLumberjack, the current version will be fine for now.” So the dev adds a dependency on the lib <em>without</em> a version requirement and lets the manager install it which will use the latest version:</p>
+
+<pre><code>pod &#39;CocoaLumberjack&#39;
+</code></pre></li>
+<li><p>Some time into the future, the dev wants to update the dependencies so runs the install command again, which will now install the version of the lib which is the latest version <em>at that time</em>.</p></li>
+<li><p>At some point the dev is finished on the client work (or a newer version of the lib changes the API and the changes aren’t needed) so the dev adds a version requirement to the dependency. For instance, consider that the author of the lib follows the semver guidelines, you can somewhat trust that between ‘1.0.7’ and ‘1.1.0’ <strong>no</strong> API changes will be made, but only bug fixes. So instead of requiring a specific version, the dev can specify that <em>any</em> ‘1.0.x’ is allowed as long as it’s higher than ‘1.0.7’:</p>
+
+<pre><code>pod &#39;CocoaLumberjack&#39;, &#39;~&gt; 1.0.7&#39;
+</code></pre></li>
+</ul>
+
+<p>The point is that devs can easily keep track of newer versions of dependencies, by simply running <code>pod install</code> again, which they might otherwise do less if they had to change everything manually.</p>
+
+<h3>CocoaPods Versioning Specifics</h3>
+
+<p>CocoaPods uses RubyGems versions for specifying pod spec versions. The <a href="http://docs.rubygems.org/read/chapter/7">RubyGems Versioning Policies</a> describes the rules used for interpreting version numbers. The <a href="http://docs.rubygems.org/read/chapter/16#page74">RubyGems version specifiers</a> describe exactly how to use the comparison operators which specify dependency versions.</p>
+
+<p>Following the pattern established in RubyGems, pre-release versions can also be specified in CocoaPods. A pre-release of version 1.2, for example, can be specified by &#39;1.2.beta.3&#39;. In this example, the dependency specifier &#39;~&gt; 1.2.beta&#39; will match &#39;1.2.beta.3&#39;.</p>
+</div></div></div></body></html>
