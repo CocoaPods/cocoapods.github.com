@@ -285,3 +285,16 @@ color: hsl(36, 43%, 75%);
 #index #content-container a {
   color: hsl(36, 77%, 57%);
 }
+
+#logo {
+  height: 40px;
+  padding: 0 40px;
+  font-weight: bold;
+  background-image:url(assets/logo.png);
+  background-repeat:no-repeat;
+  background-position:left center;
+}
+
+h3#logo {
+  margin-left:30px;
+}
