@@ -50,11 +50,29 @@
   <div id="content-container">
     <div class="tab-content">
       <h2>xcodeproj</h2>
-      <p>Xcodeproj lets you create and modify Xcode projects from Ruby. Script boring management tasks or build Xcode-friendly libraries. Also includes support for Xcode workspaces (.xcworkspace) and configuration files (.xcconfig).</p>
-      <h3>Version</h3>
-      <p>0.4.0</p>
-      <h3>Authors</h3>
-      <p>Eloy Duran</p>
+      <div class="row">
+        <div class="span8">
+          <h3>Description</h3>
+          <p>Xcodeproj lets you create and modify Xcode projects from Ruby. Script boring management tasks or build Xcode-friendly libraries. Also includes support for Xcode workspaces (.xcworkspace) and configuration files (.xcconfig).</p>
+          <h3>Authors</h3>
+          <p>Eloy Duran</p>
+        </div>
+        <div class="span2 offset2">
+          <h3>Version</h3>
+          <p>0.4.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-container">
+    <div class="tab-content">
+          <h3>Overview</h3>
+          <ul>
+            <li><p>Xcodeproj</p><ul><li><p>Command</p><ul><li><p>ARGV</p></li><li><p>Help</p></li><li><p>ProjectDiff</p></li><li><p>Show</p></li><li><p>TargetDiff</p></li></ul></li><li><p>Config</p></li><li><p>Helper</p><ul><li><p>TargetDiff</p></li></ul></li><li><p>Informative</p></li><li><p>Project</p><ul><li><p>Object</p><ul><li><p>AbstractBuildPhase</p></li><li><p>AbstractObject</p></li><li><p>AbstractObjectAttribute</p></li><li><p>AbstractTarget</p></li><li><p>PBXAggregateTarget</p></li><li><p>PBXBuildFile</p></li><li><p>PBXBuildRule</p></li><li><p>PBXContainerItemProxy</p></li><li><p>PBXCopyFilesBuildPhase</p></li><li><p>PBXFileReference</p></li><li><p>PBXFrameworksBuildPhase</p></li><li><p>PBXGroup</p></li><li><p>PBXHeadersBuildPhase</p></li><li><p>PBXLegacyTarget</p></li><li><p>PBXNativeTarget</p></li><li><p>PBXProject</p></li><li><p>PBXReferenceProxy</p></li><li><p>PBXResourcesBuildPhase</p></li><li><p>PBXRezBuildPhase</p></li><li><p>PBXShellScriptBuildPhase</p></li><li><p>PBXSourcesBuildPhase</p></li><li><p>PBXTargetDependency</p></li><li><p>PBXVariantGroup</p></li><li><p>XCBuildConfiguration</p></li><li><p>XCConfigurationList</p></li><li><p>XCVersionGroup</p></li></ul></li><li><p>ObjectDictionary</p></li><li><p>ObjectList</p></li></ul></li><li><p>Workspace</p></li></ul></li>
+          </ul>
+
+      </div>
     </div>
   </div>
 
@@ -62,7 +80,7 @@
 
   
   <div class="namespace-container">
-      <h3>Array</h3>
+      <h3>Command</h3>
   </div>
 
   <div id="methods-container">
@@ -70,90 +88,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
-            
-              
-                <p><a>recursive_diff</a></p>
-              
-            
-          </div>
-        
-      </div>
-    </div>
-  </div>
-  
-  <div class="namespace-container">
-      <h3>Hash</h3>
-  </div>
-
-  <div id="methods-container">
-    <div id="header">
-      <div class="row" id="methods_list">
-        
-          <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
-            
-              
-                <p><a>recursive_diff</a></p>
-              
-            
-          </div>
-        
-          <div class="span3">
-            
-              
-                <p><a>recursive_delete</a></p>
-              
-            
-          </div>
-        
-      </div>
-    </div>
-  </div>
-  
-  <div class="namespace-container">
-      <h3>Object</h3>
-  </div>
-
-  <div id="methods-container">
-    <div id="header">
-      <div class="row" id="methods_list">
-        
-          <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
-            
-              
-                <p><a>recursive_diff</a></p>
-              
-            
-          </div>
-        
-      </div>
-    </div>
-  </div>
-  
-  <div class="namespace-container">
-      <h3>Xcodeproj::Command</h3>
-  </div>
-
-  <div id="methods-container">
-    <div id="header">
-      <div class="row" id="methods_list">
-        
-          <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>initialize</a></p>
@@ -167,6 +101,10 @@
                 <p><a>xcodeproj_path</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>xcodeproj</a></p>
               
@@ -178,7 +116,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Command::ARGV</h3>
+      <h3>Command::ARGV</h3>
   </div>
 
   <div id="methods-container">
@@ -188,32 +126,28 @@
           <div class="span3">
             
               
-              <h2><a>General</a></h2>
-              
-            
-              
                 <p><a>options</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>arguments</a></p>
               
             
-              
-                <p><a>option</a></p>
-              
-            
           </div>
         
           <div class="span3">
             
               
+                <p><a>option</a></p>
+              
+            
+              
                 <p><a>shift_argument</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>recursive_diff</a></p>
@@ -226,7 +160,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Command::Help</h3>
+      <h3>Command::Help</h3>
   </div>
 
   <div id="methods-container">
@@ -234,10 +168,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>initialize</a></p>
@@ -258,7 +188,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Command::ProjectDiff</h3>
+      <h3>Command::ProjectDiff</h3>
   </div>
 
   <div id="methods-container">
@@ -266,10 +196,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>initialize</a></p>
@@ -282,6 +208,10 @@
               
                 <p><a>run</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>xcodeproj_path</a></p>
@@ -302,7 +232,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Command::Show</h3>
+      <h3>Command::Show</h3>
   </div>
 
   <div id="methods-container">
@@ -310,10 +240,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>initialize</a></p>
@@ -326,6 +252,10 @@
               
                 <p><a>run</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>xcodeproj_path</a></p>
@@ -346,7 +276,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Command::TargetDiff</h3>
+      <h3>Command::TargetDiff</h3>
   </div>
 
   <div id="methods-container">
@@ -354,10 +284,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>initialize</a></p>
@@ -370,6 +296,10 @@
               
                 <p><a>run</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>xcodeproj_path</a></p>
@@ -390,7 +320,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Config</h3>
+      <h3>Config</h3>
   </div>
 
   <div id="methods-container">
@@ -398,10 +328,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>attributes</a></p>
@@ -415,13 +341,13 @@
                 <p><a>weak_frameworks</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>libraries</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>includes</a></p>
@@ -435,13 +361,13 @@
                 <p><a>to_s</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>save_as</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>to_hash</a></p>
@@ -455,13 +381,13 @@
                 <p><a><<</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>merge</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>dup</a></p>
@@ -482,7 +408,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Helper::TargetDiff</h3>
+      <h3>Helper::TargetDiff</h3>
   </div>
 
   <div id="methods-container">
@@ -492,32 +418,28 @@
           <div class="span3">
             
               
-              <h2><a>General</a></h2>
-              
-            
-              
                 <p><a>project</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>target1</a></p>
               
             
-              
-                <p><a>target2</a></p>
-              
-            
           </div>
         
           <div class="span3">
             
               
+                <p><a>target2</a></p>
+              
+            
+              
                 <p><a>initialize</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>new_source_build_files</a></p>
@@ -530,7 +452,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Informative</h3>
+      <h3>Informative</h3>
   </div>
 
   <div id="methods-container">
@@ -538,10 +460,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>message</a></p>
@@ -554,7 +472,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project</h3>
+      <h3>Project</h3>
   </div>
 
   <div id="methods-container">
@@ -562,10 +480,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>archive_version</a></p>
@@ -607,13 +521,13 @@
               <h2><a>Plist serialization</a></h2>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>new_from_plist</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>to_hash</a></p>
@@ -655,13 +569,13 @@
               <h2><a>Convenience accessors</a></h2>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>objects</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>uuids</a></p>
@@ -680,7 +594,7 @@
               
             
               
-                <p><a>[]</a></p>
+                <p><a>[ ]</a></p>
               
             
               
@@ -703,13 +617,13 @@
                 <p><a>frameworks_group</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>build_configurations</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>build_settings</a></p>
@@ -750,7 +664,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::AbstractBuildPhase</h3>
+      <h3>Project::Object::AbstractBuildPhase</h3>
   </div>
 
   <div id="methods-container">
@@ -758,10 +672,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>files</a></p>
@@ -787,6 +697,10 @@
                 <p><a>initialize_defaults</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>uuid</a></p>
               
@@ -799,10 +713,6 @@
                 <p><a>remove_from_project</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>display_name</a></p>
               
@@ -814,6 +724,10 @@
               
               <h2><a>Convenience methods</a></h2>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>files_references</a></p>
@@ -836,40 +750,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -880,16 +766,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -899,30 +777,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -930,7 +784,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::AbstractObject</h3>
+      <h3>Project::Object::AbstractObject</h3>
   </div>
 
   <div id="methods-container">
@@ -938,10 +792,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>isa</a></p>
@@ -959,6 +809,10 @@
                 <p><a>uuid</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>project</a></p>
               
@@ -971,48 +825,16 @@
                 <p><a>display_name</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>simple_attributes_hash</a></p>
               
             
-              
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
           </div>
         
           <div class="span3">
             
               
-                <p><a>object_with_uuid</a></p>
+              <h2><a>Plist related methods</a></h2>
               
             
               
@@ -1024,12 +846,12 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -1039,34 +861,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-          </div>
-        
-          <div class="span3">
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -1074,7 +868,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::AbstractObjectAttribute</h3>
+      <h3>Project::Object::AbstractObjectAttribute</h3>
   </div>
 
   <div id="methods-container">
@@ -1082,10 +876,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>type</a></p>
@@ -1115,13 +905,13 @@
                 <p><a>classes</a></p>
               
             
-              
-                <p><a>default_value</a></p>
-              
-            
           </div>
         
           <div class="span3">
+            
+              
+                <p><a>default_value</a></p>
+              
             
               
                 <p><a>get_value</a></p>
@@ -1131,6 +921,10 @@
                 <p><a>set_value</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>set_default</a></p>
               
@@ -1138,10 +932,6 @@
               
                 <p><a>validate_value</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>inspect</a></p>
@@ -1154,7 +944,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::AbstractTarget</h3>
+      <h3>Project::Object::AbstractTarget</h3>
   </div>
 
   <div id="methods-container">
@@ -1162,10 +952,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>name</a></p>
@@ -1195,6 +981,10 @@
                 <p><a>initialize_defaults</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>uuid</a></p>
               
@@ -1202,10 +992,6 @@
               
                 <p><a>project</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>remove_from_project</a></p>
@@ -1227,6 +1013,10 @@
                 <p><a>build_configurations</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>build_settings</a></p>
               
@@ -1247,56 +1037,20 @@
                 <p><a>new_shell_script_build_phase</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
-              
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
               
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
                 <p><a>to_plist</a></p>
               
             
-              
-                <p><a>to_hash</a></p>
-              
-            
           </div>
         
           <div class="span3">
             
               
-                <p><a>to_tree_hash</a></p>
+                <p><a>to_hash</a></p>
               
             
               
@@ -1311,30 +1065,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -1342,7 +1072,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXAggregateTarget</h3>
+      <h3>Project::Object::PBXAggregateTarget</h3>
   </div>
 
   <div id="methods-container">
@@ -1350,10 +1080,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>build_phases</a></p>
@@ -1383,6 +1109,10 @@
                 <p><a>initialize</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize_defaults</a></p>
               
@@ -1394,10 +1124,6 @@
               
                 <p><a>project</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>remove_from_project</a></p>
@@ -1414,6 +1140,10 @@
               
               <h2><a>Convenience methods</a></h2>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>build_configurations</a></p>
@@ -1440,40 +1170,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -1484,16 +1186,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -1503,30 +1197,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -1534,7 +1204,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXBuildFile</h3>
+      <h3>Project::Object::PBXBuildFile</h3>
   </div>
 
   <div id="methods-container">
@@ -1542,10 +1212,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>settings</a></p>
@@ -1563,6 +1229,10 @@
                 <p><a>initialize</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize_defaults</a></p>
               
@@ -1575,13 +1245,13 @@
                 <p><a>project</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>remove_from_project</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>display_name</a></p>
@@ -1592,23 +1262,11 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
+              <h2><a>Plist related methods</a></h2>
               
             
               
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
+                <p><a>to_plist</a></p>
               
             
           </div>
@@ -1616,27 +1274,7 @@
           <div class="span3">
             
               
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
-            
-              
-                <p><a>to_plist</a></p>
-              
-            
-              
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -1647,36 +1285,8 @@
                 <p><a><=></a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>inspect</a></p>
-              
-            
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
               
             
           </div>
@@ -1686,7 +1296,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXBuildRule</h3>
+      <h3>Project::Object::PBXBuildRule</h3>
   </div>
 
   <div id="methods-container">
@@ -1694,10 +1304,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>name</a></p>
@@ -1723,6 +1329,10 @@
                 <p><a>output_files</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>script</a></p>
               
@@ -1730,10 +1340,6 @@
               
                 <p><a>isa</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>initialize</a></p>
@@ -1751,6 +1357,10 @@
                 <p><a>project</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>remove_from_project</a></p>
               
@@ -1764,39 +1374,7 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-          </div>
-        
-          <div class="span3">
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
@@ -1805,10 +1383,6 @@
             
               
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
           </div>
@@ -1827,30 +1401,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -1858,7 +1408,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXContainerItemProxy</h3>
+      <h3>Project::Object::PBXContainerItemProxy</h3>
   </div>
 
   <div id="methods-container">
@@ -1866,10 +1416,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>container_portal</a></p>
@@ -1891,6 +1437,10 @@
                 <p><a>isa</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize</a></p>
               
@@ -1903,10 +1453,6 @@
                 <p><a>uuid</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>project</a></p>
               
@@ -1914,6 +1460,10 @@
               
                 <p><a>remove_from_project</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>display_name</a></p>
@@ -1924,39 +1474,7 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-          </div>
-        
-          <div class="span3">
-            
-              
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
@@ -1967,9 +1485,9 @@
                 <p><a>to_hash</a></p>
               
             
-              
-                <p><a>to_tree_hash</a></p>
-              
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>==</a></p>
@@ -1985,40 +1503,12 @@
             
           </div>
         
-          <div class="span3">
-            
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
-          </div>
-        
       </div>
     </div>
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXCopyFilesBuildPhase</h3>
+      <h3>Project::Object::PBXCopyFilesBuildPhase</h3>
   </div>
 
   <div id="methods-container">
@@ -2026,10 +1516,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>name</a></p>
@@ -2059,6 +1545,10 @@
                 <p><a>isa</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize</a></p>
               
@@ -2070,10 +1560,6 @@
               
                 <p><a>uuid</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>project</a></p>
@@ -2090,6 +1576,10 @@
               
                 <p><a>simple_attributes_hash</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
               <h2><a>Convenience methods</a></h2>
@@ -2116,40 +1606,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -2160,16 +1622,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -2179,30 +1633,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -2210,7 +1640,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXFileReference</h3>
+      <h3>Project::Object::PBXFileReference</h3>
   </div>
 
   <div id="methods-container">
@@ -2218,10 +1648,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>name</a></p>
@@ -2259,6 +1685,10 @@
                 <p><a>plist_structure_definition_identifier</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>uses_tabs</a></p>
               
@@ -2270,10 +1700,6 @@
               
                 <p><a>tab_width</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>wraps_lines</a></p>
@@ -2298,6 +1724,10 @@
               
                 <p><a>initialize_defaults</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>uuid</a></p>
@@ -2327,10 +1757,6 @@
                 <p><a>pathname</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>group</a></p>
               
@@ -2338,6 +1764,10 @@
               
                 <p><a>build_files</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>update_last_known_file_type</a></p>
@@ -2348,51 +1778,15 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
                 <p><a>to_plist</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -2407,30 +1801,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -2438,7 +1808,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXFrameworksBuildPhase</h3>
+      <h3>Project::Object::PBXFrameworksBuildPhase</h3>
   </div>
 
   <div id="methods-container">
@@ -2446,10 +1816,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>files</a></p>
@@ -2475,6 +1841,10 @@
                 <p><a>initialize_defaults</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>uuid</a></p>
               
@@ -2487,10 +1857,6 @@
                 <p><a>remove_from_project</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>display_name</a></p>
               
@@ -2502,6 +1868,10 @@
               
               <h2><a>Convenience methods</a></h2>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>files_references</a></p>
@@ -2524,40 +1894,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -2568,16 +1910,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -2587,30 +1921,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -2618,7 +1928,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXGroup</h3>
+      <h3>Project::Object::PBXGroup</h3>
   </div>
 
   <div id="methods-container">
@@ -2626,10 +1936,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>children</a></p>
@@ -2667,6 +1973,10 @@
                 <p><a>isa</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize</a></p>
               
@@ -2678,10 +1988,6 @@
               
                 <p><a>uuid</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>project</a></p>
@@ -2706,6 +2012,10 @@
               
                 <p><a>files</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>groups</a></p>
@@ -2732,12 +2042,8 @@
               
             
               
-                <p><a>[]</a></p>
+                <p><a>[ ]</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>remove_children_recursively</a></p>
@@ -2746,6 +2052,10 @@
               
                 <p><a>find_subpath</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a><<</a></p>
@@ -2756,51 +2066,15 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
                 <p><a>to_plist</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -2815,30 +2089,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -2846,7 +2096,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXHeadersBuildPhase</h3>
+      <h3>Project::Object::PBXHeadersBuildPhase</h3>
   </div>
 
   <div id="methods-container">
@@ -2854,10 +2104,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>files</a></p>
@@ -2883,6 +2129,10 @@
                 <p><a>initialize_defaults</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>uuid</a></p>
               
@@ -2895,10 +2145,6 @@
                 <p><a>remove_from_project</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>display_name</a></p>
               
@@ -2910,6 +2156,10 @@
               
               <h2><a>Convenience methods</a></h2>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>files_references</a></p>
@@ -2932,40 +2182,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -2976,16 +2198,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -2995,30 +2209,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -3026,7 +2216,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXLegacyTarget</h3>
+      <h3>Project::Object::PBXLegacyTarget</h3>
   </div>
 
   <div id="methods-container">
@@ -3034,10 +2224,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>build_working_directory</a></p>
@@ -3071,6 +2257,10 @@
                 <p><a>build_configuration_list</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>dependencies</a></p>
               
@@ -3082,10 +2272,6 @@
               
                 <p><a>initialize</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>initialize_defaults</a></p>
@@ -3106,6 +2292,10 @@
               
                 <p><a>display_name</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>simple_attributes_hash</a></p>
@@ -3135,44 +2325,16 @@
                 <p><a>new_copy_files_build_phase</a></p>
               
             
+              
+                <p><a>new_shell_script_build_phase</a></p>
+              
+            
           </div>
         
           <div class="span3">
             
               
-                <p><a>new_shell_script_build_phase</a></p>
-              
-            
-              
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
@@ -3182,14 +2344,6 @@
               
                 <p><a>to_hash</a></p>
               
-            
-              
-                <p><a>to_tree_hash</a></p>
-              
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>==</a></p>
@@ -3203,30 +2357,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -3234,7 +2364,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXNativeTarget</h3>
+      <h3>Project::Object::PBXNativeTarget</h3>
   </div>
 
   <div id="methods-container">
@@ -3242,10 +2372,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>build_rules</a></p>
@@ -3283,6 +2409,10 @@
                 <p><a>dependencies</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>isa</a></p>
               
@@ -3294,10 +2424,6 @@
               
                 <p><a>initialize_defaults</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>uuid</a></p>
@@ -3322,6 +2448,10 @@
               
               <h2><a>Convenience methods</a></h2>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>add_file_references</a></p>
@@ -3351,10 +2481,6 @@
                 <p><a>build_settings</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>copy_files_build_phases</a></p>
               
@@ -3362,6 +2488,10 @@
               
                 <p><a>shell_script_build_phases</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>new_copy_files_build_phase</a></p>
@@ -3372,51 +2502,15 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
                 <p><a>to_plist</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -3431,30 +2525,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -3462,7 +2532,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXProject</h3>
+      <h3>Project::Object::PBXProject</h3>
   </div>
 
   <div id="methods-container">
@@ -3470,10 +2540,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>targets</a></p>
@@ -3503,6 +2569,10 @@
                 <p><a>known_regions</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>main_group</a></p>
               
@@ -3510,10 +2580,6 @@
               
                 <p><a>product_ref_group</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>project_dir_path</a></p>
@@ -3535,6 +2601,10 @@
                 <p><a>initialize</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize_defaults</a></p>
               
@@ -3555,60 +2625,24 @@
                 <p><a>display_name</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>simple_attributes_hash</a></p>
-              
-            
-              
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
               
             
               
               <h2><a>Plist related methods</a></h2>
               
             
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
-            
-              
-                <p><a>to_plist</a></p>
-              
-            
           </div>
         
           <div class="span3">
             
               
-                <p><a>to_hash</a></p>
+                <p><a>to_plist</a></p>
               
             
               
-                <p><a>to_tree_hash</a></p>
+                <p><a>to_hash</a></p>
               
             
               
@@ -3623,26 +2657,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -3650,7 +2664,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXReferenceProxy</h3>
+      <h3>Project::Object::PBXReferenceProxy</h3>
   </div>
 
   <div id="methods-container">
@@ -3658,10 +2672,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>path</a></p>
@@ -3683,6 +2693,10 @@
                 <p><a>isa</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize</a></p>
               
@@ -3695,10 +2709,6 @@
                 <p><a>uuid</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>project</a></p>
               
@@ -3706,6 +2716,10 @@
               
                 <p><a>remove_from_project</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>display_name</a></p>
@@ -3724,40 +2738,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -3768,16 +2754,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -3787,30 +2765,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -3818,7 +2772,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXResourcesBuildPhase</h3>
+      <h3>Project::Object::PBXResourcesBuildPhase</h3>
   </div>
 
   <div id="methods-container">
@@ -3826,10 +2780,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>files</a></p>
@@ -3855,6 +2805,10 @@
                 <p><a>initialize_defaults</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>uuid</a></p>
               
@@ -3867,10 +2821,6 @@
                 <p><a>remove_from_project</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>display_name</a></p>
               
@@ -3882,6 +2832,10 @@
               
               <h2><a>Convenience methods</a></h2>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>files_references</a></p>
@@ -3904,40 +2858,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -3948,16 +2874,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -3967,30 +2885,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -3998,7 +2892,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXRezBuildPhase</h3>
+      <h3>Project::Object::PBXRezBuildPhase</h3>
   </div>
 
   <div id="methods-container">
@@ -4006,10 +2900,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>files</a></p>
@@ -4035,6 +2925,10 @@
                 <p><a>initialize_defaults</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>uuid</a></p>
               
@@ -4047,10 +2941,6 @@
                 <p><a>remove_from_project</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>display_name</a></p>
               
@@ -4062,6 +2952,10 @@
               
               <h2><a>Convenience methods</a></h2>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>files_references</a></p>
@@ -4084,40 +2978,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -4128,16 +2994,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -4147,30 +3005,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -4178,7 +3012,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXShellScriptBuildPhase</h3>
+      <h3>Project::Object::PBXShellScriptBuildPhase</h3>
   </div>
 
   <div id="methods-container">
@@ -4186,10 +3020,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>name</a></p>
@@ -4223,6 +3053,10 @@
                 <p><a>build_action_mask</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>run_only_for_deployment_postprocessing</a></p>
               
@@ -4230,10 +3064,6 @@
               
                 <p><a>isa</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>initialize</a></p>
@@ -4259,6 +3089,10 @@
                 <p><a>display_name</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>simple_attributes_hash</a></p>
               
@@ -4279,10 +3113,6 @@
                 <p><a>remove_file_reference</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>remove_build_file</a></p>
               
@@ -4292,39 +3122,7 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
-            
-              
-                <p><a>to_plist</a></p>
               
             
           </div>
@@ -4332,11 +3130,11 @@
           <div class="span3">
             
               
-                <p><a>to_hash</a></p>
+                <p><a>to_plist</a></p>
               
             
               
-                <p><a>to_tree_hash</a></p>
+                <p><a>to_hash</a></p>
               
             
               
@@ -4351,30 +3149,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -4382,7 +3156,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXSourcesBuildPhase</h3>
+      <h3>Project::Object::PBXSourcesBuildPhase</h3>
   </div>
 
   <div id="methods-container">
@@ -4390,10 +3164,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>files</a></p>
@@ -4419,6 +3189,10 @@
                 <p><a>initialize_defaults</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>uuid</a></p>
               
@@ -4431,10 +3205,6 @@
                 <p><a>remove_from_project</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>display_name</a></p>
               
@@ -4446,6 +3216,10 @@
               
               <h2><a>Convenience methods</a></h2>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>files_references</a></p>
@@ -4468,40 +3242,12 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
+              <h2><a>Plist related methods</a></h2>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
             
               
                 <p><a>to_plist</a></p>
@@ -4512,16 +3258,8 @@
               
             
               
-                <p><a>to_tree_hash</a></p>
-              
-            
-              
                 <p><a>==</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a><=></a></p>
@@ -4531,30 +3269,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -4562,7 +3276,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXTargetDependency</h3>
+      <h3>Project::Object::PBXTargetDependency</h3>
   </div>
 
   <div id="methods-container">
@@ -4570,10 +3284,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>target</a></p>
@@ -4595,6 +3305,10 @@
                 <p><a>initialize</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize_defaults</a></p>
               
@@ -4602,10 +3316,6 @@
               
                 <p><a>uuid</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>project</a></p>
@@ -4619,44 +3329,16 @@
                 <p><a>display_name</a></p>
               
             
-              
-                <p><a>simple_attributes_hash</a></p>
-              
-            
-              
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
           </div>
         
           <div class="span3">
             
               
-                <p><a>remove_reference</a></p>
+                <p><a>simple_attributes_hash</a></p>
               
             
               
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
@@ -4665,10 +3347,6 @@
             
               
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -4687,30 +3365,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -4718,7 +3372,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::PBXVariantGroup</h3>
+      <h3>Project::Object::PBXVariantGroup</h3>
   </div>
 
   <div id="methods-container">
@@ -4726,10 +3380,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>last_known_file_type</a></p>
@@ -4767,6 +3417,10 @@
                 <p><a>wraps_lines</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>isa</a></p>
               
@@ -4778,10 +3432,6 @@
               
                 <p><a>initialize_defaults</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>uuid</a></p>
@@ -4806,6 +3456,10 @@
               
                 <p><a>display_name</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>files</a></p>
@@ -4835,17 +3489,17 @@
                 <p><a>new_xcdatamodel_group</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
-                <p><a>[]</a></p>
+                <p><a>[ ]</a></p>
               
             
               
                 <p><a>remove_children_recursively</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>find_subpath</a></p>
@@ -4860,40 +3514,8 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
               <h2><a>Plist related methods</a></h2>
               
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>to_plist</a></p>
@@ -4901,10 +3523,6 @@
             
               
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -4919,30 +3537,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -4950,7 +3544,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::XCBuildConfiguration</h3>
+      <h3>Project::Object::XCBuildConfiguration</h3>
   </div>
 
   <div id="methods-container">
@@ -4958,10 +3552,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>name</a></p>
@@ -4983,6 +3573,10 @@
                 <p><a>initialize</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize_defaults</a></p>
               
@@ -4990,10 +3584,6 @@
               
                 <p><a>uuid</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>project</a></p>
@@ -5007,44 +3597,16 @@
                 <p><a>display_name</a></p>
               
             
-              
-                <p><a>simple_attributes_hash</a></p>
-              
-            
-              
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
           </div>
         
           <div class="span3">
             
               
-                <p><a>remove_reference</a></p>
+                <p><a>simple_attributes_hash</a></p>
               
             
               
               <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
               
             
               
@@ -5053,10 +3615,6 @@
             
               
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -5075,30 +3633,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -5106,7 +3640,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::XCConfigurationList</h3>
+      <h3>Project::Object::XCConfigurationList</h3>
   </div>
 
   <div id="methods-container">
@@ -5114,10 +3648,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>default_configuration_is_visible</a></p>
@@ -5139,6 +3669,10 @@
                 <p><a>initialize</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>initialize_defaults</a></p>
               
@@ -5151,10 +3685,6 @@
                 <p><a>project</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>remove_from_project</a></p>
               
@@ -5162,6 +3692,10 @@
               
                 <p><a>display_name</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>simple_attributes_hash</a></p>
@@ -5176,19 +3710,11 @@
               
             
               
-              <h2><a>Reference counting</a></h2>
+              <h2><a>Plist related methods</a></h2>
               
             
               
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
+                <p><a>to_plist</a></p>
               
             
           </div>
@@ -5196,31 +3722,7 @@
           <div class="span3">
             
               
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
-              
-                <p><a>object_with_uuid</a></p>
-              
-            
-              
-                <p><a>to_plist</a></p>
-              
-            
-              
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -5231,36 +3733,8 @@
                 <p><a><=></a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>inspect</a></p>
-              
-            
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
               
             
           </div>
@@ -5270,7 +3744,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::Object::XCVersionGroup</h3>
+      <h3>Project::Object::XCVersionGroup</h3>
   </div>
 
   <div id="methods-container">
@@ -5278,10 +3752,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>current_version</a></p>
@@ -5323,6 +3793,10 @@
                 <p><a>wraps_lines</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>isa</a></p>
               
@@ -5330,10 +3804,6 @@
               
                 <p><a>initialize</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>initialize_defaults</a></p>
@@ -5367,6 +3837,10 @@
                 <p><a>files</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a>groups</a></p>
               
@@ -5387,16 +3861,12 @@
                 <p><a>new_static_library</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>new_xcdatamodel_group</a></p>
               
             
               
-                <p><a>[]</a></p>
+                <p><a>[ ]</a></p>
               
             
               
@@ -5411,44 +3881,16 @@
                 <p><a><<</a></p>
               
             
-              
-                <p><a>sort_by_type</a></p>
-              
-            
-              
-              <h2><a>Reference counting</a></h2>
-              
-            
-              
-                <p><a>referrers</a></p>
-              
-            
-              
-                <p><a>add_referrer</a></p>
-              
-            
-              
-                <p><a>remove_referrer</a></p>
-              
-            
-              
-                <p><a>remove_reference</a></p>
-              
-            
-              
-              <h2><a>Plist related methods</a></h2>
-              
-            
-              
-                <p><a>configure_with_plist</a></p>
-              
-            
           </div>
         
           <div class="span3">
             
               
-                <p><a>object_with_uuid</a></p>
+                <p><a>sort_by_type</a></p>
+              
+            
+              
+              <h2><a>Plist related methods</a></h2>
               
             
               
@@ -5457,10 +3899,6 @@
             
               
                 <p><a>to_hash</a></p>
-              
-            
-              
-                <p><a>to_tree_hash</a></p>
               
             
               
@@ -5475,30 +3913,6 @@
                 <p><a>inspect</a></p>
               
             
-              
-              <h2><a>xcodeproj format attributes</a></h2>
-              
-            
-              
-                <p><a>attributes</a></p>
-              
-            
-              
-                <p><a>simple_attributes</a></p>
-              
-            
-              
-                <p><a>to_one_attributes</a></p>
-              
-            
-              
-                <p><a>to_many_attributes</a></p>
-              
-            
-              
-                <p><a>references_by_keys_attributes</a></p>
-              
-            
           </div>
         
       </div>
@@ -5506,7 +3920,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::ObjectDictionary</h3>
+      <h3>Project::ObjectDictionary</h3>
   </div>
 
   <div id="methods-container">
@@ -5514,10 +3928,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>initialize</a></p>
@@ -5531,13 +3941,13 @@
                 <p><a>owner</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>recursive_diff</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
                 <p><a>recursive_delete</a></p>
@@ -5548,16 +3958,16 @@
               
             
               
-                <p><a>[]=</a></p>
+                <p><a>[ ]=</a></p>
+              
+            
+              
+                <p><a>delete</a></p>
               
             
           </div>
         
           <div class="span3">
-            
-              
-                <p><a>delete</a></p>
-              
             
               
               <h2><a>Integration with {AbstractObject}</a></h2>
@@ -5571,13 +3981,13 @@
                 <p><a>to_tree_hash</a></p>
               
             
-          </div>
-        
-          <div class="span3">
-            
               
                 <p><a>remove_reference</a></p>
               
+            
+          </div>
+        
+          <div class="span3">
             
               
               <h2><a>Integration with {ObjectList}</a></h2>
@@ -5598,7 +4008,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Project::ObjectList</h3>
+      <h3>Project::ObjectList</h3>
   </div>
 
   <div id="methods-container">
@@ -5606,10 +4016,6 @@
       <div class="row" id="methods_list">
         
           <div class="span3">
-            
-              
-              <h2><a>General</a></h2>
-              
             
               
                 <p><a>initialize</a></p>
@@ -5639,13 +4045,13 @@
                 <p><a>uuids</a></p>
               
             
-              
-                <p><a>objects</a></p>
-              
-            
           </div>
         
           <div class="span3">
+            
+              
+                <p><a>objects</a></p>
+              
             
               
               <h2><a>Notification enabled methods</a></h2>
@@ -5655,6 +4061,10 @@
                 <p><a>+</a></p>
               
             
+          </div>
+        
+          <div class="span3">
+            
               
                 <p><a><<</a></p>
               
@@ -5662,10 +4072,6 @@
               
                 <p><a>delete</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>clear</a></p>
@@ -5678,7 +4084,7 @@
   </div>
   
   <div class="namespace-container">
-      <h3>Xcodeproj::Workspace</h3>
+      <h3>Workspace</h3>
   </div>
 
   <div id="methods-container">
@@ -5688,40 +4094,32 @@
           <div class="span3">
             
               
-              <h2><a>General</a></h2>
-              
-            
-              
                 <p><a>projpaths</a></p>
               
-            
-          </div>
-        
-          <div class="span3">
             
               
                 <p><a>initialize</a></p>
               
             
-              
-                <p><a><<</a></p>
-              
-            
           </div>
         
           <div class="span3">
+            
+              
+                <p><a><<</a></p>
+              
             
               
                 <p><a>include?</a></p>
               
             
-              
-                <p><a>to_s</a></p>
-              
-            
           </div>
         
           <div class="span3">
+            
+              
+                <p><a>to_s</a></p>
+              
             
               
                 <p><a>save_as</a></p>

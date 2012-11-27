@@ -50,11 +50,29 @@
   <div id="content-container">
     <div class="tab-content">
       <h2><%= name %></h2>
-      <p><%= description %></p>
-      <h3>Version</h3>
-      <p><%= version %></p>
-      <h3>Authors</h3>
-      <p><%= authors %></p>
+      <div class="row">
+        <div class="span8">
+          <h3>Description</h3>
+          <p><%= description %></p>
+          <h3>Authors</h3>
+          <p><%= authors %></p>
+        </div>
+        <div class="span2 offset2">
+          <h3>Version</h3>
+          <p><%= version %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-container">
+    <div class="tab-content">
+          <h3>Overview</h3>
+          <ul>
+            <%= tree_to_html(name_spaces_tree) %>
+          </ul>
+
+      </div>
     </div>
   </div>
 
@@ -62,7 +80,7 @@
 
   <% name_spaces.each do |name_space| %>
   <div class="namespace-container">
-      <h3><%= name_space %></h3>
+      <h3><%= name_space.root_less_name %></h3>
   </div>
 
   <div id="methods-container">
@@ -74,7 +92,7 @@
               <% if group_or_method.is_a?(String) %>
               <h2><a><%= group_or_method %></a></h2>
               <% else %>
-                <p><a><%= group_or_method.name %></a></p>
+                <p><a><%= group_or_method.name.to_s.gsub('[]', '[ ]') %></a></p>
               <% end %>
             <% end %>
           </div>
