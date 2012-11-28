@@ -11,6 +11,7 @@ require 'base'
 require 'base/dsl'
 require 'base/commands'
 require 'base/gem'
+require 'base/name_space'
 
 
 

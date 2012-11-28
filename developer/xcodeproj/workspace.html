@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Workspace Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul>
+        <li>
+        <h3 id="logo">
+          <a href="../../index.html">CocoaPods Docs</a>
+        </h3>
+        </li>
+        <li>
+        <h3>
+          <a href="../xcodeproj.html">xcodeproj</a>
+        </h3>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_workspace">Workspace</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_projpaths">
+              projpaths
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_%3C%3C">
+              <<
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_include%3F">
+              include?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_save_as">
+              save_as
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_workspace" class="tab-pane default">
+          <h2>Workspace</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Xcodeproj::Workspace</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Workspace</code></p>
+        </div>
+
+
+        
+          <div id="tab_projpaths" class="tab-pane">
+          <h2> projpaths </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">projpaths</span>  <span class="p">(</span><span class="n">readonly</span><span class="p">)</span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<String></code></p>
+              <p>The paths of the projects contained in the
+workspace.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">projpaths</span>
+  <span class="vi">@projpaths</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/workspace.rb#L14">
+                  lib/xcodeproj/workspace.rb:14
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Workspace</span><span class="p">)</span> <span class="kp">initialize</span><span class="p">(</span><span class="o">*</span><span class="n">projpaths</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>projpaths</b></p>
+              <p>One or more <code>xcodeproj</code> paths.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Workspace</code></p>
+              <p>A new instance of Workspace</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="o">*</span><span class="n">projpaths</span><span class="p">)</span>
+  <span class="vi">@projpaths</span> <span class="o">=</span> <span class="n">projpaths</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/workspace.rb#L21">
+                  lib/xcodeproj/workspace.rb:21
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_%3C%3C" class="tab-pane">
+          <h2> << </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>projpath</b></p>
+              <p>The path of the project to add.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">&lt;&lt;</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span>
+  <span class="vi">@projpaths</span> <span class="o">&lt;&lt;</span> <span class="n">projpath</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/workspace.rb#L64">
+                  lib/xcodeproj/workspace.rb:64
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_include%3F" class="tab-pane">
+          <h2> include? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Boolean</span><span class="p">)</span> <span class="kp">include</span><span class="p">?(</span><span class="n">projpath</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>projpath</b></p>
+              <p>The path of the project to add.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              <p>Whether the project is contained in the workspace.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">include?</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span>
+  <span class="vi">@projpaths</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/workspace.rb#L75">
+                  lib/xcodeproj/workspace.rb:75
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="nb">to_s</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The XML representation of the workspace.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="no">REXML</span><span class="o">::</span><span class="no">Document</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">TEMPLATE</span><span class="p">)</span><span class="o">.</span><span class="n">tap</span> <span class="k">do</span> <span class="o">|</span><span class="n">document</span><span class="o">|</span>
+    <span class="vi">@projpaths</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">projpath</span><span class="o">|</span>
+      <span class="n">document</span><span class="o">.</span><span class="n">root</span> <span class="o">&lt;&lt;</span> <span class="no">REXML</span><span class="o">::</span><span class="no">Element</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;FileRef&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">tap</span> <span class="k">do</span> <span class="o">|</span><span class="n">el</span><span class="o">|</span>
+        <span class="n">el</span><span class="o">.</span><span class="n">attributes</span><span class="o">[</span><span class="s1">&#39;location&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;group:</span><span class="si">#{</span><span class="n">projpath</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span><span class="o">.</span><span class="n">to_s</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/workspace.rb#L85">
+                  lib/xcodeproj/workspace.rb:85
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_save_as" class="tab-pane">
+          <h2> save_as </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">save_as</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>path</b></p>
+              <p>The path where to save the project.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">save_as</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="no">FileUtils</span><span class="o">.</span><span class="n">mkdir_p</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;contents.xcworkspacedata&#39;</span><span class="p">),</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">out</span><span class="o">|</span>
+    <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="nb">to_s</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/workspace.rb#L102">
+                  lib/xcodeproj/workspace.rb:102
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

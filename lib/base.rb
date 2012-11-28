@@ -64,6 +64,7 @@ module Pod
 
       def render
         require 'erb'
+        puts "\e[1;32mRendering #{File.basename(output_file)}\e[0m"
         template = ERB.new(File.read(template_path))
         File.open(output_file, 'w') { |f| f.puts(template.result(binding)) }
       end
@@ -79,7 +80,9 @@ module Pod
             Pod::Doc::DSL.syntax_highlight(code, lang)
           end
         end)
-        @markdown.render(input)
+        # TODO: experimental
+        input = (input.slice(0,1).capitalize || '') + (input.slice(1..-1) || '')
+        result = @markdown.render(input)
       end
 
       def syntax_highlight(code)
@@ -88,6 +91,12 @@ module Pod
 
       def self.syntax_highlight(code, lang = 'ruby')
         Pygments.highlight(code, :lexer => lang, :options => { :encoding => 'utf-8' })
+      end
+
+      def parameterize(object)
+        object = object.name if object.class <= YARD::CodeObjects::Base
+        CGI.escape(object.to_s)
+        # CGI.escapeHTML(object.to_s).parameterize
       end
 
       #--------------------#

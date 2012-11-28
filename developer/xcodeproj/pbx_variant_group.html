@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>PBXVariantGroup Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul>
+        <li>
+        <h3 id="logo">
+          <a href="../../index.html">CocoaPods Docs</a>
+        </h3>
+        </li>
+        <li>
+        <h3>
+          <a href="../xcodeproj.html">xcodeproj</a>
+        </h3>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_pbxvariantgroup">PBXVariantGroup</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+            
+              
+              <h2><a>Attributes</a></h2>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_last_known_file_type">
+              last_known_file_type
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_children">
+              children
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_source_tree">
+              source_tree
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_path">
+              path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_name">
+              name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_uses_tabs">
+              uses_tabs
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_indent_width">
+              indent_width
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_tab_width">
+              tab_width
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_wraps_lines">
+              wraps_lines
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+              <h2><a>Helpers</a></h2>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_display_name">
+              display_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_files">
+              files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_groups">
+              groups
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_version_groups">
+              version_groups
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_new_file">
+              new_file
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_new_group">
+              new_group
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_new_static_library">
+              new_static_library
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_new_xcdatamodel_group">
+              new_xcdatamodel_group
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_%5B%5D">
+              [ ]
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_remove_children_recursively">
+              remove_children_recursively
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_find_subpath">
+              find_subpath
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_%3C%3C">
+              <<
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_sort_by_type">
+              sort_by_type
+            </a></p>
+          
+          
+              
+              <h2><a>AbstractObject</a></h2>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_isa">
+              isa
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_uuid">
+              uuid
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_project">
+              project
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_remove_from_project">
+              remove_from_project
+            </a></p>
+          
+          
+              
+              <h2><a>Plist related methods</a></h2>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_to_plist">
+              to_plist
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_hash">
+              to_hash
+            </a></p>
+          
+          
+              
+              <h2><a>Object methods</a></h2>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_%3D%3D">
+              ==
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_%3C%3D%3E">
+              <=>
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inspect">
+              inspect
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_pbxvariantgroup" class="tab-pane default">
+          <h2>PBXVariantGroup</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Xcodeproj::Project::Object::PBXVariantGroup</code></p>
+          <h3>Inheritance</h3>
+          <p><code>PBXVariantGroup < PBXGroup < AbstractObject</code></p>
+        </div>
+
+
+        
+          <div id="tab_last_known_file_type" class="tab-pane">
+          <h2> last_known_file_type </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">last_known_file_type</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The file type guessed by Xcode.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:last_known_file_type</span><span class="p">,</span> <span class="nb">String</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L266">
+                  lib/xcodeproj/project/object/group.rb:266
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_children" class="tab-pane">
+          <h2> children </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">ObjectList</span><span class="o">&lt;</span><span class="no">PBXGroup</span><span class="p">,</span> <span class="no">PBXFileReference</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">children</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>ObjectList<PBXGroup, PBXFileReference></code></p>
+              <p>The objects contained by the group.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">has_many</span> <span class="ss">:children</span><span class="p">,</span> <span class="o">[</span><span class="no">PBXGroup</span><span class="p">,</span> <span class="no">PBXFileReference</span><span class="p">,</span> <span class="no">PBXReferenceProxy</span><span class="o">]</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L15">
+                  lib/xcodeproj/project/object/group.rb:15
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_source_tree" class="tab-pane">
+          <h2> source_tree </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">source_tree</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The source tree to which this group is relative.</p>
+
+<p>Usually is group <group>.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:source_tree</span><span class="p">,</span> <span class="nb">String</span><span class="p">,</span> <span class="s1">&#39;&lt;group&gt;&#39;</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L21">
+                  lib/xcodeproj/project/object/group.rb:21
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_path" class="tab-pane">
+          <h2> path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">path</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The path to a folder in the file system.</p>
+
+<p>This attribute is present for groups that are linked to a folder in
+the file system.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:path</span><span class="p">,</span> <span class="nb">String</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L28">
+                  lib/xcodeproj/project/object/group.rb:28
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_name" class="tab-pane">
+          <h2> name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="nb">name</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the group.</p>
+
+<p>If path is specified this attribute is not present.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:name</span><span class="p">,</span> <span class="nb">String</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L34">
+                  lib/xcodeproj/project/object/group.rb:34
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_uses_tabs" class="tab-pane">
+          <h2> uses_tabs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">uses_tabs</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>Whether Xcode should use tabs for text alignment.</p>
+
+<p>E.g. <code>1</code></p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:uses_tabs</span><span class="p">,</span> <span class="nb">String</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L40">
+                  lib/xcodeproj/project/object/group.rb:40
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_indent_width" class="tab-pane">
+          <h2> indent_width </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">indent_width</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The width of the indent.</p>
+
+<p>E.g. <code>2</code></p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:indent_width</span><span class="p">,</span> <span class="nb">String</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L46">
+                  lib/xcodeproj/project/object/group.rb:46
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_tab_width" class="tab-pane">
+          <h2> tab_width </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">tab_width</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The width of the tabs.</p>
+
+<p>E.g. <code>2</code></p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:tab_width</span><span class="p">,</span> <span class="nb">String</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L52">
+                  lib/xcodeproj/project/object/group.rb:52
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_wraps_lines" class="tab-pane">
+          <h2> wraps_lines </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">wraps_lines</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>Whether Xcode should wrap lines.</p>
+
+<p>E.g. <code>1</code></p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:wraps_lines</span><span class="p">,</span> <span class="nb">String</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L58">
+                  lib/xcodeproj/project/object/group.rb:58
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_display_name" class="tab-pane">
+          <h2> display_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">display_name</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the group taking into account the path
+or other factors if needed.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">display_name</span>
+  <span class="k">if</span> <span class="nb">name</span>
+    <span class="nb">name</span>
+  <span class="k">elsif</span> <span class="n">path</span>
+    <span class="no">File</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="k">elsif</span> <span class="nb">self</span><span class="o">.</span><span class="n">equal?</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">main_group</span><span class="p">)</span>
+    <span class="s1">&#39;Main Group&#39;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L67">
+                  lib/xcodeproj/project/object/group.rb:67
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_files" class="tab-pane">
+          <h2> files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="no">PBXFileReference</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">files</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<PBXFileReference></code></p>
+              <p>The files references in the group
+children.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">files</span>
+  <span class="n">children</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">obj</span><span class="o">.</span><span class="n">class</span> <span class="o">==</span> <span class="no">PBXFileReference</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L80">
+                  lib/xcodeproj/project/object/group.rb:80
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_groups" class="tab-pane">
+          <h2> groups </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="no">PBXGroup</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">groups</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<PBXGroup></code></p>
+              <p>The groups in the group
+children.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">groups</span>
+  <span class="n">children</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">obj</span><span class="o">.</span><span class="n">class</span> <span class="o">==</span> <span class="no">PBXGroup</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L87">
+                  lib/xcodeproj/project/object/group.rb:87
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_version_groups" class="tab-pane">
+          <h2> version_groups </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="no">XCVersionGroup</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">version_groups</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<XCVersionGroup></code></p>
+              <p>The version groups in the group
+children.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">version_groups</span>
+  <span class="n">children</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">obj</span><span class="o">.</span><span class="n">class</span> <span class="o">==</span> <span class="no">XCVersionGroup</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L94">
+                  lib/xcodeproj/project/object/group.rb:94
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_new_file" class="tab-pane">
+          <h2> new_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">PBXFileReference</span><span class="p">)</span> <span class="n">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>#to_s</code> <b>path</b></p>
+              <p>The file system path of the file.</p>
+
+            
+              
+
+              <p><code>String</code> <b>sub_group_path</b></p>
+              <p>An optional subgroup path indicating the groups separated by a <code>/</code>.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PBXFileReference</code></p>
+              <p>The new file reference.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="n">file</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">PBXFileReference</span><span class="p">)</span>
+  <span class="n">file</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">to_s</span>
+  <span class="n">file</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">pathname</span><span class="o">.</span><span class="n">basename</span><span class="o">.</span><span class="n">to_s</span>
+  <span class="n">file</span><span class="o">.</span><span class="n">update_last_known_file_type</span>
+
+  <span class="n">target</span> <span class="o">=</span> <span class="n">find_subpath</span><span class="p">(</span><span class="n">sub_group_path</span><span class="p">,</span> <span class="kp">true</span><span class="p">)</span>
+  <span class="n">target</span><span class="o">.</span><span class="n">children</span> <span class="o">&lt;&lt;</span> <span class="n">file</span>
+  <span class="n">file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L111">
+                  lib/xcodeproj/project/object/group.rb:111
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_new_group" class="tab-pane">
+          <h2> new_group </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">PBXGroup</span><span class="p">)</span> <span class="n">new_group</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>#to_s</code> <b>name</b></p>
+              <p>The name of the new group.</p>
+
+            
+              
+
+              <p><code>String</code> <b>sub_group_path</b></p>
+              <p>(see #new_file)</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PBXGroup</code></p>
+              <p>The new group.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">new_group</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="n">group</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">PBXGroup</span><span class="p">)</span>
+  <span class="n">group</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">name</span>
+
+  <span class="n">target</span> <span class="o">=</span> <span class="n">find_subpath</span><span class="p">(</span><span class="n">sub_group_path</span><span class="p">,</span> <span class="kp">true</span><span class="p">)</span>
+  <span class="n">target</span><span class="o">.</span><span class="n">children</span> <span class="o">&lt;&lt;</span> <span class="n">group</span>
+  <span class="n">group</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L134">
+                  lib/xcodeproj/project/object/group.rb:134
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_new_static_library" class="tab-pane">
+          <h2> new_static_library </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">PBXFileReference</span><span class="p">)</span> <span class="n">new_static_library</span><span class="p">(</span><span class="n">product_name</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>#to_s</code> <b>product_name</b></p>
+              <p>The name of the new static library.</p>
+
+            
+              
+
+              <p><code>String</code> <b>sub_group_path</b></p>
+              <p>(see #new_file)#</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PBXFileReference</code></p>
+              <p>The new group.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">new_static_library</span><span class="p">(</span><span class="n">product_name</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="n">file</span> <span class="o">=</span> <span class="n">new_file</span><span class="p">(</span><span class="s2">&quot;lib</span><span class="si">#{</span><span class="n">product_name</span><span class="si">}</span><span class="s2">.a&quot;</span><span class="p">,</span> <span class="n">sub_group_path</span><span class="p">)</span>
+  <span class="n">file</span><span class="o">.</span><span class="n">include_in_index</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+  <span class="n">file</span><span class="o">.</span><span class="n">source_tree</span> <span class="o">=</span> <span class="s1">&#39;BUILT_PRODUCTS_DIR&#39;</span>
+  <span class="n">file</span><span class="o">.</span><span class="n">explicit_file_type</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">last_known_file_type</span>
+  <span class="n">file</span><span class="o">.</span><span class="n">last_known_file_type</span> <span class="o">=</span> <span class="kp">nil</span>
+  <span class="n">file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L154">
+                  lib/xcodeproj/project/object/group.rb:154
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_new_xcdatamodel_group" class="tab-pane">
+          <h2> new_xcdatamodel_group </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">XCVersionGroup</span><span class="p">)</span> <span class="n">new_xcdatamodel_group</span><span class="p">(</span><span class="n">xcdatamodel_path</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>XCVersionGroup</code></p>
+              <p>The new group.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">new_xcdatamodel_group</span><span class="p">(</span><span class="n">xcdatamodel_path</span><span class="p">)</span>
+  <span class="n">g</span> <span class="o">=</span> <span class="vi">@project</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">XCVersionGroup</span><span class="p">)</span>
+  <span class="n">g</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">xcdatamodel_path</span>
+  <span class="n">g</span><span class="o">.</span><span class="n">version_group_type</span> <span class="o">=</span> <span class="s1">&#39;wrapper.xcdatamodel&#39;</span>
+  <span class="n">file</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">new_file</span><span class="p">(</span><span class="n">xcdatamodel_path</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sr">/xcdatamodeld$/</span><span class="p">,</span> <span class="s1">&#39;xcdatamodel&#39;</span><span class="p">))</span>
+  <span class="n">g</span><span class="o">.</span><span class="n">current_version</span> <span class="o">=</span> <span class="n">file</span>
+  <span class="n">g</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L167">
+                  lib/xcodeproj/project/object/group.rb:167
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_%5B%5D" class="tab-pane">
+          <h2> [] </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="o">[]</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>path</b></p>
+              <p>A string with the names of the groups separated by a &#39;<code>/</code>&#39;.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">[]</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="n">find_subpath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L183">
+                  lib/xcodeproj/project/object/group.rb:183
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_remove_children_recursively" class="tab-pane">
+          <h2> remove_children_recursively </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">remove_children_recursively</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">remove_children_recursively</span>
+  <span class="n">groups</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">g</span><span class="o">|</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">remove_children_recursively</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">remove_from_project</span>
+  <span class="k">end</span>
+  <span class="n">files</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">remove_from_project</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L189">
+                  lib/xcodeproj/project/object/group.rb:189
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_find_subpath" class="tab-pane">
+          <h2> find_subpath </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">PBXGroup</span><span class="p">)</span> <span class="n">find_subpath</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">should_create</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>path</b></p>
+              <p>A string with the names of the groups separated by a &#39;<code>/</code>&#39;.</p>
+
+            
+              
+
+              <p><code>Boolean</code> <b>should_create</b></p>
+              <p>Whether the path should be created.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PBXGroup</code></p>
+              <p>The group if found.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">find_subpath</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">should_create</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nb">self</span> <span class="k">unless</span> <span class="n">path</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="k">unless</span> <span class="n">path</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+  <span class="n">child_name</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">shift</span>
+  <span class="n">child</span> <span class="o">=</span> <span class="n">children</span><span class="o">.</span><span class="n">find</span><span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="n">c</span><span class="o">.</span><span class="n">display_name</span> <span class="o">==</span> <span class="n">child_name</span> <span class="p">}</span>
+  <span class="n">child</span> <span class="o">=</span> <span class="n">new_group</span><span class="p">(</span><span class="n">child_name</span><span class="p">)</span> <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">nil?</span> <span class="o">&amp;&amp;</span> <span class="n">should_create</span>
+  <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="n">child</span>
+  <span class="k">else</span>
+    <span class="n">child</span><span class="o">.</span><span class="n">find_subpath</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">should_create</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L215">
+                  lib/xcodeproj/project/object/group.rb:215
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_%3C%3C" class="tab-pane">
+          <h2> << </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">ObjectList</span><span class="o">&lt;</span><span class="no">AbstractObject</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">child</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>ObjectList<AbstractObject></code></p>
+              <p>The children list.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">&lt;&lt;</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+  <span class="n">children</span> <span class="o">&lt;&lt;</span> <span class="n">child</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L232">
+                  lib/xcodeproj/project/object/group.rb:232
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_sort_by_type" class="tab-pane">
+          <h2> sort_by_type </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">sort_by_type</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">sort_by_type</span>
+  <span class="n">children</span><span class="o">.</span><span class="n">sort</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">PBXGroup</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">PBXFileReference</span><span class="p">)</span>
+      <span class="o">-</span><span class="mi">1</span>
+    <span class="k">elsif</span> <span class="n">x</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">PBXFileReference</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">PBXGroup</span><span class="p">)</span>
+      <span class="mi">1</span>
+    <span class="k">elsif</span> <span class="n">x</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span>
+      <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">&lt;=&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">else</span>
+      <span class="mi">0</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object/group.rb#L240">
+                  lib/xcodeproj/project/object/group.rb:240
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_isa" class="tab-pane">
+          <h2> isa </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">isa</span>  <span class="p">(</span><span class="n">readonly</span><span class="p">)</span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The object&#39;s class name.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">isa</span>
+  <span class="vi">@isa</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L48">
+                  lib/xcodeproj/project/object.rb:48
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_uuid" class="tab-pane">
+          <h2> uuid </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="n">uuid</span>  <span class="p">(</span><span class="n">readonly</span><span class="p">)</span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The object universally unique identifier.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">uuid</span>
+  <span class="vi">@uuid</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L87">
+                  lib/xcodeproj/project/object.rb:87
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_project" class="tab-pane">
+          <h2> project </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Project</span><span class="p">)</span> <span class="n">project</span>  <span class="p">(</span><span class="n">readonly</span><span class="p">)</span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Project</code></p>
+              <p>The project that owns the object.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">project</span>
+  <span class="vi">@project</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L91">
+                  lib/xcodeproj/project/object.rb:91
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_remove_from_project" class="tab-pane">
+          <h2> remove_from_project </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">remove_from_project</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">remove_from_project</span>
+  <span class="vi">@project</span><span class="o">.</span><span class="n">objects_by_uuid</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">uuid</span><span class="p">)</span>
+  <span class="vi">@referrers</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">referrer</span><span class="o">|</span> <span class="n">referrer</span><span class="o">.</span><span class="n">remove_reference</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="p">}</span>
+  <span class="k">raise</span> <span class="s2">&quot;[Xcodeproj] BUG: </span><span class="si">#{</span><span class="nb">self</span><span class="si">}</span><span class="s2"> should have no referrers instead the following objects are still referencing it </span><span class="si">#{</span><span class="n">referrers</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">unless</span> <span class="n">referrers</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L101">
+                  lib/xcodeproj/project/object.rb:101
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_plist" class="tab-pane">
+          <h2> to_plist </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">to_plist</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_plist</span>
+  <span class="n">plist</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;isa&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">isa</span>
+
+  <span class="n">simple_attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">attrb</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="n">plist</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">plist_name</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span> <span class="k">if</span> <span class="n">value</span>
+  <span class="k">end</span>
+
+  <span class="n">to_one_attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">attrb</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="n">plist</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">plist_name</span><span class="o">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">uuid</span> <span class="k">if</span> <span class="n">obj</span>
+  <span class="k">end</span>
+
+  <span class="n">to_many_attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+  <span class="n">list</span> <span class="o">=</span> <span class="n">attrb</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="n">plist</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">plist_name</span><span class="o">]</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="n">uuids</span>
+  <span class="k">end</span>
+
+  <span class="n">references_by_keys_attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+    <span class="n">list</span> <span class="o">=</span> <span class="n">attrb</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="n">plist</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">plist_name</span><span class="o">]</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">dictionary</span><span class="o">|</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">to_plist</span> <span class="p">}</span>
+  <span class="k">end</span>
+
+  <span class="n">plist</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L282">
+                  lib/xcodeproj/project/object.rb:282
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_hash" class="tab-pane">
+          <h2> to_hash </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">to_hash</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_plist</span>
+  <span class="n">plist</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;isa&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">isa</span>
+
+  <span class="n">simple_attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">attrb</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="n">plist</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">plist_name</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span> <span class="k">if</span> <span class="n">value</span>
+  <span class="k">end</span>
+
+  <span class="n">to_one_attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">attrb</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="n">plist</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">plist_name</span><span class="o">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">uuid</span> <span class="k">if</span> <span class="n">obj</span>
+  <span class="k">end</span>
+
+  <span class="n">to_many_attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+  <span class="n">list</span> <span class="o">=</span> <span class="n">attrb</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="n">plist</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">plist_name</span><span class="o">]</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="n">uuids</span>
+  <span class="k">end</span>
+
+  <span class="n">references_by_keys_attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+    <span class="n">list</span> <span class="o">=</span> <span class="n">attrb</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="n">plist</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">plist_name</span><span class="o">]</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">dictionary</span><span class="o">|</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">to_plist</span> <span class="p">}</span>
+  <span class="k">end</span>
+
+  <span class="n">plist</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L308">
+                  lib/xcodeproj/project/object.rb:308
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_%3D%3D" class="tab-pane">
+          <h2> == </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="o">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+  <span class="n">other</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">AbstractObject</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">self</span><span class="o">.</span><span class="n">to_plist</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">to_plist</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L353">
+                  lib/xcodeproj/project/object.rb:353
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_%3C%3D%3E" class="tab-pane">
+          <h2> <=> </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="o">&lt;=&gt;</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">&lt;=&gt;</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+  <span class="nb">self</span><span class="o">.</span><span class="n">uuid</span> <span class="o">&lt;=&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">uuid</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L357">
+                  lib/xcodeproj/project/object.rb:357
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inspect" class="tab-pane">
+          <h2> inspect </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="nb">inspect</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inspect</span>
+  <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;#&lt;UUID: `</span><span class="si">#{</span><span class="n">uuid</span><span class="si">}</span><span class="s2">&#39;, isa: `</span><span class="si">#{</span><span class="n">isa</span><span class="si">}</span><span class="s2">&#39;&gt;&quot;</span>
+  <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;, name: `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&#39;&quot;</span> <span class="k">if</span> <span class="nb">respond_to?</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">name</span>
+  <span class="n">s</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object.rb#L361">
+                  lib/xcodeproj/project/object.rb:361
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

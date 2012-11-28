@@ -67,11 +67,10 @@
 
   <div id="content-container">
     <div class="tab-content">
-          <h3>Overview</h3>
-          <ul>
-            <%= tree_to_html(name_spaces_tree) %>
-          </ul>
-
+          <% name_spaces_with_children.each do |name_space| %>
+            <h3><%= name_space %></h3>
+            <p><code><%= name_space.children_names * '</code> <code>'%></code></p>
+          <% end %>
       </div>
     </div>
   </div>
@@ -79,27 +78,27 @@
   <!-- CLASSES **************************************************************-->
 
   <% name_spaces.each do |name_space| %>
-  <div class="namespace-container">
-      <h3><%= name_space.root_less_name %></h3>
-  </div>
+    <div class="namespace-container">
+      <h3><a href="<%= name_space.url_relative_to_gem %>"><%= name_space.root_less_name %></a></h3>
+    </div>
 
-  <div id="methods-container">
-    <div id="header">
-      <div class="row" id="methods_list">
-        <% name_space.columns.each do |entries| %>
-          <div class="span3">
-            <% entries.each do |group_or_method| %>
-              <% if group_or_method.is_a?(String) %>
-              <h2><a><%= group_or_method %></a></h2>
-              <% else %>
-                <p><a><%= group_or_method.name.to_s.gsub('[]', '[ ]') %></a></p>
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          <% name_space.columns.each do |entries| %>
+            <div class="span3">
+              <% entries.each do |group_or_method| %>
+                <% if group_or_method.is_a?(String) %>
+                <h2><a><%= group_or_method %></a></h2>
+                <% else %>
+                  <p><a><%= group_or_method.name.to_s.gsub('[]', '[ ]') %></a></p>
+                <% end %>
               <% end %>
-            <% end %>
-          </div>
-        <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
   <% end %>
 
   <!-- README *************************************************************-->

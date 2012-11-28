@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>ARGV Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul>
+        <li>
+        <h3 id="logo">
+          <a href="../../index.html">CocoaPods Docs</a>
+        </h3>
+        </li>
+        <li>
+        <h3>
+          <a href="../xcodeproj.html">xcodeproj</a>
+        </h3>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_argv">ARGV</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_options">
+              options
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_arguments">
+              arguments
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_option">
+              option
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_shift_argument">
+              shift_argument
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_recursive_diff">
+              recursive_diff
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_argv" class="tab-pane default">
+          <h2>ARGV</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Xcodeproj::Command::ARGV</code></p>
+          <h3>Inheritance</h3>
+          <p><code>ARGV < Array</code></p>
+        </div>
+
+
+        
+          <div id="tab_options" class="tab-pane">
+          <h2> options </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">options</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">options</span><span class="p">;</span>        <span class="nb">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">.</span><span class="n">to_s</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span> <span class="p">};</span>   <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command.rb#L41">
+                  lib/xcodeproj/command.rb:41
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_arguments" class="tab-pane">
+          <h2> arguments </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">arguments</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">arguments</span><span class="p">;</span>      <span class="nb">self</span> <span class="o">-</span> <span class="n">options</span><span class="p">;</span>                      <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command.rb#L42">
+                  lib/xcodeproj/command.rb:42
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_option" class="tab-pane">
+          <h2> option </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">option</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">option</span><span class="p">(</span><span class="nb">name</span><span class="p">);</span>   <span class="o">!!</span><span class="n">delete</span><span class="p">(</span><span class="nb">name</span><span class="p">);</span>                      <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command.rb#L43">
+                  lib/xcodeproj/command.rb:43
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_shift_argument" class="tab-pane">
+          <h2> shift_argument </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">shift_argument</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">shift_argument</span><span class="p">;</span> <span class="p">(</span><span class="n">arg</span> <span class="o">=</span> <span class="n">arguments</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">delete</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span> <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command.rb#L44">
+                  lib/xcodeproj/command.rb:44
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_recursive_diff" class="tab-pane">
+          <h2> recursive_diff </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="p">)</span> <span class="n">recursive_diff</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">self_key</span> <span class="o">=</span> <span class="s1">&#39;self&#39;</span><span class="p">,</span> <span class="n">other_key</span> <span class="o">=</span> <span class="s1">&#39;other&#39;</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">recursive_diff</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">self_key</span> <span class="o">=</span> <span class="s1">&#39;self&#39;</span><span class="p">,</span> <span class="n">other_key</span> <span class="o">=</span> <span class="s1">&#39;other&#39;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+    <span class="n">new_objects_self</span>  <span class="o">=</span> <span class="p">(</span><span class="nb">self</span> <span class="o">-</span> <span class="n">other</span><span class="p">)</span>
+    <span class="n">new_objects_other</span> <span class="o">=</span> <span class="p">(</span><span class="n">other</span> <span class="o">-</span> <span class="nb">self</span><span class="p">)</span>
+    <span class="n">unmatched_objects_self</span> <span class="o">=</span> <span class="o">[]</span>
+    <span class="n">array_result</span> <span class="o">=</span> <span class="o">[]</span>
+
+    <span class="c1"># Try to match objects to reduce noise</span>
+    <span class="n">new_objects_self</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+      <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+        <span class="n">other_value</span> <span class="o">=</span> <span class="n">new_objects_other</span><span class="o">.</span><span class="n">find</span> <span class="k">do</span> <span class="o">|</span><span class="n">other</span><span class="o">|</span>
+          <span class="n">other</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">value</span><span class="o">[</span><span class="s1">&#39;displayName&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="n">other</span><span class="o">[</span><span class="s1">&#39;displayName&#39;</span><span class="o">]</span><span class="p">)</span>
+        <span class="k">end</span>
+
+        <span class="k">if</span> <span class="n">other_value</span>
+          <span class="n">new_objects_other</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">other_value</span><span class="p">)</span>
+          <span class="n">match_diff</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">recursive_diff</span><span class="p">(</span><span class="n">other_value</span><span class="p">,</span> <span class="n">self_key</span><span class="p">,</span> <span class="n">other_key</span><span class="p">)</span>
+          <span class="n">array_result</span> <span class="o">&lt;&lt;</span> <span class="p">{</span> <span class="n">value</span><span class="o">[</span><span class="s1">&#39;displayName&#39;</span><span class="o">]</span> <span class="o">=&gt;</span> <span class="n">match_diff</span><span class="p">}</span> <span class="k">unless</span> <span class="n">match_diff</span> <span class="o">==</span> <span class="p">{}</span>
+        <span class="k">else</span>
+          <span class="n">unmatched_objects_self</span> <span class="o">&lt;&lt;</span> <span class="n">value</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="k">unless</span> <span class="n">unmatched_objects_self</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="n">array_result</span> <span class="o">&lt;&lt;</span> <span class="p">{</span>
+        <span class="n">self_key</span> <span class="o">=&gt;</span> <span class="n">unmatched_objects_self</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">v</span><span class="o">|</span>
+          <span class="p">{</span> <span class="n">v</span><span class="o">[</span><span class="s1">&#39;displayName&#39;</span><span class="o">]</span> <span class="o">=&gt;</span> <span class="n">v</span> <span class="p">}</span>
+        <span class="k">end</span>
+      <span class="p">}</span>
+    <span class="k">end</span>
+
+    <span class="k">unless</span> <span class="n">new_objects_other</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="n">array_result</span> <span class="o">&lt;&lt;</span> <span class="p">{</span>
+        <span class="n">other_key</span> <span class="o">=&gt;</span> <span class="n">new_objects_other</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">v</span><span class="o">|</span>
+          <span class="p">{</span> <span class="n">v</span><span class="o">[</span><span class="s1">&#39;displayName&#39;</span><span class="o">]</span> <span class="o">=&gt;</span> <span class="n">v</span> <span class="p">}</span>
+        <span class="k">end</span>
+      <span class="p">}</span>
+    <span class="k">end</span>
+
+    <span class="n">array_result</span> <span class="k">unless</span> <span class="n">array_result</span> <span class="o">==</span> <span class="o">[]</span>
+  <span class="k">else</span>
+    <span class="k">super</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/recursive_diff.rb#L62">
+                  lib/xcodeproj/project/recursive_diff.rb:62
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

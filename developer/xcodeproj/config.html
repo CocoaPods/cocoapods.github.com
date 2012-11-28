@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Config Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul>
+        <li>
+        <h3 id="logo">
+          <a href="../../index.html">CocoaPods Docs</a>
+        </h3>
+        </li>
+        <li>
+        <h3>
+          <a href="../xcodeproj.html">xcodeproj</a>
+        </h3>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_config">Config</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_attributes">
+              attributes
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_frameworks">
+              frameworks
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_weak_frameworks">
+              weak_frameworks
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_libraries">
+              libraries
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_includes">
+              includes
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_save_as">
+              save_as
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_to_hash">
+              to_hash
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_merge%21">
+              merge!
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_%3C%3C">
+              <<
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_merge">
+              merge
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_dup">
+              dup
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inspect">
+              inspect
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_%3D%3D">
+              ==
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_config" class="tab-pane default">
+          <h2>Config</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Xcodeproj::Config</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Config</code></p>
+        </div>
+
+
+        
+          <div id="tab_attributes" class="tab-pane">
+          <h2> attributes </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Hash</span><span class="p">{</span><span class="nb">String</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">})</span> <span class="n">attributes</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{String => String}</code></p>
+              <p>The attributes of the settings file
+excluding frameworks, weak_framework and libraries.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">attributes</span>
+  <span class="vi">@attributes</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L13">
+                  lib/xcodeproj/config.rb:13
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_frameworks" class="tab-pane">
+          <h2> frameworks </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">frameworks</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<String></code></p>
+              <p>The list of the frameworks required by this
+settings file.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">frameworks</span>
+  <span class="vi">@frameworks</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L18">
+                  lib/xcodeproj/config.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_weak_frameworks" class="tab-pane">
+          <h2> weak_frameworks </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">weak_frameworks</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<String></code></p>
+              <p>The list of the <em>weak</em> frameworks required by
+this settings file.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">weak_frameworks</span>
+  <span class="vi">@weak_frameworks</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L23">
+                  lib/xcodeproj/config.rb:23
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_libraries" class="tab-pane">
+          <h2> libraries </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">libraries</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<String></code></p>
+              <p>The list of the libraries required by this
+settings file.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">libraries</span>
+  <span class="vi">@libraries</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L28">
+                  lib/xcodeproj/config.rb:28
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_includes" class="tab-pane">
+          <h2> includes </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="p">)</span> <span class="n">includes</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array</code></p>
+              <p>The list of the configuration files included by this
+configuration file (<code>#include &quot;SomeConfig&quot;</code>).</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">includes</span>
+  <span class="vi">@includes</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L33">
+                  lib/xcodeproj/config.rb:33
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Config</span><span class="p">)</span> <span class="kp">initialize</span><span class="p">(</span><span class="n">xcconfig_hash_or_file</span> <span class="o">=</span> <span class="p">{})</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Hash</code><code>File</code><code>String</code> <b>xcconfig_hash_or_file</b></p>
+              <p>Initial data.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Config</code></p>
+              <p>A new instance of Config</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">xcconfig_hash_or_file</span> <span class="o">=</span> <span class="p">{})</span>
+  <span class="vi">@attributes</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="vi">@includes</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="vi">@frameworks</span><span class="p">,</span> <span class="vi">@weak_frameworks</span><span class="p">,</span> <span class="vi">@libraries</span> <span class="o">=</span> <span class="no">Set</span><span class="o">.</span><span class="n">new</span><span class="p">,</span> <span class="no">Set</span><span class="o">.</span><span class="n">new</span><span class="p">,</span> <span class="no">Set</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">merge!</span><span class="p">(</span><span class="n">extract_hash</span><span class="p">(</span><span class="n">xcconfig_hash_or_file</span><span class="p">))</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L39">
+                  lib/xcodeproj/config.rb:39
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="nb">to_s</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The serialized internal data.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="n">to_hash</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">key</span><span class="si">}</span><span class="s2"> = </span><span class="si">#{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L57">
+                  lib/xcodeproj/config.rb:57
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_save_as" class="tab-pane">
+          <h2> save_as </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">save_as</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>pathname</b></p>
+              <p>The file that the data should be written to.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Writes the serialized representation of the internal data</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">save_as</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span>
+  <span class="n">pathname</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="n">file</span> <span class="o">&lt;&lt;</span> <span class="nb">to_s</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L66">
+                  lib/xcodeproj/config.rb:66
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_hash" class="tab-pane">
+          <h2> to_hash </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Hash</span><span class="p">)</span> <span class="n">to_hash</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash</code></p>
+              <p>The hash reppresentation of the framework. The hash</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_hash</span>
+  <span class="nb">hash</span> <span class="o">=</span> <span class="vi">@attributes</span><span class="o">.</span><span class="n">dup</span>
+  <span class="n">flags</span> <span class="o">=</span> <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;OTHER_LDFLAGS&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span>
+  <span class="n">flags</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">dup</span><span class="o">.</span><span class="n">strip</span>
+  <span class="n">flags</span> <span class="o">&lt;&lt;</span> <span class="n">libraries</span><span class="o">.</span><span class="n">to_a</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="p">{</span><span class="o">|</span> <span class="n">memo</span><span class="p">,</span> <span class="n">l</span> <span class="o">|</span> <span class="n">memo</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; -l</span><span class="si">#{</span><span class="n">l</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+  <span class="n">flags</span> <span class="o">&lt;&lt;</span> <span class="n">frameworks</span><span class="o">.</span><span class="n">to_a</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span> <span class="n">memo</span><span class="p">,</span> <span class="n">f</span> <span class="o">|</span> <span class="n">memo</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; -framework </span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+  <span class="n">flags</span> <span class="o">&lt;&lt;</span> <span class="n">weak_frameworks</span><span class="o">.</span><span class="n">to_a</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span> <span class="n">memo</span><span class="p">,</span> <span class="n">f</span> <span class="o">|</span> <span class="n">memo</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; -weak_framework </span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+  <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;OTHER_LDFLAGS&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">strip</span>
+  <span class="nb">hash</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;OTHER_LDFLAGS&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">flags</span><span class="o">.</span><span class="n">strip</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="nb">hash</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L74">
+                  lib/xcodeproj/config.rb:74
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_merge%21" class="tab-pane">
+          <h2> merge! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">merge!</span><span class="p">(</span><span class="n">xcconfig</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Hash</code><code>Config</code> <b>xcconfig</b></p>
+              <p>The data to merge into the internal data.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">merge!</span><span class="p">(</span><span class="n">xcconfig</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">xcconfig</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">Config</span>
+    <span class="vi">@attributes</span><span class="o">.</span><span class="n">merge!</span><span class="p">(</span><span class="n">xcconfig</span><span class="o">.</span><span class="n">attributes</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="o">|</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">v1</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">v2</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+    <span class="vi">@libraries</span><span class="o">.</span><span class="n">merge</span>   <span class="n">xcconfig</span><span class="o">.</span><span class="n">libraries</span>
+    <span class="vi">@frameworks</span><span class="o">.</span><span class="n">merge</span>  <span class="n">xcconfig</span><span class="o">.</span><span class="n">frameworks</span>
+    <span class="vi">@weak_frameworks</span><span class="o">.</span><span class="n">merge</span>  <span class="n">xcconfig</span><span class="o">.</span><span class="n">weak_frameworks</span>
+  <span class="k">else</span>
+  <span class="vi">@attributes</span><span class="o">.</span><span class="n">merge!</span><span class="p">(</span><span class="n">xcconfig</span><span class="o">.</span><span class="n">to_hash</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="o">|</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">v1</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">v2</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+  <span class="c1"># Parse frameworks and libraries. Then remove the from the linker flags</span>
+  <span class="n">flags</span> <span class="o">=</span> <span class="vi">@attributes</span><span class="o">[</span><span class="s1">&#39;OTHER_LDFLAGS&#39;</span><span class="o">]</span>
+  <span class="k">return</span> <span class="k">unless</span> <span class="n">flags</span>
+
+  <span class="n">frameworks</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/-framework\s+([^\s]+)/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span> <span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="p">}</span>
+  <span class="n">weak_frameworks</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/-weak_framework\s+([^\s]+)/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span> <span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="p">}</span>
+  <span class="n">libraries</span>  <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/-l ?([^\s]+)/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span> <span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="p">}</span>
+  <span class="vi">@frameworks</span><span class="o">.</span><span class="n">merge</span> <span class="n">frameworks</span>
+  <span class="vi">@weak_frameworks</span><span class="o">.</span><span class="n">merge</span> <span class="n">weak_frameworks</span>
+  <span class="vi">@libraries</span><span class="o">.</span><span class="n">merge</span> <span class="n">libraries</span>
+
+  <span class="n">new_flags</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">dup</span>
+  <span class="n">frameworks</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;-framework </span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">weak_frameworks</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;-weak_framework </span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">libraries</span><span class="o">.</span><span class="n">each</span>  <span class="p">{</span><span class="o">|</span><span class="n">l</span><span class="o">|</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;-l</span><span class="si">#{</span><span class="n">l</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;-l </span><span class="si">#{</span><span class="n">l</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="vi">@attributes</span><span class="o">[</span><span class="s1">&#39;OTHER_LDFLAGS&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&quot;\w*&quot;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L103">
+                  lib/xcodeproj/config.rb:103
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_%3C%3C" class="tab-pane">
+          <h2> << </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="o">&lt;&lt;</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Hash</code><code>Config</code> <b>xcconfig</b></p>
+              <p>The data to merge into the internal data.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">merge!</span><span class="p">(</span><span class="n">xcconfig</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">xcconfig</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">Config</span>
+    <span class="vi">@attributes</span><span class="o">.</span><span class="n">merge!</span><span class="p">(</span><span class="n">xcconfig</span><span class="o">.</span><span class="n">attributes</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="o">|</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">v1</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">v2</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+    <span class="vi">@libraries</span><span class="o">.</span><span class="n">merge</span>   <span class="n">xcconfig</span><span class="o">.</span><span class="n">libraries</span>
+    <span class="vi">@frameworks</span><span class="o">.</span><span class="n">merge</span>  <span class="n">xcconfig</span><span class="o">.</span><span class="n">frameworks</span>
+    <span class="vi">@weak_frameworks</span><span class="o">.</span><span class="n">merge</span>  <span class="n">xcconfig</span><span class="o">.</span><span class="n">weak_frameworks</span>
+  <span class="k">else</span>
+  <span class="vi">@attributes</span><span class="o">.</span><span class="n">merge!</span><span class="p">(</span><span class="n">xcconfig</span><span class="o">.</span><span class="n">to_hash</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="o">|</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">v1</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">v2</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+  <span class="c1"># Parse frameworks and libraries. Then remove the from the linker flags</span>
+  <span class="n">flags</span> <span class="o">=</span> <span class="vi">@attributes</span><span class="o">[</span><span class="s1">&#39;OTHER_LDFLAGS&#39;</span><span class="o">]</span>
+  <span class="k">return</span> <span class="k">unless</span> <span class="n">flags</span>
+
+  <span class="n">frameworks</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/-framework\s+([^\s]+)/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span> <span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="p">}</span>
+  <span class="n">weak_frameworks</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/-weak_framework\s+([^\s]+)/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span> <span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="p">}</span>
+  <span class="n">libraries</span>  <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/-l ?([^\s]+)/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span> <span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="p">}</span>
+  <span class="vi">@frameworks</span><span class="o">.</span><span class="n">merge</span> <span class="n">frameworks</span>
+  <span class="vi">@weak_frameworks</span><span class="o">.</span><span class="n">merge</span> <span class="n">weak_frameworks</span>
+  <span class="vi">@libraries</span><span class="o">.</span><span class="n">merge</span> <span class="n">libraries</span>
+
+  <span class="n">new_flags</span> <span class="o">=</span> <span class="n">flags</span><span class="o">.</span><span class="n">dup</span>
+  <span class="n">frameworks</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;-framework </span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">weak_frameworks</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;-weak_framework </span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">libraries</span><span class="o">.</span><span class="n">each</span>  <span class="p">{</span><span class="o">|</span><span class="n">l</span><span class="o">|</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;-l</span><span class="si">#{</span><span class="n">l</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;-l </span><span class="si">#{</span><span class="n">l</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="vi">@attributes</span><span class="o">[</span><span class="s1">&#39;OTHER_LDFLAGS&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">new_flags</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&quot;\w*&quot;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L129">
+                  lib/xcodeproj/config.rb:129
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_merge" class="tab-pane">
+          <h2> merge </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">merge</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+  <span class="nb">self</span><span class="o">.</span><span class="n">dup</span><span class="o">.</span><span class="n">tap</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="n">x</span><span class="o">.</span><span class="n">merge!</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L131">
+                  lib/xcodeproj/config.rb:131
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dup" class="tab-pane">
+          <h2> dup </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="nb">dup</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dup</span>
+  <span class="no">Xcodeproj</span><span class="o">::</span><span class="no">Config</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">to_hash</span><span class="o">.</span><span class="n">dup</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L135">
+                  lib/xcodeproj/config.rb:135
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inspect" class="tab-pane">
+          <h2> inspect </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="nb">inspect</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inspect</span>
+  <span class="n">to_hash</span><span class="o">.</span><span class="n">inspect</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L142">
+                  lib/xcodeproj/config.rb:142
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_%3D%3D" class="tab-pane">
+          <h2> == </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="o">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+  <span class="n">other</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:to_hash</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">other</span><span class="o">.</span><span class="n">to_hash</span> <span class="o">==</span> <span class="nb">self</span><span class="o">.</span><span class="n">to_hash</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/config.rb#L146">
+                  lib/xcodeproj/config.rb:146
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

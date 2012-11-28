@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title><%= name %> Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul>
+        <li>
+        <h3 id="logo">
+          <a href="../../index.html">CocoaPods Docs</a>
+        </h3>
+        </li>
+        <li>
+        <h3>
+          <a href="../<%= gem_generator.name.underscore %>.html"><%= gem_generator.name %></a>
+        </h3>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_<%= name.parameterize %>"><%= name %></a></h1>
+        <div class="row" id="methods_list">
+          <% columns(40,22).each do |entries| %>
+            <div class="span3">
+            <% entries.each do |group_or_method| %>
+              <% if group_or_method.is_a?(String) %>
+              <h2><a><%= group_or_method %></a></h2>
+          <% else %>
+            <p><a class="select-tab" href="#tab_<%= parameterize group_or_method %>">
+              <%= group_or_method.name.to_s.gsub('[]', '[ ]') %>
+            </a></p>
+          <% end %>
+          <% end %>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_<%= name.parameterize %>" class="tab-pane default">
+          <h2><%= name %></h2>
+          <p><%= markdown description %></p>
+          <h3>Signature</h3>
+          <p><code><%= to_s %></code></p>
+          <h3>Inheritance</h3>
+          <p><code><%= inheritance_tree %></code></p>
+        </div>
+
+
+        <% methods.each do |method| %>
+          <div id="tab_<%= parameterize method %>" class="tab-pane">
+          <h2> <%= method.name %> </h2>
+          <p><%= markdown method.docstring %></p>
+          <h3>Signature</h3>
+              <% if method.tags(:overload).size == 1 %>
+                <%= syntax_highlight signature(method.tag(:overload), false) %>
+              <% elsif method.tags(:overload).size > 1 %>
+                <% method.tags(:overload).each do |overload| %>
+                  <%= syntax_highlight signature(overload, false) %>
+                <% end %>
+              <% else %>
+                <%= syntax_highlight signature(method, false) %>
+              <% end %>
+
+              <%# <% if method.aliases.size > 0 %>
+              <%#   <span class="aliases">Also known as:
+              <%#   <span class="names"><%= method.aliases.map {|o|
+              <%#     "<span id='#{anchor_for(o)}'>" + h(o.name.to_s) + "</span>" }.join(", ") %></span>
+              <%#   </span>
+              <%# <% end %>
+
+              <%# <% if owner != method.namespace %>
+              <%#   <span class="not_defined_here">
+              <%#     Originally defined in <%= method.namespace.type %>
+              <%#       <%= linkify method, owner.relative_path(method.namespace) %>
+              <%#   </span>
+              <%# <% end %>
+
+          <% unless method.tags('todo').empty? %>
+            <% method.tags('todo').each do |tag| %>
+            <div class="alert">
+              <strong>TODO</strong> <%= markdown tag.text %>
+            </div>
+            <% end %>
+          <% end %>
+
+          <% if method.has_tag?('param') %>
+            <h3>Parameters</h3>
+            <% method.tags('param').each do |tag|%>
+              <% puts "[WARN] Missing text for #{tag.name}" unless tag.text %>
+
+              <p><code><%= tag.types * '</code><code>' %></code> <b><%= tag.name %></b></p>
+              <%= markdown tag.text || '' %>
+            <% end %>
+          <% end %>
+
+          <% if method.has_tag?('return') %>
+            <h3>Returns</h3>
+            <% method.tags('return').each do |tag|%>
+              <p><code><%= tag.types * '</code><code>' %></code></p>
+              <%= markdown tag.text %> 
+            <% end %>
+          <% end %>
+
+          <% unless method.tags('raise').empty? %>
+            <h3>Raises</h3>
+            <% method.tags('raise').each do |tag| %>
+              <p><%= markdown tag.text %></p>
+            <% end %>
+          <% end %>
+
+          <h3>Source</h3>
+          <%= syntax_highlight method.source %>
+
+          <% unless method.files.empty? %>
+            <h3>Source Files</h3>
+              <% method.files.each do |file| %>
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/<%= file[0] %>#L<%= file[1] %>">
+                  <%= file[0] %>:<%= file[1] %>
+                </a></p>
+              <% end %>
+          <% end %>
+
+        </div>
+      <% end %>
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

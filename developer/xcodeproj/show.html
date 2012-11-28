@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Show Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul>
+        <li>
+        <h3 id="logo">
+          <a href="../../index.html">CocoaPods Docs</a>
+        </h3>
+        </li>
+        <li>
+        <h3>
+          <a href="../xcodeproj.html">xcodeproj</a>
+        </h3>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_show">Show</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_run">
+              run
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_xcodeproj_path">
+              xcodeproj_path
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_xcodeproj">
+              xcodeproj
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_show" class="tab-pane default">
+          <h2>Show</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Xcodeproj::Command::Show</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Show < Command</code></p>
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Show</span><span class="p">)</span> <span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Show</code></p>
+              <p>A new instance of Show</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="vi">@xcodeproj_path</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="n">argv</span><span class="o">.</span><span class="n">shift_argument</span><span class="p">)</span>
+  <span class="k">super</span> <span class="k">unless</span> <span class="n">argv</span><span class="o">.</span><span class="n">empty?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command/show.rb#L13">
+                  lib/xcodeproj/command/show.rb:13
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_run" class="tab-pane">
+          <h2> run </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">run</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">run</span>
+  <span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+  <span class="n">yaml</span> <span class="o">=</span> <span class="n">xcodeproj</span><span class="o">.</span><span class="n">to_tree_hash</span><span class="o">.</span><span class="n">to_yaml</span>
+  <span class="nb">puts</span> <span class="n">yaml</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command/show.rb#L18">
+                  lib/xcodeproj/command/show.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcodeproj_path" class="tab-pane">
+          <h2> xcodeproj_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">xcodeproj_path</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">xcodeproj_path</span>
+  <span class="k">unless</span> <span class="vi">@xcodeproj_path</span>
+    <span class="n">projects</span> <span class="o">=</span> <span class="no">Dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.xcodeproj&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">projects</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="n">xcodeproj_path</span> <span class="o">=</span> <span class="n">projects</span><span class="o">.</span><span class="n">first</span>
+    <span class="k">elsif</span> <span class="n">projects</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span>
+      <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s1">&#39;There are more than one Xcode project documents &#39;</span> <span class="p">\</span>
+                         <span class="s1">&#39;in the current working directory. Please specify &#39;</span> <span class="p">\</span>
+                         <span class="s1">&#39;which to use with the `--project` option.&#39;</span>
+    <span class="k">else</span>
+      <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s1">&#39;No Xcode project document found in the current &#39;</span> <span class="p">\</span>
+                         <span class="s1">&#39;working directory. Please specify which to use &#39;</span> <span class="p">\</span>
+                         <span class="s1">&#39;with the `--project` option.&#39;</span>
+    <span class="k">end</span>
+    <span class="vi">@xcodeproj_path</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="n">xcodeproj_path</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="vi">@xcodeproj_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command.rb#L110">
+                  lib/xcodeproj/command.rb:110
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcodeproj" class="tab-pane">
+          <h2> xcodeproj </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">xcodeproj</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">xcodeproj</span>
+  <span class="vi">@xcodeproj</span> <span class="o">||=</span> <span class="no">Project</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">xcodeproj_path</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command.rb#L129">
+                  lib/xcodeproj/command.rb:129
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

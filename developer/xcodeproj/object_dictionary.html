@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>ObjectDictionary Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul>
+        <li>
+        <h3 id="logo">
+          <a href="../../index.html">CocoaPods Docs</a>
+        </h3>
+        </li>
+        <li>
+        <h3>
+          <a href="../xcodeproj.html">xcodeproj</a>
+        </h3>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_objectdictionary">ObjectDictionary</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_attribute">
+              attribute
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_owner">
+              owner
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_recursive_diff">
+              recursive_diff
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_recursive_delete">
+              recursive_delete
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+              <h2><a>Notification enabled methods</a></h2>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_%5B%5D%3D">
+              [ ]=
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_delete">
+              delete
+            </a></p>
+          
+          
+              
+              <h2><a>AbstractObject</a></h2>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_to_plist">
+              to_plist
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_tree_hash">
+              to_tree_hash
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_remove_reference">
+              remove_reference
+            </a></p>
+          
+          
+              
+              <h2><a>ObjectList</a></h2>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_add_referrer">
+              add_referrer
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_remove_referrer">
+              remove_referrer
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_objectdictionary" class="tab-pane default">
+          <h2>ObjectDictionary</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Xcodeproj::Project::ObjectDictionary</code></p>
+          <h3>Inheritance</h3>
+          <p><code>ObjectDictionary < Hash</code></p>
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">ObjectDictionary</span><span class="p">)</span> <span class="kp">initialize</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="n">owner</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>ObjectDictionary</code></p>
+              <p>A new instance of ObjectDictionary</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="n">owner</span><span class="p">)</span>
+  <span class="vi">@attribute</span> <span class="o">=</span> <span class="n">attribute</span>
+  <span class="vi">@owner</span> <span class="o">=</span> <span class="n">owner</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L50">
+                  lib/xcodeproj/project/object_dictionary.rb:50
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_attribute" class="tab-pane">
+          <h2> attribute </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="no">Class</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">attribute</span>  <span class="p">(</span><span class="n">readonly</span><span class="p">)</span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<Class></code></p>
+              <p>The attribute that generated the list.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">attribute</span>
+  <span class="vi">@attribute</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L57">
+                  lib/xcodeproj/project/object_dictionary.rb:57
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_owner" class="tab-pane">
+          <h2> owner </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="nb">Array</span><span class="o">&lt;</span><span class="no">Class</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">owner</span>  <span class="p">(</span><span class="n">readonly</span><span class="p">)</span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array<Class></code></p>
+              <p>The object that owns the list.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">owner</span>
+  <span class="vi">@owner</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L61">
+                  lib/xcodeproj/project/object_dictionary.rb:61
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_%5B%5D%3D" class="tab-pane">
+          <h2> []= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="o">[]=</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">object</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>key</b></p>
+              <p>The key</p>
+
+            
+              
+
+              <p><code>AbstractObject</code> <b>object</b></p>
+              <p>The object to add to the dictionary.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">[]=</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">object</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">object</span>
+    <span class="n">perform_additions_operations</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="n">perform_deletion_operations</span><span class="p">(</span><span class="nb">self</span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="k">super</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L79">
+                  lib/xcodeproj/project/object_dictionary.rb:79
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_delete" class="tab-pane">
+          <h2> delete </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">delete</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>key</b></p>
+              <p>The key</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+  <span class="n">object</span> <span class="o">=</span> <span class="nb">self</span><span class="o">[</span><span class="n">key</span><span class="o">]</span>
+  <span class="n">perform_deletion_operations</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+  <span class="k">super</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L96">
+                  lib/xcodeproj/project/object_dictionary.rb:96
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_plist" class="tab-pane">
+          <h2> to_plist </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Hash</span><span class="o">&lt;</span><span class="nb">String</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">to_plist</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash<String => String></code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_plist</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">obj</span><span class="o">|</span> <span class="n">result</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">uuid</span> <span class="p">}</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L111">
+                  lib/xcodeproj/project/object_dictionary.rb:111
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_tree_hash" class="tab-pane">
+          <h2> to_tree_hash </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Hash</span><span class="o">&lt;</span><span class="nb">String</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">to_tree_hash</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash<String => String></code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_tree_hash</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">obj</span><span class="o">|</span> <span class="n">result</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">to_tree_hash</span> <span class="p">}</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L121">
+                  lib/xcodeproj/project/object_dictionary.rb:121
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_remove_reference" class="tab-pane">
+          <h2> remove_reference </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">remove_reference</span><span class="p">(</span><span class="n">object</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">remove_reference</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+  <span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">obj</span><span class="o">|</span> <span class="nb">self</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="kp">nil</span> <span class="k">if</span> <span class="n">obj</span> <span class="o">==</span> <span class="n">object</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L131">
+                  lib/xcodeproj/project/object_dictionary.rb:131
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_add_referrer" class="tab-pane">
+          <h2> add_referrer </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">add_referrer</span><span class="p">(</span><span class="n">referrer</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">add_referrer</span><span class="p">(</span><span class="n">referrer</span><span class="p">)</span>
+  <span class="n">values</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">obj</span><span class="o">.</span><span class="n">add_referrer</span><span class="p">(</span><span class="n">referrer</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L144">
+                  lib/xcodeproj/project/object_dictionary.rb:144
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_remove_referrer" class="tab-pane">
+          <h2> remove_referrer </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">remove_referrer</span><span class="p">(</span><span class="n">referrer</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">remove_referrer</span><span class="p">(</span><span class="n">referrer</span><span class="p">)</span>
+  <span class="n">values</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">obj</span><span class="o">.</span><span class="n">remove_referrer</span><span class="p">(</span><span class="n">referrer</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/object_dictionary.rb#L153">
+                  lib/xcodeproj/project/object_dictionary.rb:153
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_recursive_diff" class="tab-pane">
+          <h2> recursive_diff </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Hash</span><span class="p">)</span> <span class="n">recursive_diff</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">self_key</span> <span class="o">=</span> <span class="s1">&#39;self&#39;</span><span class="p">,</span> <span class="n">other_key</span> <span class="o">=</span> <span class="s1">&#39;other&#39;</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash</code></p>
+              <p>Returns the recursive difference of a hash.</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">recursive_diff</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">self_key</span> <span class="o">=</span> <span class="s1">&#39;self&#39;</span><span class="p">,</span> <span class="n">other_key</span> <span class="o">=</span> <span class="s1">&#39;other&#39;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">all_keys</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">keys</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">keys</span>
+    <span class="n">all_keys</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="o">|</span>
+      <span class="n">v1</span> <span class="o">=</span> <span class="nb">self</span><span class="o">[</span><span class="n">key</span><span class="o">]</span>
+      <span class="n">v2</span> <span class="o">=</span> <span class="n">other</span><span class="o">[</span><span class="n">key</span><span class="o">]</span>
+      <span class="n">diff</span> <span class="o">=</span> <span class="n">v1</span><span class="o">.</span><span class="n">recursive_diff</span><span class="p">(</span><span class="n">v2</span><span class="p">,</span> <span class="n">self_key</span><span class="p">,</span> <span class="n">other_key</span><span class="p">)</span>
+      <span class="n">r</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">diff</span> <span class="k">if</span> <span class="n">diff</span>
+    <span class="k">end</span>
+    <span class="n">r</span> <span class="k">unless</span> <span class="n">r</span> <span class="o">==</span> <span class="p">{}</span>
+  <span class="k">else</span>
+    <span class="k">super</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/recursive_diff.rb#L26">
+                  lib/xcodeproj/project/recursive_diff.rb:26
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_recursive_delete" class="tab-pane">
+          <h2> recursive_delete </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">recursive_delete</span><span class="p">(</span><span class="n">key_to_delete</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+               
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">recursive_delete</span><span class="p">(</span><span class="n">key_to_delete</span><span class="p">)</span>
+  <span class="n">delete</span><span class="p">(</span><span class="n">key_to_delete</span><span class="p">)</span>
+  <span class="nb">self</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span>
+    <span class="k">case</span> <span class="n">value</span>
+    <span class="k">when</span> <span class="no">Hash</span>
+      <span class="n">value</span><span class="o">.</span><span class="n">recursive_delete</span><span class="p">(</span><span class="n">key_to_delete</span><span class="p">)</span>
+    <span class="k">when</span> <span class="nb">Array</span>
+      <span class="n">value</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">v</span><span class="o">|</span> <span class="n">v</span><span class="o">.</span><span class="n">recursive_delete</span><span class="p">(</span><span class="n">key_to_delete</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)}</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project/recursive_diff.rb#L44">
+                  lib/xcodeproj/project/recursive_diff.rb:44
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

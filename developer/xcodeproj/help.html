@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Help Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul>
+        <li>
+        <h3 id="logo">
+          <a href="../../index.html">CocoaPods Docs</a>
+        </h3>
+        </li>
+        <li>
+        <h3>
+          <a href="../xcodeproj.html">xcodeproj</a>
+        </h3>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_help">Help</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+            
+              
+            <p><a class="select-tab" href="#tab_message">
+              message
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_help" class="tab-pane default">
+          <h2>Help</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Xcodeproj::Command::Help</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Help < StandardError</code></p>
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="p">(</span><span class="no">Help</span><span class="p">)</span> <span class="kp">initialize</span><span class="p">(</span><span class="n">command_class</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="n">unrecognized_command</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Help</code></p>
+              <p>A new instance of Help</p>
+ 
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">command_class</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="n">unrecognized_command</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="vi">@command_class</span><span class="p">,</span> <span class="vi">@argv</span><span class="p">,</span> <span class="vi">@unrecognized_command</span> <span class="o">=</span> <span class="n">command_class</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="n">unrecognized_command</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command.rb#L11">
+                  lib/xcodeproj/command.rb:11
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_message" class="tab-pane">
+          <h2> message </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">-</span> <span class="n">message</span> 
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">message</span>
+  <span class="n">message</span> <span class="o">=</span> <span class="o">[</span>
+    <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="vi">@command_class</span><span class="o">.</span><span class="n">banner</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\$ pod (.*)/</span><span class="p">,</span> <span class="s1">&#39;$ pod \1&#39;</span><span class="o">.</span><span class="n">green</span><span class="p">),</span>
+    <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Options:&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="n">options</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+  <span class="o">].</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="n">message</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;[!] Unrecognized command: `</span><span class="si">#{</span><span class="vi">@unrecognized_command</span><span class="si">}</span><span class="s2">&#39;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">red</span> <span class="k">if</span> <span class="vi">@unrecognized_command</span>
+  <span class="n">message</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;[!] Unrecognized argument</span><span class="si">#{</span><span class="vi">@argv</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">?</span> <span class="s1">&#39;s&#39;</span> <span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="si">}</span><span class="s2">: `</span><span class="si">#{</span><span class="vi">@argv</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">red</span> <span class="k">unless</span> <span class="vi">@argv</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="n">message</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/command.rb#L15">
+                  lib/xcodeproj/command.rb:15
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+
