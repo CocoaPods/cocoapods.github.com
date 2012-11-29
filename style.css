@@ -273,13 +273,14 @@ code {
 #index p {
   font-weight: lighter;
   font-size:13px;
-  color: hsl(16, 16%, 74%);
+  /* color: hsl(16, 16%, 74%); */
 }
 
 #index #content-container h3 {
 margin: 20px 0;
 font-size: 18px;
-color: hsl(36, 43%, 75%);
+/* color: hsl(36, 43%, 75%); */
+color: rgb(140, 122, 115);
 }
 
 #index #content-container a {

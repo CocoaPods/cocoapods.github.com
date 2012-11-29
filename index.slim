@@ -11,17 +11,16 @@ html
     #index.container
       #body
         #sections-container
-          ul
-            li
-              h3#logo
+          ul.breadcrumb
+            li#logo
+              h3
                 a href="http://cocoapods.org" CocoaPods
 
         #content-container
+          / The margins have been changed from teh default of bootstrap so currently there are less than 12 spans.
+          h2 User
           .row
-            .span11.offset1
-              h2 User
-          .row
-            .span5.offset1
+            .span5
               h3 Docs
               p
                 a href="podfile.html" Podfile
@@ -33,7 +32,7 @@ html
                 a href="commands.html" Command line
               p For command line ninjas.
 
-            .span5.offset1
+            .span3.offset1
               h3 Guides
               p
                 a href="workflows/adopting_cocoapods.html" Adopting CocoaPods
@@ -47,11 +46,9 @@ html
                 a Creating your own repository of specifications
 
         #content-container
+          h2 Developer
           .row
-            .span5.offset1
-              h2 Developer
-          .row
-            .span5.offset1
+            .span5
               h3 Gems
               p
                 a href="developer/cocoapods.html" CocoaPods
