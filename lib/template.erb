@@ -18,21 +18,15 @@
 <div class="container">
 <div id="body">
 
-  <div id="sections-container">
-      <ul>
-        <% sections.each do |section| %>
-          <% if section == name %>
-            <li id="current_section">
-            <h3><a href="#tab_<%= section.parameterize %>"><%= section %></a></h1>
-            </li>
-          <% else %>
-            <li>
-            <h3><a href="<%= section.underscore %>.html"><%= section %></a></h1>
-            </li>
-          <% end %>
-        <% end %>
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li class="active"><%= name %></li>
       </ul>
-  </div>
+    </div>
 
 
   <!-- HEADER **************************************************************-->
