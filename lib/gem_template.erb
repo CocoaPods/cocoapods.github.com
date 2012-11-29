@@ -7,9 +7,6 @@
 <link type="text/css" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="../style.css">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
 <style>
 .namespace-container {
   padding: 0 42px;
@@ -37,13 +34,16 @@
 <div class="container">
 <div id="body">
 
-  <div id="sections-container">
-    <ul>
-      <li id="current_section">
-        <h3><a><%= name %></a></h3>
-      </li>
-    </ul>
-  </div>
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li class="active"><%= name %></li>
+      </ul>
+    </div>
 
   <!-- DESCRIPTION *************************************************************-->
 
@@ -51,7 +51,7 @@
     <div class="tab-content">
       <h2><%= name %></h2>
       <div class="row">
-        <div class="span8">
+        <div class="span6">
           <h3>Description</h3>
           <p><%= description %></p>
           <h3>Authors</h3>
@@ -67,11 +67,17 @@
 
   <div id="content-container">
     <div class="tab-content">
-          <% name_spaces_with_children.each do |name_space| %>
-            <h3><%= name_space %></h3>
-            <p><code><%= name_space.children_names * '</code> <code>'%></code></p>
+      <% name_spaces_with_children.each do |name_space| %>
+        <h3><%= name_space %></h3>
+
+        <p>
+          <% name_space.children.each do |child| %>
+            <a href="<%= child.url_relative_to_gem %>">
+              <code><%= child.name %></code>
+            </a>
           <% end %>
-      </div>
+        </p>
+    <% end %>
     </div>
   </div>
 
@@ -87,11 +93,19 @@
         <div class="row" id="methods_list">
           <% name_space.columns.each do |entries| %>
             <div class="span3">
-              <% entries.each do |group_or_method| %>
+              <% entries.each_with_index do |group_or_method, entry_index| %>
                 <% if group_or_method.is_a?(String) %>
-                <h2><a><%= group_or_method %></a></h2>
+                  <% if entry_index.zero? %>
+                    <h2 class="first_of_column" >
+                  <% else %>
+                    <h2>
+                  <% end %>
+                  <a><%= group_or_method %></a>
+                  </h2>
                 <% else %>
-                  <p><a><%= group_or_method.name.to_s.gsub('[]', '[ ]') %></a></p>
+                  <p><a href="<%= name_space.url_relative_to_gem %>#<%= parameterize group_or_method %>">
+                    <%= group_or_method.name.to_s.gsub('[]', '[ ]') %>
+                  </a></p>
                 <% end %>
               <% end %>
             </div>
@@ -121,50 +135,5 @@
     </div><!-- .container -->
   </div><!-- #body -->
 
-  <!-- SCRIPTS *************************************************************-->
-
-  <script>
-    function tabLinkByName(name) {
-      return $('#methods_list a[href=#tab_' + name.replace('#', '') + ']');
-    }
-
-    function selectTabByName(name) {
-      // de-select previous
-      $('#methods_list .active').removeClass('active');
-      // select new
-      var tabLink = tabLinkByName(name);
-      tabLink.parent().addClass('active')
-      tabLink.tab('show');
-      document.location.hash = name;
-    }
-
-    function selectTab(clickedLink) {
-      selectTabByName(clickedLink.attr("href").replace('#tab_', ''));
-    }
-
-    $('a.select-tab').click(function (e) {
-      e.preventDefault();
-      selectTab($(this));
-    })
-
-    $('#current_section a:first').click(function (e) {
-      e.preventDefault();
-      $('#methods_list .active').removeClass('active');
-      $(this).tab('show');
-      document.location.hash = '';
-    })
-
-    // Shows the tab associated with the current fragment or the description of
-    // the sections on page load.
-    //
-    $(function () {
-      var tabLink = tabLinkByName(document.location.hash);
-      if (tabLink.size() == 1) {
-        selectTab(tabLink);
-      } else {
-        $('#current_section a:first').tab('show');
-      }
-    });
-  </script>
 </body>
 

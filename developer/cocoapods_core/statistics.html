@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Statistics Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Specification :: Set :: Statistics</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_statistics">Statistics</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_cache_file">
+              cache_file
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_cache_expiration">
+              cache_expiration
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Accessing the statistics</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_creation_date">
+              creation_date
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_creation_dates">
+              creation_dates
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_github_watchers">
+              github_watchers
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_github_forks">
+              github_forks
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_github_pushed_at">
+              github_pushed_at
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_statistics" class="tab-pane default">
+          <h2>Statistics</h2>
+          <p><p>The statistics class provides information about one or more {Set} that
+is not readily available because expensive to compute or provided by a
+remote source.</p>
+
+<p>The class provides also facilities to work with a collection of sets.
+It always caches in memory the computed values and it can take an
+optional path to cache file that it is responsible of populating and
+invalidating.</p>
+
+<p>To reuse the in memory cache and to minimize the disk access to the
+cache file a shared instance is also available.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Specification :: Set :: Statistics</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Statistics < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_cache_file" class="tab-pane">
+          <h2> cache_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">cache_file</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The path to the optional cache file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">cache_file</span>
+  <span class="vi">@cache_file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L42">
+                  lib/cocoapods-core/specification/set/statistics.rb:42
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_cache_expiration" class="tab-pane">
+          <h2> cache_expiration </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">cache_expiration</span> <span class="c1">#=&gt; Integer </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Integer</code></p>
+              <p>The number of seconds after which the caches of
+values that might changed are discarded.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">cache_expiration</span>
+  <span class="vi">@cache_expiration</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L49">
+                  lib/cocoapods-core/specification/set/statistics.rb:49
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">cache_file</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">cache_expiration</span> <span class="o">=</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3</span><span class="p">))</span> <span class="c1">#=&gt; Statistics </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>cache_file</b></p>
+              <p>@see cache_file</p>
+
+            
+              
+
+              <p><code>Integer</code> <b>cache_expiration</b></p>
+              <p>@see cache_expiration</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Statistics</code></p>
+              <p>A new instance of Statistics</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">cache_file</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">cache_expiration</span> <span class="o">=</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3</span><span class="p">))</span>
+  <span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+  <span class="c1"># This is to make sure Faraday doesn&#39;t warn the user about the</span>
+  <span class="c1"># `system_timer` gem missing.</span>
+  <span class="n">old_warn</span><span class="p">,</span> <span class="vg">$-w</span> <span class="o">=</span> <span class="vg">$-w</span><span class="p">,</span> <span class="kp">nil</span>
+  <span class="k">begin</span>
+    <span class="nb">require</span> <span class="s1">&#39;faraday&#39;</span>
+  <span class="k">ensure</span>
+    <span class="vg">$-w</span> <span class="o">=</span> <span class="n">old_warn</span>
+  <span class="k">end</span>
+  <span class="nb">require</span> <span class="s1">&#39;octokit&#39;</span>
+
+  <span class="vi">@cache_file</span>       <span class="o">=</span> <span class="n">cache_file</span>
+  <span class="vi">@cache_expiration</span> <span class="o">=</span> <span class="n">cache_expiration</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L55">
+                  lib/cocoapods-core/specification/set/statistics.rb:55
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_creation_date" class="tab-pane">
+          <h2> creation_date </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Time </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Set</code> <b>set</b></p>
+              <p>The set for the Pod whose creation date is needed.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Time</code></p>
+              <p>The date in which a Pod appeared for the first time on
+the {Source}.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="n">date</span> <span class="o">=</span> <span class="n">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="n">save_cache</span>
+  <span class="n">date</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L91">
+                  lib/cocoapods-core/specification/set/statistics.rb:91
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_creation_dates" class="tab-pane">
+          <h2> creation_dates </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">creation_dates</span><span class="p">(</span><span class="n">sets</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;Time&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Array<Set></code> <b>sets</b></p>
+              <p>The list of the sets for the Pods whose creation date is
+needed.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Time&gt;</code></p>
+              <p>The list of the dates in which the Pods
+appeared for the first time on the {Source}.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">creation_dates</span><span class="p">(</span><span class="n">sets</span><span class="p">)</span>
+  <span class="n">dates</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">sets</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">set</span><span class="o">|</span> <span class="n">dates</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">=</span> <span class="n">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">save_cache</span>
+  <span class="n">dates</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L112">
+                  lib/cocoapods-core/specification/set/statistics.rb:112
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_github_watchers" class="tab-pane">
+          <h2> github_watchers </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">github_watchers</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Integer </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Set</code> <b>set</b></p>
+              <p>The set of the Pod.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Integer</code></p>
+              <p>The number of likes or nil if the Pod is not hosted
+on GitHub.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">github_watchers</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_watchers</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L127">
+                  lib/cocoapods-core/specification/set/statistics.rb:127
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_github_forks" class="tab-pane">
+          <h2> github_forks </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">github_forks</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Integer </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Set</code> <b>set</b></p>
+              <p>@see github_watchers</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Integer</code></p>
+              <p>The number of forks or nil if the Pod is not hosted
+on GitHub.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">github_forks</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_forks</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L139">
+                  lib/cocoapods-core/specification/set/statistics.rb:139
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_github_pushed_at" class="tab-pane">
+          <h2> github_pushed_at </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">github_pushed_at</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Time </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Set</code> <b>set</b></p>
+              <p>@see github_watchers</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Time</code></p>
+              <p>The time of the last push or nil if the Pod is not
+hosted on GitHub.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">github_pushed_at</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="n">string_time</span> <span class="o">=</span> <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:pushed_at</span><span class="p">)</span>
+  <span class="no">Time</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">string_time</span><span class="p">)</span> <span class="k">if</span> <span class="n">string_time</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L151">
+                  lib/cocoapods-core/specification/set/statistics.rb:151
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

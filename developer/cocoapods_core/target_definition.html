@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>TargetDefinition Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Podfile :: TargetDefinition</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_targetdefinition">TargetDefinition</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_name">
+              name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_parent">
+              parent
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_podfile">
+              podfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Attributes</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_target_dependencies">
+              target_dependencies
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_empty_">
+              empty?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dependencies">
+              dependencies
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_exclusive_">
+              exclusive=
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_exclusive_">
+              exclusive?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_link_with">
+              link_with
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Inheritable attributes</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_platform">
+              platform
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inhibit_all_warnings_">
+              inhibit_all_warnings=
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inhibit_all_warnings_">
+              inhibit_all_warnings?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_user_project_path">
+              user_project_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_build_configurations">
+              build_configurations
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_label">
+              label
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inspect">
+              inspect
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_targetdefinition" class="tab-pane default">
+          <h2>TargetDefinition</h2>
+          <p><p>The {TargetDefinition} stores the information of a CocoaPods static
+library. The target definition can be linked with one or more targets of
+the user project.</p>
+
+<p>Target definitions can be nested and by default inherit the dependencies
+of the parent.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Podfile :: TargetDefinition</code></p>
+          <h3>Inheritance</h3>
+          <p><code>TargetDefinition < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_name" class="tab-pane">
+          <h2> name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">name</span> <span class="c1">#=&gt; String, Symbol </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code><code>Symbol</code></p>
+              <p>The name of the target definition.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">name</span>
+  <span class="vi">@name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L15">
+                  lib/cocoapods-core/podfile/target_definition.rb:15
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_parent" class="tab-pane">
+          <h2> parent </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">parent</span> <span class="c1">#=&gt; TargetDefinition </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>TargetDefinition</code></p>
+              <p>The parent target definition.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">parent</span>
+  <span class="vi">@parent</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L19">
+                  lib/cocoapods-core/podfile/target_definition.rb:19
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_podfile" class="tab-pane">
+          <h2> podfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">podfile</span> <span class="c1">#=&gt; Podfile </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Podfile</code></p>
+              <p>The podfile that contains the specification for this target definition.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">podfile</span>
+  <span class="vi">@podfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L23">
+                  lib/cocoapods-core/podfile/target_definition.rb:23
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">podfile</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span> <span class="c1">#=&gt; TargetDefinition </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code><code>Symbol</code> <b>name</b></p>
+              <p>@see name</p>
+
+            
+              
+
+              <p><code>TargetDefinition</code> <b>parent</b></p>
+              <p>@see parent</p>
+
+            
+              
+
+              <p><code>Hash</code> <b>options</b></p>
+              <p>A customizable set of options</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>TargetDefinition</code></p>
+              <p>A new instance of TargetDefinition</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">podfile</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+  <span class="vi">@name</span>      <span class="o">=</span> <span class="nb">name</span>
+  <span class="vi">@parent</span>    <span class="o">=</span> <span class="n">parent</span>
+  <span class="vi">@podfile</span>   <span class="o">=</span> <span class="n">podfile</span>
+  <span class="vi">@exclusive</span> <span class="o">=</span> <span class="n">options</span><span class="o">[</span><span class="ss">:exclusive</span><span class="o">]</span>
+  <span class="vi">@target_dependencies</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L34">
+                  lib/cocoapods-core/podfile/target_definition.rb:34
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_target_dependencies" class="tab-pane">
+          <h2> target_dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target_dependencies</span> <span class="c1">#=&gt; Array </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array</code></p>
+              <p>The list of the dependencies of the target definition,
+excluding inherited ones.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target_dependencies</span>
+  <span class="vi">@target_dependencies</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L49">
+                  lib/cocoapods-core/podfile/target_definition.rb:49
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_empty_" class="tab-pane">
+          <h2> empty? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">empty?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the target definition has at least one
+dependency, excluding inherited ones.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">empty?</span>
+  <span class="n">target_dependencies</span><span class="o">.</span><span class="n">empty?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L54">
+                  lib/cocoapods-core/podfile/target_definition.rb:54
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dependencies" class="tab-pane">
+          <h2> dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dependencies</span> <span class="c1">#=&gt; Array&lt;Dependency&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Dependency&gt;</code></p>
+              <p>The list of the dependencies of the target
+definition including the inherited ones.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dependencies</span>
+  <span class="vi">@target_dependencies</span> <span class="o">+</span> <span class="p">((</span><span class="n">exclusive?</span> <span class="o">||</span> <span class="n">parent</span><span class="o">.</span><span class="n">nil?</span><span class="p">)</span> <span class="p">?</span> <span class="o">[]</span> <span class="p">:</span> <span class="n">parent</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L61">
+                  lib/cocoapods-core/podfile/target_definition.rb:61
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_exclusive_" class="tab-pane">
+          <h2> exclusive= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">exclusive</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">exclusive</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="vi">@exclusive</span> <span class="o">=</span> <span class="n">value</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L67">
+                  lib/cocoapods-core/podfile/target_definition.rb:67
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_exclusive_" class="tab-pane">
+          <h2> exclusive? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">exclusive?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the target definition should inherit the
+dependencies of the parent.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">exclusive?</span>
+  <span class="vi">@exclusive</span> <span class="o">||</span> <span class="p">(</span> <span class="n">platform</span> <span class="o">&amp;&amp;</span> <span class="n">parent</span> <span class="o">&amp;&amp;</span> <span class="n">parent</span><span class="o">.</span><span class="n">platform</span> <span class="o">!=</span> <span class="n">platform</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L75">
+                  lib/cocoapods-core/podfile/target_definition.rb:75
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_link_with" class="tab-pane">
+          <h2> link_with </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">link_with</span> <span class="c1">#=&gt; Array </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array</code></p>
+              <p>The list of the names of the Xcode targets with which
+this target definition should be linked with.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">link_with</span>
+  <span class="vi">@link_with</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L82">
+                  lib/cocoapods-core/podfile/target_definition.rb:82
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_platform" class="tab-pane">
+          <h2> platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">platform</span> <span class="c1">#=&gt; Platform </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Platform</code></p>
+              <p>The platform of the target definition.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">platform</span>
+  <span class="vi">@platform</span> <span class="o">||</span> <span class="p">(</span><span class="vi">@parent</span><span class="o">.</span><span class="n">platform</span> <span class="k">if</span> <span class="vi">@parent</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L94">
+                  lib/cocoapods-core/podfile/target_definition.rb:94
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inhibit_all_warnings_" class="tab-pane">
+          <h2> inhibit_all_warnings= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">inhibit_all_warnings</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inhibit_all_warnings</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="vi">@inhibit_all_warnings</span> <span class="o">=</span> <span class="n">value</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L101">
+                  lib/cocoapods-core/podfile/target_definition.rb:101
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inhibit_all_warnings_" class="tab-pane">
+          <h2> inhibit_all_warnings? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">inhibit_all_warnings?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the target definition should silence all the
+warnings with a compiler flag.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inhibit_all_warnings?</span>
+  <span class="vi">@inhibit_all_warnings</span> <span class="o">||</span> <span class="p">(</span><span class="vi">@parent</span><span class="o">.</span><span class="n">inhibit_all_warnings?</span> <span class="k">if</span> <span class="vi">@parent</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L106">
+                  lib/cocoapods-core/podfile/target_definition.rb:106
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_user_project_path" class="tab-pane">
+          <h2> user_project_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">user_project_path</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The path of the project this target definition should
+link with.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">user_project_path</span>
+  <span class="vi">@user_project_path</span> <span class="o">||</span> <span class="p">(</span><span class="vi">@parent</span><span class="o">.</span><span class="n">user_project_path</span> <span class="k">if</span> <span class="vi">@parent</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L118">
+                  lib/cocoapods-core/podfile/target_definition.rb:118
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_build_configurations" class="tab-pane">
+          <h2> build_configurations </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">build_configurations</span> <span class="c1">#=&gt; Hash{String =&gt; symbol} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{String =&gt; symbol}</code></p>
+              <p>A hash where the keys are the name of
+the build configurations and the values a symbol that
+represents their type (<code>:debug</code> or <code>:release</code>).</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">build_configurations</span>
+  <span class="vi">@build_configurations</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L126">
+                  lib/cocoapods-core/podfile/target_definition.rb:126
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_label" class="tab-pane">
+          <h2> label </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">label</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The label of the target definition generated by its
+name. Used to name the support files generated by CocoaPods</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">label</span>
+  <span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="ss">:default</span>
+    <span class="s2">&quot;Pods&quot;</span>
+  <span class="k">elsif</span> <span class="n">exclusive?</span> <span class="o">||</span> <span class="n">parent</span><span class="o">.</span><span class="n">nil?</span>
+    <span class="s2">&quot;Pods-</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">else</span>
+    <span class="s2">&quot;</span><span class="si">#{</span><span class="n">parent</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L131">
+                  lib/cocoapods-core/podfile/target_definition.rb:131
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="s2">&quot;TargetDefinition for `</span><span class="si">#{</span><span class="n">label</span><span class="si">}</span><span class="s2">`&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L141">
+                  lib/cocoapods-core/podfile/target_definition.rb:141
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inspect" class="tab-pane">
+          <h2> inspect </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">inspect</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inspect</span>
+  <span class="s2">&quot;#&lt;</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2"> with label: `</span><span class="si">#{</span><span class="n">label</span><span class="si">}</span><span class="s2">&#39;&gt;&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/target_definition.rb#L145">
+                  lib/cocoapods-core/podfile/target_definition.rb:145
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

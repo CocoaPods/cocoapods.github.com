@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Attribute Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Specification :: DSL :: Attribute</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_attribute">Attribute</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_name">
+              name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inspect">
+              inspect
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Options</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_types">
+              types
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_supported_types">
+              supported_types
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_container">
+              container
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_keys">
+              keys
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_ios_default">
+              ios_default
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_osx_default">
+              osx_default
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_required_">
+              required?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_root_only_">
+              root_only?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_multi_platform_">
+              multi_platform?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_singularize_">
+              singularize?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_file_patterns_">
+              file_patterns?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_skip_definitions_">
+              skip_definitions?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Reader method support</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_default_value">
+              default_value
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_reader_name">
+              reader_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inherited_">
+              inherited?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_value_with_inheritance">
+              value_with_inheritance
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Specification helpers</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_ivar">
+              ivar
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize_spec_ivar">
+              initialize_spec_ivar
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Writer method support</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_writer_name">
+              writer_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_writer_singular_form">
+              writer_singular_form
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_prepare_hook_name">
+              prepare_hook_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_prepare_value">
+              prepare_value
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_validate_type">
+              validate_type
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_validate_for_writing">
+              validate_for_writing
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_allowed_keys">
+              allowed_keys
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_attribute" class="tab-pane default">
+          <h2>Attribute</h2>
+          <p><p>A Specification attribute stores the information of an attribute. It
+also provides logic to implement any required logic.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Specification :: DSL :: Attribute</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Attribute < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_name" class="tab-pane">
+          <h2> name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">name</span> <span class="c1">#=&gt; Symbol </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Symbol</code></p>
+              <p>The name of the attribute.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">name</span>
+  <span class="vi">@name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L25">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:25
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span> <span class="c1">#=&gt; Attribute </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Symbol</code> <b>name</b></p>
+              <p>@see name</p>
+
+            
+              
+
+              <p><code>Hash{Symbol=>Object}</code> <b>options</b></p>
+              <p>The options for configuring the attribute (see Options
+group).</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Attribute</code></p>
+              <p>A new instance of Attribute</p>
+
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p><p>If there are unrecognized options.</p>
+</p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+  <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+
+  <span class="vi">@multi_platform</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:multi_platform</span><span class="p">)</span> <span class="p">{</span> <span class="kp">true</span>      <span class="p">}</span>
+  <span class="vi">@inherited</span>      <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:inherited</span><span class="p">)</span>      <span class="p">{</span> <span class="kp">true</span>      <span class="p">}</span>
+  <span class="vi">@root_only</span>      <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:root_only</span><span class="p">)</span>      <span class="p">{</span> <span class="kp">false</span>     <span class="p">}</span>
+  <span class="vi">@required</span>       <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:required</span><span class="p">)</span>       <span class="p">{</span> <span class="kp">false</span>     <span class="p">}</span>
+  <span class="vi">@singularize</span>    <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:singularize</span><span class="p">)</span>    <span class="p">{</span> <span class="kp">false</span>     <span class="p">}</span>
+  <span class="vi">@file_patterns</span>  <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:file_patterns</span><span class="p">)</span>  <span class="p">{</span> <span class="kp">false</span>     <span class="p">}</span>
+  <span class="vi">@container</span>      <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:container</span><span class="p">)</span>      <span class="p">{</span> <span class="kp">nil</span>       <span class="p">}</span>
+  <span class="vi">@keys</span>           <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:keys</span><span class="p">)</span>           <span class="p">{</span> <span class="kp">nil</span>       <span class="p">}</span>
+  <span class="vi">@default_value</span>  <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:default_value</span><span class="p">)</span>  <span class="p">{</span> <span class="kp">nil</span>       <span class="p">}</span>
+  <span class="vi">@ios_default</span>    <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:ios_default</span><span class="p">)</span>    <span class="p">{</span> <span class="kp">nil</span>       <span class="p">}</span>
+  <span class="vi">@osx_default</span>    <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:osx_default</span><span class="p">)</span>    <span class="p">{</span> <span class="kp">nil</span>       <span class="p">}</span>
+  <span class="vi">@defined_as</span>     <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:defined_as</span><span class="p">)</span>     <span class="p">{</span> <span class="kp">nil</span>       <span class="p">}</span>
+  <span class="vi">@types</span>          <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="ss">:types</span><span class="p">)</span>          <span class="p">{</span> <span class="o">[</span><span class="nb">String</span> <span class="o">]</span> <span class="p">}</span>
+
+  <span class="c1"># temporary support for Rake::FileList</span>
+  <span class="vi">@types</span> <span class="o">&lt;&lt;</span> <span class="no">Rake</span><span class="o">::</span><span class="no">FileList</span> <span class="k">if</span> <span class="n">defined?</span><span class="p">(</span><span class="no">Rake</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@file_patterns</span>
+
+  <span class="k">if</span> <span class="vi">@root_only</span>
+    <span class="vi">@multi_platform</span> <span class="o">=</span> <span class="kp">false</span>
+    <span class="vi">@inherited</span> <span class="o">=</span> <span class="kp">false</span>
+  <span class="k">end</span>
+
+  <span class="k">unless</span> <span class="n">options</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Unrecognized options: </span><span class="si">#{</span><span class="n">options</span><span class="si">}</span><span class="s2"> for </span><span class="si">#{</span><span class="nb">to_s</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L42">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:42
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string representation suitable for UI.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="s2">&quot;Specification attribute `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">`&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L74">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:74
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inspect" class="tab-pane">
+          <h2> inspect </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">inspect</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string representation suitable for debugging.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inspect</span>
+  <span class="s2">&quot;&lt;</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2"> name=</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> types=</span><span class="si">#{</span><span class="n">types</span><span class="si">}</span><span class="s2"> multi_platform=</span><span class="si">#{</span><span class="n">multi_platform?</span><span class="si">}</span><span class="s2">&gt;&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L80">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:80
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_types" class="tab-pane">
+          <h2> types </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">types</span> <span class="c1">#=&gt; Array&lt;Class&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Class&gt;</code></p>
+              <p>The list of the classes of the values
+supported by the attribute writer. If not specified defaults
+to #{String}.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">types</span>
+  <span class="vi">@types</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L92">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:92
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_supported_types" class="tab-pane">
+          <h2> supported_types </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">supported_types</span> <span class="c1">#=&gt; Array&lt;Class&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Class&gt;</code></p>
+              <p>The list of the classes of the values
+supported by the attribute, including the container.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">supported_types</span>
+  <span class="vi">@supported_types</span> <span class="o">||=</span> <span class="vi">@types</span><span class="o">.</span><span class="n">dup</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">container</span><span class="p">)</span><span class="o">.</span><span class="n">compact</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L97">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:97
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_container" class="tab-pane">
+          <h2> container </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">container</span> <span class="c1">#=&gt; Class </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Class</code></p>
+              <p>If defined it can be #{Array} or #{Hash}. It is used
+as default initialization value and to automatically wrap
+other values to arrays.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">container</span>
+  <span class="vi">@container</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L105">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:105
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_keys" class="tab-pane">
+          <h2> keys </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">keys</span> <span class="c1">#=&gt; Array, Hash </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array</code><code>Hash</code></p>
+              <p>The list of the accepted keys for an attribute
+wrapped by a Hash.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">keys</span>
+  <span class="vi">@keys</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L113">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:113
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_default_value" class="tab-pane">
+          <h2> default_value </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">default_value</span> <span class="c1">#=&gt; Object </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Object</code></p>
+              <p>If the attribute follows configuration over
+convention it can specify a default value.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">default_value</span>
+  <span class="vi">@default_value</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L121">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:121
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L252">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:252
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_ios_default" class="tab-pane">
+          <h2> ios_default </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">ios_default</span> <span class="c1">#=&gt; Object </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Object</code></p>
+              <p>Similar to #{default_value} but for iOS.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">ios_default</span>
+  <span class="vi">@ios_default</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L125">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:125
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_osx_default" class="tab-pane">
+          <h2> osx_default </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">osx_default</span> <span class="c1">#=&gt; Object </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Object</code></p>
+              <p>Similar to #{default_value} but for OS X.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">osx_default</span>
+  <span class="vi">@osx_default</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L129">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:129
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_required_" class="tab-pane">
+          <h2> required? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">required?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the specification should be considered invalid
+if a value for the attribute is not specified.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">required?</span><span class="p">;</span> <span class="vi">@required</span><span class="p">;</span> <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L134">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:134
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_root_only_" class="tab-pane">
+          <h2> root_only? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">root_only?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the attribute should be specified only on the
+root specification.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">root_only?</span><span class="p">;</span> <span class="vi">@root_only</span><span class="p">;</span> <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L139">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:139
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_multi_platform_" class="tab-pane">
+          <h2> multi_platform? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">multi_platform?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the attribute is multi-platform and should
+work in conjunction with #{PlatformProxy}.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">multi_platform?</span><span class="p">;</span> <span class="vi">@multi_platform</span><span class="p">;</span> <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L144">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:144
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_singularize_" class="tab-pane">
+          <h2> singularize? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">singularize?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether there should be a singular alias for the
+attribute writer.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">singularize?</span><span class="p">;</span> <span class="vi">@singularize</span><span class="p">;</span> <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L149">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:149
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_file_patterns_" class="tab-pane">
+          <h2> file_patterns? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">file_patterns?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the attribute describes file patterns.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">file_patterns?</span><span class="p">;</span> <span class="vi">@file_patterns</span><span class="p">;</span> <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L155">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:155
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_skip_definitions_" class="tab-pane">
+          <h2> skip_definitions? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">skip_definitions?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether an implementation for the writers and the
+setters is provided and thus the definition should be
+skipped.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">skip_definitions?</span>
+  <span class="o">!</span><span class="vi">@defined_as</span><span class="o">.</span><span class="n">nil?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L165">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:165
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_ivar" class="tab-pane">
+          <h2> ivar </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">ivar</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The instance variable associated with the attribute.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">ivar</span>
+  <span class="s2">&quot;@</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L175">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:175
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize_spec_ivar" class="tab-pane">
+          <h2> initialize_spec_ivar </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">initialize_spec_ivar</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize_spec_ivar</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">multi_platform?</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="no">PLATFORMS</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="n">value</span><span class="o">[</span><span class="nb">p</span><span class="o">]</span> <span class="o">=</span> <span class="n">container</span> <span class="p">?</span> <span class="n">container</span><span class="o">.</span><span class="n">new</span> <span class="p">:</span> <span class="kp">nil</span> <span class="p">}</span>
+    <span class="n">spec</span><span class="o">.</span><span class="n">instance_variable_set</span><span class="p">(</span><span class="n">ivar</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="n">spec</span><span class="o">.</span><span class="n">instance_variable_set</span><span class="p">(</span><span class="n">ivar</span><span class="p">,</span> <span class="n">container</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="k">if</span> <span class="n">container</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L187">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:187
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_reader_name" class="tab-pane">
+          <h2> reader_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">reader_name</span> <span class="c1">#=&gt; Symbol </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Symbol</code></p>
+              <p>The name of the getter method for the attribute.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">reader_name</span>
+  <span class="nb">name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L203">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:203
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inherited_" class="tab-pane">
+          <h2> inherited? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">inherited?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Defines whether the attribute reader should join the</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inherited?</span><span class="p">;</span> <span class="vi">@inherited</span><span class="p">;</span> <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L212">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:212
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_value_with_inheritance" class="tab-pane">
+          <h2> value_with_inheritance </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">value_with_inheritance</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Object </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Specification</code> <b>spec</b></p>
+              <p>The specification whose value is required.</p>
+
+            
+              
+
+              <p><code>Object</code> <b>value</b></p>
+              <p>The value stored in the instance variable of the attribute.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Object</code></p>
+              <p>The value for the attribute.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">value_with_inheritance</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">value</span> <span class="k">if</span> <span class="n">spec</span><span class="o">.</span><span class="n">root?</span> <span class="o">||</span> <span class="o">!</span><span class="n">inherited?</span>
+  <span class="n">parent_value</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">reader_name</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">container</span> <span class="o">==</span> <span class="nb">Array</span>
+    <span class="p">(</span><span class="n">parent_value</span> <span class="o">||</span> <span class="o">[]</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">value</span> <span class="o">||</span> <span class="o">[]</span><span class="p">)</span>
+  <span class="k">elsif</span> <span class="n">container</span> <span class="o">==</span> <span class="no">Hash</span>
+    <span class="p">(</span><span class="n">parent_value</span> <span class="o">||</span> <span class="p">{})</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">value</span> <span class="o">||</span> <span class="p">{})</span> <span class="k">do</span> <span class="o">|</span><span class="n">_</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="kp">new</span><span class="o">|</span>
+      <span class="k">if</span> <span class="kp">new</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+        <span class="n">old</span> <span class="o">+</span> <span class="kp">new</span>
+      <span class="k">else</span>
+        <span class="n">old</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="kp">new</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">else</span>
+    <span class="n">value</span> <span class="o">||</span> <span class="n">parent_value</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L233">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:233
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_writer_name" class="tab-pane">
+          <h2> writer_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">writer_name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the setter method for the attribute.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">writer_name</span>
+   <span class="vi">@defined_as</span> <span class="o">||</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">=&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L270">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:270
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_writer_singular_form" class="tab-pane">
+          <h2> writer_singular_form </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">writer_singular_form</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>An aliased attribute writer offered for convenience
+on the DSL.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">writer_singular_form</span>
+  <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">singularize</span><span class="si">}</span><span class="s2">=&quot;</span> <span class="k">if</span> <span class="n">singularize?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L277">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:277
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prepare_hook_name" class="tab-pane">
+          <h2> prepare_hook_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prepare_hook_name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the prepare hook for this attribute.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prepare_hook_name</span>
+  <span class="s2">&quot;_prepare_</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L288">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:288
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prepare_value" class="tab-pane">
+          <h2> prepare_value </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prepare_value</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Object </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Object</code></p>
+              <p>The customized value of the original one if no
+prepare hook was defined.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prepare_value</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">container</span>
+    <span class="k">if</span> <span class="n">container</span> <span class="o">==</span>  <span class="nb">Array</span>
+      <span class="n">value</span> <span class="o">=</span> <span class="o">[</span> <span class="n">value</span> <span class="o">]</span> <span class="k">unless</span> <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">if</span> <span class="n">spec</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="n">prepare_hook_name</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prepare_hook_name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="n">value</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L303">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:303
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_validate_type" class="tab-pane">
+          <h2> validate_type </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">validate_type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p><p>If the type is not in the allowed list.</p>
+</p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">validate_type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="k">return</span> <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">nil?</span>
+  <span class="k">unless</span> <span class="n">supported_types</span><span class="o">.</span><span class="n">any?</span> <span class="p">{</span> <span class="o">|</span><span class="n">klass</span><span class="o">|</span> <span class="n">value</span><span class="o">.</span><span class="n">class</span> <span class="o">==</span> <span class="n">klass</span> <span class="p">}</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Non acceptable type `</span><span class="si">#{</span><span class="n">value</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2">` for &quot;</span><span class="p">\</span>
+      <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">to_s</span><span class="si">}</span><span class="s2">. Allowed values: `</span><span class="si">#{</span><span class="n">types</span><span class="o">.</span><span class="n">inspect</span><span class="si">}</span><span class="s2">`&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L326">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:326
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_validate_for_writing" class="tab-pane">
+          <h2> validate_for_writing </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">validate_for_writing</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p><p>If a root only attribute is set in a subspec.</p>
+</p>
+            
+              <p><p>If a unknown key is added to a hash.</p>
+</p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">validate_for_writing</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">root_only?</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">spec</span><span class="o">.</span><span class="n">root?</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Can&#39;t set `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">` attribute for subspecs (in `</span><span class="si">#{</span><span class="n">spec</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">`).&quot;</span>
+  <span class="k">end</span>
+
+  <span class="k">if</span> <span class="n">keys</span>
+    <span class="n">value</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="o">|</span>
+      <span class="k">unless</span> <span class="n">allowed_keys</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Unknown key `</span><span class="si">#{</span><span class="n">key</span><span class="si">}</span><span class="s2">` for &quot;</span><span class="p">\</span>
+          <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">to_s</span><span class="si">}</span><span class="s2">. Allowed keys: `</span><span class="si">#{</span><span class="n">allowed_keys</span><span class="o">.</span><span class="n">inspect</span><span class="si">}</span><span class="s2">`&quot;</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="k">if</span> <span class="n">defined?</span><span class="p">(</span><span class="no">Rake</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Rake</span><span class="o">::</span><span class="no">FileList</span><span class="p">)</span>
+      <span class="c1"># UI.warn &quot;Rake::FileList is deprecated, use `exclude_files` (#{attrb.name}).&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="c1"># @return [Array] the flattened list of the allowed keys for the</span>
+  <span class="c1"># hash of a given specification.</span>
+  <span class="c1">#</span>
+  <span class="k">def</span> <span class="nf">allowed_keys</span>
+    <span class="k">if</span> <span class="n">keys</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+      <span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span><span class="p">)</span>
+    <span class="k">else</span>
+      <span class="n">keys</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L342">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:342
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_allowed_keys" class="tab-pane">
+          <h2> allowed_keys </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">allowed_keys</span> <span class="c1">#=&gt; Array </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array</code></p>
+              <p>The flattened list of the allowed keys for the</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">allowed_keys</span>
+  <span class="k">if</span> <span class="n">keys</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+    <span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="n">keys</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L363">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:363
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

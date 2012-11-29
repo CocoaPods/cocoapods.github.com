@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Specification Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Specification</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_specification">Specification</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_parent">
+              parent
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_defined_in_file">
+              defined_in_file
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_equality">
+              ==
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Working with a hierarchy of specifications</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_root">
+              root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_root_">
+              root?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_subspec_">
+              subspec?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Working with dependencies</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_subspecs">
+              subspecs
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_recursive_subspecs">
+              recursive_subspecs
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_subspec_by_name">
+              subspec_by_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_external_dependencies">
+              external_dependencies
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_subspec_dependencies">
+              subspec_dependencies
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dependencies">
+              dependencies
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>DSL helpers</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_local_">
+              local?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_supported_on_platform_">
+              supported_on_platform?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_available_platforms">
+              available_platforms
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_deployment_target">
+              deployment_target
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pre_install_">
+              pre_install!
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_post_install_">
+              post_install!
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>DSL deprecations</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_preferred_dependency_">
+              preferred_dependency=
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_singleton_method_added">
+              singleton_method_added
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_clean_paths_">
+              clean_paths=
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Support for Multi-platform attributes</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_activate_platform">
+              activate_platform
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_set_active_platform">
+              set_active_platform
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_active_platform">
+              active_platform
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>String representation</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inspect">
+              inspect
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_specification" class="tab-pane default">
+          <h2>Specification</h2>
+          <p><p>The {Specification} provides a DSL to describe a Pod. A pod is defined as a
+library originating from a source. A specification can support detailed
+attributes for modules of code  through subspecs.</p>
+
+<p>Usually it is stored in files with <code>podspec</code> extension.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Specification</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Specification < Object</code></p>
+          
+            <h3>Namespaces</h3>
+            
+              <p><a href="../cocoapods_core/dsl.html">
+              <code>Pod :: Specification :: DSL</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/linter.html">
+              <code>Pod :: Specification :: Linter</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/set.html">
+              <code>Pod :: Specification :: Set</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/yaml_support.html">
+              <code>Pod :: Specification :: YAMLSupport</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/platform_proxy.html">
+              <code>Pod :: Specification :: PlatformProxy</code>
+            </a></p>
+            
+          
+        </div>
+
+
+        
+          <div id="tab_parent" class="tab-pane">
+          <h2> parent </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">parent</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>Parent the parent of the specification unless the
+specification is a root.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">parent</span>
+  <span class="vi">@parent</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L23">
+                  lib/cocoapods-core/specification.rb:23
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">parent</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="nb">name</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Specification</code> <b>parent</b></p>
+              <p>@see parent</p>
+
+            
+              
+
+              <p><code>String</code> <b>name</b></p>
+              <p>The name of the specification.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>A new instance of Specification</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">parent</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="nb">name</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="no">DSL</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">initialize_spec_ivar</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="p">}</span>
+  <span class="vi">@subspecs</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="vi">@define_for_platforms</span> <span class="o">=</span> <span class="no">PLATFORMS</span>
+  <span class="vi">@deployment_target</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="vi">@dependencies</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="no">PLATFORMS</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">platform</span><span class="o">|</span>
+    <span class="vi">@dependencies</span><span class="o">[</span><span class="n">platform</span><span class="o">]</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="k">end</span>
+
+  <span class="vi">@parent</span> <span class="o">=</span> <span class="n">parent</span>
+  <span class="vi">@name</span>   <span class="o">=</span> <span class="nb">name</span>
+
+  <span class="k">yield</span> <span class="nb">self</span> <span class="k">if</span> <span class="nb">block_given?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L30">
+                  lib/cocoapods-core/specification.rb:30
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_defined_in_file" class="tab-pane">
+          <h2> defined_in_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">defined_in_file</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The path where the specification is defined, if loaded
+from a file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">defined_in_file</span>
+  <span class="n">root?</span> <span class="p">?</span> <span class="vi">@defined_in_file</span> <span class="p">:</span> <span class="n">root</span><span class="o">.</span><span class="n">defined_in_file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L76">
+                  lib/cocoapods-core/specification.rb:76
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_equality" class="tab-pane">
+          <h2> == </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the specifications represent the same version of
+the same Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+  <span class="nb">object_id</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">object_id</span> <span class="o">||</span>
+    <span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span> <span class="o">===</span> <span class="n">other</span> <span class="o">&amp;&amp;</span>
+     <span class="nb">name</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span> <span class="o">&amp;&amp;</span>
+     <span class="n">version</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L101">
+                  lib/cocoapods-core/specification.rb:101
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_root" class="tab-pane">
+          <h2> root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">root</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>The root specification or itself if it is root.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">root</span>
+  <span class="vi">@parent</span> <span class="p">?</span> <span class="vi">@parent</span><span class="o">.</span><span class="n">root</span> <span class="p">:</span> <span class="nb">self</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L114">
+                  lib/cocoapods-core/specification.rb:114
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_root_" class="tab-pane">
+          <h2> root? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">root?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the specification is root.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">root?</span>
+  <span class="n">parent</span><span class="o">.</span><span class="n">nil?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L120">
+                  lib/cocoapods-core/specification.rb:120
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_subspec_" class="tab-pane">
+          <h2> subspec? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">subspec?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the specification is a subspec.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">subspec?</span>
+  <span class="o">!</span><span class="n">parent</span><span class="o">.</span><span class="n">nil?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L126">
+                  lib/cocoapods-core/specification.rb:126
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_subspecs" class="tab-pane">
+          <h2> subspecs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">subspecs</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">subspecs</span>
+  <span class="vi">@subspecs</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L134">
+                  lib/cocoapods-core/specification.rb:134
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_recursive_subspecs" class="tab-pane">
+          <h2> recursive_subspecs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">recursive_subspecs</span> <span class="c1">#=&gt; Array&lt;Specifications&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Specifications&gt;</code></p>
+              <p>The recursive list of all the subspecs of
+a specification.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">recursive_subspecs</span>
+  <span class="vi">@recursive_subspecs</span> <span class="o">||=</span> <span class="k">begin</span>
+    <span class="n">mapper</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+      <span class="n">spec</span><span class="o">.</span><span class="n">subspecs</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">subspec</span><span class="o">|</span>
+        <span class="o">[</span><span class="n">subspec</span><span class="p">,</span> <span class="o">*</span><span class="n">mapper</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">subspec</span><span class="p">)</span><span class="o">]</span>
+      <span class="k">end</span><span class="o">.</span><span class="n">flatten</span>
+    <span class="k">end</span>
+    <span class="n">mapper</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L139">
+                  lib/cocoapods-core/specification.rb:139
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_subspec_by_name" class="tab-pane">
+          <h2> subspec_by_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">subspec_by_name</span><span class="p">(</span><span class="n">relative_name</span><span class="p">)</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>relative_name</b></p>
+              <p>The relative name of the subspecs starting from the receiver
+including the name of the receiver.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>The subspec with the given name or self.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p>Retrieving a subspec</p>
+              <div class="highlight"><pre>s.subspec_by_name(&#39;Pod/subspec&#39;).name #=&gt; &#39;subspec&#39;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">subspec_by_name</span><span class="p">(</span><span class="n">relative_name</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">relative_name</span><span class="o">.</span><span class="n">nil?</span> <span class="o">||</span> <span class="n">relative_name</span> <span class="o">==</span> <span class="vi">@name</span>
+    <span class="nb">self</span>
+  <span class="k">else</span>
+    <span class="n">remainder</span> <span class="o">=</span> <span class="n">relative_name</span><span class="o">[</span><span class="vi">@name</span><span class="o">.</span><span class="n">size</span><span class="o">+</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>
+    <span class="n">subspec_name</span> <span class="o">=</span> <span class="n">remainder</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">shift</span>
+    <span class="n">subspec</span> <span class="o">=</span> <span class="n">subspecs</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">subspec_name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+    <span class="k">unless</span> <span class="n">subspec</span>
+      <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Unable to find a specification named &quot;</span> <span class="p">\</span>
+        <span class="s2">&quot;`</span><span class="si">#{</span><span class="n">relative_name</span><span class="si">}</span><span class="s2">` in `</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">`.&quot;</span>
+    <span class="k">end</span>
+    <span class="n">subspec</span><span class="o">.</span><span class="n">subspec_by_name</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L163">
+                  lib/cocoapods-core/specification.rb:163
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_external_dependencies" class="tab-pane">
+          <h2> external_dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">external_dependencies</span><span class="p">(</span><span class="n">all_platforms</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;Dependency&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Bool</code> <b>all_platforms</b></p>
+              <p>Whether the dependencies should be returned for all platforms
+instead of the active one.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Dependency&gt;</code></p>
+              <p>The dependencies on other Pods.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">external_dependencies</span><span class="p">(</span><span class="n">all_platforms</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span>
+  <span class="n">__active_plaform_check</span> <span class="k">unless</span> <span class="n">all_platforms</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="k">if</span> <span class="n">all_platforms</span> <span class="k">then</span> <span class="vi">@dependencies</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span>
+           <span class="k">else</span> <span class="vi">@dependencies</span><span class="o">[</span><span class="n">active_platform</span><span class="o">]</span> <span class="k">end</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">external_dependencies</span> <span class="o">+</span> <span class="n">result</span> <span class="k">if</span> <span class="n">parent</span>
+  <span class="n">result</span><span class="o">.</span><span class="n">uniq</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L188">
+                  lib/cocoapods-core/specification.rb:188
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_subspec_dependencies" class="tab-pane">
+          <h2> subspec_dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">subspec_dependencies</span> <span class="c1">#=&gt; Array&lt;Dependency&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Dependency&gt;</code></p>
+              <p>The dependencies on subspecs.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">subspec_dependencies</span>
+  <span class="n">__active_plaform_check</span>
+  <span class="n">specs</span> <span class="o">=</span> <span class="k">if</span> <span class="n">default_subspec</span> <span class="k">then</span> <span class="o">[</span><span class="n">subspec_by_name</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">default_subspec</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">]</span>
+          <span class="k">else</span> <span class="n">subspecs</span> <span class="k">end</span>
+  <span class="n">specs</span> <span class="o">=</span> <span class="n">specs</span><span class="o">.</span><span class="n">compact</span>
+  <span class="n">specs</span> <span class="o">=</span> <span class="n">specs</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span><span class="o">.</span><span class="n">supported_on_platform?</span><span class="p">(</span><span class="n">active_platform</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">specs</span> <span class="o">=</span> <span class="n">specs</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="no">Dependency</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L204">
+                  lib/cocoapods-core/specification.rb:204
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dependencies" class="tab-pane">
+          <h2> dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dependencies</span> <span class="c1">#=&gt; Array&lt;Dependency&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Dependency&gt;</code></p>
+              <p>All the dependencies of the specification.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dependencies</span>
+  <span class="n">external_dependencies</span> <span class="o">+</span> <span class="n">subspec_dependencies</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L215">
+                  lib/cocoapods-core/specification.rb:215
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_local_" class="tab-pane">
+          <h2> local? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">local?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the specification should use a directory as it
+source.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">local?</span>
+  <span class="o">!</span><span class="n">source</span><span class="o">.</span><span class="n">nil?</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">source</span><span class="o">[</span><span class="ss">:local</span><span class="o">].</span><span class="n">nil?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L226">
+                  lib/cocoapods-core/specification.rb:226
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_supported_on_platform_" class="tab-pane">
+          <h2> supported_on_platform? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                
+                  <div class="highlight"><pre><span class="n">supported_on_platform?</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+                
+                  <div class="highlight"><pre><span class="n">supported_on_platform?</span><span class="p">(</span><span class="n">symbolic_name</span><span class="p">,</span> <span class="n">deployment_target</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+                
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the specification is supported in the given
+platform.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">supported_on_platform?</span><span class="p">(</span><span class="o">*</span><span class="n">platform</span><span class="p">)</span>
+  <span class="n">platform</span> <span class="o">=</span> <span class="no">Platform</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">platform</span><span class="p">)</span>
+  <span class="n">available_platforms</span><span class="o">.</span><span class="n">any?</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="n">platform</span><span class="o">.</span><span class="n">supports?</span><span class="p">(</span><span class="nb">p</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L246">
+                  lib/cocoapods-core/specification.rb:246
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_available_platforms" class="tab-pane">
+          <h2> available_platforms </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">available_platforms</span> <span class="c1">#=&gt; Array&lt;Platform&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Platform&gt;</code></p>
+              <p>The platforms that the Pod is supported on.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">available_platforms</span>
+  <span class="n">names</span> <span class="o">=</span> <span class="n">platform</span> <span class="p">?</span> <span class="o">[</span> <span class="n">platform</span><span class="o">.</span><span class="n">name</span> <span class="o">]</span> <span class="p">:</span> <span class="no">PLATFORMS</span>
+  <span class="n">names</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="no">Platform</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">deployment_target</span><span class="p">(</span><span class="nb">name</span><span class="p">))</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L256">
+                  lib/cocoapods-core/specification.rb:256
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_deployment_target" class="tab-pane">
+          <h2> deployment_target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">deployment_target</span><span class="p">(</span><span class="n">platform_name</span><span class="p">)</span> <span class="c1">#=&gt; Version </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>platform_name</b></p>
+              <p>The symbolic name of the platform.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Version</code></p>
+              <p>The version of the deployment target or nil if not
+specified or the platform is not supported.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">deployment_target</span><span class="p">(</span><span class="n">platform_name</span><span class="p">)</span>
+  <span class="k">if</span> <span class="vi">@platform</span>
+    <span class="n">platform</span><span class="o">.</span><span class="n">deployment_target</span> <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">platform_name</span>
+  <span class="k">elsif</span> <span class="n">target</span> <span class="o">=</span> <span class="vi">@deployment_target</span><span class="o">[</span><span class="n">platform_name</span><span class="o">]</span>
+    <span class="n">target</span>
+  <span class="k">elsif</span> <span class="n">parent</span>
+    <span class="n">parent</span><span class="o">.</span><span class="n">deployment_target</span><span class="p">(</span><span class="n">platform_name</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L269">
+                  lib/cocoapods-core/specification.rb:269
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pre_install_" class="tab-pane">
+          <h2> pre_install! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pre_install!</span><span class="p">(</span><span class="n">pod</span><span class="p">,</span> <span class="n">target_definition</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pod::LocalPod</code> <b>pod</b></p>
+              <p>The local pod instanace that manages the files described by this
+specification.</p>
+
+            
+              
+
+              <p><code>Podfile::TargetDefinition</code> <b>target_definition</b></p>
+              <p>The target definition that required this specification as a
+dependency.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether a pre install callback was specified and it was
+called.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pre_install!</span><span class="p">(</span><span class="n">pod</span><span class="p">,</span> <span class="n">target_definition</span><span class="p">)</span>
+  <span class="k">if</span> <span class="vi">@pre_install_callback</span>
+    <span class="vi">@pre_install_callback</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">pod</span><span class="p">,</span> <span class="n">target_definition</span><span class="p">)</span>
+    <span class="kp">true</span>
+  <span class="k">else</span>
+    <span class="kp">false</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L294">
+                  lib/cocoapods-core/specification.rb:294
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_post_install_" class="tab-pane">
+          <h2> post_install! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">post_install!</span><span class="p">(</span><span class="n">target_installer</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pod::TargetInstaller</code> <b>target_installer</b></p>
+              <p>The target installer that is performing the installation of the
+pod.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether a post install callback was specified and it was
+called.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">post_install!</span><span class="p">(</span><span class="n">target_installer</span><span class="p">)</span>
+  <span class="k">if</span> <span class="vi">@post_install_callback</span>
+    <span class="vi">@post_install_callback</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">target_installer</span><span class="p">)</span>
+    <span class="kp">true</span>
+  <span class="k">else</span>
+    <span class="kp">false</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L312">
+                  lib/cocoapods-core/specification.rb:312
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_preferred_dependency_" class="tab-pane">
+          <h2> preferred_dependency= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">preferred_dependency</span><span class="o">=</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">preferred_dependency</span><span class="o">=</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+  <span class="no">STDERR</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;`preferred_dependency` has been renamed to `default_subspec`.&quot;</span>
+  <span class="nb">self</span><span class="o">.</span><span class="n">default_subspec</span> <span class="o">=</span> <span class="n">args</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L325">
+                  lib/cocoapods-core/specification.rb:325
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_singleton_method_added" class="tab-pane">
+          <h2> singleton_method_added </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">singleton_method_added</span><span class="p">(</span><span class="nb">method</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">singleton_method_added</span><span class="p">(</span><span class="nb">method</span><span class="p">)</span>
+  <span class="k">if</span> <span class="o">[</span><span class="ss">:pre_install</span><span class="p">,</span> <span class="ss">:post_install</span> <span class="o">].</span><span class="n">include?</span><span class="p">(</span><span class="nb">method</span><span class="p">)</span>
+    <span class="no">STDERR</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;The use of `</span><span class="si">#{</span><span class="nb">method</span><span class="si">}</span><span class="s2">` by overriding the method is deprecated.&quot;</span>
+  <span class="k">elsif</span> <span class="nb">method</span> <span class="o">==</span> <span class="ss">:header_mappings</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;The use of the `header_mappings` hook has been deprecated.&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L330">
+                  lib/cocoapods-core/specification.rb:330
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_clean_paths_" class="tab-pane">
+          <h2> clean_paths= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">clean_paths</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p></p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">clean_paths</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Clean paths are deprecated. CocoaPods now &quot;</span> <span class="p">\</span>
+    <span class="s2">&quot;cleans unused files by default. Use preserver paths if needed.&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L338">
+                  lib/cocoapods-core/specification.rb:338
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_activate_platform" class="tab-pane">
+          <h2> activate_platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                
+                  <div class="highlight"><pre><span class="n">activate_platform</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+                
+                  <div class="highlight"><pre><span class="n">activate_platform</span><span class="p">(</span><span class="n">symbolic_name</span><span class="p">,</span> <span class="n">deployment_target</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+                
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p><p>If the platform is not supported by the specification.</p>
+</p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">activate_platform</span><span class="p">(</span><span class="o">*</span><span class="n">platform</span><span class="p">)</span>
+  <span class="n">platform</span> <span class="o">=</span> <span class="no">Platform</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">platform</span><span class="p">)</span>
+  <span class="k">unless</span> <span class="n">supported_on_platform?</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">to_s</span><span class="si">}</span><span class="s2"> is not compatible with </span><span class="si">#{</span><span class="n">platform</span><span class="o">.</span><span class="n">to_s</span><span class="si">}</span><span class="s2">.&quot;</span>
+  <span class="k">end</span>
+  <span class="n">set_active_platform</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L411">
+                  lib/cocoapods-core/specification.rb:411
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_set_active_platform" class="tab-pane">
+          <h2> set_active_platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">set_active_platform</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">set_active_platform</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">root?</span>
+    <span class="vi">@active_platform</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">to_sym</span>
+  <span class="k">else</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">set_active_platform</span><span class="p">(</span><span class="o">*</span><span class="n">platform</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L419">
+                  lib/cocoapods-core/specification.rb:419
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_active_platform" class="tab-pane">
+          <h2> active_platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">active_platform</span> <span class="c1">#=&gt; Symbol </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Symbol</code></p>
+              <p>The name of the platform this specification was
+activated for.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">active_platform</span>
+  <span class="n">root?</span> <span class="p">?</span> <span class="vi">@active_platform</span> <span class="p">:</span> <span class="n">root</span><span class="o">.</span><span class="n">active_platform</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L430">
+                  lib/cocoapods-core/specification.rb:430
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string suitable for representing the specification in
+clients.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">)&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L462">
+                  lib/cocoapods-core/specification.rb:462
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inspect" class="tab-pane">
+          <h2> inspect </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">inspect</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string suitable for debugging.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inspect</span>
+  <span class="s2">&quot;#&lt;</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> for `</span><span class="si">#{</span><span class="nb">to_s</span><span class="si">}</span><span class="s2">`&gt;&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L489">
+                  lib/cocoapods-core/specification.rb:489
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

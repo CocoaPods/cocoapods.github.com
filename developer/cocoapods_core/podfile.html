@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Podfile Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Podfile</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_podfile">Podfile</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_defined_in_file">
+              defined_in_file
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dependency">
+              dependency
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Working with a podfile</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_target_definitions">
+              target_definitions
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dependencies">
+              dependencies
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_validate_">
+              validate!
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_workspace_path">
+              workspace_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_generate_bridge_support_">
+              generate_bridge_support?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_set_arc_compatibility_flag_">
+              set_arc_compatibility_flag?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pre_install_">
+              pre_install!
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_post_install_">
+              post_install!
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_podfile" class="tab-pane default">
+          <h2>Podfile</h2>
+          <p><p>The {Podfile} is a specification that describes the dependencies of the
+targets of an Xcode project.</p>
+
+<p>It supports its own DSL and generally is stored in files named
+<code>CocoaPods.podfile</code> or <code>Podfile</code>.</p>
+
+<p>The Podfile creates a hierarchy of target definitions that that store the
+information of necessary to generate the CocoaPods libraries.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Podfile</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Podfile < Object</code></p>
+          
+            <h3>Namespaces</h3>
+            
+              <p><a href="../cocoapods_core/dsl.html">
+              <code>Pod :: Podfile :: DSL</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/target_definition.html">
+              <code>Pod :: Podfile :: TargetDefinition</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/standard_error.html">
+              <code>Pod :: Podfile :: StandardError</code>
+            </a></p>
+            
+          
+        </div>
+
+
+        
+          <div id="tab_defined_in_file" class="tab-pane">
+          <h2> defined_in_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">defined_in_file</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The path where the podfile was loaded from. It is nil
+if the podfile was generated programmatically.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">defined_in_file</span>
+  <span class="vi">@defined_in_file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L20">
+                  lib/cocoapods-core/podfile.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">defined_in_file</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="c1">#=&gt; Podfile </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>defined_in_file</b></p>
+              <p>The path of the podfile.</p>
+
+            
+              
+
+              <p><code>Proc</code> <b>block</b></p>
+              <p>A block that configures the podfile through its DSL.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Podfile</code></p>
+              <p>A new instance of Podfile</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p>Creating a Podfile.</p>
+              <div class="highlight"><pre>platform :ios, &quot;6.0&quot;
+target :my_app do
+  pod &quot;AFNetworking&quot;, &quot;~&gt; 1.0&quot;
+end
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">defined_in_file</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="nb">self</span><span class="o">.</span><span class="n">defined_in_file</span> <span class="o">=</span> <span class="n">defined_in_file</span>
+  <span class="vi">@target_definition</span> <span class="o">=</span> <span class="no">TargetDefinition</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:default</span><span class="p">,</span> <span class="kp">nil</span><span class="p">,</span> <span class="nb">self</span><span class="p">,</span> <span class="ss">:exclusive</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">)</span>
+  <span class="vi">@target_definitions</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="vi">@target_definition</span> <span class="p">}</span>
+  <span class="nb">instance_eval</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L35">
+                  lib/cocoapods-core/podfile.rb:35
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string useful to represent the Podfile in a message
+presented to the user.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="s2">&quot;Podfile&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L45">
+                  lib/cocoapods-core/podfile.rb:45
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dependency" class="tab-pane">
+          <h2> dependency </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dependency</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">*</span><span class="n">requirements</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+            
+            <div class="alert">
+              <strong>TODO</strong> <p>Remove for CocoaPods 1.0.</p>
+
+            </div>
+            
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dependency</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">*</span><span class="n">requirements</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="nb">warn</span> <span class="s2">&quot;[DEPRECATED] `dependency&#39; is deprecated (use `pod&#39;)&quot;</span>
+  <span class="n">pod</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="o">*</span><span class="n">requirements</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L93">
+                  lib/cocoapods-core/podfile.rb:93
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_target_definitions" class="tab-pane">
+          <h2> target_definitions </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target_definitions</span> <span class="c1">#=&gt; Hash{Symbol,String =&gt; TargetDefinition} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Symbol,String =&gt; TargetDefinition}</code></p>
+              <p>The target definitions
+of the podfile stored by their name.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target_definitions</span>
+  <span class="vi">@target_definitions</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L105">
+                  lib/cocoapods-core/podfile.rb:105
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dependencies" class="tab-pane">
+          <h2> dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dependencies</span> <span class="c1">#=&gt; Array&lt;Dependency&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Dependency&gt;</code></p>
+              <p>The dependencies of the all the target
+definitions.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dependencies</span>
+  <span class="vi">@target_definitions</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:target_dependencies</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">uniq</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L110">
+                  lib/cocoapods-core/podfile.rb:110
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_validate_" class="tab-pane">
+          <h2> validate! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">validate!</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">validate!</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L120">
+                  lib/cocoapods-core/podfile.rb:120
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_workspace_path" class="tab-pane">
+          <h2> workspace_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">workspace_path</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The path of the workspace if specified by the user.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">workspace_path</span>
+  <span class="vi">@workspace_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L126">
+                  lib/cocoapods-core/podfile.rb:126
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_generate_bridge_support_" class="tab-pane">
+          <h2> generate_bridge_support? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">generate_bridge_support?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the podfile should generate a BridgeSupport
+metadata document.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">generate_bridge_support?</span>
+  <span class="vi">@generate_bridge_support</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L131">
+                  lib/cocoapods-core/podfile.rb:131
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_set_arc_compatibility_flag_" class="tab-pane">
+          <h2> set_arc_compatibility_flag? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">set_arc_compatibility_flag?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the -fobjc-arc flag should be added to the
+OTHER<em>LD</em>FLAGS.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">set_arc_compatibility_flag?</span>
+  <span class="vi">@set_arc_compatibility_flag</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L138">
+                  lib/cocoapods-core/podfile.rb:138
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pre_install_" class="tab-pane">
+          <h2> pre_install! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pre_install!</span><span class="p">(</span><span class="n">installer</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pod::Installer</code> <b>installer</b></p>
+              <p>The installer that is performing the installation.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether a pre install callback was specified and it was
+called.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pre_install!</span><span class="p">(</span><span class="n">installer</span><span class="p">)</span>
+  <span class="k">if</span> <span class="vi">@pre_install_callback</span>
+    <span class="vi">@pre_install_callback</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">installer</span><span class="p">)</span>
+    <span class="kp">true</span>
+  <span class="k">else</span>
+    <span class="kp">false</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L150">
+                  lib/cocoapods-core/podfile.rb:150
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_post_install_" class="tab-pane">
+          <h2> post_install! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">post_install!</span><span class="p">(</span><span class="n">installer</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pod::Installer</code> <b>installer</b></p>
+              <p>The installer that is performing the installation.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether a post install callback was specified and it was
+called.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">post_install!</span><span class="p">(</span><span class="n">installer</span><span class="p">)</span>
+  <span class="k">if</span> <span class="vi">@post_install_callback</span>
+    <span class="vi">@post_install_callback</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">installer</span><span class="p">)</span>
+    <span class="kp">true</span>
+  <span class="k">else</span>
+    <span class="kp">false</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile.rb#L167">
+                  lib/cocoapods-core/podfile.rb:167
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

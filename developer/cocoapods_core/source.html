@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Source Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Source</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_source">Source</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_repo">
+              repo
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_name">
+              name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab____">
+              <=>
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Queering the source</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_pods">
+              pods
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pod_sets">
+              pod_sets
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_versions">
+              versions
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_specification">
+              specification
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_all_specs">
+              all_specs
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Searching the source</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_search">
+              search
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_search_by_name">
+              search_by_name
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_to_hash">
+              to_hash
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_yaml">
+              to_yaml
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_json">
+              to_json
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_source" class="tab-pane default">
+          <h2>Source</h2>
+          <p><p>The Source class is responsible to manage a collection of podspecs.</p>
+
+<p>The backing store of the podspecs collection is an implementation detail
+abstracted from the rest of CocoaPods.</p>
+
+<p>The default implementation uses a git repo as a backing store, where the
+podspecs are namespaced as:</p>
+<div class="highlight"><pre><span class="s2">&quot;</span><span class="si">#{</span><span class="no">SPEC_NAME</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="no">VERSION</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="no">SPEC_NAME</span><span class="si">}</span><span class="s2">.podspec&quot;</span>
+</pre></div></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Source</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Source < Object</code></p>
+          
+            <h3>Namespaces</h3>
+            
+              <p><a href="../cocoapods_core/validator.html">
+              <code>Pod :: Source :: Validator</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/aggregate.html">
+              <code>Pod :: Source :: Aggregate</code>
+            </a></p>
+            
+          
+        </div>
+
+
+        
+          <div id="tab_repo" class="tab-pane">
+          <h2> repo </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">repo</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The location of the repo of the source.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">repo</span>
+  <span class="vi">@repo</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L19">
+                  lib/cocoapods-core/source.rb:19
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span> <span class="c1">#=&gt; Source </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>repo</b></p>
+              <p>@see #repo.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Source</code></p>
+              <p>A new instance of Source</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span>
+  <span class="vi">@repo</span> <span class="o">=</span> <span class="n">repo</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L23">
+                  lib/cocoapods-core/source.rb:23
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_name" class="tab-pane">
+          <h2> name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the source.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">name</span>
+  <span class="vi">@repo</span><span class="o">.</span><span class="n">basename</span><span class="o">.</span><span class="n">to_s</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L29">
+                  lib/cocoapods-core/source.rb:29
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab____" class="tab-pane">
+          <h2> <=> </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">&lt;=&gt;</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="c1">#=&gt; Integer </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Integer</code></p>
+              <p>Compares a source with another one for sorting
+purposes.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">&lt;=&gt;</span> <span class="p">(</span><span class="n">other</span><span class="p">)</span>
+  <span class="nb">name</span> <span class="o">&lt;=&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L40">
+                  lib/cocoapods-core/source.rb:40
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The string reppresentation of a source.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="s2">&quot;Source `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">`&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L46">
+                  lib/cocoapods-core/source.rb:46
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods" class="tab-pane">
+          <h2> pods </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The list of the name of all the Pods.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods</span>
+  <span class="vi">@repo</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">child</span><span class="o">|</span>
+    <span class="n">child</span><span class="o">.</span><span class="n">basename</span><span class="o">.</span><span class="n">to_s</span> <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">directory?</span> <span class="o">&amp;&amp;</span> <span class="n">child</span><span class="o">.</span><span class="n">basename</span><span class="o">.</span><span class="n">to_s</span> <span class="o">!=</span> <span class="s1">&#39;.git&#39;</span>
+  <span class="k">end</span><span class="o">.</span><span class="n">compact</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L56">
+                  lib/cocoapods-core/source.rb:56
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pod_sets" class="tab-pane">
+          <h2> pod_sets </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pod_sets</span> <span class="c1">#=&gt; Array&lt;Sets&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Sets&gt;</code></p>
+              <p>The sets of all the Pods.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pod_sets</span>
+  <span class="n">pods</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">pod</span><span class="o">|</span> <span class="no">Specification</span><span class="o">::</span><span class="no">Set</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">pod</span><span class="p">,</span> <span class="nb">self</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L64">
+                  lib/cocoapods-core/source.rb:64
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_versions" class="tab-pane">
+          <h2> versions </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">versions</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;Version&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>name</b></p>
+              <p>The name of the Pod.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Version&gt;</code></p>
+              <p>All the available versions for the Pod, sorted
+from highest to lowest.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">versions</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="n">pod_dir</span> <span class="o">=</span> <span class="n">repo</span> <span class="o">+</span> <span class="nb">name</span>
+  <span class="k">return</span> <span class="k">unless</span> <span class="n">pod_dir</span><span class="o">.</span><span class="n">exist?</span>
+  <span class="n">pod_dir</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">v</span><span class="o">|</span>
+    <span class="n">basename</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">basename</span><span class="o">.</span><span class="n">to_s</span>
+    <span class="no">Version</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">basename</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span><span class="o">.</span><span class="n">directory?</span> <span class="o">&amp;&amp;</span> <span class="n">basename</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span>
+  <span class="k">end</span><span class="o">.</span><span class="n">compact</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">reverse</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L74">
+                  lib/cocoapods-core/source.rb:74
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_specification" class="tab-pane">
+          <h2> specification </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">specification</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>name</b></p>
+              <p>The name of the Pod.</p>
+
+            
+              
+
+              <p><code>Version</code><code>String</code> <b>version</b></p>
+              <p>The version for the specification.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>The specification for a given version of Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">specification</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+  <span class="n">specification_path</span> <span class="o">=</span> <span class="n">repo</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="n">version</span><span class="o">.</span><span class="n">to_s</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.podspec&quot;</span>
+  <span class="no">Specification</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">specification_path</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L91">
+                  lib/cocoapods-core/source.rb:91
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_all_specs" class="tab-pane">
+          <h2> all_specs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">all_specs</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">all_specs</span>
+  <span class="n">specs</span> <span class="o">=</span> <span class="n">pods</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+    <span class="k">begin</span>
+      <span class="n">versions</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">version</span><span class="o">|</span> <span class="n">specification</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span> <span class="p">}</span>
+    <span class="k">rescue</span> <span class="no">DSLError</span> <span class="o">=&gt;</span> <span class="n">e</span>
+      <span class="no">STDERR</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Skipping `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">` because the podspec contains errors.&quot;</span>
+      <span class="k">next</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">specs</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L96">
+                  lib/cocoapods-core/source.rb:96
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_search" class="tab-pane">
+          <h2> search </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">search</span><span class="p">(</span><span class="n">dependency</span><span class="p">)</span> <span class="c1">#=&gt; Set </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Set</code></p>
+              <p>A set for a given dependency. The set is identified by the
+name of the dependency and takes into account subspecs.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">dependency</span><span class="p">)</span>
+  <span class="n">pod_sets</span><span class="o">.</span><span class="n">find</span> <span class="k">do</span> <span class="o">|</span><span class="n">set</span><span class="o">|</span>
+    <span class="c1"># First match the (top level) name, which does not yet load the spec from disk</span>
+    <span class="n">set</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dependency</span><span class="o">.</span><span class="n">root_name</span> <span class="o">&amp;&amp;</span>
+      <span class="c1"># Now either check if it&#39;s a dependency on the top level spec, or if it&#39;s not</span>
+      <span class="c1"># check if the requested subspec exists in the top level spec.</span>
+      <span class="n">set</span><span class="o">.</span><span class="n">specification</span><span class="o">.</span><span class="n">subspec_by_name</span><span class="p">(</span><span class="n">dependency</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L115">
+                  lib/cocoapods-core/source.rb:115
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_search_by_name" class="tab-pane">
+          <h2> search_by_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">search_by_name</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">full_text_search</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;Set&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>query</b></p>
+              <p>The search term.</p>
+
+            
+              
+
+              <p><code>Bool</code> <b>full_text_search</b></p>
+              <p>Whether the search should be limited to the name of the Pod or
+should include also the author, the summary, and the description.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Set&gt;</code></p>
+              <p>The list of the sets that contain the search term.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">search_by_name</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">full_text_search</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span>
+  <span class="n">pod_sets</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">set</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">full_text_search</span>
+      <span class="k">begin</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">specification</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">s</span><span class="o">.</span><span class="n">authors</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">s</span><span class="o">.</span><span class="n">summary</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">s</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="k">rescue</span>
+        <span class="no">STDERR</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Skipping `</span><span class="si">#{</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">` because the podspec contains errors.&quot;</span>
+      <span class="k">end</span>
+    <span class="k">else</span>
+      <span class="n">text</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">end</span>
+    <span class="n">set</span> <span class="k">if</span> <span class="n">text</span> <span class="o">&amp;&amp;</span> <span class="n">text</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">downcase</span><span class="p">)</span>
+  <span class="k">end</span><span class="o">.</span><span class="n">compact</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L137">
+                  lib/cocoapods-core/source.rb:137
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_hash" class="tab-pane">
+          <h2> to_hash </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">to_hash</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_hash</span>
+  <span class="nb">hash</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">all_specs</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+    <span class="nb">print</span> <span class="s1">&#39;.&#39;</span>
+    <span class="nb">hash</span><span class="o">[</span><span class="n">spec</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">||=</span> <span class="p">{}</span>
+    <span class="nb">hash</span><span class="o">[</span><span class="n">spec</span><span class="o">.</span><span class="n">name</span><span class="o">][</span><span class="n">spec</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">version</span><span class="o">]</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">to_hash</span>
+  <span class="k">end</span>
+  <span class="nb">hash</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L155">
+                  lib/cocoapods-core/source.rb:155
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_yaml" class="tab-pane">
+          <h2> to_yaml </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">to_yaml</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_yaml</span>
+  <span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+  <span class="n">to_hash</span><span class="o">.</span><span class="n">to_yaml</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L165">
+                  lib/cocoapods-core/source.rb:165
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_json" class="tab-pane">
+          <h2> to_json </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">to_json</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_json</span>
+  <span class="nb">require</span> <span class="s1">&#39;json&#39;</span>
+  <span class="n">to_hash</span><span class="o">.</span><span class="n">to_json</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source.rb#L170">
+                  lib/cocoapods-core/source.rb:170
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

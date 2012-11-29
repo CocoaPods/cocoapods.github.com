@@ -9,14 +9,17 @@ module Pod
 
       attr_reader :gem_spec_file
 
-      attr_reader :root_module
-
       # @param [Pathname] gem_spec_file
       #
       def initialize(gem_spec_file, root_module = nil)
         @gem_spec_file = gem_spec_file
-        @root_module = root_module
       end
+
+      attr_accessor :github_name
+
+      # Optional
+      #
+      attr_accessor :root_module
 
       # @return [Gem::Specification]
       #

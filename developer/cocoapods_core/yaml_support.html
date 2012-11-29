@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>YAMLSupport Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Specification :: YAMLSupport</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_yamlsupport">YAMLSupport</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_to_hash">
+              to_hash
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_is_empty_">
+              is_empty?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_prepare_value">
+              prepare_value
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_to_yaml">
+              to_yaml
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_yamlsupport" class="tab-pane default">
+          <h2>YAMLSupport</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Specification :: YAMLSupport</code></p>
+          <h3>Inheritance</h3>
+          <p><code></code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_to_hash" class="tab-pane">
+          <h2> to_hash </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">to_hash</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_hash</span>
+  <span class="nb">hash</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">attributes</span> <span class="o">=</span> <span class="no">Specification</span><span class="o">::</span><span class="no">DSL</span><span class="o">.</span><span class="n">attributes</span>
+
+  <span class="n">attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">attrb</span><span class="o">|</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="nb">instance_variable_get</span><span class="p">(</span><span class="n">attrb</span><span class="o">.</span><span class="n">ivar</span><span class="p">)</span>
+    <span class="k">next</span> <span class="k">if</span> <span class="n">is_empty?</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">prepare_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="nb">hash</span><span class="o">[</span><span class="n">attrb</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">to_s</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span>
+  <span class="k">end</span>
+
+  <span class="k">if</span> <span class="n">subspecs</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">subspecs</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;subspecs&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">subspecs</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span><span class="o">.</span><span class="n">to_hash</span> <span class="p">}</span>
+  <span class="k">end</span>
+
+  <span class="n">available_platforms</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">platform</span><span class="o">|</span>
+    <span class="n">activate_platform</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
+    <span class="n">dependencies</span> <span class="o">=</span> <span class="n">external_dependencies</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:to_s</span><span class="p">)</span>
+    <span class="k">unless</span> <span class="n">dependencies</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;dependencies&#39;</span><span class="o">]</span> <span class="o">||=</span> <span class="p">{}</span>
+      <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;dependencies&#39;</span><span class="o">][</span><span class="n">platform</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">=</span> <span class="n">dependencies</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="nb">hash</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/yaml.rb#L10">
+                  lib/cocoapods-core/specification/yaml.rb:10
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_is_empty_" class="tab-pane">
+          <h2> is_empty? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">is_empty?</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">is_empty?</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kp">true</span> <span class="k">unless</span> <span class="n">value</span>
+  <span class="k">case</span> <span class="n">value</span>
+  <span class="k">when</span> <span class="no">Hash</span>  <span class="k">then</span> <span class="n">is_empty?</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+  <span class="k">when</span> <span class="nb">Array</span> <span class="k">then</span> <span class="n">value</span><span class="o">.</span><span class="n">compact</span><span class="o">.</span><span class="n">all?</span><span class="p">{</span><span class="o">|</span><span class="n">v</span><span class="o">|</span> <span class="n">is_empty?</span><span class="p">(</span><span class="n">v</span><span class="p">)}</span>
+  <span class="k">else</span> <span class="kp">false</span> <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/yaml.rb#L37">
+                  lib/cocoapods-core/specification/yaml.rb:37
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prepare_value" class="tab-pane">
+          <h2> prepare_value </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prepare_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prepare_value</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="k">case</span> <span class="n">value</span>
+  <span class="k">when</span> <span class="no">Version</span> <span class="k">then</span> <span class="n">value</span><span class="o">.</span><span class="n">version</span>
+  <span class="k">when</span> <span class="no">Platform</span>
+    <span class="o">[</span><span class="n">value</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="o">.</span><span class="n">deployment_target</span> <span class="p">?</span> <span class="n">value</span><span class="o">.</span><span class="n">deployment_target</span><span class="o">.</span><span class="n">version</span> <span class="p">:</span> <span class="kp">nil</span><span class="o">]</span>
+  <span class="k">else</span> <span class="n">value</span> <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/yaml.rb#L45">
+                  lib/cocoapods-core/specification/yaml.rb:45
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_yaml" class="tab-pane">
+          <h2> to_yaml </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">to_yaml</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_yaml</span>
+  <span class="n">to_hash</span><span class="o">.</span><span class="n">to_yaml</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/yaml.rb#L53">
+                  lib/cocoapods-core/specification/yaml.rb:53
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

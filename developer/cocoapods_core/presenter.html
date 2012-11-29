@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Presenter Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Specification :: Set :: Presenter</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_presenter">Presenter</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_set">
+              set
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Set Information</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_name">
+              name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_version">
+              version
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_versions">
+              versions
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_verions_by_source">
+              verions_by_source
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_sources">
+              sources
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Specification Information</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_spec">
+              spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_authors">
+              authors
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_homepage">
+              homepage
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_summary">
+              summary
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_description">
+              description
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_source_url">
+              source_url
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_platform">
+              platform
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_license">
+              license
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_subspecs">
+              subspecs
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Statistics</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_creation_date">
+              creation_date
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_github_watchers">
+              github_watchers
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_github_forks">
+              github_forks
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_github_last_activity">
+              github_last_activity
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_presenter" class="tab-pane default">
+          <h2>Presenter</h2>
+          <p><p>Provides support for presenting a Pod described by a {Set} in a
+consistent way across clients of CocoaPods-Core.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Specification :: Set :: Presenter</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Presenter < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_set" class="tab-pane">
+          <h2> set </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">set</span> <span class="c1">#=&gt; Set </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Set</code></p>
+              <p>The set that should be presented.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">set</span>
+  <span class="vi">@set</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L14">
+                  lib/cocoapods-core/specification/set/presenter.rb:14
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Presenter </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Set</code> <b>set</b></p>
+              <p>@see #set.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Presenter</code></p>
+              <p>A new instance of Presenter</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+  <span class="vi">@set</span> <span class="o">=</span> <span class="n">set</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L18">
+                  lib/cocoapods-core/specification/set/presenter.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_name" class="tab-pane">
+          <h2> name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">name</span>
+  <span class="vi">@set</span><span class="o">.</span><span class="n">name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L28">
+                  lib/cocoapods-core/specification/set/presenter.rb:28
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_version" class="tab-pane">
+          <h2> version </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">version</span> <span class="c1">#=&gt; Version </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Version</code></p>
+              <p>The highest version of available for the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">version</span>
+  <span class="vi">@set</span><span class="o">.</span><span class="n">versions</span><span class="o">.</span><span class="n">first</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L34">
+                  lib/cocoapods-core/specification/set/presenter.rb:34
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_versions" class="tab-pane">
+          <h2> versions </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">versions</span> <span class="c1">#=&gt; Array&lt;Version&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Version&gt;</code></p>
+              <p>All the versions available sorted
+ascendingly.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">versions</span>
+  <span class="vi">@set</span><span class="o">.</span><span class="n">versions</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">reverse</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L41">
+                  lib/cocoapods-core/specification/set/presenter.rb:41
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_verions_by_source" class="tab-pane">
+          <h2> verions_by_source </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">verions_by_source</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>All the versions available sorted from the highest
+to the lowest.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p>Return example</p>
+              <div class="highlight"><pre>&quot;1.5pre, 1.4 [master repo] - 1.4 [test_repo repo]&quot;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">verions_by_source</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="n">versions_by_source</span> <span class="o">=</span> <span class="vi">@set</span><span class="o">.</span><span class="n">versions_by_source</span>
+  <span class="vi">@set</span><span class="o">.</span><span class="n">sources</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">source</span><span class="o">|</span>
+    <span class="n">versions</span> <span class="o">=</span> <span class="n">versions_by_source</span><span class="o">[</span><span class="n">source</span><span class="o">]</span>
+    <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">versions</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:to_s</span><span class="p">)</span> <span class="o">*</span> <span class="s1">&#39;, &#39;</span><span class="si">}</span><span class="s2"> [</span><span class="si">#{</span><span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> repo]&quot;</span>
+  <span class="k">end</span>
+  <span class="n">result</span> <span class="o">*</span> <span class="s1">&#39; - &#39;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L54">
+                  lib/cocoapods-core/specification/set/presenter.rb:54
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_sources" class="tab-pane">
+          <h2> sources </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">sources</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The name of the sources that contain the Pod
+sorted alphabetically.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">sources</span>
+  <span class="vi">@set</span><span class="o">.</span><span class="n">sources</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L67">
+                  lib/cocoapods-core/specification/set/presenter.rb:67
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_spec" class="tab-pane">
+          <h2> spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">spec</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>The specification of the {Set}. If no
+versions requirements where passed to the set it returns the
+highest available version.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">spec</span>
+  <span class="vi">@set</span><span class="o">.</span><span class="n">specification</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L79">
+                  lib/cocoapods-core/specification/set/presenter.rb:79
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_authors" class="tab-pane">
+          <h2> authors </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">authors</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The list of the authors of the Pod in sentence
+format.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p>Output example</p>
+              <div class="highlight"><pre>&quot;Author 1, Author 2 and Author 3&quot;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">authors</span>
+  <span class="k">return</span> <span class="s1">&#39;&#39;</span> <span class="k">unless</span> <span class="n">spec</span><span class="o">.</span><span class="n">authors</span>
+  <span class="k">if</span> <span class="no">RUBY_VERSION</span> <span class="o">==</span> <span class="s1">&#39;1.8.7&#39;</span>
+    <span class="n">spec</span><span class="o">.</span><span class="n">authors</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">to_sentence</span>
+  <span class="k">else</span>
+    <span class="n">spec</span><span class="o">.</span><span class="n">authors</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">to_sentence</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L94">
+                  lib/cocoapods-core/specification/set/presenter.rb:94
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_homepage" class="tab-pane">
+          <h2> homepage </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">homepage</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The homepage of the pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">homepage</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">homepage</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L105">
+                  lib/cocoapods-core/specification/set/presenter.rb:105
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_summary" class="tab-pane">
+          <h2> summary </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">summary</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A short description, expected to be 140 characters
+long of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">summary</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">summary</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L112">
+                  lib/cocoapods-core/specification/set/presenter.rb:112
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_description" class="tab-pane">
+          <h2> description </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">description</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The description of the Pod, if no description is
+available the summary is returned.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">description</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">description</span> <span class="o">||</span> <span class="n">spec</span><span class="o">.</span><span class="n">summary</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L119">
+                  lib/cocoapods-core/specification/set/presenter.rb:119
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_source_url" class="tab-pane">
+          <h2> source_url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">source_url</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The URL of the source of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">source_url</span>
+  <span class="n">url_keys</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:git</span><span class="p">,</span> <span class="ss">:svn</span><span class="p">,</span> <span class="ss">:http</span><span class="p">,</span> <span class="ss">:hg</span><span class="p">,</span> <span class="ss">:local</span> <span class="o">]</span>
+  <span class="n">key</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">k</span><span class="o">|</span> <span class="n">url_keys</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">key</span> <span class="p">?</span> <span class="n">spec</span><span class="o">.</span><span class="n">source</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="p">:</span> <span class="s1">&#39;No source url&#39;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L125">
+                  lib/cocoapods-core/specification/set/presenter.rb:125
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_platform" class="tab-pane">
+          <h2> platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">platform</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The platforms supported by the Pod.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>&quot;iOS&quot;
+&quot;iOS - OS X&quot;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">platform</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">available_platforms</span><span class="o">.</span><span class="n">sort</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">downcase</span> <span class="o">&lt;=&gt;</span> <span class="n">b</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">downcase</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L138">
+                  lib/cocoapods-core/specification/set/presenter.rb:138
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_license" class="tab-pane">
+          <h2> license </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">license</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The type of the license of the Pod.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>&quot;MIT&quot;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">license</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">license</span><span class="o">[</span><span class="ss">:type</span><span class="o">]</span> <span class="k">if</span> <span class="n">spec</span><span class="o">.</span><span class="n">license</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L148">
+                  lib/cocoapods-core/specification/set/presenter.rb:148
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_subspecs" class="tab-pane">
+          <h2> subspecs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">subspecs</span> <span class="c1">#=&gt; Array </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array</code></p>
+              <p>An array containing all the subspecs of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">subspecs</span>
+  <span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">recursive_subspecs</span><span class="o">.</span><span class="n">any?</span> <span class="o">&amp;&amp;</span> <span class="n">spec</span><span class="o">.</span><span class="n">recursive_subspecs</span><span class="p">)</span> <span class="o">||</span> <span class="kp">nil</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L154">
+                  lib/cocoapods-core/specification/set/presenter.rb:154
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_creation_date" class="tab-pane">
+          <h2> creation_date </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">creation_date</span> <span class="c1">#=&gt; Time </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Time</code></p>
+              <p>The creation date of the first known <code>podspec</code> of the
+Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">creation_date</span>
+  <span class="no">Statistics</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">creation_date</span><span class="p">(</span><span class="vi">@set</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L165">
+                  lib/cocoapods-core/specification/set/presenter.rb:165
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_github_watchers" class="tab-pane">
+          <h2> github_watchers </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">github_watchers</span> <span class="c1">#=&gt; Integer </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Integer</code></p>
+              <p>The GitHub likes of the repo of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">github_watchers</span>
+  <span class="no">Statistics</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">github_watchers</span><span class="p">(</span><span class="vi">@set</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L171">
+                  lib/cocoapods-core/specification/set/presenter.rb:171
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_github_forks" class="tab-pane">
+          <h2> github_forks </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">github_forks</span> <span class="c1">#=&gt; Integer </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Integer</code></p>
+              <p>The GitHub forks of the repo of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">github_forks</span>
+  <span class="no">Statistics</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">github_forks</span><span class="p">(</span><span class="vi">@set</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L177">
+                  lib/cocoapods-core/specification/set/presenter.rb:177
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_github_last_activity" class="tab-pane">
+          <h2> github_last_activity </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">github_last_activity</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The relative time of the last push of the repo the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">github_last_activity</span>
+  <span class="n">distance_from_now_in_words</span><span class="p">(</span><span class="no">Statistics</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">github_pushed_at</span><span class="p">(</span><span class="vi">@set</span><span class="p">))</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/presenter.rb#L183">
+                  lib/cocoapods-core/specification/set/presenter.rb:183
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

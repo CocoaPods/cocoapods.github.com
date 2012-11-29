@@ -3,7 +3,8 @@ $(function() {
   function tabLinkByName(name) {
     // TODO
     // return $('#methods_list a[href=#tab_' + name.replace('#', '') + ']');
-    return $('a[href=#tab_' + name.replace('#', '') + ']');
+    console.log('a[href="#tab_' + name.replace('#', '') + '"]')
+    return $('a[href="#tab_' + name.replace('#', '') + '"]');
   }
 
   function selectTabByName(name) {
@@ -11,8 +12,7 @@ $(function() {
     $('#methods_list .active').removeClass('active');
     // select new
     var tabLink = tabLinkByName(name);
-    console.log('tabLink')
-    console.log(name)
+    console.log(tabLink)
     tabLink.parent().addClass('active')
     tabLink.tab('show');
     document.location.hash = name;

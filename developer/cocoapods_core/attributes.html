@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Attributes Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Specification :: DSL :: Attributes</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_attributes">Attributes</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Writer method support</a>
+                  </h2>
+              
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_attribute">
+              attribute
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_attributes" class="tab-pane default">
+          <h2>Attributes</h2>
+          <p><p>This module provides support for creating the {Specification} DSL. In
+practice it provides the DSL for the creation of the DSL (Yup! You&#39;ve
+read it right).</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Specification :: DSL :: Attributes</code></p>
+          <h3>Inheritance</h3>
+          <p><code></code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_attribute" class="tab-pane">
+          <h2> attribute </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">attribute</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">attribute</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+  <span class="kp">attr</span> <span class="o">=</span> <span class="no">Attribute</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+  <span class="vi">@attributes</span> <span class="o">||=</span> <span class="o">[]</span>
+  <span class="vi">@attributes</span> <span class="o">&lt;&lt;</span> <span class="kp">attr</span>
+  <span class="k">unless</span> <span class="kp">attr</span><span class="o">.</span><span class="n">skip_definitions?</span>
+    <span class="n">define_attr_reader</span><span class="p">(</span><span class="kp">attr</span><span class="p">)</span>
+    <span class="n">define_attr_writer</span><span class="p">(</span><span class="kp">attr</span><span class="p">)</span>
+    <span class="n">define_attr_writer_singular_form</span><span class="p">(</span><span class="kp">attr</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L385">
+                  lib/cocoapods-core/specification/dsl/attribute.rb:385
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

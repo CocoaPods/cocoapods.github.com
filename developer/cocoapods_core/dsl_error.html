@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>DSLError Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: DSLError</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_dslerror">DSLError</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_description">
+              description
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dsl_path">
+              dsl_path
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_backtrace">
+              backtrace
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_message">
+              message
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_dslerror" class="tab-pane default">
+          <h2>DSLError</h2>
+          <p><p>Wraps an exception raised by a DSL file in order to show to the user the
+contents of the line that raised the exception.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: DSLError</code></p>
+          <h3>Inheritance</h3>
+          <p><code>DSLError < StandardError < StandardError < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_description" class="tab-pane">
+          <h2> description </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">description</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The description that should be presented to the user.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">description</span>
+  <span class="vi">@description</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/standard_error.rb#L16">
+                  lib/cocoapods-core/standard_error.rb:16
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dsl_path" class="tab-pane">
+          <h2> dsl_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dsl_path</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The path of the dsl file that raised the exception.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dsl_path</span>
+  <span class="vi">@dsl_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/standard_error.rb#L20">
+                  lib/cocoapods-core/standard_error.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_backtrace" class="tab-pane">
+          <h2> backtrace </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">backtrace</span> <span class="c1">#=&gt; Exception </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Exception</code></p>
+              <p>The backtrace of the exception raised by the
+evaluation of the dsl file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">backtrace</span>
+  <span class="vi">@backtrace</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/standard_error.rb#L25">
+                  lib/cocoapods-core/standard_error.rb:25
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">dsl_path</span><span class="p">,</span> <span class="n">backtrace</span><span class="p">)</span> <span class="c1">#=&gt; DSLError </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Exception</code> <b>backtrace</b></p>
+              <p>@see backtrace</p>
+
+            
+              
+
+              <p><code>String</code> <b>dsl_path</b></p>
+              <p>@see dsl_path</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>DSLError</code></p>
+              <p>A new instance of DSLError</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">dsl_path</span><span class="p">,</span> <span class="n">backtrace</span><span class="p">)</span>
+  <span class="vi">@description</span> <span class="o">=</span> <span class="n">description</span>
+  <span class="vi">@dsl_path</span>    <span class="o">=</span> <span class="n">dsl_path</span>
+  <span class="vi">@backtrace</span>   <span class="o">=</span> <span class="n">backtrace</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/standard_error.rb#L30">
+                  lib/cocoapods-core/standard_error.rb:30
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_message" class="tab-pane">
+          <h2> message </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">message</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The message of the exception.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p>Output</p>
+              <div class="highlight"><pre>Invalid podspec at `RestKit.podspec` - undefined method
+`exclude_header_search_paths=&#39; for #&lt;Pod::Specification for
+`RestKit/Network (0.9.3)`&gt;
+
+    from spec-repos/master/RestKit/0.9.3/RestKit.podspec:36
+    -------------------------------------------
+        # because it would break: #import &lt;CoreData/CoreData.h&gt;
+ &gt;      ns.exclude_header_search_paths = &#39;Code/RestKit.h&#39;
+      end
+    -------------------------------------------
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">message</span>
+  <span class="k">unless</span> <span class="vi">@message</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">dup</span>
+
+    <span class="k">return</span> <span class="n">m</span> <span class="k">unless</span> <span class="n">backtrace</span> <span class="o">&amp;&amp;</span> <span class="n">dsl_path</span> <span class="o">&amp;&amp;</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">dsl_path</span><span class="p">)</span>
+
+    <span class="n">trace_line</span> <span class="o">=</span> <span class="n">backtrace</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">l</span><span class="o">|</span> <span class="n">l</span> <span class="o">=~</span> <span class="sr">/</span><span class="si">#{</span><span class="n">dsl_path</span><span class="si">}</span><span class="sr">/</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">m</span> <span class="k">unless</span> <span class="n">trace_line</span>
+    <span class="n">line_numer</span> <span class="o">=</span> <span class="n">trace_line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">to_i</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">m</span> <span class="k">unless</span> <span class="n">line_numer</span>
+    <span class="n">lines</span>      <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">readlines</span><span class="p">(</span><span class="n">dsl_path</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+    <span class="n">indent</span>     <span class="o">=</span> <span class="s2">&quot; #  &quot;</span>
+    <span class="n">indicator</span>  <span class="o">=</span> <span class="n">indent</span><span class="o">.</span><span class="n">dup</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">)</span>
+    <span class="n">first_line</span> <span class="o">=</span> <span class="p">(</span> <span class="n">line_numer</span><span class="o">.</span><span class="n">zero?</span> <span class="p">)</span>
+    <span class="n">last_line</span>  <span class="o">=</span> <span class="p">(</span> <span class="n">line_numer</span> <span class="o">==</span> <span class="p">(</span><span class="n">lines</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> #</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">indent</span><span class="si">}</span><span class="s2">from </span><span class="si">#{</span><span class="n">trace_line</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/:in.*$/</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">indent</span><span class="si">}</span><span class="s2">-------------------------------------------</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">indent</span><span class="si">}#{</span>    <span class="n">lines</span><span class="o">[</span><span class="n">line_numer</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="si">}</span><span class="s2">&quot;</span> <span class="k">unless</span> <span class="n">first_line</span>
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">indicator</span><span class="si">}#{</span> <span class="n">lines</span><span class="o">[</span><span class="n">line_numer</span><span class="o">]</span> <span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">indent</span><span class="si">}#{</span>    <span class="n">lines</span><span class="o">[</span><span class="n">line_numer</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="si">}</span><span class="s2">&quot;</span> <span class="k">unless</span> <span class="n">last_line</span>
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="k">unless</span> <span class="n">m</span><span class="o">.</span><span class="n">end_with?</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">indent</span><span class="si">}</span><span class="s2">-------------------------------------------</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; #&quot;</span>
+    <span class="vi">@message</span> <span class="o">=</span> <span class="n">m</span>
+  <span class="k">end</span>
+  <span class="vi">@message</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/standard_error.rb#L54">
+                  lib/cocoapods-core/standard_error.rb:54
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

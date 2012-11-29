@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Validator Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Source :: Validator</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_validator">Validator</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_source">
+              source
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_check">
+              check
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_errors">
+              errors
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_linter_results">
+              linter_results
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_validator" class="tab-pane default">
+          <h2>Validator</h2>
+          <p><p>Checks whether a podspec can be accepted by a source.</p>
+
+<p>This class can work on Travis but some checks are lost as the repo is
+already merged during the test.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Source :: Validator</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Validator < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_source" class="tab-pane">
+          <h2> source </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">source</span> <span class="c1">#=&gt; Source </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Source</code></p>
+              <p>The source where the podspec should be added.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">source</span>
+  <span class="vi">@source</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source/validator.rb#L15">
+                  lib/cocoapods-core/source/validator.rb:15
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span> <span class="c1">#=&gt; Validator </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>repo</b></p>
+              <p>@see Source#repo.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Validator</code></p>
+              <p>A new instance of Validator</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span>
+  <span class="vi">@source</span> <span class="o">=</span> <span class="no">Source</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span>
+  <span class="vi">@errors</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="vi">@linter_results</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source/validator.rb#L19">
+                  lib/cocoapods-core/source/validator.rb:19
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_check" class="tab-pane">
+          <h2> check </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">check</span><span class="p">(</span><span class="n">spec_paths</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Array<Pathname></code> <b>spec_paths</b></p>
+              <p>A list of path that should be checked for being accepted in
+specs repo.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether to podspec can be accepted by the source.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">spec_paths</span><span class="p">)</span>
+  <span class="n">spec_paths</span> <span class="o">=</span> <span class="o">[</span> <span class="n">spec_paths</span> <span class="o">]</span> <span class="k">unless</span> <span class="n">spec_paths</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+  <span class="vi">@errors</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">spec_paths</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
+    <span class="vi">@spec_path</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">lint</span>
+    <span class="k">next</span> <span class="k">unless</span> <span class="n">spec</span>
+    <span class="c1"># check_spec_path</span>
+    <span class="n">check_spec_source_change</span>
+    <span class="n">check_if_untagged_version_is_acceptable</span>
+    <span class="n">check_commit_change_for_untagged_version</span>
+    <span class="n">check_dependencies</span>
+  <span class="k">end</span>
+  <span class="n">errors</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">empty?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source/validator.rb#L31">
+                  lib/cocoapods-core/source/validator.rb:31
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_errors" class="tab-pane">
+          <h2> errors </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">errors</span> <span class="c1">#=&gt; Hash{Pathname=&gt;Array&lt;String&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Pathname=&gt;Array&lt;String&gt;}</code></p>
+              <p>The errors generated by the
+validation. If there is any error the podspec cannot be
+accepted.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">errors</span>
+  <span class="vi">@errors</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source/validator.rb#L58">
+                  lib/cocoapods-core/source/validator.rb:58
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_linter_results" class="tab-pane">
+          <h2> linter_results </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">linter_results</span> <span class="c1">#=&gt; Hash{Pathname=&gt;Array&lt;Specification::Linter::Result&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Pathname=&gt;Array&lt;Specification::Linter::Result&gt;}</code></p>
+              <p>The
+result generated by the linter for not approved specifications.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">linter_results</span>
+  <span class="vi">@linter_results</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/source/validator.rb#L63">
+                  lib/cocoapods-core/source/validator.rb:63
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

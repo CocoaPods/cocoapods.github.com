@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>PlatformProxy Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Specification :: PlatformProxy</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_platformproxy">PlatformProxy</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>DSL deprecations</a>
+                  </h2>
+              
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_platformproxy" class="tab-pane default">
+          <h2>PlatformProxy</h2>
+          <p><p>The PlatformProxy works in conjunction with Specification#<em>on</em>platform.
+It provides support for a syntax like <code>spec.ios.source_files = &#39;file&#39;</code>.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Specification :: PlatformProxy</code></p>
+          <h3>Inheritance</h3>
+          <p><code>PlatformProxy < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">specification</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; PlatformProxy </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Specification</code> <b>specification</b></p>
+              <p>The specification whose syntax attribute should be set.</p>
+
+            
+              
+
+              <p><code>Symbol</code> <b>platform</b></p>
+              
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PlatformProxy</code></p>
+              <p>A new instance of PlatformProxy</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">specification</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+  <span class="vi">@specification</span><span class="p">,</span> <span class="vi">@platform</span> <span class="o">=</span> <span class="n">specification</span><span class="p">,</span> <span class="n">platform</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification.rb#L361">
+                  lib/cocoapods-core/specification.rb:361
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

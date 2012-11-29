@@ -49,10 +49,45 @@ module Pod
         @options ||= YARD::Templates::TemplateOptions.new
       end
 
-      def signature(*args)
-        result = super
-        result.gsub!(%r{</?[^>]+?>}, '')
-        CGI.unescapeHTML(result)
+      # @see ./lib/yard/templates/helpers/html_helper.rb:468
+      def signature(meth, link = true, show_extras = true, full_attr_name = true)
+        args = format_args(meth)
+        name = meth.name
+        type = signature_types(meth, false)
+
+        "#{name}#{args} #=> #{type}"
+
+      end
+
+      # @see lib/yard/templates/helpers/html_helper.rb:415
+      def format_types(typelist, brackets = true)
+        return unless typelist.is_a?(Array)
+        typelist.empty? ? "" : typelist.join(", ")
+      end
+
+      def signature_types(meth, link = true)
+        r = super
+        r.gsub!(/[\(\)]/, '')
+        r
+      end
+
+      # @see lib/yard/helpers/method_helper.rb:6
+      def format_args(object)
+        return if object.parameters.nil?
+        params = object.parameters
+        if object.has_tag?(:yield) || object.has_tag?(:yieldparam)
+          params.reject! do |param|
+            param[0].to_s[0,1] == "&" &&
+              !object.tags(:param).any? {|t| t.name == param[0][1..-1] }
+          end
+        end
+
+        unless params.empty?
+          args = params.map {|n, v| v ? "#{n} = #{v}" : n.to_s }.join(", ")
+          "(#{args})"
+        else
+          ""
+        end
       end
 
 
@@ -67,7 +102,7 @@ module Pod
       end
 
       def description
-        yard_object.docstring
+        yard_object.docstring.to_s
       end
 
       def root_less_name
@@ -87,14 +122,15 @@ module Pod
       end
 
       def children
-        yard_object.children.select{ |c| c.is_a?(YARD::CodeObjects::NamespaceObject) }
+        children = yard_object.children.select{ |c| c.is_a?(YARD::CodeObjects::NamespaceObject) }
+        children.map { |child| NameSpace.new(child, gem_generator) }
       end
 
       #-----------------------------------------------------------------------#
 
       def inheritance_tree
         return unless yard_object.is_a?(YARD::CodeObjects::ClassObject)
-        @inheritance_tree ||= yard_object.inheritance_tree.map(&:name) * " < "
+        @inheritance_tree ||= yard_object.inheritance_tree.map(&:name).push('Object') * " < "
       end
 
       #-----------------------------------------------------------------------#
@@ -164,8 +200,21 @@ module Pod
             current_column += 1
             columns[current_column] = []
           end
-          columns[current_column] << entry
-          column_height += group?(entry) ? group_height : method_height
+
+          if group?(entry)
+            # move to the next column if it would end up orphan
+            if column_height + group_height >= height_percolumn
+              column_height = 0
+              current_column += 1
+              columns[current_column] = []
+            end
+            columns[current_column] << entry
+            # groups whihc are the first entry of a column don't have top-margin.
+            column_height += column_height == 0 ?  method_height : group_height
+          else
+            columns[current_column] << entry
+            column_height += method_height
+          end
         end
         columns
       end
@@ -177,7 +226,7 @@ module Pod
       end
 
       def to_s
-        yard_object.to_s
+        yard_object.to_s.gsub('::', ' :: ')
       end
 
       def name_as_list

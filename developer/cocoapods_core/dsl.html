@@ -1,0 +1,2889 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>DSL Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Specification :: DSL</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_dsl">DSL</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>DSL: Root specification
+</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_name">
+              name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_version">
+              version
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab__prepare_version">
+              _prepare_version
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_authors_">
+              authors=
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab__prepare_authors">
+              _prepare_authors
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_license_">
+              license=
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab__prepare_license">
+              _prepare_license
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_homepage">
+              homepage
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_source">
+              source
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_summary">
+              summary
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_description">
+              description
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab__prepare_description">
+              _prepare_description
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_screenshots">
+              screenshots
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_documentation">
+              documentation
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>DSL: Platform</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_platform">
+              platform
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab__prepare_platform">
+              _prepare_platform
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_deployment_target">
+              deployment_target
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab__prepare_deployment_target">
+              _prepare_deployment_target
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>DSL: Build configuration</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_requires_arc_">
+              requires_arc=
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_frameworks">
+              frameworks
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_weak_frameworks">
+              weak_frameworks
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_libraries">
+              libraries
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_xcconfig">
+              xcconfig
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_prefix_header_contents">
+              prefix_header_contents
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab__prepare_prefix_header_contents">
+              _prepare_prefix_header_contents
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_prefix_header_file">
+              prefix_header_file
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_header_dir">
+              header_dir
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_header_mappings_dir">
+              header_mappings_dir
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>DSL: File patterns
+</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_source_files">
+              source_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_public_header_files">
+              public_header_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_resources">
+              resources
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab__prepare_resources">
+              _prepare_resources
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_exclude_files">
+              exclude_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_preserve_paths">
+              preserve_paths
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>DSL: Hooks
+</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_pre_install">
+              pre_install
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_post_install">
+              post_install
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>DSL: Dependencies</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_subspec">
+              subspec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_default_subspec">
+              default_subspec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dependency">
+              dependency
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>DSL: Multi-Platform support
+</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_ios">
+              ios
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_osx">
+              osx
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_dsl" class="tab-pane default">
+          <h2>DSL</h2>
+          <p><p>A specification describes a Pod. It includes details about where the
+source should be fetched from, what files to use, the build settings to
+apply, and other general metadata such as its name, version, and
+description.</p>
+
+<hr>
+
+<p>A stub specification file can be generated by the <a href="commands.html#tab_spec-create">pod spec
+create</a> command.</p>
+
+<hr>
+
+<p>Specification can be very simple:</p>
+<div class="highlight"><pre><span class="no">Pod</span><span class="o">::</span><span class="no">Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">name</span>     <span class="o">=</span> <span class="s1">&#39;AFNetworking&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">version</span>  <span class="o">=</span> <span class="s1">&#39;1.0.1&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">license</span>  <span class="o">=</span> <span class="s1">&#39;MIT&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">summary</span>  <span class="o">=</span> <span class="s1">&#39;A delightful iOS and OS X networking framework.&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/AFNetworking/AFNetworking&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">authors</span>  <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Mattt Thompson&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;m@mattt.me&#39;</span><span class="p">,</span> <span class="s1">&#39;Scott Raymond&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sco@gowalla.com&#39;</span><span class="p">}</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">source</span>   <span class="o">=</span> <span class="p">{</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/AFNetworking/AFNetworking.git&#39;</span><span class="p">,</span> <span class="ss">:tag</span> <span class="o">=&gt;</span> <span class="s1">&#39;1.0.1&#39;</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+<p>Yet it offers attributes that provide great flexibility.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Specification :: DSL</code></p>
+          <h3>Inheritance</h3>
+          <p><code></code></p>
+          
+            <h3>Namespaces</h3>
+            
+              <p><a href="../cocoapods_core/attribute.html">
+              <code>Pod :: Specification :: DSL :: Attribute</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/attributes.html">
+              <code>Pod :: Specification :: DSL :: Attributes</code>
+            </a></p>
+            
+              <p><a href="../cocoapods_core/attribute_support.html">
+              <code>Pod :: Specification :: DSL :: AttributeSupport</code>
+            </a></p>
+            
+          
+        </div>
+
+
+        
+          <div id="tab_name" class="tab-pane">
+          <h2> name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the specification <em>including</em> the names of
+the parents, in case of ‘sub-specifications’.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">name</span>
+  <span class="vi">@parent</span> <span class="p">?</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="vi">@parent</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">:</span> <span class="vi">@name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L74">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:74
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L74">
+                  lib/cocoapods-core/specification/dsl.rb:74
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_version" class="tab-pane">
+          <h2> version </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">version</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>version</b></p>
+              
+            
+          
+
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.version = &#39;0.0.1&#39;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:version</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:required</span>       <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L91">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:91
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L91">
+                  lib/cocoapods-core/specification/dsl.rb:91
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab__prepare_version" class="tab-pane">
+          <h2> _prepare_version </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">_prepare_version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="c1">#=&gt; Version </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Version</code></p>
+              <p>The version of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">_prepare_version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+  <span class="no">Version</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L99">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:99
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L99">
+                  lib/cocoapods-core/specification/dsl.rb:99
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_authors_" class="tab-pane">
+          <h2> authors= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">authors</span><span class="o">=</span><span class="p">(</span><span class="n">authors</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code><code>Hash{String=>String}</code> <b>authors</b></p>
+              
+            
+          
+
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.author = &#39;Darth Vader&#39;
+</pre></div>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.authors = &#39;Darth Vader&#39;, &#39;Wookiee&#39;
+</pre></div>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.authors = { &#39;Darth Vader&#39; =&gt; &#39;darthvader@darkside.com&#39;,
+                 &#39;Wookiee&#39;     =&gt; &#39;wookiee@aggrrttaaggrrt.com&#39; }
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:authors</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:types</span>          <span class="o">=&gt;</span> <span class="o">[</span> <span class="nb">String</span><span class="p">,</span> <span class="nb">Array</span><span class="p">,</span> <span class="no">Hash</span> <span class="o">]</span><span class="p">,</span>
+  <span class="ss">:required</span>       <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:singularize</span>    <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L124">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:124
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L124">
+                  lib/cocoapods-core/specification/dsl.rb:124
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab__prepare_authors" class="tab-pane">
+          <h2> _prepare_authors </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">_prepare_authors</span><span class="p">(</span><span class="n">authors</span><span class="p">)</span> <span class="c1">#=&gt; Hash </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash</code></p>
+              <p>A hash containing the authors as the keys and their
+email address as the values.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">_prepare_authors</span><span class="p">(</span><span class="n">authors</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">authors</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+    <span class="n">authors</span>
+  <span class="k">elsif</span> <span class="n">authors</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">authors</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">name_or_hash</span><span class="o">|</span>
+       <span class="k">if</span> <span class="n">name_or_hash</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span>
+         <span class="n">result</span><span class="o">[</span><span class="n">name_or_hash</span><span class="o">]</span> <span class="o">=</span> <span class="kp">nil</span>
+       <span class="k">else</span>
+         <span class="n">result</span><span class="o">.</span><span class="n">merge!</span><span class="p">(</span><span class="n">name_or_hash</span><span class="p">)</span>
+       <span class="k">end</span>
+     <span class="k">end</span>
+    <span class="n">result</span>
+  <span class="k">elsif</span> <span class="n">authors</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span>
+    <span class="p">{</span> <span class="n">authors</span> <span class="o">=&gt;</span> <span class="kp">nil</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L135">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:135
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L135">
+                  lib/cocoapods-core/specification/dsl.rb:135
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_license_" class="tab-pane">
+          <h2> license= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">license</span><span class="o">=</span><span class="p">(</span><span class="n">license</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code><code>Hash{Symbol=>String}</code> <b>license</b></p>
+              
+            
+          
+
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.license = &#39;MIT&#39;
+</pre></div>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.license = { :type =&gt; &#39;MIT&#39;, :file =&gt; &#39;MIT-LICENSE.txt&#39; }
+</pre></div>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.license = { :type =&gt; &#39;MIT&#39;, :text =&gt; &lt;&lt;-LICENSE
+                   Copyright 2012
+                   Permission is granted to...
+                 LICENSE
+               }
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:license</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>      <span class="o">=&gt;</span> <span class="no">Hash</span><span class="p">,</span>
+  <span class="ss">:keys</span>           <span class="o">=&gt;</span> <span class="no">LICENSE_KEYS</span><span class="p">,</span>
+  <span class="ss">:required</span>       <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L187">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:187
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L187">
+                  lib/cocoapods-core/specification/dsl.rb:187
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab__prepare_license" class="tab-pane">
+          <h2> _prepare_license </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">_prepare_license</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Hash </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash</code></p>
+              <p>A hash containing the license information of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">_prepare_license</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="n">license</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span> <span class="p">?</span> <span class="p">{</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="n">value</span> <span class="p">}</span> <span class="p">:</span> <span class="n">value</span>
+  <span class="k">if</span> <span class="n">license</span><span class="o">[</span><span class="ss">:text</span><span class="o">]</span>
+    <span class="n">license</span><span class="o">[</span><span class="ss">:text</span><span class="o">]</span> <span class="o">=</span> <span class="n">license</span><span class="o">[</span><span class="ss">:text</span><span class="o">].</span><span class="n">strip_heredoc</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\n$/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">license</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L197">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:197
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L197">
+                  lib/cocoapods-core/specification/dsl.rb:197
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_homepage" class="tab-pane">
+          <h2> homepage </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">homepage</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The URL of the homepage of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:homepage</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:required</span>       <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L222">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:222
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L222">
+                  lib/cocoapods-core/specification/dsl.rb:222
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_source" class="tab-pane">
+          <h2> source </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">source</span> <span class="c1">#=&gt; Hash{Symbol=&gt;String} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Symbol=&gt;String}</code></p>
+              <p>The location from where the library
+should be retrieved.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:source</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>      <span class="o">=&gt;</span> <span class="no">Hash</span><span class="p">,</span>
+  <span class="ss">:keys</span>           <span class="o">=&gt;</span> <span class="no">SOURCE_KEYS</span><span class="p">,</span>
+  <span class="ss">:required</span>       <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L266">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:266
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L266">
+                  lib/cocoapods-core/specification/dsl.rb:266
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_summary" class="tab-pane">
+          <h2> summary </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">summary</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A short description of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:summary</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:required</span>       <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L295">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:295
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L295">
+                  lib/cocoapods-core/specification/dsl.rb:295
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_description" class="tab-pane">
+          <h2> description </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">description</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A longer description of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:description</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L323">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:323
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L323">
+                  lib/cocoapods-core/specification/dsl.rb:323
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab__prepare_description" class="tab-pane">
+          <h2> _prepare_description </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">_prepare_description</span><span class="p">(</span><span class="n">description</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">_prepare_description</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+  <span class="n">description</span><span class="o">.</span><span class="n">strip_heredoc</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L328">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:328
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L328">
+                  lib/cocoapods-core/specification/dsl.rb:328
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_screenshots" class="tab-pane">
+          <h2> screenshots </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">screenshots</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>An URL for the screenshot of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:screenshots</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:singularize</span>    <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:container</span>      <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L355">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:355
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L355">
+                  lib/cocoapods-core/specification/dsl.rb:355
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_documentation" class="tab-pane">
+          <h2> documentation </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">documentation</span> <span class="c1">#=&gt; Hash{Symbol=&gt;Array&lt;String&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Symbol=&gt;Array&lt;String&gt;}</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:documentation</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>      <span class="o">=&gt;</span> <span class="no">Hash</span><span class="p">,</span>
+  <span class="ss">:root_only</span>      <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L381">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:381
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L381">
+                  lib/cocoapods-core/specification/dsl.rb:381
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_platform" class="tab-pane">
+          <h2> platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">platform</span> <span class="c1">#=&gt; Platform </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Platform</code></p>
+              <p>The platform of the specification.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:platform</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:types</span>          <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">Array</span><span class="p">,</span> <span class="no">Symbol</span><span class="o">]</span><span class="p">,</span>
+  <span class="ss">:multi_platform</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L425">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:425
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L425">
+                  lib/cocoapods-core/specification/dsl.rb:425
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab__prepare_platform" class="tab-pane">
+          <h2> _prepare_platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">_prepare_platform</span><span class="p">(</span><span class="n">name_and_deployment_target</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">_prepare_platform</span><span class="p">(</span><span class="n">name_and_deployment_target</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kp">nil</span> <span class="k">if</span> <span class="n">name_and_deployment_target</span><span class="o">.</span><span class="n">nil?</span>
+  <span class="k">if</span> <span class="n">name_and_deployment_target</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+    <span class="nb">name</span> <span class="o">=</span> <span class="n">name_and_deployment_target</span><span class="o">.</span><span class="n">first</span>
+    <span class="n">deployment_target</span> <span class="o">=</span> <span class="n">name_and_deployment_target</span><span class="o">.</span><span class="n">last</span>
+  <span class="k">else</span>
+    <span class="nb">name</span> <span class="o">=</span> <span class="n">name_and_deployment_target</span>
+    <span class="n">deployment_target</span> <span class="o">=</span> <span class="kp">nil</span>
+  <span class="k">end</span>
+  <span class="k">unless</span> <span class="no">PLATFORMS</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Unsupported platform `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">`. The available &quot;</span> <span class="p">\</span>
+      <span class="s2">&quot;names are `</span><span class="si">#{</span><span class="no">PLATFORMS</span><span class="o">.</span><span class="n">inspect</span><span class="si">}</span><span class="s2">`&quot;</span>
+  <span class="k">end</span>
+  <span class="no">Platform</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">deployment_target</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L430">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:430
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L430">
+                  lib/cocoapods-core/specification/dsl.rb:430
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_deployment_target" class="tab-pane">
+          <h2> deployment_target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">deployment_target</span> <span class="c1">#=&gt; Version </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Version</code></p>
+              <p>The deployment target of each supported platform.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:deployment_target</span><span class="p">,</span> <span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L471">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:471
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L471">
+                  lib/cocoapods-core/specification/dsl.rb:471
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab__prepare_deployment_target" class="tab-pane">
+          <h2> _prepare_deployment_target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">_prepare_deployment_target</span><span class="p">(</span><span class="n">deployment_target</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">_prepare_deployment_target</span><span class="p">(</span><span class="n">deployment_target</span><span class="p">)</span>
+  <span class="k">unless</span> <span class="vi">@define_for_platforms</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;The deployment target must be defined per platform like `s.ios.deployment_target = &#39;5.0&#39;`.&quot;</span>
+  <span class="k">end</span>
+  <span class="no">Version</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">deployment_target</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L474">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:474
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L474">
+                  lib/cocoapods-core/specification/dsl.rb:474
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_requires_arc_" class="tab-pane">
+          <h2> requires_arc= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">requires_arc</span><span class="o">=</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Bool</code> <b>flag</b></p>
+              <p>Whether the source files require ARC.</p>
+
+            
+          
+
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.requires_arc = true
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:requires_arc</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:types</span>   <span class="o">=&gt;</span> <span class="o">[</span><span class="no">TrueClass</span><span class="p">,</span> <span class="no">FalseClass</span><span class="o">]</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L497">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:497
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L497">
+                  lib/cocoapods-core/specification/dsl.rb:497
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_frameworks" class="tab-pane">
+          <h2> frameworks </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">frameworks</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>A list of frameworks that the user’s target
+needs to link against</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:frameworks</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>   <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">,</span>
+  <span class="ss">:singularize</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L525">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:525
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L525">
+                  lib/cocoapods-core/specification/dsl.rb:525
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_weak_frameworks" class="tab-pane">
+          <h2> weak_frameworks </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">weak_frameworks</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>A list of frameworks that the user’s target
+needs to <strong>weakly</strong> link against</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:weak_frameworks</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>   <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">,</span>
+  <span class="ss">:singularize</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L550">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:550
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L550">
+                  lib/cocoapods-core/specification/dsl.rb:550
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_libraries" class="tab-pane">
+          <h2> libraries </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">libraries</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>A list of libraries that the user’s target
+needs to link against</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:libraries</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>   <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">,</span>
+  <span class="ss">:singularize</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L579">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:579
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L608">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:608
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L579">
+                  lib/cocoapods-core/specification/dsl.rb:579
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L608">
+                  lib/cocoapods-core/specification/dsl.rb:608
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcconfig" class="tab-pane">
+          <h2> xcconfig </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">xcconfig</span> <span class="c1">#=&gt; Hash{String =&gt; String} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{String =&gt; String}</code></p>
+              <p>The xcconfig flags for the current
+specification.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:xcconfig</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span> <span class="o">=&gt;</span> <span class="no">Hash</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L632">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:632
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L632">
+                  lib/cocoapods-core/specification/dsl.rb:632
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prefix_header_contents" class="tab-pane">
+          <h2> prefix_header_contents </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prefix_header_contents</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The contents of the prefix header.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:prefix_header_contents</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:types</span>   <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">Array</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L663">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:663
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L663">
+                  lib/cocoapods-core/specification/dsl.rb:663
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab__prepare_prefix_header_contents" class="tab-pane">
+          <h2> _prepare_prefix_header_contents </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">_prepare_prefix_header_contents</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">_prepare_prefix_header_contents</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span> <span class="p">?</span> <span class="n">value</span> <span class="o">*</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">:</span> <span class="n">value</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L667">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:667
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L667">
+                  lib/cocoapods-core/specification/dsl.rb:667
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prefix_header_file" class="tab-pane">
+          <h2> prefix_header_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prefix_header_file</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The path of the prefix header file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:prefix_header_file</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L695">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:695
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L695">
+                  lib/cocoapods-core/specification/dsl.rb:695
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_header_dir" class="tab-pane">
+          <h2> header_dir </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">header_dir</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The headers directory.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:header_dir</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L716">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:716
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L716">
+                  lib/cocoapods-core/specification/dsl.rb:716
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_header_mappings_dir" class="tab-pane">
+          <h2> header_mappings_dir </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">header_mappings_dir</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The directory from where to preserve the headers
+namespacing.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:header_mappings_dir</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L742">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:742
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L742">
+                  lib/cocoapods-core/specification/dsl.rb:742
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_source_files" class="tab-pane">
+          <h2> source_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">source_files</span> <span class="c1">#=&gt; Array&lt;String&gt;, FileList </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code><code>FileList</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:source_files</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>     <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">,</span>
+  <span class="ss">:file_patterns</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:default_value</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;Classes/**/*.{h,m}&#39;</span> <span class="o">]</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L840">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:840
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L840">
+                  lib/cocoapods-core/specification/dsl.rb:840
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_public_header_files" class="tab-pane">
+          <h2> public_header_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">public_header_files</span> <span class="c1">#=&gt; Array&lt;String&gt;, FileList </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code><code>FileList</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:public_header_files</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span> <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">,</span>
+  <span class="ss">:file_patterns</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L869">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:869
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L869">
+                  lib/cocoapods-core/specification/dsl.rb:869
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_resources" class="tab-pane">
+          <h2> resources </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">resources</span> <span class="c1">#=&gt; Array&lt;String&gt;, FileList </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code><code>FileList</code></p>
+              <p>A hash where the key represents the
+paths of the resources to copy and the values the paths of
+the resources that should be copied.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:resources</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:types</span>         <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">String</span><span class="p">,</span> <span class="nb">Array</span><span class="o">]</span><span class="p">,</span>
+  <span class="ss">:file_patterns</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:container</span>     <span class="o">=&gt;</span> <span class="no">Hash</span><span class="p">,</span>
+  <span class="ss">:keys</span>          <span class="o">=&gt;</span> <span class="no">RESORUCES_DESTINATIONS</span><span class="p">,</span>
+  <span class="ss">:default_value</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:resources</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;Resources/**/*&#39;</span> <span class="o">]</span> <span class="p">},</span>
+  <span class="ss">:singularize</span>   <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L921">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:921
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L921">
+                  lib/cocoapods-core/specification/dsl.rb:921
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab__prepare_resources" class="tab-pane">
+          <h2> _prepare_resources </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">_prepare_resources</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">_prepare_resources</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="n">value</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:resources</span> <span class="o">=&gt;</span> <span class="n">value</span> <span class="p">}</span> <span class="k">unless</span> <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">value</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">patterns</span><span class="o">|</span>
+    <span class="n">patterns</span> <span class="o">=</span> <span class="o">[</span> <span class="n">patterns</span> <span class="o">]</span> <span class="k">if</span> <span class="n">patterns</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span>
+    <span class="n">result</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">patterns</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L930">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:930
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L930">
+                  lib/cocoapods-core/specification/dsl.rb:930
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_exclude_files" class="tab-pane">
+          <h2> exclude_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">exclude_files</span> <span class="c1">#=&gt; Array&lt;String&gt;, Rake::FileList </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code><code>Rake::FileList</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:exclude_files</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>   <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">,</span>
+  <span class="ss">:file_patterns</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:ios_default</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;Classes/osx/**/*&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources/osx/**/*&#39;</span> <span class="o">]</span><span class="p">,</span>
+  <span class="ss">:osx_default</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;Classes/ios/**/*&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources/ios/**/*&#39;</span> <span class="o">]</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L962">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:962
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L962">
+                  lib/cocoapods-core/specification/dsl.rb:962
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_preserve_paths" class="tab-pane">
+          <h2> preserve_paths </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">preserve_paths</span> <span class="c1">#=&gt; Array&lt;String&gt;, FileList </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code><code>FileList</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:preserve_paths</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:container</span>     <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">,</span>
+  <span class="ss">:file_patterns</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:singularize</span>   <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L995">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:995
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L995">
+                  lib/cocoapods-core/specification/dsl.rb:995
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pre_install" class="tab-pane">
+          <h2> pre_install </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pre_install</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>Pod::Spec.new do |spec|
+  spec.pre_install do |pod, target_definition|
+    Dir.chdir(pod.root){ `sh make.sh` }
+  end
+end
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pre_install</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="vi">@pre_install_callback</span> <span class="o">=</span> <span class="n">block</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L1026">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:1026
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L1026">
+                  lib/cocoapods-core/specification/dsl.rb:1026
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_post_install" class="tab-pane">
+          <h2> post_install </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">post_install</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>Pod::Spec.new do |spec|
+  spec.post_install do |target_installer|
+    prefix_header = config.project_pods_root + target_installer.prefix_header_filename
+    prefix_header.open(&#39;a&#39;) do |file|
+      file.puts(&#39;#ifdef __OBJC__\n#import &quot;SSToolkitDefines.h&quot;\n#endif&#39;)
+    end
+  end
+end
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">post_install</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="vi">@post_install_callback</span> <span class="o">=</span> <span class="n">block</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L1050">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:1050
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L1050">
+                  lib/cocoapods-core/specification/dsl.rb:1050
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_subspec" class="tab-pane">
+          <h2> subspec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">subspec</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>subspec &quot;core&quot; do |sp|
+  sp.source_files = &quot;Classes/Core&quot;
+end
+
+subspec &quot;optional&quot; do |sp|
+  sp.source_files = &quot;Classes/BloatedClassesThatNobodyUses&quot;
+end
+</pre></div>
+            
+              <p></p>
+              <div class="highlight"><pre>subspec &quot;Subspec&quot; do |sp|
+  sp.subspec &quot;resources&quot; do |ssp|
+  end
+end
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">subspec</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="n">subspec</span> <span class="o">=</span> <span class="no">Specification</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="vi">@subspecs</span> <span class="o">&lt;&lt;</span> <span class="n">subspec</span>
+  <span class="n">subspec</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L1081">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:1081
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L1081">
+                  lib/cocoapods-core/specification/dsl.rb:1081
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_default_subspec" class="tab-pane">
+          <h2> default_subspec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">default_subspec</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the subspec that should be inherited as
+dependency.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:default_subspec</span><span class="p">,</span> <span class="p">{</span>
+  <span class="ss">:inherited</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L1114">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:1114
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L1114">
+                  lib/cocoapods-core/specification/dsl.rb:1114
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dependency" class="tab-pane">
+          <h2> dependency </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dependency</span><span class="p">(</span><span class="o">*</span><span class="n">name_and_version_requirements</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p></p>
+            
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.dependency = &#39;AFNetworking&#39;, &#39;~&gt; 1.0&#39;
+spec.dependency = &#39;MagicalRecord&#39;, &#39;~&gt; 2.0.8&#39;
+</pre></div>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.ios.dependency = &#39;MBProgressHUD&#39;, &#39;~&gt; 0.5&#39;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dependency</span><span class="p">(</span><span class="o">*</span><span class="n">name_and_version_requirements</span><span class="p">)</span>
+  <span class="nb">name</span><span class="p">,</span> <span class="o">*</span><span class="n">version_requirements</span> <span class="o">=</span> <span class="n">name_and_version_requirements</span><span class="o">.</span><span class="n">flatten</span>
+  <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;A specification can&#39;t require self as a subspec&quot;</span> <span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="nb">self</span><span class="o">.</span><span class="n">name</span>
+  <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;A subspec can&#39;t require one of its parents specifications&quot;</span> <span class="k">if</span> <span class="vi">@parent</span> <span class="o">&amp;&amp;</span> <span class="vi">@parent</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="n">dep</span> <span class="o">=</span> <span class="no">Dependency</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="o">*</span><span class="n">version_requirements</span><span class="p">)</span>
+  <span class="vi">@define_for_platforms</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">platform</span><span class="o">|</span>
+    <span class="vi">@dependencies</span><span class="o">[</span><span class="n">platform</span><span class="o">]</span> <span class="o">&lt;&lt;</span> <span class="n">dep</span>
+  <span class="k">end</span>
+  <span class="n">dep</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L1142">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:1142
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L1142">
+                  lib/cocoapods-core/specification/dsl.rb:1142
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_ios" class="tab-pane">
+          <h2> ios </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">ios</span> <span class="c1">#=&gt; PlatformProxy </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PlatformProxy</code></p>
+              <p>The proxy that will set the attributes.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.ios.source_files = &quot;Classes/ios/**/*.{h,m}&quot;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">ios</span>
+  <span class="no">PlatformProxy</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">:ios</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L1175">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:1175
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L1175">
+                  lib/cocoapods-core/specification/dsl.rb:1175
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_osx" class="tab-pane">
+          <h2> osx </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">osx</span> <span class="c1">#=&gt; PlatformProxy </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PlatformProxy</code></p>
+              <p>The proxy that will set the attributes.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Example</h3>
+            
+              <p></p>
+              <div class="highlight"><pre>spec.osx.source_files = &quot;Classes/osx/**/*.{h,m}&quot;
+</pre></div>
+            
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">osx</span>
+  <span class="no">PlatformProxy</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">:osx</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master//Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb#L1186">
+                  /Users/fabio/Documents/GitHub/CP/Core/lib/cocoapods-core/specification/dsl.rb:1186
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb#L1186">
+                  lib/cocoapods-core/specification/dsl.rb:1186
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

@@ -18,17 +18,14 @@
   <div id="body">
 
     <div id="sections-container">
-      <ul>
-        <li>
-        <h3 id="logo">
-          <a href="../../index.html">CocoaPods Docs</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="../<%= gem_generator.name.underscore %>.html"><%= gem_generator.name %></a>
-        </h3>
-        </li>
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../<%= gem_generator.name.underscore %>.html"><%= gem_generator.name %></a>
+          <span class="divider">/</span></li>
+        <li class="active"><%= to_s %></li>
       </ul>
     </div>
 
@@ -39,10 +36,16 @@
         <div class="row" id="methods_list">
           <% columns(40,22).each do |entries| %>
             <div class="span3">
-            <% entries.each do |group_or_method| %>
+             <% entries.each_with_index do |group_or_method, entry_index| %>
               <% if group_or_method.is_a?(String) %>
-              <h2><a><%= group_or_method %></a></h2>
-          <% else %>
+                  <% if entry_index.zero? %>
+                    <h2 class="first_of_column" >
+                  <% else %>
+                    <h2>
+                  <% end %>
+                  <a><%= group_or_method %></a>
+                  </h2>
+              <% else %>
             <p><a class="select-tab" href="#tab_<%= parameterize group_or_method %>">
               <%= group_or_method.name.to_s.gsub('[]', '[ ]') %>
             </a></p>
@@ -64,6 +67,14 @@
           <p><code><%= to_s %></code></p>
           <h3>Inheritance</h3>
           <p><code><%= inheritance_tree %></code></p>
+          <% unless children.empty? %>
+            <h3>Namespaces</h3>
+            <% children.each do |child| %>
+              <p><a href="../<%= child.url_relative_to_gem %>">
+              <code><%= child.to_s %></code>
+            </a></p>
+            <% end %>
+          <% end %>
         </div>
 
 
@@ -117,8 +128,8 @@
           <% if method.has_tag?('return') %>
             <h3>Returns</h3>
             <% method.tags('return').each do |tag|%>
-              <p><code><%= tag.types * '</code><code>' %></code></p>
-              <%= markdown tag.text %> 
+              <p><code><%= tag.types.map {|type| h(type)} * '</code><code>' %></code></p>
+              <%= markdown tag.text %>
             <% end %>
           <% end %>
 
@@ -129,13 +140,21 @@
             <% end %>
           <% end %>
 
+          <% if method.has_tag?('example') %>
+            <h3>Example</h3>
+            <% method.tags('example').each do |tag|%>
+              <p><%= tag.name %></p>
+              <%= syntax_highlight(tag.text, 'text') %>
+            <% end %>
+          <% end %>
+
           <h3>Source</h3>
           <%= syntax_highlight method.source %>
 
           <% unless method.files.empty? %>
             <h3>Source Files</h3>
               <% method.files.each do |file| %>
-                <p><a href="https://github.com/CocoaPods/Xcodeproj/blob/master/<%= file[0] %>#L<%= file[1] %>">
+                <p><a class="source_file" href="https://github.com/CocoaPods/<%= gem_generator.github_name %>/blob/master/<%= file[0] %>#L<%= file[1] %>">
                   <%= file[0] %>:<%= file[1] %>
                 </a></p>
               <% end %>

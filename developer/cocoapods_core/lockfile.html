@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Lockfile Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods_core.html">cocoapods-core</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Lockfile</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_lockfile">Lockfile</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_internal_data">
+              internal_data
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_defined_in_file">
+              defined_in_file
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inspect">
+              inspect
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pod_names">
+              pod_names
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_pod_versions">
+              pod_versions
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dependencies">
+              dependencies
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dependency_to_lock_pod_named">
+              dependency_to_lock_pod_named
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_detect_changes_with_podfile">
+              detect_changes_with_podfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_write_to_disk">
+              write_to_disk
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_yaml">
+              to_yaml
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_lockfile" class="tab-pane default">
+          <h2>Lockfile</h2>
+          <p><p>The {Lockfile} stores information about the pods that were installed by
+CocoaPods.</p>
+
+<p>It is used in combination with the Podfile to resolve the exact version of
+the Pods that should be installed (i.e. to prevent <code>pod install</code> from
+upgrading dependencies).</p>
+
+<p>Moreover it is used as a manifest of an installation to detect which Pods
+need to be installed or removed.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Lockfile</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Lockfile < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_internal_data" class="tab-pane">
+          <h2> internal_data </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">internal_data</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The hash used to initialize the Lockfile.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">internal_data</span>
+  <span class="vi">@internal_data</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L17">
+                  lib/cocoapods-core/lockfile.rb:17
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="nb">hash</span><span class="p">)</span> <span class="c1">#=&gt; Lockfile </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Hash</code> <b>hash</b></p>
+              <p>A hash representation of the Lockfile.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Lockfile</code></p>
+              <p>A new instance of Lockfile</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">hash</span><span class="p">)</span>
+  <span class="vi">@internal_data</span> <span class="o">=</span> <span class="nb">hash</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L22">
+                  lib/cocoapods-core/lockfile.rb:22
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_defined_in_file" class="tab-pane">
+          <h2> defined_in_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">defined_in_file</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The file where the Lockfile is serialized.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">defined_in_file</span>
+  <span class="vi">@defined_in_file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L51">
+                  lib/cocoapods-core/lockfile.rb:51
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string representation suitable for UI output.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="s2">&quot;Podfile.lock&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L55">
+                  lib/cocoapods-core/lockfile.rb:55
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inspect" class="tab-pane">
+          <h2> inspect </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">inspect</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string representation suitable for debugging.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inspect</span>
+  <span class="s2">&quot;#&lt;</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2">&gt;&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L61">
+                  lib/cocoapods-core/lockfile.rb:61
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pod_names" class="tab-pane">
+          <h2> pod_names </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pod_names</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The names of the installed Pods.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pod_names</span>
+  <span class="n">generate_pod_names_and_versions</span> <span class="k">unless</span> <span class="vi">@pod_names</span>
+  <span class="vi">@pod_names</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L73">
+                  lib/cocoapods-core/lockfile.rb:73
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pod_versions" class="tab-pane">
+          <h2> pod_versions </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pod_versions</span> <span class="c1">#=&gt; Hash{String =&gt; Version} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{String =&gt; Version}</code></p>
+              <p>A Hash containing the name of the root
+specification of the installed Pods as the keys and their
+corresponding {Version} as the values.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pod_versions</span>
+  <span class="n">generate_pod_names_and_versions</span> <span class="k">unless</span> <span class="vi">@pod_versions</span>
+  <span class="vi">@pod_versions</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L82">
+                  lib/cocoapods-core/lockfile.rb:82
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dependencies" class="tab-pane">
+          <h2> dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dependencies</span> <span class="c1">#=&gt; Array&lt;Dependency&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Dependency&gt;</code></p>
+              <p>The dependencies of the Podfile used for the
+last installation.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dependencies</span>
+  <span class="k">unless</span> <span class="vi">@dependencies</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">internal_data</span><span class="o">[</span><span class="s1">&#39;DEPENDENCIES&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="o">[]</span>
+    <span class="vi">@dependencies</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">string</span><span class="o">|</span>
+      <span class="n">dep</span> <span class="o">=</span> <span class="no">Dependency</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+      <span class="n">dep</span><span class="o">.</span><span class="n">external_source</span> <span class="o">=</span> <span class="n">external_sources</span><span class="o">[</span><span class="n">dep</span><span class="o">.</span><span class="n">root_name</span><span class="o">]</span>
+      <span class="n">dep</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="vi">@dependencies</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L93">
+                  lib/cocoapods-core/lockfile.rb:93
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dependency_to_lock_pod_named" class="tab-pane">
+          <h2> dependency_to_lock_pod_named </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dependency_to_lock_pod_named</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; Dependency </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>name</b></p>
+              <p>The name of the Pod</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Dependency</code></p>
+              <p>The generated dependency.</p>
+
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p><p>If there is no version stored for the given name.</p>
+</p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dependency_to_lock_pod_named</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="n">dep</span> <span class="o">=</span> <span class="n">dependencies</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">d</span><span class="o">|</span> <span class="n">d</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="nb">name</span> <span class="p">}</span>
+  <span class="n">version</span> <span class="o">=</span> <span class="n">pod_versions</span><span class="o">[</span><span class="nb">name</span><span class="o">]</span>
+
+  <span class="k">unless</span> <span class="n">dep</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Attempt to lock the `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">` Pod without an known dependency.&quot;</span>
+  <span class="k">end</span>
+
+  <span class="k">unless</span> <span class="n">version</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;Attempt to lock the `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">` Pod without an known version.&quot;</span>
+  <span class="k">end</span>
+
+  <span class="n">locked_dependency</span> <span class="o">=</span> <span class="n">dep</span><span class="o">.</span><span class="n">dup</span>
+  <span class="n">locked_dependency</span><span class="o">.</span><span class="n">specific_version</span> <span class="o">=</span> <span class="n">version</span>
+  <span class="n">locked_dependency</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L118">
+                  lib/cocoapods-core/lockfile.rb:118
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_detect_changes_with_podfile" class="tab-pane">
+          <h2> detect_changes_with_podfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">detect_changes_with_podfile</span><span class="p">(</span><span class="n">podfile</span><span class="p">)</span> <span class="c1">#=&gt; Hash{Symbol=&gt;Array[Strings]} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Podfile</code> <b>podfile</b></p>
+              <p>The podfile that should be analyzed.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Symbol=&gt;Array[Strings]}</code></p>
+              <p>A hash where pods are grouped
+by the state in which they are.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">detect_changes_with_podfile</span><span class="p">(</span><span class="n">podfile</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="o">[</span> <span class="ss">:added</span><span class="p">,</span> <span class="ss">:changed</span><span class="p">,</span> <span class="ss">:removed</span><span class="p">,</span> <span class="ss">:unchanged</span> <span class="o">].</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">k</span><span class="o">|</span> <span class="n">result</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="o">[]</span> <span class="p">}</span>
+
+  <span class="n">installed_deps</span> <span class="o">=</span> <span class="n">dependencies</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">d</span><span class="o">|</span> <span class="n">dependency_to_lock_pod_named</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">all_dep_names</span>  <span class="o">=</span> <span class="p">(</span><span class="n">dependencies</span> <span class="o">+</span> <span class="n">podfile</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span><span class="o">.</span><span class="n">uniq</span>
+  <span class="n">all_dep_names</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+    <span class="n">installed_dep</span> <span class="o">=</span> <span class="n">installed_deps</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">d</span><span class="o">|</span> <span class="n">d</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="nb">name</span> <span class="p">}</span>
+    <span class="n">podfile_dep</span>   <span class="o">=</span> <span class="n">podfile</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">d</span><span class="o">|</span> <span class="n">d</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="nb">name</span> <span class="p">}</span>
+
+    <span class="k">if</span> <span class="n">installed_dep</span><span class="o">.</span><span class="n">nil?</span>  <span class="k">then</span> <span class="n">key</span> <span class="o">=</span> <span class="ss">:added</span>
+    <span class="k">elsif</span> <span class="n">podfile_dep</span><span class="o">.</span><span class="n">nil?</span> <span class="k">then</span> <span class="n">key</span> <span class="o">=</span> <span class="ss">:removed</span>
+    <span class="k">elsif</span> <span class="n">podfile_dep</span><span class="o">.</span><span class="n">compatible?</span><span class="p">(</span><span class="n">installed_dep</span> <span class="p">)</span> <span class="k">then</span> <span class="n">key</span> <span class="o">=</span> <span class="ss">:unchanged</span>
+    <span class="k">else</span> <span class="n">key</span> <span class="o">=</span> <span class="ss">:changed</span>
+    <span class="k">end</span>
+    <span class="n">result</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">&lt;&lt;</span> <span class="nb">name</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L190">
+                  lib/cocoapods-core/lockfile.rb:190
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_write_to_disk" class="tab-pane">
+          <h2> write_to_disk </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">write_to_disk</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>path</b></p>
+              <p>The path where the lockfile should be saved.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">write_to_disk</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="o">.</span><span class="n">mkpath</span> <span class="k">unless</span> <span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="o">.</span><span class="n">exist?</span>
+  <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">to_yaml</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">defined_in_file</span> <span class="o">=</span> <span class="n">path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L223">
+                  lib/cocoapods-core/lockfile.rb:223
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_yaml" class="tab-pane">
+          <h2> to_yaml </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">to_yaml</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The YAML representation of the Lockfile, used for
+serialization.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_yaml</span>
+  <span class="n">yaml_data</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">internal_data</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span>
+    <span class="n">yaml_data</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span> <span class="k">unless</span> <span class="n">value</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="k">end</span>
+  <span class="n">yaml_data</span><span class="o">.</span><span class="n">to_yaml</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^--- ?\n/</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^([A-Z])/</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n\\</span><span class="s2">1&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/lockfile.rb#L236">
+                  lib/cocoapods-core/lockfile.rb:236
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

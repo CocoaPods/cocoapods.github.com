@@ -85,18 +85,31 @@ module Pod
         result = @markdown.render(input)
       end
 
-      def syntax_highlight(code)
-        self.class.syntax_highlight(code)
+      def syntax_highlight(code, lang = 'ruby')
+        self.class.syntax_highlight(code, lang)
       end
 
       def self.syntax_highlight(code, lang = 'ruby')
         Pygments.highlight(code, :lexer => lang, :options => { :encoding => 'utf-8' })
       end
 
+      # Regular parametrize creates collisions given Ruby conventions
+      # especially because it removes trailing separators.
+      #
+      # eg. 'do' and 'do!'.parametrize => 'do
+      #
       def parameterize(object)
         object = object.name if object.class <= YARD::CodeObjects::Base
-        CGI.escape(object.to_s)
-        # CGI.escapeHTML(object.to_s).parameterize
+        object = object.to_s
+        case object
+        when '==' then 'equality'
+        when '[]' then 'braces'
+        when '+' then 'plus'
+        when '-' then 'minus'
+        when '*' then 'star'
+        else
+          object.gsub(/[^0-9A-Za-z_]/,'_')
+        end
       end
 
       #--------------------#
