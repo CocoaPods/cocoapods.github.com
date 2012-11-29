@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Push Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Command :: Push</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_push">Push</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_validate_">
+              validate!
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_run">
+              run
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_push" class="tab-pane default">
+          <h2>Push</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Command :: Push</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Push < Command < Command < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Push </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Push</code></p>
+              <p>A new instance of Push</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="vi">@allow_warnings</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;allow-warnings&#39;</span><span class="p">)</span>
+  <span class="vi">@local_only</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;local-only&#39;</span><span class="p">)</span>
+  <span class="vi">@repo</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">shift_argument</span>
+  <span class="vi">@podspec</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">shift_argument</span>
+  <span class="k">super</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/push.rb#L26">
+                  lib/cocoapods/command/push.rb:26
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_validate_" class="tab-pane">
+          <h2> validate! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">validate!</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">validate!</span>
+  <span class="k">super</span>
+  <span class="n">help!</span> <span class="s2">&quot;A spec-repo name is required.&quot;</span> <span class="k">unless</span> <span class="vi">@repo</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/push.rb#L34">
+                  lib/cocoapods/command/push.rb:34
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_run" class="tab-pane">
+          <h2> run </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">run</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">run</span>
+  <span class="n">validate_podspec_files</span>
+  <span class="n">check_repo_status</span>
+  <span class="n">update_repo</span>
+  <span class="n">add_specs_to_repo</span>
+  <span class="n">push_repo</span> <span class="k">unless</span> <span class="vi">@local_only</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/push.rb#L39">
+                  lib/cocoapods/command/push.rb:39
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

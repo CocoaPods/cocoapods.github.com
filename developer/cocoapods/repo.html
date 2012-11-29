@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Repo Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Command :: Repo</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_repo">Repo</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_dir">
+              dir
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_check_versions">
+              check_versions
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_repo" class="tab-pane default">
+          <h2>Repo</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Command :: Repo</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Repo < Command < Command < Object</code></p>
+          
+            <h3>Namespaces</h3>
+            
+              <p><a href="../cocoapods/add.html">
+              <code>Pod :: Command :: Repo :: Add</code>
+            </a></p>
+            
+              <p><a href="../cocoapods/update.html">
+              <code>Pod :: Command :: Repo :: Update</code>
+            </a></p>
+            
+              <p><a href="../cocoapods/lint.html">
+              <code>Pod :: Command :: Repo :: Lint</code>
+            </a></p>
+            
+          
+        </div>
+
+
+        
+          <div id="tab_dir" class="tab-pane">
+          <h2> dir </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dir</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dir</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">repos_dir</span> <span class="o">+</span> <span class="vi">@name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/repo.rb#L152">
+                  lib/cocoapods/command/repo.rb:152
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_check_versions" class="tab-pane">
+          <h2> check_versions </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">check_versions</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">check_versions</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span>
+  <span class="n">versions</span> <span class="o">=</span> <span class="n">versions</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span>
+  <span class="k">unless</span> <span class="n">is_compatilbe</span><span class="p">(</span><span class="n">versions</span><span class="p">)</span>
+    <span class="n">min</span><span class="p">,</span> <span class="n">max</span> <span class="o">=</span> <span class="n">versions</span><span class="o">[</span><span class="s1">&#39;min&#39;</span><span class="o">]</span><span class="p">,</span> <span class="n">versions</span><span class="o">[</span><span class="s1">&#39;max&#39;</span><span class="o">]</span>
+    <span class="n">version_msg</span> <span class="o">=</span> <span class="p">(</span> <span class="n">min</span> <span class="o">==</span> <span class="n">max</span> <span class="p">)</span> <span class="p">?</span> <span class="n">min</span> <span class="p">:</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">min</span><span class="si">}</span><span class="s2"> - </span><span class="si">#{</span><span class="n">max</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[!] The `</span><span class="si">#{</span><span class="n">dir</span><span class="o">.</span><span class="n">basename</span><span class="o">.</span><span class="n">to_s</span><span class="si">}</span><span class="s2">&#39; repo requires CocoaPods </span><span class="si">#{</span><span class="n">version_msg</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">red</span> <span class="o">+</span>
+    <span class="s2">&quot;Update Cocoapods, or checkout the appropriate tag in the repo.</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Cocoapods </span><span class="si">#{</span><span class="n">versions</span><span class="o">[</span><span class="s1">&#39;last&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2"> is available.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">green</span> <span class="k">if</span> <span class="n">has_update</span><span class="p">(</span><span class="n">versions</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">config</span><span class="o">.</span><span class="n">new_version_message?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/repo.rb#L156">
+                  lib/cocoapods/command/repo.rb:156
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Command </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Command</code></p>
+              <p>A new instance of Command</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">silent</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;silent&#39;</span><span class="p">)</span>
+  <span class="k">super</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">verbose?</span>
+  <span class="c1"># TODO we should probably not even load colored unless needed</span>
+  <span class="nb">String</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="ss">:define_method</span><span class="p">,</span> <span class="ss">:colorize</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">string</span> <span class="p">,</span> <span class="n">_</span><span class="o">|</span> <span class="n">string</span> <span class="p">}</span> <span class="k">unless</span> <span class="nb">self</span><span class="o">.</span><span class="n">colorize_output?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command.rb#L51">
+                  lib/cocoapods/command.rb:51
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

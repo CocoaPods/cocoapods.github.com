@@ -1,0 +1,5135 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>cocoapods Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../style.css">
+
+<style>
+.namespace-container {
+  padding: 0 42px;
+  background-color: #fcf3e5;
+  border-bottom: 1px solid hsl(24, 30%, 82%);
+  border-top: 1px solid hsl(26, 43%, 90%);
+  background-image: -webkit-linear-gradient(top, #FCF3E5, #EEE2D0);
+  margin-top: 40px;
+}
+
+.namespace-container h3 {
+  margin: 0px;
+  color: hsl(17, 10%, 50%);
+  margin-left: 50px;
+}
+#methods_list h2 {
+  margin-top: 0;
+}
+</style>
+</head>
+
+<!-- BODY ******************************************************************-->
+
+<body>
+<div class="container">
+<div id="body">
+
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li class="active">cocoapods</li>
+      </ul>
+    </div>
+
+  <!-- DESCRIPTION *************************************************************-->
+
+  <div id="content-container">
+    <div class="tab-content">
+      <h2>cocoapods</h2>
+      <div class="row">
+        <div class="span6">
+          <h3>Description</h3>
+          <p>CocoaPods manages library dependencies for your Xcode project.
+
+You specify the dependencies for your project in one easy text file. CocoaPods resolves dependencies between libraries, fetches source code for the dependencies, and creates and maintains an Xcode workspace to build your project.
+
+Ultimately, the goal is to improve discoverability of, and engagement in, third party open-source libraries, by creating a more centralized ecosystem.</p>
+          <h3>Authors</h3>
+          <p>Eloy Duran and Fabio Pelosin</p>
+        </div>
+        <div class="span2 offset2">
+          <h3>Version</h3>
+          <p>0.17.0.alpha</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-container">
+    <div class="tab-content">
+      
+        <h3>Pod</h3>
+
+        <p>
+          
+            <a href="cocoapods/command.html">
+              <code>Command</code>
+            </a>
+          
+            <a href="cocoapods/plain_informative.html">
+              <code>PlainInformative</code>
+            </a>
+          
+            <a href="cocoapods/config.html">
+              <code>Config</code>
+            </a>
+          
+            <a href="cocoapods/downloader.html">
+              <code>Downloader</code>
+            </a>
+          
+            <a href="cocoapods/executable.html">
+              <code>Executable</code>
+            </a>
+          
+            <a href="cocoapods/external_sources.html">
+              <code>ExternalSources</code>
+            </a>
+          
+            <a href="cocoapods/generator.html">
+              <code>Generator</code>
+            </a>
+          
+            <a href="cocoapods/installer.html">
+              <code>Installer</code>
+            </a>
+          
+            <a href="cocoapods/local_pod.html">
+              <code>LocalPod</code>
+            </a>
+          
+            <a href="cocoapods/project.html">
+              <code>Project</code>
+            </a>
+          
+            <a href="cocoapods/resolver.html">
+              <code>Resolver</code>
+            </a>
+          
+            <a href="cocoapods/sandbox.html">
+              <code>Sandbox</code>
+            </a>
+          
+            <a href="cocoapods/headers_directory.html">
+              <code>HeadersDirectory</code>
+            </a>
+          
+            <a href="cocoapods/source.html">
+              <code>Source</code>
+            </a>
+          
+            <a href="cocoapods/user_interface.html">
+              <code>UserInterface</code>
+            </a>
+          
+            <a href="cocoapods/informative.html">
+              <code>Informative</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Command</h3>
+
+        <p>
+          
+            <a href="cocoapods/advanced_linter.html">
+              <code>AdvancedLinter</code>
+            </a>
+          
+            <a href="cocoapods/error_report.html">
+              <code>ErrorReport</code>
+            </a>
+          
+            <a href="cocoapods/list.html">
+              <code>List</code>
+            </a>
+          
+            <a href="cocoapods/outdated.html">
+              <code>Outdated</code>
+            </a>
+          
+            <a href="cocoapods/project.html">
+              <code>Project</code>
+            </a>
+          
+            <a href="cocoapods/install.html">
+              <code>Install</code>
+            </a>
+          
+            <a href="cocoapods/update.html">
+              <code>Update</code>
+            </a>
+          
+            <a href="cocoapods/push.html">
+              <code>Push</code>
+            </a>
+          
+            <a href="cocoapods/repo.html">
+              <code>Repo</code>
+            </a>
+          
+            <a href="cocoapods/search.html">
+              <code>Search</code>
+            </a>
+          
+            <a href="cocoapods/setup.html">
+              <code>Setup</code>
+            </a>
+          
+            <a href="cocoapods/spec.html">
+              <code>Spec</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Command :: List</h3>
+
+        <p>
+          
+            <a href="cocoapods/new.html">
+              <code>New</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Command :: Repo</h3>
+
+        <p>
+          
+            <a href="cocoapods/add.html">
+              <code>Add</code>
+            </a>
+          
+            <a href="cocoapods/update.html">
+              <code>Update</code>
+            </a>
+          
+            <a href="cocoapods/lint.html">
+              <code>Lint</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Command :: Spec</h3>
+
+        <p>
+          
+            <a href="cocoapods/create.html">
+              <code>Create</code>
+            </a>
+          
+            <a href="cocoapods/lint.html">
+              <code>Lint</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Config</h3>
+
+        <p>
+          
+            <a href="cocoapods/mixin.html">
+              <code>Mixin</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Downloader</h3>
+
+        <p>
+          
+            <a href="cocoapods/git.html">
+              <code>Git</code>
+            </a>
+          
+            <a href="cocoapods/git_hub.html">
+              <code>GitHub</code>
+            </a>
+          
+            <a href="cocoapods/http.html">
+              <code>Http</code>
+            </a>
+          
+            <a href="cocoapods/mercurial.html">
+              <code>Mercurial</code>
+            </a>
+          
+            <a href="cocoapods/subversion.html">
+              <code>Subversion</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Downloader :: Http</h3>
+
+        <p>
+          
+            <a href="cocoapods/unsupported_file_type_error.html">
+              <code>UnsupportedFileTypeError</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Executable</h3>
+
+        <p>
+          
+            <a href="cocoapods/indenter.html">
+              <code>Indenter</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: ExternalSources</h3>
+
+        <p>
+          
+            <a href="cocoapods/abstract_external_source.html">
+              <code>AbstractExternalSource</code>
+            </a>
+          
+            <a href="cocoapods/git_source.html">
+              <code>GitSource</code>
+            </a>
+          
+            <a href="cocoapods/podspec_source.html">
+              <code>PodspecSource</code>
+            </a>
+          
+            <a href="cocoapods/local_source.html">
+              <code>LocalSource</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Generator</h3>
+
+        <p>
+          
+            <a href="cocoapods/markdown.html">
+              <code>Markdown</code>
+            </a>
+          
+            <a href="cocoapods/plist.html">
+              <code>Plist</code>
+            </a>
+          
+            <a href="cocoapods/acknowledgements.html">
+              <code>Acknowledgements</code>
+            </a>
+          
+            <a href="cocoapods/bridge_support.html">
+              <code>BridgeSupport</code>
+            </a>
+          
+            <a href="cocoapods/copy_resources_script.html">
+              <code>CopyResourcesScript</code>
+            </a>
+          
+            <a href="cocoapods/documentation.html">
+              <code>Documentation</code>
+            </a>
+          
+            <a href="cocoapods/dummy_source.html">
+              <code>DummySource</code>
+            </a>
+          
+            <a href="cocoapods/prefix_header.html">
+              <code>PrefixHeader</code>
+            </a>
+          
+            <a href="cocoapods/xc_config.html">
+              <code>XCConfig</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Installer</h3>
+
+        <p>
+          
+            <a href="cocoapods/target_installer.html">
+              <code>TargetInstaller</code>
+            </a>
+          
+            <a href="cocoapods/user_project_integrator.html">
+              <code>UserProjectIntegrator</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Installer :: UserProjectIntegrator</h3>
+
+        <p>
+          
+            <a href="cocoapods/target_integrator.html">
+              <code>TargetIntegrator</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: LocalPod</h3>
+
+        <p>
+          
+            <a href="cocoapods/path_list.html">
+              <code>PathList</code>
+            </a>
+          
+            <a href="cocoapods/local_sourced_pod.html">
+              <code>LocalSourcedPod</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: Project</h3>
+
+        <p>
+          
+            <a href="cocoapods/library.html">
+              <code>Library</code>
+            </a>
+          
+        </p>
+    
+        <h3>Pod :: UserInterface</h3>
+
+        <p>
+          
+            <a href="cocoapods/ui_pod.html">
+              <code>UIPod</code>
+            </a>
+          
+        </p>
+    
+        <h3>Rake</h3>
+
+        <p>
+          
+            <a href="cocoapods/file_list.html">
+              <code>FileList</code>
+            </a>
+          
+        </p>
+    
+    </div>
+  </div>
+
+  <!-- CLASSES **************************************************************-->
+
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/pathname.html"></a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/pathname.html#_original_sum">
+                    _original_sum
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/pathname.html#plus">
+                    +
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/command.html">Command</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/command.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/advanced_linter.html">Command::AdvancedLinter</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#spec">
+                    spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#file">
+                    file
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#simple_linter">
+                    simple_linter
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#lint">
+                    lint
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#quick">
+                    quick
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#no_clean">
+                    no_clean
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#repo_path">
+                    repo_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#local_">
+                    local=
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#local_">
+                    local?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#notes">
+                    notes
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/advanced_linter.html#result_type">
+                    result_type
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/install.html">Command::Install</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/install.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/install.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/list.html">Command::List</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/list.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/list.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/list.html#update_if_necessary_">
+                    update_if_necessary!
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/new.html">Command::List::New</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/new.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/new.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/new.html#update_if_necessary_">
+                    update_if_necessary!
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/outdated.html">Command::Outdated</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/outdated.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/outdated.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/project.html">Command::Project</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/project.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/project.html#run_install_with_update">
+                    run_install_with_update
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/push.html">Command::Push</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/push.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/push.html#validate_">
+                    validate!
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/push.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/repo.html">Command::Repo</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/repo.html#dir">
+                    dir
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/repo.html#check_versions">
+                    check_versions
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/repo.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/add.html">Command::Repo::Add</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/add.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/add.html#validate_">
+                    validate!
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/add.html#run">
+                    run
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/add.html#dir">
+                    dir
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/add.html#check_versions">
+                    check_versions
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/lint.html">Command::Repo::Lint</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/lint.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/lint.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/lint.html#dir">
+                    dir
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/lint.html#check_versions">
+                    check_versions
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/update.html">Command::Repo::Update</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/update.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/update.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/update.html#dir">
+                    dir
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/update.html#check_versions">
+                    check_versions
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/search.html">Command::Search</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/search.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/search.html#validate_">
+                    validate!
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/search.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/setup.html">Command::Setup</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/setup.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#dir">
+                    dir
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#read_only_url">
+                    read_only_url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#read_write_url">
+                    read_write_url
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/setup.html#url">
+                    url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#origin_url_read_only_">
+                    origin_url_read_only?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#origin_url_push_">
+                    origin_url_push?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#push_">
+                    push?
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/setup.html#read_master_repo_url">
+                    read_master_repo_url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#set_master_repo_url">
+                    set_master_repo_url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#add_master_repo">
+                    add_master_repo
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#update_master_repo">
+                    update_master_repo
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/setup.html#set_master_repo_branch">
+                    set_master_repo_branch
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#run_if_needed">
+                    run_if_needed
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/setup.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/spec.html">Command::Spec</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/spec.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/create.html">Command::Spec::Create</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/create.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/create.html#validate_">
+                    validate!
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/create.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/lint.html">Command::Spec::Lint</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/lint.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/lint.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/update.html">Command::Update</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/update.html#run">
+                    run
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/update.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/config.html">Config</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/config.html#repos_dir">
+                    repos_dir
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#project_root">
+                    project_root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#project_pods_root">
+                    project_pods_root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#clean">
+                    clean
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#verbose">
+                    verbose
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#silent">
+                    silent
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#generate_docs">
+                    generate_docs
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/config.html#doc_install">
+                    doc_install
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#integrate_targets">
+                    integrate_targets
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#new_version_message">
+                    new_version_message
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#skip_repo_update">
+                    skip_repo_update
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#clean_">
+                    clean?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#verbose_">
+                    verbose?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#silent_">
+                    silent?
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/config.html#generate_docs_">
+                    generate_docs?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#doc_install_">
+                    doc_install?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#integrate_targets_">
+                    integrate_targets?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#skip_repo_update_">
+                    skip_repo_update?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#new_version_message_">
+                    new_version_message?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#project_podfile">
+                    project_podfile
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/config.html#project_lockfile">
+                    project_lockfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#headers_symlink_root">
+                    headers_symlink_root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#podfile">
+                    podfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#lockfile">
+                    lockfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/config.html#sandbox">
+                    sandbox
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/mixin.html">Config::Mixin</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/mixin.html#config">
+                    config
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/downloader.html">Downloader</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/downloader.html#target_path">
+                    target_path
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/downloader.html#url">
+                    url
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/downloader.html#options">
+                    options
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/downloader.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/git.html">Downloader::Git</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git.html#download">
+                    download
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#target_path">
+                    target_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#url">
+                    url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#options">
+                    options
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Download implementations</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#clone_url">
+                    clone_url
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git.html#clone">
+                    clone
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#download_head">
+                    download_head
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#download_tag">
+                    download_tag
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#download_commit">
+                    download_commit
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#download_branch">
+                    download_branch
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Checking references</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#ref_exists_">
+                    ref_exists?
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git.html#ensure_ref_exists">
+                    ensure_ref_exists
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#branch_exists_">
+                    branch_exists?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#ensure_remote_branch_exists">
+                    ensure_remote_branch_exists
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Cache</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#cache_path">
+                    cache_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#caches_root">
+                    caches_root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#caches_size">
+                    caches_size
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git.html#cache_exist_">
+                    cache_exist?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#cache_origin_url">
+                    cache_origin_url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#create_cache">
+                    create_cache
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#update_cache">
+                    update_cache
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git.html#prune_cache">
+                    prune_cache
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/git_hub.html">Downloader::GitHub</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Cache</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#download_head">
+                    download_head
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#download_tag">
+                    download_tag
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#download_commit">
+                    download_commit
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#download_branch">
+                    download_branch
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#tarball_url_for">
+                    tarball_url_for
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#tmp_path">
+                    tmp_path
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git_hub.html#cache_path">
+                    cache_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#caches_root">
+                    caches_root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#caches_size">
+                    caches_size
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#cache_exist_">
+                    cache_exist?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#cache_origin_url">
+                    cache_origin_url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#create_cache">
+                    create_cache
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#update_cache">
+                    update_cache
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git_hub.html#prune_cache">
+                    prune_cache
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#download">
+                    download
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#target_path">
+                    target_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#url">
+                    url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#options">
+                    options
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Download implementations</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#clone_url">
+                    clone_url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#clone">
+                    clone
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Checking references</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#ref_exists_">
+                    ref_exists?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#ensure_ref_exists">
+                    ensure_ref_exists
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_hub.html#branch_exists_">
+                    branch_exists?
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git_hub.html#ensure_remote_branch_exists">
+                    ensure_remote_branch_exists
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/http.html">Downloader::Http</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/http.html#filename">
+                    filename
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/http.html#download_path">
+                    download_path
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/http.html#download">
+                    download
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/http.html#type">
+                    type
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/http.html#target_path">
+                    target_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/http.html#url">
+                    url
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/http.html#options">
+                    options
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/http.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/mercurial.html">Downloader::Mercurial</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/mercurial.html#download">
+                    download
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/mercurial.html#download_head">
+                    download_head
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/mercurial.html#download_revision">
+                    download_revision
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/mercurial.html#target_path">
+                    target_path
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/mercurial.html#url">
+                    url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/mercurial.html#options">
+                    options
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/mercurial.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/subversion.html">Downloader::Subversion</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/subversion.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/subversion.html#download">
+                    download
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/subversion.html#download_head">
+                    download_head
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/subversion.html#reference_url">
+                    reference_url
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/subversion.html#trunk_url">
+                    trunk_url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/subversion.html#target_path">
+                    target_path
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/subversion.html#url">
+                    url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/subversion.html#options">
+                    options
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/executable.html">Executable</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/executable.html#executable">
+                    executable
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/indenter.html">Executable::Indenter</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/indenter.html#indent">
+                    indent
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/indenter.html#io">
+                    io
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/indenter.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/indenter.html#__">
+                    <<
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/abstract_external_source.html">ExternalSources::AbstractExternalSource</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#name">
+                    name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#params">
+                    params
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#equality">
+                    ==
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#specification">
+                    specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#specification_from_local">
+                    specification_from_local
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#specification_from_external">
+                    specification_from_external
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Subclasses hooks</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#copy_external_source_into_sandbox">
+                    copy_external_source_into_sandbox
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/abstract_external_source.html#description">
+                    description
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/git_source.html">ExternalSources::GitSource</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Subclasses hooks</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/git_source.html#copy_external_source_into_sandbox">
+                    copy_external_source_into_sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_source.html#description">
+                    description
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git_source.html#name">
+                    name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_source.html#params">
+                    params
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_source.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git_source.html#equality">
+                    ==
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_source.html#specification">
+                    specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/git_source.html#specification_from_local">
+                    specification_from_local
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/git_source.html#specification_from_external">
+                    specification_from_external
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/local_source.html">ExternalSources::LocalSource</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Subclasses hooks</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_source.html#copy_external_source_into_sandbox">
+                    copy_external_source_into_sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_source.html#description">
+                    description
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_source.html#specification_from_local">
+                    specification_from_local
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_source.html#specification_from_external">
+                    specification_from_external
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_source.html#name">
+                    name
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_source.html#params">
+                    params
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_source.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_source.html#equality">
+                    ==
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_source.html#specification">
+                    specification
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/podspec_source.html">ExternalSources::PodspecSource</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Subclasses hooks</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#copy_external_source_into_sandbox">
+                    copy_external_source_into_sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#description">
+                    description
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#name">
+                    name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#params">
+                    params
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#equality">
+                    ==
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#specification">
+                    specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#specification_from_local">
+                    specification_from_local
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/podspec_source.html#specification_from_external">
+                    specification_from_external
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/acknowledgements.html">Generator::Acknowledgements</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/acknowledgements.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/acknowledgements.html#save_as">
+                    save_as
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/acknowledgements.html#header_title">
+                    header_title
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/acknowledgements.html#header_text">
+                    header_text
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/acknowledgements.html#footnote_title">
+                    footnote_title
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/acknowledgements.html#footnote_text">
+                    footnote_text
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/bridge_support.html">Generator::BridgeSupport</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/bridge_support.html#headers">
+                    headers
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/bridge_support.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/bridge_support.html#search_paths">
+                    search_paths
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/bridge_support.html#save_as">
+                    save_as
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/copy_resources_script.html">Generator::CopyResourcesScript</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/copy_resources_script.html#resources">
+                    resources
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/copy_resources_script.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/copy_resources_script.html#save_as">
+                    save_as
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/documentation.html">Generator::Documentation</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/documentation.html#pod">
+                    pod
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#specification">
+                    specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#target_path">
+                    target_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#options">
+                    options
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/documentation.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#name">
+                    name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#company">
+                    company
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#copyright">
+                    copyright
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/documentation.html#description">
+                    description
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#docs_id">
+                    docs_id
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#files">
+                    files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#index_file">
+                    index_file
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/documentation.html#spec_appledoc_options">
+                    spec_appledoc_options
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#appledoc_options">
+                    appledoc_options
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#already_installed_">
+                    already_installed?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/documentation.html#generate">
+                    generate
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/dummy_source.html">Generator::DummySource</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/dummy_source.html#class_name">
+                    class_name
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/dummy_source.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/dummy_source.html#save_as">
+                    save_as
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/markdown.html">Generator::Markdown</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/markdown.html#save_as">
+                    save_as
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/markdown.html#title_from_string">
+                    title_from_string
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/markdown.html#string_for_pod">
+                    string_for_pod
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/markdown.html#licenses">
+                    licenses
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/markdown.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/markdown.html#header_title">
+                    header_title
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/markdown.html#header_text">
+                    header_text
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/markdown.html#footnote_title">
+                    footnote_title
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/markdown.html#footnote_text">
+                    footnote_text
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/plist.html">Generator::Plist</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/plist.html#save_as">
+                    save_as
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/plist.html#plist">
+                    plist
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/plist.html#plist_title">
+                    plist_title
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/plist.html#licenses">
+                    licenses
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/plist.html#hash_for_pod">
+                    hash_for_pod
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/plist.html#header_hash">
+                    header_hash
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/plist.html#footnote_hash">
+                    footnote_hash
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/plist.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/plist.html#header_title">
+                    header_title
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/plist.html#header_text">
+                    header_text
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/plist.html#footnote_title">
+                    footnote_title
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/plist.html#footnote_text">
+                    footnote_text
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/prefix_header.html">Generator::PrefixHeader</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/prefix_header.html#platform">
+                    platform
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/prefix_header.html#pods">
+                    pods
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/prefix_header.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/prefix_header.html#generate">
+                    generate
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/prefix_header.html#save_as">
+                    save_as
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/xc_config.html">Generator::XCConfig</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/xc_config.html#sandbox">
+                    sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/xc_config.html#pods">
+                    pods
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/xc_config.html#relative_pods_root">
+                    relative_pods_root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/xc_config.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/xc_config.html#set_arc_compatibility_flag">
+                    set_arc_compatibility_flag
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/xc_config.html#generate">
+                    generate
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/xc_config.html#xcconfig">
+                    xcconfig
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/xc_config.html#save_as">
+                    save_as
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/headers_directory.html">HeadersDirectory</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/headers_directory.html#root">
+                    root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/headers_directory.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/headers_directory.html#prepare_for_install">
+                    prepare_for_install
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/headers_directory.html#add_file">
+                    add_file
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/headers_directory.html#add_files">
+                    add_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/headers_directory.html#search_paths">
+                    search_paths
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/headers_directory.html#add_search_path">
+                    add_search_path
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/informative.html">Informative</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/informative.html#message">
+                    message
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/installer.html">Installer</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/installer.html#sandbox">
+                    sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#podfile">
+                    podfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#lockfile">
+                    lockfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#update_mode">
+                    update_mode
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/installer.html#install_">
+                    install!
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#analyze">
+                    analyze
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#pods_added_from_the_lockfile">
+                    pods_added_from_the_lockfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#pods_changed_from_the_lockfile">
+                    pods_changed_from_the_lockfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#pods_deleted_from_the_lockfile">
+                    pods_deleted_from_the_lockfile
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/installer.html#pods_unchanged_from_the_lockfile">
+                    pods_unchanged_from_the_lockfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#locked_dependencies">
+                    locked_dependencies
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#specs_by_target">
+                    specs_by_target
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#specifications">
+                    specifications
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#local_pods_by_target">
+                    local_pods_by_target
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/installer.html#local_pods">
+                    local_pods
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#pods_to_install">
+                    pods_to_install
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#pods_project">
+                    pods_project
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/installer.html#target_installers">
+                    target_installers
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/target_installer.html">Installer::TargetInstaller</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/target_installer.html#project">
+                    project
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_installer.html#target_definition">
+                    target_definition
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_installer.html#pods">
+                    pods
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/target_installer.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_installer.html#install_">
+                    install!
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_installer.html#prefix_header_filename">
+                    prefix_header_filename
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/target_installer.html#library">
+                    library
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_installer.html#target">
+                    target
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_installer.html#xcconfig_file_ref">
+                    xcconfig_file_ref
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/user_project_integrator.html">Installer::UserProjectIntegrator</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/user_project_integrator.html#podfile">
+                    podfile
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/user_project_integrator.html#pods_project">
+                    pods_project
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/user_project_integrator.html#project_root">
+                    project_root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/user_project_integrator.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/user_project_integrator.html#integrate_">
+                    integrate!
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/user_project_integrator.html#workspace_path">
+                    workspace_path
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/user_project_integrator.html#user_project_paths">
+                    user_project_paths
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/target_integrator.html">Installer::UserProjectIntegrator::TargetIntegrator</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/target_integrator.html#library">
+                    library
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_integrator.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/target_integrator.html#integrate_">
+                    integrate!
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_integrator.html#targets">
+                    targets
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/target_integrator.html#user_project">
+                    user_project
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/target_integrator.html#inspect">
+                    inspect
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/local_pod.html">LocalPod</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_pod.html#top_specification">
+                    top_specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#specifications">
+                    specifications
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#sandbox">
+                    sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#platform">
+                    platform
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#downloaded">
+                    downloaded
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#downloaded_">
+                    downloaded?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#add_specification">
+                    add_specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#root">
+                    root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#path_list">
+                    path_list
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#to_s">
+                    to_s
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#name">
+                    name
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Installation</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#create">
+                    create
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#exists_">
+                    exists?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#chdir">
+                    chdir
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#implode">
+                    implode
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#local_">
+                    local?
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Cleaning</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#clean_">
+                    clean!
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#clean_paths">
+                    clean_paths
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#used_files">
+                    used_files
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Files</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#relativize_from_sandbox">
+                    relativize_from_sandbox
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_pod.html#source_files">
+                    source_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#relative_source_files">
+                    relative_source_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#relative_source_files_by_spec">
+                    relative_source_files_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#source_files_by_spec">
+                    source_files_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#header_files">
+                    header_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#relative_header_files">
+                    relative_header_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#header_files_by_spec">
+                    header_files_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#public_header_files_by_spec">
+                    public_header_files_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#resource_files">
+                    resource_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#relative_resource_files">
+                    relative_resource_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#prefix_header_file">
+                    prefix_header_file
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#preserve_files">
+                    preserve_files
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_pod.html#readme_file">
+                    readme_file
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#license_file">
+                    license_file
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#license_text">
+                    license_text
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#xcconfig">
+                    xcconfig
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#documentation_headers">
+                    documentation_headers
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Xcodeproj integration</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#add_file_references_to_project">
+                    add_file_references_to_project
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#file_references_by_spec">
+                    file_references_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#add_build_files_to_target">
+                    add_build_files_to_target
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#link_headers">
+                    link_headers
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_pod.html#requires_arc_">
+                    requires_arc?
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/local_sourced_pod.html">LocalPod::LocalSourcedPod</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Paths Patterns</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#downloaded_">
+                    downloaded?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#create">
+                    create
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#root">
+                    root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#implode">
+                    implode
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#clean_">
+                    clean!
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#to_s">
+                    to_s
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#local_">
+                    local?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#top_specification">
+                    top_specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#specifications">
+                    specifications
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#sandbox">
+                    sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#platform">
+                    platform
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#downloaded">
+                    downloaded
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#add_specification">
+                    add_specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#path_list">
+                    path_list
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#name">
+                    name
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Installation</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#exists_">
+                    exists?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#chdir">
+                    chdir
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Cleaning</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#clean_paths">
+                    clean_paths
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#used_files">
+                    used_files
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Files</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#relativize_from_sandbox">
+                    relativize_from_sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#source_files">
+                    source_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#relative_source_files">
+                    relative_source_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#relative_source_files_by_spec">
+                    relative_source_files_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#source_files_by_spec">
+                    source_files_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#header_files">
+                    header_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#relative_header_files">
+                    relative_header_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#header_files_by_spec">
+                    header_files_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#public_header_files_by_spec">
+                    public_header_files_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#resource_files">
+                    resource_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#relative_resource_files">
+                    relative_resource_files
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#prefix_header_file">
+                    prefix_header_file
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#preserve_files">
+                    preserve_files
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#readme_file">
+                    readme_file
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#license_file">
+                    license_file
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#license_text">
+                    license_text
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#xcconfig">
+                    xcconfig
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#documentation_headers">
+                    documentation_headers
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Xcodeproj integration</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#add_file_references_to_project">
+                    add_file_references_to_project
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#file_references_by_spec">
+                    file_references_by_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#add_build_files_to_target">
+                    add_build_files_to_target
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#link_headers">
+                    link_headers
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/local_sourced_pod.html#requires_arc_">
+                    requires_arc?
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/path_list.html">LocalPod::PathList</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/path_list.html#root">
+                    root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/path_list.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/path_list.html#files">
+                    files
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/path_list.html#dirs">
+                    dirs
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/path_list.html#read_file_system">
+                    read_file_system
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/path_list.html#glob">
+                    glob
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/path_list.html#relative_glob">
+                    relative_glob
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/path_list.html#directory_">
+                    directory?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/path_list.html#dir_glob_equivalent_patterns">
+                    dir_glob_equivalent_patterns
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/project.html">Project</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/project.html#sandbox">
+                    sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#path">
+                    path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#inspect">
+                    inspect
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Working with groups</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#support_files_group">
+                    support_files_group
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#pods">
+                    pods
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#local_pods">
+                    local_pods
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/project.html#add_spec_group">
+                    add_spec_group
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>Manipulating the project</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#libraries">
+                    libraries
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#add_podfile">
+                    add_podfile
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/project.html#user_build_configurations_">
+                    user_build_configurations=
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/project.html#add_pod_library">
+                    add_pod_library
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/library.html">Project::Library</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Manipulating the project</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#target_definition">
+                    target_definition
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#target">
+                    target
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#label">
+                    label
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>User project</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#user_project">
+                    user_project
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/library.html#user_project_path">
+                    user_project_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#user_targets">
+                    user_targets
+                  </a></p>
+                
+              
+                
+                  
+                    <h2>
+                  
+                  <a>TargetInstaller & UserProjectIntegrator helpers</a>
+                  </h2>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#name">
+                    name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#project">
+                    project
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#relative_to_srcroot">
+                    relative_to_srcroot
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#relative_pods_root">
+                    relative_pods_root
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/library.html#support_files_root">
+                    support_files_root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#xcconfig">
+                    xcconfig
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#xcconfig_name">
+                    xcconfig_name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#xcconfig_path">
+                    xcconfig_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#xcconfig_relative_path">
+                    xcconfig_relative_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#copy_resources_script_name">
+                    copy_resources_script_name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#copy_resources_script_path">
+                    copy_resources_script_path
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/library.html#copy_resources_script_relative_path">
+                    copy_resources_script_relative_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#prefix_header_name">
+                    prefix_header_name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#prefix_header_path">
+                    prefix_header_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#bridge_support_name">
+                    bridge_support_name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#bridge_support_path">
+                    bridge_support_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/library.html#acknowledgements_path">
+                    acknowledgements_path
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/resolver.html">Resolver</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/resolver.html#sandbox">
+                    sandbox
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/resolver.html#podfile">
+                    podfile
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/resolver.html#locked_dependencies">
+                    locked_dependencies
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/resolver.html#update_external_specs">
+                    update_external_specs
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/resolver.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/resolver.html#resolve">
+                    resolve
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/resolver.html#specs_by_target">
+                    specs_by_target
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/resolver.html#specs">
+                    specs
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/sandbox.html">Sandbox</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/sandbox.html#root">
+                    root
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#build_headers">
+                    build_headers
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#public_headers">
+                    public_headers
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/sandbox.html#project_path">
+                    project_path
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#inspect">
+                    inspect
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#prepare_for_install">
+                    prepare_for_install
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#implode">
+                    implode
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/sandbox.html#locally_sourced_pod_for_spec">
+                    locally_sourced_pod_for_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#local_pod_for_spec">
+                    local_pod_for_spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#installed_pod_named">
+                    installed_pod_named
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#podspec_for_name">
+                    podspec_for_name
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/sandbox.html#specification">
+                    specification
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/sandbox.html#predownloaded_pods">
+                    predownloaded_pods
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/ui_pod.html">UserInterface::UIPod</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#set">
+                    set
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#initialize">
+                    initialize
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#name">
+                    name
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#version">
+                    version
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#versions">
+                    versions
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#verions_by_source">
+                    verions_by_source
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#sources">
+                    sources
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#spec">
+                    spec
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#authors">
+                    authors
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#homepage">
+                    homepage
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#description">
+                    description
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#summary">
+                    summary
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#source_url">
+                    source_url
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#platform">
+                    platform
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#license">
+                    license
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#subspecs">
+                    subspecs
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#creation_date">
+                    creation_date
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#github_watchers">
+                    github_watchers
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#github_forks">
+                    github_forks
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#github_last_activity">
+                    github_last_activity
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#equality">
+                    ==
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#eql_">
+                    eql?
+                  </a></p>
+                
+              
+                
+                  <p><a href="cocoapods/ui_pod.html#hash">
+                    hash
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="namespace-container">
+      <h3><a href="cocoapods/file_list.html">FileList</a></h3>
+    </div>
+
+    <div id="methods-container">
+      <div id="header">
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/file_list.html#prepend_patterns">
+                    prepend_patterns
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/file_list.html#directory_">
+                    directory?
+                  </a></p>
+                
+              
+            </div>
+          
+            <div class="span3">
+              
+                
+                  <p><a href="cocoapods/file_list.html#glob">
+                    glob
+                  </a></p>
+                
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- README *************************************************************-->
+
+  <div id="content-container">
+    <!-- <div class="tab-content"> -->
+      
+    <!-- </div> -->
+  <!-- </div> -->
+
+  <!-- FOOTER ************************************************************-->
+
+  <!-- <div id="content-container"> -->
+
+      <div id="footer">
+        <hr>
+        <p class="note">Generated for CocoaPods Core HEAD.</p>
+      </div>
+
+    </div><!-- .container -->
+  </div><!-- #body -->
+
+</body>
+

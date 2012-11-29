@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Installer Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Installer</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_installer">Installer</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_sandbox">
+              sandbox
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_podfile">
+              podfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_lockfile">
+              lockfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_update_mode">
+              update_mode
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_install_">
+              install!
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_analyze">
+              analyze
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pods_added_from_the_lockfile">
+              pods_added_from_the_lockfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pods_changed_from_the_lockfile">
+              pods_changed_from_the_lockfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pods_deleted_from_the_lockfile">
+              pods_deleted_from_the_lockfile
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_pods_unchanged_from_the_lockfile">
+              pods_unchanged_from_the_lockfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_locked_dependencies">
+              locked_dependencies
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_specs_by_target">
+              specs_by_target
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_specifications">
+              specifications
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_local_pods_by_target">
+              local_pods_by_target
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_local_pods">
+              local_pods
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pods_to_install">
+              pods_to_install
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pods_project">
+              pods_project
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_target_installers">
+              target_installers
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_installer" class="tab-pane default">
+          <h2>Installer</h2>
+          <p><p>The {Installer} is the core of CocoaPods. This class is responsible of
+taking a Podfile and transform it in the Pods libraries. This class also
+integrates the user project so the Pods libraries can be used out of the
+box.</p>
+
+<p>The Installer is capable of doing incremental updates to an existing Pod
+installation.</p>
+
+<p>The Installer gets the information that it needs mainly from 3 files:</p>
+
+<ul>
+<li>Podfile: The specification written by the user that contains
+information about targets and Pods.</li>
+<li>Podfile.lock: Contains information about the pods that were previously
+installed and in concert with the Podfile provides information about
+which specific version of a Pod should be installed. This file is
+ignored in update mode.</li>
+<li>Manifest.lock: A file contained in the Pods folder that keeps track of
+the pods installed in the local machine. This files is used once the
+exact versions of the Pods has been computed to detect if that version
+is already installed. This file is not intended to be kept under source
+control and is a copy of the Podfile.lock.</li>
+</ul>
+
+<p>Once completed the installer should produce the following file structure:</p>
+<div class="highlight"><pre><span class="no">Pods</span>
+<span class="o">|</span>
+<span class="o">+--</span> <span class="no">Headers</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="no">Build</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">+--</span> <span class="o">[</span><span class="no">Pod</span> <span class="no">Name</span><span class="o">]</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="no">Public</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="o">[</span><span class="no">Pod</span> <span class="no">Name</span><span class="o">]</span>
+<span class="o">|</span>
+<span class="o">+--</span> <span class="no">Sources</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="o">[</span><span class="no">Pod</span> <span class="no">Name</span><span class="o">]</span>
+<span class="o">|</span>
+<span class="o">+--</span> <span class="no">Specifications</span>
+<span class="o">|</span>
+<span class="o">+--</span> <span class="no">Target</span> <span class="no">Support</span> <span class="no">Files</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="o">[</span><span class="no">Target</span> <span class="no">Name</span><span class="o">]</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="no">Acknowledgements</span><span class="o">.</span><span class="n">markdown</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="no">Acknowledgements</span><span class="o">.</span><span class="n">plist</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="no">Pods</span><span class="o">.</span><span class="n">xcconfig</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="no">Pods</span><span class="o">-</span><span class="n">prefix</span><span class="o">.</span><span class="n">pch</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="no">PodsDummy_Pods</span><span class="o">.</span><span class="n">m</span>
+<span class="o">|</span>
+<span class="o">+--</span> <span class="no">Manifest</span><span class="o">.</span><span class="n">lock</span>
+<span class="o">|</span>
+<span class="o">+--</span> <span class="no">Pods</span><span class="o">.</span><span class="n">xcodeproj</span>
+</pre></div></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Installer</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Installer < Object</code></p>
+          
+            <h3>Namespaces</h3>
+            
+              <p><a href="../cocoapods/target_installer.html">
+              <code>Pod :: Installer :: TargetInstaller</code>
+            </a></p>
+            
+              <p><a href="../cocoapods/user_project_integrator.html">
+              <code>Pod :: Installer :: UserProjectIntegrator</code>
+            </a></p>
+            
+          
+        </div>
+
+
+        
+          <div id="tab_sandbox" class="tab-pane">
+          <h2> sandbox </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">sandbox</span> <span class="c1">#=&gt; Sandbox </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Sandbox</code></p>
+              <p>The sandbox where the Pods should be installed.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">sandbox</span>
+  <span class="vi">@sandbox</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L61">
+                  lib/cocoapods/installer.rb:61
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_podfile" class="tab-pane">
+          <h2> podfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">podfile</span> <span class="c1">#=&gt; Podfile </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Podfile</code></p>
+              <p>The Podfile specification that contains the information of the Pods
+that should be installed.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">podfile</span>
+  <span class="vi">@podfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L67">
+                  lib/cocoapods/installer.rb:67
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_lockfile" class="tab-pane">
+          <h2> lockfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">lockfile</span> <span class="c1">#=&gt; Lockfile </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Lockfile</code></p>
+              <p>The Lockfile that stores the information about the Pods previously
+installed on any machine.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">lockfile</span>
+  <span class="vi">@lockfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L73">
+                  lib/cocoapods/installer.rb:73
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_update_mode" class="tab-pane">
+          <h2> update_mode </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">update_mode</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the installer is in update mode. In update mode the contents of
+the Lockfile are not taken into account for deciding what Pods to
+install.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">update_mode</span>
+  <span class="vi">@update_mode</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L80">
+                  lib/cocoapods/installer.rb:80
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">sandbox</span><span class="p">,</span> <span class="n">podfile</span><span class="p">,</span> <span class="n">lockfile</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">update_mode</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span> <span class="c1">#=&gt; Installer </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Sandbox</code> <b>sandbox</b></p>
+              <p>@see sandbox</p>
+
+            
+              
+
+              <p><code>Podfile</code> <b>podfile</b></p>
+              <p>@see podfile</p>
+
+            
+              
+
+              <p><code>Lockfile</code> <b>lockfile</b></p>
+              <p>@see lockfile</p>
+
+            
+              
+
+              <p><code>Bool</code> <b>update_mode</b></p>
+              <p>@see update_mode</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Installer</code></p>
+              <p>A new instance of Installer</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">sandbox</span><span class="p">,</span> <span class="n">podfile</span><span class="p">,</span> <span class="n">lockfile</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">update_mode</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span>
+  <span class="vi">@sandbox</span>     <span class="o">=</span>  <span class="n">sandbox</span>
+  <span class="vi">@podfile</span>     <span class="o">=</span>  <span class="n">podfile</span>
+  <span class="vi">@lockfile</span>    <span class="o">=</span>  <span class="n">lockfile</span>
+  <span class="vi">@update_mode</span> <span class="o">=</span>  <span class="n">update_mode</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L87">
+                  lib/cocoapods/installer.rb:87
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_install_" class="tab-pane">
+          <h2> install! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">install!</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">install!</span>
+  <span class="n">analyze</span>
+  <span class="n">prepare_for_legacy_compatibility</span>
+  <span class="n">clean_global_support_files</span>
+  <span class="n">clean_removed_pods</span>
+  <span class="n">clean_pods_to_install</span>
+  <span class="n">install_dependencies</span>
+  <span class="n">install_targets</span>
+  <span class="n">write_lockfiles</span>
+  <span class="n">integrate_user_project</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L111">
+                  lib/cocoapods/installer.rb:111
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_analyze" class="tab-pane">
+          <h2> analyze </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">analyze</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">analyze</span>
+  <span class="n">generate_pods_by_podfile_state</span>
+  <span class="n">update_repositories_if_needed</span>
+  <span class="n">generate_locked_dependencies</span>
+  <span class="n">resolve_dependencies</span>
+  <span class="n">generate_local_pods</span>
+  <span class="n">generate_pods_that_should_be_installed</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L130">
+                  lib/cocoapods/installer.rb:130
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods_added_from_the_lockfile" class="tab-pane">
+          <h2> pods_added_from_the_lockfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods_added_from_the_lockfile</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The names of the pods that were added to Podfile since the last
+installation on any machine.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods_added_from_the_lockfile</span>
+  <span class="vi">@pods_added_from_the_lockfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L149">
+                  lib/cocoapods/installer.rb:149
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods_changed_from_the_lockfile" class="tab-pane">
+          <h2> pods_changed_from_the_lockfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods_changed_from_the_lockfile</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The names of the pods whose version requirements in the Podfile are
+incompatible with the version stored in the lockfile.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods_changed_from_the_lockfile</span>
+  <span class="vi">@pods_changed_from_the_lockfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L155">
+                  lib/cocoapods/installer.rb:155
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods_deleted_from_the_lockfile" class="tab-pane">
+          <h2> pods_deleted_from_the_lockfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods_deleted_from_the_lockfile</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The names of the pods that were deleted from Podfile since the last
+installation on any machine.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods_deleted_from_the_lockfile</span>
+  <span class="vi">@pods_deleted_from_the_lockfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L161">
+                  lib/cocoapods/installer.rb:161
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods_unchanged_from_the_lockfile" class="tab-pane">
+          <h2> pods_unchanged_from_the_lockfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods_unchanged_from_the_lockfile</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The names of the pods that didn&#39;t change since the last installation on
+any machine.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods_unchanged_from_the_lockfile</span>
+  <span class="vi">@pods_unchanged_from_the_lockfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L167">
+                  lib/cocoapods/installer.rb:167
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_locked_dependencies" class="tab-pane">
+          <h2> locked_dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">locked_dependencies</span> <span class="c1">#=&gt; Array&lt;Dependency&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Dependency&gt;</code></p>
+              <p>The dependencies generate by the lockfile that prevent the resolver to
+update a Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">locked_dependencies</span>
+  <span class="vi">@locked_dependencies</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L173">
+                  lib/cocoapods/installer.rb:173
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_specs_by_target" class="tab-pane">
+          <h2> specs_by_target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">specs_by_target</span> <span class="c1">#=&gt; Hash{TargetDefinition =&gt; Array&lt;Spec&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{TargetDefinition =&gt; Array&lt;Spec&gt;}</code></p>
+              <p>The specifications grouped by target as identified in the
+resolve_dependencies step.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">specs_by_target</span>
+  <span class="vi">@specs_by_target</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L179">
+                  lib/cocoapods/installer.rb:179
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_specifications" class="tab-pane">
+          <h2> specifications </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">specifications</span> <span class="c1">#=&gt; Array&lt;Specification&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Specification&gt;</code></p>
+              <p>The specifications of the resolved version of Pods that should be
+installed.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">specifications</span>
+  <span class="vi">@specifications</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L185">
+                  lib/cocoapods/installer.rb:185
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_local_pods_by_target" class="tab-pane">
+          <h2> local_pods_by_target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">local_pods_by_target</span> <span class="c1">#=&gt; Hash{TargetDefinition =&gt; Array&lt;LocalPod&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{TargetDefinition =&gt; Array&lt;LocalPod&gt;}</code></p>
+              <p>The local pod instances grouped by target.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">local_pods_by_target</span>
+  <span class="vi">@local_pods_by_target</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L190">
+                  lib/cocoapods/installer.rb:190
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_local_pods" class="tab-pane">
+          <h2> local_pods </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">local_pods</span> <span class="c1">#=&gt; Array&lt;LocalPod&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;LocalPod&gt;</code></p>
+              <p>The list of LocalPod instances for each dependency sorted by name.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">local_pods</span>
+  <span class="vi">@local_pods</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L195">
+                  lib/cocoapods/installer.rb:195
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods_to_install" class="tab-pane">
+          <h2> pods_to_install </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods_to_install</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The Pods that should be installed.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods_to_install</span>
+  <span class="vi">@pods_to_install</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L200">
+                  lib/cocoapods/installer.rb:200
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods_project" class="tab-pane">
+          <h2> pods_project </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods_project</span> <span class="c1">#=&gt; Pod::Project </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pod::Project</code></p>
+              <p>The <code>Pods/Pods.xcodeproj</code> project.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods_project</span>
+  <span class="vi">@pods_project</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L211">
+                  lib/cocoapods/installer.rb:211
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_target_installers" class="tab-pane">
+          <h2> target_installers </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target_installers</span> <span class="c1">#=&gt; Array&lt;TargetInstaller&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;TargetInstaller&gt;</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target_installers</span>
+  <span class="vi">@target_installers</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer.rb#L215">
+                  lib/cocoapods/installer.rb:215
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

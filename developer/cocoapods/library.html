@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Library Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Project :: Library</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_library">Library</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Manipulating the project</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_target_definition">
+              target_definition
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_target">
+              target
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_label">
+              label
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>User project</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_user_project">
+              user_project
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_user_project_path">
+              user_project_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_user_targets">
+              user_targets
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>TargetInstaller & UserProjectIntegrator helpers</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_name">
+              name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_project">
+              project
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_relative_to_srcroot">
+              relative_to_srcroot
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_relative_pods_root">
+              relative_pods_root
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_support_files_root">
+              support_files_root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_xcconfig">
+              xcconfig
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_xcconfig_name">
+              xcconfig_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_xcconfig_path">
+              xcconfig_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_xcconfig_relative_path">
+              xcconfig_relative_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_copy_resources_script_name">
+              copy_resources_script_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_copy_resources_script_path">
+              copy_resources_script_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_copy_resources_script_relative_path">
+              copy_resources_script_relative_path
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_prefix_header_name">
+              prefix_header_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_prefix_header_path">
+              prefix_header_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_bridge_support_name">
+              bridge_support_name
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_bridge_support_path">
+              bridge_support_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_acknowledgements_path">
+              acknowledgements_path
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_library" class="tab-pane default">
+          <h2>Library</h2>
+          <p><p>Describes a library generated for the Pods project.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Project :: Library</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Library < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_target_definition" class="tab-pane">
+          <h2> target_definition </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target_definition</span> <span class="c1">#=&gt; PBXNativeTarget </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PBXNativeTarget</code></p>
+              <p>The target definition of the Podfile that
+generated this library.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target_definition</span>
+  <span class="vi">@target_definition</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L196">
+                  lib/cocoapods/project.rb:196
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_target" class="tab-pane">
+          <h2> target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target</span> <span class="c1">#=&gt; PBXNativeTarget </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PBXNativeTarget</code></p>
+              <p>The target generated in the Pods project for
+this library.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target</span>
+  <span class="vi">@target</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L201">
+                  lib/cocoapods/project.rb:201
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">target_definition</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="c1">#=&gt; Library </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>TargetDefinition</code> <b>target_definition</b></p>
+              <p>@see target_definition</p>
+
+            
+              
+
+              <p><code>PBXNativeTarget</code> <b>target</b></p>
+              <p>@see target</p>
+
+            
+              
+
+              <p><code>Project</code> <b>project</b></p>
+              <p>@see project</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Library</code></p>
+              <p>A new instance of Library</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">target_definition</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+  <span class="vi">@target_definition</span> <span class="o">=</span> <span class="n">target_definition</span>
+  <span class="vi">@target</span>  <span class="o">=</span> <span class="n">target</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L207">
+                  lib/cocoapods/project.rb:207
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_label" class="tab-pane">
+          <h2> label </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">label</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">label</span>
+  <span class="n">target_definition</span><span class="o">.</span><span class="n">label</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L212">
+                  lib/cocoapods/project.rb:212
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_user_project" class="tab-pane">
+          <h2> user_project </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">user_project</span> <span class="c1">#=&gt; Xcodeproj::Project </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Xcodeproj::Project</code></p>
+              <p>The project that will be integrated.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">user_project</span>
+  <span class="vi">@user_project</span> <span class="o">||=</span> <span class="no">Xcodeproj</span><span class="o">::</span><span class="no">Project</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">user_project_path</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L223">
+                  lib/cocoapods/project.rb:223
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_user_project_path" class="tab-pane">
+          <h2> user_project_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">user_project_path</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The path of the user project.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">user_project_path</span>
+  <span class="k">unless</span> <span class="vi">@user_project_path</span>
+    <span class="k">if</span> <span class="n">target_definition</span><span class="o">.</span><span class="n">user_project_path</span>
+      <span class="vi">@user_project_path</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_root</span> <span class="o">+</span> <span class="n">target_definition</span><span class="o">.</span><span class="n">user_project_path</span><span class="p">)</span>
+      <span class="k">unless</span> <span class="vi">@user_project_path</span><span class="o">.</span><span class="n">exist?</span>
+        <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;Unable to find the Xcode project `</span><span class="si">#{</span><span class="vi">@user_project_path</span><span class="si">}</span><span class="s2">` for the target `</span><span class="si">#{</span><span class="n">label</span><span class="si">}</span><span class="s2">`.&quot;</span>
+      <span class="k">end</span>
+    <span class="k">else</span>
+      <span class="n">xcodeprojs</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_root</span> <span class="o">+</span> <span class="s1">&#39;*.xcodeproj&#39;</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">xcodeprojs</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="vi">@user_project_path</span> <span class="o">=</span> <span class="n">xcodeprojs</span><span class="o">.</span><span class="n">first</span>
+      <span class="k">else</span>
+        <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;Could not automatically select an Xcode project. &quot;</span> <span class="p">\</span>
+          <span class="s2">&quot;Specify one in your Podfile like so:</span><span class="se">\n\n</span><span class="s2">&quot;</span> <span class="p">\</span>
+          <span class="s2">&quot;    xcodeproj &#39;path/to/Project.xcodeproj&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="vi">@user_project_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L236">
+                  lib/cocoapods/project.rb:236
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_user_targets" class="tab-pane">
+          <h2> user_targets </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">user_targets</span> <span class="c1">#=&gt; Array&lt;PBXNativeTarget&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;PBXNativeTarget&gt;</code></p>
+              <p>The list of targets that the Pods
+lib should be linked with.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">user_targets</span>
+  <span class="k">unless</span> <span class="vi">@targets</span>
+    <span class="k">if</span> <span class="n">link_with</span> <span class="o">=</span> <span class="n">target_definition</span><span class="o">.</span><span class="n">link_with</span>
+      <span class="vi">@targets</span> <span class="o">=</span> <span class="n">user_project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span> <span class="n">link_with</span><span class="o">.</span><span class="n">include?</span> <span class="n">t</span><span class="o">.</span><span class="n">name</span> <span class="p">}</span>
+      <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;Unable to find a target named `</span><span class="si">#{</span><span class="n">link_with</span><span class="o">.</span><span class="n">to_sentence</span><span class="si">}</span><span class="s2">` to link with target definition `</span><span class="si">#{</span><span class="n">target_definition</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">`&quot;</span> <span class="k">if</span> <span class="vi">@targets</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="k">elsif</span> <span class="n">target_definition</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="ss">:default</span>
+      <span class="n">target</span> <span class="o">=</span> <span class="n">user_project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span> <span class="n">t</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">target_definition</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">to_s</span> <span class="p">}</span>
+      <span class="vi">@targets</span> <span class="o">=</span> <span class="o">[</span> <span class="n">target</span> <span class="o">].</span><span class="n">compact</span>
+      <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;Unable to find a target named `</span><span class="si">#{</span><span class="n">target_definition</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">to_s</span><span class="si">}</span><span class="s2">`&quot;</span> <span class="k">if</span> <span class="vi">@targets</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="k">else</span>
+      <span class="vi">@targets</span> <span class="o">=</span> <span class="o">[</span> <span class="n">user_project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">first</span> <span class="o">].</span><span class="n">compact</span>
+      <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;Unable to find a target&quot;</span> <span class="k">if</span> <span class="vi">@targets</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="vi">@targets</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L273">
+                  lib/cocoapods/project.rb:273
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_name" class="tab-pane">
+          <h2> name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the library.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">name</span>
+  <span class="s2">&quot;lib</span><span class="si">#{</span><span class="n">target_definition</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s2">.a&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L296">
+                  lib/cocoapods/project.rb:296
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_project" class="tab-pane">
+          <h2> project </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">project</span> <span class="c1">#=&gt; Project </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Project</code></p>
+              <p>The Pods project.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">project</span>
+  <span class="n">target</span><span class="o">.</span><span class="n">project</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L302">
+                  lib/cocoapods/project.rb:302
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_relative_to_srcroot" class="tab-pane">
+          <h2> relative_to_srcroot </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">relative_to_srcroot</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>path</b></p>
+              
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The computed path.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">relative_to_srcroot</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="n">base_path</span> <span class="o">=</span> <span class="n">path</span> <span class="p">?</span> <span class="n">config</span><span class="o">.</span><span class="n">project_pods_root</span> <span class="o">+</span> <span class="n">path</span> <span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">project_pods_root</span>
+  <span class="p">(</span><span class="n">base_path</span><span class="p">)</span><span class="o">.</span><span class="n">relative_path_from</span><span class="p">(</span><span class="n">user_project_path</span><span class="o">.</span><span class="n">dirname</span><span class="p">)</span><span class="o">.</span><span class="n">to_s</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L313">
+                  lib/cocoapods/project.rb:313
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_relative_pods_root" class="tab-pane">
+          <h2> relative_pods_root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">relative_pods_root</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">relative_pods_root</span>
+  <span class="s2">&quot;${SRCROOT}/</span><span class="si">#{</span><span class="n">relative_to_srcroot</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L318">
+                  lib/cocoapods/project.rb:318
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_support_files_root" class="tab-pane">
+          <h2> support_files_root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">support_files_root</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The folder where to store the support files of this
+library.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">support_files_root</span>
+  <span class="n">project</span><span class="o">.</span><span class="n">sandbox</span><span class="o">.</span><span class="n">root</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L327">
+                  lib/cocoapods/project.rb:327
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcconfig" class="tab-pane">
+          <h2> xcconfig </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">xcconfig</span> <span class="c1">#=&gt; Xcodeproj::Config </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Xcodeproj::Config</code></p>
+              <p>The configuration file of the library</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">xcconfig</span>
+  <span class="vi">@xcconfig</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L339">
+                  lib/cocoapods/project.rb:339
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcconfig_name" class="tab-pane">
+          <h2> xcconfig_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">xcconfig_name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the xcconfig file relative to this target.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">xcconfig_name</span>
+  <span class="s2">&quot;</span><span class="si">#{</span><span class="n">label</span><span class="si">}</span><span class="s2">.xcconfig&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L343">
+                  lib/cocoapods/project.rb:343
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcconfig_path" class="tab-pane">
+          <h2> xcconfig_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">xcconfig_path</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The absolute path of the xcconfig file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">xcconfig_path</span>
+  <span class="n">support_files_root</span> <span class="o">+</span> <span class="n">xcconfig_name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L349">
+                  lib/cocoapods/project.rb:349
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcconfig_relative_path" class="tab-pane">
+          <h2> xcconfig_relative_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">xcconfig_relative_path</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The path of the xcconfig file relative to the root of
+the user project.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">xcconfig_relative_path</span>
+  <span class="n">relative_to_srcroot</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">xcconfig_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_s</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L356">
+                  lib/cocoapods/project.rb:356
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_copy_resources_script_name" class="tab-pane">
+          <h2> copy_resources_script_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">copy_resources_script_name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the copy resources script relative to this</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">copy_resources_script_name</span>
+  <span class="s2">&quot;</span><span class="si">#{</span><span class="n">label</span><span class="si">}</span><span class="s2">-resources.sh&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L365">
+                  lib/cocoapods/project.rb:365
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_copy_resources_script_path" class="tab-pane">
+          <h2> copy_resources_script_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">copy_resources_script_path</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The absolute path of the copy resources script.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">copy_resources_script_path</span>
+  <span class="n">support_files_root</span> <span class="o">+</span> <span class="n">copy_resources_script_name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L371">
+                  lib/cocoapods/project.rb:371
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_copy_resources_script_relative_path" class="tab-pane">
+          <h2> copy_resources_script_relative_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">copy_resources_script_relative_path</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The path of the copy resources script relative to the
+root of the user project.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">copy_resources_script_relative_path</span>
+  <span class="s2">&quot;${SRCROOT}/</span><span class="si">#{</span><span class="n">relative_to_srcroot</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">copy_resources_script_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L378">
+                  lib/cocoapods/project.rb:378
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prefix_header_name" class="tab-pane">
+          <h2> prefix_header_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prefix_header_name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the prefix header file relative to this
+target.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prefix_header_name</span>
+  <span class="s2">&quot;</span><span class="si">#{</span><span class="n">label</span><span class="si">}</span><span class="s2">-prefix.pch&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L387">
+                  lib/cocoapods/project.rb:387
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prefix_header_path" class="tab-pane">
+          <h2> prefix_header_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prefix_header_path</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The absolute path of the prefix header file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prefix_header_path</span>
+  <span class="n">support_files_root</span> <span class="o">+</span> <span class="n">prefix_header_name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L393">
+                  lib/cocoapods/project.rb:393
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_bridge_support_name" class="tab-pane">
+          <h2> bridge_support_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">bridge_support_name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the bridge support file relative to this
+target.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">bridge_support_name</span>
+  <span class="s2">&quot;</span><span class="si">#{</span><span class="n">label</span><span class="si">}</span><span class="s2">.bridgesupport&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L402">
+                  lib/cocoapods/project.rb:402
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_bridge_support_path" class="tab-pane">
+          <h2> bridge_support_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">bridge_support_path</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The absolute path of the bridge support file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">bridge_support_path</span>
+  <span class="n">support_files_root</span> <span class="o">+</span> <span class="n">bridge_support_name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L408">
+                  lib/cocoapods/project.rb:408
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_acknowledgements_path" class="tab-pane">
+          <h2> acknowledgements_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">acknowledgements_path</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">acknowledgements_path</span>
+  <span class="n">support_files_root</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">label</span><span class="si">}</span><span class="s2">-Acknowledgements&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/project.rb#L414">
+                  lib/cocoapods/project.rb:414
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

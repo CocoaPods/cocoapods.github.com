@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>HeadersDirectory Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: HeadersDirectory</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_headersdirectory">HeadersDirectory</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_root">
+              root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_prepare_for_install">
+              prepare_for_install
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_add_file">
+              add_file
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_add_files">
+              add_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_search_paths">
+              search_paths
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_add_search_path">
+              add_search_path
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_headersdirectory" class="tab-pane default">
+          <h2>HeadersDirectory</h2>
+          <p><p>Provides support for managing a header directory. It also keeps track of
+the header search paths.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: HeadersDirectory</code></p>
+          <h3>Inheritance</h3>
+          <p><code>HeadersDirectory < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_root" class="tab-pane">
+          <h2> root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">root</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The absolute path of this header directory.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">root</span>
+  <span class="vi">@sandbox</span><span class="o">.</span><span class="n">root</span> <span class="o">+</span> <span class="vi">@relative_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L169">
+                  lib/cocoapods/sandbox.rb:169
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">sandbox</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">)</span> <span class="c1">#=&gt; HeadersDirectory </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Sandbox</code> <b>sandbox</b></p>
+              <p>The sandbox that contains this header dir.</p>
+
+            
+              
+
+              <p><code>String</code> <b>relative_path</b></p>
+              <p>The relative path to the sandbox root and hence to the Pods
+project.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>HeadersDirectory</code></p>
+              <p>A new instance of HeadersDirectory</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">sandbox</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">)</span>
+  <span class="vi">@sandbox</span>       <span class="o">=</span> <span class="n">sandbox</span>
+  <span class="vi">@relative_path</span> <span class="o">=</span> <span class="n">relative_path</span>
+  <span class="vi">@search_paths</span>  <span class="o">=</span> <span class="o">[</span><span class="n">relative_path</span><span class="o">]</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L180">
+                  lib/cocoapods/sandbox.rb:180
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prepare_for_install" class="tab-pane">
+          <h2> prepare_for_install </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prepare_for_install</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prepare_for_install</span>
+  <span class="n">root</span><span class="o">.</span><span class="n">rmtree</span> <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">exist?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L195">
+                  lib/cocoapods/sandbox.rb:195
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_add_file" class="tab-pane">
+          <h2> add_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">add_file</span><span class="p">(</span><span class="n">namespace_path</span><span class="p">,</span> <span class="n">relative_header_path</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">add_file</span><span class="p">(</span><span class="n">namespace_path</span><span class="p">,</span> <span class="n">relative_header_path</span><span class="p">)</span>
+  <span class="n">namespaced_header_path</span> <span class="o">=</span> <span class="n">root</span> <span class="o">+</span> <span class="n">namespace_path</span>
+  <span class="n">namespaced_header_path</span><span class="o">.</span><span class="n">mkpath</span> <span class="k">unless</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">namespaced_header_path</span><span class="p">)</span>
+  <span class="n">source</span> <span class="o">=</span> <span class="p">(</span><span class="vi">@sandbox</span><span class="o">.</span><span class="n">root</span> <span class="o">+</span> <span class="n">relative_header_path</span><span class="p">)</span><span class="o">.</span><span class="n">relative_path_from</span><span class="p">(</span><span class="n">namespaced_header_path</span><span class="p">)</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">namespaced_header_path</span><span class="p">)</span> <span class="p">{</span> <span class="no">FileUtils</span><span class="o">.</span><span class="n">ln_sf</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">relative_header_path</span><span class="o">.</span><span class="n">basename</span><span class="p">)}</span>
+  <span class="vi">@search_paths</span> <span class="o">&lt;&lt;</span> <span class="n">namespaced_header_path</span><span class="o">.</span><span class="n">relative_path_from</span><span class="p">(</span><span class="vi">@sandbox</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+  <span class="n">namespaced_header_path</span> <span class="o">+</span> <span class="n">relative_header_path</span><span class="o">.</span><span class="n">basename</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L208">
+                  lib/cocoapods/sandbox.rb:208
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_add_files" class="tab-pane">
+          <h2> add_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">add_files</span><span class="p">(</span><span class="n">namespace_path</span><span class="p">,</span> <span class="n">relative_header_paths</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">add_files</span><span class="p">(</span><span class="n">namespace_path</span><span class="p">,</span> <span class="n">relative_header_paths</span><span class="p">)</span>
+  <span class="n">relative_header_paths</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="n">add_file</span><span class="p">(</span><span class="n">namespace_path</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L219">
+                  lib/cocoapods/sandbox.rb:219
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_search_paths" class="tab-pane">
+          <h2> search_paths </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">search_paths</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">search_paths</span>
+  <span class="vi">@search_paths</span><span class="o">.</span><span class="n">uniq</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="s2">&quot;${PODS_ROOT}/</span><span class="si">#{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L225">
+                  lib/cocoapods/sandbox.rb:225
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_add_search_path" class="tab-pane">
+          <h2> add_search_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">add_search_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>path</b></p>
+              <p>The path tho add.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">add_search_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="vi">@search_paths</span> <span class="o">&lt;&lt;</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="vi">@relative_path</span><span class="p">)</span> <span class="o">+</span> <span class="n">path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L236">
+                  lib/cocoapods/sandbox.rb:236
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

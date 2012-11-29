@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>PathList Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: LocalPod :: PathList</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_pathlist">PathList</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_root">
+              root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_files">
+              files
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_dirs">
+              dirs
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_read_file_system">
+              read_file_system
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_glob">
+              glob
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_relative_glob">
+              relative_glob
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_directory_">
+              directory?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dir_glob_equivalent_patterns">
+              dir_glob_equivalent_patterns
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_pathlist" class="tab-pane default">
+          <h2>PathList</h2>
+          <p><p>The {PathList} class is designed to perform multiple glob matches against
+  a given directory. Basically, it generates a list of all the children
+  paths and matches the globs patterns against them, resulting in just
+  one access to the file system.</p>
+
+<p>updated only if explicitly requested by calling
+{PathList#read<em>file</em>system}</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: LocalPod :: PathList</code></p>
+          <h3>Inheritance</h3>
+          <p><code>PathList < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_root" class="tab-pane">
+          <h2> root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">root</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The root of the list whose files and directories
+are used to perform the matching operations.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">root</span>
+  <span class="vi">@root</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L18">
+                  lib/cocoapods/local_pod/path_list.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="c1">#=&gt; PathList </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>root</b></p>
+              <p>The root of the PathList.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PathList</code></p>
+              <p>A new instance of PathList</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+  <span class="vi">@root</span> <span class="o">=</span> <span class="n">root</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L22">
+                  lib/cocoapods/local_pod/path_list.rb:22
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_files" class="tab-pane">
+          <h2> files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">files</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The list of absolute the path of all the files
+contained in {root}.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">files</span>
+  <span class="n">read_file_system</span> <span class="k">unless</span> <span class="vi">@files</span>
+  <span class="vi">@files</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L29">
+                  lib/cocoapods/local_pod/path_list.rb:29
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dirs" class="tab-pane">
+          <h2> dirs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dirs</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The list of absolute the path of all the
+directories contained in {root}.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dirs</span>
+  <span class="n">read_file_system</span> <span class="k">unless</span> <span class="vi">@dirs</span>
+  <span class="vi">@dirs</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L37">
+                  lib/cocoapods/local_pod/path_list.rb:37
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_read_file_system" class="tab-pane">
+          <h2> read_file_system </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">read_file_system</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Reads the file system and populates the files and paths
+lists.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">read_file_system</span>
+  <span class="n">root_length</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">length</span><span class="o">+</span><span class="mi">1</span>
+  <span class="n">paths</span> <span class="o">=</span> <span class="no">Dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="s2">&quot;**/*&quot;</span><span class="p">,</span> <span class="no">File</span><span class="o">::</span><span class="no">FNM_DOTMATCH</span><span class="p">)</span>
+  <span class="n">paths</span> <span class="o">=</span> <span class="n">paths</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="nb">p</span><span class="o">[</span><span class="n">root_length</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="p">}</span>
+  <span class="n">paths</span> <span class="o">=</span> <span class="n">paths</span><span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="nb">p</span> <span class="o">==</span> <span class="s1">&#39;.&#39;</span> <span class="o">||</span> <span class="nb">p</span> <span class="o">==</span> <span class="s1">&#39;..&#39;</span> <span class="p">}</span>
+  <span class="n">dirs_entries</span> <span class="o">=</span> <span class="n">paths</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="n">path</span><span class="o">.</span><span class="n">end_with?</span><span class="p">(</span><span class="s1">&#39;/.&#39;</span><span class="p">,</span> <span class="s1">&#39;/..&#39;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="vi">@files</span> <span class="o">=</span> <span class="n">paths</span> <span class="o">-</span> <span class="n">dirs_entries</span>
+  <span class="vi">@dirs</span>  <span class="o">=</span> <span class="n">dirs_entries</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">d</span><span class="o">|</span> <span class="n">d</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\/\.\.?$/</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">}</span><span class="o">.</span><span class="n">uniq</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L45">
+                  lib/cocoapods/local_pod/path_list.rb:45
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_glob" class="tab-pane">
+          <h2> glob </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">glob</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="n">dir_pattern</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">exclude_patterns</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>Similar to {glob} but returns the absolute
+paths.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">glob</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="n">dir_pattern</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">exclude_patterns</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="n">relative_glob</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="n">dir_pattern</span><span class="p">,</span> <span class="n">exclude_patterns</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="n">root</span> <span class="o">+</span> <span class="nb">p</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L58">
+                  lib/cocoapods/local_pod/path_list.rb:58
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_relative_glob" class="tab-pane">
+          <h2> relative_glob </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">relative_glob</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="n">dir_pattern</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">exclude_patterns</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code><code>Array<String></code> <b>patterns</b></p>
+              <p>A signle {Dir#glob} like
+pattern, or a list of patterns.</p>
+
+            
+              
+
+              <p><code>String</code> <b>dir_pattern</b></p>
+              <p>An optional pattern to append to a
+pattern, if it is the path to a
+directory.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The list of relative paths that are case
+insensitively matched by a given pattern. This method emulates
+{Dir#glob} with the {File::FNM_CASEFOLD} option.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">relative_glob</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="n">dir_pattern</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">exclude_patterns</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="k">return</span> <span class="o">[]</span> <span class="k">if</span> <span class="n">patterns</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="n">patterns</span> <span class="o">=</span> <span class="o">[</span> <span class="n">patterns</span> <span class="o">]</span> <span class="k">if</span> <span class="n">patterns</span><span class="o">.</span><span class="n">is_a?</span> <span class="nb">String</span>
+
+  <span class="n">list</span> <span class="o">=</span> <span class="n">patterns</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">pattern</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">pattern</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span>
+      <span class="n">pattern</span> <span class="o">+=</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">dir_pattern</span> <span class="k">if</span> <span class="n">directory?</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">dir_pattern</span>
+      <span class="n">expanded_patterns</span> <span class="o">=</span> <span class="n">dir_glob_equivalent_patterns</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+      <span class="n">files</span><span class="o">.</span><span class="n">select</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
+        <span class="n">expanded_patterns</span><span class="o">.</span><span class="n">any?</span> <span class="k">do</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span>
+          <span class="no">File</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="nb">p</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="no">File</span><span class="o">::</span><span class="no">FNM_CASEFOLD</span> <span class="o">|</span> <span class="no">File</span><span class="o">::</span><span class="no">FNM_PATHNAME</span><span class="p">)</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">else</span>
+      <span class="n">files</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="n">path</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="p">}</span>
+    <span class="k">end</span>
+  <span class="k">end</span><span class="o">.</span><span class="n">flatten</span>
+
+  <span class="n">list</span> <span class="o">-=</span> <span class="n">relative_glob</span><span class="p">(</span><span class="n">exclude_patterns</span><span class="p">)</span> <span class="k">if</span> <span class="n">exclude_patterns</span>
+
+  <span class="n">list</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L73">
+                  lib/cocoapods/local_pod/path_list.rb:73
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_directory_" class="tab-pane">
+          <h2> directory? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">directory?</span><span class="p">(</span><span class="n">sub_path</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code><code>Pathname</code> <b>sub_path</b></p>
+              <p>The path that could be a directory.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Wether a path is a directory. The result of this method
+computed without accessing the file system and is case insensitive.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">directory?</span><span class="p">(</span><span class="n">sub_path</span><span class="p">)</span>
+  <span class="n">sub_path</span> <span class="o">=</span> <span class="n">sub_path</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sr">/\/$/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+  <span class="n">dirs</span><span class="o">.</span><span class="n">any?</span> <span class="p">{</span> <span class="o">|</span><span class="n">dir</span><span class="o">|</span> <span class="n">dir</span><span class="o">.</span><span class="n">downcase</span> <span class="o">==</span> <span class="n">sub_path</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L101">
+                  lib/cocoapods/local_pod/path_list.rb:101
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dir_glob_equivalent_patterns" class="tab-pane">
+          <h2> dir_glob_equivalent_patterns </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dir_glob_equivalent_patterns</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>pattern</b></p>
+              <p>A {Dir#glob} like pattern.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>An array of patterns converted from a
+{Dir.glob} pattern to patterns that {File.fnmatch} can handle. This
+is used by the {#relative_glob} method to emulate {Dir.glob}.</p>
+
+<p>The expansion provides support for:</p>
+
+<ul>
+<li><p>Literals</p>
+
+<p>dir<em>glob</em>equivalent_patterns(&#39;{file1,file2}.{h,m}&#39;)
+=&gt; [&quot;file1.h&quot;, &quot;file1.m&quot;, &quot;file2.h&quot;, &quot;file2.m&quot;]</p></li>
+<li><p>Matching the direct children of a directory with <code>**</code></p>
+
+<p>dir<em>glob</em>equivalent_patterns(&#39;Classes/<strong>/file.m&#39;)
+=&gt; [&quot;Classes/</strong>/file.m&quot;, &quot;Classes/file.m&quot;]</p></li>
+</ul>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dir_glob_equivalent_patterns</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+  <span class="n">pattern</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s1">&#39;/**/&#39;</span><span class="p">,</span> <span class="s1">&#39;{/**/,/}&#39;</span><span class="p">)</span>
+  <span class="n">values_by_set</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">pattern</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/\{[^}]*\}/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">set</span><span class="o">|</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[{}]/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">values_by_set</span><span class="o">[</span><span class="n">set</span><span class="o">]</span> <span class="o">=</span> <span class="n">values</span>
+  <span class="k">end</span>
+
+  <span class="k">if</span> <span class="n">values_by_set</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="o">[</span> <span class="n">pattern</span> <span class="o">]</span>
+  <span class="k">else</span>
+    <span class="n">patterns</span> <span class="o">=</span> <span class="o">[</span> <span class="n">pattern</span> <span class="o">]</span>
+    <span class="n">values_by_set</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">set</span><span class="p">,</span> <span class="n">values</span><span class="o">|</span>
+      <span class="n">patterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">pattern</span><span class="o">|</span>
+        <span class="n">values</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+          <span class="n">pattern</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">end</span>
+      <span class="k">end</span><span class="o">.</span><span class="n">flatten</span>
+    <span class="k">end</span>
+    <span class="n">patterns</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod/path_list.rb#L124">
+                  lib/cocoapods/local_pod/path_list.rb:124
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

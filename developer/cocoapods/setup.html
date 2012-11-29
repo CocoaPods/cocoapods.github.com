@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Setup Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Command :: Setup</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_setup">Setup</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_dir">
+              dir
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_read_only_url">
+              read_only_url
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_read_write_url">
+              read_write_url
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_url">
+              url
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_origin_url_read_only_">
+              origin_url_read_only?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_origin_url_push_">
+              origin_url_push?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_push_">
+              push?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_read_master_repo_url">
+              read_master_repo_url
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_set_master_repo_url">
+              set_master_repo_url
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_add_master_repo">
+              add_master_repo
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_update_master_repo">
+              update_master_repo
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_set_master_repo_branch">
+              set_master_repo_branch
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_run_if_needed">
+              run_if_needed
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_run">
+              run
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_setup" class="tab-pane default">
+          <h2>Setup</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Command :: Setup</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Setup < Command < Command < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Setup </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Setup</code></p>
+              <p>A new instance of Setup</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="vi">@push_option</span>  <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;push&#39;</span><span class="p">)</span>
+  <span class="k">super</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L22">
+                  lib/cocoapods/command/setup.rb:22
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_dir" class="tab-pane">
+          <h2> dir </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">dir</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">dir</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">repos_dir</span> <span class="o">+</span> <span class="s1">&#39;master&#39;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L27">
+                  lib/cocoapods/command/setup.rb:27
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_read_only_url" class="tab-pane">
+          <h2> read_only_url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">read_only_url</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">read_only_url</span>
+  <span class="s1">&#39;https://github.com/CocoaPods/Specs.git&#39;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L31">
+                  lib/cocoapods/command/setup.rb:31
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_read_write_url" class="tab-pane">
+          <h2> read_write_url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">read_write_url</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">read_write_url</span>
+  <span class="s1">&#39;git@github.com:CocoaPods/Specs.git&#39;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L35">
+                  lib/cocoapods/command/setup.rb:35
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_url" class="tab-pane">
+          <h2> url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">url</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">url</span>
+  <span class="k">if</span> <span class="n">push?</span>
+    <span class="n">read_write_url</span>
+  <span class="k">else</span>
+    <span class="n">read_only_url</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L39">
+                  lib/cocoapods/command/setup.rb:39
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_origin_url_read_only_" class="tab-pane">
+          <h2> origin_url_read_only? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">origin_url_read_only?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">origin_url_read_only?</span>
+  <span class="n">read_master_repo_url</span><span class="o">.</span><span class="n">chomp</span> <span class="o">==</span> <span class="n">read_only_url</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L47">
+                  lib/cocoapods/command/setup.rb:47
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_origin_url_push_" class="tab-pane">
+          <h2> origin_url_push? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">origin_url_push?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">origin_url_push?</span>
+  <span class="n">read_master_repo_url</span><span class="o">.</span><span class="n">chomp</span> <span class="o">==</span> <span class="n">read_write_url</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L51">
+                  lib/cocoapods/command/setup.rb:51
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_push_" class="tab-pane">
+          <h2> push? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">push?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">push?</span>
+  <span class="vi">@push_option</span> <span class="o">||</span> <span class="p">(</span><span class="n">dir</span><span class="o">.</span><span class="n">exist?</span> <span class="o">&amp;&amp;</span> <span class="n">origin_url_push?</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L55">
+                  lib/cocoapods/command/setup.rb:55
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_read_master_repo_url" class="tab-pane">
+          <h2> read_master_repo_url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">read_master_repo_url</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">read_master_repo_url</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">origin_url</span> <span class="o">=</span> <span class="n">git</span><span class="p">(</span><span class="s1">&#39;config --get remote.origin.url&#39;</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L59">
+                  lib/cocoapods/command/setup.rb:59
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_set_master_repo_url" class="tab-pane">
+          <h2> set_master_repo_url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">set_master_repo_url</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">set_master_repo_url</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">git</span><span class="p">(</span><span class="s2">&quot;remote set-url origin &#39;</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L65">
+                  lib/cocoapods/command/setup.rb:65
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_add_master_repo" class="tab-pane">
+          <h2> add_master_repo </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">add_master_repo</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">add_master_repo</span>
+  <span class="vi">@command</span> <span class="o">||=</span> <span class="no">Repo</span><span class="o">::</span><span class="no">Add</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="o">[</span><span class="s1">&#39;master&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="s1">&#39;master&#39;</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">run</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L71">
+                  lib/cocoapods/command/setup.rb:71
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_update_master_repo" class="tab-pane">
+          <h2> update_master_repo </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">update_master_repo</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">update_master_repo</span>
+  <span class="no">Repo</span><span class="o">::</span><span class="no">Update</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">[</span><span class="s1">&#39;master&#39;</span><span class="o">]</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L75">
+                  lib/cocoapods/command/setup.rb:75
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_set_master_repo_branch" class="tab-pane">
+          <h2> set_master_repo_branch </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">set_master_repo_branch</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">set_master_repo_branch</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">git</span><span class="p">(</span><span class="s2">&quot;checkout master&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L79">
+                  lib/cocoapods/command/setup.rb:79
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_run_if_needed" class="tab-pane">
+          <h2> run_if_needed </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">run_if_needed</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">run_if_needed</span>
+  <span class="n">run</span> <span class="k">unless</span> <span class="n">dir</span><span class="o">.</span><span class="n">exist?</span> <span class="o">&amp;&amp;</span> <span class="no">Repo</span><span class="o">.</span><span class="n">compatible?</span><span class="p">(</span><span class="s1">&#39;master&#39;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L85">
+                  lib/cocoapods/command/setup.rb:85
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_run" class="tab-pane">
+          <h2> run </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">run</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">run</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">section</span> <span class="s2">&quot;Setting up CocoaPods master repo&quot;</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="n">dir</span><span class="o">.</span><span class="n">exist?</span>
+      <span class="n">set_master_repo_url</span>
+      <span class="n">set_master_repo_branch</span>
+      <span class="n">update_master_repo</span>
+    <span class="k">else</span>
+      <span class="n">add_master_repo</span>
+    <span class="k">end</span>
+    <span class="c1"># Mainly so the specs run with submodule repos</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">dir</span> <span class="o">+</span> <span class="s1">&#39;.git/hooks&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">exist?</span>
+      <span class="n">hook</span> <span class="o">=</span> <span class="n">dir</span> <span class="o">+</span> <span class="s1">&#39;.git/hooks/pre-commit&#39;</span>
+      <span class="n">hook</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;#!/bin/sh</span><span class="se">\n</span><span class="s2">rake lint&quot;</span> <span class="p">}</span>
+      <span class="sb">`chmod +x &#39;</span><span class="si">#{</span><span class="n">hook</span><span class="si">}</span><span class="sb">&#39;`</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Setup completed (</span><span class="si">#{</span><span class="n">push?</span> <span class="p">?</span> <span class="s2">&quot;push&quot;</span> <span class="p">:</span> <span class="s2">&quot;read-only&quot;</span><span class="si">}</span><span class="s2"> access)&quot;</span><span class="o">.</span><span class="n">green</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/setup.rb#L89">
+                  lib/cocoapods/command/setup.rb:89
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

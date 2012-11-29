@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Create Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Command :: Spec :: Create</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_create">Create</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_validate_">
+              validate!
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_run">
+              run
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_create" class="tab-pane default">
+          <h2>Create</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Command :: Spec :: Create</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Create < Spec < Command < Command < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Create </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Create</code></p>
+              <p>A new instance of Create</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="vi">@name_or_url</span><span class="p">,</span> <span class="vi">@url</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">shift_argument</span><span class="p">,</span> <span class="n">argv</span><span class="o">.</span><span class="n">shift_argument</span>
+  <span class="k">super</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/spec.rb#L22">
+                  lib/cocoapods/command/spec.rb:22
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_validate_" class="tab-pane">
+          <h2> validate! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">validate!</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">validate!</span>
+  <span class="k">super</span>
+  <span class="n">help!</span> <span class="s2">&quot;A pod name or repo URL is required.&quot;</span> <span class="k">unless</span> <span class="vi">@name_or_url</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/spec.rb#L27">
+                  lib/cocoapods/command/spec.rb:27
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_run" class="tab-pane">
+          <h2> run </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">run</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">run</span>
+  <span class="k">if</span> <span class="n">repo_id_match</span> <span class="o">=</span> <span class="p">(</span><span class="vi">@url</span> <span class="o">||</span> <span class="vi">@name_or_url</span><span class="p">)</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/github.com\/([^\/\.]*\/[^\/\.]*)\.*/</span><span class="p">)</span>
+    <span class="c1"># This is to make sure Faraday doesn&#39;t warn the user about the `system_timer` gem missing.</span>
+    <span class="n">old_warn</span><span class="p">,</span> <span class="vg">$-w</span> <span class="o">=</span> <span class="vg">$-w</span><span class="p">,</span> <span class="kp">nil</span>
+    <span class="k">begin</span>
+      <span class="nb">require</span> <span class="s1">&#39;faraday&#39;</span>
+    <span class="k">ensure</span>
+      <span class="vg">$-w</span> <span class="o">=</span> <span class="n">old_warn</span>
+    <span class="k">end</span>
+    <span class="nb">require</span> <span class="s1">&#39;octokit&#39;</span>
+
+    <span class="n">repo_id</span> <span class="o">=</span> <span class="n">repo_id_match</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">github_data_for_template</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span>
+    <span class="n">data</span><span class="o">[</span><span class="ss">:name</span><span class="o">]</span> <span class="o">=</span> <span class="vi">@name_or_url</span> <span class="k">if</span> <span class="vi">@url</span>
+    <span class="no">UI</span><span class="o">.</span><span class="n">puts</span> <span class="n">semantic_versioning_notice</span><span class="p">(</span><span class="n">repo_id</span><span class="p">,</span> <span class="n">data</span><span class="o">[</span><span class="ss">:name</span><span class="o">]</span><span class="p">)</span> <span class="k">if</span> <span class="n">data</span><span class="o">[</span><span class="ss">:version</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;0.0.1&#39;</span>
+  <span class="k">else</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">default_data_for_template</span><span class="p">(</span><span class="vi">@name_or_url</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">spec</span> <span class="o">=</span> <span class="n">spec_template</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+  <span class="p">(</span><span class="no">Pathname</span><span class="o">.</span><span class="n">pwd</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">data</span><span class="o">[</span><span class="ss">:name</span><span class="o">]</span><span class="si">}</span><span class="s2">.podspec&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span> <span class="o">&lt;&lt;</span> <span class="n">spec</span> <span class="p">}</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Specification created at </span><span class="si">#{</span><span class="n">data</span><span class="o">[</span><span class="ss">:name</span><span class="o">]</span><span class="si">}</span><span class="s2">.podspec&quot;</span><span class="o">.</span><span class="n">green</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/spec.rb#L32">
+                  lib/cocoapods/command/spec.rb:32
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Outdated Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Command :: Outdated</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_outdated">Outdated</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_run">
+              run
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_outdated" class="tab-pane default">
+          <h2>Outdated</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Command :: Outdated</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Outdated < Command < Command < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Outdated </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Outdated</code></p>
+              <p>A new instance of Outdated</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">skip_repo_update</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="kp">true</span><span class="p">)</span>
+  <span class="k">super</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/outdated.rb#L15">
+                  lib/cocoapods/command/outdated.rb:15
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_run" class="tab-pane">
+          <h2> run </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">run</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">run</span>
+  <span class="n">verify_podfile_exists!</span>
+  <span class="n">verify_lockfile_exists!</span>
+
+  <span class="n">sandbox</span> <span class="o">=</span> <span class="no">Sandbox</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_pods_root</span><span class="p">)</span>
+  <span class="n">resolver</span> <span class="o">=</span> <span class="no">Resolver</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">podfile</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">lockfile</span><span class="p">,</span> <span class="n">sandbox</span><span class="p">)</span>
+  <span class="n">resolver</span><span class="o">.</span><span class="n">update_mode</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="n">resolver</span><span class="o">.</span><span class="n">update_external_specs</span> <span class="o">=</span> <span class="kp">false</span>
+  <span class="n">resolver</span><span class="o">.</span><span class="n">resolve</span>
+
+  <span class="c1">#TODO: the command report new dependencies (added to by updated ones)</span>
+  <span class="c1"># as updates.</span>
+
+  <span class="n">names</span> <span class="o">=</span> <span class="n">resolver</span><span class="o">.</span><span class="n">pods_to_install</span> <span class="o">-</span> <span class="n">resolver</span><span class="o">.</span><span class="n">pods_from_external_sources</span>
+  <span class="n">specs</span> <span class="o">=</span> <span class="n">resolver</span><span class="o">.</span><span class="n">specs</span><span class="o">.</span><span class="n">select</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+    <span class="n">names</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">spec</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">head?</span>
+  <span class="k">end</span>
+
+  <span class="k">if</span> <span class="n">specs</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="nb">puts</span> <span class="s2">&quot;No updates are available.&quot;</span><span class="o">.</span><span class="n">yellow</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s2">&quot;The following updates are available:&quot;</span><span class="o">.</span><span class="n">green</span>
+    <span class="nb">puts</span> <span class="s2">&quot;  - &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">specs</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  - &quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/outdated.rb#L20">
+                  lib/cocoapods/command/outdated.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

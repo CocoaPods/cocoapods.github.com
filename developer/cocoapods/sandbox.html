@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Sandbox Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Sandbox</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_sandbox">Sandbox</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_root">
+              root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_build_headers">
+              build_headers
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_public_headers">
+              public_headers
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_project_path">
+              project_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_inspect">
+              inspect
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_prepare_for_install">
+              prepare_for_install
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_implode">
+              implode
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_locally_sourced_pod_for_spec">
+              locally_sourced_pod_for_spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_local_pod_for_spec">
+              local_pod_for_spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_installed_pod_named">
+              installed_pod_named
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_podspec_for_name">
+              podspec_for_name
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_specification">
+              specification
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_predownloaded_pods">
+              predownloaded_pods
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_sandbox" class="tab-pane default">
+          <h2>Sandbox</h2>
+          <p><p>The sandbox provides support for the directory that CocoaPods uses for an
+installation. In this directory the Pods projects, the support files and
+the sources of the Pods are stored.</p>
+
+<p>CocoaPods assumes to have control of the sandbox.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Sandbox</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Sandbox < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_root" class="tab-pane">
+          <h2> root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">root</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The root of the sandbox.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">root</span>
+  <span class="vi">@root</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L25">
+                  lib/cocoapods/sandbox.rb:25
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_build_headers" class="tab-pane">
+          <h2> build_headers </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">build_headers</span> <span class="c1">#=&gt; HeadersDirectory </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>HeadersDirectory</code></p>
+              <p>The header directory for the Pods libraries.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">build_headers</span>
+  <span class="vi">@build_headers</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L29">
+                  lib/cocoapods/sandbox.rb:29
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_public_headers" class="tab-pane">
+          <h2> public_headers </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">public_headers</span> <span class="c1">#=&gt; HeadersDirectory </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>HeadersDirectory</code></p>
+              <p>The header directory for the user targets.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">public_headers</span>
+  <span class="vi">@public_headers</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L33">
+                  lib/cocoapods/sandbox.rb:33
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="c1">#=&gt; Sandbox </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code><code>Pathname</code> <b>root</b></p>
+              <p>@see root</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Sandbox</code></p>
+              <p>A new instance of Sandbox</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+  <span class="vi">@root</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+  <span class="vi">@build_headers</span>  <span class="o">=</span> <span class="no">HeadersDirectory</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="no">BUILD_HEADERS_DIR</span><span class="p">)</span>
+  <span class="vi">@public_headers</span> <span class="o">=</span> <span class="no">HeadersDirectory</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="no">PUBLIC_HEADERS_DIR</span><span class="p">)</span>
+  <span class="vi">@cached_local_pods</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="vi">@cached_locally_sourced_pods</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="vi">@predownloaded_pods</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="no">FileUtils</span><span class="o">.</span><span class="n">mkdir_p</span><span class="p">(</span><span class="vi">@root</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L37">
+                  lib/cocoapods/sandbox.rb:37
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_project_path" class="tab-pane">
+          <h2> project_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">project_path</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The path of the Pod project.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">project_path</span>
+  <span class="n">root</span> <span class="o">+</span> <span class="s2">&quot;Pods.xcodeproj&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L49">
+                  lib/cocoapods/sandbox.rb:49
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_inspect" class="tab-pane">
+          <h2> inspect </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">inspect</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string representation suitable for debugging.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">inspect</span>
+  <span class="s2">&quot;#&lt;</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2">&gt; with root </span><span class="si">#{</span><span class="n">root</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L55">
+                  lib/cocoapods/sandbox.rb:55
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prepare_for_install" class="tab-pane">
+          <h2> prepare_for_install </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prepare_for_install</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prepare_for_install</span>
+  <span class="n">build_headers</span><span class="o">.</span><span class="n">prepare_for_install</span>
+  <span class="n">public_headers</span><span class="o">.</span><span class="n">prepare_for_install</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L69">
+                  lib/cocoapods/sandbox.rb:69
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_implode" class="tab-pane">
+          <h2> implode </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">implode</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">implode</span>
+  <span class="n">root</span><span class="o">.</span><span class="n">rmtree</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L78">
+                  lib/cocoapods/sandbox.rb:78
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_locally_sourced_pod_for_spec" class="tab-pane">
+          <h2> locally_sourced_pod_for_spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">locally_sourced_pod_for_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; LocalPod </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>LocalPod</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">locally_sourced_pod_for_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+  <span class="n">key</span> <span class="o">=</span> <span class="o">[</span><span class="n">spec</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span>
+  <span class="n">local_pod</span> <span class="o">=</span> <span class="vi">@cached_locally_sourced_pods</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">||=</span> <span class="no">LocalPod</span><span class="o">::</span><span class="no">LocalSourcedPod</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="nb">self</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+  <span class="n">local_pod</span><span class="o">.</span><span class="n">add_specification</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+  <span class="n">local_pod</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L93">
+                  lib/cocoapods/sandbox.rb:93
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_local_pod_for_spec" class="tab-pane">
+          <h2> local_pod_for_spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">local_pod_for_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">local_pod_for_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+  <span class="n">key</span> <span class="o">=</span> <span class="o">[</span><span class="n">spec</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span>
+  <span class="p">(</span><span class="vi">@cached_local_pods</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">||=</span> <span class="no">LocalPod</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="nb">self</span><span class="p">,</span> <span class="n">platform</span><span class="p">))</span><span class="o">.</span><span class="n">tap</span> <span class="k">do</span> <span class="o">|</span><span class="n">pod</span><span class="o">|</span>
+    <span class="n">pod</span><span class="o">.</span><span class="n">add_specification</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L100">
+                  lib/cocoapods/sandbox.rb:100
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_installed_pod_named" class="tab-pane">
+          <h2> installed_pod_named </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">installed_pod_named</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; LocalPod </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>LocalPod</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">installed_pod_named</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">spec_path</span> <span class="o">=</span> <span class="n">podspec_for_name</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="o">[</span><span class="nb">name</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">to_sym</span><span class="o">]</span>
+    <span class="vi">@cached_local_pods</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">||=</span> <span class="no">LocalPod</span><span class="o">.</span><span class="n">from_podspec</span><span class="p">(</span><span class="n">spec_path</span><span class="p">,</span> <span class="nb">self</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L109">
+                  lib/cocoapods/sandbox.rb:109
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_podspec_for_name" class="tab-pane">
+          <h2> podspec_for_name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">podspec_for_name</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>name</b></p>
+              <p>The name of the Pod for which the podspec file is requested.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The path or nil.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">podspec_for_name</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="n">root</span> <span class="o">+</span> <span class="s2">&quot;Local Podspecs/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.podspec&quot;</span>
+  <span class="n">path</span><span class="o">.</span><span class="n">exist?</span> <span class="p">?</span> <span class="n">path</span> <span class="p">:</span> <span class="kp">nil</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L124">
+                  lib/cocoapods/sandbox.rb:124
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_specification" class="tab-pane">
+          <h2> specification </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">specification</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>name</b></p>
+              <p>The name of the Pod for which the specification is requested.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>The specification if the file is found.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">specification</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">file</span> <span class="o">=</span> <span class="n">podspec_for_name</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="no">Specification</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L136">
+                  lib/cocoapods/sandbox.rb:136
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_predownloaded_pods" class="tab-pane">
+          <h2> predownloaded_pods </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">predownloaded_pods</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The names of the pods that have been
+pre-downloaded from an external source.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">predownloaded_pods</span>
+  <span class="vi">@predownloaded_pods</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/sandbox.rb#L147">
+                  lib/cocoapods/sandbox.rb:147
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

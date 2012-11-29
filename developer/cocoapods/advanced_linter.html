@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>AdvancedLinter Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Command :: AdvancedLinter</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_advancedlinter">AdvancedLinter</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_spec">
+              spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_file">
+              file
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_simple_linter">
+              simple_linter
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_lint">
+              lint
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_quick">
+              quick
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_no_clean">
+              no_clean
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_repo_path">
+              repo_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_local_">
+              local=
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_local_">
+              local?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_notes">
+              notes
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_result_type">
+              result_type
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_advancedlinter" class="tab-pane default">
+          <h2>AdvancedLinter</h2>
+          <p><p>Extends the Linter from the Core to add additional which require the
+LocalPod and the Installer.</p>
+
+<p>In detail it checks that the file patterns defined by the user match
+actually do match at least a file and that the Pod builds, by installing
+it without integration and building the project with xcodebuild.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Command :: AdvancedLinter</code></p>
+          <h3>Inheritance</h3>
+          <p><code>AdvancedLinter < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">spec_or_path</span><span class="p">)</span> <span class="c1">#=&gt; AdvancedLinter </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Specification</code><code>Pathname</code><code>String</code> <b>spec_or_path</b></p>
+              <p>The Specification or the path of the <code>podspec</code> file to lint.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>AdvancedLinter</code></p>
+              <p>A new instance of AdvancedLinter</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">spec_or_path</span><span class="p">)</span>
+  <span class="vi">@simple_linter</span> <span class="o">=</span> <span class="no">Specification</span><span class="o">::</span><span class="no">Linter</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">spec_or_path</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L18">
+                  lib/cocoapods/command/advanced_linter.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_spec" class="tab-pane">
+          <h2> spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">spec</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>The specification to lint.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">spec</span>
+  <span class="vi">@simple_linter</span><span class="o">.</span><span class="n">spec</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L24">
+                  lib/cocoapods/command/advanced_linter.rb:24
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_file" class="tab-pane">
+          <h2> file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">file</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The path of the <code>podspec</code> file where {#spec} is
+defined.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">file</span>
+  <span class="vi">@simple_linter</span><span class="o">.</span><span class="n">file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L31">
+                  lib/cocoapods/command/advanced_linter.rb:31
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_simple_linter" class="tab-pane">
+          <h2> simple_linter </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">simple_linter</span> <span class="c1">#=&gt; Specification::Linter </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification::Linter</code></p>
+              <p>The linter instance from CocoaPods
+Core.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">simple_linter</span>
+  <span class="vi">@simple_linter</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L38">
+                  lib/cocoapods/command/advanced_linter.rb:38
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_lint" class="tab-pane">
+          <h2> lint </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">lint</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the specification passed validation.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">lint</span>
+  <span class="c1"># Show immediately which pod is being processed.</span>
+  <span class="nb">print</span> <span class="s2">&quot; -&gt; </span><span class="si">#{</span><span class="n">spec</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="se">\r</span><span class="s2">&quot;</span> <span class="k">unless</span> <span class="n">config</span><span class="o">.</span><span class="n">silent?</span>
+  <span class="vg">$stdout</span><span class="o">.</span><span class="n">flush</span>
+
+  <span class="n">simple_linter</span><span class="o">.</span><span class="n">lint</span>
+  <span class="k">unless</span> <span class="n">quick</span>
+    <span class="n">check_repo_path</span>
+    <span class="n">spec</span><span class="o">.</span><span class="n">available_platforms</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">platform</span><span class="o">|</span>
+      <span class="no">UI</span><span class="o">.</span><span class="n">section</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="si">#{</span><span class="n">spec</span><span class="si">}</span><span class="s2"> - Analyzing on </span><span class="si">#{</span><span class="n">platform</span><span class="si">}</span><span class="s2"> platform.&quot;</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">reversed</span> <span class="k">do</span>
+        <span class="c1"># current_platform = platform</span>
+        <span class="c1"># set_up_lint_environment</span>
+        <span class="c1"># install_pod</span>
+        <span class="c1"># build_pod</span>
+        <span class="c1"># check_file_patterns</span>
+        <span class="c1"># tear_down_lint_environment</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="c1"># This overwrites the previously printed text</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot; -&gt; &quot;</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">color</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">spec</span><span class="o">.</span><span class="n">name</span> <span class="k">unless</span> <span class="n">config</span><span class="o">.</span><span class="n">silent?</span>
+  <span class="n">print_messages</span><span class="p">(</span><span class="s1">&#39;ERROR&#39;</span><span class="p">,</span> <span class="n">simple_linter</span><span class="o">.</span><span class="n">errors</span><span class="p">)</span>
+  <span class="n">print_messages</span><span class="p">(</span><span class="s1">&#39;WARN&#39;</span><span class="p">,</span>  <span class="n">simple_linter</span><span class="o">.</span><span class="n">warnings</span><span class="p">)</span>
+  <span class="n">print_messages</span><span class="p">(</span><span class="s1">&#39;NOTE&#39;</span><span class="p">,</span>  <span class="n">simple_linter</span><span class="o">.</span><span class="n">notes</span><span class="p">)</span>
+
+  <span class="no">UI</span><span class="o">.</span><span class="n">puts</span> <span class="k">unless</span> <span class="n">config</span><span class="o">.</span><span class="n">silent?</span>
+
+  <span class="n">errors</span><span class="o">.</span><span class="n">empty?</span> <span class="o">&amp;&amp;</span> <span class="n">warnings</span><span class="o">.</span><span class="n">empty?</span> <span class="o">&amp;&amp;</span> <span class="n">deprecations</span><span class="o">.</span><span class="n">empty?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L45">
+                  lib/cocoapods/command/advanced_linter.rb:45
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_quick" class="tab-pane">
+          <h2> quick </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">quick</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the lint should skip the checks that requires</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">quick</span>
+  <span class="vi">@quick</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L83">
+                  lib/cocoapods/command/advanced_linter.rb:83
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_no_clean" class="tab-pane">
+          <h2> no_clean </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">no_clean</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the linter should not clean up temporary files</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">no_clean</span>
+  <span class="vi">@no_clean</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L88">
+                  lib/cocoapods/command/advanced_linter.rb:88
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_repo_path" class="tab-pane">
+          <h2> repo_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">repo_path</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>Whether the lint should be performed</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">repo_path</span>
+  <span class="vi">@repo_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L92">
+                  lib/cocoapods/command/advanced_linter.rb:92
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_local_" class="tab-pane">
+          <h2> local= </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">local</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the lint should be performed against the root of
+the podspec instead to its original source. Uses the <code>:local</code> option
+of the Podfile.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">local</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="vi">@local</span> <span class="o">=</span> <span class="n">value</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L98">
+                  lib/cocoapods/command/advanced_linter.rb:98
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_local_" class="tab-pane">
+          <h2> local? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">local?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">local?</span><span class="p">;</span> <span class="vi">@local</span><span class="p">;</span> <span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L99">
+                  lib/cocoapods/command/advanced_linter.rb:99
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_notes" class="tab-pane">
+          <h2> notes </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">notes</span> <span class="c1">#=&gt; Array&lt;Result&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Result&gt;</code></p>
+              <p>All the notes generated by the Linter.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">notes</span>
+  <span class="vi">@errors</span> <span class="o">||=</span> <span class="n">results</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">r</span><span class="o">|</span> <span class="n">r</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="ss">:note</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L109">
+                  lib/cocoapods/command/advanced_linter.rb:109
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_result_type" class="tab-pane">
+          <h2> result_type </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">result_type</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">result_type</span>
+  <span class="ss">:note</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/command/advanced_linter.rb#L114">
+                  lib/cocoapods/command/advanced_linter.rb:114
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

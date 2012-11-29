@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Indenter Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Executable :: Indenter</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_indenter">Indenter</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_indent">
+              indent
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_io">
+              io
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab___">
+              <<
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_indenter" class="tab-pane default">
+          <h2>Indenter</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Executable :: Indenter</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Indenter < Array < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_indent" class="tab-pane">
+          <h2> indent </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">indent</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">indent</span>
+  <span class="vi">@indent</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/executable.rb#L8">
+                  lib/cocoapods/executable.rb:8
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_io" class="tab-pane">
+          <h2> io </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">io</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">io</span>
+  <span class="vi">@io</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/executable.rb#L9">
+                  lib/cocoapods/executable.rb:9
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">io</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> <span class="c1">#=&gt; Indenter </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Indenter</code></p>
+              <p>A new instance of Indenter</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">io</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="vi">@io</span> <span class="o">=</span> <span class="n">io</span>
+  <span class="vi">@indent</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="no">UI</span><span class="o">.</span><span class="n">indentation_level</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/executable.rb#L11">
+                  lib/cocoapods/executable.rb:11
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab___" class="tab-pane">
+          <h2> << </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">&lt;&lt;</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="k">super</span>
+<span class="k">ensure</span>
+  <span class="vi">@io</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="n">indent</span> <span class="si">}#{</span> <span class="n">value</span> <span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="vi">@io</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/executable.rb#L16">
+                  lib/cocoapods/executable.rb:16
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

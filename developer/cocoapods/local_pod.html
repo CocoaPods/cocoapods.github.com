@@ -1,0 +1,2803 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>LocalPod Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: LocalPod</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_localpod">LocalPod</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_top_specification">
+              top_specification
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_specifications">
+              specifications
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_sandbox">
+              sandbox
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_platform">
+              platform
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_downloaded">
+              downloaded
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_downloaded_">
+              downloaded?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_add_specification">
+              add_specification
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_root">
+              root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_path_list">
+              path_list
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_to_s">
+              to_s
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_name">
+              name
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Installation</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_create">
+              create
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_exists_">
+              exists?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_chdir">
+              chdir
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_implode">
+              implode
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_local_">
+              local?
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Cleaning</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_clean_">
+              clean!
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_clean_paths">
+              clean_paths
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_used_files">
+              used_files
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+                  
+                    <h2 class="first_of_column" >
+                  
+                  <a>Files</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_relativize_from_sandbox">
+              relativize_from_sandbox
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_source_files">
+              source_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_relative_source_files">
+              relative_source_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_relative_source_files_by_spec">
+              relative_source_files_by_spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_source_files_by_spec">
+              source_files_by_spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_header_files">
+              header_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_relative_header_files">
+              relative_header_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_header_files_by_spec">
+              header_files_by_spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_public_header_files_by_spec">
+              public_header_files_by_spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_resource_files">
+              resource_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_relative_resource_files">
+              relative_resource_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_prefix_header_file">
+              prefix_header_file
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_preserve_files">
+              preserve_files
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_readme_file">
+              readme_file
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_license_file">
+              license_file
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_license_text">
+              license_text
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_xcconfig">
+              xcconfig
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_documentation_headers">
+              documentation_headers
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Xcodeproj integration</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_add_file_references_to_project">
+              add_file_references_to_project
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_file_references_by_spec">
+              file_references_by_spec
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_add_build_files_to_target">
+              add_build_files_to_target
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_link_headers">
+              link_headers
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_requires_arc_">
+              requires_arc?
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_localpod" class="tab-pane default">
+          <h2>LocalPod</h2>
+          <p><p>A {LocalPod} interfaces one or more specifications belonging to one pod
+(a library) and their concrete instance in the file system.</p>
+
+<p>The {LocalPod} is responsible for orchestrating the activated
+specifications of a single pod. Specifically, it keeps track of the
+activated specifications and handles issues related to duplicates
+files.
+Inheritance logic belongs to the {Specification} class.</p>
+
+<p>The activated specifications are used to compute the paths that can be
+safely cleaned by the pod.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: LocalPod</code></p>
+          <h3>Inheritance</h3>
+          <p><code>LocalPod < Object</code></p>
+          
+            <h3>Namespaces</h3>
+            
+              <p><a href="../cocoapods/path_list.html">
+              <code>Pod :: LocalPod :: PathList</code>
+            </a></p>
+            
+              <p><a href="../cocoapods/local_sourced_pod.html">
+              <code>Pod :: LocalPod :: LocalSourcedPod</code>
+            </a></p>
+            
+          
+        </div>
+
+
+        
+          <div id="tab_top_specification" class="tab-pane">
+          <h2> top_specification </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">top_specification</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>The specification that describes the pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">top_specification</span>
+  <span class="vi">@top_specification</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L28">
+                  lib/cocoapods/local_pod.rb:28
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_specifications" class="tab-pane">
+          <h2> specifications </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">specifications</span> <span class="c1">#=&gt; Specification </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Specification</code></p>
+              <p>The activated specifications of the pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">specifications</span>
+  <span class="vi">@specifications</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L32">
+                  lib/cocoapods/local_pod.rb:32
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_sandbox" class="tab-pane">
+          <h2> sandbox </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">sandbox</span> <span class="c1">#=&gt; Sandbox </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Sandbox</code></p>
+              <p>The sandbox where the pod is installed.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">sandbox</span>
+  <span class="vi">@sandbox</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L36">
+                  lib/cocoapods/local_pod.rb:36
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_platform" class="tab-pane">
+          <h2> platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">platform</span> <span class="c1">#=&gt; Platform </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Platform</code></p>
+              <p>The platform that will be used to build the pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">platform</span>
+  <span class="vi">@platform</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L40">
+                  lib/cocoapods/local_pod.rb:40
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_downloaded" class="tab-pane">
+          <h2> downloaded </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">downloaded</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              <p>Wether or not the pod has been downloaded in the
+current install process and still needs its docs
+generated and be cleaned.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">downloaded</span>
+  <span class="vi">@downloaded</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L46">
+                  lib/cocoapods/local_pod.rb:46
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_downloaded_" class="tab-pane">
+          <h2> downloaded? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">downloaded?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              <p>Wether or not the pod has been downloaded in the
+current install process and still needs its docs
+generated and be cleaned.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">downloaded</span>
+  <span class="vi">@downloaded</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L47">
+                  lib/cocoapods/local_pod.rb:47
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">specification</span><span class="p">,</span> <span class="n">sandbox</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; LocalPod </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+            
+            <div class="alert">
+              <strong>TODO</strong> <p>The local pod should be initialized with all the activated
+specifications passed as an array, in order to be able to cache the
+computed values. In other words, it should be immutable.</p>
+
+            </div>
+            
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Specification</code> <b>specification</b></p>
+              <p>The first activated specification
+of the pod.</p>
+
+            
+              
+
+              <p><code>Sandbox</code> <b>sandbox</b></p>
+              <p>The sandbox where the files of the
+pod will be located.</p>
+
+            
+              
+
+              <p><code>Platform</code> <b>platform</b></p>
+              <p>The platform that will be used to
+build the pod.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>LocalPod</code></p>
+              <p>A new instance of LocalPod</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">specification</span><span class="p">,</span> <span class="n">sandbox</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+  <span class="vi">@top_specification</span><span class="p">,</span> <span class="vi">@sandbox</span><span class="p">,</span> <span class="vi">@platform</span> <span class="o">=</span> <span class="n">specification</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="n">sandbox</span><span class="p">,</span> <span class="n">platform</span>
+  <span class="vi">@top_specification</span><span class="o">.</span><span class="n">activate_platform</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
+  <span class="vi">@specifications</span> <span class="o">=</span> <span class="o">[]</span> <span class="o">&lt;&lt;</span> <span class="n">specification</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L62">
+                  lib/cocoapods/local_pod.rb:62
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_add_specification" class="tab-pane">
+          <h2> add_specification </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">add_specification</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Specification</code> <b>spec</b></p>
+              <p>The specification to add to the pod.</p>
+
+            
+          
+
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p><p>If the specification is not part of the same pod.</p>
+</p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">add_specification</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+  <span class="k">unless</span> <span class="n">spec</span><span class="o">.</span><span class="n">root</span> <span class="o">==</span> <span class="n">top_specification</span>
+    <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span>
+      <span class="s2">&quot;[Local Pod] Attempt to add a specification from another pod&quot;</span>
+  <span class="k">end</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">activate_platform</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
+  <span class="vi">@specifications</span> <span class="o">&lt;&lt;</span> <span class="n">spec</span> <span class="k">unless</span> <span class="vi">@specifications</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L83">
+                  lib/cocoapods/local_pod.rb:83
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_root" class="tab-pane">
+          <h2> root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">root</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The root directory of the pod</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">root</span>
+  <span class="vi">@sandbox</span><span class="o">.</span><span class="n">root</span> <span class="o">+</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L94">
+                  lib/cocoapods/local_pod.rb:94
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_path_list" class="tab-pane">
+          <h2> path_list </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">path_list</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">path_list</span>
+  <span class="vi">@path_list</span> <span class="o">||=</span> <span class="no">PathList</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L98">
+                  lib/cocoapods/local_pod.rb:98
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_to_s" class="tab-pane">
+          <h2> to_s </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>A string representation of the pod which indicates if
+the pods comes from a local source or has a preferred
+dependency.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="n">s</span> <span class="o">=</span>  <span class="n">top_specification</span><span class="o">.</span><span class="n">to_s</span>
+  <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; defaulting to </span><span class="si">#{</span><span class="n">top_specification</span><span class="o">.</span><span class="n">default_subspec</span><span class="si">}</span><span class="s2"> subspec&quot;</span> <span class="k">if</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">default_subspec</span>
+  <span class="n">s</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L106">
+                  lib/cocoapods/local_pod.rb:106
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_name" class="tab-pane">
+          <h2> name </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">name</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The name of the Pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">name</span>
+  <span class="n">top_specification</span><span class="o">.</span><span class="n">name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L114">
+                  lib/cocoapods/local_pod.rb:114
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_create" class="tab-pane">
+          <h2> create </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">create</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">create</span>
+  <span class="n">root</span><span class="o">.</span><span class="n">mkpath</span> <span class="k">unless</span> <span class="n">exists?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L124">
+                  lib/cocoapods/local_pod.rb:124
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_exists_" class="tab-pane">
+          <h2> exists? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">exists?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">exists?</span>
+  <span class="n">root</span><span class="o">.</span><span class="n">exist?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L130">
+                  lib/cocoapods/local_pod.rb:130
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_chdir" class="tab-pane">
+          <h2> chdir </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">chdir</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">chdir</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="n">create</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L138">
+                  lib/cocoapods/local_pod.rb:138
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_implode" class="tab-pane">
+          <h2> implode </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">implode</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">implode</span>
+  <span class="n">root</span><span class="o">.</span><span class="n">rmtree</span> <span class="k">if</span> <span class="n">exists?</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L147">
+                  lib/cocoapods/local_pod.rb:147
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_local_" class="tab-pane">
+          <h2> local? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">local?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">local?</span>
+  <span class="kp">false</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L151">
+                  lib/cocoapods/local_pod.rb:151
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_clean_" class="tab-pane">
+          <h2> clean! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">clean!</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">clean!</span>
+  <span class="n">clean_paths</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="no">FileUtils</span><span class="o">.</span><span class="n">rm_rf</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="p">}</span>
+  <span class="vi">@cleaned</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="n">path_list</span><span class="o">.</span><span class="n">read_file_system</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L161">
+                  lib/cocoapods/local_pod.rb:161
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_clean_paths" class="tab-pane">
+          <h2> clean_paths </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">clean_paths</span> <span class="c1">#=&gt; Array&lt;Strings&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Strings&gt;</code></p>
+              <p>The paths that can be deleted.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">clean_paths</span>
+  <span class="n">cached_used</span> <span class="o">=</span> <span class="n">used_files</span>
+  <span class="n">files</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="s2">&quot;**/*&quot;</span><span class="p">,</span> <span class="no">File</span><span class="o">::</span><span class="no">FNM_DOTMATCH</span> <span class="o">|</span> <span class="no">File</span><span class="o">::</span><span class="no">FNM_CASEFOLD</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:to_s</span><span class="p">)</span>
+
+  <span class="n">files</span><span class="o">.</span><span class="n">reject!</span> <span class="k">do</span> <span class="o">|</span><span class="n">candidate</span><span class="o">|</span>
+    <span class="n">candidate</span><span class="o">.</span><span class="n">end_with?</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="n">cached_used</span><span class="o">.</span><span class="n">any?</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
+      <span class="n">path</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">candidate</span><span class="p">)</span> <span class="o">||</span> <span class="n">candidate</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">files</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L175">
+                  lib/cocoapods/local_pod.rb:175
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_used_files" class="tab-pane">
+          <h2> used_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">used_files</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;String&gt;</code></p>
+              <p>The absolute path of the files used by the pod.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">used_files</span>
+  <span class="n">files</span> <span class="o">=</span> <span class="o">[</span> <span class="n">source_files</span><span class="p">,</span> <span class="n">resource_files</span><span class="p">,</span> <span class="n">preserve_files</span><span class="p">,</span> <span class="n">readme_file</span><span class="p">,</span> <span class="n">license_file</span><span class="p">,</span> <span class="n">prefix_header_file</span> <span class="o">]</span>
+  <span class="n">files</span><span class="o">.</span><span class="n">compact!</span>
+  <span class="n">files</span><span class="o">.</span><span class="n">flatten!</span>
+  <span class="n">files</span><span class="o">.</span><span class="n">map!</span><span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="n">path</span><span class="o">.</span><span class="n">to_s</span> <span class="p">}</span>
+  <span class="n">files</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L189">
+                  lib/cocoapods/local_pod.rb:189
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_relativize_from_sandbox" class="tab-pane">
+          <h2> relativize_from_sandbox </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">relativize_from_sandbox</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>Returns the relative path from the sandbox.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">relativize_from_sandbox</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">relative_path_from</span><span class="p">(</span><span class="vi">@sandbox</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">result</span> <span class="k">unless</span> <span class="vi">@sandbox</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="n">path</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L214">
+                  lib/cocoapods/local_pod.rb:214
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_source_files" class="tab-pane">
+          <h2> source_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">source_files</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The paths of the source files.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">source_files</span>
+  <span class="n">source_files_by_spec</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L222">
+                  lib/cocoapods/local_pod.rb:222
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_relative_source_files" class="tab-pane">
+          <h2> relative_source_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">relative_source_files</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The <em>relative</em> paths of the source files.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">relative_source_files</span>
+  <span class="n">source_files</span><span class="o">.</span><span class="n">map</span><span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="n">relativize_from_sandbox</span><span class="p">(</span><span class="nb">p</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L228">
+                  lib/cocoapods/local_pod.rb:228
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_relative_source_files_by_spec" class="tab-pane">
+          <h2> relative_source_files_by_spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">relative_source_files_by_spec</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">relative_source_files_by_spec</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">source_files_by_spec</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="p">,</span> <span class="n">paths</span><span class="o">|</span>
+    <span class="n">result</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span> <span class="o">=</span> <span class="n">paths</span><span class="o">.</span><span class="n">map</span><span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="n">relativize_from_sandbox</span><span class="p">(</span><span class="nb">p</span><span class="p">)</span> <span class="p">}</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L232">
+                  lib/cocoapods/local_pod.rb:232
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_source_files_by_spec" class="tab-pane">
+          <h2> source_files_by_spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">source_files_by_spec</span> <span class="c1">#=&gt; Hash{Specification =&gt; Array&lt;Pathname&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Specification =&gt; Array&lt;Pathname&gt;}</code></p>
+              <p>The files grouped by
+{Specification}.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">source_files_by_spec</span>
+  <span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:glob</span> <span class="o">=&gt;</span> <span class="s1">&#39;*.{h,hpp,hh,m,mm,c,cpp}&#39;</span><span class="p">}</span>
+  <span class="vi">@source_files_by_spec</span> <span class="o">||=</span> <span class="n">paths_by_spec</span><span class="p">(</span><span class="ss">:source_files</span><span class="p">,</span> <span class="s1">&#39;*.{h,hpp,hh,m,mm,c,cpp}&#39;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L249">
+                  lib/cocoapods/local_pod.rb:249
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_header_files" class="tab-pane">
+          <h2> header_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">header_files</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The paths of the header files.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">header_files</span>
+  <span class="n">header_files_by_spec</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L256">
+                  lib/cocoapods/local_pod.rb:256
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_relative_header_files" class="tab-pane">
+          <h2> relative_header_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">relative_header_files</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The <em>relative</em> paths of the source files.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">relative_header_files</span>
+  <span class="n">header_files</span><span class="o">.</span><span class="n">map</span><span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="n">relativize_from_sandbox</span><span class="p">(</span><span class="nb">p</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L262">
+                  lib/cocoapods/local_pod.rb:262
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_header_files_by_spec" class="tab-pane">
+          <h2> header_files_by_spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">header_files_by_spec</span> <span class="c1">#=&gt; Hash{Specification =&gt; Array&lt;Pathname&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Specification =&gt; Array&lt;Pathname&gt;}</code></p>
+              <p>The paths of the header
+files grouped by {Specification}.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">header_files_by_spec</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">source_files_by_spec</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="p">,</span> <span class="n">paths</span><span class="o">|</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="n">paths</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">extname</span> <span class="o">==</span> <span class="s1">&#39;.h&#39;</span> <span class="o">||</span> <span class="n">f</span><span class="o">.</span><span class="n">extname</span> <span class="o">==</span> <span class="s1">&#39;.hpp&#39;</span> <span class="o">||</span> <span class="n">f</span><span class="o">.</span><span class="n">extname</span> <span class="o">==</span> <span class="s1">&#39;.hh&#39;</span> <span class="p">}</span>
+    <span class="n">result</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span> <span class="o">=</span> <span class="n">headers</span> <span class="k">unless</span> <span class="n">headers</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L269">
+                  lib/cocoapods/local_pod.rb:269
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_public_header_files_by_spec" class="tab-pane">
+          <h2> public_header_files_by_spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">public_header_files_by_spec</span> <span class="c1">#=&gt; Hash{Specification =&gt; Array&lt;Pathname&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Specification =&gt; Array&lt;Pathname&gt;}</code></p>
+              <p>The paths of the header
+files grouped by {Specification} that should be copied in the public
+folder.</p>
+
+<p>If a spec does not match any public header it means that all the
+header files (i.e. the build ones) are intended to be public.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">public_header_files_by_spec</span>
+  <span class="n">public_headers</span> <span class="o">=</span> <span class="n">paths_by_spec</span><span class="p">(</span><span class="ss">:public_header_files</span><span class="p">,</span> <span class="s1">&#39;*.{h,hpp,hh}&#39;</span><span class="p">)</span>
+  <span class="n">build_headers</span>  <span class="o">=</span> <span class="n">header_files_by_spec</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">specifications</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">public_h</span> <span class="o">=</span> <span class="n">public_headers</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">public_h</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="n">result</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span> <span class="o">=</span> <span class="n">public_h</span>
+    <span class="k">elsif</span> <span class="p">(</span><span class="n">build_h</span> <span class="o">=</span> <span class="n">build_headers</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">build_h</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="n">result</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span> <span class="o">=</span> <span class="n">build_h</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L285">
+                  lib/cocoapods/local_pod.rb:285
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_resource_files" class="tab-pane">
+          <h2> resource_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">resource_files</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The paths of the resources.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">resource_files</span>
+  <span class="n">specs</span> <span class="o">||=</span> <span class="n">specifications</span>
+  <span class="n">paths_by_spec</span>   <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">processed_paths</span> <span class="o">=</span> <span class="o">[]</span>
+
+  <span class="n">specs</span> <span class="o">=</span> <span class="n">specs</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">length</span> <span class="p">}</span>
+  <span class="n">specs</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+    <span class="n">spec_paths</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">resources</span><span class="o">[</span><span class="ss">:resources</span><span class="o">]</span>
+    <span class="n">paths</span> <span class="o">=</span> <span class="n">expanded_paths</span><span class="p">(</span><span class="n">spec_paths</span><span class="p">,</span> <span class="s1">&#39;**/*&#39;</span><span class="p">,</span> <span class="n">spec</span><span class="o">.</span><span class="n">exclude_files</span><span class="p">)</span>
+    <span class="k">unless</span> <span class="n">paths</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="n">paths_by_spec</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span> <span class="o">=</span> <span class="n">paths</span> <span class="o">-</span> <span class="n">processed_paths</span>
+      <span class="n">processed_paths</span> <span class="o">+=</span> <span class="n">paths</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">paths_by_spec</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L302">
+                  lib/cocoapods/local_pod.rb:302
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_relative_resource_files" class="tab-pane">
+          <h2> relative_resource_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">relative_resource_files</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The <em>relative</em> paths of the resources.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">relative_resource_files</span>
+  <span class="n">resource_files</span><span class="o">.</span><span class="n">map</span><span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="n">relativize_from_sandbox</span><span class="p">(</span><span class="nb">p</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L321">
+                  lib/cocoapods/local_pod.rb:321
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prefix_header_file" class="tab-pane">
+          <h2> prefix_header_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prefix_header_file</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The absolute path of the prefix header file</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prefix_header_file</span>
+  <span class="n">root</span> <span class="o">+</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">prefix_header_file</span> <span class="k">if</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">prefix_header_file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L327">
+                  lib/cocoapods/local_pod.rb:327
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_preserve_files" class="tab-pane">
+          <h2> preserve_files </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">preserve_files</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The absolute paths of the files of the pod
+that should be preserved.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">preserve_files</span>
+  <span class="n">paths</span>  <span class="o">=</span> <span class="n">paths_by_spec</span><span class="p">(</span><span class="ss">:preserve_paths</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+  <span class="n">paths</span> <span class="o">+=</span> <span class="n">expanded_paths</span><span class="p">(</span><span class="sx">%w[ *.podspec notice* NOTICE* CREDITS* ]</span><span class="p">)</span>
+  <span class="n">paths</span><span class="o">.</span><span class="n">compact!</span>
+  <span class="n">paths</span><span class="o">.</span><span class="n">uniq!</span>
+  <span class="n">paths</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L334">
+                  lib/cocoapods/local_pod.rb:334
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_readme_file" class="tab-pane">
+          <h2> readme_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">readme_file</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The automatically detected absolute path of the README
+file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">readme_file</span>
+  <span class="n">expanded_paths</span><span class="p">(</span><span class="sx">%w[ readme{*,.*} ]</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L345">
+                  lib/cocoapods/local_pod.rb:345
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_license_file" class="tab-pane">
+          <h2> license_file </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">license_file</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The absolute path of the license file from the
+specification or automatically detected.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">license_file</span>
+  <span class="k">unless</span> <span class="vi">@license_file</span>
+    <span class="k">if</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">license</span> <span class="o">&amp;&amp;</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">license</span><span class="o">[</span><span class="ss">:file</span><span class="o">]</span>
+      <span class="vi">@license_file</span> <span class="o">=</span> <span class="n">root</span> <span class="o">+</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">license</span><span class="o">[</span><span class="ss">:file</span><span class="o">]</span>
+    <span class="k">else</span>
+      <span class="vi">@license_file</span> <span class="o">=</span> <span class="n">expanded_paths</span><span class="p">(</span><span class="sx">%w[ licen{c,s}e{*,.*} ]</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="vi">@license_file</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L352">
+                  lib/cocoapods/local_pod.rb:352
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_license_text" class="tab-pane">
+          <h2> license_text </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">license_text</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The text of the license of the pod from the
+specification or from the license file.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">license_text</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">license_hash</span> <span class="o">=</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">license</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">=</span> <span class="n">license_hash</span><span class="o">[</span><span class="ss">:text</span><span class="o">]</span><span class="p">)</span>
+      <span class="n">result</span>
+    <span class="k">elsif</span> <span class="n">license_file</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="no">IO</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">license_file</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L366">
+                  lib/cocoapods/local_pod.rb:366
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcconfig" class="tab-pane">
+          <h2> xcconfig </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">xcconfig</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">xcconfig</span>
+  <span class="n">config</span> <span class="o">=</span> <span class="no">Xcodeproj</span><span class="o">::</span><span class="no">Config</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">specifications</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">xcconfig</span><span class="p">)</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">libraries</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">libraries</span><span class="p">)</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">frameworks</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">frameworks</span><span class="p">)</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">weak_frameworks</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">weak_frameworks</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">config</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L376">
+                  lib/cocoapods/local_pod.rb:376
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_documentation_headers" class="tab-pane">
+          <h2> documentation_headers </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">documentation_headers</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Pathname&gt;</code></p>
+              <p>The path of all the public headers of the pod.</p>
+
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p><p>If the pod was cleaned.</p>
+</p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">documentation_headers</span>
+  <span class="k">if</span> <span class="vi">@cleaned</span>
+    <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;The pod is cleaned and cannot compute the &quot;</span> <span class="p">\</span>
+                       <span class="s2">&quot;header files, as some might have been deleted.&quot;</span>
+  <span class="k">end</span>
+
+  <span class="n">specs</span> <span class="o">=</span> <span class="o">[</span><span class="n">top_specification</span><span class="o">]</span> <span class="o">+</span> <span class="n">top_specification</span><span class="o">.</span><span class="n">recursive_subspecs</span>
+  <span class="n">source_files</span>   <span class="o">=</span> <span class="n">paths_by_spec</span><span class="p">(</span><span class="ss">:source_files</span><span class="p">,</span> <span class="s1">&#39;*.{h}&#39;</span><span class="p">,</span> <span class="n">specs</span><span class="p">)</span>
+  <span class="n">public_headers</span> <span class="o">=</span> <span class="n">paths_by_spec</span><span class="p">(</span><span class="ss">:public_header_files</span><span class="p">,</span> <span class="s1">&#39;*.{h}&#39;</span><span class="p">,</span> <span class="n">specs</span><span class="p">)</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="n">specs</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">public_h</span> <span class="o">=</span> <span class="n">public_headers</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">public_h</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="n">result</span> <span class="o">+=</span> <span class="n">public_h</span>
+    <span class="k">elsif</span> <span class="p">(</span><span class="n">source_f</span> <span class="o">=</span> <span class="n">source_files</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">source_f</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="n">build_h</span> <span class="o">=</span> <span class="n">source_f</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">extname</span> <span class="o">==</span> <span class="s1">&#39;.h&#39;</span> <span class="o">||</span> <span class="n">f</span><span class="o">.</span><span class="n">extname</span> <span class="o">==</span> <span class="s1">&#39;.hpp&#39;</span> <span class="o">||</span> <span class="n">f</span><span class="o">.</span><span class="n">extname</span> <span class="o">==</span> <span class="s1">&#39;.hh&#39;</span> <span class="p">}</span>
+      <span class="n">result</span> <span class="o">+=</span> <span class="n">build_h</span> <span class="k">unless</span> <span class="n">build_h</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L397">
+                  lib/cocoapods/local_pod.rb:397
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_add_file_references_to_project" class="tab-pane">
+          <h2> add_file_references_to_project </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">add_file_references_to_project</span><span class="p">(</span><span class="n">project</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">add_file_references_to_project</span><span class="p">(</span><span class="n">project</span><span class="p">)</span>
+  <span class="vi">@file_references_by_spec</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">parent_group</span> <span class="o">=</span> <span class="n">local?</span> <span class="p">?</span> <span class="n">project</span><span class="o">.</span><span class="n">local_pods</span> <span class="p">:</span> <span class="n">project</span><span class="o">.</span><span class="n">pods</span>
+
+  <span class="n">relative_source_files_by_spec</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="p">,</span> <span class="n">paths</span><span class="o">|</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">add_spec_group</span><span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">parent_group</span><span class="p">)</span>
+    <span class="n">file_references</span> <span class="o">=</span> <span class="o">[]</span>
+    <span class="n">paths</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
+      <span class="n">file_references</span> <span class="o">&lt;&lt;</span> <span class="n">group</span><span class="o">.</span><span class="n">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="vi">@file_references_by_spec</span><span class="o">[</span><span class="n">spec</span><span class="o">]</span> <span class="o">=</span> <span class="n">file_references</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L430">
+                  lib/cocoapods/local_pod.rb:430
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_file_references_by_spec" class="tab-pane">
+          <h2> file_references_by_spec </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">file_references_by_spec</span> <span class="c1">#=&gt; Hash{Specification =&gt; Array&lt;PBXFileReference&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Specification =&gt; Array&lt;PBXFileReference&gt;}</code></p>
+              <p>The file
+references of the pod in the <code>Pods.xcodeproj</code> project.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">file_references_by_spec</span>
+  <span class="vi">@file_references_by_spec</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L447">
+                  lib/cocoapods/local_pod.rb:447
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_add_build_files_to_target" class="tab-pane">
+          <h2> add_build_files_to_target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">add_build_files_to_target</span><span class="p">(</span><span class="n">target</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p><p>If the {#add<em>file</em>references<em>to</em>project} was not called before of
+calling this method.</p>
+</p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">add_build_files_to_target</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+  <span class="k">unless</span> <span class="n">file_references_by_spec</span>
+    <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;Local Pod needs to add the file references to the &quot;</span> <span class="p">\</span>
+                       <span class="s2">&quot;project before adding the build files to the target.&quot;</span>
+  <span class="k">end</span>
+  <span class="n">file_references_by_spec</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="p">,</span> <span class="n">file_reference</span><span class="o">|</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">add_file_references</span><span class="p">(</span><span class="n">file_reference</span><span class="p">,</span> <span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">compiler_flags</span> <span class="o">*</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L457">
+                  lib/cocoapods/local_pod.rb:457
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_link_headers" class="tab-pane">
+          <h2> link_headers </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">link_headers</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Copies the pods headers to the sandbox.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">link_headers</span>
+  <span class="vi">@sandbox</span><span class="o">.</span><span class="n">build_headers</span><span class="o">.</span><span class="n">add_search_path</span><span class="p">(</span><span class="n">headers_sandbox</span><span class="p">)</span>
+  <span class="vi">@sandbox</span><span class="o">.</span><span class="n">public_headers</span><span class="o">.</span><span class="n">add_search_path</span><span class="p">(</span><span class="n">headers_sandbox</span><span class="p">)</span>
+
+  <span class="n">header_mappings</span><span class="p">(</span><span class="n">header_files_by_spec</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">namespaced_path</span><span class="p">,</span> <span class="n">files</span><span class="o">|</span>
+    <span class="vi">@sandbox</span><span class="o">.</span><span class="n">build_headers</span><span class="o">.</span><span class="n">add_files</span><span class="p">(</span><span class="n">namespaced_path</span><span class="p">,</span> <span class="n">files</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="n">header_mappings</span><span class="p">(</span><span class="n">public_header_files_by_spec</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">namespaced_path</span><span class="p">,</span> <span class="n">files</span><span class="o">|</span>
+    <span class="vi">@sandbox</span><span class="o">.</span><span class="n">public_headers</span><span class="o">.</span><span class="n">add_files</span><span class="p">(</span><span class="n">namespaced_path</span><span class="p">,</span> <span class="n">files</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L469">
+                  lib/cocoapods/local_pod.rb:469
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_requires_arc_" class="tab-pane">
+          <h2> requires_arc? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">requires_arc?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Boolean</code></p>
+              <p>Whether the pod requires ARC.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">requires_arc?</span>
+  <span class="n">top_specification</span><span class="o">.</span><span class="n">requires_arc</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/local_pod.rb#L486">
+                  lib/cocoapods/local_pod.rb:486
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>TargetInstaller Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Installer :: TargetInstaller</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_targetinstaller">TargetInstaller</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_project">
+              project
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_target_definition">
+              target_definition
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pods">
+              pods
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_install_">
+              install!
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_prefix_header_filename">
+              prefix_header_filename
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_library">
+              library
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_target">
+              target
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_xcconfig_file_ref">
+              xcconfig_file_ref
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_targetinstaller" class="tab-pane default">
+          <h2>TargetInstaller</h2>
+          <p><p>This class is responsible of creating and configuring the static library
+target in Pods project. Every target is generated from a target
+definition of the Podfile.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Installer :: TargetInstaller</code></p>
+          <h3>Inheritance</h3>
+          <p><code>TargetInstaller < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_project" class="tab-pane">
+          <h2> project </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">project</span> <span class="c1">#=&gt; Project </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Project</code></p>
+              <p>The Pods project.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">project</span>
+  <span class="vi">@project</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L12">
+                  lib/cocoapods/installer/target_installer.rb:12
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_target_definition" class="tab-pane">
+          <h2> target_definition </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target_definition</span> <span class="c1">#=&gt; TargetDefinition </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>TargetDefinition</code></p>
+              <p>The target definition whose target needs to</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target_definition</span>
+  <span class="vi">@target_definition</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L17">
+                  lib/cocoapods/installer/target_installer.rb:17
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods" class="tab-pane">
+          <h2> pods </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Array<LocalPod></code> <b>pods</b></p>
+              <p>The pods are required by the target
+definition of this installer.</p>
+
+            
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods</span>
+  <span class="vi">@pods</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L22">
+                  lib/cocoapods/installer/target_installer.rb:22
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">target_definition</span><span class="p">,</span> <span class="n">pods</span><span class="p">)</span> <span class="c1">#=&gt; TargetInstaller </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Project</code> <b>project</b></p>
+              <p>@see project</p>
+
+            
+              
+
+              <p><code>TargetDefinition</code> <b>target_definition</b></p>
+              <p>@see target_definition</p>
+
+            
+              
+
+              <p><code>Array<LocalPod></code> <b>pods</b></p>
+              <p>@see pods</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>TargetInstaller</code></p>
+              <p>A new instance of TargetInstaller</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">target_definition</span><span class="p">,</span> <span class="n">pods</span><span class="p">)</span>
+  <span class="vi">@project</span>           <span class="o">=</span> <span class="n">project</span>
+  <span class="vi">@target_definition</span> <span class="o">=</span> <span class="n">target_definition</span>
+  <span class="vi">@pods</span>              <span class="o">=</span> <span class="n">pods</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L28">
+                  lib/cocoapods/installer/target_installer.rb:28
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_install_" class="tab-pane">
+          <h2> install! </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">install!</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">install!</span>
+  <span class="n">add_target</span>
+  <span class="n">add_build_files_to_target</span>
+  <span class="n">add_file_reference_for_support_files</span>
+  <span class="n">configure_target</span>
+
+  <span class="n">create_xcconfig_file</span>
+  <span class="n">create_prefix_header</span>
+  <span class="n">create_bridge_support_file</span>
+  <span class="n">create_copy_resources_script</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L38">
+                  lib/cocoapods/installer/target_installer.rb:38
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prefix_header_filename" class="tab-pane">
+          <h2> prefix_header_filename </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prefix_header_filename</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prefix_header_filename</span>
+  <span class="n">library</span><span class="o">.</span><span class="n">prefix_header_name</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L53">
+                  lib/cocoapods/installer/target_installer.rb:53
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_library" class="tab-pane">
+          <h2> library </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">library</span> <span class="c1">#=&gt; Library </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Library</code></p>
+              <p>The library for the target definition.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">library</span>
+  <span class="vi">@library</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L190">
+                  lib/cocoapods/installer/target_installer.rb:190
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_target" class="tab-pane">
+          <h2> target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target</span> <span class="c1">#=&gt; PBXNativeTarget </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PBXNativeTarget</code></p>
+              <p>The target generated by the installation
+process.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target</span>
+  <span class="vi">@target</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L197">
+                  lib/cocoapods/installer/target_installer.rb:197
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_xcconfig_file_ref" class="tab-pane">
+          <h2> xcconfig_file_ref </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">xcconfig_file_ref</span> <span class="c1">#=&gt; PBXFileReference </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PBXFileReference</code></p>
+              <p>The file reference to the xcconfig file of
+the target.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">xcconfig_file_ref</span>
+  <span class="vi">@xcconfig_file_ref</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/installer/target_installer.rb#L204">
+                  lib/cocoapods/installer/target_installer.rb:204
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

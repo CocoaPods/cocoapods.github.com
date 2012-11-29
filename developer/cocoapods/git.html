@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Git Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Downloader :: Git</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_git">Git</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_download">
+              download
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_target_path">
+              target_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_url">
+              url
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_options">
+              options
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Download implementations</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_clone_url">
+              clone_url
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_clone">
+              clone
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_download_head">
+              download_head
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_download_tag">
+              download_tag
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_download_commit">
+              download_commit
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_download_branch">
+              download_branch
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Checking references</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_ref_exists_">
+              ref_exists?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_ensure_ref_exists">
+              ensure_ref_exists
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_branch_exists_">
+              branch_exists?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_ensure_remote_branch_exists">
+              ensure_remote_branch_exists
+            </a></p>
+          
+          
+              
+                  
+                    <h2>
+                  
+                  <a>Cache</a>
+                  </h2>
+              
+          
+              
+            <p><a class="select-tab" href="#tab_cache_path">
+              cache_path
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_caches_root">
+              caches_root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_caches_size">
+              caches_size
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_cache_exist_">
+              cache_exist?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_cache_origin_url">
+              cache_origin_url
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_create_cache">
+              create_cache
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_update_cache">
+              update_cache
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_prune_cache">
+              prune_cache
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_git" class="tab-pane default">
+          <h2>Git</h2>
+          <p><p>Concreted Downloader class that provides support for specifications with
+git sources.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Downloader :: Git</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Git < Downloader < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_download" class="tab-pane">
+          <h2> download </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">download</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">download</span>
+  <span class="n">create_cache</span> <span class="k">unless</span> <span class="n">cache_exist?</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s1">&#39; &gt; Cloning git repo&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="n">options</span><span class="o">[</span><span class="ss">:tag</span><span class="o">]</span>
+      <span class="n">download_tag</span>
+    <span class="k">elsif</span> <span class="n">options</span><span class="o">[</span><span class="ss">:branch</span><span class="o">]</span>
+      <span class="n">download_branch</span>
+    <span class="k">elsif</span> <span class="n">options</span><span class="o">[</span><span class="ss">:commit</span><span class="o">]</span>
+      <span class="n">download_commit</span>
+    <span class="k">else</span>
+      <span class="n">download_head</span>
+    <span class="k">end</span>
+    <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_path</span><span class="p">)</span> <span class="p">{</span> <span class="n">git!</span> <span class="s2">&quot;submodule update --init&quot;</span>  <span class="p">}</span> <span class="k">if</span> <span class="n">options</span><span class="o">[</span><span class="ss">:submodules</span><span class="o">]</span>
+  <span class="k">end</span>
+  <span class="n">prune_cache</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L17">
+                  lib/cocoapods/downloader/git.rb:17
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_clone_url" class="tab-pane">
+          <h2> clone_url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">clone_url</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The clone URL, which resolves to the cache path.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">clone_url</span>
+  <span class="n">cache_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L39">
+                  lib/cocoapods/downloader/git.rb:39
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_clone" class="tab-pane">
+          <h2> clone </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="nb">clone</span><span class="p">(</span><span class="n">from</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Convenience method to perform clones operations.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="n">from</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s2">&quot; &gt; Cloning to Pods folder&quot;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">git!</span> <span class="sx">%Q|clone &quot;</span><span class="si">#{</span><span class="n">from</span><span class="si">}</span><span class="sx">&quot; &quot;</span><span class="si">#{</span><span class="n">to</span><span class="si">}</span><span class="sx">&quot;|</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L45">
+                  lib/cocoapods/downloader/git.rb:45
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_download_head" class="tab-pane">
+          <h2> download_head </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">download_head</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Checkouts the HEAD of the git source in the destination</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">download_head</span>
+  <span class="k">if</span> <span class="n">cache_exist?</span>
+    <span class="n">update_cache</span>
+  <span class="k">else</span>
+    <span class="n">create_cache</span>
+  <span class="k">end</span>
+
+  <span class="nb">clone</span><span class="p">(</span><span class="n">clone_url</span><span class="p">,</span> <span class="n">target_path</span><span class="p">)</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_path</span><span class="p">)</span> <span class="p">{</span> <span class="n">git!</span> <span class="s2">&quot;submodule update --init&quot;</span>  <span class="p">}</span> <span class="k">if</span> <span class="n">options</span><span class="o">[</span><span class="ss">:submodules</span><span class="o">]</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L54">
+                  lib/cocoapods/downloader/git.rb:54
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_download_tag" class="tab-pane">
+          <h2> download_tag </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">download_tag</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Checkouts a specific tag of the git source in the</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">download_tag</span>
+  <span class="n">ensure_ref_exists</span><span class="p">(</span><span class="n">options</span><span class="o">[</span><span class="ss">:tag</span><span class="o">]</span><span class="p">)</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_path</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">git!</span> <span class="s2">&quot;init&quot;</span>
+    <span class="n">git!</span> <span class="s2">&quot;remote add origin &#39;</span><span class="si">#{</span><span class="n">clone_url</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+    <span class="n">git!</span> <span class="s2">&quot;fetch origin tags/</span><span class="si">#{</span><span class="n">options</span><span class="o">[</span><span class="ss">:tag</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">git!</span> <span class="s2">&quot;reset --hard FETCH_HEAD&quot;</span>
+    <span class="n">git!</span> <span class="s2">&quot;checkout -b activated-pod-commit&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L68">
+                  lib/cocoapods/downloader/git.rb:68
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_download_commit" class="tab-pane">
+          <h2> download_commit </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">download_commit</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Checkouts a specific commit of the git source in the</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">download_commit</span>
+  <span class="n">ensure_ref_exists</span><span class="p">(</span><span class="n">options</span><span class="o">[</span><span class="ss">:commit</span><span class="o">]</span><span class="p">)</span>
+  <span class="nb">clone</span><span class="p">(</span><span class="n">clone_url</span><span class="p">,</span> <span class="n">target_path</span><span class="p">)</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_path</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">git!</span> <span class="s2">&quot;checkout -b activated-pod-commit </span><span class="si">#{</span><span class="n">options</span><span class="o">[</span><span class="ss">:commit</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L82">
+                  lib/cocoapods/downloader/git.rb:82
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_download_branch" class="tab-pane">
+          <h2> download_branch </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">download_branch</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Checkouts the HEAD of a specific branch of the git</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">download_branch</span>
+  <span class="n">ensure_remote_branch_exists</span><span class="p">(</span><span class="n">options</span><span class="o">[</span><span class="ss">:branch</span><span class="o">]</span><span class="p">)</span>
+  <span class="nb">clone</span><span class="p">(</span><span class="n">clone_url</span><span class="p">,</span> <span class="n">target_path</span><span class="p">)</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">target_path</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">git!</span> <span class="s2">&quot;remote add upstream &#39;</span><span class="si">#{</span><span class="vi">@url</span><span class="si">}</span><span class="s2">&#39;&quot;</span> <span class="c1"># we need to add the original url, not the cache url</span>
+    <span class="n">git!</span> <span class="s2">&quot;fetch -q upstream&quot;</span> <span class="c1"># refresh the branches</span>
+    <span class="n">git!</span> <span class="s2">&quot;checkout --track -b activated-pod-commit upstream/</span><span class="si">#{</span><span class="n">options</span><span class="o">[</span><span class="ss">:branch</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="c1"># create a new tracking branch</span>
+    <span class="no">UI</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">&quot;Just downloaded and checked out branch: </span><span class="si">#{</span><span class="n">options</span><span class="o">[</span><span class="ss">:branch</span><span class="o">]</span><span class="si">}</span><span class="s2"> from upstream </span><span class="si">#{</span><span class="n">clone_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L93">
+                  lib/cocoapods/downloader/git.rb:93
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_ref_exists_" class="tab-pane">
+          <h2> ref_exists? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">ref_exists?</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Wether a reference (commit SHA or tag)</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">ref_exists?</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">cache_path</span><span class="p">)</span> <span class="p">{</span> <span class="n">git</span> <span class="s2">&quot;rev-list --max-count=1 </span><span class="si">#{</span><span class="n">ref</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+  <span class="vg">$?</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L110">
+                  lib/cocoapods/downloader/git.rb:110
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_ensure_ref_exists" class="tab-pane">
+          <h2> ensure_ref_exists </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">ensure_ref_exists</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Checks if a reference exists in the cache and updates</p>
+
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p></p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">ensure_ref_exists</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span>
+  <span class="k">return</span> <span class="k">if</span> <span class="n">ref_exists?</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span>
+  <span class="n">update_cache</span>
+  <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;[!] Cache unable to find git reference `</span><span class="si">#{</span><span class="n">ref</span><span class="si">}</span><span class="s2">&#39; for `</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="o">.</span><span class="n">red</span> <span class="k">unless</span> <span class="n">ref_exists?</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L120">
+                  lib/cocoapods/downloader/git.rb:120
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_branch_exists_" class="tab-pane">
+          <h2> branch_exists? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">branch_exists?</span><span class="p">(</span><span class="n">branch</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Wether a branch exists in the cache.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">branch_exists?</span><span class="p">(</span><span class="n">branch</span><span class="p">)</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">cache_path</span><span class="p">)</span> <span class="p">{</span> <span class="n">git</span> <span class="s2">&quot;branch --all | grep </span><span class="si">#{</span><span class="n">branch</span><span class="si">}</span><span class="s2">$&quot;</span> <span class="p">}</span> <span class="c1"># check for remote branch and do suffix matching ($ anchor)</span>
+  <span class="vg">$?</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L128">
+                  lib/cocoapods/downloader/git.rb:128
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_ensure_remote_branch_exists" class="tab-pane">
+          <h2> ensure_remote_branch_exists </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">ensure_remote_branch_exists</span><span class="p">(</span><span class="n">branch</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Checks if a branch exists in the cache and updates</p>
+
+            
+          
+
+          
+            <h3>Raises</h3>
+            
+              <p></p>
+            
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">ensure_remote_branch_exists</span><span class="p">(</span><span class="n">branch</span><span class="p">)</span>
+  <span class="k">return</span> <span class="k">if</span> <span class="n">branch_exists?</span><span class="p">(</span><span class="n">branch</span><span class="p">)</span>
+  <span class="n">update_cache</span>
+  <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;[!] Cache unable to find git reference `</span><span class="si">#{</span><span class="n">branch</span><span class="si">}</span><span class="s2">&#39; for `</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="s2">&#39; (</span><span class="si">#{</span><span class="vg">$?</span><span class="si">}</span><span class="s2">).&quot;</span><span class="o">.</span><span class="n">red</span> <span class="k">unless</span> <span class="n">branch_exists?</span><span class="p">(</span><span class="n">branch</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L138">
+                  lib/cocoapods/downloader/git.rb:138
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_cache_path" class="tab-pane">
+          <h2> cache_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">cache_path</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The directory where the cache for the current git</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">cache_path</span>
+  <span class="vi">@cache_path</span> <span class="o">||=</span> <span class="n">caches_root</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Digest</span><span class="o">::</span><span class="no">SHA1</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L157">
+                  lib/cocoapods/downloader/git.rb:157
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_caches_root" class="tab-pane">
+          <h2> caches_root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">caches_root</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Pathname</code></p>
+              <p>The directory where the git caches are stored.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">caches_root</span>
+  <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="s2">&quot;~/Library/Caches/CocoaPods/Git&quot;</span><span class="p">))</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L163">
+                  lib/cocoapods/downloader/git.rb:163
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_caches_size" class="tab-pane">
+          <h2> caches_size </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">caches_size</span> <span class="c1">#=&gt; Integer </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Integer</code></p>
+              <p>The global size of the git cache expressed in Mb.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">caches_size</span>
+  <span class="sb">`du -cm`</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">last</span><span class="o">.</span><span class="n">to_i</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L169">
+                  lib/cocoapods/downloader/git.rb:169
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_cache_exist_" class="tab-pane">
+          <h2> cache_exist? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">cache_exist?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Wether the cache exits.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">cache_exist?</span>
+  <span class="n">cache_path</span><span class="o">.</span><span class="n">exist?</span> <span class="o">&amp;&amp;</span>
+    <span class="n">cache_origin_url</span><span class="p">(</span><span class="n">cache_path</span><span class="p">)</span><span class="o">.</span><span class="n">to_s</span> <span class="o">==</span> <span class="n">url</span><span class="o">.</span><span class="n">to_s</span> <span class="o">&amp;&amp;</span>
+    <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">cache_path</span><span class="p">)</span> <span class="p">{</span> <span class="n">git</span><span class="p">(</span><span class="s2">&quot;config core.bare&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">chomp</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L180">
+                  lib/cocoapods/downloader/git.rb:180
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_cache_origin_url" class="tab-pane">
+          <h2> cache_origin_url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">cache_origin_url</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>String</code> <b>dir</b></p>
+              <p>The directory of the cache.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              <p>The origin URL of the cache with the given directory.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">cache_origin_url</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span> <span class="p">{</span> <span class="sb">`git config remote.origin.url`</span><span class="o">.</span><span class="n">chomp</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L190">
+                  lib/cocoapods/downloader/git.rb:190
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_create_cache" class="tab-pane">
+          <h2> create_cache </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">create_cache</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Creates the barebone repo that will serve as the cache</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">create_cache</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s2">&quot; &gt; Creating cache git repo (</span><span class="si">#{</span><span class="n">cache_path</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">cache_path</span><span class="o">.</span><span class="n">rmtree</span> <span class="k">if</span> <span class="n">cache_path</span><span class="o">.</span><span class="n">exist?</span>
+    <span class="n">cache_path</span><span class="o">.</span><span class="n">mkpath</span>
+    <span class="n">git!</span> <span class="sx">%Q|clone  --mirror &quot;</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="sx">&quot; &quot;</span><span class="si">#{</span><span class="n">cache_path</span><span class="si">}</span><span class="sx">&quot;|</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L197">
+                  lib/cocoapods/downloader/git.rb:197
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_update_cache" class="tab-pane">
+          <h2> update_cache </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">update_cache</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Updates the barebone repo used as a cache against its</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">update_cache</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s2">&quot; &gt; Updating cache git repo (</span><span class="si">#{</span><span class="n">cache_path</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">do</span>
+    <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">cache_path</span><span class="p">)</span> <span class="p">{</span> <span class="n">git!</span> <span class="s2">&quot;remote update&quot;</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L208">
+                  lib/cocoapods/downloader/git.rb:208
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_prune_cache" class="tab-pane">
+          <h2> prune_cache </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">prune_cache</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              <p>Deletes the oldest caches until they the global size is</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">prune_cache</span>
+  <span class="k">return</span> <span class="k">unless</span> <span class="n">caches_root</span><span class="o">.</span><span class="n">exist?</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">caches_root</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">repos</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">caches_root</span><span class="p">)</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="n">c</span><span class="o">.</span><span class="n">directory?</span> <span class="p">}</span><span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:ctime</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">caches_size</span> <span class="o">&gt;=</span> <span class="no">MAX_CACHE_SIZE</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">repos</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="n">dir</span> <span class="o">=</span> <span class="n">repos</span><span class="o">.</span><span class="n">shift</span>
+      <span class="no">UI</span><span class="o">.</span><span class="n">message</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="s1">&#39;-&gt;&#39;</span><span class="o">.</span><span class="n">yellow</span><span class="si">}</span><span class="s2"> Removing git cache for `</span><span class="si">#{</span><span class="n">cache_origin_url</span><span class="p">(</span><span class="n">dir</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+      <span class="n">dir</span><span class="o">.</span><span class="n">rmtree</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/git.rb#L217">
+                  lib/cocoapods/downloader/git.rb:217
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_target_path" class="tab-pane">
+          <h2> target_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target_path</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target_path</span>
+  <span class="vi">@target_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader.rb#L18">
+                  lib/cocoapods/downloader.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_url" class="tab-pane">
+          <h2> url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">url</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">url</span>
+  <span class="vi">@url</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader.rb#L18">
+                  lib/cocoapods/downloader.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_options" class="tab-pane">
+          <h2> options </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">options</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">options</span>
+  <span class="vi">@options</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader.rb#L18">
+                  lib/cocoapods/downloader.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">target_path</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span> <span class="c1">#=&gt; Downloader </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Downloader</code></p>
+              <p>A new instance of Downloader</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">target_path</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+  <span class="vi">@target_path</span><span class="p">,</span> <span class="vi">@url</span><span class="p">,</span> <span class="vi">@options</span> <span class="o">=</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span>
+  <span class="vi">@target_path</span><span class="o">.</span><span class="n">mkpath</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader.rb#L20">
+                  lib/cocoapods/downloader.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Config Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Config</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_config">Config</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_repos_dir">
+              repos_dir
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_project_root">
+              project_root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_project_pods_root">
+              project_pods_root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_clean">
+              clean
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_verbose">
+              verbose
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_silent">
+              silent
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_generate_docs">
+              generate_docs
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_doc_install">
+              doc_install
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_integrate_targets">
+              integrate_targets
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_new_version_message">
+              new_version_message
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_skip_repo_update">
+              skip_repo_update
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_clean_">
+              clean?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_verbose_">
+              verbose?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_silent_">
+              silent?
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_generate_docs_">
+              generate_docs?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_doc_install_">
+              doc_install?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_integrate_targets_">
+              integrate_targets?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_skip_repo_update_">
+              skip_repo_update?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_new_version_message_">
+              new_version_message?
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_project_podfile">
+              project_podfile
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_project_lockfile">
+              project_lockfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_headers_symlink_root">
+              headers_symlink_root
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_podfile">
+              podfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_lockfile">
+              lockfile
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_sandbox">
+              sandbox
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_config" class="tab-pane default">
+          <h2>Config</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Config</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Config < Object</code></p>
+          
+            <h3>Namespaces</h3>
+            
+              <p><a href="../cocoapods/mixin.html">
+              <code>Pod :: Config :: Mixin</code>
+            </a></p>
+            
+          
+        </div>
+
+
+        
+          <div id="tab_repos_dir" class="tab-pane">
+          <h2> repos_dir </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">repos_dir</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">repos_dir</span>
+  <span class="vi">@repos_dir</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L13">
+                  lib/cocoapods/config.rb:13
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_project_root" class="tab-pane">
+          <h2> project_root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">project_root</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">project_root</span>
+  <span class="vi">@project_root</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L13">
+                  lib/cocoapods/config.rb:13
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L34">
+                  lib/cocoapods/config.rb:34
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_project_pods_root" class="tab-pane">
+          <h2> project_pods_root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">project_pods_root</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">project_pods_root</span>
+  <span class="vi">@project_pods_root</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L13">
+                  lib/cocoapods/config.rb:13
+                </a></p>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L38">
+                  lib/cocoapods/config.rb:38
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_clean" class="tab-pane">
+          <h2> clean </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">clean</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">clean</span>
+  <span class="vi">@clean</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L14">
+                  lib/cocoapods/config.rb:14
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_verbose" class="tab-pane">
+          <h2> verbose </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">verbose</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">verbose</span>
+  <span class="vi">@verbose</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L14">
+                  lib/cocoapods/config.rb:14
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_silent" class="tab-pane">
+          <h2> silent </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">silent</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">silent</span>
+  <span class="vi">@silent</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L14">
+                  lib/cocoapods/config.rb:14
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_generate_docs" class="tab-pane">
+          <h2> generate_docs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">generate_docs</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">generate_docs</span>
+  <span class="vi">@generate_docs</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L15">
+                  lib/cocoapods/config.rb:15
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_doc_install" class="tab-pane">
+          <h2> doc_install </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">doc_install</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">doc_install</span>
+  <span class="vi">@doc_install</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L15">
+                  lib/cocoapods/config.rb:15
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_integrate_targets" class="tab-pane">
+          <h2> integrate_targets </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">integrate_targets</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">integrate_targets</span>
+  <span class="vi">@integrate_targets</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L16">
+                  lib/cocoapods/config.rb:16
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_new_version_message" class="tab-pane">
+          <h2> new_version_message </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">new_version_message</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">new_version_message</span>
+  <span class="vi">@new_version_message</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L17">
+                  lib/cocoapods/config.rb:17
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_skip_repo_update" class="tab-pane">
+          <h2> skip_repo_update </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">skip_repo_update</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">skip_repo_update</span>
+  <span class="vi">@skip_repo_update</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L17">
+                  lib/cocoapods/config.rb:17
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_clean_" class="tab-pane">
+          <h2> clean? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">clean?</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">clean</span>
+  <span class="vi">@clean</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L19">
+                  lib/cocoapods/config.rb:19
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_verbose_" class="tab-pane">
+          <h2> verbose? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">verbose?</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">verbose</span>
+  <span class="vi">@verbose</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L20">
+                  lib/cocoapods/config.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_silent_" class="tab-pane">
+          <h2> silent? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">silent?</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">silent</span>
+  <span class="vi">@silent</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L21">
+                  lib/cocoapods/config.rb:21
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_generate_docs_" class="tab-pane">
+          <h2> generate_docs? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">generate_docs?</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">generate_docs</span>
+  <span class="vi">@generate_docs</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L22">
+                  lib/cocoapods/config.rb:22
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_doc_install_" class="tab-pane">
+          <h2> doc_install? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">doc_install?</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">doc_install</span>
+  <span class="vi">@doc_install</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L23">
+                  lib/cocoapods/config.rb:23
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_integrate_targets_" class="tab-pane">
+          <h2> integrate_targets? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">integrate_targets?</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">integrate_targets</span>
+  <span class="vi">@integrate_targets</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L24">
+                  lib/cocoapods/config.rb:24
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_skip_repo_update_" class="tab-pane">
+          <h2> skip_repo_update? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">skip_repo_update?</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">skip_repo_update</span>
+  <span class="vi">@skip_repo_update</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L25">
+                  lib/cocoapods/config.rb:25
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_new_version_message_" class="tab-pane">
+          <h2> new_version_message? </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">new_version_message?</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">new_version_message</span>
+  <span class="vi">@new_version_message</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L26">
+                  lib/cocoapods/config.rb:26
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span> <span class="c1">#=&gt; Config </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Config</code></p>
+              <p>A new instance of Config</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span>
+  <span class="vi">@repos_dir</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="s2">&quot;~/.cocoapods&quot;</span><span class="p">))</span>
+  <span class="vi">@verbose</span> <span class="o">=</span> <span class="vi">@silent</span> <span class="o">=</span> <span class="vi">@skip_repo_update</span> <span class="o">=</span> <span class="kp">false</span>
+  <span class="vi">@clean</span> <span class="o">=</span> <span class="vi">@generate_docs</span> <span class="o">=</span> <span class="vi">@doc_install</span> <span class="o">=</span> <span class="vi">@integrate_targets</span> <span class="o">=</span> <span class="vi">@new_version_message</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L28">
+                  lib/cocoapods/config.rb:28
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_project_podfile" class="tab-pane">
+          <h2> project_podfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">project_podfile</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">project_podfile</span>
+  <span class="k">unless</span> <span class="vi">@project_podfile</span>
+    <span class="vi">@project_podfile</span> <span class="o">=</span> <span class="n">project_root</span> <span class="o">+</span> <span class="s1">&#39;CocoaPods.podfile&#39;</span>
+    <span class="k">unless</span> <span class="vi">@project_podfile</span><span class="o">.</span><span class="n">exist?</span>
+      <span class="vi">@project_podfile</span> <span class="o">=</span> <span class="n">project_root</span> <span class="o">+</span> <span class="s1">&#39;Podfile&#39;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="vi">@project_podfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L42">
+                  lib/cocoapods/config.rb:42
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_project_lockfile" class="tab-pane">
+          <h2> project_lockfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">project_lockfile</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">project_lockfile</span>
+  <span class="vi">@project_lockfile</span> <span class="o">||=</span> <span class="n">project_root</span> <span class="o">+</span> <span class="s1">&#39;Podfile.lock&#39;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L52">
+                  lib/cocoapods/config.rb:52
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_headers_symlink_root" class="tab-pane">
+          <h2> headers_symlink_root </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">headers_symlink_root</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">headers_symlink_root</span>
+  <span class="vi">@headers_symlink_root</span> <span class="o">||=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">project_pods_root</span><span class="si">}</span><span class="s2">/Headers&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L56">
+                  lib/cocoapods/config.rb:56
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_podfile" class="tab-pane">
+          <h2> podfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">podfile</span> <span class="c1">#=&gt; Podfile </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Podfile</code></p>
+              <p>The Podfile to use for the current execution.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">podfile</span>
+  <span class="vi">@podfile</span> <span class="o">||=</span> <span class="k">begin</span>
+    <span class="no">Podfile</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">project_podfile</span><span class="p">)</span> <span class="k">if</span> <span class="n">project_podfile</span><span class="o">.</span><span class="n">exist?</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L62">
+                  lib/cocoapods/config.rb:62
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_lockfile" class="tab-pane">
+          <h2> lockfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">lockfile</span> <span class="c1">#=&gt; Lockfile </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Lockfile</code></p>
+              <p>The Lockfile to use for the current execution.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">lockfile</span>
+  <span class="vi">@lockfile</span> <span class="o">||=</span> <span class="k">begin</span>
+    <span class="no">Lockfile</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">project_lockfile</span><span class="p">)</span> <span class="k">if</span> <span class="n">project_lockfile</span><span class="o">.</span><span class="n">exist?</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L71">
+                  lib/cocoapods/config.rb:71
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_sandbox" class="tab-pane">
+          <h2> sandbox </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">sandbox</span> <span class="c1">#=&gt; Sandbox </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Sandbox</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">sandbox</span>
+  <span class="vi">@sandbox</span> <span class="o">||=</span> <span class="no">Sandbox</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">project_pods_root</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/config.rb#L79">
+                  lib/cocoapods/config.rb:79
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

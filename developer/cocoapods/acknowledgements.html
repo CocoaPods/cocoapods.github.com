@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Acknowledgements Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Generator :: Acknowledgements</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_acknowledgements">Acknowledgements</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_save_as">
+              save_as
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_header_title">
+              header_title
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_header_text">
+              header_text
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_footnote_title">
+              footnote_title
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_footnote_text">
+              footnote_text
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_acknowledgements" class="tab-pane default">
+          <h2>Acknowledgements</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Generator :: Acknowledgements</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Acknowledgements < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">target_definition</span><span class="p">,</span> <span class="n">pods</span><span class="p">)</span> <span class="c1">#=&gt; Acknowledgements </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Acknowledgements</code></p>
+              <p>A new instance of Acknowledgements</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">target_definition</span><span class="p">,</span> <span class="n">pods</span><span class="p">)</span>
+  <span class="vi">@target_definition</span><span class="p">,</span> <span class="vi">@pods</span> <span class="o">=</span> <span class="n">target_definition</span><span class="p">,</span> <span class="n">pods</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/acknowledgements.rb#L10">
+                  lib/cocoapods/generator/acknowledgements.rb:10
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_save_as" class="tab-pane">
+          <h2> save_as </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">save_as</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">save_as</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="no">Acknowledgements</span><span class="o">.</span><span class="n">generators</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">generator</span><span class="o">|</span>
+    <span class="n">generator</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="vi">@target_definition</span><span class="p">,</span> <span class="vi">@pods</span><span class="p">)</span><span class="o">.</span><span class="n">save_as</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/acknowledgements.rb#L14">
+                  lib/cocoapods/generator/acknowledgements.rb:14
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_header_title" class="tab-pane">
+          <h2> header_title </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">header_title</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">header_title</span>
+  <span class="s2">&quot;Acknowledgements&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/acknowledgements.rb#L20">
+                  lib/cocoapods/generator/acknowledgements.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_header_text" class="tab-pane">
+          <h2> header_text </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">header_text</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">header_text</span>
+  <span class="s2">&quot;This application makes use of the following third party libraries:&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/acknowledgements.rb#L24">
+                  lib/cocoapods/generator/acknowledgements.rb:24
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_footnote_title" class="tab-pane">
+          <h2> footnote_title </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">footnote_title</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">footnote_title</span>
+  <span class="s2">&quot;&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/acknowledgements.rb#L28">
+                  lib/cocoapods/generator/acknowledgements.rb:28
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_footnote_text" class="tab-pane">
+          <h2> footnote_text </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">footnote_text</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">footnote_text</span>
+  <span class="s2">&quot;Generated by CocoaPods - http://cocoapods.org&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/acknowledgements.rb#L32">
+                  lib/cocoapods/generator/acknowledgements.rb:32
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

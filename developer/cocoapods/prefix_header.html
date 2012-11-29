@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>PrefixHeader Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Generator :: PrefixHeader</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_prefixheader">PrefixHeader</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_platform">
+              platform
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_pods">
+              pods
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_generate">
+              generate
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_save_as">
+              save_as
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_prefixheader" class="tab-pane default">
+          <h2>PrefixHeader</h2>
+          <p><p>Generates a prefix header file for a Pods library. The prefix header is
+generated according to the platform of the target and the pods.</p>
+
+<p>According to the platform the prefix header imports <code>UIKit/UIKit.h</code> or
+<code>Cocoa/Cocoa.h</code>.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Generator :: PrefixHeader</code></p>
+          <h3>Inheritance</h3>
+          <p><code>PrefixHeader < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_platform" class="tab-pane">
+          <h2> platform </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">platform</span> <span class="c1">#=&gt; Platform </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Platform</code></p>
+              <p>The platform for which the prefix header will be</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">platform</span>
+  <span class="vi">@platform</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/prefix_header.rb#L15">
+                  lib/cocoapods/generator/prefix_header.rb:15
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_pods" class="tab-pane">
+          <h2> pods </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">pods</span> <span class="c1">#=&gt; Array&lt;LocalPod&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;LocalPod&gt;</code></p>
+              <p>The LocalPod for the target for which the</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">pods</span>
+  <span class="vi">@pods</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/prefix_header.rb#L20">
+                  lib/cocoapods/generator/prefix_header.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="n">pods</span><span class="p">)</span> <span class="c1">#=&gt; PrefixHeader </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Platform</code> <b>platform</b></p>
+              <p>@see platform</p>
+
+            
+              
+
+              <p><code>Array<LocalPod></code> <b>@see</b></p>
+              <p>Pods</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>PrefixHeader</code></p>
+              <p>A new instance of PrefixHeader</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="n">pods</span><span class="p">)</span>
+  <span class="vi">@platform</span> <span class="o">=</span> <span class="n">platform</span>
+  <span class="vi">@pods</span> <span class="o">=</span> <span class="n">pods</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/prefix_header.rb#L26">
+                  lib/cocoapods/generator/prefix_header.rb:26
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_generate" class="tab-pane">
+          <h2> generate </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">generate</span> <span class="c1">#=&gt; String </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>String</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">generate</span>
+  <span class="n">result</span> <span class="o">=</span>  <span class="s2">&quot;#ifdef __OBJC__</span><span class="se">\n</span><span class="s2">&quot;</span>
+  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;#import </span><span class="si">#{</span><span class="n">platform</span> <span class="o">==</span> <span class="ss">:ios</span> <span class="p">?</span> <span class="s1">&#39;&lt;UIKit/UIKit.h&gt;&#39;</span> <span class="p">:</span> <span class="s1">&#39;&lt;Cocoa/Cocoa.h&gt;&#39;</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;#endif</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+  <span class="n">pods</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">pod</span><span class="o">|</span>
+    <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="k">if</span> <span class="n">prefix_header_contents</span> <span class="o">=</span> <span class="n">pod</span><span class="o">.</span><span class="n">top_specification</span><span class="o">.</span><span class="n">prefix_header_contents</span>
+      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">prefix_header_contents</span>
+      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="k">elsif</span> <span class="n">prefix_header</span> <span class="o">=</span> <span class="n">pod</span><span class="o">.</span><span class="n">prefix_header_file</span>
+      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">prefix_header</span><span class="o">.</span><span class="n">read</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/prefix_header.rb#L44">
+                  lib/cocoapods/generator/prefix_header.rb:44
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_save_as" class="tab-pane">
+          <h2> save_as </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">save_as</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Pathname</code> <b>path</b></p>
+              <p>The path where the prefix header should be stored.</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>void</code></p>
+              
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">save_as</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">header</span><span class="o">|</span> <span class="n">header</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">generate</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/prefix_header.rb#L68">
+                  lib/cocoapods/generator/prefix_header.rb:68
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

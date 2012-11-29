@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Mercurial Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Downloader :: Mercurial</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_mercurial">Mercurial</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_download">
+              download
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_download_head">
+              download_head
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_download_revision">
+              download_revision
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_target_path">
+              target_path
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_url">
+              url
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_options">
+              options
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_mercurial" class="tab-pane default">
+          <h2>Mercurial</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Downloader :: Mercurial</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Mercurial < Downloader < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_download" class="tab-pane">
+          <h2> download </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">download</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">download</span>
+  <span class="no">UI</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s1">&#39; &gt; Cloning mercurial repo&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="n">options</span><span class="o">[</span><span class="ss">:revision</span><span class="o">]</span>
+      <span class="n">download_revision</span>
+    <span class="k">else</span>
+      <span class="n">download_head</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/mercurial.rb#L6">
+                  lib/cocoapods/downloader/mercurial.rb:6
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_download_head" class="tab-pane">
+          <h2> download_head </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">download_head</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">download_head</span>
+  <span class="n">hg!</span> <span class="s2">&quot;clone </span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2"> </span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">target_path</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/mercurial.rb#L16">
+                  lib/cocoapods/downloader/mercurial.rb:16
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_download_revision" class="tab-pane">
+          <h2> download_revision </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">download_revision</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">download_revision</span>
+  <span class="n">hg!</span> <span class="s2">&quot;clone </span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2"> --rev &#39;</span><span class="si">#{</span><span class="n">options</span><span class="o">[</span><span class="ss">:revision</span><span class="o">]</span><span class="si">}</span><span class="s2">&#39; </span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">target_path</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader/mercurial.rb#L20">
+                  lib/cocoapods/downloader/mercurial.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_target_path" class="tab-pane">
+          <h2> target_path </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">target_path</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">target_path</span>
+  <span class="vi">@target_path</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader.rb#L18">
+                  lib/cocoapods/downloader.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_url" class="tab-pane">
+          <h2> url </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">url</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">url</span>
+  <span class="vi">@url</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader.rb#L18">
+                  lib/cocoapods/downloader.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_options" class="tab-pane">
+          <h2> options </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">options</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">options</span>
+  <span class="vi">@options</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader.rb#L18">
+                  lib/cocoapods/downloader.rb:18
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">target_path</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span> <span class="c1">#=&gt; Downloader </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Downloader</code></p>
+              <p>A new instance of Downloader</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">target_path</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+  <span class="vi">@target_path</span><span class="p">,</span> <span class="vi">@url</span><span class="p">,</span> <span class="vi">@options</span> <span class="o">=</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span>
+  <span class="vi">@target_path</span><span class="o">.</span><span class="n">mkpath</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/downloader.rb#L20">
+                  lib/cocoapods/downloader.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

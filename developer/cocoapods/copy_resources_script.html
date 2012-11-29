@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>CopyResourcesScript Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Generator :: CopyResourcesScript</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_copyresourcesscript">CopyResourcesScript</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_resources">
+              resources
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_save_as">
+              save_as
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_copyresourcesscript" class="tab-pane default">
+          <h2>CopyResourcesScript</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Generator :: CopyResourcesScript</code></p>
+          <h3>Inheritance</h3>
+          <p><code>CopyResourcesScript < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_resources" class="tab-pane">
+          <h2> resources </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">resources</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">resources</span>
+  <span class="vi">@resources</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/copy_resources_script.rb#L30">
+                  lib/cocoapods/generator/copy_resources_script.rb:30
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">resources</span> <span class="o">=</span> <span class="o">[]</span><span class="p">)</span> <span class="c1">#=&gt; CopyResourcesScript </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>CopyResourcesScript</code></p>
+              <p>A new instance of CopyResourcesScript</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">resources</span> <span class="o">=</span> <span class="o">[]</span><span class="p">)</span>
+  <span class="vi">@resources</span> <span class="o">=</span> <span class="n">resources</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/copy_resources_script.rb#L33">
+                  lib/cocoapods/generator/copy_resources_script.rb:33
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_save_as" class="tab-pane">
+          <h2> save_as </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">save_as</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">save_as</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span>
+  <span class="n">pathname</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">script</span><span class="o">|</span>
+    <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="no">CONTENT</span>
+    <span class="vi">@resources</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">resource</span><span class="o">|</span>
+      <span class="n">script</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;install_resource &#39;</span><span class="si">#{</span><span class="n">resource</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="c1"># TODO use File api</span>
+  <span class="nb">system</span><span class="p">(</span><span class="s2">&quot;chmod +x &#39;</span><span class="si">#{</span><span class="n">pathname</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/copy_resources_script.rb#L37">
+                  lib/cocoapods/generator/copy_resources_script.rb:37
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Resolver Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Resolver</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_resolver">Resolver</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_sandbox">
+              sandbox
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_podfile">
+              podfile
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_locked_dependencies">
+              locked_dependencies
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_update_external_specs">
+              update_external_specs
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_resolve">
+              resolve
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_specs_by_target">
+              specs_by_target
+            </a></p>
+          
+          
+              
+            <p><a class="select-tab" href="#tab_specs">
+              specs
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_resolver" class="tab-pane default">
+          <h2>Resolver</h2>
+          <p><p>The resolver is responsible of generating a list of specifications grouped
+by target for a given Podfile.</p>
+
+<p>Its current implementation is naive, in the sense that it can&#39;t do full
+automatic resolves like Bundler:
+<a href="http://patshaughnessy.net/2011/9/24/how-does-bundler-bundle">how-does-bundler-bundle</a></p>
+
+<p>Another important aspect to keep in mind of the current implementation
+is that the order of the dependencies matters.</p>
+</p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Resolver</code></p>
+          <h3>Inheritance</h3>
+          <p><code>Resolver < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_sandbox" class="tab-pane">
+          <h2> sandbox </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">sandbox</span> <span class="c1">#=&gt; Sandbox </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Sandbox</code></p>
+              <p>The Sandbox used by the resolver to find external
+dependencies.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">sandbox</span>
+  <span class="vi">@sandbox</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/resolver.rb#L20">
+                  lib/cocoapods/resolver.rb:20
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_podfile" class="tab-pane">
+          <h2> podfile </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">podfile</span> <span class="c1">#=&gt; Podfile </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Podfile</code></p>
+              <p>The Podfile used by the resolver.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">podfile</span>
+  <span class="vi">@podfile</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/resolver.rb#L24">
+                  lib/cocoapods/resolver.rb:24
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_locked_dependencies" class="tab-pane">
+          <h2> locked_dependencies </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">locked_dependencies</span> <span class="c1">#=&gt; Array&lt;Dependency&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Dependency&gt;</code></p>
+              <p>The list of dependencies locked to a specific
+version.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">locked_dependencies</span>
+  <span class="vi">@locked_dependencies</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/resolver.rb#L29">
+                  lib/cocoapods/resolver.rb:29
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_update_external_specs" class="tab-pane">
+          <h2> update_external_specs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">update_external_specs</span> <span class="c1">#=&gt; Bool </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Bool</code></p>
+              <p>Whether the resolver should update the external specs
+in the resolution process. This option is used for detecting
+changes in with the Podfile without affecting the existing Pods
+installation</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">update_external_specs</span>
+  <span class="vi">@update_external_specs</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/resolver.rb#L42">
+                  lib/cocoapods/resolver.rb:42
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">sandbox</span><span class="p">,</span> <span class="n">podfile</span><span class="p">,</span> <span class="n">locked_dependencies</span> <span class="o">=</span> <span class="o">[]</span><span class="p">)</span> <span class="c1">#=&gt; Resolver </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+            <h3>Parameters</h3>
+            
+              
+
+              <p><code>Sandbox</code> <b>sandbox</b></p>
+              <p>@see sandbox</p>
+
+            
+              
+
+              <p><code>Podfile</code> <b>podfile</b></p>
+              <p>@see podfile</p>
+
+            
+              
+
+              <p><code>Array<Dependency></code> <b>locked_dependencies</b></p>
+              <p>@see locked_dependencies</p>
+
+            
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Resolver</code></p>
+              <p>A new instance of Resolver</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">sandbox</span><span class="p">,</span> <span class="n">podfile</span><span class="p">,</span> <span class="n">locked_dependencies</span> <span class="o">=</span> <span class="o">[]</span><span class="p">)</span>
+  <span class="vi">@sandbox</span> <span class="o">=</span> <span class="n">sandbox</span>
+  <span class="vi">@podfile</span> <span class="o">=</span> <span class="n">podfile</span>
+  <span class="vi">@locked_dependencies</span> <span class="o">=</span> <span class="n">locked_dependencies</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/resolver.rb#L48">
+                  lib/cocoapods/resolver.rb:48
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_resolve" class="tab-pane">
+          <h2> resolve </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">resolve</span> <span class="c1">#=&gt; Hash{TargetDefinition =&gt; Array&lt;Specification&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{TargetDefinition =&gt; Array&lt;Specification&gt;}</code></p>
+              <p>Specs<em>by</em>target
+the specifications that need to be installed grouped by target
+definition.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">resolve</span>
+  <span class="vi">@cached_sources</span>  <span class="o">=</span> <span class="no">Source</span><span class="o">::</span><span class="no">Aggregate</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">repos_dir</span><span class="p">)</span>
+  <span class="vi">@cached_sets</span>     <span class="o">=</span> <span class="p">{}</span>
+  <span class="vi">@cached_specs</span>    <span class="o">=</span> <span class="p">{}</span>
+  <span class="vi">@specs_by_target</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="c1"># @pods_from_external_sources = []</span>
+
+  <span class="n">podfile</span><span class="o">.</span><span class="n">target_definitions</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>
+    <span class="no">UI</span><span class="o">.</span><span class="n">section</span> <span class="s2">&quot;Resolving dependencies for target `</span><span class="si">#{</span><span class="n">target</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; (</span><span class="si">#{</span><span class="n">target</span><span class="o">.</span><span class="n">platform</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="k">do</span>
+      <span class="vi">@loaded_specs</span> <span class="o">=</span> <span class="o">[]</span>
+      <span class="n">find_dependency_specs</span><span class="p">(</span><span class="n">podfile</span><span class="p">,</span> <span class="n">target</span><span class="o">.</span><span class="n">dependencies</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+      <span class="n">specs</span> <span class="o">=</span> <span class="n">cached_specs</span><span class="o">.</span><span class="n">values_at</span><span class="p">(</span><span class="o">*</span><span class="vi">@loaded_specs</span><span class="p">)</span><span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span>
+      <span class="n">specs_by_target</span><span class="o">[</span><span class="n">target</span><span class="o">]</span> <span class="o">=</span> <span class="n">specs</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="n">cached_specs</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span>
+  <span class="n">specs_by_target</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/resolver.rb#L66">
+                  lib/cocoapods/resolver.rb:66
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_specs_by_target" class="tab-pane">
+          <h2> specs_by_target </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">specs_by_target</span> <span class="c1">#=&gt; Hash{Podfile::TargetDefinition =&gt; Array&lt;Specification&gt;} </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Hash{Podfile::TargetDefinition =&gt; Array&lt;Specification&gt;}</code></p>
+              <p>Returns the resolved specifications grouped by target.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">specs_by_target</span>
+  <span class="vi">@specs_by_target</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/resolver.rb#L91">
+                  lib/cocoapods/resolver.rb:91
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_specs" class="tab-pane">
+          <h2> specs </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">specs</span> <span class="c1">#=&gt; Array&lt;Specification&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>Array&lt;Specification&gt;</code></p>
+              <p>All the specifications resolved.</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">specs</span>
+  <span class="n">specs_by_target</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">uniq</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/resolver.rb#L95">
+                  lib/cocoapods/resolver.rb:95
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+

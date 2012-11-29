@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>BridgeSupport Documenation</title>
+
+<link type="text/css" rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../../style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascript.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div id="body">
+
+    <div id="sections-container">
+      <ul class="breadcrumb" >
+        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
+          <span class="divider">/</span></li>
+        <li><a href="../../index.html">Docs</a>
+          <span class="divider">/</span></li>
+        <li><a href="../cocoapods.html">cocoapods</a>
+          <span class="divider">/</span></li>
+        <li class="active">Pod :: Generator :: BridgeSupport</li>
+      </ul>
+    </div>
+
+
+    <div id="methods-container">
+      <div id="header">
+        <h1><a class="select-tab" href="#tab_bridgesupport">BridgeSupport</a></h1>
+        <div class="row" id="methods_list">
+          
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_headers">
+              headers
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_initialize">
+              initialize
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_search_paths">
+              search_paths
+            </a></p>
+          
+          
+          </div>
+        
+            <div class="span3">
+             
+              
+            <p><a class="select-tab" href="#tab_save_as">
+              save_as
+            </a></p>
+          
+          
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="content-container">
+
+      <div class="tab-content">
+        <div id="tab_bridgesupport" class="tab-pane default">
+          <h2>BridgeSupport</h2>
+          <p></p>
+          <h3>Signature</h3>
+          <p><code>Pod :: Generator :: BridgeSupport</code></p>
+          <h3>Inheritance</h3>
+          <p><code>BridgeSupport < Object</code></p>
+          
+        </div>
+
+
+        
+          <div id="tab_headers" class="tab-pane">
+          <h2> headers </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">headers</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">headers</span>
+  <span class="vi">@headers</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/bridge_support.rb#L7">
+                  lib/cocoapods/generator/bridge_support.rb:7
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_initialize" class="tab-pane">
+          <h2> initialize </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span> <span class="c1">#=&gt; BridgeSupport </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+            <h3>Returns</h3>
+            
+              <p><code>BridgeSupport</code></p>
+              <p>A new instance of BridgeSupport</p>
+
+            
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span>
+  <span class="vi">@headers</span> <span class="o">=</span> <span class="n">headers</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/bridge_support.rb#L9">
+                  lib/cocoapods/generator/bridge_support.rb:9
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_search_paths" class="tab-pane">
+          <h2> search_paths </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">search_paths</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">search_paths</span>
+  <span class="vi">@headers</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">header</span><span class="o">|</span> <span class="s2">&quot;-I &#39;</span><span class="si">#{</span><span class="n">header</span><span class="o">.</span><span class="n">dirname</span><span class="si">}</span><span class="s2">&#39;&quot;</span> <span class="p">}</span><span class="o">.</span><span class="n">uniq</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/bridge_support.rb#L13">
+                  lib/cocoapods/generator/bridge_support.rb:13
+                </a></p>
+              
+          
+
+        </div>
+      
+          <div id="tab_save_as" class="tab-pane">
+          <h2> save_as </h2>
+          <p></p>
+          <h3>Signature</h3>
+              
+                <div class="highlight"><pre><span class="n">save_as</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span> <span class="c1">#=&gt; </span>
+</pre></div>
+              
+
+              
+              </span>
+              
+
+              
+              
+              
+              
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          <h3>Source</h3>
+          <div class="highlight"><pre><span class="k">def</span> <span class="nf">save_as</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span>
+  <span class="n">gen_bridge_metadata</span> <span class="sx">%{-c &quot;</span><span class="si">#{</span><span class="n">search_paths</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="si">}</span><span class="sx">&quot; -o &#39;</span><span class="si">#{</span><span class="n">pathname</span><span class="si">}</span><span class="sx">&#39; &#39;</span><span class="si">#{</span><span class="n">headers</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;&#39; &#39;&quot;</span><span class="p">)</span><span class="si">}</span><span class="sx">&#39;}</span>
+<span class="k">end</span>
+</pre></div>
+
+          
+            <h3>Source Files</h3>
+              
+                <p><a class="source_file" href="https://github.com/CocoaPods//blob/master/lib/cocoapods/generator/bridge_support.rb#L17">
+                  lib/cocoapods/generator/bridge_support.rb:17
+                </a></p>
+              
+          
+
+        </div>
+      
+
+
+
+        <div id="footer">
+          <hr>
+          <p class="note">Generated for CocoaPods Core HEAD.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+
