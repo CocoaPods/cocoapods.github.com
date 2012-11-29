@@ -118,7 +118,7 @@
           <% if method.has_tag?('param') %>
             <h3>Parameters</h3>
             <% method.tags('param').each do |tag|%>
-              <% puts "[WARN] Missing text for #{tag.name}" unless tag.text %>
+              <% puts "[WARN] Missing text for #{tag.name} (#{method.name})" unless tag.text %>
 
               <p><code><%= tag.types * '</code><code>' %></code> <b><%= tag.name %></b></p>
               <%= markdown tag.text || '' %>
