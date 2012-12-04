@@ -83,11 +83,17 @@ end
 
 #-----------------------------------------------------------------------------#
 
+desc "deploy build directory to github pages"
+task :bootstrap_build do
+  FileUtils.rm_rf 'build'
+  sh 'git clone git@github.com:CocoaPods/cocoapods.github.com.git build'
+end
+
 # From http://stackoverflow.com/questions/11809180/middleman-and-github-pages
 #
 desc "deploy build directory to github pages"
 task :deploy do
-#   puts "## Deploying branch to Github Pages "
+  puts "## Deploying branch to master brach"
 #   cp_r ".nojekyll", "build/.nojekyll"
 #   cd "build" do
 #     system "git add ."

@@ -262,6 +262,8 @@ module Pod
 
         attr_accessor :html_todos
 
+        attr_accessor :html_notes
+
         def ruby_representation
           scope == :instance ? "##{name}" : "::#{name}"
         end

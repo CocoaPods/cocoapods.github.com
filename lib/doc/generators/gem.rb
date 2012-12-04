@@ -6,96 +6,95 @@ module Pod
 
         # @param [Pathname] gem_spec_file
         #
-        def initialize(gem_spec_file, root_module = nil)
+        def initialize(gem_spec_file)
           require 'rubygems'
-          @gem_spec_file = gem_spec_file
+          @gem_spec_file = Pathname.new(gem_spec_file)
           gem_dir = File.dirname(gem_spec_file)
           Dir.chdir(gem_dir) do
-            @ruby_gem = ::Gem::Specification.load(gem_spec_file.to_s)
+            @specification = ::Gem::Specification.load(gem_spec_file.to_s)
           end
-          gem_files = @ruby_gem.files.map { |file| "#{gem_dir}/#{file}" }
+          gem_files = @specification.files.map { |file| "#{gem_dir}/#{file}" }
           source_files = gem_files.select { |f| f.end_with?('.rb') }
           super(source_files)
         end
 
-        #
+        # @return [Pathname] the path of the specification.
         #
         attr_reader :gem_spec_file
 
+        # @return [Gem::Specification] the specification for the gem.
         #
-        #
-        attr_reader :ruby_gem
+        attr_reader :specification
 
-        #
+        # @return [String] The GitHub name of the repo.
         #
         attr_accessor :github_name
 
-        # Optional
-        #
-        attr_accessor :root_module
-
         #---------------------------------------------------------------------#
 
-        #
+        # @return [Doc::CodeObjects::Gem] the code object for this generator.
         #
         def generate_code_object
           gem             = Doc::CodeObjects::Gem.new
           gem.name        = name
           gem.github_name = github_name
-          gem.version     = ruby_gem.version.to_s
-          gem.authors     = ruby_gem.authors.to_sentence
-          gem.description = ruby_gem.description
+          gem.version     = specification.version.to_s
+          gem.authors     = specification.authors.to_sentence
+          gem.description = specification.description
           gem.name_spaces = generate_name_spaces(yard_registry, gem)
-          set_name_spaces_parents(gem)
-          # readme_file = gem_spec_file + '../README.md'
-          # @readme markdown_h(readme.read)
           gem
         end
 
+        # @return [Array<Doc::CodeObjects::NameSpace>]
+        #
         # http://rubydoc.info/docs/yard/YARD/CodeObjects/ModuleObject
         # http://rubydoc.info/docs/yard/YARD/CodeObjects/ClassObject
         #
         def generate_name_spaces(yard_registry, gem)
           yard_name_spaces = yard_registry.all(:class, :module).sort_by(&:to_s)
-          yard_name_spaces.map do |yard_name_space|
-            namespace             = Doc::CodeObjects::NameSpace.new
-            namespace.name        = yard_name_space.name
-            namespace.gem         = gem
-            namespace.full_name   = yard_name_space.to_s
-            namespace.visibility  = yard_name_space.visibility
-            namespace.groups      = generate_groups(yard_name_space, namespace)
-            namespace.html_description = markdown_h(yard_name_space.docstring.to_s)
+          name_spaces = yard_name_spaces.map do |yard_name_space|
+            puts "- #{yard_name_space.name}"
+            name_space             = Doc::CodeObjects::NameSpace.new
+            name_space.name        = yard_name_space.name
+            name_space.gem         = gem
+            name_space.full_name   = yard_name_space.to_s
+            name_space.visibility  = yard_name_space.visibility
+            name_space.groups      = generate_groups(yard_name_space, name_space)
+            name_space.html_description = markdown_h(yard_name_space.docstring.to_s)
 
             if yard_name_space.is_a?(YARD::CodeObjects::ClassObject)
-              namespace.is_class  = true
-              # namespace.inherited_constants = yard_name_space.inherited_constants
-              # namespace.inherited_meths     = yard_name_space.inherited_meths
-              namespace.is_exception        = yard_name_space.is_exception?
-              namespace.superclass          = yard_name_space.superclass.to_s
+              name_space.is_class  = true
+              # name_space.inherited_constants = yard_name_space.inherited_constants
+              name_space.is_exception        = yard_name_space.is_exception?
+              name_space.superclass          = yard_name_space.superclass.to_s
             end
-            namespace
+            name_space
           end
+          set_name_spaces_parents(name_spaces, gem)
+          name_spaces
         end
 
+        # @return [void] Sets the parent name_space of each name_space.
         #
+        # @note   The Gem is set as the parent for root name_spaces.
         #
-        def set_name_spaces_parents(gem)
-          gem.name_spaces.each do |namespace|
-            segments = namespace.full_name.split('::')
+        def set_name_spaces_parents(name_spaces, gem)
+          name_spaces.each do |name_space|
+            segments = name_space.full_name.split('::')
             if segments.count == 1
-              namespace.parent = gem
+              name_space.parent = gem
             else
-              parent = gem.name_spaces.find { |ns| ns.full_name == segments[0..-2] * '::' }
+              parent = name_spaces.find { |ns| ns.full_name == segments[0..-2] * '::' }
               raise 'Unable to find a parent' unless parent
-              namespace.parent = parent
+              name_space.parent = parent
             end
           end
-
         end
 
+        # @return [Array<Doc::CodeObjects::Group>] generates the groups for the
+        #         given name_space.
         #
-        #
-        def generate_groups(yard_name_space, namespace)
+        def generate_groups(yard_name_space, name_space)
           methods_by_group = {}
           yard_name_space.meths.each do |yard_method|
             methods_by_group[yard_method.group] ||= []
@@ -105,45 +104,53 @@ module Pod
           groups = []
           methods_by_group.each do |yard_group, yard_method|
             group                  = Doc::CodeObjects::Group.new
-            group.parent           = namespace
+            group.parent           = name_space
             group.name             = yard_group ? yard_group.lines.first.chomp : nil
             group.html_description = yard_group ? markdown_h(yard_group.lines.drop(1).join) : nil
-            group.meths            = yard_method.map { |m| generate_method(m, yard_name_space, namespace) }
+            group.meths            = yard_method.map { |m| generate_method(m, yard_name_space, name_space) }
 
-            group.meths.each { |m| m.group = group }
+            group.meths.each { |method| method.group = group }
             groups << group
           end
           groups
         end
 
+        # @return [Doc::CodeObjects::GemMethod] Generates a method from the
+        #         given yard one.
         #
-        #
-        def generate_method(yard_method, yard_name_space, namespace)
+        def generate_method(yard_method, yard_name_space, name_space)
           method                         = Doc::CodeObjects::GemMethod.new
-          method.parent                  = namespace
+          method.parent                  = name_space
           method.name                    = yard_method.name
-          method.html_description        = markdown_h(yard_method.docstring.to_s)
-          method.examples                = compute_method_examples(yard_method)
-          method.source_files            = yard_method.files.map { |f| [f[0].gsub(/^.*\/lib\//,'lib/'), f[1]] }
-          method.spec_files              = find_spec_files(method.source_files)
           method.scope                   = yard_method.scope
           method.signature               = yard_method.signature
           method.visibility              = yard_method.visibility
-          method.html_source             = syntax_highlight(yard_method.source)
           method.is_attribute            = yard_method.is_attribute?
-          # method.is_alias                = yard_method.is_alias?
+          method.html_description        = markdown_h(yard_method.docstring.to_s)
+          method.examples                = compute_method_examples(yard_method)
           method.parameters              = compute_method_parameters(yard_method, :param)
           method.returns                 = compute_method_parameters(yard_method, :return)
           method.html_signature          = compute_method_signature(yard_method)
+          method.html_source             = syntax_highlight(yard_method.source)
+          method.source_files            = yard_method.files.map { |f| [f[0].gsub(/^.*\/lib\//,'lib/'), f[1]] }
+          method.spec_files              = find_spec_files(method.source_files)
           method.html_todos              = yard_method.tags('todo').map { |t| markdown_h(t.text) }
+          method.html_notes              = yard_method.tags('note').map { |t| markdown_h(t.text) }
+
           if yard_name_space.is_a?(YARD::CodeObjects::ClassObject)
-            method.inherited               = yard_name_space.inherited_meths.include?(yard_method)
+            method.inherited = yard_name_space.inherited_meths.include?(yard_method)
           end
+          # method.is_alias                = yard_method.is_alias?
           #aliases
           #owner
           method
         end
 
+        #---------------------------------------------------------------------#
+
+        # @return [Array<String>] the spec files associated with the given
+        #         source files.
+        #
         def find_spec_files(source_files)
           spec_dir = gem_spec_file + '../spec'
           source_files.map do |source_file|
@@ -153,22 +160,23 @@ module Pod
           end.flatten.compact
         end
 
-        # Taken from YARD
+        # @return [Array<CodeObjects::Example>] The list of the examples of the
+        #         method.
         #
-        def compute_method_signature(yard_method)
-          if yard_method.tags(:overload).size == 1
-            syntax_highlight signature(yard_method.tag(:overload), false)
-          elsif yard_method.tags(:overload).size > 1
-            yard_method.tags(:overload).each do |overload|
-              syntax_highlight signature(overload, false)
-            end
-          else
-            syntax_highlight signature(yard_method, false)
+        # @note   In this context the name of the tag is used as the
+        #         description.
+        #
+        def compute_method_examples(yard_method)
+          r = yard_method.docstring.tags(:example).map do |e|
+            CodeObjects::Example.new(e.name, syntax_highlight(e.text.strip))
           end
+          r  unless r.empty?
         end
 
+        # TODO This method ignores the `@overload` tag.
+        #
         def compute_method_parameters(yard_method, tag_name)
-          r = yard_method.docstring.tags(tag_name).map do |tag|
+          result = yard_method.docstring.tags(tag_name).map do |tag|
             param = CodeObjects::Param.new
             param.name  = tag.name
             if tag.types
@@ -183,24 +191,28 @@ module Pod
             end
             param
           end
-          r  unless r.empty?
+          result unless result.empty?
         end
 
-        # @return [Array<CodeObjects::Example>] The list of the default values of the
-        #         attribute in HTML.
+        # Adapted from YARD
         #
-        #         In this context the name of the tag is used as the
-        #         description.
-        #
-        def compute_method_examples(yard_method)
-          r = yard_method.docstring.tags(:example).map do |e|
-            CodeObjects::Example.new(e.name, syntax_highlight(e.text.strip))
+        def compute_method_signature(yard_method)
+          if yard_method.tags(:overload).size == 1
+            syntax_highlight(signature(yard_method.tag(:overload), false))
+          elsif yard_method.tags(:overload).size > 1
+            yard_method.tags(:overload).each do |overload|
+              syntax_highlight(signature(overload, false))
+            end
+          else
+            syntax_highlight(signature(yard_method, false))
           end
-          r  unless r.empty?
         end
-
 
         #---------------------------------------------------------------------#
+
+        # @!group YARD Helpers
+        #
+        # In this group the helpers from YARD are adapted.
 
         require 'yard'
         include YARD::Templates::Helpers::BaseHelper
