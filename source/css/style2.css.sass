@@ -1,0 +1,194 @@
+#footer
+  padding: 0 92px
+  // margin: 30px 0 0
+
+#tab-controller
+  h1
+    margin: 0 50px 10px
+    //a
+      color: rgb(230, 163, 60)
+
+h4
+  color: rgb(140, 122, 115)
+  font-size: 14px
+  height: 20px
+  margin: 20px 0 10px
+
+.description p
+  font-weight: lighter
+  font-size: 13px
+
+// Methods list
+
+#tab-controller
+  background-color : rgb(253, 250, 242)
+  // border-top       : 1px solid #F0E7DD
+  // TODO fix the shadow of the breadcrumbs
+  border-bottom    : 1px solid #F0E7DD
+
+  // FIXME
+  margin: -50px -92px 0
+  padding: 20px 92px 0
+
+  h1
+    color         : rgb(230, 163, 60)
+    font-size     : 14px
+    font-weight   : bold
+    height        : 40px
+    line-height   : 40px
+    // margin-left   : 50px + 44px
+    margin    : 0 0 -10px
+
+.methods_list
+  margin: 0 -92px
+  padding: 20px 42px
+
+  ul
+    margin: 0 38px
+
+  a
+    line-height: 22px
+    font-size: 12px
+    margin: 0px
+    color: hsl(16, 10%, 50%)
+    text-decoration: none
+    font-weight: normal
+
+  p, h2
+    margin: 0px 24px 0px 44px
+    padding: 0 6px
+
+  h2
+    margin-top: 18px
+    padding-bottom: 0px
+    line-height: 20px
+    font-size: 14px
+
+    &.first
+      margin-top: 0px
+
+    a
+      color: #CAAF9B
+      font-weight: bold
+
+  .active
+    background-color: #E6A33C
+    /* Experimental */
+    /* background-image: -webkit-linear-gradient(top, #FAA420, #FFB749) */
+    background-image: -webkit-linear-gradient(top, #BEAA89, #CAB79B)
+    border-radius: 2px
+
+    a
+      color: white
+
+  .active span.label.label-small
+    /* Experimental */
+    /* background-image: none */
+    background-image: -webkit-linear-gradient(top, #BEAA89, #CAB79B)
+    background-color: #E6A33C
+    line-height: 22px
+    margin: 0px 2px 0px -26px
+    border-radius: 2px
+    padding-right: 6px
+    color:white
+
+// FIXME ///////////////////////////////////////////////////////////////////
+
+.indenter
+  margin: 0 -50px
+  padding: 0 30px
+  // background-image: -webkit-linear-gradient(top, #FCF3E5, #EEE2D0)
+  background-color: rgb(82, 67, 62)
+  border-radius: 4px
+  // background-image: -webkit-linear-gradient(top, rgb(190, 170, 137), rgb(202, 183, 155))
+  b
+
+  h3, a
+    color: #DFCCAC
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace
+    font-weight: normal
+    // color: rgb(140, 122, 115)
+    // color: white
+
+.tab-content
+  h2
+    margin-top: 40px
+
+
+$text-color: rgb(140, 122, 115)
+
+h3, h4
+  a
+    color: $text-color
+
+
+// SECTIONS ///////////////////////////////////////////////////////////////////
+
+#sections-container
+  margin: 0 -92px
+  padding: 0 42px
+  background-color: #fcf3e5
+  border-bottom: 1px solid hsl(25, 31%, 70%)
+  background-image: -webkit-linear-gradient(top, #FCF3E5, #EEE2D0)
+
+  h3
+    margin: 0
+
+  a
+    text-decoration: none
+    color: #8C7A73
+
+.page-container
+  padding-top: 50px
+  border-top: 1px solid #F7F7F7
+
+// #current_section {
+//   background-color: #E6A33C;
+//   /* Experimental */
+//   background-image: -webkit-linear-gradient(top, #FAA420, #FFB749);
+//   background-image: -webkit-linear-gradient(top, #E9B16A, #DDA358);
+// }
+//
+//
+// #current_section a {
+//   color: #FDFAF2;
+//   /* Experimental */
+//   color: white;
+// }
+//
+
+
+// INDEX //////////////////////////////////////////////////////////////////////
+
+#index
+  p
+    font-weight : lighter
+    font-size   : 13px
+
+  .page-container h3
+    margin    : 20px 0
+    font-size : 18px
+    color     : rgb(140, 122, 115)
+
+  .page-container a
+    color : hsl(36, 77%, 57%)
+
+
+// FOOTER /////////////////////////////////////////////////////////////////////
+
+$footer_height : 100px
+
+#body
+  padding        : 0 92px
+  padding-bottom : $footer_height + 20
+
+
+#footer
+  position  : absolute
+  bottom    : 0
+  width     : 840px
+  height    : $footer_height
+  font-size : 12px
+  margin    : 0 -92px
+
+

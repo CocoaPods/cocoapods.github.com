@@ -1,0 +1,7 @@
+.DS_Store
+/.bundle
+/.sass-cache
+build/
+gems/
+.yardoc/
+docs_data/

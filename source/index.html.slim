@@ -1,0 +1,86 @@
+---
+title: Docs
+---
+
+/ The margins have been changed from teh default of bootstrap so currently
+/ there are less than 12 spans.
+
+#index
+  #content-container
+    h2 User
+    .row
+      .span5
+        h3 Docs
+        p
+          == link_to 'Podfile', "podfile.html"
+        p Learn how to write dependencies requirements for CocoaPods.
+        p
+          == link_to 'Specification', "specification.html"
+        p Learn how to write specifications for libraries.
+        p
+          == link_to 'Command line', "commands.html"
+        p To master command line interface like a true ninja.
+
+      .span3.offset1
+        h3 Guides
+        p
+          == link_to 'Adopting CocoaPods', "adopting_cocoapods.html"
+        p
+          == link_to 'Dependency versioning', "dependency_version_workflow.html"
+        p
+          == link_to 'Working with teams', "working_with_teams.html"
+        hr
+        p
+          == link_to 'Contributing to the master repo', "contributing_to_the_master_repo.html"
+        p
+          == link_to 'Creating and maintaining a Pod', "creating_and_maintaining_a_pod.html"
+        p
+          == link_to 'Creating your own repository', "creating_your_own_repository.html"
+
+    hr
+
+    h2 Developer
+    .row
+      .span5
+        h3 Gems
+        p
+          == link_to 'CocoaPods', "cocoapods/index.html"
+        p The CocoaPods gem which includes the command line support and the
+          installer.
+        p
+          == link_to 'CocoaPods-Core', "cocoapods_core/index.html"
+        p The CocoaPods-Core gem provides support to work with the models of
+          CocoaPods.
+        p
+          == link_to 'Xcodeproj', "xcodeproj/index.html"
+        p Xcodeproj lets you create and modify Xcode projects from Ruby. Script
+          boring management tasks or build Xcode-friendly libraries. Also includes
+          support for Xcode workspaces (.xcworkspace) and configuration files
+          (.xcconfig).
+        p
+          == link_to 'CLAide', "claide/index.html"
+        p I was born out of a need for a simple option and command parser, while
+          still providing an API that allows you to quickly create a full featured
+          command-line interface.
+
+      .span3.offset1
+        h3 Other Resources
+        p
+          a href="https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md" Changelog
+        p
+          a href="https://github.com/CocoaPods/Specs" Specs Repo
+
+        hr
+        p
+          a href="https://github.com/CocoaPods/cocoapods.org" cocoapods.org
+        p
+          a href="https://github.com/CocoaPods/feeds.cocoapods.org" feeds.cocoapods.org
+
+        hr
+        p
+          a href="http://rubygems.org" RubyGems
+        p
+          a href="http://gembundler.com" Bundler
+        p
+          a href="http://florianhanke.com/picky/" Picky
+
