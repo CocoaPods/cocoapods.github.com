@@ -1,0 +1,109 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>contributing_to_the_master_repo</title><link href="favicon.ico" rel="icon" type="image/ico" /><link href="css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/style-fc0fe55f.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/style2-6993d0a5.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="js/javascript-46faf48a.js" type="text/javascript"></script>
+<script src="js/bootstrap.min-e0886b3c.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="index.html">Docs</a><span class="divider">/</span></li><li class="active">contributing_to_the_master_repo</li></ul></div><div class="page-container"><h1>Contributing to the master repo</h1>
+
+<pre><code>This guide is a stub
+</code></pre>
+
+<p>The master repo contains specifications of open-source Objective-C libraries.</p>
+
+<h2>Details</h2>
+
+<ul>
+<li>installation path: <code>~/.cocoapods/master</code></li>
+<li>home: <a href="https://github.com/CocoaPods/Specs">https://github.com/CocoaPods/Specs</a></li>
+</ul>
+
+<h2>Contributing</h2>
+
+<p>To ensure a high quality and reliable collection of Pods the master repo is strict about the acceptable specifications. The CocoaPods linter (see the <code>pod spec lint</code> command) is used to validate specification and no errors or warnings are accepted.</p>
+
+<p>The highest priority of the master repo is to guarantee the integrity of existing
+CocoaPods installations.</p>
+
+<p>In general this means that:</p>
+
+<ul>
+<li>A specification cannot be deleted.</li>
+<li>Specifications can be updated only if they don&#39;t affect existing installation.
+
+<ul>
+<li>Broken specifications can be updated.</li>
+<li>Subspecs can be added as they are included by the parent specification by default.</li>
+</ul></li>
+<li>Only authoritative versions are accepted.</li>
+</ul>
+
+<p>CocoaPods uses a versioning scheme known as <a href="http://semver.org/">Semantic
+Versioning</a>, necessary for <a href="https://github.com/CocoaPods/Specs/wiki/Cross-dependencies-resolution-example">cross resolution of
+dependencies</a>.</p>
+
+<h2>Unversioned libraries</h2>
+
+<p>One of the CocoaPods goals is to promote the discovery of open-source software,
+for this reason new Pods for libraries which are not versioned are accepted in
+the master repo. The specifications of those pods should carry the version
+<code>0.0.1</code> under the assumption that, if the author starts versioning, she/he is
+unlikely to pick <code>0.0.1</code>. This is the only exception for authoritative
+versions.</p>
+
+<p>If you add an unversioned Pod it is your responsibility to ask the author of
+the library to tag versions, luckily we have a
+<a href="https://github.com/CocoaPods/Specs/wiki/%22Please-add-semantic-version-tags%22-issue-template">template</a>
+for this.</p>
+
+<p><strong>To prevent collisions with possible future versions, unversioned libraries
+can&#39;t be updated until the author starts to tag them.</strong></p>
+
+<p>If you need to update an unversione library you can:
+- Asks the author to versione the library.
+- Maintain a fork which is versioned. This fork should be clearly namespaced
+  from the original library according the <code>NAME@USER</code> convention (e.g.
+  <code>Reachability@irrationalfab</code>). It should also mention in the summary that it
+  is a versioned fork.
+- Create a podspec and use it in a private repo.</p>
+
+<h2>Creating podspecs</h2>
+
+<p>Creating a podspec is very easy as we provide templates full of examples.</p>
+
+<p>You can use the following command:</p>
+
+<pre><code>$ pod spec create Bananas
+</code></pre>
+
+<p>If the library is hosted on GitHub you can pass the url so CocoaPods can precompile the template:</p>
+
+<pre><code>$ pod spec create https://github.com/Bananas/Bananas
+</code></pre>
+
+<p>A this point you need edit compile the template (a pod specification is a Ruby source file):</p>
+
+<pre><code>$ pod spec lint Bananas.podspec --verbose
+</code></pre>
+
+<h2>Sharing podspecs</h2>
+
+<p>When a podspec lints you can submit it to the master repo.</p>
+
+<h5>Without push access</h5>
+
+<p>You need to fork the master repo on github, then you need to :</p>
+
+<pre><code>cd ~/.cocoapods/master
+git checkout -b fork
+git remote add myfork https://github.com/YOUR_USER_NAME/Specs.git
+cp ~/Bananas.podspec ~/.cocoapods/master/Bananas/VERSION/
+git push myfork
+git checkout master
+</code></pre>
+
+<p>Once you pushed you changes you can make a pull request on CocoaPods/Specs.</p>
+
+<h5>With push access</h5>
+
+<pre><code>$ pod push Bananas.podspec
+</code></pre>
+</div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div></body></html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>Command</title><link href="../../../favicon.ico" rel="icon" type="image/ico" /><link href="../../../css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../css/style-fc0fe55f.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../css/style2-6993d0a5.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../../../js/javascript-46faf48a.js" type="text/javascript"></script>
+<script src="../../../js/bootstrap.min-e0886b3c.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../../../index.html">Docs</a><span class="divider">/</span></li><li><a href="../../index.html">CLAide</a><span class="divider">/</span></li><li><a href="../index.html">CLAide</a><span class="divider">/</span></li><li class="active">Command</li></ul></div><div class="page-container"><div id="tab-controller"><div id="methods-container"><div id="header"><h1><a class="select-tab" href="#tab_command">Command</a></h1></div></div><div class ='methods_list'><div class ='row'><div class ='span3'><p><a class='select-tab' href=#tab_class_abstract_command>abstract_command</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_abstract_command_>abstract_command=</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_abstract_command_q_mark>abstract_command?</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_summary>summary</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_summary_>summary=</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_description>description</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_description_>description=</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_arguments>arguments</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_arguments_>arguments=</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_colorize_output>colorize_output</a><span class='label label-small'>+</span></p></div><div class ='span3'><p><a class='select-tab' href=#tab_class_colorize_output_>colorize_output=</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_colorize_output_q_mark>colorize_output?</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_command>command</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_command_>command=</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_full_command>full_command</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_subcommands>subcommands</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_inherited>inherited</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_options>options</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_parse>parse</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_run>run</a><span class='label label-small'>+</span></p></div><div class ='span3'><p><a class='select-tab' href=#tab_class_report_error>report_error</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_verbose>verbose</a></p><p><a class='select-tab' href=#tab_verbose_>verbose=</a></p><p><a class='select-tab' href=#tab_verbose_q_mark>verbose?</a></p><p><a class='select-tab' href=#tab_colorize_output>colorize_output</a></p><p><a class='select-tab' href=#tab_colorize_output_>colorize_output=</a></p><p><a class='select-tab' href=#tab_colorize_output_q_mark>colorize_output?</a></p><p><a class='select-tab' href=#tab_initialize>initialize</a></p><p><a class='select-tab' href=#tab_validate_bang>validate!</a></p><p><a class='select-tab' href=#tab_run>run</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_formatted_options_description>formatted_options_description</a></p><p><a class='select-tab' href=#tab_formatted_usage_description>formatted_usage_description</a></p><p><a class='select-tab' href=#tab_formatted_subcommand_summaries>formatted_subcommand_summaries</a></p><p><a class='select-tab' href=#tab_formatted_banner>formatted_banner</a></p><p><a class='select-tab' href=#tab_help_bang>help!</a></p><p><a class='select-tab' href=#tab_strip_heredoc>strip_heredoc</a></p></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_command"><h2>Command</h2><p>This class is used to build a command-line interface</p>
+
+<p>Each command is represented by a subclass of this class, which may be
+nested to create more granular commands.</p>
+
+<p>Following is an overview of the types of commands and what they should do.</p>
+
+<h3>Any command type</h3>
+
+<ul>
+<li>Inherit from the command class under which the command should be nested.</li>
+<li>Set <code>Command.summary</code> to a brief description of the command.</li>
+<li>Override <code>Command.options</code> to return the options it handles and their
+descriptions and prepending them to the results of calling <code>super</code>.</li>
+<li>Override <code>Command#initialize</code> if it handles any parameters.</li>
+<li>Override <code>Command#validate!</code> to check if the required parameters the
+command handles are valid, or call <code>Command#help!</code> in case they’re not.</li>
+</ul>
+
+<h3>Abstract command</h3>
+
+<p>The following is needed for an abstract command:</p>
+
+<ul>
+<li>Set <code>Command.abstract_command</code> to <code>true</code>.</li>
+<li>Subclass the command.</li>
+</ul>
+
+<p>When the optional <code>Command.description</code> is specified, it will be shown at
+the top of the command’s help banner.</p>
+
+<h3>Normal command</h3>
+
+<p>The following is needed for a normal command:</p>
+
+<ul>
+<li>Set <code>Command.arguments</code> to the description of the arguments this command
+handles.</li>
+<li>Override <code>Command#run</code> to perform the actual work.</li>
+</ul>
+
+<p>When the optional <code>Command.description</code> is specified, it will be shown
+underneath the usage section of the command’s help banner. Otherwise this
+defaults to <code>Command.summary</code>.</p>
+<h3>Inherits from:</h3><p><code><a href="../../../xcodeproj/object/index.html">Object</a></code></p></div><div class="tab-pane" id="tab_group_"><h2></h2><p>abstract_command</p><p>abstract_command=</p><p>abstract_command?</p><p>summary</p><p>summary=</p><p>description</p><p>description=</p><p>arguments</p><p>arguments=</p><p>colorize_output</p><p>colorize_output=</p><p>colorize_output?</p><p>command</p><p>command=</p><p>full_command</p><p>subcommands</p><p>inherited</p><p>options</p><p>parse</p><p>run</p><p>report_error</p><p>verbose</p><p>verbose=</p><p>verbose?</p><p>colorize_output</p><p>colorize_output=</p><p>colorize_output?</p><p>initialize</p><p>validate!</p><p>run</p><p>formatted_options_description</p><p>formatted_usage_description</p><p>formatted_subcommand_summaries</p><p>formatted_banner</p><p>help!</p><p>strip_heredoc</p></div><div class="tab-pane" id="tab_class_abstract_command"><h2>abstract_command<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">abstract_command</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Indicates wether or not this command can actually perform work of
+itself, or that it only contains subcommands.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L381">lib/claide.rb:381</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_abstract_command_"><h2>abstract_command=<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">abstract_command</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Indicates wether or not this command can actually perform work of
+itself, or that it only contains subcommands.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L381">lib/claide.rb:381</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_abstract_command_q_mark"><h2>abstract_command?<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">abstract_command?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Indicates wether or not this command can actually perform work of
+itself, or that it only contains subcommands.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">abstract_command</span>
+  <span class="vi">@abstract_command</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L382">lib/claide.rb:382</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_summary"><h2>summary<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">summary</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> <p>A brief description of the command, which is shown next to the
+command in the help banner of a parent command.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L389">lib/claide.rb:389</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_summary_"><h2>summary=<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">summary</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> <p>A brief description of the command, which is shown next to the
+command in the help banner of a parent command.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L389">lib/claide.rb:389</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_description"><h2>description<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">description</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> <p>A longer description of the command, which is shown underneath the
+usage section of the command’s help banner. Any indentation in this
+value will be ignored.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L397">lib/claide.rb:397</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_description_"><h2>description=<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">description</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> <p>A longer description of the command, which is shown underneath the
+usage section of the command’s help banner. Any indentation in this
+value will be ignored.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L397">lib/claide.rb:397</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_arguments"><h2>arguments<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">arguments</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> <p>A list of arguments the command handles. This is shown in the usage
+section of the command’s help banner.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L404">lib/claide.rb:404</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_arguments_"><h2>arguments=<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">arguments</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> <p>A list of arguments the command handles. This is shown in the usage
+section of the command’s help banner.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L404">lib/claide.rb:404</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_colorize_output"><h2>colorize_output<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">colorize_output</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>The default value for {Command#colorize_output}. This defaults to
+<code>true</code> if <code>String</code> has the instance methods <code>#green</code> and <code>#red</code>.
+Which are defined by, for instance, the
+<a href="https://github.com/defunkt/colored">colored</a> gem.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L413">lib/claide.rb:413</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_colorize_output_"><h2>colorize_output=<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><p>Sets the attribute colorize_output</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">colorize_output</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Parameters</h3><p><b> value</b></p><p>The value to set the attribute colorize_output to.</p>
+<h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L420">lib/claide.rb:420</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_colorize_output_q_mark"><h2>colorize_output?<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">colorize_output?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>The default value for {Command#colorize_output}. This defaults to
+<code>true</code> if <code>String</code> has the instance methods <code>#green</code> and <code>#red</code>.
+Which are defined by, for instance, the
+<a href="https://github.com/defunkt/colored">colored</a> gem.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">colorize_output</span>
+  <span class="k">if</span> <span class="vi">@colorize_output</span><span class="o">.</span><span class="n">nil?</span>
+    <span class="vi">@colorize_output</span> <span class="o">=</span> <span class="nb">String</span><span class="o">.</span><span class="n">method_defined?</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+                         <span class="nb">String</span><span class="o">.</span><span class="n">method_defined?</span><span class="p">(</span><span class="ss">:green</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="vi">@colorize_output</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L421">lib/claide.rb:421</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_command"><h2>command<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">command</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> <p>The name of the command. Defaults to a snake-cased version of the
+class’ name.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L428">lib/claide.rb:428</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_command_"><h2>command=<a class="select-tab" href=""><span class="label label-big">attribute</span></a><a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><p>Sets the attribute command</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">command</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Parameters</h3><p><b> value</b></p><p>The value to set the attribute command to.</p>
+<h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L433">lib/claide.rb:433</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_full_command"><h2>full_command<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">full_command</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> The full command up-to this command.
+</p><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="no">BevarageMaker</span><span class="o">::</span><span class="no">Tea</span><span class="o">.</span><span class="n">full_command</span> <span class="c1"># =&gt; &quot;beverage-maker tea&quot;</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">full_command</span>
+  <span class="k">if</span> <span class="n">superclass</span> <span class="o">==</span> <span class="no">Command</span>
+    <span class="s2">&quot;</span><span class="si">#{</span><span class="n">command</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">else</span>
+    <span class="s2">&quot;</span><span class="si">#{</span><span class="n">superclass</span><span class="o">.</span><span class="n">full_command</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">command</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L443">lib/claide.rb:443</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_subcommands"><h2>subcommands<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">subcommands</span> <span class="c1">#=&gt; Array&lt;Command&gt; </span>
+</pre></div><h3>Returns</h3><p><code>Array<Command></code> A list of command classes that are nested under this command.
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">subcommands</span>
+  <span class="vi">@subcommands</span> <span class="o">||=</span> <span class="o">[]</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L455">lib/claide.rb:455</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_inherited"><h2>inherited<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><p>Automatically registers a subclass as a subcommand.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">inherited</span><span class="p">(</span><span class="n">subcommand</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">inherited</span><span class="p">(</span><span class="n">subcommand</span><span class="p">)</span>
+  <span class="n">subcommands</span> <span class="o">&lt;&lt;</span> <span class="n">subcommand</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L463">lib/claide.rb:463</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_options"><h2>options<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><p>Should be overriden by a subclass if it handles any options.</p>
+
+<p>The subclass has to combine the result of calling <code>super</code> and its own
+list of options. The recommended way of doing this is by concatenating
+concatening to this classes’ own options.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">options</span> <span class="c1">#=&gt; Array&lt;Array&gt; </span>
+</pre></div><h3>Returns</h3><p><code>Array<Array></code> A list of option name and description tuples.
+</p><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">options</span>
+  <span class="o">[</span>
+    <span class="o">[</span><span class="s1">&#39;--verbose&#39;</span><span class="p">,</span> <span class="s1">&#39;Print more info&#39;</span><span class="o">]</span><span class="p">,</span>
+    <span class="o">[</span><span class="s1">&#39;--help&#39;</span><span class="p">,</span>    <span class="s1">&#39;Print help banner&#39;</span><span class="o">]</span><span class="p">,</span>
+  <span class="o">].</span><span class="n">concat</span><span class="p">(</span><span class="k">super</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">options</span>
+  <span class="n">options</span> <span class="o">=</span> <span class="o">[</span>
+    <span class="o">[</span><span class="s1">&#39;--verbose&#39;</span><span class="p">,</span> <span class="s1">&#39;Show more debugging information&#39;</span><span class="o">]</span><span class="p">,</span>
+    <span class="o">[</span><span class="s1">&#39;--help&#39;</span><span class="p">,</span>    <span class="s1">&#39;Show help banner of specified command&#39;</span><span class="o">]</span><span class="p">,</span>
+  <span class="o">]</span>
+  <span class="k">if</span> <span class="no">Command</span><span class="o">.</span><span class="n">colorize_output?</span>
+    <span class="n">options</span><span class="o">.</span><span class="n">unshift</span><span class="p">(</span><span class="o">[</span><span class="s1">&#39;--no-color&#39;</span><span class="p">,</span> <span class="s1">&#39;Show output without color&#39;</span><span class="o">]</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">options</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L486">lib/claide.rb:486</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_parse"><h2>parse<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">parse</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Command </span>
+</pre></div><h3>Parameters</h3><p><code>Array</code><span> </span><code>ARGV</code><span> </span><b> argv</b></p><p>A list of (remaining) parameters.</p>
+<h3>Returns</h3><p><code><a href="index.html">Command</a></code> <p>An instance of the command class that was matched by going through
+the arguments in the parameters and drilling down command classes.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="n">argv</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="k">unless</span> <span class="n">argv</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">ARGV</span><span class="p">)</span>
+  <span class="n">cmd</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">arguments</span><span class="o">.</span><span class="n">first</span>
+  <span class="k">if</span> <span class="n">cmd</span> <span class="o">&amp;&amp;</span> <span class="n">subcommand</span> <span class="o">=</span> <span class="n">subcommands</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">sc</span><span class="o">|</span> <span class="n">sc</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="n">cmd</span> <span class="p">}</span>
+    <span class="n">argv</span><span class="o">.</span><span class="n">shift_argument</span>
+    <span class="n">subcommand</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="kp">new</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L506">lib/claide.rb:506</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_run"><h2>run<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><p>Instantiates the command class matching the parameters through
+<code>Command.parse</code>, validates it through <code>Command#validate!</code>, and runs it
+through <code>Command#run</code>.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">run</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div><h3>Parameters</h3><p><code>Array</code><span> </span><code>ARGV</code><span> </span><b> argv</b></p><p>A list of parameters. For instance, the standard <code>ARGV</code> constant,
+which contains the parameters passed to the program.</p>
+<h3>Returns</h3><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="n">command</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="n">command</span><span class="o">.</span><span class="n">validate!</span>
+  <span class="n">command</span><span class="o">.</span><span class="n">run</span>
+<span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">exception</span>
+  <span class="k">if</span> <span class="n">exception</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">InformativeError</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="n">exception</span><span class="o">.</span><span class="n">message</span>
+    <span class="k">if</span> <span class="n">command</span><span class="o">.</span><span class="n">verbose?</span>
+      <span class="nb">puts</span>
+      <span class="nb">puts</span> <span class="o">*</span><span class="n">exception</span><span class="o">.</span><span class="n">backtrace</span>
+    <span class="k">end</span>
+    <span class="nb">exit</span> <span class="n">exception</span><span class="o">.</span><span class="n">exit_status</span>
+  <span class="k">else</span>
+    <span class="n">report_error</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L532">lib/claide.rb:532</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_class_report_error"><h2>report_error<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><p>Allows the application to perform custom error reporting, by overriding
+this method.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">report_error</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div><h3>Parameters</h3><p><code>Exception</code><span> </span><b> exception</b></p><p>An exception that occurred while running a command through
+{Command.run}.</p>
+<h3>Returns</h3><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">report_error</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span>
+  <span class="k">raise</span> <span class="n">exception</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L563">lib/claide.rb:563</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_verbose"><h2>verbose<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><p>Set to <code>true</code> if the user specifies the <code>--verbose</code> option.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">verbose</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Wether or not backtraces should be included when presenting the user an
+exception that includes the {InformativeError} module.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L581">lib/claide.rb:581</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_verbose_"><h2>verbose=<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><p>Set to <code>true</code> if the user specifies the <code>--verbose</code> option.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">verbose</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Wether or not backtraces should be included when presenting the user an
+exception that includes the {InformativeError} module.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L581">lib/claide.rb:581</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_verbose_q_mark"><h2>verbose?</h2><p>Set to <code>true</code> if the user specifies the <code>--verbose</code> option.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">verbose?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Wether or not backtraces should be included when presenting the user an
+exception that includes the {InformativeError} module.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">verbose</span>
+  <span class="vi">@verbose</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L582">lib/claide.rb:582</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_colorize_output"><h2>colorize_output<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><p>Set to <code>true</code> if <code>Command.colorize_output</code> returns <code>true</code> and the user
+did <strong>not</strong> specify the <code>--no-color</code> option.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">colorize_output</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Wether or not to color {InformativeError} exception messages red and
+subcommands in help banners green.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L594">lib/claide.rb:594</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_colorize_output_"><h2>colorize_output=<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><p>Set to <code>true</code> if <code>Command.colorize_output</code> returns <code>true</code> and the user
+did <strong>not</strong> specify the <code>--no-color</code> option.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">colorize_output</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Wether or not to color {InformativeError} exception messages red and
+subcommands in help banners green.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L594">lib/claide.rb:594</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_colorize_output_q_mark"><h2>colorize_output?</h2><p>Set to <code>true</code> if <code>Command.colorize_output</code> returns <code>true</code> and the user
+did <strong>not</strong> specify the <code>--no-color</code> option.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">colorize_output?</span> <span class="c1">#=&gt; Boolean </span>
+</pre></div><h3>Returns</h3><p><code>Boolean</code> <p>Wether or not to color {InformativeError} exception messages red and
+subcommands in help banners green.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">colorize_output</span>
+  <span class="vi">@colorize_output</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L595">lib/claide.rb:595</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_initialize"><h2>initialize</h2><p>Subclasses should override this method to remove the arguments/options
+they support from <code>argv</code> <em>before</em> calling <code>super</code>.</p>
+
+<p>The <code>super</code> implementation sets the <code>#verbose</code> attribute based on wether
+or not the <code>--verbose</code> option is specified; and the <code>#colorize_output</code>
+attribute to <code>false</code> if <code>Command.colorize_output</code> returns <code>true</code>, but the
+user specified the <code>--no-color</code> option.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Command </span>
+</pre></div><h3>Parameters</h3><p><code>ARGV</code><span> </span><b> argv</b></p><p>A list of (user-supplied) params that should be handled.</p>
+<h3>Returns</h3><p><code><a href="index.html">Command</a></code> A new instance of Command
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+  <span class="vi">@verbose</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;verbose&#39;</span><span class="p">)</span>
+  <span class="vi">@colorize_output</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="no">Command</span><span class="o">.</span><span class="n">colorize_output?</span><span class="p">)</span>
+  <span class="vi">@argv</span> <span class="o">=</span> <span class="n">argv</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L609">lib/claide.rb:609</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_validate_bang"><h2>validate!</h2><p>Raises a Help exception if the <code>--help</code> option is specified, if <code>argv</code>
+still contains remaining arguments/options by the time it reaches this
+implementation, or when called on an ‘abstract command’.</p>
+
+<p>Subclasses should call <code>super</code> <em>before</em> doing their own validation. This
+way when the user specifies the <code>--help</code> flag a help banner is shown,
+instead of possible actual validation errors.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">validate!</span> <span class="c1">#=&gt; void </span>
+</pre></div><h3>Returns</h3><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">validate!</span>
+  <span class="n">help!</span> <span class="k">if</span> <span class="vi">@argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;help&#39;</span><span class="p">)</span>
+  <span class="n">help!</span> <span class="s2">&quot;Unknown arguments: </span><span class="si">#{</span><span class="vi">@argv</span><span class="o">.</span><span class="n">remainder</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="o">!</span><span class="vi">@argv</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="n">help!</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">abstract_command?</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L627">lib/claide.rb:627</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_run"><h2>run</h2><p>This method should be overriden by the command class to perform its work.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">run</span> <span class="c1">#=&gt; void </span>
+</pre></div><h3>Returns</h3><p><code>void</code> Void
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">run</span>
+  <span class="k">raise</span> <span class="s2">&quot;A subclass should override the Command#run method to actually &quot;</span> <span class="p">\</span>
+        <span class="s2">&quot;perform some work.&quot;</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L637">lib/claide.rb:637</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_formatted_options_description"><h2>formatted_options_description</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">formatted_options_description</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">formatted_options_description</span>
+  <span class="n">opts</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">options</span>
+  <span class="n">size</span> <span class="o">=</span> <span class="n">opts</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">opt</span><span class="o">|</span> <span class="n">opt</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">size</span> <span class="p">}</span><span class="o">.</span><span class="n">max</span>
+  <span class="n">opts</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">desc</span><span class="o">|</span> <span class="s2">&quot;    </span><span class="si">#{</span><span class="n">key</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="si">}</span><span class="s2">   </span><span class="si">#{</span><span class="n">desc</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L643">lib/claide.rb:643</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_formatted_usage_description"><h2>formatted_usage_description</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">formatted_usage_description</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">formatted_usage_description</span>
+  <span class="k">if</span> <span class="n">message</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">description</span> <span class="o">||</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">summary</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">strip_heredoc</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="s2">&quot;      </span><span class="si">#{</span><span class="n">line</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="s2">&quot; </span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">arguments</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">arguments</span>
+    <span class="s2">&quot;    $ </span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">full_command</span><span class="si">}#{</span><span class="n">args</span><span class="si">}</span><span class="se">\n\n</span><span class="si">#{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L650">lib/claide.rb:650</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_formatted_subcommand_summaries"><h2>formatted_subcommand_summaries</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">formatted_subcommand_summaries</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">formatted_subcommand_summaries</span>
+  <span class="n">subcommands</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">subcommands</span><span class="o">.</span><span class="n">reject</span> <span class="k">do</span> <span class="o">|</span><span class="n">subcommand</span><span class="o">|</span>
+    <span class="n">subcommand</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">nil?</span>
+  <span class="k">end</span><span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:command</span><span class="p">)</span>
+  <span class="k">unless</span> <span class="n">subcommands</span><span class="o">.</span><span class="n">empty?</span>
+    <span class="n">command_size</span> <span class="o">=</span> <span class="n">subcommands</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">cmd</span><span class="o">|</span> <span class="n">cmd</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">size</span> <span class="p">}</span><span class="o">.</span><span class="n">max</span>
+    <span class="n">subcommands</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">subcommand</span><span class="o">|</span>
+      <span class="n">command</span> <span class="o">=</span> <span class="n">subcommand</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">command_size</span><span class="p">)</span>
+      <span class="n">command</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">green</span> <span class="k">if</span> <span class="n">colorize_output?</span>
+      <span class="s2">&quot;    * </span><span class="si">#{</span><span class="n">command</span><span class="si">}</span><span class="s2">   </span><span class="si">#{</span><span class="n">subcommand</span><span class="o">.</span><span class="n">summary</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">end</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L660">lib/claide.rb:660</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_formatted_banner"><h2>formatted_banner</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">formatted_banner</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">formatted_banner</span>
+  <span class="n">banner</span> <span class="o">=</span> <span class="o">[]</span>
+  <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">abstract_command?</span>
+    <span class="n">banner</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">description</span> <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">description</span>
+  <span class="k">elsif</span> <span class="n">usage</span> <span class="o">=</span> <span class="n">formatted_usage_description</span>
+    <span class="n">banner</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;Usage:&#39;</span>
+    <span class="n">banner</span> <span class="o">&lt;&lt;</span> <span class="n">usage</span>
+  <span class="k">end</span>
+  <span class="k">if</span> <span class="n">commands</span> <span class="o">=</span> <span class="n">formatted_subcommand_summaries</span>
+    <span class="n">banner</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;Commands:&#39;</span>
+    <span class="n">banner</span> <span class="o">&lt;&lt;</span> <span class="n">commands</span>
+  <span class="k">end</span>
+  <span class="n">banner</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;Options:&#39;</span>
+  <span class="n">banner</span> <span class="o">&lt;&lt;</span> <span class="n">formatted_options_description</span>
+  <span class="n">banner</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L675">lib/claide.rb:675</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_help_bang"><h2>help!</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">help!</span><span class="p">(</span><span class="n">error_message</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
+</pre></div><h3>Returns</h3><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">help!</span><span class="p">(</span><span class="n">error_message</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+  <span class="k">raise</span> <span class="no">Help</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">error_message</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L701">lib/claide.rb:701</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div><div class="tab-pane" id="tab_strip_heredoc"><h2>strip_heredoc</h2><p>Lifted straight from ActiveSupport. Thanks guys!</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">strip_heredoc</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">strip_heredoc</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">min</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/^[ \t]*(?=\S)/</span><span class="p">)</span><span class="o">.</span><span class="n">min</span>
+    <span class="n">string</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^[ \t]{</span><span class="si">#{</span><span class="n">min</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="sr">}/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="n">string</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/lib/claide.rb#L708">lib/claide.rb:708</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CLAide/blob/master/spec/claide_spec.rb">spec/claide_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div></body></html>

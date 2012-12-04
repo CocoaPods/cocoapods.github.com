@@ -1,0 +1,206 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>Dependency</title><link href="../../../favicon.ico" rel="icon" type="image/ico" /><link href="../../../css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../css/style-fc0fe55f.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../css/style2-6993d0a5.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../../../js/javascript-46faf48a.js" type="text/javascript"></script>
+<script src="../../../js/bootstrap.min-e0886b3c.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../../../index.html">Docs</a><span class="divider">/</span></li><li><a href="../../index.html">CocoaPods-Core</a><span class="divider">/</span></li><li><a href="../index.html">Pod</a><span class="divider">/</span></li><li class="active">Dependency</li></ul></div><div class="page-container"><div id="tab-controller"><div id="methods-container"><div id="header"><h1><a class="select-tab" href="#tab_dependency">Dependency</a></h1></div></div><div class ='methods_list'><div class ='row'><div class ='span3'><p><a class='select-tab' href=#tab_external_source>external_source</a></p><p><a class='select-tab' href=#tab_external_source_>external_source=</a></p><p><a class='select-tab' href=#tab_head>head</a></p><p><a class='select-tab' href=#tab_head_>head=</a></p><p><a class='select-tab' href=#tab_head_q_mark>head?</a></p><p><a class='select-tab' href=#tab_specification>specification</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_specification_>specification=</a></p><p><a class='select-tab' href=#tab_initialize>initialize</a></p><p><a class='select-tab' href=#tab_specific_version>specific_version</a></p><p><a class='select-tab' href=#tab_specific_version_>specific_version=</a></p><p><a class='select-tab' href=#tab_requirement>requirement</a></p><p><a class='select-tab' href=#tab_subspec_dependency_q_mark>subspec_dependency?</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_external_q_mark>external?</a></p><p><a class='select-tab' href=#tab_to_root_dependency>to_root_dependency</a></p><p><a class='select-tab' href=#tab_root_name>root_name</a></p><p><a class='select-tab' href=#tab_compatible_q_mark>compatible?</a></p><p><a class='select-tab' href=#tab_equality>==</a></p><p><a class='select-tab' href=#tab_merge>merge</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_to_s>to_s</a></p><p><a class='select-tab' href=#tab_class_from_string>from_string</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_inspect>inspect</a></p><p><a class='select-tab' href=#tab_external_source_description>external_source_description</a></p></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_dependency"><h2>Dependency</h2><p>The <code><a href="index.html">Dependency</a></code> allows to specify dependencies of a <code><a href="../podfile/index.html">Podfile</a></code> or a
+<code><a href="../specification/index.html">Specification</a></code> on a Pod. It stores the name of the dependency, version
+requirements and external sources information.</p>
+
+<p>This class leverages the RubyGems dependency class
+with minor extension to support CocoaPods specific features.</p>
+
+<p>More information can be found at:</p>
+
+<ul>
+<li><a href="https://github.com/rubygems/rubygems/blob/master/lib/rubygems/dependency.rb">https://github.com/rubygems/rubygems/blob/master/lib/rubygems/dependency.rb</a></li>
+<li><a href="http://rubygems.rubyforge.org/rubygems-update/Gem/Dependency.html">http://rubygems.rubyforge.org/rubygems-update/Gem/Dependency.html</a></li>
+</ul>
+
+<p>The Dependency class provides support for subspecs.</p>
+<h3>Inherits from:</h3><p><code>Gem::Dependency</code></p></div><div class="tab-pane" id="tab_group_"><h2></h2><p>external_source</p><p>external_source=</p><p>head</p><p>head=</p><p>head?</p><p>specification</p><p>specification=</p><p>initialize</p><p>specific_version</p><p>specific_version=</p><p>requirement</p><p>subspec_dependency?</p><p>external?</p><p>to_root_dependency</p><p>root_name</p><p>compatible?</p><p>==</p><p>merge</p><p>to_s</p><p>from_string</p><p>inspect</p><p>external_source_description</p></div><div class="tab-pane" id="tab_external_source"><h2>external_source<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">external_source</span> <span class="c1">#=&gt; Hash{Symbol=&gt;String} </span>
+</pre></div><h3>Returns</h3><p><code>Hash{Symbol=>String}</code> <p>A hash describing the external source
+where the pod should be fetched. The external source has to
+provide its own {Specification} file.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L23">lib/cocoapods-core/dependency.rb:23</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_external_source_"><h2>external_source=<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">external_source</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Hash{Symbol=&gt;String} </span>
+</pre></div><h3>Returns</h3><p><code>Hash{Symbol=>String}</code> <p>A hash describing the external source
+where the pod should be fetched. The external source has to
+provide its own {Specification} file.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L23">lib/cocoapods-core/dependency.rb:23</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_head"><h2>head<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">head</span> <span class="c1">#=&gt; Bool </span>
+</pre></div><h3>Returns</h3><p><code>Bool</code> <p>Whether the dependency should use the podspec with the
+highest know version but force the downloader to checkout the
+<code>head</code> of the source repository.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L29">lib/cocoapods-core/dependency.rb:29</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_head_"><h2>head=<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">head</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div><h3>Returns</h3><p><code>Bool</code> <p>Whether the dependency should use the podspec with the
+highest know version but force the downloader to checkout the
+<code>head</code> of the source repository.</p>
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L29">lib/cocoapods-core/dependency.rb:29</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_head_q_mark"><h2>head?</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">head?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div><h3>Returns</h3><p><code>Bool</code> <p>Whether the dependency should use the podspec with the
+highest know version but force the downloader to checkout the
+<code>head</code> of the source repository.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">head</span>
+  <span class="vi">@head</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L30">lib/cocoapods-core/dependency.rb:30</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_specification"><h2>specification<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">specification</span> <span class="c1">#=&gt; Specification </span>
+</pre></div><h3>Returns</h3><p><code><a href="../specification/index.html">Specification</a></code> The specification loaded for the dependency.
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L34">lib/cocoapods-core/dependency.rb:34</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_specification_"><h2>specification=<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">specification</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Specification </span>
+</pre></div><h3>Returns</h3><p><code><a href="../specification/index.html">Specification</a></code> The specification loaded for the dependency.
+</p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L34">lib/cocoapods-core/dependency.rb:34</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_initialize"><h2>initialize</h2><h3>Signature</h3>[#<YARD::Tags::OverloadTag:0x007ff34be48d88 @tag_name="overload", @text=nil, @name=:initialize, @types=nil, @signature="initialize(name, requirements)", @docstring="", @parameters=[[:name, nil], [:requirements, nil]], @object=#<yardoc method Pod::Dependency#initialize>>, #<YARD::Tags::OverloadTag:0x007ff34bea5218 @tag_name="overload", @text=nil, @name=:initialize, @types=nil, @signature="initialize(name, external_source)", @docstring="", @parameters=[[:name, nil], [:external_source, nil]], @object=#<yardoc method Pod::Dependency#initialize>>, #<YARD::Tags::OverloadTag:0x007ff34bf0ecb8 @tag_name="overload", @text=nil, @name=:initialize, @types=nil, @signature="initialize(name, is_head)", @docstring="", @parameters=[[:name, nil], [:is_head, nil]], @object=#<yardoc method Pod::Dependency#initialize>>]<h3>Returns</h3><p><code><a href="index.html">Dependency</a></code> A new instance of Dependency
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">*</span><span class="n">requirements</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">requirements</span><span class="o">.</span><span class="n">last</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+    <span class="vi">@external_source</span> <span class="o">=</span> <span class="n">requirements</span><span class="o">.</span><span class="n">pop</span>
+  <span class="k">elsif</span> <span class="n">requirements</span><span class="o">.</span><span class="n">last</span> <span class="o">==</span> <span class="ss">:head</span>
+    <span class="vi">@head</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="n">requirements</span><span class="o">.</span><span class="n">pop</span>
+    <span class="k">unless</span> <span class="n">requirements</span><span class="o">.</span><span class="n">empty?</span>
+      <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s2">&quot;A `:head&#39; dependency may not specify version requirements.&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">super</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="o">*</span><span class="n">requirements</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L77">lib/cocoapods-core/dependency.rb:77</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_specific_version"><h2>specific_version<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><p>Returns the value of attribute specific_version</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">specific_version</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L91">lib/cocoapods-core/dependency.rb:91</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_specific_version_"><h2>specific_version=<a class="select-tab" href=""><span class="label label-big">attribute</span></a></h2><p>Sets the attribute specific_version</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">specific_version</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Parameters</h3><p><b> value</b></p><p>The value to set the attribute specific_version to.</p>
+<h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L91">lib/cocoapods-core/dependency.rb:91</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_requirement"><h2>requirement</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">requirement</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">requirement</span>
+  <span class="k">return</span> <span class="no">Gem</span><span class="o">::</span><span class="no">Requirement</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">specific_version</span><span class="p">)</span> <span class="k">if</span> <span class="n">specific_version</span>
+  <span class="k">super</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L93">lib/cocoapods-core/dependency.rb:93</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_subspec_dependency_q_mark"><h2>subspec_dependency?</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">subspec_dependency?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div><h3>Returns</h3><p><code>Bool</code> Whether the dependency points to a subspec.
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">subspec_dependency?</span>
+  <span class="vi">@name</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L100">lib/cocoapods-core/dependency.rb:100</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_external_q_mark"><h2>external?</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">external?</span> <span class="c1">#=&gt; Bool </span>
+</pre></div><h3>Returns</h3><p><code>Bool</code> Whether the dependency points to an external source.
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">external?</span>
+  <span class="o">!</span><span class="vi">@external_source</span><span class="o">.</span><span class="n">nil?</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L106">lib/cocoapods-core/dependency.rb:106</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_to_root_dependency"><h2>to_root_dependency</h2><p>Creates a new dependency with the name of the top level spec and the same
+version requirements.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">to_root_dependency</span> <span class="c1">#=&gt; Dependency </span>
+</pre></div><h3>Returns</h3><p><code><a href="index.html">Dependency</a></code> <p>A dependency with the same versions requirements
+that is guaranteed to point to a top level specification.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">to_root_dependency</span>
+  <span class="n">dep</span> <span class="o">=</span> <span class="nb">dup</span>
+  <span class="n">dep</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">root_name</span>
+  <span class="n">dep</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L121">lib/cocoapods-core/dependency.rb:121</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_root_name"><h2>root_name</h2><p>Returns the name of the Pod that the dependency is pointing to.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">root_name</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> The name of the Pod.
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">root_name</span>
+  <span class="n">subspec_dependency?</span> <span class="p">?</span> <span class="vi">@name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span> <span class="p">:</span> <span class="vi">@name</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L136">lib/cocoapods-core/dependency.rb:136</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_compatible_q_mark"><h2>compatible?</h2><p>Checks if a dependency would be satisfied by the requirements of another
+dependency.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">compatible?</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div><h3>Parameters</h3><p><code>Dependency</code><span> </span><b> other</b></p><p>The other dependency.</p>
+<h3>Returns</h3><p><code>Bool</code> Whether the dependency is compatible with the given one.
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">compatible?</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kp">false</span> <span class="k">unless</span> <span class="nb">name</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span>
+  <span class="k">return</span> <span class="kp">false</span> <span class="k">unless</span> <span class="n">head?</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">head?</span>
+  <span class="k">return</span> <span class="kp">false</span> <span class="k">unless</span> <span class="n">external_source</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">external_source</span>
+
+  <span class="n">other</span><span class="o">.</span><span class="n">requirement</span><span class="o">.</span><span class="n">requirements</span><span class="o">.</span><span class="n">all?</span> <span class="k">do</span> <span class="o">|</span> <span class="n">operator</span><span class="p">,</span> <span class="n">version</span> <span class="o">|</span>
+    <span class="nb">self</span><span class="o">.</span><span class="n">requirement</span><span class="o">.</span><span class="n">satisfied_by?</span> <span class="no">Gem</span><span class="o">::</span><span class="no">Version</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L151">lib/cocoapods-core/dependency.rb:151</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_equality"><h2>==</h2><h3>Signature</h3><div class="highlight"><pre><span class="o">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="c1">#=&gt; Bool </span>
+</pre></div><h3>Returns</h3><p><code>Bool</code> <p>Whether the dependency is equal to another taking into
+account the loaded specification, the head options and the
+external source.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+  <span class="k">super</span> <span class="o">&amp;&amp;</span> <span class="n">head?</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">head?</span> <span class="o">&amp;&amp;</span> <span class="vi">@external_source</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">external_source</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L165">lib/cocoapods-core/dependency.rb:165</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_merge"><h2>merge</h2><p>Merges the version requirements of the dependency with another one.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">merge</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="c1">#=&gt; Dependency </span>
+</pre></div><h3>Parameters</h3><p><code>Dependency</code><span> </span><b> other</b></p><p>The other dependency to merge with.</p>
+<h3>Returns</h3><p><code><a href="index.html">Dependency</a></code> <p>A dependency (not necessary a new instance) that
+includes also the version requirements of the given one.</p>
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+  <span class="n">dep</span> <span class="o">=</span> <span class="k">super</span>
+  <span class="n">dep</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">head?</span> <span class="o">||</span> <span class="n">other</span><span class="o">.</span><span class="n">head?</span>
+  <span class="k">if</span> <span class="n">external_source</span> <span class="o">||</span> <span class="n">other</span><span class="o">.</span><span class="n">external_source</span>
+    <span class="n">self_external_source</span>  <span class="o">=</span> <span class="n">external_source</span> <span class="o">||</span> <span class="p">{}</span>
+    <span class="n">other_external_source</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">external_source</span> <span class="o">||</span> <span class="p">{}</span>
+    <span class="n">dep</span><span class="o">.</span><span class="n">external_source</span> <span class="o">=</span> <span class="n">self_external_source</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">other_external_source</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">dep</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L180">lib/cocoapods-core/dependency.rb:180</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_to_s"><h2>to_s</h2><p>Creates a string representation of the dependency suitable for
+serialization and de-serialization without loss of information. The
+string is also suitable for UI.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> The representation of the dependency.
+</p><hr /><h3>Examples:</h3><p>Output examples</p><div class="highlight"><pre><span class="s2">&quot;libPusher&quot;</span>
+<span class="s2">&quot;libPusher (= 1.0)&quot;</span>
+<span class="s2">&quot;libPusher (~&gt; 1.0.1)&quot;</span>
+<span class="s2">&quot;libPusher (&gt; 1.0, &lt; 2.0)&quot;</span>
+<span class="s2">&quot;libPusher (HEAD)&quot;</span>
+<span class="s2">&quot;libPusher (from `www.example.com&#39;)&quot;</span>
+<span class="s2">&quot;libPusher (defined in Podfile)&quot;</span>
+<span class="s2">&quot;RestKit/JSON&quot;</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
+  <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+  <span class="k">if</span> <span class="n">external?</span>
+    <span class="n">version</span> <span class="o">&lt;&lt;</span> <span class="n">external_source_description</span>
+  <span class="k">elsif</span> <span class="n">head?</span>
+    <span class="n">version</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;HEAD&#39;</span>
+  <span class="k">elsif</span> <span class="vi">@version_requirements</span> <span class="o">!=</span> <span class="no">Gem</span><span class="o">::</span><span class="no">Requirement</span><span class="o">.</span><span class="n">default</span>
+    <span class="n">version</span> <span class="o">&lt;&lt;</span> <span class="vi">@version_requirements</span><span class="o">.</span><span class="n">to_s</span>
+  <span class="k">end</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="vi">@name</span><span class="o">.</span><span class="n">dup</span>
+  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; (</span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="k">unless</span> <span class="n">version</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L214">lib/cocoapods-core/dependency.rb:214</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_class_from_string"><h2>from_string<a class="select-tab" href=""><span class="label label-big">class method</span></a></h2><p>Generates a dependency from its string representation.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">from_string</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="c1">#=&gt; Dependency </span>
+</pre></div><h3>Parameters</h3><p><code>String</code><span> </span><b> string</b></p><p>The string that describes the dependency generated from
+{#to_s}.</p>
+<h3>Returns</h3><p><code><a href="index.html">Dependency</a></code> The dependency described by the string.
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">from_string</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+  <span class="n">match_data</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/(\S*)( (.*))?/</span><span class="p">)</span>
+  <span class="nb">name</span> <span class="o">=</span> <span class="n">match_data</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+  <span class="n">version</span> <span class="o">=</span> <span class="n">match_data</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span>
+  <span class="n">version</span> <span class="o">=</span> <span class="n">version</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[()]/</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">version</span>
+  <span class="k">case</span> <span class="n">version</span>
+  <span class="k">when</span> <span class="kp">nil</span> <span class="o">||</span> <span class="sr">/from `(.*)&#39;/</span>
+    <span class="no">Dependency</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="k">when</span> <span class="sr">/HEAD/</span>
+    <span class="no">Dependency</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="ss">:head</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="no">Dependency</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L241">lib/cocoapods-core/dependency.rb:241</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_inspect"><h2>inspect</h2><h3>Signature</h3><div class="highlight"><pre><span class="nb">inspect</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> A string representation suitable for debugging.
+</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">inspect</span>
+  <span class="s2">&quot;&lt;</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2"> name=</span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> requirements=</span><span class="si">#{</span><span class="n">requirement</span><span class="o">.</span><span class="n">to_s</span><span class="si">}</span><span class="s2"> &quot;</span> <span class="p">\</span>
+  <span class="s2">&quot;external_source=</span><span class="si">#{</span><span class="n">external_source</span><span class="o">||</span><span class="s1">&#39;nil&#39;</span><span class="si">}</span><span class="s2">&gt;&quot;</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L258">lib/cocoapods-core/dependency.rb:258</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div><div class="tab-pane" id="tab_external_source_description"><h2>external_source_description</h2><p>Creates a string representation of the external source suitable for UI.</p>
+<h3>Signature</h3><div class="highlight"><pre><span class="n">external_source_description</span> <span class="c1">#=&gt; String </span>
+</pre></div><h3>Returns</h3><p><code>String</code> The description of the external source.
+</p><hr /><h3>Examples:</h3><p>Output examples</p><div class="highlight"><pre><span class="s2">&quot;from `www.example.com/libPusher.git&#39;, tag `v0.0.1&#39;&quot;</span>
+<span class="s2">&quot;from `www.example.com/libPusher.podspec&#39;&quot;</span>
+<span class="s2">&quot;from `~/path/to/libPusher&#39;&quot;</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">external_source_description</span>
+  <span class="n">source</span> <span class="o">=</span> <span class="n">external_source</span>
+  <span class="k">if</span> <span class="n">source</span><span class="o">.</span><span class="n">key?</span><span class="p">(</span><span class="ss">:git</span><span class="p">)</span>
+    <span class="n">desc</span> <span class="o">=</span>  <span class="s2">&quot;`</span><span class="si">#{</span><span class="n">source</span><span class="o">[</span><span class="ss">:git</span><span class="o">]</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+    <span class="n">desc</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;, commit `</span><span class="si">#{</span><span class="n">source</span><span class="o">[</span><span class="ss">:commit</span><span class="o">]</span><span class="si">}</span><span class="s2">&#39;&quot;</span> <span class="k">if</span> <span class="n">source</span><span class="o">[</span><span class="ss">:commit</span><span class="o">]</span>
+    <span class="n">desc</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;, branch `</span><span class="si">#{</span><span class="n">source</span><span class="o">[</span><span class="ss">:branch</span><span class="o">]</span><span class="si">}</span><span class="s2">&#39;&quot;</span> <span class="k">if</span> <span class="n">source</span><span class="o">[</span><span class="ss">:branch</span><span class="o">]</span>
+    <span class="n">desc</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;, tag `</span><span class="si">#{</span><span class="n">source</span><span class="o">[</span><span class="ss">:tag</span><span class="o">]</span><span class="si">}</span><span class="s2">&#39;&quot;</span>       <span class="k">if</span> <span class="n">source</span><span class="o">[</span><span class="ss">:tag</span><span class="o">]</span>
+  <span class="k">elsif</span> <span class="n">source</span><span class="o">.</span><span class="n">key?</span><span class="p">(</span><span class="ss">:podspec</span><span class="p">)</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;`</span><span class="si">#{</span><span class="n">source</span><span class="o">[</span><span class="ss">:podspec</span><span class="o">]</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+  <span class="k">elsif</span> <span class="n">source</span><span class="o">.</span><span class="n">key?</span><span class="p">(</span><span class="ss">:local</span><span class="p">)</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;`</span><span class="si">#{</span><span class="n">source</span><span class="o">[</span><span class="ss">:local</span><span class="o">]</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+  <span class="k">else</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;`</span><span class="si">#{</span><span class="n">source</span><span class="o">.</span><span class="n">to_s</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+  <span class="k">end</span>
+  <span class="s2">&quot;from </span><span class="si">#{</span><span class="n">desc</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/dependency.rb#L277">lib/cocoapods-core/dependency.rb:277</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/dependency_spec.rb">spec/dependency_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div></body></html>

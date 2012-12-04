@@ -1,161 +1,32 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>specification</title><link href="favicon.ico" rel="icon" type="image/ico" /><link href="css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/style-fc0fe55f.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/style2-6993d0a5.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="js/javascript-46faf48a.js" type="text/javascript"></script>
+<script src="js/bootstrap.min-e0886b3c.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="index.html">Docs</a><span class="divider">/</span></li><li class="active">specification</li></ul></div><div class="page-container"><div id="tab-controller"><div id="header"><h1><a class="select-tab" href="#tab_specification">Specification</a></h1><div class ='methods_list'><div class ='row'><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_root_specification>Root specification</a></h2><p><a class='select-tab' href=#tab_name>name</a><span class='label label-small'>R</span></p><p><a class='select-tab' href=#tab_version>version</a><span class='label label-small'>R</span></p><p><a class='select-tab' href=#tab_authors>authors</a><span class='label label-small'>R</span></p><p><a class='select-tab' href=#tab_license>license</a><span class='label label-small'>R</span></p><p><a class='select-tab' href=#tab_homepage>homepage</a><span class='label label-small'>R</span></p><p><a class='select-tab' href=#tab_source>source</a><span class='label label-small'>R</span></p><p><a class='select-tab' href=#tab_summary>summary</a><span class='label label-small'>R</span></p><p><a class='select-tab' href=#tab_description>description</a></p><p><a class='select-tab' href=#tab_screenshots>screenshots</a></p><p><a class='select-tab' href=#tab_documentation>documentation</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_file_patterns>File patterns</a></h2><p><a class='select-tab' href=#tab_source_files>source_files</a></p><p><a class='select-tab' href=#tab_public_header_files>public_header_files</a></p><p><a class='select-tab' href=#tab_resources>resources</a></p><p><a class='select-tab' href=#tab_exclude_files>exclude_files</a></p><p><a class='select-tab' href=#tab_preserve_paths>preserve_paths</a></p><h2><a class='select-tab' href=#tab_group_dependencies>Dependencies</a></h2><p><a class='select-tab' href=#tab_subspec>subspec</a></p><p><a class='select-tab' href=#tab_default_subspec>default_subspec</a></p><p><a class='select-tab' href=#tab_dependency>dependency</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_build_configuration>Build configuration</a></h2><p><a class='select-tab' href=#tab_requires_arc>requires_arc</a></p><p><a class='select-tab' href=#tab_frameworks>frameworks</a></p><p><a class='select-tab' href=#tab_weak_frameworks>weak_frameworks</a></p><p><a class='select-tab' href=#tab_libraries>libraries</a></p><p><a class='select-tab' href=#tab_xcconfig>xcconfig</a></p><p><a class='select-tab' href=#tab_prefix_header_contents>prefix_header_contents</a></p><p><a class='select-tab' href=#tab_prefix_header_file>prefix_header_file</a></p><p><a class='select-tab' href=#tab_header_dir>header_dir</a></p><p><a class='select-tab' href=#tab_header_mappings_dir>header_mappings_dir</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_platform>Platform</a></h2><p><a class='select-tab' href=#tab_platform>platform</a></p><p><a class='select-tab' href=#tab_deployment_target>deployment_target</a></p><h2><a class='select-tab' href=#tab_group_multi_platform_support>Multi-Platform support</a></h2><p><a class='select-tab' href=#tab_ios>ios</a></p><p><a class='select-tab' href=#tab_osx>osx</a></p><h2><a class='select-tab' href=#tab_group_hooks>Hooks</a></h2><p><a class='select-tab' href=#tab_pre_install>pre_install</a></p><p><a class='select-tab' href=#tab_post_install>post_install</a></p></div></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_specification"><h2>Specification</h2><p>A specification describes a Pod. It includes details about where the
+source should be fetched from, what files to use, the build settings to
+apply, and other general metadata such as its name, version, and
+description.</p>
 
-<head>
-<meta charset="utf-8">
-<title>Specification Documenation</title>
+<hr>
 
-<link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href="style.css">
+<p>A stub specification file can be generated by the <a href="commands.html#tab_spec-create">pod spec
+create</a> command.</p>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<hr>
 
-</head>
-
-<!-- BODY ******************************************************************-->
-
-<body>
-<div class="container">
-<div id="body">
-
-    <div id="sections-container">
-      <ul class="breadcrumb" >
-        <li id="logo"><a href="http://www.cocoapods.org/">CocoaPods</a>
-          <span class="divider">/</span></li>
-        <li><a href="index.html">Docs</a>
-          <span class="divider">/</span></li>
-        <li class="active">Specification</li>
-      </ul>
-    </div>
-
-
-  <!-- HEADER **************************************************************-->
-
-  <div id="methods-container">
-      <div id="header">
-        <div class="row" id="methods_list">
-          
-            <div class="span3">
-            
-              <h2><a class="select-tab" href="#tab_root-specification-group">Root specification</a></h2>
-              
-                <p><a class="select-tab" href="#tab_name">name <span class="label label-small">R</span></a></p>
-              
-                <p><a class="select-tab" href="#tab_version">version <span class="label label-small">R</span></a></p>
-              
-                <p><a class="select-tab" href="#tab_authors">authors <span class="label label-small">R</span></a></p>
-              
-                <p><a class="select-tab" href="#tab_license">license <span class="label label-small">R</span></a></p>
-              
-                <p><a class="select-tab" href="#tab_homepage">homepage <span class="label label-small">R</span></a></p>
-              
-                <p><a class="select-tab" href="#tab_source">source <span class="label label-small">R</span></a></p>
-              
-                <p><a class="select-tab" href="#tab_summary">summary <span class="label label-small">R</span></a></p>
-              
-                <p><a class="select-tab" href="#tab_description">description</a></p>
-              
-                <p><a class="select-tab" href="#tab_screenshots">screenshots</a></p>
-              
-                <p><a class="select-tab" href="#tab_documentation">documentation</a></p>
-              
-            
-            </div>
-          
-            <div class="span3">
-            
-              <h2><a class="select-tab" href="#tab_file-patterns-group">File patterns</a></h2>
-              
-                <p><a class="select-tab" href="#tab_source_files">source_files</a></p>
-              
-                <p><a class="select-tab" href="#tab_public_header_files">public_header_files</a></p>
-              
-                <p><a class="select-tab" href="#tab_resources">resources</a></p>
-              
-                <p><a class="select-tab" href="#tab_exclude_files">exclude_files</a></p>
-              
-                <p><a class="select-tab" href="#tab_preserve_paths">preserve_paths</a></p>
-              
-            
-              <h2><a class="select-tab" href="#tab_dependencies-group">Dependencies</a></h2>
-              
-                <p><a class="select-tab" href="#tab_subspec">subspec</a></p>
-              
-                <p><a class="select-tab" href="#tab_default_subspec">default_subspec</a></p>
-              
-                <p><a class="select-tab" href="#tab_dependency">dependency</a></p>
-              
-            
-            </div>
-          
-            <div class="span3">
-            
-              <h2><a class="select-tab" href="#tab_build-configuration-group">Build configuration</a></h2>
-              
-                <p><a class="select-tab" href="#tab_requires_arc">requires_arc</a></p>
-              
-                <p><a class="select-tab" href="#tab_frameworks">frameworks</a></p>
-              
-                <p><a class="select-tab" href="#tab_weak_frameworks">weak_frameworks</a></p>
-              
-                <p><a class="select-tab" href="#tab_libraries">libraries</a></p>
-              
-                <p><a class="select-tab" href="#tab_xcconfig">xcconfig</a></p>
-              
-                <p><a class="select-tab" href="#tab_prefix_header_contents">prefix_header_contents</a></p>
-              
-                <p><a class="select-tab" href="#tab_prefix_header_file">prefix_header_file</a></p>
-              
-                <p><a class="select-tab" href="#tab_header_dir">header_dir</a></p>
-              
-                <p><a class="select-tab" href="#tab_header_mappings_dir">header_mappings_dir</a></p>
-              
-            
-            </div>
-          
-            <div class="span3">
-            
-              <h2><a class="select-tab" href="#tab_platform-group">Platform</a></h2>
-              
-                <p><a class="select-tab" href="#tab_platform">platform</a></p>
-              
-                <p><a class="select-tab" href="#tab_deployment_target">deployment_target</a></p>
-              
-            
-              <h2><a class="select-tab" href="#tab_multi-platform-support-group">Multi-Platform support</a></h2>
-              
-                <p><a class="select-tab" href="#tab_ios">ios</a></p>
-              
-                <p><a class="select-tab" href="#tab_osx">osx</a></p>
-              
-            
-              <h2><a class="select-tab" href="#tab_hooks-group">Hooks</a></h2>
-              
-                <p><a class="select-tab" href="#tab_pre_install">pre_install</a></p>
-              
-                <p><a class="select-tab" href="#tab_post_install">post_install</a></p>
-              
-            
-            </div>
-          
-        </div>
-      </div>
-  </div>
-
-  <div id="content-container">
-
-      <!-- TABS *************************************************************-->
-
-      <div class="tab-content">
-        <div id="tab_specification" class="tab-pane">
-          <h2>Specification</h2>
-          <p></p>
-        </div>
-
-        
-          <div id="tab_root-specification-group" class="tab-pane">
-            <h2>Root specification</h2>
-            <p><p>A ‘root’ specification is a specification that holds other
+<p>Specification can be very simple:</p>
+<div class="highlight"><pre><span class="no">Pod</span><span class="o">::</span><span class="no">Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">name</span>     <span class="o">=</span> <span class="s1">&#39;AFNetworking&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">version</span>  <span class="o">=</span> <span class="s1">&#39;1.0.1&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">license</span>  <span class="o">=</span> <span class="s1">&#39;MIT&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">summary</span>  <span class="o">=</span> <span class="s1">&#39;A delightful iOS and OS X networking framework.&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/AFNetworking/AFNetworking&#39;</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">authors</span>  <span class="o">=</span> <span class="p"><code></span><span class="s1">&#39;Mattt Thompson&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;m@mattt.me&#39;</span><span class="p">,</span> <span class="s1">&#39;Scott Raymond&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sco@gowalla.com&#39;</span><span class="p"></code></span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">source</span>   <span class="o">=</span> <span class="p"><code></span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/AFNetworking/AFNetworking.git&#39;</span><span class="p">,</span> <span class="ss">:tag</span> <span class="o">=&gt;</span> <span class="s1">&#39;1.0.1&#39;</span> <span class="p"></code></span>
+<span class="k">end</span>
+</pre></div>
+<p>Yet it offers attributes that provide great flexibility.</p>
+</div><div class="tab-pane" id="tab_group_root_specification"><h2>Root specification</h2><p>A ‘root’ specification is a specification that holds other
 ‘sub-specifications’.</p>
 
 <p>These attributes can only be written to on the ‘root’ specification,
@@ -167,796 +38,7 @@
 required by a podspec. The attributes of the other groups are offered
 to refine the podspec and follow a convention over configuration
 approach.</p>
-</p>
-          </div>
-
-          
-            <div id="tab_name" class="tab-pane">
-              <h2>
-                name
-                <a class="select-tab" href="#tab_root-specification-group"><span class="label label-big"> required </span></a>
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;AFNetworking&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_version" class="tab-pane">
-              <h2>
-                version
-                <a class="select-tab" href="#tab_root-specification-group"><span class="label label-big"> required </span></a>
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_authors" class="tab-pane">
-              <h2>
-                authors
-                <a class="select-tab" href="#tab_root-specification-group"><span class="label label-big"> required </span></a>
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Darth Vader&#39;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">authors</span> <span class="o">=</span> <span class="s1">&#39;Darth Vader&#39;</span><span class="p">,</span> <span class="s1">&#39;Wookiee&#39;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">authors</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Darth Vader&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;darthvader@darkside.com&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;Wookiee&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;wookiee@aggrrttaaggrrt.com&#39;</span> <span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_license" class="tab-pane">
-              <h2>
-                license
-                <a class="select-tab" href="#tab_root-specification-group"><span class="label label-big"> required </span></a>
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">license</span> <span class="o">=</span> <span class="s1">&#39;MIT&#39;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">license</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s1">&#39;MIT&#39;</span><span class="p">,</span> <span class="ss">:file</span> <span class="o">=&gt;</span> <span class="s1">&#39;MIT-LICENSE.txt&#39;</span> <span class="p">}</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">license</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s1">&#39;MIT&#39;</span><span class="p">,</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="o">&lt;&lt;-</span><span class="no">LICENSE</span>
-<span class="sh">                   Copyright 2012</span>
-<span class="sh">                   Permission is granted to...</span>
-<span class="no">                 LICENSE</span>
-               <span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-                <hr>
-                <h3>Supported Keys:</h3>
-                <ul class="method_keys">
-                  
-                    <li><p><code>:type</code></p>
-</li>
-                  
-                    <li><p><code>:file</code></p>
-</li>
-                  
-                    <li><p><code>:text</code></p>
-</li>
-                  
-                </ul>
-              
-
-            </div>
-          
-            <div id="tab_homepage" class="tab-pane">
-              <h2>
-                homepage
-                <a class="select-tab" href="#tab_root-specification-group"><span class="label label-big"> required </span></a>
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;www.example.com&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_source" class="tab-pane">
-              <h2>
-                source
-                <a class="select-tab" href="#tab_root-specification-group"><span class="label label-big"> required </span></a>
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/AFNetworking/AFNetworking.git&quot;</span> <span class="p">}</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/AFNetworking/AFNetworking.git&quot;</span><span class="p">,</span>
-                <span class="ss">:tag</span> <span class="o">=&gt;</span> <span class="s1">&#39;v0.0.1&#39;</span> <span class="p">}</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/AFNetworking/AFNetworking.git&quot;</span><span class="p">,</span>
-                <span class="ss">:tag</span> <span class="o">=&gt;</span> <span class="s2">&quot;v</span><span class="si">#{</span><span class="n">spec</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-                <hr>
-                <h3>Supported Keys:</h3>
-                <ul class="method_keys">
-                  
-                    <li><p><code>:git</code> <code>:tag</code> <code>:branch</code> <code>:commit</code> <code>:submodules</code></p>
-</li>
-                  
-                    <li><p><code>:svn</code> <code>:folder</code> <code>:tag</code> <code>:revision</code></p>
-</li>
-                  
-                    <li><p><code>:hg</code> <code>:revision</code></p>
-</li>
-                  
-                    <li><p><code>:http</code></p>
-</li>
-                  
-                    <li><p><code>:local</code></p>
-</li>
-                  
-                </ul>
-              
-
-            </div>
-          
-            <div id="tab_summary" class="tab-pane">
-              <h2>
-                summary
-                <a class="select-tab" href="#tab_root-specification-group"><span class="label label-big"> required </span></a>
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;A library that computes the meaning of life.&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_description" class="tab-pane">
-              <h2>
-                description
-                
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">DESC</span>
-<span class="sh">                     A library that computes the meaning of life. Features:</span>
-<span class="sh">                     1. Is self aware</span>
-<span class="sh">                     ...</span>
-<span class="sh">                     42. Likes candies.</span>
-<span class="no">                   DESC</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_screenshots" class="tab-pane">
-              <h2>
-                screenshots
-                
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">screenshot</span>  <span class="o">=</span> <span class="s2">&quot;http://dl.dropbox.com/u/378729/MBProgressHUD/1.png&quot;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">screenshots</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;http://dl.dropbox.com/u/378729/MBProgressHUD/1.png&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;http://dl.dropbox.com/u/378729/MBProgressHUD/2.png&quot;</span> <span class="o">]</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_documentation" class="tab-pane">
-              <h2>
-                documentation
-                
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">documentation</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:appledoc</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s1">&#39;--no-repeat-first-par&#39;</span><span class="p">,</span>
-                                     <span class="s1">&#39;--no-warn-invalid-crossref&#39;</span><span class="o">]</span> <span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-        
-          <div id="tab_platform-group" class="tab-pane">
-            <h2>Platform</h2>
-            <p></p>
-          </div>
-
-          
-            <div id="tab_platform" class="tab-pane">
-              <h2>
-                platform
-                
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="ss">:ios</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="ss">:osx</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="ss">:osx</span><span class="p">,</span> <span class="s2">&quot;10.8&quot;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_deployment_target" class="tab-pane">
-              <h2>
-                deployment_target
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">deployment_target</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">deployment_target</span> <span class="o">=</span> <span class="s2">&quot;6.0&quot;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">osx</span><span class="o">.</span><span class="n">deployment_target</span> <span class="o">=</span> <span class="s2">&quot;10.8&quot;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-        
-          <div id="tab_build-configuration-group" class="tab-pane">
-            <h2>Build configuration</h2>
-            <p></p>
-          </div>
-
-          
-            <div id="tab_requires_arc" class="tab-pane">
-              <h2>
-                requires_arc
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">requires_arc</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">requires_arc</span> <span class="o">=</span> <span class="kp">true</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_frameworks" class="tab-pane">
-              <h2>
-                frameworks
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">frameworks</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">framework</span> <span class="o">=</span> <span class="s1">&#39;CFNetwork&#39;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">frameworks</span> <span class="o">=</span> <span class="s1">&#39;QuartzCore&#39;</span><span class="p">,</span> <span class="s1">&#39;CoreData&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_weak_frameworks" class="tab-pane">
-              <h2>
-                weak_frameworks
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">weak_frameworks</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">framework</span> <span class="o">=</span> <span class="s1">&#39;Twitter&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_libraries" class="tab-pane">
-              <h2>
-                libraries
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">libraries</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">library</span> <span class="o">=</span> <span class="s1">&#39;xml2&#39;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">libraries</span> <span class="o">=</span> <span class="s1">&#39;xml2&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_xcconfig" class="tab-pane">
-              <h2>
-                xcconfig
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">xcconfig</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">xcconfig</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;OTHER_LDFLAGS&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;-lObjC&#39;</span> <span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_prefix_header_contents" class="tab-pane">
-              <h2>
-                prefix_header_contents
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_contents</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_contents</span> <span class="o">=</span> <span class="s1">&#39;#import &lt;UIKit/UIKit.h&gt;&#39;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_contents</span> <span class="o">=</span> <span class="s1">&#39;#import &lt;UIKit/UIKit.h&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;#import &lt;Foundation/Foundation.h&gt;&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_prefix_header_file" class="tab-pane">
-              <h2>
-                prefix_header_file
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_file</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_file</span> <span class="o">=</span> <span class="s1">&#39;iphone/include/prefix.pch&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_header_dir" class="tab-pane">
-              <h2>
-                header_dir
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">header_dir</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">header_dir</span> <span class="o">=</span> <span class="s1">&#39;Three20Core&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_header_mappings_dir" class="tab-pane">
-              <h2>
-                header_mappings_dir
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">header_mappings_dir</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">header_mappings_dir</span> <span class="o">=</span> <span class="s1">&#39;src/include&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-        
-          <div id="tab_file-patterns-group" class="tab-pane">
-            <h2>File patterns</h2>
-            <p><p>These paths should be specified <strong>relative</strong> to the <strong>root</strong> of the
+</div><div class="tab-pane" id="tab_group_platform"><h2>Platform</h2></div><div class="tab-pane" id="tab_group_build_configuration"><h2>Build configuration</h2></div><div class="tab-pane" id="tab_group_file_patterns"><h2>File patterns</h2><p>These paths should be specified <strong>relative</strong> to the <strong>root</strong> of the
 source and may contain the following wildcard patterns:</p>
 
 <hr>
@@ -977,7 +59,7 @@ beginning or end)</li>
 
 <p><strong>Note</strong> this will not match Unix-like hidden files (dotfiles). In
 order to include those in the match results, you must use something
-like <code>{*,.*}</code>.</p>
+like <code><code>*,.*</code></code>.</p>
 
 <hr>
 
@@ -989,7 +71,7 @@ like <code>{*,.*}</code>.</p>
 
 <h3>Pattern: ?</h3>
 
-<p>Matches any one character. Equivalent to <code>/.{1}/</code> in regexp.</p>
+<p>Matches any one character. Equivalent to <code>/.<code>1</code>/</code> in regexp.</p>
 
 <hr>
 
@@ -1002,7 +84,7 @@ like <code>{*,.*}</code>.</p>
 
 <hr>
 
-<h3>Pattern: {p,q}</h3>
+<h3>Pattern: <code>p,q</code></h3>
 
 <p>Matches either literal <code>p</code> or literal <code>q</code>.</p>
 
@@ -1026,452 +108,11 @@ two literals may be specified.</p>
 <div class="highlight"><pre><span class="s2">&quot;JSONKit.?&quot;</span>    <span class="c1">#=&gt; [&quot;JSONKit.h&quot;, &quot;JSONKit.m&quot;]</span>
 <span class="s2">&quot;*.[a-z][a-z]&quot;</span> <span class="c1">#=&gt; [&quot;CHANGELOG.md&quot;, &quot;README.md&quot;]</span>
 <span class="s2">&quot;*.[^m]*&quot;</span>      <span class="c1">#=&gt; [&quot;JSONKit.h&quot;]</span>
-<span class="s2">&quot;*.{h,m}&quot;</span>      <span class="c1">#=&gt; [&quot;JSONKit.h&quot;, &quot;JSONKit.m&quot;]</span>
+<span class="s2">&quot;*.<code>h,m</code>&quot;</span>      <span class="c1">#=&gt; [&quot;JSONKit.h&quot;, &quot;JSONKit.m&quot;]</span>
 <span class="s2">&quot;*&quot;</span>            <span class="c1">#=&gt; [&quot;CHANGELOG.md&quot;, &quot;JSONKit.h&quot;, &quot;JSONKit.m&quot;, &quot;README.md&quot;]</span>
-</pre></div></p>
-          </div>
-
-          
-            <div id="tab_source_files" class="tab-pane">
-              <h2>
-                source_files
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;[</span><span class="s2">&quot;Classes/**/*.{h,m}&quot;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;[</span><span class="s2">&quot;Classes/**/*.{h,m}&quot;</span><span class="o">]</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/**/*.{h,m}&quot;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/**/*.{h,m}&quot;</span><span class="p">,</span> <span class="s2">&quot;More_Classes/**/*.{h,m}&quot;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_public_header_files" class="tab-pane">
-              <h2>
-                public_header_files
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">public_header_files</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">public_header_files</span> <span class="o">=</span> <span class="s2">&quot;Headers/Public/*.h&quot;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_resources" class="tab-pane">
-              <h2>
-                resources
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resources</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="p">{</span><span class="ss">:resources</span><span class="o">=&gt;[</span><span class="s2">&quot;Resources/**/*&quot;</span><span class="o">]</span><span class="p">},</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="p">{</span><span class="ss">:resources</span><span class="o">=&gt;[</span><span class="s2">&quot;Resources/**/*&quot;</span><span class="o">]</span><span class="p">}}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resource</span> <span class="o">=</span> <span class="s2">&quot;Resources/HockeySDK.bundle&quot;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resources</span> <span class="o">=</span> <span class="s2">&quot;Resources/*.png&quot;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resources</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:frameworks</span> <span class="o">=&gt;</span> <span class="s1">&#39;frameworks/CrashReporter.framework&#39;</span> <span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-                <hr>
-                <h3>Supported Keys:</h3>
-                <ul class="method_keys">
-                  
-                    <li><p><code>:products_directory</code></p>
-</li>
-                  
-                    <li><p><code>:wrapper</code></p>
-</li>
-                  
-                    <li><p><code>:resources</code></p>
-</li>
-                  
-                    <li><p><code>:executables</code></p>
-</li>
-                  
-                    <li><p><code>:java_resources</code></p>
-</li>
-                  
-                    <li><p><code>:frameworks</code></p>
-</li>
-                  
-                    <li><p><code>:shared_frameworks</code></p>
-</li>
-                  
-                    <li><p><code>:shared_support</code></p>
-</li>
-                  
-                    <li><p><code>:plug_ins</code></p>
-</li>
-                  
-                </ul>
-              
-
-            </div>
-          
-            <div id="tab_exclude_files" class="tab-pane">
-              <h2>
-                exclude_files
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;[</span><span class="s2">&quot;Classes/ios/**/*&quot;</span><span class="p">,</span> <span class="s2">&quot;Resources/ios/**/*&quot;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;[</span><span class="s2">&quot;Classes/osx/**/*&quot;</span><span class="p">,</span> <span class="s2">&quot;Resources/osx/**/*&quot;</span><span class="o">]</span><span class="p">}</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;Classes/osx/**/*&quot;</span><span class="p">,</span> <span class="s2">&quot;Resources/osx/**/*&quot;</span><span class="o">]</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">osx</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;Classes/ios/**/*&quot;</span><span class="p">,</span> <span class="s2">&quot;Resources/ios/**/*&quot;</span><span class="o">]</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/osx&quot;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/**/unused.{h,m}&quot;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_preserve_paths" class="tab-pane">
-              <h2>
-                preserve_paths
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">preserve_paths</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">preserve_path</span> <span class="o">=</span> <span class="s2">&quot;IMPORTANT.txt&quot;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">preserve_paths</span> <span class="o">=</span> <span class="s2">&quot;Frameworks/*.framework&quot;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-        
-          <div id="tab_hooks-group" class="tab-pane">
-            <h2>Hooks</h2>
-            <p><p>The specification class provides hooks which are called by CocoaPods
+</pre></div></div><div class="tab-pane" id="tab_group_hooks"><h2>Hooks</h2><p>The specification class provides hooks which are called by CocoaPods
 when a Pod is installed.</p>
-</p>
-          </div>
-
-          
-            <div id="tab_pre_install" class="tab-pane">
-              <h2>
-                pre_install
-                
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="no">Pod</span><span class="o">::</span><span class="no">Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
-  <span class="n">spec</span><span class="o">.</span><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">pod</span><span class="p">,</span> <span class="n">target_definition</span><span class="o">|</span>
-    <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">pod</span><span class="o">.</span><span class="n">root</span><span class="p">){</span> <span class="sb">`sh make.sh`</span> <span class="p">}</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_post_install" class="tab-pane">
-              <h2>
-                post_install
-                
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="no">Pod</span><span class="o">::</span><span class="no">Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
-  <span class="n">spec</span><span class="o">.</span><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">target_installer</span><span class="o">|</span>
-    <span class="n">prefix_header</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">project_pods_root</span> <span class="o">+</span> <span class="n">target_installer</span><span class="o">.</span><span class="n">prefix_header_filename</span>
-    <span class="n">prefix_header</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
-      <span class="n">file</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s1">&#39;#ifdef __OBJC__\n#import &quot;SSToolkitDefines.h&quot;\n#endif&#39;</span><span class="p">)</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-        
-          <div id="tab_dependencies-group" class="tab-pane">
-            <h2>Dependencies</h2>
-            <p></p>
-          </div>
-
-          
-            <div id="tab_subspec" class="tab-pane">
-              <h2>
-                subspec
-                
-                
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">subspec</span> <span class="s2">&quot;core&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">sp</span><span class="o">|</span>
-  <span class="n">sp</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/Core&quot;</span>
-<span class="k">end</span>
-
-<span class="n">subspec</span> <span class="s2">&quot;optional&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">sp</span><span class="o">|</span>
-  <span class="n">sp</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/BloatedClassesThatNobodyUses&quot;</span>
-<span class="k">end</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">subspec</span> <span class="s2">&quot;Subspec&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">sp</span><span class="o">|</span>
-  <span class="n">sp</span><span class="o">.</span><span class="n">subspec</span> <span class="s2">&quot;resources&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">ssp</span><span class="o">|</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_default_subspec" class="tab-pane">
-              <h2>
-                default_subspec
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">default_subspec</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">default_subspec</span> <span class="o">=</span> <span class="s1">&#39;Pod/Core&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-            <div id="tab_dependency" class="tab-pane">
-              <h2>
-                dependency
-                
-                <a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big"> multi-platform </span></a>
-              </h2>
-              <p></p>
-
-              <!-- Defaul values ******************************************* -->
-
-              
-                <hr>
-                <h3>Defaults to:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
-</pre></div>
-                
-              
-
-              <!-- Examples *************************************************-->
-
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.0&#39;</span>
-<span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;MagicalRecord&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.8&#39;</span>
-</pre></div>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;MBProgressHUD&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 0.5&#39;</span>
-</pre></div>
-                
-              
-
-              <!-- Keys *****************************************************-->
-
-              
-
-            </div>
-          
-        
-          <div id="tab_multi-platform-support-group" class="tab-pane">
-            <h2>Multi-Platform support</h2>
-            <p><p>A specification can store values which are specific to only one
+</div><div class="tab-pane" id="tab_group_dependencies"><h2>Dependencies</h2></div><div class="tab-pane" id="tab_group_multi_platform_support"><h2>Multi-Platform support</h2><p>A specification can store values which are specific to only one
 platform.</p>
 
 <hr>
@@ -1480,125 +121,255 @@ platform.</p>
 only iOS projects.</p>
 <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resources</span> <span class="o">=</span> <span class="s2">&quot;Resources/**/*.png&quot;</span>
 <span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">resources</span> <span class="o">=</span> <span class="s2">&quot;Resources_ios/**/*.png&quot;</span>
-</pre></div></p>
-          </div>
+</pre></div></div><div class="tab-pane" id="tab_name"><h2>name<a class="select-tab" href="#tab_root-specification-group"><span class="label label-big">required</span></a></h2><p>The name of the Pod.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;AFNetworking&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_version"><h2>version<a class="select-tab" href="#tab_root-specification-group"><span class="label label-big">required</span></a></h2><p>The version of the Pod. CocoaPods follows
+<a href="http://semver.org">semantic versioning</a>.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_authors"><h2>authors<a class="select-tab" href="#tab_root-specification-group"><span class="label label-big">required</span></a></h2><p>The name and email address of each of the library’s the authors.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Darth Vader&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">authors</span> <span class="o">=</span> <span class="s1">&#39;Darth Vader&#39;</span><span class="p">,</span> <span class="s1">&#39;Wookiee&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">authors</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Darth Vader&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;darthvader@darkside.com&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Wookiee&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;wookiee@aggrrttaaggrrt.com&#39;</span> <span class="p">}</span>
+</pre></div></div><div class="tab-pane" id="tab_license"><h2>license<a class="select-tab" href="#tab_root-specification-group"><span class="label label-big">required</span></a></h2><p>The license of the Pod.</p>
 
-          
-            <div id="tab_ios" class="tab-pane">
-              <h2>
-                ios
-                
-                
-              </h2>
-              <p></p>
+<hr>
 
-              <!-- Defaul values ******************************************* -->
+<p>Unless the source contains a file named <code>LICENSE.*</code> or <code>LICENCE.*</code>,
+the path of the license file <strong>or</strong> the integral text of the grant
+must be specified.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">license</span> <span class="o">=</span> <span class="s1">&#39;MIT&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">license</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s1">&#39;MIT&#39;</span><span class="p">,</span> <span class="ss">:file</span> <span class="o">=&gt;</span> <span class="s1">&#39;MIT-LICENSE.txt&#39;</span> <span class="p">}</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">license</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s1">&#39;MIT&#39;</span><span class="p">,</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="o">&lt;&lt;-</span><span class="no">LICENSE</span>
+<span class="sh">                   Copyright 2012</span>
+<span class="sh">                   Permission is granted to...</span>
+<span class="no">                 LICENSE</span>
+               <span class="p">}</span>
+</pre></div><hr /><h3>Supported Keys:</h3><p><code>:type</code></p>
+<p><code>:file</code></p>
+<p><code>:text</code></p>
+</div><div class="tab-pane" id="tab_homepage"><h2>homepage<a class="select-tab" href="#tab_root-specification-group"><span class="label label-big">required</span></a></h2><p>The URL of the homepage of the Pod.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;www.example.com&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_source"><h2>source<a class="select-tab" href="#tab_root-specification-group"><span class="label label-big">required</span></a></h2><p>The location from where the library should be retrieved.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/AFNetworking/AFNetworking.git&quot;</span> <span class="p">}</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/AFNetworking/AFNetworking.git&quot;</span><span class="p">,</span>
+                <span class="ss">:tag</span> <span class="o">=&gt;</span> <span class="s1">&#39;v0.0.1&#39;</span> <span class="p">}</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/AFNetworking/AFNetworking.git&quot;</span><span class="p">,</span>
+                <span class="ss">:tag</span> <span class="o">=&gt;</span> <span class="s2">&quot;v</span><span class="si">#{</span><span class="n">spec</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</pre></div><hr /><h3>Supported Keys:</h3><p><code>:git</code> <code>:tag</code> <code>:branch</code> <code>:commit</code> <code>:submodules</code></p>
+<p><code>:svn</code> <code>:folder</code> <code>:tag</code> <code>:revision</code></p>
+<p><code>:hg</code> <code>:revision</code></p>
+<p><code>:http</code></p>
+<p><code>:local</code></p>
+</div><div class="tab-pane" id="tab_summary"><h2>summary<a class="select-tab" href="#tab_root-specification-group"><span class="label label-big">required</span></a></h2><p>A short description of the Pod.</p>
 
-              
+<hr>
 
-              <!-- Examples *************************************************-->
+<p>It should have a maximum of 140 characters.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;A library that computes the meaning of life.&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_description"><h2>description</h2><p>A longer description of the Pod.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">DESC</span>
+<span class="sh">                     A library that computes the meaning of life. Features:</span>
+<span class="sh">                     1. Is self aware</span>
+<span class="sh">                     ...</span>
+<span class="sh">                     42. Likes candies.</span>
+<span class="no">                   DESC</span>
+</pre></div></div><div class="tab-pane" id="tab_screenshots"><h2>screenshots</h2><p>A list of URLs to images showcasing the Pod. Intended for UI oriented
+libraries.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">screenshot</span>  <span class="o">=</span> <span class="s2">&quot;http://dl.dropbox.com/u/378729/MBProgressHUD/1.png&quot;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">screenshots</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;http://dl.dropbox.com/u/378729/MBProgressHUD/1.png&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;http://dl.dropbox.com/u/378729/MBProgressHUD/2.png&quot;</span> <span class="o">]</span>
+</pre></div></div><div class="tab-pane" id="tab_documentation"><h2>documentation</h2><p>Additional options to pass to the
+<a href="http://gentlebytes.com/appledoc/">appledoc</a> tool.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">documentation</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:appledoc</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s1">&#39;--no-repeat-first-par&#39;</span><span class="p">,</span>
+                                     <span class="s1">&#39;--no-warn-invalid-crossref&#39;</span><span class="o">]</span> <span class="p">}</span>
+</pre></div></div><div class="tab-pane" id="tab_platform"><h2>platform</h2><p>The platform on which this Pod is supported.</p>
 
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/ios/**/*.{h,m}&quot;</span>
-</pre></div>
-                
-              
+<hr>
 
-              <!-- Keys *****************************************************-->
+<p>Leaving this blank means the Pod is supported on all platforms.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="ss">:ios</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="ss">:osx</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="ss">:osx</span><span class="p">,</span> <span class="s2">&quot;10.8&quot;</span>
+</pre></div></div><div class="tab-pane" id="tab_deployment_target"><h2>deployment_target<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>The deployment targets of the supported platforms.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">deployment_target</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">deployment_target</span> <span class="o">=</span> <span class="s2">&quot;6.0&quot;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">osx</span><span class="o">.</span><span class="n">deployment_target</span> <span class="o">=</span> <span class="s2">&quot;10.8&quot;</span>
+</pre></div></div><div class="tab-pane" id="tab_requires_arc"><h2>requires_arc<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>Wether the `-fobjc-arc&#39; flag should be added to the compiler
+flags.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">requires_arc</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">requires_arc</span> <span class="o">=</span> <span class="kp">true</span>
+</pre></div></div><div class="tab-pane" id="tab_frameworks"><h2>frameworks<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>A list of frameworks that the user’s target (application) needs to
+link against.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">frameworks</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">framework</span> <span class="o">=</span> <span class="s1">&#39;CFNetwork&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">frameworks</span> <span class="o">=</span> <span class="s1">&#39;QuartzCore&#39;</span><span class="p">,</span> <span class="s1">&#39;CoreData&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_weak_frameworks"><h2>weak_frameworks<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>A list of frameworks that the user’s target (application) needs to
+<strong>weakly</strong> link against.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">weak_frameworks</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">framework</span> <span class="o">=</span> <span class="s1">&#39;Twitter&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_libraries"><h2>libraries<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>A list of libraries that the user’s target (application) needs to
+link against.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">libraries</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">library</span> <span class="o">=</span> <span class="s1">&#39;xml2&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">libraries</span> <span class="o">=</span> <span class="s1">&#39;xml2&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_xcconfig"><h2>xcconfig<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>Any flag to add to final xcconfig file.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">xcconfig</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">xcconfig</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;OTHER_LDFLAGS&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;-lObjC&#39;</span> <span class="p">}</span>
+</pre></div></div><div class="tab-pane" id="tab_prefix_header_contents"><h2>prefix_header_contents<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>Any content to inject in the prefix header of the pod project.</p>
 
-              
+<hr>
 
-            </div>
-          
-            <div id="tab_osx" class="tab-pane">
-              <h2>
-                osx
-                
-                
-              </h2>
-              <p></p>
+<p>This attribute is not recommended as Pods should not pollute the
+prefix header of other libraries or of the user project.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_contents</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_contents</span> <span class="o">=</span> <span class="s1">&#39;#import &lt;UIKit/UIKit.h&gt;&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_contents</span> <span class="o">=</span> <span class="s1">&#39;#import &lt;UIKit/UIKit.h&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;#import &lt;Foundation/Foundation.h&gt;&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_prefix_header_file"><h2>prefix_header_file<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>A path to a prefix header file to inject in the prefix header of the
+pod project.</p>
 
-              <!-- Defaul values ******************************************* -->
+<hr>
 
-              
+<p>This attribute is not recommended as Pods should not pollute the
+prefix header of other libraries or of the user project.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_file</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">prefix_header_file</span> <span class="o">=</span> <span class="s1">&#39;iphone/include/prefix.pch&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_header_dir"><h2>header_dir<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>The directory where to store the headers files so they don&#39;t break
+includes.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">header_dir</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">header_dir</span> <span class="o">=</span> <span class="s1">&#39;Three20Core&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_header_mappings_dir"><h2>header_mappings_dir<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>A directory from where to preserve the folder structure for the
+headers files.</p>
 
-              <!-- Examples *************************************************-->
+<hr>
 
-              
-                <hr>
-                <h3>Examples:</h3>
-                
-                  <div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">osx</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/osx/**/*.{h,m}&quot;</span>
-</pre></div>
-                
-              
+<p>If not provided the headers files are flattened.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">header_mappings_dir</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">header_mappings_dir</span> <span class="o">=</span> <span class="s1">&#39;src/include&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_source_files"><h2>source_files<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>The source files of the Pod.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;[</span><span class="s2">&quot;Classes/**/*.{h,m}&quot;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;[</span><span class="s2">&quot;Classes/**/*.{h,m}&quot;</span><span class="o">]</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/**/*.{h,m}&quot;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/**/*.{h,m}&quot;</span><span class="p">,</span> <span class="s2">&quot;More_Classes/**/*.{h,m}&quot;</span>
+</pre></div></div><div class="tab-pane" id="tab_public_header_files"><h2>public_header_files<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>A list of file patterns that should be used as public headers.</p>
 
-              <!-- Keys *****************************************************-->
+<hr>
 
-              
+<p>These are the headers that will be exposed to the user’s project and
+from which documentation will be generated. If no public headers are
+specified then <strong>all</strong> the headers are considered public.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">public_header_files</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">public_header_files</span> <span class="o">=</span> <span class="s2">&quot;Headers/Public/*.h&quot;</span>
+</pre></div></div><div class="tab-pane" id="tab_resources"><h2>resources<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>A list of resources that should be copied into the target bundle.</p>
 
-            </div>
-          
-        
-      </div>
+<hr>
 
-      <!-- FOOTER ************************************************************-->
+<p>It is possible to specify a destination, if not specified the files
+are copied to the <code>resources</code> folder of the bundle.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resources</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="p">{</span><span class="ss">:resources</span><span class="o">=&gt;[</span><span class="s2">&quot;Resources/**/*&quot;</span><span class="o">]</span><span class="p">},</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="p">{</span><span class="ss">:resources</span><span class="o">=&gt;[</span><span class="s2">&quot;Resources/**/*&quot;</span><span class="o">]</span><span class="p">}}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resource</span> <span class="o">=</span> <span class="s2">&quot;Resources/HockeySDK.bundle&quot;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resources</span> <span class="o">=</span> <span class="s2">&quot;Resources/*.png&quot;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">resources</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:frameworks</span> <span class="o">=&gt;</span> <span class="s1">&#39;frameworks/CrashReporter.framework&#39;</span> <span class="p">}</span>
+</pre></div><hr /><h3>Supported Keys:</h3><p><code>:products_directory</code></p>
+<p><code>:wrapper</code></p>
+<p><code>:resources</code></p>
+<p><code>:executables</code></p>
+<p><code>:java_resources</code></p>
+<p><code>:frameworks</code></p>
+<p><code>:shared_frameworks</code></p>
+<p><code>:shared_support</code></p>
+<p><code>:plug_ins</code></p>
+</div><div class="tab-pane" id="tab_exclude_files"><h2>exclude_files<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>A list of file patterns that should be excluded from the other
+attributes.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;[</span><span class="s2">&quot;Classes/ios/**/*&quot;</span><span class="p">,</span> <span class="s2">&quot;Resources/ios/**/*&quot;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;[</span><span class="s2">&quot;Classes/osx/**/*&quot;</span><span class="p">,</span> <span class="s2">&quot;Resources/osx/**/*&quot;</span><span class="o">]</span><span class="p">}</span>
+</pre></div><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;Classes/osx/**/*&quot;</span><span class="p">,</span> <span class="s2">&quot;Resources/osx/**/*&quot;</span><span class="o">]</span>
+</pre></div><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">osx</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;Classes/ios/**/*&quot;</span><span class="p">,</span> <span class="s2">&quot;Resources/ios/**/*&quot;</span><span class="o">]</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/osx&quot;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">exclude_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/**/unused.{h,m}&quot;</span>
+</pre></div></div><div class="tab-pane" id="tab_preserve_paths"><h2>preserve_paths<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>Any file that should <strong>not</strong> be removed after being downloaded.</p>
 
-      <div id="footer">
-        <hr>
-        <p class="note">Generated for CocoaPods Core HEAD.</p>
-      </div>
+<hr>
 
-    </div><!-- .container -->
-  </div><!-- #body -->
+<p>By default, CocoaPods removes all files that are not matched by any
+of the other file pattern attributes.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">preserve_paths</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">preserve_path</span> <span class="o">=</span> <span class="s2">&quot;IMPORTANT.txt&quot;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">preserve_paths</span> <span class="o">=</span> <span class="s2">&quot;Frameworks/*.framework&quot;</span>
+</pre></div></div><div class="tab-pane" id="tab_pre_install"><h2>pre_install</h2><p>This is a convenience method which gets called after all pods have been
+downloaded but before they have been installed, and the Xcode project
+and related files have been generated.</p>
 
-  <!-- SCRIPTS *************************************************************-->
+<p>It receives the <code>Pod::LocalPod</code> instance generated form the
+specification and the <code>Pod::Podfile::TargetDefinition</code> instance for the
+current target.</p>
 
-  <script>
-    function tabLinkByName(name) {
-      return $('#methods_list a[href=#tab_' + name.replace('#', '') + ']');
-    }
+<p>Override this to, for instance, to run any build script.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="no">Pod</span><span class="o">::</span><span class="no">Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">pod</span><span class="p">,</span> <span class="n">target_definition</span><span class="o">|</span>
+    <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">pod</span><span class="o">.</span><span class="n">root</span><span class="p">){</span> <span class="sb">`sh make.sh`</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></div><div class="tab-pane" id="tab_post_install"><h2>post_install</h2><p>This is a convenience method which gets called after all pods have been
+downloaded, installed, and the Xcode project and related files have
+been generated.</p>
 
-    function selectTabByName(name) {
-      // de-select previous
-      $('#methods_list .active').removeClass('active');
-      // select new
-      var tabLink = tabLinkByName(name);
-      tabLink.parent().addClass('active')
-      tabLink.tab('show');
-      document.location.hash = name;
-    }
+<p>It receives the <code>Pod::Installer::TargetInstaller</code> instance for the
+current target.</p>
 
-    function selectTab(clickedLink) {
-      selectTabByName(clickedLink.attr("href").replace('#tab_', ''));
-    }
+<p>Override this to, for instance, add to the prefix header.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="no">Pod</span><span class="o">::</span><span class="no">Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
+  <span class="n">spec</span><span class="o">.</span><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">target_installer</span><span class="o">|</span>
+    <span class="n">prefix_header</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">project_pods_root</span> <span class="o">+</span> <span class="n">target_installer</span><span class="o">.</span><span class="n">prefix_header_filename</span>
+    <span class="n">prefix_header</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+      <span class="n">file</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s1">&#39;#ifdef __OBJC__\n#import &quot;SSToolkitDefines.h&quot;\n#endif&#39;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></div><div class="tab-pane" id="tab_subspec"><h2>subspec</h2><p>Specification for a module of the Pod. A specification automatically
+inherits as a dependency all it children subspecs.</p>
 
-    $('a.select-tab').click(function (e) {
-      e.preventDefault();
-      selectTab($(this));
-    })
+<p>Subspec also inherits values from their parents so common values for
+attributes can be specified in the ancestors.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">subspec</span> <span class="s2">&quot;core&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">sp</span><span class="o">|</span>
+  <span class="n">sp</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/Core&quot;</span>
+<span class="k">end</span>
 
-    $('#current_section a:first').click(function (e) {
-      e.preventDefault();
-      $('#methods_list .active').removeClass('active');
-      $(this).tab('show');
-      document.location.hash = '';
-    })
+<span class="n">subspec</span> <span class="s2">&quot;optional&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">sp</span><span class="o">|</span>
+  <span class="n">sp</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/BloatedClassesThatNobodyUses&quot;</span>
+<span class="k">end</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">subspec</span> <span class="s2">&quot;Subspec&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">sp</span><span class="o">|</span>
+  <span class="n">sp</span><span class="o">.</span><span class="n">subspec</span> <span class="s2">&quot;resources&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">ssp</span><span class="o">|</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></div><div class="tab-pane" id="tab_default_subspec"><h2>default_subspec<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>The name of the subspec that should be used as preferred dependency.
+If not specified a specifications requires all its subspecs as
+dependencies.</p>
 
-    // Shows the tab associated with the current fragment or the description of
-    // the sections on page load.
-    //
-    $(function () {
-      var tabLink = tabLinkByName(document.location.hash);
-      if (tabLink.size() == 1) {
-        selectTab(tabLink);
-      } else {
-        $('#current_section a:first').tab('show');
-      }
-    });
-  </script>
-</body>
+<hr>
 
+<p>A Pod should make available the full library by default. Users can
+fine tune their dependencies once their requirements are known.
+Therefore, This attribute is rarely needed and is intended to be used
+in cases where there are subspecs incompatible with each other. In
+can be also used to exclude modules that interface other libraries
+and would trigger those dependencies.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">default_subspec</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">default_subspec</span> <span class="o">=</span> <span class="s1">&#39;Pod/Core&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_dependency"><h2>dependency<a class="select-tab" href="#tab_multi-platform-support-group"><span class="label label-big">multi-platform</span></a></h2><p>Any dependency on other Pods.</p>
+
+<hr>
+
+<p>Dependencies can specify versions requirements. The use of the spermy
+indicator <code>~&gt;</code> is recommended because it provides a good compromise
+between control on the version without being too restrictive.</p>
+
+<p>Pods with too restrictive dependencies, limit their compatibility with
+other Pods.</p>
+<hr /><h3>Defaults to:</h3><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="p">{</span><span class="ss">:osx</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">,</span> <span class="ss">:ios</span><span class="o">=&gt;</span><span class="kp">nil</span><span class="p">}</span>
+</pre></div><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.0&#39;</span>
+<span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;MagicalRecord&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.8&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;MBProgressHUD&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 0.5&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_ios"><h2>ios</h2><p>Provides support for specifying iOS attributes.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/ios/**/*.{h,m}&quot;</span>
+</pre></div></div><div class="tab-pane" id="tab_osx"><h2>osx</h2><p>Provides support for specifying OS X attributes.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">osx</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s2">&quot;Classes/osx/**/*.{h,m}&quot;</span>
+</pre></div></div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div></body></html>
