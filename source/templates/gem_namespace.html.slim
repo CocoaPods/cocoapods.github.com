@@ -41,7 +41,7 @@
           = method.name
           - if method.is_attribute
             a.select-tab href=""
-              span.label.label-big attribute
+              span.label.label-big = method.attr_type
           - if method.scope == :class
             a.select-tab href=""
               span.label.label-big class method
@@ -51,49 +51,59 @@
 
         == link_doc_string method.html_description
 
-        h3 Signature
-        == method.html_signature
 
-        - for html_todo in method.html_todos
-          .alert
-            strong TODO
-            == link_doc_string html_todo
+        / Signatures
+        - for signature in method.signatures
+          h3 Signature
 
-        - if method.parameters
-          h3 Parameters
-          - for param in method.parameters
-            p
-              - if param.types
-                - for type in param.types
-                  code = type
-                  / FIXME
-                  span = ' '
-              b = " " + param.name
-            == param.html
+          == signature.html_name
 
-        - if method.returns
-          h3 Returns
-          - for param in method.returns
-            p
-              - if param.types
-                - for type in param.types
-                  code == linkify_from_obect(type, name_space)
+          /- for html_todo in signature.html_todos
+            .alert
+              strong TODO
+              == link_doc_string html_todo
 
-              / FIXME
-              == ' ' + param.html.gsub(/<p>(.*)<\/p>/,'\1')
+          - if signature.parameters
+            h4 Parameters
+            - for param in signature.parameters
+              p
+                - if param.types
+                  - for type in param.types
+                    code = type
+                    / FIXME
+                    span = ' '
+                b = " " + param.name
+              == param.html
 
-        - if method.html_notes && !method.html_notes.empty?
-          h3 Notes
-          - for html_note in method.html_notes
-              == link_doc_string html_note
+          - if signature.returns
+            h4 Returns
+            - for param in signature.returns
+              p
+                - if param.types
+                  - for type in param.types
+                    code == linkify_from_obect(type, name_space)
 
-        - if method.examples
-          hr
-          h3 Examples:
-          - for example in method.examples
-            - if example.description
-              p = example.description
-            == example.html
+                / FIXME
+                == ' ' + param.html.gsub(/<p>(.*)<\/p>/,'\1')
+
+          - unless signature.aliases.empty?
+            h4 Aliases
+            - for alias_ in signature.aliases
+              code = alias_
+
+
+          /- if signature.html_notes && !signature.html_notes.empty?
+            h3 Notes
+            - for html_note in signature.html_notes
+                == link_doc_string html_note
+
+          - if signature.examples
+            hr
+            h3 Examples:
+            - for example in signature.examples
+              - if example.description
+                p = example.description
+              == example.html
 
         - unless method.is_attribute
           h3 Source

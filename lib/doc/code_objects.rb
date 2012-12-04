@@ -61,6 +61,10 @@ module Pod
 
         attr_accessor :children
 
+        def inspect
+          "<#{self.class} #{ruby_path}>"
+        end
+
       end
       #--------------------#
 
@@ -233,44 +237,80 @@ module Pod
 
       class GemMethod < Base
 
-        # @return [Array<Example>] The list of the examples of the attribute.
+        # @return [GemMethodSignature]
         #
-        # @return [nil] If there are no examples.
+        attr_accessor :signatures
+
+        # @return [Symbol] Can be :class or :instance.
         #
-        attr_accessor :examples
-
-        attr_accessor :source_files
-        attr_accessor :spec_files
-
-        attr_accessor :parameters
-        attr_accessor :signature
-
-        # :class or :instance
         attr_accessor :scope
 
-        # :public, :private, :protected
+        # @return [Symbol] Can be :public, :private or :protected.
+        #
         attr_accessor :visibility
-        attr_accessor :html_source
+
+        # @return [Bool]
+        #
         attr_accessor :is_attribute
+
+        # @return [Bool]
+        #
         attr_accessor :is_alias
 
+        # @return [Bool]
+        #
+        attr_accessor :inherited
 
-        attr_accessor :parameters
-        attr_accessor :returns
-
-        attr_accessor :html_signature
-
+        # @return [String] html
+        #
         attr_accessor :html_todos
 
+        # @return [String] html
+        #
         attr_accessor :html_notes
+
+        # @return [String] html
+        #
+        attr_accessor :html_source
+
+        # @return [Array<String>]
+        #
+        attr_accessor :source_files
+
+        # @return [Array<String>]
+        #
+        attr_accessor :spec_files
+
+        attr_accessor :attr_type
 
         def ruby_representation
           scope == :instance ? "##{name}" : "::#{name}"
         end
 
-        attr_accessor :inherited
-
         attr_accessor :group
+
+        # Provides support for clustering methods like attributes and
+        # overloads.
+        #
+        class GemMethodSignature
+
+          attr_accessor :html_name
+          attr_accessor :parameters
+          attr_accessor :returns
+
+          # @return [String] the description in HTML.
+          #
+          attr_accessor :html_description
+
+          # @return [Array<Example>] The list of the examples of the attribute.
+          #
+          # @return [nil] If there are no examples.
+          #
+          attr_accessor :examples
+
+          attr_accessor :aliases
+
+        end
 
       end
 

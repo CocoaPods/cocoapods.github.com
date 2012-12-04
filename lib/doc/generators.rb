@@ -54,11 +54,6 @@ module Pod
         #
         def generate
           YARD::Registry.clear
-          # all = YARD::Registry.all.dup
-          # all.each do |obj| 
-          #   @yard_registry.delete(obj) 
-          # end
-
           raise 'Yard registry not clean' unless YARD::Registry.all.count.zero?
           YARD::Registry.load(source_files, true)
           YARD::Registry.each do |something|

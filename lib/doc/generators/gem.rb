@@ -94,56 +94,85 @@ module Pod
         # @return [Array<Doc::CodeObjects::Group>] generates the groups for the
         #         given name_space.
         #
+        # @note   The order of the methods determines the order of the groups.
+        #
         def generate_groups(yard_name_space, name_space)
-          methods_by_group = {}
-          yard_name_space.meths.each do |yard_method|
-            methods_by_group[yard_method.group] ||= []
-            methods_by_group[yard_method.group] << yard_method
-          end
-
-          groups = []
-          methods_by_group.each do |yard_group, yard_method|
-            group                  = Doc::CodeObjects::Group.new
+          yard_groups = yard_name_space.meths.map(&:group).uniq
+          groups = yard_groups.map do |yard_group|
+            group = Doc::CodeObjects::Group.new
             group.parent           = name_space
-            group.name             = yard_group ? yard_group.lines.first.chomp : nil
-            group.html_description = yard_group ? markdown_h(yard_group.lines.drop(1).join) : nil
-            group.meths            = yard_method.map { |m| generate_method(m, yard_name_space, name_space) }
-
-            group.meths.each { |method| method.group = group }
-            groups << group
+            group.name             = yard_group.lines.first.chomp if yard_group
+            group.html_description = markdown_h(yard_group.lines.drop(1).join) if yard_group
+            group
           end
+          generate_methods(yard_name_space, name_space, groups)
           groups
         end
 
-        # @return [Doc::CodeObjects::GemMethod] Generates a method from the
-        #         given yard one.
+        # @return [void]
         #
-        def generate_method(yard_method, yard_name_space, name_space)
-          method                         = Doc::CodeObjects::GemMethod.new
-          method.parent                  = name_space
-          method.name                    = yard_method.name
-          method.scope                   = yard_method.scope
-          method.signature               = yard_method.signature
-          method.visibility              = yard_method.visibility
-          method.is_attribute            = yard_method.is_attribute?
-          method.html_description        = markdown_h(yard_method.docstring.to_s)
-          method.examples                = compute_method_examples(yard_method)
-          method.parameters              = compute_method_parameters(yard_method, :param)
-          method.returns                 = compute_method_parameters(yard_method, :return)
-          method.html_signature          = compute_method_signature(yard_method)
-          method.html_source             = syntax_highlight(yard_method.source)
-          method.source_files            = yard_method.files.map { |f| [f[0].gsub(/^.*\/lib\//,'lib/'), f[1]] }
-          method.spec_files              = find_spec_files(method.source_files)
-          method.html_todos              = yard_method.tags('todo').map { |t| markdown_h(t.text) }
-          method.html_notes              = yard_method.tags('note').map { |t| markdown_h(t.text) }
-
-          if yard_name_space.is_a?(YARD::CodeObjects::ClassObject)
-            method.inherited = yard_name_space.inherited_meths.include?(yard_method)
+        # Groups attributes and aliases.
+        #
+        def generate_methods(yard_name_space, name_space, groups)
+          methods_by_name = yard_name_space.meths.group_by do |yard_method|
+            yard_method.name.to_s.gsub('=','')
           end
-          # method.is_alias                = yard_method.is_alias?
-          #aliases
-          #owner
-          method
+
+          methods = []
+          methods_by_name.each do |name, yard_methods|
+            method                  = Doc::CodeObjects::GemMethod.new
+            # Preserve `=` sign
+            method.name             = yard_methods.count == 1 ? yard_methods.first.name : name
+            method.parent           = name_space
+
+            rep_yard_method = yard_methods.first
+            method.group            = groups.find { |g| g.name == (rep_yard_method.group.nil? ? nil : rep_yard_method.group.lines.first.chomp) }
+            raise "Missing group for method #{name} with name `#{rep_yard_method.group.lines.first.chomp}`" unless method.group
+            method.group.meths ||= []
+            method.group.meths << method
+
+            method.scope            = rep_yard_method.scope
+            method.visibility       = rep_yard_method.visibility
+            method.is_attribute     = rep_yard_method.is_attribute?
+            method.html_source      = syntax_highlight(rep_yard_method.source)
+            method.source_files     = rep_yard_method.files.map { |f| [f[0].gsub(/^.*\/lib\//,'lib/'), f[1]] }
+            method.spec_files       = find_spec_files(method.source_files)
+            method.html_todos       = rep_yard_method.tags('todo').map { |t| markdown_h(t.text) }
+            method.html_notes       = rep_yard_method.tags('note').map { |t| markdown_h(t.text) }
+
+            signatures = yard_methods.map do |yard_method|
+              signature = Doc::CodeObjects::GemMethod::GemMethodSignature.new
+              signature.html_description = markdown_h(yard_method.docstring.to_s)
+              signature.html_name        = compute_method_signature(yard_method)
+              signature.parameters       = compute_method_parameters(yard_method, :param)
+              signature.returns          = compute_method_parameters(yard_method, :return)
+              signature.examples         = compute_method_examples(yard_method)
+              signature.aliases = yard_method.aliases.map(&:to_s)
+              signature
+            end
+            method.signatures = signatures
+
+            if method.is_attribute
+              method.attr_type = if !yard_methods.any?(&:reader?)
+               'attribute writer'
+              elsif !yard_methods.any?(&:writer?)
+               'attribute reader'
+              else
+               'readwrite attribute'
+              end
+            end
+
+            if yard_name_space.is_a?(YARD::CodeObjects::ClassObject)
+              method.inherited = yard_methods.any? { |yard_method| yard_name_space.inherited_meths.include?(yard_method) }
+            end
+            methods << method
+          end
+
+          # group.meths            = yard_method.map { |m| generate_method(m, yard_name_space, name_space) }
+          # group.meths.each { |method| method.group = group }
+          # group attributes
+          # methods_by_group = yard_name_space.meths.group_by
+          # methods_by_name.grou_by
         end
 
         #---------------------------------------------------------------------#
@@ -182,12 +211,12 @@ module Pod
             if tag.types
               param.types = tag.types
             else
-              warn "Missing types for tag #{tag.name} of method #{yard_method.name}"
+              warn "  [WARN] Missing types for tag #{tag.name} of method #{yard_method.name}"
             end
             if tag.text
               param.html  = markdown_h(tag.text.strip)
             else
-              warn "Missing text for tag #{tag.name} of method #{yard_method.name}"
+              warn "  [WARN] Missing text for tag #{tag.name} of method #{yard_method.name}"
             end
             param
           end

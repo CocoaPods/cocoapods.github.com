@@ -48,11 +48,7 @@ module NavigationHelpers
           klass  = " class='first'" if index.zero?
           result << "<h2#{klass}><a class='select-tab' href=#{link}>#{entry.name}</a></h2>"
         else
-          if entry.is_a?(Pod::Doc::CodeObjects::GemMethod)
-            span = "<span class='label label-small'>+</span>" if entry.scope == :class
-          elsif entry.is_a?(Pod::Doc::CodeObjects::DSLAttribute)
-            span = "<span class='label label-small'>R</span>" if entry.required?
-          end
+          span =  method_list_entry_span(entry)
           result << "<p><a class='select-tab' href=#{link}>#{entry.name}</a>#{span}</p>"
         end
       end
@@ -60,6 +56,26 @@ module NavigationHelpers
     end
     result << "</div>"
     result << "</div>"
+  end
+
+  # FIXME
+  def method_list_entry_span(entry)
+    case entry
+    when Pod::Doc::CodeObjects::GemMethod
+      if entry.scope == :class
+        value = '+'
+      elsif entry.attr_type == 'attribute writer'
+        value = 'w'
+      elsif entry.attr_type == 'attribute reader'
+        value = 'r'
+      elsif entry.attr_type == 'readwrite attribute'
+        value = 'a'
+      end
+    when Pod::Doc::CodeObjects::DSLAttribute
+      value = 'R' if entry.required?
+    end
+
+    "<span class='label label-small'>#{value}</span>" if value
   end
 
   #-----------------------------------------------------------------------------#
@@ -215,6 +231,7 @@ module NavigationHelpers
   #         links could be generated after processing the markdown.
   #
   def link_doc_string(html)
+    return nil unless html
     html.gsub(/\{([^\}]+)\}/) do |match|
       "<code>#{linkify(match[1..-2])}</code>"
     end
