@@ -53,7 +53,7 @@ module Pod
         def generate_name_spaces(yard_registry, gem)
           yard_name_spaces = yard_registry.all(:class, :module).sort_by(&:to_s)
           name_spaces = yard_name_spaces.map do |yard_name_space|
-            puts "- #{yard_name_space.name}"
+            puts "  - #{yard_name_space.name}"
             name_space             = Doc::CodeObjects::NameSpace.new
             name_space.name        = yard_name_space.name
             name_space.gem         = gem

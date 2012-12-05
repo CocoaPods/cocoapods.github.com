@@ -120,14 +120,15 @@ namespace :generate do
     File.open('source/typeahead.json', 'w') { |f| f.puts(result.to_json) }
   end
 
-  task :all => [:dsl, :gems, :commands]
+  task :all => [:dsl, :gems, :commands, :search]
 end
 
 #-----------------------------------------------------------------------------#
 
 desc "Generates the data for the commands."
 task :build => 'generate:all' do
-  sh "middleman build"
+  # sh "middleman build"
+  `middleman build`
 end
 
 #-----------------------------------------------------------------------------#
@@ -142,18 +143,14 @@ end
 #
 desc "deploy build directory to github pages"
 task :deploy do
-  puts "## Deploying branch to master brach"
-#   cp_r ".nojekyll", "build/.nojekyll"
-#   cd "build" do
-#     system "git add ."
-#     system "git add -u"
-#     puts "\n## Commiting: Site updated at #{Time.now.utc}"
-#     message = "Site updated at #{Time.now.utc}"
-#     system "git commit -m \"#{message}\""
-#     puts "\n## Pushing generated website"
-#     system "git push origin master"
-#     puts "\n## Github Pages deploy complete"
-#   end
+  puts "\e[1;33mDeploying branch to master brach\e[0m"
+  cd "build" do
+    sh "git add ."
+    sh "git add -u"
+    sh "git commit -m 'Site updated at #{Time.now.utc}'"
+    sh "git push origin master"
+  end
+  puts "\e[1;32mGithub Pages deployed at https://github.com/CocoaPods/cocoapods.github.com\e[0m"
 end
 
 task :default => 'generate:all'
