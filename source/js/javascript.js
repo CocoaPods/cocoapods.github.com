@@ -13,8 +13,6 @@ $(function() {
   // returns the jQuery anchor associated with the given name.
   //
   function tabAnchorByName(name) {
-    // TODO
-    // return $('#methods_list a[href=#tab_' + name.replace('#', '') + ']');
     return $('#tab-controller a[href="#tab_' + name.replace('#', '') + '"]');
   }
 
@@ -26,9 +24,7 @@ $(function() {
   function selectTabByName(name) {
     $('#tab-controller .active').removeClass('active');
     var tabLink = tabAnchorByName(name);
-    tabLink.parent().addClass('active')
-    console.log(tabLink)
-
+    tabLink.parent().addClass('active');
     tabLink.tab('show');
     document.location.hash = name;
   }
@@ -46,7 +42,7 @@ $(function() {
   $('#tab-controller a.select-tab').click(function (e) {
     e.preventDefault();
     selectTab($(this));
-  })
+  });
 
   // TODO: Activates the tab associated with the current section.
   //
@@ -55,7 +51,7 @@ $(function() {
     $('#tab-controller .active').removeClass('active');
     $(this).tab('show');
     document.location.hash = '';
-  })
+  });
 
   //--------------------------------------//
 
@@ -69,6 +65,55 @@ $(function() {
     } else {
       // TODO Find a way to specify the default tab
       $('#tab-controller h1 a.select-tab').tab('show');
+    }
+  });
+});
+
+/** Search support */
+
+$(function() {
+
+
+
+  Mousetrap.bind('s', function() {
+    $('.typeahead').focus();
+  }, 'keyup');
+
+
+  var obj = {
+    links: {
+      dsls: {},
+      name_spaces: {},
+      methods: {}
+    }
+  };
+
+  $.get('/typeahead.json', function (data) {
+    obj.links = data;
+  });
+
+  $('.typeahead').typeahead({
+
+    // Use # to search methods
+    //
+    source: function (query, process) {
+      var collection = {};
+      if (query.indexOf("#") !== -1) {
+        collection = obj.links.methods;
+      }
+      else {
+        collection = $.extend({}, obj.links.dsls, obj.links.name_spaces);
+      }
+      return Object.keys(collection);
+    },
+
+    // TODO: if the result is in the same page it should use
+    // selectTabByName(name)
+    //
+    updater: function(selection){
+      var collection = $.extend({}, obj.links.dsls, obj.links.name_spaces, obj.links.methods);
+      var link = '/' + collection[selection];
+      window.location.href = link;
     }
   });
 });

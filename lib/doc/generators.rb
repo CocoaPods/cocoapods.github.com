@@ -56,9 +56,6 @@ module Pod
           YARD::Registry.clear
           raise 'Yard registry not clean' unless YARD::Registry.all.count.zero?
           YARD::Registry.load(source_files, true)
-          YARD::Registry.each do |something|
-            # puts "\e[1;31m#{something}\e[0m"
-          end
           @yard_registry = YARD::Registry
           require 'yaml'
           puts "\e[1;32mGenerating #{output_file}\e[0m"

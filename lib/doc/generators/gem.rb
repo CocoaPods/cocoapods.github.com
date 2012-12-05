@@ -103,9 +103,14 @@ module Pod
             group.parent           = name_space
             group.name             = yard_group.lines.first.chomp if yard_group
             group.html_description = markdown_h(yard_group.lines.drop(1).join) if yard_group
+            group.meths = []
             group
           end
           generate_methods(yard_name_space, name_space, groups)
+          # groups = groups.reject { |g| }
+          # groups.each do |group|
+          #   raise "Empty group `#{group.name}` for #{name_space.name}" if group.meths.empty?
+          # end
           groups
         end
 
