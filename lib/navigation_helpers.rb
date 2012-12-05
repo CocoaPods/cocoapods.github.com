@@ -210,7 +210,7 @@ module NavigationHelpers
       title = title || object.ruby_path
     end
     if link
-      link_to(title, "#{link}/index.html")
+      link_to(h(title), "#{link}/index.html")
     else
       title
     end

@@ -147,6 +147,11 @@ pre {
   color: #97857E;
 }
 
+.lineno {
+  color: hsl(18, 13%, 39%);
+  margin-right: 10px;
+}
+
 code {
   color: #8C7A73;
   background-color: #fdfaf2;

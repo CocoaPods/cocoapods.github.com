@@ -10,7 +10,7 @@ module HTMLHelpers
     @markdown_instance ||= Redcarpet::Markdown.new(Class.new(Redcarpet::Render::HTML) do
       def block_code(code, lang)
         lang ||= 'ruby'
-        HTMLHelpers.syntax_highlight(code, lang)
+        HTMLHelpers.syntax_highlight(code, :language => lang)
       end
     end, :autolink => true, :space_after_headers => true, :no_intra_emphasis => true)
     # TODO: experimental
@@ -29,13 +29,24 @@ module HTMLHelpers
   # Highlights with Pigments the give string.
   #
   # @return [String]
+  # @option [String] :language
+  # @option [Fixnum] :line
+  #         triggers line numbering.
   #
-  def syntax_highlight(code, lang = 'ruby')
-    HTMLHelpers.syntax_highlight(code, lang)
+  def syntax_highlight(code, opts = {})
+    HTMLHelpers.syntax_highlight(code, opts)
   end
 
-  def self.syntax_highlight(code, lang = 'ruby')
-    Pygments.highlight(code, :lexer => lang, :options => { :encoding => 'utf-8' })
+  def self.syntax_highlight(code, opts = {})
+    lexer = opts[:language] || 'ruby'
+    py_options = { :encoding => 'utf-8' }
+
+    if line = opts[:line]
+      py_options[:linenos] = 'inline'
+      py_options[:linenostart] = line
+    end
+
+    Pygments.highlight(code, :lexer => lexer, :options => py_options)
   end
 
 

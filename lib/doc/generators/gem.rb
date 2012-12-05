@@ -139,7 +139,7 @@ module Pod
             method.scope            = rep_yard_method.scope
             method.visibility       = rep_yard_method.visibility
             method.is_attribute     = rep_yard_method.is_attribute?
-            method.html_source      = syntax_highlight(rep_yard_method.source)
+            method.html_source      = syntax_highlight(rep_yard_method.source, :line => rep_yard_method.line)
             method.source_files     = rep_yard_method.files.map { |f| [f[0].gsub(/^.*\/lib\//,'lib/'), f[1]] }
             method.spec_files       = find_spec_files(method.source_files)
             method.html_todos       = rep_yard_method.tags('todo').map { |t| markdown_h(t.text) }
@@ -257,7 +257,7 @@ module Pod
           @options ||= YARD::Templates::TemplateOptions.new
         end
 
-        # @see ./lib/yard/templates/helpers/html_helper.rb:468
+        # @see lib/yard/templates/helpers/html_helper.rb:468
         def signature(meth, link = true, show_extras = true, full_attr_name = true)
           args = format_args(meth)
           name = meth.name
