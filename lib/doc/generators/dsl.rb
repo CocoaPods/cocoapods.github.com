@@ -17,7 +17,7 @@ module Pod
         end
 
         def generate_code_object
-          namespace = Doc::CodeObjects::NameSpace.new
+          namespace = CodeObjects::NameSpace.new
           namespace.name = yard_object.parent.name.to_s
           namespace.html_description = markdown_h(yard_object.docstring.to_s)
           namespace.groups = compute_groups

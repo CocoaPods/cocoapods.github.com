@@ -150,19 +150,30 @@ module Pod
 
       end
 
+      class Entry < Base
+
+        # @return [Array<Example>] The list of the examples of the entry.
+        #
+        # @return [nil] If there are no examples.
+        #
+        attr_accessor :examples
+
+        # @return [Bool] Whether the method is required (Specification only).
+        #
+        attr_accessor :required
+        alias :required? :required
+
+        attr_accessor :group
+
+      end
+
       #-----------------------------------------------------------------------#
       # DSL
       #-----------------------------------------------------------------------#
 
       # Represents an attribute of a DSL
       #
-      class DSLAttribute < Base
-
-        # @return [Array<Example>] The list of the examples of the attribute.
-        #
-        # @return [nil] If there are no examples.
-        #
-        attr_accessor :examples
+      class DSLAttribute < Entry
 
         # @return [Array<String>] The list of the default values of the
         #         attribute in HTML (Specification only).
@@ -177,11 +188,6 @@ module Pod
         # @return [nil] If there are no keys.
         #
         attr_accessor :html_keys
-
-        # @return [Bool] Whether the method is required (Specification only).
-        #
-        attr_accessor :required
-        alias :required? :required
 
         # @return [Bool] Whether the method is multi-platform (Specification
         #         only).

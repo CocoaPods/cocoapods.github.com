@@ -53,11 +53,6 @@ module Pod
         # @return [CodeObjects::Base]
         #
         def generate
-          YARD::Registry.clear
-          raise 'Yard registry not clean' unless YARD::Registry.all.count.zero?
-          YARD::Registry.load(source_files, true)
-          @yard_registry = YARD::Registry
-          require 'yaml'
           puts "\e[1;32mGenerating #{output_file}\e[0m"
           generate_code_object
         end
@@ -73,6 +68,7 @@ module Pod
         # @return [void]
         #
         def save
+          require 'yaml'
           File.open(output_file, 'w') { |f| f.puts(generate.to_yaml) }
         end
 
@@ -83,7 +79,13 @@ module Pod
         # @return [YARD::Registry] The yard registry initialized with the
         #         source files for this generator.
         #
-        attr_reader :yard_registry
+        def yard_registry
+          return @yard_registry if @yard_registry
+          YARD::Registry.clear
+          raise 'Yard registry not clean' unless YARD::Registry.all.count.zero?
+          YARD::Registry.load(source_files, true)
+          @yard_registry = YARD::Registry
+        end
 
 
       end

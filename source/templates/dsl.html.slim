@@ -42,13 +42,13 @@ ruby:
           - if method.required?
             a.select-tab href="#tab_root-specification-group"
               span.label.label-big required
-          - if method.multi_platform?
+          - if method.respond_to?(:multi_platform?) && method.multi_platform?
             a.select-tab href="#tab_multi-platform-support-group"
               span.label.label-big multi-platform
 
         == link_doc_string method.html_description
 
-        - if method.html_default_values
+        - if method.respond_to?(:html_default_values) && method.html_default_values
           hr
           h3 Defaults to:
           - for value in method.html_default_values
@@ -62,7 +62,7 @@ ruby:
               p = example.description
             == example.html
 
-        - if method.html_keys
+        - if method.respond_to?(:html_keys) && method.html_keys
           hr
           h3 Supported Keys:
           - for key in method.html_keys
