@@ -94,12 +94,20 @@ module Pod
         # @return [Array<String>] The list of the default values of the
         #         attribute in HTML.
         #
-        def compute_method_default_values(attribute)
-          return nil unless attribute
+        def compute_method_default_values(attr)
+          return nil unless attr
+          attr_name = attr.writer_name.gsub('=',' =')
           r = []
-          r << "spec.#{attribute.writer_name.gsub('=',' =')} #{attribute.default_value.inspect}" if attribute.default_value
-          r << "spec.ios.#{attribute.writer_name.gsub('=',' =')} #{attribute.ios_default.inspect}" if attribute.ios_default
-          r << "spec.osx.#{attribute.writer_name.gsub('=',' =')} #{attribute.osx_default.inspect}" if attribute.osx_default
+          if default_value = attr.default_value
+            if default_value.is_a?(Hash) && default_value.keys.sort == [:ios, :osx]
+              r << "spec.#{attr_name} #{default_value[:ios].inspect}" if default_value[:ios]
+            else
+              r << "spec.#{attr_name} #{default_value.inspect}"
+            end
+          else
+            r << "spec.ios.#{attr_name} #{attr.ios_default.inspect}" if attr.ios_default
+            r << "spec.osx.#{attr_name} #{attr.osx_default.inspect}" if attr.osx_default
+          end
           r.map { |v|  syntax_highlight(v) } unless r.empty?
         end
 
