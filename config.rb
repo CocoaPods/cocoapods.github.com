@@ -40,7 +40,11 @@ helpers HTMLHelpers
 
 # Loading data
 
-navigation_data = YAML::load(File.open('docs_data/navigation.yaml'))
+navigation_data = {
+  'dsl' => %w[ podfile specification commands],
+  'gems' => %w[ CocoaPods CocoaPods-Core Xcodeproj CLAide ]
+}
+
 content_for :dsl_data do navigation_data * '<br>' end
 
 # Dynamic pages

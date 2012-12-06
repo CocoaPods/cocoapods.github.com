@@ -2,6 +2,5 @@
 /.bundle
 /.sass-cache
 build/
-gems/
 .yardoc/
 docs_data/

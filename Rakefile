@@ -1,34 +1,8 @@
 
-# The gems are stored in the `gems` directory which is not under source
-# control.
-#
-# At the moment I'm preferring this approach because I can add the gems with
-# the SSH url. Without forcing them on users without access to it. It might
-# make sense convert to submodules.
-#
-namespace :gems do
-
-  desc "Downloads the gems in a temporary directory"
-  task :bootstrap do
-    FileUtils.mkdir_p 'gems'
-    Dir.chdir 'gems' do
-      sh 'git clone git@github.com:CocoaPods/CocoaPods.git' unless File.exist?("CocoaPods")
-      sh 'git clone git@github.com:CocoaPods/Core.git'      unless File.exist?("Core")
-      sh 'git clone git@github.com:CocoaPods/Xcodeproj.git' unless File.exist?("Xcodeproj")
-      sh 'git clone git@github.com:CocoaPods/CLAide.git'    unless File.exist?("CLAide")
-    end
-  end
-
-  desc "Downloads the gems in a temporary directory"
-  task :update => :bootstrap do
-    FileUtils.mkdir_p 'gems'
-    Dir.glob('gems/*').each do |subdir|
-      Dir.chdir subdir do
-        puts "Updating #{subdir}"
-        sh 'git pull'
-      end
-    end
-  end
+desc "Downloads the gems in a temporary directory"
+task :bootstrap do
+  sh "git submodule update --init"
+  FileUtils.mkdir_p 'docs_data'
 end
 
 #-----------------------------------------------------------------------------#
@@ -53,6 +27,7 @@ namespace :generate do
 
   desc "Generates the data for the dsl."
   task :dsl do
+    puts "\e[1;33mBuilding DSL Data\e[0m"
 
     dsls.each do |name|
     dsl_file = (ROOT + "gems/Core/lib/cocoapods-core/#{name.downcase}/dsl.rb").to_s
@@ -65,6 +40,8 @@ namespace :generate do
 
   desc "Generates the data for the gems."
   task :gems do
+    puts "\e[1;33mBuilding Gems Data\e[0m"
+
     gems.each do |name|
       github_name = name == 'CocoaPods-Core' ? 'Core' : name
       generator = Pod::Doc::Generators::Gem.new(ROOT + "gems/#{github_name}/#{name}.gemspec")
@@ -77,6 +54,7 @@ namespace :generate do
 
   desc "Generates the data for the commands."
   task :commands do
+    # puts "\e[1;33mBuilding Commands Data\e[0m"
     # TODO
   end
 
@@ -85,6 +63,7 @@ namespace :generate do
   #
   desc "Generates the data for the search."
   task :search do
+    puts "\e[1;33mBuilding Search Data\e[0m"
 
     # [Hash{String=>Hash{String=>String}]
     result = {
@@ -127,8 +106,7 @@ end
 
 desc "Generates the data for the commands."
 task :build => 'generate:all' do
-  # sh "middleman build"
-  `middleman build`
+  sh "middleman build"
 end
 
 #-----------------------------------------------------------------------------#
