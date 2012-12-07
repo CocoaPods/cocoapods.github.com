@@ -100,6 +100,8 @@ module Pod
           subcommand.name = claide_subcommand.full_command
           subcommand.html_description = description(claide_subcommand)
           # FIXME
+          puts claide_subcommand.name
+          puts  claide_subcommand.options
           subcommand.options = (claide_subcommand.options - claide_subcommand.superclass.options).map { |(name, desc)| [name, markdown_h(desc + '.')] }
           subcommand.parent_options = claide_subcommand.superclass.options.map { |(name, desc)| [name, markdown_h(desc + '.')] }
           # subcommand.examples = []
