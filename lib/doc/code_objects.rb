@@ -168,6 +168,25 @@ module Pod
       end
 
       #-----------------------------------------------------------------------#
+      # Command
+      #-----------------------------------------------------------------------#
+
+      # Represents a subcommand
+      #
+      class SubCommand < Entry
+
+        # @return [Array<(String, String)>] An array of tuples.
+        #
+        attr_accessor :options
+
+        # @return [Array<(String, String)>] An array of tuples.
+        #
+        attr_accessor :parent_options
+
+      end
+
+
+      #-----------------------------------------------------------------------#
       # DSL
       #-----------------------------------------------------------------------#
 

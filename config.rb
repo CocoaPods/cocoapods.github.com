@@ -41,7 +41,7 @@ helpers HTMLHelpers
 # Loading data
 
 navigation_data = {
-  'dsl' => %w[ podfile specification commands],
+  'dsl' => %w[ podfile specification],
   'gems' => %w[ CocoaPods CocoaPods-Core Xcodeproj CLAide ]
 }
 
@@ -55,6 +55,11 @@ navigation_data['dsl'].each do |name|
     :ignore => true
   }
 end
+
+proxy "commands.html", "templates/commands.html", {
+  :locals => { :name => 'commands' },
+  :ignore => true
+}
 
 gems = []
 navigation_data['gems'].each do |name|

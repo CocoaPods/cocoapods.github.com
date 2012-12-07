@@ -25,36 +25,84 @@ module Pod
           namespace = CodeObjects::NameSpace.new
           namespace.name = name
           namespace.html_description = description(claide_command)
-          namespace.groups = claide_commands
+          namespace.groups = create_groups(claide_command)
           namespace
         end
 
         private
 
         def description(claide_command)
-          instance = claide_command.parse([])
-          "<pre>#{instance.formatted_usage_description}</pre>"
+          message = claide_command.description || claide_command.summary
+          # FIXME
+          message = message.strip_heredoc.gsub("'", '`')
+          args    = claide_command.arguments
+          full_command = claide_command.full_command
+          "<pre>#{full_command} #{args}</pre><p>#{markdown_h(message)}</p>"
         end
 
-        def claide_commands
-          claide_command.subcommands.map do |claide_command|
+        def command_groups
+          {
+            'Installation' => [
+              'pod install',
+              'pod update',
+              'pod outdated',
+            ],
+
+            'Browsing' => [
+              "pod search",
+              "pod list",
+              "pod list new",
+            ],
+
+            'Specifications' => [
+              "pod spec create",
+              "pod spec lint",
+              "pod spec cat",
+              "pod push",
+            ],
+
+            'Repos' => [
+              "pod repo add",
+              "pod repo update",
+              "pod repo lint",
+              "pod setup",
+            ],
+          }
+
+        end
+
+        def create_groups(claide_command)
+          calide_commands = claide_command.subcommands.map do |claide_subcommand|
+            [claide_subcommand, claide_subcommand.subcommands]
+          end.flatten.compact
+          calide_commands.reject! { |c| c.abstract_command? }
+
+          groups = []
+          command_groups.each do |name, full_commands|
             group = CodeObjects::Group.new
-            group.name = claide_command.command
-            group.html_description = description(claide_command)
-            group.meths = claide_command.subcommands.map do |claide_subcommands|
-              subcommand = create_subcommand(claide_subcommands)
+            group.name = name
+            group.meths = full_commands.map do |full_command_name|
+              claide_command = calide_commands.find { |c| c.full_command == full_command_name }
+              raise "[Commands] Unable to find `#{full_command_name}`." unless claide_command
+              calide_commands.delete(claide_command)
+              subcommand = create_subcommand(claide_command)
               subcommand.group = group
               subcommand
             end
-            group
+            groups << group
           end
+          raise "[Commands] No group for commands `#{calide_commands.map(&:full_command)}`" unless calide_commands.empty?
+          groups
         end
 
         def create_subcommand(claide_subcommand)
-          subcommand = CodeObjects::Entry.new
-          subcommand.name = claide_subcommand.command
+          subcommand = CodeObjects::SubCommand.new
+          subcommand.name = claide_subcommand.full_command
           subcommand.html_description = description(claide_subcommand)
-          subcommand.examples = []
+          # FIXME
+          subcommand.options = (claide_subcommand.options - claide_subcommand.superclass.options).map { |(name, desc)| [name, markdown_h(desc + '.')] }
+          subcommand.parent_options = claide_subcommand.superclass.options.map { |(name, desc)| [name, markdown_h(desc + '.')] }
+          # subcommand.examples = []
           subcommand
         end
       end

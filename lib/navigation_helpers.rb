@@ -109,7 +109,7 @@ module NavigationHelpers
     if group_names_per_column
       _columnize_manually(groups, group_names_per_column)
     else
-      _columnize_algorithmically(groups, options[:only_public])
+      _columnize_algorithmically(groups, options[:only_public], options[:show_empty_groups])
     end
   end
 
@@ -140,20 +140,21 @@ module NavigationHelpers
   #
   # @return [Array<Pod::Doc::CodeObjects::Group, Pod::Doc::CodeObjects::Method>]
   #
-  def _columnize_algorithmically(groups, only_public)
+  def _columnize_algorithmically(groups, only_public, show_empty_groups)
     if only_public
       methods = groups.map(&:meths).flatten.select { |m| m.visibility == :public && !m.inherited }
     else
       methods = groups.map(&:meths).flatten
     end
-    groups = methods.map(&:group).uniq
+    # groups = methods.map(&:group).uniq
 
     groups_and_methods = []
-    methods_by_group = methods.group_by(&:group)
-    methods_by_group.each do |group, methods|
-      unless methods.nil? || methods.empty?
+    # methods_by_group = methods.group_by(&:group)
+    groups.each do |group|
+      puts group.name
+      if !group.meths.nil? || !group.meths.empty? || show_empty_groups
         groups_and_methods << group
-        groups_and_methods.concat(methods)
+        groups_and_methods.concat(group.meths)
       end
     end
 
