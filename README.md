@@ -5,10 +5,13 @@ User and developer documentation for CocoaPods.
 
 ## Architecture
 
-This application builds a static site with the [Middlemand](http://middlemanapp.com).
-The information for the templates is gathered either from the comments of the Gems or 
-from the Markdown files available in the repo. The source files of the Gems are processed
-with [YARD](http://yardoc.org) and the information is stored in YAML files.
+This application builds a static site by using the [Middleman](http://middlemanapp.com).
+
+The source files of the individual libraries are processed with [YARD](http://yardoc.org)
+and the pre-processed result is stored in YAML files.
+
+The information for the HTML templates is gathered either from the YAML data of the
+individual libraries or from the Markdown files available in this repo.
 
 ## Getting Started
 
@@ -18,7 +21,7 @@ $ rake build
 $ middleman
 ```
 
-To seel all the availble rake taks:
+To see all the availible rake taks:
 
 ```console
 $ rake -T

@@ -48,7 +48,7 @@ module Pod
               'pod outdated',
             ],
 
-            'Browsing' => [
+            'Browse' => [
               "pod search",
               "pod list",
               "pod list new",
