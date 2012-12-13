@@ -9,6 +9,7 @@ module Pod
         def initialize(*args)
           $:.unshift((DOC_GEM_ROOT + 'core/lib').to_s)
           $:.unshift((DOC_GEM_ROOT + 'cocoapods/lib').to_s)
+          $:.unshift((DOC_GEM_ROOT + 'cocoapods-downloader/lib').to_s)
           require 'cocoapods'
           super
         end
@@ -100,8 +101,8 @@ module Pod
           subcommand.name = claide_subcommand.full_command
           subcommand.html_description = description(claide_subcommand)
           # FIXME
-          puts claide_subcommand.name
-          puts  claide_subcommand.options
+          # puts claide_subcommand.name
+          # puts  claide_subcommand.options
           subcommand.options = (claide_subcommand.options - claide_subcommand.superclass.options).map { |(name, desc)| [name, markdown_h(desc + '.')] }
           subcommand.parent_options = claide_subcommand.superclass.options.map { |(name, desc)| [name, markdown_h(desc + '.')] }
           # subcommand.examples = []

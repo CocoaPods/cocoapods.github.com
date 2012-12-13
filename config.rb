@@ -42,7 +42,7 @@ helpers HTMLHelpers
 
 navigation_data = {
   'dsl' => %w[ podfile specification],
-  'gems' => %w[ CocoaPods CocoaPods-Core Xcodeproj CLAide ]
+  'gems' => %w[ CocoaPods CocoaPods-Core Xcodeproj CLAide cocoapods-downloader ]
 }
 
 content_for :dsl_data do navigation_data * '<br>' end

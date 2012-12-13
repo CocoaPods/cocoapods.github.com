@@ -8,7 +8,7 @@ end
 #-----------------------------------------------------------------------------#
 
 def gems
-  %w[ CocoaPods CocoaPods-Core Xcodeproj CLAide ]
+  %w[ CocoaPods CocoaPods-Core Xcodeproj CLAide cocoapods-downloader ]
 end
 
 def dsls
