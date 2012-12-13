@@ -1,71 +1,145 @@
 <!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>commands</title><link href="favicon.ico" rel="icon" type="image/ico" /><link href="css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="css/style2-7985d719.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="js/bootstrap-308e23ce.js" type="text/javascript"></script>
+<link href="css/style2-21e98761.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="js/bootstrap-308e23ce.js" type="text/javascript"></script>
 <script src="js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
-<script src="js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="index.html">Docs</a><span class="divider">/</span></li><li class="active">commands</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><div id="tab-controller"><div id="header"><h1><a class="select-tab" href="#tab_commands">Commands</a></h1><div class ='methods_list'><div class ='row'><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_list>list</a></h2><p><a class='select-tab' href=#tab_new>new</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_repo>repo</a></h2><p><a class='select-tab' href=#tab_add>add</a></p><p><a class='select-tab' href=#tab_update>update</a></p><p><a class='select-tab' href=#tab_lint>lint</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_spec>spec</a></h2><p><a class='select-tab' href=#tab_create>create</a></p><p><a class='select-tab' href=#tab_lint>lint</a></p><p><a class='select-tab' href=#tab_cat>cat</a></p></div></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_commands"><h2>Commands</h2><pre>    $ pod
+<script src="js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="index.html">Docs</a><span class="divider">/</span></li><li class="active">commands</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><div id="tab-controller"><div id="header"><h1><a class="select-tab" href="#tab_commands">Commands</a></h1><div class="commands-list"><div class ='methods_list'><div class ='row'><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_installation>Installation</a></h2><p><a class='select-tab' href=#tab_pod_install>install</a></p><p><a class='select-tab' href=#tab_pod_update>update</a></p><p><a class='select-tab' href=#tab_pod_outdated>outdated</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_browse>Browse</a></h2><p><a class='select-tab' href=#tab_pod_search>search</a></p><p><a class='select-tab' href=#tab_pod_list>list</a></p><p><a class='select-tab' href=#tab_pod_list_new>list new</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_specifications>Specifications</a></h2><p><a class='select-tab' href=#tab_pod_spec_create>spec create</a></p><p><a class='select-tab' href=#tab_pod_spec_lint>spec lint</a></p><p><a class='select-tab' href=#tab_pod_spec_cat>spec cat</a></p><p><a class='select-tab' href=#tab_pod_push>push</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_repos>Repos</a></h2><p><a class='select-tab' href=#tab_pod_repo_add>repo add</a></p><p><a class='select-tab' href=#tab_pod_repo_update>repo update</a></p><p><a class='select-tab' href=#tab_pod_repo_lint>repo lint</a></p><p><a class='select-tab' href=#tab_pod_setup>setup</a></p></div></div></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_commands"><h2>Commands</h2><pre>pod </pre><p><p>CocoaPods, the Objective-C library package manager.</p>
+</p></div><div class="tab-pane" id="tab_group_installation"><h2>Installation</h2><p>The commands listed in this group provide support for installing
+and integrating the dependecies specified in a Podfile.</p><p>Following is presented the basic workflow for integrating CocoaPods in a user project.</p><pre>$ touch Podfile
+$ vim Podfile
+$ pod install</pre><pre>$ open *.xcworkspace</pre><pre>$ vim podfile
+$ pod install</pre><pre>$ pod outdated</pre><pre>$ pod update</pre><h3>Commands</h3><p><code><a href="#tab_pod_install">pod install</a></code></p><p><code><a href="#tab_pod_update">pod update</a></code></p><p><code><a href="#tab_pod_outdated">pod outdated</a></code></p></div><div class="tab-pane" id="tab_group_browse"><h2>Browse</h2><p><code><a href="#tab_pod_search">pod search</a></code></p><p><code><a href="#tab_pod_list">pod list</a></code></p><p><code><a href="#tab_pod_list_new">pod list new</a></code></p></div><div class="tab-pane" id="tab_group_specifications"><h2>Specifications</h2><p><code><a href="#tab_pod_spec_create">pod spec create</a></code></p><p><code><a href="#tab_pod_spec_lint">pod spec lint</a></code></p><p><code><a href="#tab_pod_spec_cat">pod spec cat</a></code></p><p><code><a href="#tab_pod_push">pod push</a></code></p></div><div class="tab-pane" id="tab_group_repos"><h2>Repos</h2><p><code><a href="#tab_pod_repo_add">pod repo add</a></code></p><p><code><a href="#tab_pod_repo_update">pod repo update</a></code></p><p><code><a href="#tab_pod_repo_lint">pod repo lint</a></code></p><p><code><a href="#tab_pod_setup">pod setup</a></code></p></div><div class="tab-pane" id="tab_pod_install"><h2>pod install</h2><pre>pod install </pre><p><p>Downloads all dependencies defined in <code>Podfile</code> and creates an Xcode
+Pods library project in <code>./Pods</code>.</p>
 
-      CocoaPods, the Objective-C library package manager.</pre></div><div class="tab-pane" id="tab_group_list"><h2>list</h2><pre>    $ pod list
+<p>The Xcode project file should be specified in your <code>Podfile</code> like this:</p>
 
-      Lists all available pods.</pre></div><div class="tab-pane" id="tab_group_outdated"><h2>outdated</h2><pre>    $ pod outdated
+<p>xcodeproj <code>path/to/XcodeProject</code></p>
 
-      Shows the outdated pods in the current Podfile.lock, but only those from
-      spec repos, not those from local/external sources or `:head' versions.</pre></div><div class="tab-pane" id="tab_group_install"><h2>install</h2><pre>    $ pod install
+<p>If no xcodeproj is specified, then a search for an Xcode project will
+be made.  If more than one Xcode project is found, the command will
+raise an error.</p>
 
-      Downloads all dependencies defined in `Podfile' and creates an Xcode
-      Pods library project in `./Pods'.
-      
-      The Xcode project file should be specified in your `Podfile` like this:
-      
-        xcodeproj 'path/to/XcodeProject'
-      
-      If no xcodeproj is specified, then a search for an Xcode project will
-      be made.  If more than one Xcode project is found, the command will
-      raise an error.
-      
-      This will configure the project to reference the Pods static library,
-      add a build configuration file, and add a post build script to copy
-      Pod resources.</pre></div><div class="tab-pane" id="tab_group_update"><h2>update</h2><pre>    $ pod update
-
-      Update outdated project dependencies</pre></div><div class="tab-pane" id="tab_group_push"><h2>push</h2><pre>    $ pod push REPO [NAME.podspec]
-
-      Validates NAME.podspec or `*.podspec' in the current working dir, creates
-      a directory and version folder for the pod in the local copy of 
-      REPO (~/.cocoapods/[REPO]), copies the podspec file into the version directory,
-      and finally it pushes REPO to its remote.</pre></div><div class="tab-pane" id="tab_group_repo"><h2>repo</h2><pre>    $ pod repo
-
-      Manage spec-repositories</pre></div><div class="tab-pane" id="tab_group_search"><h2>search</h2><pre>    $ pod search [QUERY]
-
-      Searches for pods, ignoring case, whose name matches `QUERY'. If the
-      `--full' option is specified, this will also search in the summary and
-      description of the pods.</pre></div><div class="tab-pane" id="tab_group_setup"><h2>setup</h2><pre>    $ pod setup
-
-      Creates a directory at `~/.cocoapods' which will hold your spec-repos.
-      This is where it will create a clone of the public `master' spec-repo from:
-      
-          https://github.com/CocoaPods/Specs
-      
-      If the clone already exists, it will ensure that it is up-to-date.</pre></div><div class="tab-pane" id="tab_group_spec"><h2>spec</h2><pre>    $ pod spec
-
-      Manage pod specs</pre></div><div class="tab-pane" id="tab_new"><h2>new</h2><pre>    $ pod list new
-
-      Lists pods introduced in the master spec-repo since the last check</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_add"><h2>add</h2><pre>    $ pod repo add NAME URL [BRANCH]
-
-      Clones `URL' in the local spec-repos directory at `~/.cocoapods'. The
-      remote can later be referred to by `NAME'.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_update"><h2>update</h2><pre>    $ pod repo update [NAME]
-
-      Updates the local clone of the spec-repo `NAME'. If `NAME' is omitted
-      this will update all spec-repos in `~/.cocoapods'.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_lint"><h2>lint</h2><pre>    $ pod repo lint [ NAME | DIRECTORY ]
-
-      Lints the spec-repo `NAME'. If a directory is provided it is assumed
-      to be the root of a repo. Finally, if `NAME' is not provided this
-      will lint all the spec-repos known to CocoaPods.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_create"><h2>create</h2><pre>    $ pod spec create [ NAME | https://github.com/USER/REPO ]
-
-      Creates a PodSpec, in the current working dir, called `NAME.podspec'.
-      If a GitHub url is passed the spec is prepopulated.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_lint"><h2>lint</h2><pre>    $ pod spec lint [ NAME.podspec | DIRECTORY | http://PATH/NAME.podspec, ... ]
-
-      Validates `NAME.podspec'. If a directory is provided it validates
-      the podspec files found, including subfolders. In case
-      the argument is omitted, it defaults to the current working dir.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_cat"><h2>cat</h2><pre>    $ pod spec cat [ NAME.podspec ]
-
-      Prints `NAME.podspec` to standard output.</pre><hr /><h3>Examples:</h3></div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
+<p>This will configure the project to reference the Pods static library,
+add a build configuration file, and add a post build script to copy
+Pod resources.</p>
+</p><h3>Options:</h3><p><b>--no-clean</b></p><p>Leave SCM dirs like <code>.git&#39; and</code>.svn&#39; intact after downloading.</p>
+<p><b>--no-doc</b></p><p>Skip documentation generation with appledoc.</p>
+<p><b>--no-integrate</b></p><p>Skip integration of the Pods libraries in the Xcode project(s).</p>
+<p><b>--no-update</b></p><p>Skip running <code>pod repo update</code> before install.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_update"><h2>pod update</h2><pre>pod update </pre><p><p>Update outdated project dependencies</p>
+</p><h3>Options:</h3><p><b>--no-clean</b></p><p>Leave SCM dirs like <code>.git&#39; and</code>.svn&#39; intact after downloading.</p>
+<p><b>--no-doc</b></p><p>Skip documentation generation with appledoc.</p>
+<p><b>--no-integrate</b></p><p>Skip integration of the Pods libraries in the Xcode project(s).</p>
+<p><b>--no-update</b></p><p>Skip running <code>pod repo update</code> before install.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_outdated"><h2>pod outdated</h2><pre>pod outdated </pre><p><p>Shows the outdated pods in the current Podfile.lock, but only those from
+spec repos, not those from local/external sources or <code>:head</code> versions.</p>
+</p><h3>Options:</h3><p><b>--no-update</b></p><p>Skip running <code>pod repo update</code> before install.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_search"><h2>pod search</h2><pre>pod search [QUERY]</pre><p><p>Searches for pods, ignoring case, whose name matches <code>QUERY</code>. If the
+<code>--full</code> option is specified, this will also search in the summary and
+description of the pods.</p>
+</p><h3>Options:</h3><p><b>--full</b></p><p>Search by name, summary, and description.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_list"><h2>pod list</h2><pre>pod list </pre><p><p>Lists all available pods.</p>
+</p><h3>Options:</h3><p><b>--update</b></p><p>Run <code>pod repo update</code> before listing.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_list_new"><h2>pod list new</h2><pre>pod list new </pre><p><p>Lists pods introduced in the master spec-repo since the last check</p>
+</p><h3>Inherited options:</h3><p><b>--update</b></p><p>Run <code>pod repo update</code> before listing.</p>
+<p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_spec_create"><h2>pod spec create</h2><pre>pod spec create [ NAME | https://github.com/USER/REPO ]</pre><p><p>Creates a PodSpec, in the current working dir, called <code>NAME.podspec</code>.
+If a GitHub url is passed the spec is prepopulated.</p>
+</p><h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_spec_lint"><h2>pod spec lint</h2><pre>pod spec lint [ NAME.podspec | DIRECTORY | http://PATH/NAME.podspec, ... ]</pre><p><p>Validates <code>NAME.podspec</code>. If a directory is provided it validates
+the podspec files found, including subfolders. In case
+the argument is omitted, it defaults to the current working dir.</p>
+</p><h3>Options:</h3><p><b>--quick</b></p><p>Lint skips checks that would require to download and build the spec.</p>
+<p><b>--local</b></p><p>Lint a podspec against the local files contained in its directory.</p>
+<p><b>--only-errors</b></p><p>Lint validates even if warnings are present.</p>
+<p><b>--no-clean</b></p><p>Lint leaves the build directory intact for inspection.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_spec_cat"><h2>pod spec cat</h2><pre>pod spec cat [ NAME.podspec ]</pre><p><p>Prints <code>NAME.podspec</code> to standard output.</p>
+</p><h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_push"><h2>pod push</h2><pre>pod push REPO [NAME.podspec]</pre><p><p>Validates NAME.podspec or <code>*.podspec</code> in the current working dir, creates
+a directory and version folder for the pod in the local copy of 
+REPO (~/.cocoapods/[REPO]), copies the podspec file into the version directory,
+and finally it pushes REPO to its remote.</p>
+</p><h3>Options:</h3><p><b>--allow-warnings</b></p><p>Allows to push if warnings are not evitable.</p>
+<p><b>--local-only</b></p><p>Does not perform the step of pushing REPO to its remote.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_repo_add"><h2>pod repo add</h2><pre>pod repo add NAME URL [BRANCH]</pre><p><p>Clones <code>URL</code> in the local spec-repos directory at <code>~/.cocoapods</code>. The
+remote can later be referred to by <code>NAME</code>.</p>
+</p><h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_repo_update"><h2>pod repo update</h2><pre>pod repo update [NAME]</pre><p><p>Updates the local clone of the spec-repo <code>NAME</code>. If <code>NAME</code> is omitted
+this will update all spec-repos in <code>~/.cocoapods</code>.</p>
+</p><h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_repo_lint"><h2>pod repo lint</h2><pre>pod repo lint [ NAME | DIRECTORY ]</pre><p><p>Lints the spec-repo <code>NAME</code>. If a directory is provided it is assumed
+to be the root of a repo. Finally, if <code>NAME</code> is not provided this
+will lint all the spec-repos known to CocoaPods.</p>
+</p><h3>Options:</h3><p><b>--only-errors</b></p><p>Lint presents only the errors.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div><div class="tab-pane" id="tab_pod_setup"><h2>pod setup</h2><pre>pod setup </pre><p><p>Creates a directory at <code>~/.cocoapods</code> which will hold your spec-repos.
+This is where it will create a clone of the public <code>master</code> spec-repo from:</p>
+<div class="highlight"><pre><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="no">CocoaPods</span><span class="o">/</span><span class="no">Specs</span>
+</pre></div>
+<p>If the clone already exists, it will ensure that it is up-to-date.</p>
+</p><h3>Options:</h3><p><b>--push</b></p><p>Use this option to enable push access once granted.</p>
+<h3>Inherited options:</h3><p><b>--silent</b></p><p>Show nothing.</p>
+<p><b>--version</b></p><p>Show the version of CocoaPods.</p>
+<p><b>--no-color</b></p><p>Show output without color.</p>
+<p><b>--verbose</b></p><p>Show more debugging information.</p>
+<p><b>--help</b></p><p>Show help banner of specified command.</p>
+</div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
