@@ -1,0 +1,71 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>commands</title><link href="favicon.ico" rel="icon" type="image/ico" /><link href="css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/style2-7985d719.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="js/bootstrap-308e23ce.js" type="text/javascript"></script>
+<script src="js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
+<script src="js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="index.html">Docs</a><span class="divider">/</span></li><li class="active">commands</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><div id="tab-controller"><div id="header"><h1><a class="select-tab" href="#tab_commands">Commands</a></h1><div class ='methods_list'><div class ='row'><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_list>list</a></h2><p><a class='select-tab' href=#tab_new>new</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_repo>repo</a></h2><p><a class='select-tab' href=#tab_add>add</a></p><p><a class='select-tab' href=#tab_update>update</a></p><p><a class='select-tab' href=#tab_lint>lint</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_spec>spec</a></h2><p><a class='select-tab' href=#tab_create>create</a></p><p><a class='select-tab' href=#tab_lint>lint</a></p><p><a class='select-tab' href=#tab_cat>cat</a></p></div></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_commands"><h2>Commands</h2><pre>    $ pod
+
+      CocoaPods, the Objective-C library package manager.</pre></div><div class="tab-pane" id="tab_group_list"><h2>list</h2><pre>    $ pod list
+
+      Lists all available pods.</pre></div><div class="tab-pane" id="tab_group_outdated"><h2>outdated</h2><pre>    $ pod outdated
+
+      Shows the outdated pods in the current Podfile.lock, but only those from
+      spec repos, not those from local/external sources or `:head' versions.</pre></div><div class="tab-pane" id="tab_group_install"><h2>install</h2><pre>    $ pod install
+
+      Downloads all dependencies defined in `Podfile' and creates an Xcode
+      Pods library project in `./Pods'.
+      
+      The Xcode project file should be specified in your `Podfile` like this:
+      
+        xcodeproj 'path/to/XcodeProject'
+      
+      If no xcodeproj is specified, then a search for an Xcode project will
+      be made.  If more than one Xcode project is found, the command will
+      raise an error.
+      
+      This will configure the project to reference the Pods static library,
+      add a build configuration file, and add a post build script to copy
+      Pod resources.</pre></div><div class="tab-pane" id="tab_group_update"><h2>update</h2><pre>    $ pod update
+
+      Update outdated project dependencies</pre></div><div class="tab-pane" id="tab_group_push"><h2>push</h2><pre>    $ pod push REPO [NAME.podspec]
+
+      Validates NAME.podspec or `*.podspec' in the current working dir, creates
+      a directory and version folder for the pod in the local copy of 
+      REPO (~/.cocoapods/[REPO]), copies the podspec file into the version directory,
+      and finally it pushes REPO to its remote.</pre></div><div class="tab-pane" id="tab_group_repo"><h2>repo</h2><pre>    $ pod repo
+
+      Manage spec-repositories</pre></div><div class="tab-pane" id="tab_group_search"><h2>search</h2><pre>    $ pod search [QUERY]
+
+      Searches for pods, ignoring case, whose name matches `QUERY'. If the
+      `--full' option is specified, this will also search in the summary and
+      description of the pods.</pre></div><div class="tab-pane" id="tab_group_setup"><h2>setup</h2><pre>    $ pod setup
+
+      Creates a directory at `~/.cocoapods' which will hold your spec-repos.
+      This is where it will create a clone of the public `master' spec-repo from:
+      
+          https://github.com/CocoaPods/Specs
+      
+      If the clone already exists, it will ensure that it is up-to-date.</pre></div><div class="tab-pane" id="tab_group_spec"><h2>spec</h2><pre>    $ pod spec
+
+      Manage pod specs</pre></div><div class="tab-pane" id="tab_new"><h2>new</h2><pre>    $ pod list new
+
+      Lists pods introduced in the master spec-repo since the last check</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_add"><h2>add</h2><pre>    $ pod repo add NAME URL [BRANCH]
+
+      Clones `URL' in the local spec-repos directory at `~/.cocoapods'. The
+      remote can later be referred to by `NAME'.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_update"><h2>update</h2><pre>    $ pod repo update [NAME]
+
+      Updates the local clone of the spec-repo `NAME'. If `NAME' is omitted
+      this will update all spec-repos in `~/.cocoapods'.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_lint"><h2>lint</h2><pre>    $ pod repo lint [ NAME | DIRECTORY ]
+
+      Lints the spec-repo `NAME'. If a directory is provided it is assumed
+      to be the root of a repo. Finally, if `NAME' is not provided this
+      will lint all the spec-repos known to CocoaPods.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_create"><h2>create</h2><pre>    $ pod spec create [ NAME | https://github.com/USER/REPO ]
+
+      Creates a PodSpec, in the current working dir, called `NAME.podspec'.
+      If a GitHub url is passed the spec is prepopulated.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_lint"><h2>lint</h2><pre>    $ pod spec lint [ NAME.podspec | DIRECTORY | http://PATH/NAME.podspec, ... ]
+
+      Validates `NAME.podspec'. If a directory is provided it validates
+      the podspec files found, including subfolders. In case
+      the argument is omitted, it defaults to the current working dir.</pre><hr /><h3>Examples:</h3></div><div class="tab-pane" id="tab_cat"><h2>cat</h2><pre>    $ pod spec cat [ NAME.podspec ]
+
+      Prints `NAME.podspec` to standard output.</pre><hr /><h3>Examples:</h3></div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>

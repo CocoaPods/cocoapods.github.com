@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>Project</title><link href="../../../favicon.ico" rel="icon" type="image/ico" /><link href="../../../css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../../../css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="../../../css/style-fc0fe55f.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../../../css/style2-7985d719.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../../../js/bootstrap-308e23ce.js" type="text/javascript"></script>
 <script src="../../../js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
 <script src="../../../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../../../index.html">Docs</a><span class="divider">/</span></li><li><a href="../../index.html">Xcodeproj</a><span class="divider">/</span></li><li><a href="../index.html">Xcodeproj</a><span class="divider">/</span></li><li class="active">Project</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><div id="tab-controller"><div id="methods-container"><div id="header"><h1><a class="select-tab" href="#tab_root_project">Project</a></h1></div></div><div class ='methods_list'><div class ='row'><div class ='span3'><p><a class='select-tab' href=#tab_archive_version>archive_version</a><span class='label label-small'>r</span></p><p><a class='select-tab' href=#tab_classes>classes</a><span class='label label-small'>r</span></p><p><a class='select-tab' href=#tab_object_version>object_version</a><span class='label label-small'>r</span></p><p><a class='select-tab' href=#tab_objects_by_uuid>objects_by_uuid</a><span class='label label-small'>r</span></p><p><a class='select-tab' href=#tab_root_object>root_object</a><span class='label label-small'>r</span></p><p><a class='select-tab' href=#tab_initialize>initialize</a></p><p><a class='select-tab' href=#tab_equality>==</a></p><p><a class='select-tab' href=#tab_to_s>to_s</a></p><p><a class='select-tab' href=#tab_inspect>inspect</a></p><h2><a class='select-tab' href=#tab_group_plist_serialization>Plist serialization</a></h2><p><a class='select-tab' href=#tab_new_from_plist>new_from_plist</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_to_hash>to_hash</a></p><p><a class='select-tab' href=#tab_to_plist>to_plist</a></p><p><a class='select-tab' href=#tab_to_tree_hash>to_tree_hash</a></p><p><a class='select-tab' href=#tab_save_as>save_as</a></p><h2><a class='select-tab' href=#tab_group_creating_objects>Creating objects</a></h2><p><a class='select-tab' href=#tab_new>new</a></p><p><a class='select-tab' href=#tab_generate_uuid>generate_uuid</a></p><p><a class='select-tab' href=#tab_generated_uuids>generated_uuids</a><span class='label label-small'>r</span></p><p><a class='select-tab' href=#tab_generate_available_uuid_list>generate_available_uuid_list</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_convenience_accessors>Convenience accessors</a></h2><p><a class='select-tab' href=#tab_objects>objects</a></p><p><a class='select-tab' href=#tab_uuids>uuids</a></p><p><a class='select-tab' href=#tab_list_by_class>list_by_class</a></p><p><a class='select-tab' href=#tab_main_group>main_group</a></p><p><a class='select-tab' href=#tab_groups>groups</a></p><p><a class='select-tab' href=#tab_braces>[]</a></p><p><a class='select-tab' href=#tab_files>files</a></p><p><a class='select-tab' href=#tab_targets>targets</a></p><p><a class='select-tab' href=#tab_products_group>products_group</a></p><p><a class='select-tab' href=#tab_products>products</a></p><p><a class='select-tab' href=#tab_frameworks_group>frameworks_group</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_build_configurations>build_configurations</a></p><p><a class='select-tab' href=#tab_build_settings>build_settings</a></p><h2><a class='select-tab' href=#tab_group_helpers_for_generating_objects>Helpers for generating objects</a></h2><p><a class='select-tab' href=#tab_new_file>new_file</a></p><p><a class='select-tab' href=#tab_new_group>new_group</a></p><p><a class='select-tab' href=#tab_add_system_framework>add_system_framework</a></p><p><a class='select-tab' href=#tab_new_target>new_target</a></p><p><a class='select-tab' href=#tab_configuration_list>configuration_list</a></p><p><a class='select-tab' href=#tab_configuration_list_settings>configuration_list_settings</a></p></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_root_project"><h2>Project</h2><p>This class represents a Xcode project document.</p>
@@ -50,69 +50,69 @@ objects of the project by UUID.</p>
 </pre></div><h4>Parameters</h4><p><code>Pathname</code><span> </span><code>String</code><span> </span><b> xcodeproj</b></p><p>The path to the Xcode project document (xcodeproj).</p>
 <h4>Returns</h4><p><code><a href="index.html">Project</a></code> A new instance of Project
 </p><hr /><h3>Examples:</h3><p>Opening a project</p><div class="highlight"><pre><span class="no">Project</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;path/to/Project.xcodeproj&quot;</span><span class="p">)</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">xcodeproj</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
-  <span class="vi">@objects_by_uuid</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="vi">@generated_uuids</span> <span class="o">=</span> <span class="o">[]</span>
-  <span class="vi">@available_uuids</span> <span class="o">=</span> <span class="o">[]</span>
-
-  <span class="k">if</span> <span class="n">xcodeproj</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">xcodeproj</span><span class="p">,</span> <span class="s1">&#39;project.pbxproj&#39;</span><span class="p">)</span>
-    <span class="n">plist</span> <span class="o">=</span> <span class="no">Xcodeproj</span><span class="o">.</span><span class="n">read_plist</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
-
-    <span class="vi">@archive_version</span> <span class="o">=</span>  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;archiveVersion&#39;</span><span class="o">]</span>
-    <span class="vi">@object_version</span>  <span class="o">=</span>  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objectVersion&#39;</span><span class="o">]</span>
-    <span class="vi">@classes</span>         <span class="o">=</span>  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;classes&#39;</span><span class="o">]</span>
-
-    <span class="n">root_object_uuid</span> <span class="o">=</span> <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;rootObject&#39;</span><span class="o">]</span>
-    <span class="vi">@root_object</span> <span class="o">=</span> <span class="n">new_from_plist</span><span class="p">(</span><span class="n">root_object_uuid</span><span class="p">,</span> <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objects&#39;</span><span class="o">]</span><span class="p">,</span> <span class="nb">self</span><span class="p">)</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="vi">@archive_version</span><span class="o">.</span><span class="n">to_i</span> <span class="o">&gt;</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LAST_KNOWN_ARCHIVE_VERSION</span> <span class="o">||</span> <span class="vi">@object_version</span><span class="o">.</span><span class="n">to_i</span> <span class="o">&gt;</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LAST_KNOWN_OBJECT_VERSION</span><span class="p">)</span>
-      <span class="k">raise</span> <span class="s1">&#39;[Xcodeproj] Unknown archive or object version.&#39;</span>
-    <span class="k">end</span>
-
-    <span class="k">unless</span> <span class="vi">@root_object</span>
-      <span class="k">raise</span> <span class="s2">&quot;[Xcodeproj] Unable to find a root object in </span><span class="si">#{</span><span class="n">file</span><span class="si">}</span><span class="s2">.&quot;</span>
-    <span class="k">end</span>
-  <span class="k">else</span>
-    <span class="vi">@archive_version</span> <span class="o">=</span>  <span class="no">Constants</span><span class="o">::</span><span class="no">LAST_KNOWN_ARCHIVE_VERSION</span><span class="o">.</span><span class="n">to_s</span>
-    <span class="vi">@object_version</span>  <span class="o">=</span>  <span class="no">Constants</span><span class="o">::</span><span class="no">LAST_KNOWN_OBJECT_VERSION</span><span class="o">.</span><span class="n">to_s</span>
-    <span class="vi">@classes</span>         <span class="o">=</span>  <span class="p">{}</span>
-
-    <span class="n">root_object</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXProject</span><span class="p">)</span>
-    <span class="n">root_object</span><span class="o">.</span><span class="n">main_group</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXGroup</span><span class="p">)</span>
-    <span class="n">root_object</span><span class="o">.</span><span class="n">product_ref_group</span> <span class="o">=</span> <span class="n">root_object</span><span class="o">.</span><span class="n">main_group</span><span class="o">.</span><span class="n">new_group</span><span class="p">(</span><span class="s1">&#39;Products&#39;</span><span class="p">)</span>
-
-    <span class="n">config_list</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCConfigurationList</span><span class="p">)</span>
-    <span class="n">config_list</span><span class="o">.</span><span class="n">default_configuration_name</span> <span class="o">=</span> <span class="s1">&#39;Release&#39;</span>
-    <span class="n">config_list</span><span class="o">.</span><span class="n">default_configuration_is_visible</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-    <span class="n">root_object</span><span class="o">.</span><span class="n">build_configuration_list</span> <span class="o">=</span> <span class="n">config_list</span>
-
-    <span class="sx">%w| Release Debug |</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
-      <span class="n">build_configuration</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCBuildConfiguration</span><span class="p">)</span>
-      <span class="n">build_configuration</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">name</span>
-      <span class="n">build_configuration</span><span class="o">.</span><span class="n">build_settings</span> <span class="o">=</span> <span class="p">{}</span>
-      <span class="n">config_list</span><span class="o">.</span><span class="n">build_configurations</span> <span class="o">&lt;&lt;</span> <span class="n">build_configuration</span>
-    <span class="k">end</span>
-
-    <span class="vi">@root_object</span> <span class="o">=</span> <span class="n">root_object</span>
-    <span class="n">root_object</span><span class="o">.</span><span class="n">add_referrer</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
-    <span class="n">new_group</span><span class="p">(</span><span class="s1">&#39;Frameworks&#39;</span><span class="p">)</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno"> 82</span> <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">xcodeproj</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+<span class="lineno"> 83</span>   <span class="vi">@objects_by_uuid</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno"> 84</span>   <span class="vi">@generated_uuids</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="lineno"> 85</span>   <span class="vi">@available_uuids</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="lineno"> 86</span> 
+<span class="lineno"> 87</span>   <span class="k">if</span> <span class="n">xcodeproj</span>
+<span class="lineno"> 88</span>     <span class="n">file</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">xcodeproj</span><span class="p">,</span> <span class="s1">&#39;project.pbxproj&#39;</span><span class="p">)</span>
+<span class="lineno"> 89</span>     <span class="n">plist</span> <span class="o">=</span> <span class="no">Xcodeproj</span><span class="o">.</span><span class="n">read_plist</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+<span class="lineno"> 90</span> 
+<span class="lineno"> 91</span>     <span class="vi">@archive_version</span> <span class="o">=</span>  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;archiveVersion&#39;</span><span class="o">]</span>
+<span class="lineno"> 92</span>     <span class="vi">@object_version</span>  <span class="o">=</span>  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objectVersion&#39;</span><span class="o">]</span>
+<span class="lineno"> 93</span>     <span class="vi">@classes</span>         <span class="o">=</span>  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;classes&#39;</span><span class="o">]</span>
+<span class="lineno"> 94</span> 
+<span class="lineno"> 95</span>     <span class="n">root_object_uuid</span> <span class="o">=</span> <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;rootObject&#39;</span><span class="o">]</span>
+<span class="lineno"> 96</span>     <span class="vi">@root_object</span> <span class="o">=</span> <span class="n">new_from_plist</span><span class="p">(</span><span class="n">root_object_uuid</span><span class="p">,</span> <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objects&#39;</span><span class="o">]</span><span class="p">,</span> <span class="nb">self</span><span class="p">)</span>
+<span class="lineno"> 97</span> 
+<span class="lineno"> 98</span>   <span class="k">if</span> <span class="p">(</span><span class="vi">@archive_version</span><span class="o">.</span><span class="n">to_i</span> <span class="o">&gt;</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LAST_KNOWN_ARCHIVE_VERSION</span> <span class="o">||</span> <span class="vi">@object_version</span><span class="o">.</span><span class="n">to_i</span> <span class="o">&gt;</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LAST_KNOWN_OBJECT_VERSION</span><span class="p">)</span>
+<span class="lineno"> 99</span>       <span class="k">raise</span> <span class="s1">&#39;[Xcodeproj] Unknown archive or object version.&#39;</span>
+<span class="lineno">100</span>     <span class="k">end</span>
+<span class="lineno">101</span> 
+<span class="lineno">102</span>     <span class="k">unless</span> <span class="vi">@root_object</span>
+<span class="lineno">103</span>       <span class="k">raise</span> <span class="s2">&quot;[Xcodeproj] Unable to find a root object in </span><span class="si">#{</span><span class="n">file</span><span class="si">}</span><span class="s2">.&quot;</span>
+<span class="lineno">104</span>     <span class="k">end</span>
+<span class="lineno">105</span>   <span class="k">else</span>
+<span class="lineno">106</span>     <span class="vi">@archive_version</span> <span class="o">=</span>  <span class="no">Constants</span><span class="o">::</span><span class="no">LAST_KNOWN_ARCHIVE_VERSION</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">107</span>     <span class="vi">@object_version</span>  <span class="o">=</span>  <span class="no">Constants</span><span class="o">::</span><span class="no">LAST_KNOWN_OBJECT_VERSION</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">108</span>     <span class="vi">@classes</span>         <span class="o">=</span>  <span class="p">{}</span>
+<span class="lineno">109</span> 
+<span class="lineno">110</span>     <span class="n">root_object</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXProject</span><span class="p">)</span>
+<span class="lineno">111</span>     <span class="n">root_object</span><span class="o">.</span><span class="n">main_group</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXGroup</span><span class="p">)</span>
+<span class="lineno">112</span>     <span class="n">root_object</span><span class="o">.</span><span class="n">product_ref_group</span> <span class="o">=</span> <span class="n">root_object</span><span class="o">.</span><span class="n">main_group</span><span class="o">.</span><span class="n">new_group</span><span class="p">(</span><span class="s1">&#39;Products&#39;</span><span class="p">)</span>
+<span class="lineno">113</span> 
+<span class="lineno">114</span>     <span class="n">config_list</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCConfigurationList</span><span class="p">)</span>
+<span class="lineno">115</span>     <span class="n">config_list</span><span class="o">.</span><span class="n">default_configuration_name</span> <span class="o">=</span> <span class="s1">&#39;Release&#39;</span>
+<span class="lineno">116</span>     <span class="n">config_list</span><span class="o">.</span><span class="n">default_configuration_is_visible</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+<span class="lineno">117</span>     <span class="n">root_object</span><span class="o">.</span><span class="n">build_configuration_list</span> <span class="o">=</span> <span class="n">config_list</span>
+<span class="lineno">118</span> 
+<span class="lineno">119</span>     <span class="sx">%w| Release Debug |</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+<span class="lineno">120</span>       <span class="n">build_configuration</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCBuildConfiguration</span><span class="p">)</span>
+<span class="lineno">121</span>       <span class="n">build_configuration</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">name</span>
+<span class="lineno">122</span>       <span class="n">build_configuration</span><span class="o">.</span><span class="n">build_settings</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">123</span>       <span class="n">config_list</span><span class="o">.</span><span class="n">build_configurations</span> <span class="o">&lt;&lt;</span> <span class="n">build_configuration</span>
+<span class="lineno">124</span>     <span class="k">end</span>
+<span class="lineno">125</span> 
+<span class="lineno">126</span>     <span class="vi">@root_object</span> <span class="o">=</span> <span class="n">root_object</span>
+<span class="lineno">127</span>     <span class="n">root_object</span><span class="o">.</span><span class="n">add_referrer</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+<span class="lineno">128</span>     <span class="n">new_group</span><span class="p">(</span><span class="s1">&#39;Frameworks&#39;</span><span class="p">)</span>
+<span class="lineno">129</span>   <span class="k">end</span>
+<span class="lineno">130</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L82">lib/xcodeproj/project.rb:82</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_equality"><h2>==</h2><h3>Signature</h3><div class="highlight"><pre><span class="o">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="c1">#=&gt; Boolean </span>
 </pre></div><h4>Parameters</h4><p><code>#to_hash</code><span> </span><b> other</b></p><p>The object to compare.</p>
 <h4>Returns</h4><p><code>Boolean</code> Whether the project is equivalent to the given object.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
-  <span class="n">other</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:to_hash</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">to_hash</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">to_hash</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">138</span> <span class="k">def</span> <span class="nf">==</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="lineno">139</span>   <span class="n">other</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:to_hash</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">to_hash</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">to_hash</span>
+<span class="lineno">140</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L138">lib/xcodeproj/project.rb:138</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_to_s"><h2>to_s</h2><h3>Signature</h3><div class="highlight"><pre><span class="nb">to_s</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h4>Aliases</h4><code>Xcodeproj::Project#inspect</code><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
-  <span class="s2">&quot;Project with root object UUID: </span><span class="si">#{</span><span class="n">root_object</span><span class="o">.</span><span class="n">uuid</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="k">end</span>
+</pre></div><h4>Aliases</h4><code>Xcodeproj::Project#inspect</code><h3>Source</h3><div class="highlight"><pre><span class="lineno">142</span> <span class="k">def</span> <span class="nf">to_s</span>
+<span class="lineno">143</span>   <span class="s2">&quot;Project with root object UUID: </span><span class="si">#{</span><span class="n">root_object</span><span class="o">.</span><span class="n">uuid</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="lineno">144</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L142">lib/xcodeproj/project.rb:142</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_inspect"><h2>inspect</h2><h3>Signature</h3><div class="highlight"><pre><span class="nb">inspect</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">to_s</span>
-  <span class="s2">&quot;Project with root object UUID: </span><span class="si">#{</span><span class="n">root_object</span><span class="o">.</span><span class="n">uuid</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="k">end</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">146</span> <span class="k">def</span> <span class="nf">to_s</span>
+<span class="lineno">147</span>   <span class="s2">&quot;Project with root object UUID: </span><span class="si">#{</span><span class="n">root_object</span><span class="o">.</span><span class="n">uuid</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="lineno">148</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L146">lib/xcodeproj/project.rb:146</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_new_from_plist"><h2>new_from_plist</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">new_from_plist</span><span class="p">(</span><span class="n">uuid</span><span class="p">,</span> <span class="n">objects_by_uuid_plist</span><span class="p">,</span> <span class="n">root_object</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span> <span class="c1">#=&gt; AbstractObject </span>
 </pre></div><h4>Parameters</h4><p><code>String</code><span> </span><b> uuid</b></p><p>The UUID of the object that needs to be generated.</p>
 <p><code>Hash {String =&gt; Hash}</code><span> </span><b> objects_by_uuid_plist</b></p><p>The <code>objects</code> hash of the plist representation of the project.</p>
@@ -120,82 +120,82 @@ objects of the project by UUID.</p>
 retained by the project before configuration to add it to the <code>objects</code>
 hash and avoid infinite loops.</p>
 <h4>Returns</h4><p><code>AbstractObject</code> The new object.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">new_from_plist</span><span class="p">(</span><span class="n">uuid</span><span class="p">,</span> <span class="n">objects_by_uuid_plist</span><span class="p">,</span> <span class="n">root_object</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span>
-  <span class="n">attributes</span> <span class="o">=</span> <span class="n">objects_by_uuid_plist</span><span class="o">[</span><span class="n">uuid</span><span class="o">]</span>
-  <span class="k">if</span> <span class="n">attributes</span>
-    <span class="n">klass</span> <span class="o">=</span> <span class="no">Object</span><span class="o">.</span><span class="n">const_get</span><span class="p">(</span><span class="n">attributes</span><span class="o">[</span><span class="s1">&#39;isa&#39;</span><span class="o">]</span><span class="p">)</span>
-    <span class="n">object</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">uuid</span><span class="p">)</span>
-    <span class="n">object</span><span class="o">.</span><span class="n">add_referrer</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="k">if</span> <span class="n">root_object</span>
-    <span class="n">object</span><span class="o">.</span><span class="n">configure_with_plist</span><span class="p">(</span><span class="n">objects_by_uuid_plist</span><span class="p">)</span>
-    <span class="n">object</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">177</span> <span class="k">def</span> <span class="nf">new_from_plist</span><span class="p">(</span><span class="n">uuid</span><span class="p">,</span> <span class="n">objects_by_uuid_plist</span><span class="p">,</span> <span class="n">root_object</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span>
+<span class="lineno">178</span>   <span class="n">attributes</span> <span class="o">=</span> <span class="n">objects_by_uuid_plist</span><span class="o">[</span><span class="n">uuid</span><span class="o">]</span>
+<span class="lineno">179</span>   <span class="k">if</span> <span class="n">attributes</span>
+<span class="lineno">180</span>     <span class="n">klass</span> <span class="o">=</span> <span class="no">Object</span><span class="o">.</span><span class="n">const_get</span><span class="p">(</span><span class="n">attributes</span><span class="o">[</span><span class="s1">&#39;isa&#39;</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">181</span>     <span class="n">object</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">uuid</span><span class="p">)</span>
+<span class="lineno">182</span>     <span class="n">object</span><span class="o">.</span><span class="n">add_referrer</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="k">if</span> <span class="n">root_object</span>
+<span class="lineno">183</span>     <span class="n">object</span><span class="o">.</span><span class="n">configure_with_plist</span><span class="p">(</span><span class="n">objects_by_uuid_plist</span><span class="p">)</span>
+<span class="lineno">184</span>     <span class="n">object</span>
+<span class="lineno">185</span>   <span class="k">end</span>
+<span class="lineno">186</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L177">lib/xcodeproj/project.rb:177</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_to_hash"><h2>to_hash</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">to_hash</span> <span class="c1">#=&gt; Hash </span>
 </pre></div><h4>Returns</h4><p><code><a href="../../hash/index.html">Hash</a></code> The plist representation of the project.
-</p><h4>Aliases</h4><code>Xcodeproj::Project#to_plist</code><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">to_hash</span>
-  <span class="n">plist</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="n">objects_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="n">objects</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">objects_dictionary</span><span class="o">[</span><span class="n">obj</span><span class="o">.</span><span class="n">uuid</span><span class="o">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">to_plist</span> <span class="p">}</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objects&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">objects_dictionary</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;archiveVersion&#39;</span><span class="o">]</span> <span class="o">=</span>  <span class="n">archive_version</span><span class="o">.</span><span class="n">to_s</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objectVersion&#39;</span><span class="o">]</span>  <span class="o">=</span>  <span class="n">object_version</span><span class="o">.</span><span class="n">to_s</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;classes&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">classes</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;rootObject&#39;</span><span class="o">]</span>     <span class="o">=</span>  <span class="n">root_object</span><span class="o">.</span><span class="n">uuid</span>
-  <span class="n">plist</span>
-<span class="k">end</span>
+</p><h4>Aliases</h4><code>Xcodeproj::Project#to_plist</code><h3>Source</h3><div class="highlight"><pre><span class="lineno">190</span> <span class="k">def</span> <span class="nf">to_hash</span>
+<span class="lineno">191</span>   <span class="n">plist</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">192</span>   <span class="n">objects_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">193</span>   <span class="n">objects</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">objects_dictionary</span><span class="o">[</span><span class="n">obj</span><span class="o">.</span><span class="n">uuid</span><span class="o">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">to_plist</span> <span class="p">}</span>
+<span class="lineno">194</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objects&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">objects_dictionary</span>
+<span class="lineno">195</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;archiveVersion&#39;</span><span class="o">]</span> <span class="o">=</span>  <span class="n">archive_version</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">196</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objectVersion&#39;</span><span class="o">]</span>  <span class="o">=</span>  <span class="n">object_version</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">197</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;classes&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">classes</span>
+<span class="lineno">198</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;rootObject&#39;</span><span class="o">]</span>     <span class="o">=</span>  <span class="n">root_object</span><span class="o">.</span><span class="n">uuid</span>
+<span class="lineno">199</span>   <span class="n">plist</span>
+<span class="lineno">200</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L190">lib/xcodeproj/project.rb:190</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_to_plist"><h2>to_plist</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">to_plist</span> <span class="c1">#=&gt; Hash </span>
 </pre></div><h4>Returns</h4><p><code><a href="../../hash/index.html">Hash</a></code> The plist representation of the project.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">to_hash</span>
-  <span class="n">plist</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="n">objects_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="n">objects</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">objects_dictionary</span><span class="o">[</span><span class="n">obj</span><span class="o">.</span><span class="n">uuid</span><span class="o">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">to_plist</span> <span class="p">}</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objects&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">objects_dictionary</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;archiveVersion&#39;</span><span class="o">]</span> <span class="o">=</span>  <span class="n">archive_version</span><span class="o">.</span><span class="n">to_s</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objectVersion&#39;</span><span class="o">]</span>  <span class="o">=</span>  <span class="n">object_version</span><span class="o">.</span><span class="n">to_s</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;classes&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">classes</span>
-  <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;rootObject&#39;</span><span class="o">]</span>     <span class="o">=</span>  <span class="n">root_object</span><span class="o">.</span><span class="n">uuid</span>
-  <span class="n">plist</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">202</span> <span class="k">def</span> <span class="nf">to_hash</span>
+<span class="lineno">203</span>   <span class="n">plist</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">204</span>   <span class="n">objects_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">205</span>   <span class="n">objects</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">objects_dictionary</span><span class="o">[</span><span class="n">obj</span><span class="o">.</span><span class="n">uuid</span><span class="o">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">to_plist</span> <span class="p">}</span>
+<span class="lineno">206</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objects&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">objects_dictionary</span>
+<span class="lineno">207</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;archiveVersion&#39;</span><span class="o">]</span> <span class="o">=</span>  <span class="n">archive_version</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">208</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;objectVersion&#39;</span><span class="o">]</span>  <span class="o">=</span>  <span class="n">object_version</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">209</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;classes&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">classes</span>
+<span class="lineno">210</span>   <span class="n">plist</span><span class="o">[</span><span class="s1">&#39;rootObject&#39;</span><span class="o">]</span>     <span class="o">=</span>  <span class="n">root_object</span><span class="o">.</span><span class="n">uuid</span>
+<span class="lineno">211</span>   <span class="n">plist</span>
+<span class="lineno">212</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L202">lib/xcodeproj/project.rb:202</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_to_tree_hash"><h2>to_tree_hash</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">to_tree_hash</span> <span class="c1">#=&gt; Hash </span>
 </pre></div><h4>Returns</h4><p><code><a href="../../hash/index.html">Hash</a></code> <p>A hash reppresentation of the project different from the
 plist one.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">to_tree_hash</span>
-  <span class="nb">hash</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="n">objects_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;objects&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">objects_dictionary</span>
-  <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;archiveVersion&#39;</span><span class="o">]</span> <span class="o">=</span>  <span class="n">archive_version</span><span class="o">.</span><span class="n">to_s</span>
-  <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;objectVersion&#39;</span><span class="o">]</span>  <span class="o">=</span>  <span class="n">object_version</span><span class="o">.</span><span class="n">to_s</span>
-  <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;classes&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">classes</span>
-  <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;rootObject&#39;</span><span class="o">]</span>     <span class="o">=</span>  <span class="n">root_object</span><span class="o">.</span><span class="n">to_tree_hash</span>
-  <span class="nb">hash</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">216</span> <span class="k">def</span> <span class="nf">to_tree_hash</span>
+<span class="lineno">217</span>   <span class="nb">hash</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">218</span>   <span class="n">objects_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">219</span>   <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;objects&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">objects_dictionary</span>
+<span class="lineno">220</span>   <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;archiveVersion&#39;</span><span class="o">]</span> <span class="o">=</span>  <span class="n">archive_version</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">221</span>   <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;objectVersion&#39;</span><span class="o">]</span>  <span class="o">=</span>  <span class="n">object_version</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">222</span>   <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;classes&#39;</span><span class="o">]</span>        <span class="o">=</span>  <span class="n">classes</span>
+<span class="lineno">223</span>   <span class="nb">hash</span><span class="o">[</span><span class="s1">&#39;rootObject&#39;</span><span class="o">]</span>     <span class="o">=</span>  <span class="n">root_object</span><span class="o">.</span><span class="n">to_tree_hash</span>
+<span class="lineno">224</span>   <span class="nb">hash</span>
+<span class="lineno">225</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L216">lib/xcodeproj/project.rb:216</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_save_as"><h2>save_as</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">save_as</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span> <span class="c1">#=&gt; Boolean </span>
 </pre></div><h4>Parameters</h4><p><code>String</code><span> </span><code>Pathname</code><span> </span><b> projpath</b></p><p>The path where the data should be
 stored.</p>
 <h4>Returns</h4><p><code>Boolean</code> Whether or not saving was successful.
 </p><hr /><h3>Examples:</h3><p>Saving a project</p><div class="highlight"><pre><span class="n">project</span><span class="o">.</span><span class="n">save_as</span><span class="p">(</span><span class="s2">&quot;path/to/Project.xcodeproj&quot;</span><span class="p">)</span> <span class="c1">#=&gt; true</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">save_as</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span>
-  <span class="n">projpath</span> <span class="o">=</span> <span class="n">projpath</span><span class="o">.</span><span class="n">to_s</span>
-  <span class="no">FileUtils</span><span class="o">.</span><span class="n">mkdir_p</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span>
-  <span class="no">Xcodeproj</span><span class="o">.</span><span class="n">write_plist</span><span class="p">(</span><span class="n">to_plist</span><span class="p">,</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">projpath</span><span class="p">,</span> <span class="s1">&#39;project.pbxproj&#39;</span><span class="p">))</span>
-<span class="k">end</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">238</span> <span class="k">def</span> <span class="nf">save_as</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span>
+<span class="lineno">239</span>   <span class="n">projpath</span> <span class="o">=</span> <span class="n">projpath</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">240</span>   <span class="no">FileUtils</span><span class="o">.</span><span class="n">mkdir_p</span><span class="p">(</span><span class="n">projpath</span><span class="p">)</span>
+<span class="lineno">241</span>   <span class="no">Xcodeproj</span><span class="o">.</span><span class="n">write_plist</span><span class="p">(</span><span class="n">to_plist</span><span class="p">,</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">projpath</span><span class="p">,</span> <span class="s1">&#39;project.pbxproj&#39;</span><span class="p">))</span>
+<span class="lineno">242</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L238">lib/xcodeproj/project.rb:238</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_new"><h2>new</h2><h3>Signature</h3><div class="highlight"><pre><span class="kp">new</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span> <span class="c1">#=&gt; AbstractObject </span>
 </pre></div><h4>Parameters</h4><p><code>Class</code><span> </span><b> klass</b></p><p>The concrete subclass of AbstractObject for new
 object.</p>
 <h4>Returns</h4><p><code>AbstractObject</code> The new object.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">new</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
-  <span class="n">object</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">generate_uuid</span><span class="p">)</span>
-  <span class="n">object</span><span class="o">.</span><span class="n">initialize_defaults</span>
-  <span class="n">object</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">259</span> <span class="k">def</span> <span class="nf">new</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
+<span class="lineno">260</span>   <span class="n">object</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">generate_uuid</span><span class="p">)</span>
+<span class="lineno">261</span>   <span class="n">object</span><span class="o">.</span><span class="n">initialize_defaults</span>
+<span class="lineno">262</span>   <span class="n">object</span>
+<span class="lineno">263</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L259">lib/xcodeproj/project.rb:259</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_generate_uuid"><h2>generate_uuid</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">generate_uuid</span> <span class="c1">#=&gt; String </span>
 </pre></div><h4>Returns</h4><p><code>String</code> A UUID unique to the project.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">generate_uuid</span>
-  <span class="k">while</span> <span class="vi">@available_uuids</span><span class="o">.</span><span class="n">empty?</span>
-    <span class="n">generate_available_uuid_list</span>
-  <span class="k">end</span>
-  <span class="vi">@available_uuids</span><span class="o">.</span><span class="n">shift</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">277</span> <span class="k">def</span> <span class="nf">generate_uuid</span>
+<span class="lineno">278</span>   <span class="k">while</span> <span class="vi">@available_uuids</span><span class="o">.</span><span class="n">empty?</span>
+<span class="lineno">279</span>     <span class="n">generate_available_uuid_list</span>
+<span class="lineno">280</span>   <span class="k">end</span>
+<span class="lineno">281</span>   <span class="vi">@available_uuids</span><span class="o">.</span><span class="n">shift</span>
+<span class="lineno">282</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L277">lib/xcodeproj/project.rb:277</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_generated_uuids"><h2>generated_uuids<a class="select-tab" href=""><span class="label label-big">attribute reader</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">generated_uuids</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
 </pre></div><h4>Returns</h4><p><code>Array<String></code> The list of all the generated UUIDs.
 
@@ -204,99 +204,99 @@ but used for objects which are not yet part of the <code>objects</code> hash but
 which might be added at a later time.</p>
 </p><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L290">lib/xcodeproj/project.rb:290</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_generate_available_uuid_list"><h2>generate_available_uuid_list</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">generate_available_uuid_list</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
 </pre></div><h4>Parameters</h4><p><code>Integer</code><span> </span><b> count</b></p><p>The number of UUIDs that should be generated.</p>
-<h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">generate_available_uuid_list</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-  <span class="n">new_uuids</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.count</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="no">Xcodeproj</span><span class="o">.</span><span class="n">generate_uuid</span> <span class="p">}</span>
-  <span class="n">uniques</span> <span class="o">=</span> <span class="p">(</span><span class="n">new_uuids</span> <span class="o">-</span> <span class="p">(</span><span class="vi">@generated_uuids</span> <span class="o">+</span> <span class="n">uuids</span><span class="p">))</span>
-  <span class="vi">@generated_uuids</span> <span class="o">+=</span> <span class="n">uniques</span>
-  <span class="vi">@available_uuids</span> <span class="o">+=</span> <span class="n">uniques</span>
-<span class="k">end</span>
+<h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">305</span> <span class="k">def</span> <span class="nf">generate_available_uuid_list</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+<span class="lineno">306</span>   <span class="n">new_uuids</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.count</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="no">Xcodeproj</span><span class="o">.</span><span class="n">generate_uuid</span> <span class="p">}</span>
+<span class="lineno">307</span>   <span class="n">uniques</span> <span class="o">=</span> <span class="p">(</span><span class="n">new_uuids</span> <span class="o">-</span> <span class="p">(</span><span class="vi">@generated_uuids</span> <span class="o">+</span> <span class="n">uuids</span><span class="p">))</span>
+<span class="lineno">308</span>   <span class="vi">@generated_uuids</span> <span class="o">+=</span> <span class="n">uniques</span>
+<span class="lineno">309</span>   <span class="vi">@available_uuids</span> <span class="o">+=</span> <span class="n">uniques</span>
+<span class="lineno">310</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L305">lib/xcodeproj/project.rb:305</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_objects"><h2>objects</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">objects</span> <span class="c1">#=&gt; Array&lt;AbstractObject&gt; </span>
 </pre></div><h4>Returns</h4><p><code>Array<AbstractObject></code> All the objects of the project.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">objects</span>
-  <span class="n">objects_by_uuid</span><span class="o">.</span><span class="n">values</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">318</span> <span class="k">def</span> <span class="nf">objects</span>
+<span class="lineno">319</span>   <span class="n">objects_by_uuid</span><span class="o">.</span><span class="n">values</span>
+<span class="lineno">320</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L318">lib/xcodeproj/project.rb:318</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_uuids"><h2>uuids</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">uuids</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
 </pre></div><h4>Returns</h4><p><code>Array<String></code> All the UUIDs of the project.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">uuids</span>
-  <span class="n">objects_by_uuid</span><span class="o">.</span><span class="n">keys</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">324</span> <span class="k">def</span> <span class="nf">uuids</span>
+<span class="lineno">325</span>   <span class="n">objects_by_uuid</span><span class="o">.</span><span class="n">keys</span>
+<span class="lineno">326</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L324">lib/xcodeproj/project.rb:324</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_list_by_class"><h2>list_by_class</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">list_by_class</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;AbstractObject&gt; </span>
 </pre></div><h4>Returns</h4><p><code>Array<AbstractObject></code> <p>All the objects of the project with a
 given isa.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">list_by_class</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
-  <span class="n">objects</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">o</span><span class="o">|</span> <span class="n">o</span><span class="o">.</span><span class="n">class</span> <span class="o">==</span> <span class="n">klass</span> <span class="p">}</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">331</span> <span class="k">def</span> <span class="nf">list_by_class</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
+<span class="lineno">332</span>   <span class="n">objects</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">o</span><span class="o">|</span> <span class="n">o</span><span class="o">.</span><span class="n">class</span> <span class="o">==</span> <span class="n">klass</span> <span class="p">}</span>
+<span class="lineno">333</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L331">lib/xcodeproj/project.rb:331</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_main_group"><h2>main_group</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">main_group</span> <span class="c1">#=&gt; PBXGroup </span>
 </pre></div><h4>Returns</h4><p><code>PBXGroup</code> The main top-level group.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">main_group</span>
-  <span class="n">root_object</span><span class="o">.</span><span class="n">main_group</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">337</span> <span class="k">def</span> <span class="nf">main_group</span>
+<span class="lineno">338</span>   <span class="n">root_object</span><span class="o">.</span><span class="n">main_group</span>
+<span class="lineno">339</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L337">lib/xcodeproj/project.rb:337</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_groups"><h2>groups</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">groups</span> <span class="c1">#=&gt; ObjectList&lt;PBXGroup&gt; </span>
 </pre></div><h4>Returns</h4><p><code>ObjectList<PBXGroup></code> <p>A list of all the groups in the
 project.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">groups</span>
-  <span class="n">main_group</span><span class="o">.</span><span class="n">groups</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">344</span> <span class="k">def</span> <span class="nf">groups</span>
+<span class="lineno">345</span>   <span class="n">main_group</span><span class="o">.</span><span class="n">groups</span>
+<span class="lineno">346</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L344">lib/xcodeproj/project.rb:344</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_braces"><h2>[]</h2><h3>Signature</h3><div class="highlight"><pre><span class="o">[]</span><span class="p">(</span><span class="n">group_path</span><span class="p">)</span> <span class="c1">#=&gt; PBXGroup </span>
 </pre></div><h4>Parameters</h4><p><code>String</code><span> </span><b> group_path</b></p><p>@see PBXGroup#[]</p>
 <h4>Returns</h4><p><code>PBXGroup</code> The group at the given subpath.
 </p><hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">frameworks</span> <span class="o">=</span> <span class="n">project</span><span class="o">[</span><span class="s1">&#39;Frameworks&#39;</span><span class="o">]</span>
 <span class="n">frameworks</span><span class="o">.</span><span class="n">name</span> <span class="c1">#=&gt; &#39;Frameworks&#39;</span>
 <span class="n">main_group</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">include?</span> <span class="n">frameworks</span> <span class="c1">#=&gt; True</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">[]</span><span class="p">(</span><span class="n">group_path</span><span class="p">)</span>
-  <span class="n">main_group</span><span class="o">[</span><span class="n">group_path</span><span class="o">]</span>
-<span class="k">end</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">359</span> <span class="k">def</span> <span class="nf">[]</span><span class="p">(</span><span class="n">group_path</span><span class="p">)</span>
+<span class="lineno">360</span>   <span class="n">main_group</span><span class="o">[</span><span class="n">group_path</span><span class="o">]</span>
+<span class="lineno">361</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L359">lib/xcodeproj/project.rb:359</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_files"><h2>files</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">files</span> <span class="c1">#=&gt; ObjectList&lt;PBXFileReference&gt; </span>
 </pre></div><h4>Returns</h4><p><code>ObjectList<PBXFileReference></code> <p>A list of all the files in the
 project.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">files</span>
-  <span class="n">objects</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">obj</span><span class="o">.</span><span class="n">class</span> <span class="o">==</span> <span class="no">PBXFileReference</span> <span class="p">}</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">366</span> <span class="k">def</span> <span class="nf">files</span>
+<span class="lineno">367</span>   <span class="n">objects</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="o">|</span> <span class="n">obj</span><span class="o">.</span><span class="n">class</span> <span class="o">==</span> <span class="no">PBXFileReference</span> <span class="p">}</span>
+<span class="lineno">368</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L366">lib/xcodeproj/project.rb:366</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_targets"><h2>targets</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">targets</span> <span class="c1">#=&gt; ObjectList&lt;PBXNativeTarget&gt; </span>
 </pre></div><h4>Returns</h4><p><code>ObjectList<PBXNativeTarget></code> <p>A list of all the targets in the
 project.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">targets</span>
-  <span class="n">root_object</span><span class="o">.</span><span class="n">targets</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">373</span> <span class="k">def</span> <span class="nf">targets</span>
+<span class="lineno">374</span>   <span class="n">root_object</span><span class="o">.</span><span class="n">targets</span>
+<span class="lineno">375</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L373">lib/xcodeproj/project.rb:373</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_products_group"><h2>products_group</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">products_group</span> <span class="c1">#=&gt; PBXGroup </span>
 </pre></div><h4>Returns</h4><p><code>PBXGroup</code> The group which holds the product file references.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">products_group</span>
-  <span class="n">root_object</span><span class="o">.</span><span class="n">product_ref_group</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">379</span> <span class="k">def</span> <span class="nf">products_group</span>
+<span class="lineno">380</span>   <span class="n">root_object</span><span class="o">.</span><span class="n">product_ref_group</span>
+<span class="lineno">381</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L379">lib/xcodeproj/project.rb:379</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_products"><h2>products</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">products</span> <span class="c1">#=&gt; ObjectList&lt;PBXFileReference&gt; </span>
 </pre></div><h4>Returns</h4><p><code>ObjectList<PBXFileReference></code> <p>A list of the product file
 references.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">products</span>
-  <span class="n">products_group</span><span class="o">.</span><span class="n">children</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">386</span> <span class="k">def</span> <span class="nf">products</span>
+<span class="lineno">387</span>   <span class="n">products_group</span><span class="o">.</span><span class="n">children</span>
+<span class="lineno">388</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L386">lib/xcodeproj/project.rb:386</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_frameworks_group"><h2>frameworks_group</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">frameworks_group</span> <span class="c1">#=&gt; PBXGroup </span>
 </pre></div><h4>Returns</h4><p><code>PBXGroup</code> The <code>Frameworks</code> group creating it if necessary.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">frameworks_group</span>
-  <span class="n">main_group</span><span class="o">[</span><span class="s1">&#39;Frameworks&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="n">new_group</span><span class="p">(</span><span class="s1">&#39;Frameworks&#39;</span><span class="p">)</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">392</span> <span class="k">def</span> <span class="nf">frameworks_group</span>
+<span class="lineno">393</span>   <span class="n">main_group</span><span class="o">[</span><span class="s1">&#39;Frameworks&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="n">new_group</span><span class="p">(</span><span class="s1">&#39;Frameworks&#39;</span><span class="p">)</span>
+<span class="lineno">394</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L392">lib/xcodeproj/project.rb:392</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_build_configurations"><h2>build_configurations</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">build_configurations</span> <span class="c1">#=&gt; ObjectList&lt;XCBuildConfiguration&gt; </span>
 </pre></div><h4>Returns</h4><p><code>ObjectList<XCBuildConfiguration></code> <p>A list of project wide
 build configurations.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">build_configurations</span>
-  <span class="n">root_object</span><span class="o">.</span><span class="n">build_configuration_list</span><span class="o">.</span><span class="n">build_configurations</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">399</span> <span class="k">def</span> <span class="nf">build_configurations</span>
+<span class="lineno">400</span>   <span class="n">root_object</span><span class="o">.</span><span class="n">build_configuration_list</span><span class="o">.</span><span class="n">build_configurations</span>
+<span class="lineno">401</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L399">lib/xcodeproj/project.rb:399</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_build_settings"><h2>build_settings</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">build_settings</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; Hash </span>
 </pre></div><h4>Parameters</h4><p><code>String</code><span> </span><b> name</b></p><p>The name of a project wide build configuration.</p>
 <h4>Returns</h4><p><code><a href="../../hash/index.html">Hash</a></code> <p>The build settings of the project wide build
 configuration with the given name.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">build_settings</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="n">root_object</span><span class="o">.</span><span class="n">build_configuration_list</span><span class="o">.</span><span class="n">build_settings</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">408</span> <span class="k">def</span> <span class="nf">build_settings</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="lineno">409</span>   <span class="n">root_object</span><span class="o">.</span><span class="n">build_configuration_list</span><span class="o">.</span><span class="n">build_settings</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="lineno">410</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L408">lib/xcodeproj/project.rb:408</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_new_file"><h2>new_file</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> <span class="c1">#=&gt; PBXFileReference </span>
 </pre></div><h4>Returns</h4><p><code>PBXFileReference</code> The new file.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
-  <span class="n">main_group</span><span class="o">.</span><span class="n">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sub_group_path</span><span class="p">)</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">422</span> <span class="k">def</span> <span class="nf">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sub_group_path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+<span class="lineno">423</span>   <span class="n">main_group</span><span class="o">.</span><span class="n">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sub_group_path</span><span class="p">)</span>
+<span class="lineno">424</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L422">lib/xcodeproj/project.rb:422</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_new_group"><h2>new_group</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">new_group</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span> <span class="c1">#=&gt; PBXGroup </span>
 </pre></div><h4>Returns</h4><p><code>PBXGroup</code> The new group.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">new_group</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
-  <span class="n">main_group</span><span class="o">.</span><span class="n">new_group</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">432</span> <span class="k">def</span> <span class="nf">new_group</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+<span class="lineno">433</span>   <span class="n">main_group</span><span class="o">.</span><span class="n">new_group</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+<span class="lineno">434</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L432">lib/xcodeproj/project.rb:432</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_add_system_framework"><h2>add_system_framework</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">add_system_framework</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; PBXFileReference </span>
 </pre></div><h4>Parameters</h4><p><code>String</code><span> </span><b> name</b></p><p>The name of a framework in the SDK System
 directory.</p>
@@ -306,17 +306,17 @@ directory.</p>
 <span class="n">target</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">first</span>
 <span class="n">build_phase</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">frameworks_build_phases</span><span class="o">.</span><span class="n">first</span>
 <span class="n">build_phase</span><span class="o">.</span><span class="n">files</span> <span class="o">&lt;&lt;</span> <span class="n">framework</span><span class="o">.</span><span class="n">buildFiles</span><span class="o">.</span><span class="n">new</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">add_system_framework</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;System/Library/Frameworks/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.framework&quot;</span>
-  <span class="k">if</span> <span class="n">file</span> <span class="o">=</span> <span class="n">frameworks_group</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">first</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="n">path</span> <span class="p">}</span>
-    <span class="n">file</span>
-  <span class="k">else</span>
-    <span class="n">framework_ref</span> <span class="o">=</span> <span class="n">frameworks_group</span><span class="o">.</span><span class="n">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-    <span class="n">framework_ref</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.framework&quot;</span>
-    <span class="n">framework_ref</span><span class="o">.</span><span class="n">source_tree</span> <span class="o">=</span> <span class="s1">&#39;SDKROOT&#39;</span>
-    <span class="n">framework_ref</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">453</span> <span class="k">def</span> <span class="nf">add_system_framework</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="lineno">454</span>   <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;System/Library/Frameworks/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.framework&quot;</span>
+<span class="lineno">455</span>   <span class="k">if</span> <span class="n">file</span> <span class="o">=</span> <span class="n">frameworks_group</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">first</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="n">path</span> <span class="p">}</span>
+<span class="lineno">456</span>     <span class="n">file</span>
+<span class="lineno">457</span>   <span class="k">else</span>
+<span class="lineno">458</span>     <span class="n">framework_ref</span> <span class="o">=</span> <span class="n">frameworks_group</span><span class="o">.</span><span class="n">new_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="lineno">459</span>     <span class="n">framework_ref</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.framework&quot;</span>
+<span class="lineno">460</span>     <span class="n">framework_ref</span><span class="o">.</span><span class="n">source_tree</span> <span class="o">=</span> <span class="s1">&#39;SDKROOT&#39;</span>
+<span class="lineno">461</span>     <span class="n">framework_ref</span>
+<span class="lineno">462</span>   <span class="k">end</span>
+<span class="lineno">463</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L453">lib/xcodeproj/project.rb:453</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_new_target"><h2>new_target</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">new_target</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; PBXNativeTarget </span>
 </pre></div><h4>Parameters</h4><p><code>Symbol</code><span> </span><b> type</b></p><p>The type of target.
 Can be <code>:application</code>, <code>:dynamic_library</code> or <code>:static_library</code>.</p>
@@ -331,59 +331,59 @@ reference it is added to the {products_group}.</p>
 
 <p>The target is pre-populated with common build phases, and all the
 Frameworks of the project are added to to its Frameworks phase.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">new_target</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
-  <span class="n">add_system_framework</span><span class="p">(</span><span class="n">platform</span> <span class="o">==</span> <span class="ss">:ios</span> <span class="p">?</span> <span class="s1">&#39;Foundation&#39;</span> <span class="p">:</span> <span class="s1">&#39;Cocoa&#39;</span><span class="p">)</span>
-
-  <span class="c1"># Target</span>
-  <span class="n">target</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXNativeTarget</span><span class="p">)</span>
-  <span class="n">targets</span> <span class="o">&lt;&lt;</span> <span class="n">target</span>
-  <span class="n">target</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">name</span>
-  <span class="n">target</span><span class="o">.</span><span class="n">product_name</span> <span class="o">=</span> <span class="nb">name</span>
-  <span class="n">target</span><span class="o">.</span><span class="n">product_type</span> <span class="o">=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">PRODUCT_TYPE_UTI</span><span class="o">[</span><span class="n">type</span><span class="o">]</span>
-  <span class="n">target</span><span class="o">.</span><span class="n">build_configuration_list</span> <span class="o">=</span> <span class="n">configuration_list</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
-
-  <span class="c1"># Product</span>
-  <span class="n">product</span> <span class="o">=</span> <span class="n">products_group</span><span class="o">.</span><span class="n">new_static_library</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="n">target</span><span class="o">.</span><span class="n">product_reference</span> <span class="o">=</span> <span class="n">product</span>
-
-  <span class="c1"># Build phases</span>
-  <span class="n">target</span><span class="o">.</span><span class="n">build_phases</span> <span class="o">&lt;&lt;</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXSourcesBuildPhase</span><span class="p">)</span>
-  <span class="n">frameworks_phase</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXFrameworksBuildPhase</span><span class="p">)</span>
-  <span class="n">frameworks_group</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">framework</span><span class="o">|</span> <span class="n">frameworks_phase</span><span class="o">.</span><span class="n">add_file_reference</span><span class="p">(</span><span class="n">framework</span><span class="p">)</span> <span class="p">}</span>
-  <span class="n">target</span><span class="o">.</span><span class="n">build_phases</span> <span class="o">&lt;&lt;</span> <span class="n">frameworks_phase</span>
-
-  <span class="n">target</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">488</span> <span class="k">def</span> <span class="nf">new_target</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+<span class="lineno">489</span>   <span class="n">add_system_framework</span><span class="p">(</span><span class="n">platform</span> <span class="o">==</span> <span class="ss">:ios</span> <span class="p">?</span> <span class="s1">&#39;Foundation&#39;</span> <span class="p">:</span> <span class="s1">&#39;Cocoa&#39;</span><span class="p">)</span>
+<span class="lineno">490</span> 
+<span class="lineno">491</span>   <span class="c1"># Target</span>
+<span class="lineno">492</span>   <span class="n">target</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXNativeTarget</span><span class="p">)</span>
+<span class="lineno">493</span>   <span class="n">targets</span> <span class="o">&lt;&lt;</span> <span class="n">target</span>
+<span class="lineno">494</span>   <span class="n">target</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">name</span>
+<span class="lineno">495</span>   <span class="n">target</span><span class="o">.</span><span class="n">product_name</span> <span class="o">=</span> <span class="nb">name</span>
+<span class="lineno">496</span>   <span class="n">target</span><span class="o">.</span><span class="n">product_type</span> <span class="o">=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">PRODUCT_TYPE_UTI</span><span class="o">[</span><span class="n">type</span><span class="o">]</span>
+<span class="lineno">497</span>   <span class="n">target</span><span class="o">.</span><span class="n">build_configuration_list</span> <span class="o">=</span> <span class="n">configuration_list</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
+<span class="lineno">498</span> 
+<span class="lineno">499</span>   <span class="c1"># Product</span>
+<span class="lineno">500</span>   <span class="n">product</span> <span class="o">=</span> <span class="n">products_group</span><span class="o">.</span><span class="n">new_static_library</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="lineno">501</span>   <span class="n">target</span><span class="o">.</span><span class="n">product_reference</span> <span class="o">=</span> <span class="n">product</span>
+<span class="lineno">502</span> 
+<span class="lineno">503</span>   <span class="c1"># Build phases</span>
+<span class="lineno">504</span>   <span class="n">target</span><span class="o">.</span><span class="n">build_phases</span> <span class="o">&lt;&lt;</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXSourcesBuildPhase</span><span class="p">)</span>
+<span class="lineno">505</span>   <span class="n">frameworks_phase</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">PBXFrameworksBuildPhase</span><span class="p">)</span>
+<span class="lineno">506</span>   <span class="n">frameworks_group</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">framework</span><span class="o">|</span> <span class="n">frameworks_phase</span><span class="o">.</span><span class="n">add_file_reference</span><span class="p">(</span><span class="n">framework</span><span class="p">)</span> <span class="p">}</span>
+<span class="lineno">507</span>   <span class="n">target</span><span class="o">.</span><span class="n">build_phases</span> <span class="o">&lt;&lt;</span> <span class="n">frameworks_phase</span>
+<span class="lineno">508</span> 
+<span class="lineno">509</span>   <span class="n">target</span>
+<span class="lineno">510</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L488">lib/xcodeproj/project.rb:488</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_configuration_list"><h2>configuration_list</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">configuration_list</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span> <span class="c1">#=&gt; XCConfigurationList </span>
 </pre></div><h4>Parameters</h4><p><code>Symbol</code><span> </span><b> platform</b></p><p>The platform for the configuration list, can be <code>:ios</code> or <code>:osx</code>.</p>
 <h4>Returns</h4><p><code>XCConfigurationList</code> The generated configuration list.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">configuration_list</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
-  <span class="n">cl</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCConfigurationList</span><span class="p">)</span>
-  <span class="n">cl</span><span class="o">.</span><span class="n">default_configuration_is_visible</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-  <span class="n">cl</span><span class="o">.</span><span class="n">default_configuration_name</span> <span class="o">=</span> <span class="s1">&#39;Release&#39;</span>
-
-  <span class="n">release_conf</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCBuildConfiguration</span><span class="p">)</span>
-  <span class="n">release_conf</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Release&#39;</span>
-  <span class="n">release_conf</span><span class="o">.</span><span class="n">build_settings</span> <span class="o">=</span> <span class="n">configuration_list_settings</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="ss">:release</span><span class="p">)</span>
-
-  <span class="n">debug_conf</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCBuildConfiguration</span><span class="p">)</span>
-  <span class="n">debug_conf</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Debug&#39;</span>
-  <span class="n">debug_conf</span><span class="o">.</span><span class="n">build_settings</span> <span class="o">=</span> <span class="n">configuration_list_settings</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="ss">:debug</span><span class="p">)</span>
-
-  <span class="n">cl</span><span class="o">.</span><span class="n">build_configurations</span> <span class="o">&lt;&lt;</span> <span class="n">release_conf</span>
-  <span class="n">cl</span><span class="o">.</span><span class="n">build_configurations</span> <span class="o">&lt;&lt;</span> <span class="n">debug_conf</span>
-  <span class="n">cl</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">520</span> <span class="k">def</span> <span class="nf">configuration_list</span><span class="p">(</span><span class="n">platform</span><span class="p">)</span>
+<span class="lineno">521</span>   <span class="n">cl</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCConfigurationList</span><span class="p">)</span>
+<span class="lineno">522</span>   <span class="n">cl</span><span class="o">.</span><span class="n">default_configuration_is_visible</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+<span class="lineno">523</span>   <span class="n">cl</span><span class="o">.</span><span class="n">default_configuration_name</span> <span class="o">=</span> <span class="s1">&#39;Release&#39;</span>
+<span class="lineno">524</span> 
+<span class="lineno">525</span>   <span class="n">release_conf</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCBuildConfiguration</span><span class="p">)</span>
+<span class="lineno">526</span>   <span class="n">release_conf</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Release&#39;</span>
+<span class="lineno">527</span>   <span class="n">release_conf</span><span class="o">.</span><span class="n">build_settings</span> <span class="o">=</span> <span class="n">configuration_list_settings</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="ss">:release</span><span class="p">)</span>
+<span class="lineno">528</span> 
+<span class="lineno">529</span>   <span class="n">debug_conf</span> <span class="o">=</span> <span class="kp">new</span><span class="p">(</span><span class="no">XCBuildConfiguration</span><span class="p">)</span>
+<span class="lineno">530</span>   <span class="n">debug_conf</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Debug&#39;</span>
+<span class="lineno">531</span>   <span class="n">debug_conf</span><span class="o">.</span><span class="n">build_settings</span> <span class="o">=</span> <span class="n">configuration_list_settings</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="ss">:debug</span><span class="p">)</span>
+<span class="lineno">532</span> 
+<span class="lineno">533</span>   <span class="n">cl</span><span class="o">.</span><span class="n">build_configurations</span> <span class="o">&lt;&lt;</span> <span class="n">release_conf</span>
+<span class="lineno">534</span>   <span class="n">cl</span><span class="o">.</span><span class="n">build_configurations</span> <span class="o">&lt;&lt;</span> <span class="n">debug_conf</span>
+<span class="lineno">535</span>   <span class="n">cl</span>
+<span class="lineno">536</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L520">lib/xcodeproj/project.rb:520</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div><div class="tab-pane" id="tab_configuration_list_settings"><h2>configuration_list_settings</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">configuration_list_settings</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; Hash </span>
 </pre></div><h4>Parameters</h4><p><code>Symbol</code><span> </span><b> platform</b></p><p>The platform for the build settings, can be <code>:ios</code> or <code>:osx</code>.</p>
 <p><code>Symbol</code><span> </span><b> name</b></p><p>The name of the build configuration, can be <code>:release</code> or <code>:debug</code>.</p>
 <h4>Returns</h4><p><code><a href="../../hash/index.html">Hash</a></code> The common build settings
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">configuration_list_settings</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="nb">name</span><span class="p">)</span>
-  <span class="n">common_settings</span> <span class="o">=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">COMMON_BUILD_SETTINGS</span>
-  <span class="n">bs</span> <span class="o">=</span> <span class="n">common_settings</span><span class="o">[</span><span class="ss">:all</span><span class="o">].</span><span class="n">dup</span>
-  <span class="n">bs</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">common_settings</span><span class="o">[</span><span class="nb">name</span><span class="o">]</span><span class="p">)</span>
-  <span class="n">bs</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">common_settings</span><span class="o">[</span><span class="n">platform</span><span class="o">]</span><span class="p">)</span>
-  <span class="n">bs</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">common_settings</span><span class="o">[[</span><span class="n">platform</span><span class="p">,</span> <span class="nb">name</span><span class="o">]]</span><span class="p">)</span>
-  <span class="n">bs</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">549</span> <span class="k">def</span> <span class="nf">configuration_list_settings</span><span class="p">(</span><span class="n">platform</span><span class="p">,</span> <span class="nb">name</span><span class="p">)</span>
+<span class="lineno">550</span>   <span class="n">common_settings</span> <span class="o">=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">COMMON_BUILD_SETTINGS</span>
+<span class="lineno">551</span>   <span class="n">bs</span> <span class="o">=</span> <span class="n">common_settings</span><span class="o">[</span><span class="ss">:all</span><span class="o">].</span><span class="n">dup</span>
+<span class="lineno">552</span>   <span class="n">bs</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">common_settings</span><span class="o">[</span><span class="nb">name</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">553</span>   <span class="n">bs</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">common_settings</span><span class="o">[</span><span class="n">platform</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">554</span>   <span class="n">bs</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">common_settings</span><span class="o">[[</span><span class="n">platform</span><span class="p">,</span> <span class="nb">name</span><span class="o">]]</span><span class="p">)</span>
+<span class="lineno">555</span>   <span class="n">bs</span>
+<span class="lineno">556</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/lib/xcodeproj/project.rb#L549">lib/xcodeproj/project.rb:549</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Xcodeproj/blob/master/spec/project_spec.rb">spec/project_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>Statistics</title><link href="../../../../../favicon.ico" rel="icon" type="image/ico" /><link href="../../../../../css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../../../../../css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="../../../../../css/style-fc0fe55f.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../../../../../css/style2-7985d719.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../../../../../js/bootstrap-308e23ce.js" type="text/javascript"></script>
 <script src="../../../../../js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
 <script src="../../../../../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../../../../../index.html">Docs</a><span class="divider">/</span></li><li><a href="../../../../index.html">CocoaPods-Core</a><span class="divider">/</span></li><li><a href="../../../index.html">Pod</a><span class="divider">/</span></li><li><a href="../../index.html">Specification</a><span class="divider">/</span></li><li><a href="../index.html">Set</a><span class="divider">/</span></li><li class="active">Statistics</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><div id="tab-controller"><div id="methods-container"><div id="header"><h1><a class="select-tab" href="#tab_root_statistics">Statistics</a></h1></div></div><div class ='methods_list'><div class ='row'><div class ='span3'><p><a class='select-tab' href=#tab_class_instance>instance</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_cache_file>cache_file</a><span class='label label-small'>a</span></p><p><a class='select-tab' href=#tab_cache_expiration>cache_expiration</a><span class='label label-small'>a</span></p><p><a class='select-tab' href=#tab_initialize>initialize</a></p></div><div class ='span3'><h2 class='first'><a class='select-tab' href=#tab_group_accessing_the_statistics>Accessing the statistics</a></h2><p><a class='select-tab' href=#tab_creation_date>creation_date</a></p><p><a class='select-tab' href=#tab_creation_dates>creation_dates</a></p><p><a class='select-tab' href=#tab_github_watchers>github_watchers</a></p><p><a class='select-tab' href=#tab_github_forks>github_forks</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_github_pushed_at>github_pushed_at</a></p><p><a class='select-tab' href=#tab_cache>cache</a></p><p><a class='select-tab' href=#tab_get_value>get_value</a></p><p><a class='select-tab' href=#tab_set_value>set_value</a></p><p><a class='select-tab' href=#tab_save_cache>save_cache</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_compute_creation_date>compute_creation_date</a></p><p><a class='select-tab' href=#tab_github_stats_if_needed>github_stats_if_needed</a></p></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_root_statistics"><h2>Statistics</h2><p>The statistics class provides information about one or more <code>Set</code> that
@@ -19,9 +19,9 @@ cache file a shared instance is also available.</p>
 </p><h3>Signature</h3><div class="highlight"><pre><span class="n">instance</span><span class="o">=</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span> <span class="c1">#=&gt; Statistics </span>
 </pre></div><h4>Parameters</h4><p><code>Statistics</code><span> </span><b> instance</b></p><p>The new shared instance or nil.</p>
 <h4>Returns</h4><p><code><a href="index.html">Statistics</a></code> The shared statistics instance.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">instance</span>
-  <span class="vi">@instance</span> <span class="o">||=</span> <span class="kp">new</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">21</span> <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">instance</span>
+<span class="lineno">22</span>   <span class="vi">@instance</span> <span class="o">||=</span> <span class="kp">new</span>
+<span class="lineno">23</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L21">lib/cocoapods-core/specification/set/statistics.rb:21</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_cache_file"><h2>cache_file<a class="select-tab" href=""><span class="label label-big">readwrite attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">cache_file</span> <span class="c1">#=&gt; Pathname </span>
 </pre></div><h4>Returns</h4><p><code><a href="../../../../../cocoapods/pathname/index.html">Pathname</a></code> The path to the optional cache file.
 </p><h3>Signature</h3><div class="highlight"><pre><span class="n">cache_file</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Pathname </span>
@@ -36,140 +36,140 @@ values that might changed are discarded.</p>
 </pre></div><h4>Parameters</h4><p><code>Pathname</code><span> </span><b> cache_file</b></p><p>@see cache_file</p>
 <p><code>Integer</code><span> </span><b> cache_expiration</b></p><p>@see cache_expiration</p>
 <h4>Returns</h4><p><code><a href="index.html">Statistics</a></code> A new instance of Statistics
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">cache_file</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">cache_expiration</span> <span class="o">=</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3</span><span class="p">))</span>
-  <span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
-  <span class="c1"># This is to make sure Faraday doesn&#39;t warn the user about the</span>
-  <span class="c1"># `system_timer` gem missing.</span>
-  <span class="n">old_warn</span><span class="p">,</span> <span class="vg">$-w</span> <span class="o">=</span> <span class="vg">$-w</span><span class="p">,</span> <span class="kp">nil</span>
-  <span class="k">begin</span>
-    <span class="nb">require</span> <span class="s1">&#39;faraday&#39;</span>
-  <span class="k">ensure</span>
-    <span class="vg">$-w</span> <span class="o">=</span> <span class="n">old_warn</span>
-  <span class="k">end</span>
-  <span class="nb">require</span> <span class="s1">&#39;octokit&#39;</span>
-
-  <span class="vi">@cache_file</span>       <span class="o">=</span> <span class="n">cache_file</span>
-  <span class="vi">@cache_expiration</span> <span class="o">=</span> <span class="n">cache_expiration</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">55</span> <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">cache_file</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">cache_expiration</span> <span class="o">=</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3</span><span class="p">))</span>
+<span class="lineno">56</span>   <span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+<span class="lineno">57</span>   <span class="c1"># This is to make sure Faraday doesn&#39;t warn the user about the</span>
+<span class="lineno">58</span>   <span class="c1"># `system_timer` gem missing.</span>
+<span class="lineno">59</span>   <span class="n">old_warn</span><span class="p">,</span> <span class="vg">$-w</span> <span class="o">=</span> <span class="vg">$-w</span><span class="p">,</span> <span class="kp">nil</span>
+<span class="lineno">60</span>   <span class="k">begin</span>
+<span class="lineno">61</span>     <span class="nb">require</span> <span class="s1">&#39;faraday&#39;</span>
+<span class="lineno">62</span>   <span class="k">ensure</span>
+<span class="lineno">63</span>     <span class="vg">$-w</span> <span class="o">=</span> <span class="n">old_warn</span>
+<span class="lineno">64</span>   <span class="k">end</span>
+<span class="lineno">65</span>   <span class="nb">require</span> <span class="s1">&#39;octokit&#39;</span>
+<span class="lineno">66</span> 
+<span class="lineno">67</span>   <span class="vi">@cache_file</span>       <span class="o">=</span> <span class="n">cache_file</span>
+<span class="lineno">68</span>   <span class="vi">@cache_expiration</span> <span class="o">=</span> <span class="n">cache_expiration</span>
+<span class="lineno">69</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L55">lib/cocoapods-core/specification/set/statistics.rb:55</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_creation_date"><h2>creation_date</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Time </span>
 </pre></div><h4>Parameters</h4><p><code>Set</code><span> </span><b> set</b></p><p>The set for the Pod whose creation date is needed.</p>
 <h4>Returns</h4><p><code>Time</code> <p>The date in which a Pod appeared for the first time on
 the {Source}.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">date</span> <span class="o">=</span> <span class="n">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">save_cache</span>
-  <span class="n">date</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">91</span> <span class="k">def</span> <span class="nf">creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">92</span>   <span class="n">date</span> <span class="o">=</span> <span class="n">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">93</span>   <span class="n">save_cache</span>
+<span class="lineno">94</span>   <span class="n">date</span>
+<span class="lineno">95</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L91">lib/cocoapods-core/specification/set/statistics.rb:91</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_creation_dates"><h2>creation_dates</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">creation_dates</span><span class="p">(</span><span class="n">sets</span><span class="p">)</span> <span class="c1">#=&gt; Array&lt;Time&gt; </span>
 </pre></div><h4>Parameters</h4><p><code>Array&lt;Set&gt;</code><span> </span><b> sets</b></p><p>The list of the sets for the Pods whose creation date is
 needed.</p>
 <h4>Returns</h4><p><code>Array<Time></code> <p>The list of the dates in which the Pods
 appeared for the first time on the {Source}.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">creation_dates</span><span class="p">(</span><span class="n">sets</span><span class="p">)</span>
-  <span class="n">dates</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="n">sets</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">set</span><span class="o">|</span> <span class="n">dates</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">=</span> <span class="n">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="p">}</span>
-  <span class="n">save_cache</span>
-  <span class="n">dates</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">112</span> <span class="k">def</span> <span class="nf">creation_dates</span><span class="p">(</span><span class="n">sets</span><span class="p">)</span>
+<span class="lineno">113</span>   <span class="n">dates</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">114</span>   <span class="n">sets</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">set</span><span class="o">|</span> <span class="n">dates</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">=</span> <span class="n">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="p">}</span>
+<span class="lineno">115</span>   <span class="n">save_cache</span>
+<span class="lineno">116</span>   <span class="n">dates</span>
+<span class="lineno">117</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L112">lib/cocoapods-core/specification/set/statistics.rb:112</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_github_watchers"><h2>github_watchers</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">github_watchers</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Integer </span>
 </pre></div><h4>Parameters</h4><p><code>Set</code><span> </span><b> set</b></p><p>The set of the Pod.</p>
 <h4>Returns</h4><p><code>Integer</code> <p>The number of likes or nil if the Pod is not hosted
 on GitHub.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">github_watchers</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_watchers</span><span class="p">)</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">127</span> <span class="k">def</span> <span class="nf">github_watchers</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">128</span>   <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">129</span>   <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_watchers</span><span class="p">)</span>
+<span class="lineno">130</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L127">lib/cocoapods-core/specification/set/statistics.rb:127</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_github_forks"><h2>github_forks</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">github_forks</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Integer </span>
 </pre></div><h4>Parameters</h4><p><code>Set</code><span> </span><b> set</b></p><p>@see github_watchers</p>
 <h4>Returns</h4><p><code>Integer</code> <p>The number of forks or nil if the Pod is not hosted
 on GitHub.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">github_forks</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_forks</span><span class="p">)</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">139</span> <span class="k">def</span> <span class="nf">github_forks</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">140</span>   <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">141</span>   <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_forks</span><span class="p">)</span>
+<span class="lineno">142</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L139">lib/cocoapods-core/specification/set/statistics.rb:139</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_github_pushed_at"><h2>github_pushed_at</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">github_pushed_at</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Time </span>
 </pre></div><h4>Parameters</h4><p><code>Set</code><span> </span><b> set</b></p><p>@see github_watchers</p>
 <h4>Returns</h4><p><code>Time</code> <p>The time of the last push or nil if the Pod is not
 hosted on GitHub.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">github_pushed_at</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">string_time</span> <span class="o">=</span> <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:pushed_at</span><span class="p">)</span>
-  <span class="no">Time</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">string_time</span><span class="p">)</span> <span class="k">if</span> <span class="n">string_time</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">151</span> <span class="k">def</span> <span class="nf">github_pushed_at</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">152</span>   <span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">153</span>   <span class="n">string_time</span> <span class="o">=</span> <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:pushed_at</span><span class="p">)</span>
+<span class="lineno">154</span>   <span class="no">Time</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">string_time</span><span class="p">)</span> <span class="k">if</span> <span class="n">string_time</span>
+<span class="lineno">155</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L151">lib/cocoapods-core/specification/set/statistics.rb:151</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_cache"><h2>cache</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">cache</span> <span class="c1">#=&gt; Hash{String =&gt; Hash} </span>
 </pre></div><h4>Returns</h4><p><code>Hash{String => Hash}</code> <p>The in-memory cache, where for each
 set is stored a hash with the result of the computations.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">cache</span>
-  <span class="k">unless</span> <span class="vi">@cache</span>
-    <span class="k">if</span> <span class="n">cache_file</span> <span class="o">&amp;&amp;</span> <span class="n">cache_file</span><span class="o">.</span><span class="n">exist?</span>
-      <span class="vi">@cache</span> <span class="o">=</span> <span class="no">YAML</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">cache_file</span><span class="o">.</span><span class="n">read</span><span class="p">)</span>
-    <span class="k">else</span>
-      <span class="vi">@cache</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-  <span class="vi">@cache</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">164</span> <span class="k">def</span> <span class="nf">cache</span>
+<span class="lineno">165</span>   <span class="k">unless</span> <span class="vi">@cache</span>
+<span class="lineno">166</span>     <span class="k">if</span> <span class="n">cache_file</span> <span class="o">&amp;&amp;</span> <span class="n">cache_file</span><span class="o">.</span><span class="n">exist?</span>
+<span class="lineno">167</span>       <span class="vi">@cache</span> <span class="o">=</span> <span class="no">YAML</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">cache_file</span><span class="o">.</span><span class="n">read</span><span class="p">)</span>
+<span class="lineno">168</span>     <span class="k">else</span>
+<span class="lineno">169</span>       <span class="vi">@cache</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">170</span>     <span class="k">end</span>
+<span class="lineno">171</span>   <span class="k">end</span>
+<span class="lineno">172</span>   <span class="vi">@cache</span>
+<span class="lineno">173</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L164">lib/cocoapods-core/specification/set/statistics.rb:164</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_get_value"><h2>get_value</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span> <span class="c1">#=&gt; Object </span>
 </pre></div><h4>Parameters</h4><p><code>Set</code><span> </span><b> set</b></p><p>The set for which the value is needed.</p>
 <p><code>Symbol</code><span> </span><b> key</b></p><p>The key of the value.</p>
 <h4>Returns</h4><p><code><a href="../../../../../xcodeproj/object/index.html">Object</a></code> The value or nil.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-  <span class="k">if</span> <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">][</span><span class="n">key</span><span class="o">]</span>
-    <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">][</span><span class="n">key</span><span class="o">]</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">186</span> <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<span class="lineno">187</span>   <span class="k">if</span> <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">][</span><span class="n">key</span><span class="o">]</span>
+<span class="lineno">188</span>     <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">][</span><span class="n">key</span><span class="o">]</span>
+<span class="lineno">189</span>   <span class="k">end</span>
+<span class="lineno">190</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L186">lib/cocoapods-core/specification/set/statistics.rb:186</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_set_value"><h2>set_value</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; Object </span>
 </pre></div><h4>Parameters</h4><p><code>Set</code><span> </span><b> set</b></p><p>The set for which the value has to be stored.</p>
 <p><code>Symbol</code><span> </span><b> key</b></p><p>The key of the value.</p>
 <p><code>Object</code><span> </span><b> value</b></p><p>The value to store.</p>
 <h4>Returns</h4><p><code><a href="../../../../../xcodeproj/object/index.html">Object</a></code> The value or nil.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-  <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">||=</span> <span class="p">{}</span>
-  <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">][</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">205</span> <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="lineno">206</span>   <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">||=</span> <span class="p">{}</span>
+<span class="lineno">207</span>   <span class="n">cache</span><span class="o">[</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="o">][</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span>
+<span class="lineno">208</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L205">lib/cocoapods-core/specification/set/statistics.rb:205</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_save_cache"><h2>save_cache</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">save_cache</span> <span class="c1">#=&gt; void </span>
-</pre></div><h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">save_cache</span>
-  <span class="k">if</span> <span class="n">cache_file</span>
-    <span class="n">yaml</span> <span class="o">=</span> <span class="no">YAML</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">cache</span><span class="p">)</span>
-    <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">cache_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml</span><span class="p">)</span> <span class="p">}</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+</pre></div><h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">214</span> <span class="k">def</span> <span class="nf">save_cache</span>
+<span class="lineno">215</span>   <span class="k">if</span> <span class="n">cache_file</span>
+<span class="lineno">216</span>     <span class="n">yaml</span> <span class="o">=</span> <span class="no">YAML</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">cache</span><span class="p">)</span>
+<span class="lineno">217</span>     <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">cache_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml</span><span class="p">)</span> <span class="p">}</span>
+<span class="lineno">218</span>   <span class="k">end</span>
+<span class="lineno">219</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L214">lib/cocoapods-core/specification/set/statistics.rb:214</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_compute_creation_date"><h2>compute_creation_date</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Time </span>
 </pre></div><h4>Parameters</h4><p><code>Set</code><span> </span><b> set</b></p><p>The set for which the creation date is needed.</p>
 <h4>Returns</h4><p><code>Time</code> The date in which a Pod was created.
-</p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">date</span> <span class="o">=</span> <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:creation_date</span><span class="p">)</span>
-  <span class="k">unless</span> <span class="n">date</span>
-    <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">sources</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">repo</span><span class="p">)</span> <span class="k">do</span>
-      <span class="n">git_log</span>   <span class="o">=</span> <span class="sb">`git log --first-parent --format=%ct </span><span class="si">#{</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="sb">`</span>
-      <span class="n">creation_date</span> <span class="o">=</span> <span class="n">git_log</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">last</span><span class="o">.</span><span class="n">to_i</span>
-      <span class="n">date</span> <span class="o">=</span> <span class="no">Time</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">creation_date</span><span class="p">)</span>
-    <span class="k">end</span>
-    <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:creation_date</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
-  <span class="k">end</span>
-  <span class="n">date</span>
-<span class="k">end</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">229</span> <span class="k">def</span> <span class="nf">compute_creation_date</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">230</span>   <span class="n">date</span> <span class="o">=</span> <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:creation_date</span><span class="p">)</span>
+<span class="lineno">231</span>   <span class="k">unless</span> <span class="n">date</span>
+<span class="lineno">232</span>     <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">sources</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">repo</span><span class="p">)</span> <span class="k">do</span>
+<span class="lineno">233</span>       <span class="n">git_log</span>   <span class="o">=</span> <span class="sb">`git log --first-parent --format=%ct </span><span class="si">#{</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="sb">`</span>
+<span class="lineno">234</span>       <span class="n">creation_date</span> <span class="o">=</span> <span class="n">git_log</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">last</span><span class="o">.</span><span class="n">to_i</span>
+<span class="lineno">235</span>       <span class="n">date</span> <span class="o">=</span> <span class="no">Time</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">creation_date</span><span class="p">)</span>
+<span class="lineno">236</span>     <span class="k">end</span>
+<span class="lineno">237</span>     <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:creation_date</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
+<span class="lineno">238</span>   <span class="k">end</span>
+<span class="lineno">239</span>   <span class="n">date</span>
+<span class="lineno">240</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L229">lib/cocoapods-core/specification/set/statistics.rb:229</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div><div class="tab-pane" id="tab_github_stats_if_needed"><h2>github_stats_if_needed</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; void </span>
 </pre></div><h4>Parameters</h4><p><code>Set</code><span> </span><b> set</b></p><p>The set for which the GitHub information is needed.</p>
-<h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="k">def</span> <span class="nf">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-  <span class="n">update_date</span> <span class="o">=</span> <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_date</span><span class="p">)</span>
-  <span class="k">return</span> <span class="k">if</span> <span class="n">update_date</span> <span class="o">&amp;&amp;</span> <span class="n">update_date</span> <span class="o">&gt;</span> <span class="p">(</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span> <span class="o">-</span> <span class="n">cache_expiration</span><span class="p">)</span>
-
-  <span class="n">spec</span>    <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">specification</span>
-  <span class="n">url</span>     <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">source</span><span class="o">[</span><span class="ss">:git</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span>
-  <span class="n">repo_id</span> <span class="o">=</span> <span class="n">url</span><span class="o">[</span><span class="sr">/github.com\/([^\/\.]*\/[^\/\.]*)\.*/</span><span class="p">,</span> <span class="mi">1</span><span class="o">]</span>
-  <span class="k">return</span> <span class="k">unless</span> <span class="n">repo_id</span>
-
-  <span class="k">begin</span>
-    <span class="n">repo</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">repo</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span>
-  <span class="k">rescue</span>
-    <span class="k">return</span>
-  <span class="k">end</span>
-
-  <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_watchers</span><span class="p">,</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;watchers&#39;</span><span class="o">]</span><span class="p">)</span>
-  <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_forks</span><span class="p">,</span>    <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;forks&#39;</span><span class="o">]</span><span class="p">)</span>
-  <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:pushed_at</span><span class="p">,</span>   <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;pushed_at&#39;</span><span class="o">]</span><span class="p">)</span>
-  <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_date</span><span class="p">,</span>     <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="p">)</span>
-  <span class="n">save_cache</span>
-<span class="k">end</span>
+<h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">253</span> <span class="k">def</span> <span class="nf">github_stats_if_needed</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">254</span>   <span class="n">update_date</span> <span class="o">=</span> <span class="n">get_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_date</span><span class="p">)</span>
+<span class="lineno">255</span>   <span class="k">return</span> <span class="k">if</span> <span class="n">update_date</span> <span class="o">&amp;&amp;</span> <span class="n">update_date</span> <span class="o">&gt;</span> <span class="p">(</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span> <span class="o">-</span> <span class="n">cache_expiration</span><span class="p">)</span>
+<span class="lineno">256</span> 
+<span class="lineno">257</span>   <span class="n">spec</span>    <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">specification</span>
+<span class="lineno">258</span>   <span class="n">url</span>     <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">source</span><span class="o">[</span><span class="ss">:git</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span>
+<span class="lineno">259</span>   <span class="n">repo_id</span> <span class="o">=</span> <span class="n">url</span><span class="o">[</span><span class="sr">/github.com\/([^\/\.]*\/[^\/\.]*)\.*/</span><span class="p">,</span> <span class="mi">1</span><span class="o">]</span>
+<span class="lineno">260</span>   <span class="k">return</span> <span class="k">unless</span> <span class="n">repo_id</span>
+<span class="lineno">261</span> 
+<span class="lineno">262</span>   <span class="k">begin</span>
+<span class="lineno">263</span>     <span class="n">repo</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">repo</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span>
+<span class="lineno">264</span>   <span class="k">rescue</span>
+<span class="lineno">265</span>     <span class="k">return</span>
+<span class="lineno">266</span>   <span class="k">end</span>
+<span class="lineno">267</span> 
+<span class="lineno">268</span>   <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_watchers</span><span class="p">,</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;watchers&#39;</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">269</span>   <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_forks</span><span class="p">,</span>    <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;forks&#39;</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">270</span>   <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:pushed_at</span><span class="p">,</span>   <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;pushed_at&#39;</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">271</span>   <span class="n">set_value</span><span class="p">(</span><span class="n">set</span><span class="p">,</span> <span class="ss">:gh_date</span><span class="p">,</span>     <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="p">)</span>
+<span class="lineno">272</span>   <span class="n">save_cache</span>
+<span class="lineno">273</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/set/statistics.rb#L253">lib/cocoapods-core/specification/set/statistics.rb:253</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/set/statistics_spec.rb">spec/specification/set/statistics_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
