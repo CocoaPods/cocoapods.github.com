@@ -81,11 +81,11 @@ module Pod
         def set_name_spaces_parents(name_spaces, gem)
           name_spaces.each do |name_space|
             segments = name_space.full_name.split('::')
-            if segments.count == 1
+            if segments.count == 1 || segments.first == "Gem"
               name_space.parent = gem
             else
               parent = name_spaces.find { |ns| ns.full_name == segments[0..-2] * '::' }
-              raise 'Unable to find a parent' unless parent
+              raise "Unable to find a parent for #{name_space.full_name}" unless parent
               name_space.parent = parent
             end
           end
