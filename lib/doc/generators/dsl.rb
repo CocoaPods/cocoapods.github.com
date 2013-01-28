@@ -67,7 +67,7 @@ module Pod
           method.examples    = compute_method_examples(yard_method)
 
           if yard_object.to_s == 'Pod::Specification::DSL'
-            attribute = Pod::Specification::DSL.attributes.find { |attr| attr.reader_name.to_s == method.name }
+            attribute = Pod::Specification::DSL.attributes.find { |attr| attr.to_s == method.name }
             if attribute
               method.html_default_values = compute_method_default_values(attribute)
               method.required            = attribute.required?
