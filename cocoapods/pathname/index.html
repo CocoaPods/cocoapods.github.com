@@ -7,7 +7,7 @@
 </pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">33</span> <span class="n">alias_method</span> <span class="ss">:_original_sum</span><span class="p">,</span> <span class="ss">:+</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/file_list.rb#L33">lib/cocoapods/file_list.rb:33</a></p></div><div class="tab-pane" id="tab_plus"><h2>+</h2><h3>Signature</h3><div class="highlight"><pre><span class="o">+</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
 </pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">34</span> <span class="k">def</span> <span class="nf">+</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
-<span class="lineno">35</span>   <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="ss">Rake</span><span class="p">:</span><span class="ss">:FileList</span><span class="p">)</span>
+<span class="lineno">35</span>   <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Rake</span><span class="o">::</span><span class="no">FileList</span><span class="p">)</span>
 <span class="lineno">36</span>     <span class="n">other</span><span class="o">.</span><span class="n">prepend_patterns</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
 <span class="lineno">37</span>     <span class="n">other</span>
 <span class="lineno">38</span>   <span class="k">else</span>

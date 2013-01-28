@@ -43,7 +43,7 @@ to the target.</p>
 <span class="lineno">244</span>     <span class="n">build_file</span><span class="o">.</span><span class="n">file_ref</span> <span class="o">=</span> <span class="n">file</span>
 <span class="lineno">245</span> 
 <span class="lineno">246</span>     <span class="n">extension</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">extname</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
-<span class="lineno">247</span>     <span class="n">header_extensions</span> <span class="o">=</span> <span class="ss">Constants</span><span class="p">:</span><span class="ss">:HEADER_FILES_EXTENSIONS</span>
+<span class="lineno">247</span>     <span class="n">header_extensions</span> <span class="o">=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">HEADER_FILES_EXTENSIONS</span>
 <span class="lineno">248</span>     <span class="k">if</span> <span class="p">(</span><span class="n">header_extensions</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">extension</span><span class="p">))</span>
 <span class="lineno">249</span>       <span class="n">headers_build_phase</span><span class="o">.</span><span class="n">files</span> <span class="o">&lt;&lt;</span> <span class="n">build_file</span>
 <span class="lineno">250</span>     <span class="k">else</span>

@@ -35,7 +35,7 @@ flag for compatibility.</p>
 <span class="lineno">49</span>     <span class="n">ld_flags</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39; -fobjc-arc&#39;</span>
 <span class="lineno">50</span>   <span class="k">end</span>
 <span class="lineno">51</span> 
-<span class="lineno">52</span>   <span class="vi">@xcconfig</span> <span class="o">=</span> <span class="ss">Xcodeproj</span><span class="p">:</span><span class="ss">:Config</span><span class="o">.</span><span class="n">new</span><span class="p">({</span>
+<span class="lineno">52</span>   <span class="vi">@xcconfig</span> <span class="o">=</span> <span class="no">Xcodeproj</span><span class="o">::</span><span class="no">Config</span><span class="o">.</span><span class="n">new</span><span class="p">({</span>
 <span class="lineno">53</span>     <span class="s1">&#39;ALWAYS_SEARCH_USER_PATHS&#39;</span>         <span class="o">=&gt;</span> <span class="s1">&#39;YES&#39;</span><span class="p">,</span>
 <span class="lineno">54</span>     <span class="s1">&#39;OTHER_LDFLAGS&#39;</span>                    <span class="o">=&gt;</span> <span class="n">ld_flags</span><span class="p">,</span>
 <span class="lineno">55</span>     <span class="s1">&#39;HEADER_SEARCH_PATHS&#39;</span>              <span class="o">=&gt;</span> <span class="s1">&#39;${PODS_HEADERS_SEARCH_PATHS}&#39;</span><span class="p">,</span>

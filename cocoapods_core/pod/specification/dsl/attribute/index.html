@@ -136,7 +136,7 @@ on the DSL.</p>
 <span class="lineno">220</span>       <span class="k">end</span>
 <span class="lineno">221</span>     <span class="k">end</span>
 <span class="lineno">222</span> 
-<span class="lineno">223</span>     <span class="k">if</span> <span class="n">defined?</span><span class="p">(</span><span class="no">Rake</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="ss">Rake</span><span class="p">:</span><span class="ss">:FileList</span><span class="p">)</span>
+<span class="lineno">223</span>     <span class="k">if</span> <span class="n">defined?</span><span class="p">(</span><span class="no">Rake</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Rake</span><span class="o">::</span><span class="no">FileList</span><span class="p">)</span>
 <span class="lineno">224</span>       <span class="c1"># UI.warn &quot;Rake::FileList is deprecated, use `exclude_files` (#{attrb.name}).&quot;</span>
 <span class="lineno">225</span>     <span class="k">end</span>
 <span class="lineno">226</span>   <span class="k">end</span>
