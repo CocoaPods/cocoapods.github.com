@@ -59,6 +59,8 @@ module Pod
               "pod spec create",
               "pod spec lint",
               "pod spec cat",
+              "pod spec which",
+              "pod spec edit",
               "pod push",
             ],
 

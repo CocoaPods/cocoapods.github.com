@@ -8,3 +8,5 @@ gem 'yard'
 gem 'activesupport'
 gem 'pygments.rb'
 gem 'github-markup'
+gem 'claide'
+
