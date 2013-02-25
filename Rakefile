@@ -7,6 +7,23 @@ end
 
 #-----------------------------------------------------------------------------#
 
+namespace :gems do
+
+  desc "Checks out the latest tag available for each gem."
+  task :update do
+    Dir.glob('gems/*').each do |dir|
+      Dir.chdir(dir) do
+        puts "\e[1;33mUpdating #{dir}\e[0m"
+        sh "git fetch"
+        tag = `git for-each-ref --sort='*authordate' --format='%(refname:short)' refs/tags`.split("\n").last
+        sh "git checkout #{tag}"
+      end
+    end
+  end
+end
+
+#-----------------------------------------------------------------------------#
+
 def gems
   %w[ CocoaPods CocoaPods-Core Xcodeproj CLAide cocoapods-downloader ]
 end
