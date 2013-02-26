@@ -1,329 +1,336 @@
 <!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>Spec</title><link href="../../../../favicon.ico" rel="icon" type="image/ico" /><link href="../../../../css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../../../../css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../../../../css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="../../../../css/style2-21e98761.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../../../../js/bootstrap-308e23ce.js" type="text/javascript"></script>
+<link href="../../../../css/style2-b98e7dcd.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../../../../js/bootstrap-308e23ce.js" type="text/javascript"></script>
 <script src="../../../../js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
 <script src="../../../../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../../../../index.html">Docs</a><span class="divider">/</span></li><li><a href="../../../index.html">CocoaPods</a><span class="divider">/</span></li><li><a href="../../index.html">Pod</a><span class="divider">/</span></li><li><a href="../index.html">Command</a><span class="divider">/</span></li><li class="active">Spec</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><div id="tab-controller"><div id="methods-container"><div id="header"><h1><a class="select-tab" href="#tab_root_spec">Spec</a></h1></div></div><div class ='methods_list'><div class ='row'><div class ='span3'><p><a class='select-tab' href=#tab_choose_from_array>choose_from_array</a></p><p><a class='select-tab' href=#tab_get_path_of_spec>get_path_of_spec</a></p><p><a class='select-tab' href=#tab_pathname_from_spec>pathname_from_spec</a></p><p><a class='select-tab' href=#tab_all_paths_from_set>all_paths_from_set</a></p><p><a class='select-tab' href=#tab_spec_and_source_from_set>spec_and_source_from_set</a></p><p><a class='select-tab' href=#tab_podspecs_to_lint>podspecs_to_lint</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_podspecs_tmp_dir>podspecs_tmp_dir</a></p><p><a class='select-tab' href=#tab_default_data_for_template>default_data_for_template</a></p><p><a class='select-tab' href=#tab_github_data_for_template>github_data_for_template</a></p><p><a class='select-tab' href=#tab_suggested_ref_and_version>suggested_ref_and_version</a></p><p><a class='select-tab' href=#tab_spec_template>spec_template</a></p><p><a class='select-tab' href=#tab_semantic_versioning_notice>semantic_versioning_notice</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_class_options>options</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_parse>parse</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_run>run</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_class_report_error>report_error</a><span class='label label-small'>+</span></p><p><a class='select-tab' href=#tab_initialize>initialize</a></p><p><a class='select-tab' href=#tab_verify_podfile_exists_bang>verify_podfile_exists!</a></p></div><div class ='span3'><p><a class='select-tab' href=#tab_verify_lockfile_exists_bang>verify_lockfile_exists!</a></p><h2><a class='select-tab' href=#tab_group_helpers>Helpers</a></h2><p><a class='select-tab' href=#tab_config>config</a></p></div></div></div></div><div id="content-container"><div class="tab-content"><div class="tab-pane" id="tab_root_spec"><h2>Spec</h2><h3>Inherits from:</h3><p><code><a href="../index.html">Pod::Command</a></code></p><h3>Child Name Spaces</h3><p><code><a href="cat/index.html">Pod::Command::Spec::Cat</a></code></p><p><code><a href="create/index.html">Pod::Command::Spec::Create</a></code></p><p><code><a href="edit/index.html">Pod::Command::Spec::Edit</a></code></p><p><code><a href="lint/index.html">Pod::Command::Spec::Lint</a></code></p><p><code><a href="which/index.html">Pod::Command::Spec::Which</a></code></p></div><div class="tab-pane" id="tab_group_"><h2></h2><p>choose_from_array</p><p>get_path_of_spec</p><p>pathname_from_spec</p><p>all_paths_from_set</p><p>spec_and_source_from_set</p><p>podspecs_to_lint</p><p>podspecs_tmp_dir</p><p>default_data_for_template</p><p>github_data_for_template</p><p>suggested_ref_and_version</p><p>spec_template</p><p>semantic_versioning_notice</p><p>options</p><p>parse</p><p>run</p><p>report_error</p><p>initialize</p><p>verify_podfile_exists!</p><p>verify_lockfile_exists!</p></div><div class="tab-pane" id="tab_group_helpers"><h2>Helpers</h2><p>config</p></div><div class="tab-pane" id="tab_choose_from_array"><h2>choose_from_array</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">choose_from_array</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span> <span class="c1">#=&gt; Fixnum </span>
 </pre></div><h4>Returns</h4><p><code>Fixnum</code> The index of the chosen array item
-</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">271</span> <span class="k">def</span> <span class="nf">choose_from_array</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
-<span class="lineno">272</span>   <span class="n">array</span><span class="o">.</span><span class="n">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">item</span><span class="p">,</span> <span class="n">index</span><span class="o">|</span>
-<span class="lineno">273</span>     <span class="no">UI</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span> <span class="si">}</span><span class="s2">: </span><span class="si">#{</span> <span class="n">item</span> <span class="si">}</span><span class="s2">&quot;</span>
-<span class="lineno">274</span>   <span class="k">end</span>
-<span class="lineno">275</span>   
-<span class="lineno">276</span>   <span class="nb">print</span> <span class="n">message</span>
-<span class="lineno">277</span>   
-<span class="lineno">278</span>   <span class="n">index</span> <span class="o">=</span> <span class="no">STDIN</span><span class="o">.</span><span class="n">gets</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">to_i</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="lineno">279</span>   <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="n">array</span><span class="o">.</span><span class="n">count</span>
-<span class="lineno">280</span>     <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span> <span class="si">}</span><span class="s2"> is invalid [1-</span><span class="si">#{</span> <span class="n">array</span><span class="o">.</span><span class="n">count</span> <span class="si">}</span><span class="s2">]&quot;</span>
-<span class="lineno">281</span>   <span class="k">else</span>
-<span class="lineno">282</span>     <span class="n">index</span>
-<span class="lineno">283</span>   <span class="k">end</span>
-<span class="lineno">284</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L271">lib/cocoapods/command/spec.rb:271</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_get_path_of_spec"><h2>get_path_of_spec</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">get_path_of_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">show_all</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../../pathname/index.html">Pathname</a></code> The absolute path or paths of the given podspec
-</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">288</span> <span class="k">def</span> <span class="nf">get_path_of_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">show_all</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span>
-<span class="lineno">289</span>   <span class="n">pods</span> <span class="o">=</span> <span class="no">SourcesManager</span><span class="o">.</span><span class="n">search_by_name</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
-<span class="lineno">290</span> 
-<span class="lineno">291</span>   <span class="k">unless</span> <span class="n">pods</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span>
-<span class="lineno">292</span>     <span class="n">names</span> <span class="o">=</span> <span class="n">pods</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span> <span class="o">*</span> <span class="s1">&#39;, &#39;</span>
-<span class="lineno">293</span>     <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;More than one spec found for &#39;</span><span class="si">#{</span> <span class="n">spec</span> <span class="si">}</span><span class="s2">&#39;:</span><span class="se">\n</span><span class="si">#{</span> <span class="n">names</span> <span class="si">}</span><span class="s2">&quot;</span>
-<span class="lineno">294</span>   <span class="k">end</span>
-<span class="lineno">295</span> 
-<span class="lineno">296</span>   <span class="k">unless</span> <span class="n">show_all</span>
-<span class="lineno">297</span>     <span class="n">best_spec</span><span class="p">,</span> <span class="n">spec_source</span> <span class="o">=</span> <span class="n">spec_and_source_from_set</span><span class="p">(</span><span class="n">pods</span><span class="o">.</span><span class="n">first</span><span class="p">)</span>
-<span class="lineno">298</span>     <span class="k">return</span> <span class="n">pathname_from_spec</span><span class="p">(</span><span class="n">best_spec</span><span class="p">,</span> <span class="n">spec_source</span><span class="p">)</span>
-<span class="lineno">299</span>   <span class="k">end</span>
-<span class="lineno">300</span> 
-<span class="lineno">301</span>   <span class="k">return</span> <span class="n">all_paths_from_set</span><span class="p">(</span><span class="n">pods</span><span class="o">.</span><span class="n">first</span><span class="p">)</span>
-<span class="lineno">302</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L288">lib/cocoapods/command/spec.rb:288</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_pathname_from_spec"><h2>pathname_from_spec</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">pathname_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span> <span class="c1">#=&gt; Pathname </span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">272</span> <span class="k">def</span> <span class="nf">choose_from_array</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+<span class="lineno">273</span>   <span class="n">array</span><span class="o">.</span><span class="n">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">item</span><span class="p">,</span> <span class="n">index</span><span class="o">|</span>
+<span class="lineno">274</span>     <span class="no">UI</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span> <span class="si">}</span><span class="s2">: </span><span class="si">#{</span> <span class="n">item</span> <span class="si">}</span><span class="s2">&quot;</span>
+<span class="lineno">275</span>   <span class="k">end</span>
+<span class="lineno">276</span> 
+<span class="lineno">277</span>   <span class="nb">print</span> <span class="n">message</span>
+<span class="lineno">278</span> 
+<span class="lineno">279</span>   <span class="n">index</span> <span class="o">=</span> <span class="no">STDIN</span><span class="o">.</span><span class="n">gets</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">to_i</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="lineno">280</span>   <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="n">array</span><span class="o">.</span><span class="n">count</span>
+<span class="lineno">281</span>     <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span> <span class="si">}</span><span class="s2"> is invalid [1-</span><span class="si">#{</span> <span class="n">array</span><span class="o">.</span><span class="n">count</span> <span class="si">}</span><span class="s2">]&quot;</span>
+<span class="lineno">282</span>   <span class="k">else</span>
+<span class="lineno">283</span>     <span class="n">index</span>
+<span class="lineno">284</span>   <span class="k">end</span>
+<span class="lineno">285</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L272">lib/cocoapods/command/spec.rb:272</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_get_path_of_spec"><h2>get_path_of_spec</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">get_path_of_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">show_all</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span> <span class="c1">#=&gt; Pathname </span>
+</pre></div><h4>Parameters</h4><p><code>String</code><span> </span><b> spec</b></p><p>The name of the specification.</p>
+<p><code>Bool</code><span> </span><b> show_all</b></p><p>Whether the paths for all the versions should be returned or
+only the one for the last version.</p>
+<h4>Returns</h4><p><code><a href="../../../pathname/index.html">Pathname</a></code> The absolute path or paths of the given podspec
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">296</span> <span class="k">def</span> <span class="nf">get_path_of_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">show_all</span> <span class="o">=</span> <span class="kp">false</span><span class="p">)</span>
+<span class="lineno">297</span>   <span class="n">sets</span> <span class="o">=</span> <span class="no">SourcesManager</span><span class="o">.</span><span class="n">search_by_name</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+<span class="lineno">298</span> 
+<span class="lineno">299</span>   <span class="k">if</span> <span class="n">sets</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="lineno">300</span>     <span class="n">set</span> <span class="o">=</span> <span class="n">sets</span><span class="o">.</span><span class="n">first</span>
+<span class="lineno">301</span>   <span class="k">elsif</span> <span class="n">sets</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+<span class="lineno">302</span>     <span class="n">set</span> <span class="o">=</span> <span class="n">sets</span><span class="o">.</span><span class="n">find</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">spec</span> <span class="p">}</span>
+<span class="lineno">303</span>   <span class="k">else</span>
+<span class="lineno">304</span>     <span class="n">names</span> <span class="o">=</span> <span class="n">sets</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)</span> <span class="o">*</span> <span class="s1">&#39;, &#39;</span>
+<span class="lineno">305</span>     <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;More than one spec found for &#39;</span><span class="si">#{</span> <span class="n">spec</span> <span class="si">}</span><span class="s2">&#39;:</span><span class="se">\n</span><span class="si">#{</span> <span class="n">names</span> <span class="si">}</span><span class="s2">&quot;</span>
+<span class="lineno">306</span>   <span class="k">end</span>
+<span class="lineno">307</span> 
+<span class="lineno">308</span>   <span class="k">unless</span> <span class="n">show_all</span>
+<span class="lineno">309</span>     <span class="n">best_spec</span><span class="p">,</span> <span class="n">spec_source</span> <span class="o">=</span> <span class="n">spec_and_source_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">310</span>     <span class="k">return</span> <span class="n">pathname_from_spec</span><span class="p">(</span><span class="n">best_spec</span><span class="p">,</span> <span class="n">spec_source</span><span class="p">)</span>
+<span class="lineno">311</span>   <span class="k">end</span>
+<span class="lineno">312</span> 
+<span class="lineno">313</span>   <span class="k">return</span> <span class="n">all_paths_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">314</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L296">lib/cocoapods/command/spec.rb:296</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_pathname_from_spec"><h2>pathname_from_spec</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">pathname_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span> <span class="c1">#=&gt; Pathname </span>
 </pre></div><h4>Returns</h4><p><code><a href="../../../pathname/index.html">Pathname</a></code> The absolute path of the given spec and source
-</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">306</span> <span class="k">def</span> <span class="nf">pathname_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
-<span class="lineno">307</span>   <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;~/.cocoapods/</span><span class="si">#{</span> <span class="n">source</span> <span class="si">}</span><span class="s2">/</span><span class="si">#{</span> <span class="n">spec</span><span class="o">.</span><span class="n">name</span> <span class="si">}</span><span class="s2">/</span><span class="si">#{</span> <span class="n">spec</span><span class="o">.</span><span class="n">version</span> <span class="si">}</span><span class="s2">/</span><span class="si">#{</span> <span class="n">spec</span><span class="o">.</span><span class="n">name</span> <span class="si">}</span><span class="s2">.podspec&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">expand_path</span>
-<span class="lineno">308</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L306">lib/cocoapods/command/spec.rb:306</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_all_paths_from_set"><h2>all_paths_from_set</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">all_paths_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; String </span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">318</span> <span class="k">def</span> <span class="nf">pathname_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
+<span class="lineno">319</span>   <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;~/.cocoapods/</span><span class="si">#{</span> <span class="n">source</span> <span class="si">}</span><span class="s2">/</span><span class="si">#{</span> <span class="n">spec</span><span class="o">.</span><span class="n">name</span> <span class="si">}</span><span class="s2">/</span><span class="si">#{</span> <span class="n">spec</span><span class="o">.</span><span class="n">version</span> <span class="si">}</span><span class="s2">/</span><span class="si">#{</span> <span class="n">spec</span><span class="o">.</span><span class="n">name</span> <span class="si">}</span><span class="s2">.podspec&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">expand_path</span>
+<span class="lineno">320</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L318">lib/cocoapods/command/spec.rb:318</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_all_paths_from_set"><h2>all_paths_from_set</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">all_paths_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; String </span>
 </pre></div><h4>Returns</h4><p><code>String</code> Of spec paths one on each line
-</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">312</span> <span class="k">def</span> <span class="nf">all_paths_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-<span class="lineno">313</span>   <span class="n">paths</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="lineno">314</span>     
-<span class="lineno">315</span>   <span class="n">sources</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">sources</span>
-<span class="lineno">316</span>     
-<span class="lineno">317</span>   <span class="n">sources</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">source</span><span class="o">|</span>
-<span class="lineno">318</span>     <span class="n">versions</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">versions</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="lineno">319</span> 
-<span class="lineno">320</span>     <span class="n">versions</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">version</span><span class="o">|</span>
-<span class="lineno">321</span>       <span class="n">spec</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">specification</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
-<span class="lineno">322</span>       <span class="n">paths</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="n">pathname_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span> <span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
-<span class="lineno">323</span>     <span class="k">end</span>
-<span class="lineno">324</span>   <span class="k">end</span>
-<span class="lineno">325</span>     
-<span class="lineno">326</span>   <span class="n">paths</span>
-<span class="lineno">327</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L312">lib/cocoapods/command/spec.rb:312</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_spec_and_source_from_set"><h2>spec_and_source_from_set</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">spec_and_source_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Specification, Source </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../../../cocoapods_core/pod/specification/index.html">Specification</a></code><code><a href="../../../../cocoapods_core/pod/source/index.html">Source</a></code> <p>The highest known specification with it&#39;s source of the given
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">324</span> <span class="k">def</span> <span class="nf">all_paths_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">325</span>   <span class="n">paths</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="lineno">326</span> 
+<span class="lineno">327</span>   <span class="n">sources</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">sources</span>
+<span class="lineno">328</span> 
+<span class="lineno">329</span>   <span class="n">sources</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">source</span><span class="o">|</span>
+<span class="lineno">330</span>     <span class="n">versions</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">versions</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="lineno">331</span> 
+<span class="lineno">332</span>     <span class="n">versions</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">version</span><span class="o">|</span>
+<span class="lineno">333</span>       <span class="n">spec</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">specification</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+<span class="lineno">334</span>       <span class="n">paths</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">#{</span> <span class="n">pathname_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span> <span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="lineno">335</span>     <span class="k">end</span>
+<span class="lineno">336</span>   <span class="k">end</span>
+<span class="lineno">337</span> 
+<span class="lineno">338</span>   <span class="n">paths</span>
+<span class="lineno">339</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L324">lib/cocoapods/command/spec.rb:324</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_spec_and_source_from_set"><h2>spec_and_source_from_set</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">spec_and_source_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span> <span class="c1">#=&gt; Specification, Source </span>
+</pre></div><h4>Returns</h4><p><code><a href="../../specification/index.html">Specification</a></code><code><a href="../../../../cocoapods_core/pod/source/index.html">Source</a></code> <p>The highest known specification with it&#39;s source of the given
 set.</p>
-</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">332</span> <span class="k">def</span> <span class="nf">spec_and_source_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
-<span class="lineno">333</span>   <span class="n">sources</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">sources</span>
-<span class="lineno">334</span> 
-<span class="lineno">335</span>   <span class="n">best_source</span> <span class="o">=</span> <span class="n">sources</span><span class="o">.</span><span class="n">first</span>
-<span class="lineno">336</span>   <span class="n">best_version</span> <span class="o">=</span> <span class="n">best_source</span><span class="o">.</span><span class="n">versions</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
-<span class="lineno">337</span>   <span class="n">sources</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">source</span><span class="o">|</span>
-<span class="lineno">338</span>     <span class="n">version</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">versions</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
-<span class="lineno">339</span>     <span class="k">if</span> <span class="n">version</span> <span class="o">&gt;</span> <span class="n">best_version</span>
-<span class="lineno">340</span>         <span class="n">best_source</span> <span class="o">=</span> <span class="n">source</span>
-<span class="lineno">341</span>         <span class="n">best_version</span> <span class="o">=</span> <span class="n">version</span>
-<span class="lineno">342</span>     <span class="k">end</span>
-<span class="lineno">343</span>   <span class="k">end</span>
-<span class="lineno">344</span> 
-<span class="lineno">345</span>   <span class="k">return</span> <span class="n">best_source</span><span class="o">.</span><span class="n">specification</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">best_version</span><span class="p">),</span> <span class="n">best_source</span>
-<span class="lineno">346</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L332">lib/cocoapods/command/spec.rb:332</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_podspecs_to_lint"><h2>podspecs_to_lint</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">podspecs_to_lint</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">350</span> <span class="k">def</span> <span class="nf">podspecs_to_lint</span>
-<span class="lineno">351</span>   <span class="vi">@podspecs_to_lint</span> <span class="o">||=</span> <span class="k">begin</span>
-<span class="lineno">352</span>     <span class="n">files</span> <span class="o">=</span> <span class="o">[]</span>
-<span class="lineno">353</span>     <span class="vi">@podspecs_paths</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;.&#39;</span> <span class="k">if</span> <span class="vi">@podspecs_paths</span><span class="o">.</span><span class="n">empty?</span>
-<span class="lineno">354</span>     <span class="vi">@podspecs_paths</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
-<span class="lineno">355</span>       <span class="k">if</span> <span class="n">path</span> <span class="o">=~</span> <span class="sr">/https?:\/\//</span>
-<span class="lineno">356</span>         <span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
-<span class="lineno">357</span>         <span class="n">output_path</span> <span class="o">=</span> <span class="n">podspecs_tmp_dir</span> <span class="o">+</span> <span class="no">File</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="lineno">358</span>         <span class="n">output_path</span><span class="o">.</span><span class="n">dirname</span><span class="o">.</span><span class="n">mkpath</span>
-<span class="lineno">359</span>         <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">io</span><span class="o">|</span>
-<span class="lineno">360</span>           <span class="n">output_path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span> <span class="o">&lt;&lt;</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span> <span class="p">}</span>
-<span class="lineno">361</span>         <span class="k">end</span>
-<span class="lineno">362</span>         <span class="n">files</span> <span class="o">&lt;&lt;</span> <span class="n">output_path</span>
-<span class="lineno">363</span>       <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pathname</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">path</span><span class="p">))</span><span class="o">.</span><span class="n">directory?</span>
-<span class="lineno">364</span>         <span class="n">files</span> <span class="o">+=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">pathname</span> <span class="o">+</span> <span class="s1">&#39;**/*.podspec&#39;</span><span class="p">)</span>
-<span class="lineno">365</span>         <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;No specs found in the current directory.&quot;</span> <span class="k">if</span> <span class="n">files</span><span class="o">.</span><span class="n">empty?</span>
-<span class="lineno">366</span>       <span class="k">else</span>
-<span class="lineno">367</span>         <span class="n">files</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">pathname</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
-<span class="lineno">368</span>         <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;Unable to find a spec named `</span><span class="si">#{</span><span class="n">path</span><span class="si">}</span><span class="s2">&#39;.&quot;</span> <span class="k">unless</span> <span class="n">pathname</span><span class="o">.</span><span class="n">exist?</span> <span class="o">&amp;&amp;</span> <span class="n">path</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s1">&#39;.podspec&#39;</span><span class="p">)</span>
-<span class="lineno">369</span>       <span class="k">end</span>
-<span class="lineno">370</span>     <span class="k">end</span>
-<span class="lineno">371</span>   <span class="k">end</span>
-<span class="lineno">372</span>     <span class="n">files</span>
-<span class="lineno">373</span>   <span class="k">end</span>
-<span class="lineno">374</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L350">lib/cocoapods/command/spec.rb:350</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_podspecs_tmp_dir"><h2>podspecs_tmp_dir</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">podspecs_tmp_dir</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">376</span> <span class="k">def</span> <span class="nf">podspecs_tmp_dir</span>
-<span class="lineno">377</span>    <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/tmp/CocoaPods/Lint_podspec&#39;</span><span class="p">)</span>
-<span class="lineno">378</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L376">lib/cocoapods/command/spec.rb:376</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_default_data_for_template"><h2>default_data_for_template</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">default_data_for_template</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">389</span> <span class="k">def</span> <span class="nf">default_data_for_template</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-<span class="lineno">390</span>   <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="lineno">391</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:name</span><span class="o">]</span>          <span class="o">=</span> <span class="nb">name</span>
-<span class="lineno">392</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:version</span><span class="o">]</span>       <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
-<span class="lineno">393</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:summary</span><span class="o">]</span>       <span class="o">=</span> <span class="s2">&quot;A short description of </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.&quot;</span>
-<span class="lineno">394</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:homepage</span><span class="o">]</span>      <span class="o">=</span> <span class="s2">&quot;http://EXAMPLE/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="lineno">395</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:author_name</span><span class="o">]</span>   <span class="o">=</span> <span class="sb">`git config --get user.name`</span><span class="o">.</span><span class="n">strip</span>
-<span class="lineno">396</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:author_email</span><span class="o">]</span>  <span class="o">=</span> <span class="sb">`git config --get user.email`</span><span class="o">.</span><span class="n">strip</span>
-<span class="lineno">397</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:source_url</span><span class="o">]</span>    <span class="o">=</span> <span class="s2">&quot;http://EXAMPLE/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.git&quot;</span>
-<span class="lineno">398</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:ref_type</span><span class="o">]</span>      <span class="o">=</span> <span class="s1">&#39;:tag&#39;</span>
-<span class="lineno">399</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:ref</span><span class="o">]</span>           <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
-<span class="lineno">400</span>   <span class="n">data</span>
-<span class="lineno">401</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L389">lib/cocoapods/command/spec.rb:389</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_github_data_for_template"><h2>github_data_for_template</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">github_data_for_template</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">403</span> <span class="k">def</span> <span class="nf">github_data_for_template</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span>
-<span class="lineno">404</span>   <span class="n">repo</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">repo</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span>
-<span class="lineno">405</span>   <span class="n">user</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">user</span><span class="p">(</span><span class="n">repo</span><span class="o">[</span><span class="s1">&#39;owner&#39;</span><span class="o">][</span><span class="s1">&#39;login&#39;</span><span class="o">]</span><span class="p">)</span>
-<span class="lineno">406</span>   <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="lineno">407</span> 
-<span class="lineno">408</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:name</span><span class="o">]</span>          <span class="o">=</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span>
-<span class="lineno">409</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:summary</span><span class="o">]</span>       <span class="o">=</span> <span class="p">(</span><span class="n">repo</span><span class="o">[</span><span class="s1">&#39;description&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[&quot;]/</span><span class="p">,</span> <span class="s1">&#39;\&quot;&#39;</span><span class="p">)</span>
-<span class="lineno">410</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:homepage</span><span class="o">]</span>      <span class="o">=</span> <span class="p">(</span><span class="n">repo</span><span class="o">[</span><span class="s1">&#39;homepage&#39;</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">repo</span><span class="o">[</span><span class="s1">&#39;homepage&#39;</span><span class="o">].</span><span class="n">empty?</span> <span class="p">)</span> <span class="p">?</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;homepage&#39;</span><span class="o">]</span> <span class="p">:</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;html_url&#39;</span><span class="o">]</span>
-<span class="lineno">411</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:author_name</span><span class="o">]</span>   <span class="o">=</span> <span class="n">user</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span>  <span class="o">||</span> <span class="n">user</span><span class="o">[</span><span class="s1">&#39;login&#39;</span><span class="o">]</span>
-<span class="lineno">412</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:author_email</span><span class="o">]</span>  <span class="o">=</span> <span class="n">user</span><span class="o">[</span><span class="s1">&#39;email&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;email@address.com&#39;</span>
-<span class="lineno">413</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:source_url</span><span class="o">]</span>    <span class="o">=</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;clone_url&#39;</span><span class="o">]</span>
-<span class="lineno">414</span> 
-<span class="lineno">415</span>   <span class="n">data</span><span class="o">.</span><span class="n">merge</span> <span class="n">suggested_ref_and_version</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span>
-<span class="lineno">416</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L403">lib/cocoapods/command/spec.rb:403</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_suggested_ref_and_version"><h2>suggested_ref_and_version</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">suggested_ref_and_version</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">418</span> <span class="k">def</span> <span class="nf">suggested_ref_and_version</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span>
-<span class="lineno">419</span>   <span class="n">tags</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">tags</span><span class="p">(</span><span class="ss">:username</span> <span class="o">=&gt;</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;owner&#39;</span><span class="o">][</span><span class="s1">&#39;login&#39;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:repo</span> <span class="o">=&gt;</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">tag</span><span class="o">|</span> <span class="n">tag</span><span class="o">[</span><span class="s2">&quot;name&quot;</span><span class="o">]</span><span class="p">}</span>
-<span class="lineno">420</span>   <span class="n">versions_tags</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="lineno">421</span>   <span class="n">tags</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="o">|</span>
-<span class="lineno">422</span>     <span class="n">clean_tag</span> <span class="o">=</span> <span class="n">tag</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^v(er)? ?/</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="lineno">423</span>     <span class="n">versions_tags</span><span class="o">[</span><span class="no">Gem</span><span class="o">::</span><span class="no">Version</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">clean_tag</span><span class="p">)</span><span class="o">]</span> <span class="o">=</span> <span class="n">tag</span> <span class="k">if</span> <span class="no">Gem</span><span class="o">::</span><span class="no">Version</span><span class="o">.</span><span class="n">correct?</span><span class="p">(</span><span class="n">clean_tag</span><span class="p">)</span>
-<span class="lineno">424</span>   <span class="k">end</span>
-<span class="lineno">425</span>   <span class="n">version</span> <span class="o">=</span> <span class="n">versions_tags</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">last</span> <span class="o">||</span> <span class="s1">&#39;0.0.1&#39;</span>
-<span class="lineno">426</span>   <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:version</span> <span class="o">=&gt;</span> <span class="n">version</span><span class="p">}</span>
-<span class="lineno">427</span>   <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="s1">&#39;0.0.1&#39;</span>
-<span class="lineno">428</span>     <span class="n">branches</span>        <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">branches</span><span class="p">(</span><span class="ss">:username</span> <span class="o">=&gt;</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;owner&#39;</span><span class="o">][</span><span class="s1">&#39;login&#39;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:repo</span> <span class="o">=&gt;</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span><span class="p">)</span>
-<span class="lineno">429</span>     <span class="n">master_name</span>     <span class="o">=</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;master_branch&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;master&#39;</span>
-<span class="lineno">430</span>     <span class="n">master</span>          <span class="o">=</span> <span class="n">branches</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span><span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="n">master_name</span> <span class="p">}</span><span class="o">.</span><span class="n">first</span>
-<span class="lineno">431</span>     <span class="n">data</span><span class="o">[</span><span class="ss">:ref_type</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;:commit&#39;</span>
-<span class="lineno">432</span>     <span class="n">data</span><span class="o">[</span><span class="ss">:ref</span><span class="o">]</span>      <span class="o">=</span> <span class="n">master</span><span class="o">[</span><span class="s1">&#39;commit&#39;</span><span class="o">][</span><span class="s1">&#39;sha&#39;</span><span class="o">]</span>
-<span class="lineno">433</span>   <span class="k">else</span>
-<span class="lineno">434</span>     <span class="n">data</span><span class="o">[</span><span class="ss">:ref_type</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;:tag&#39;</span>
-<span class="lineno">435</span>     <span class="n">data</span><span class="o">[</span><span class="ss">:ref</span><span class="o">]</span>      <span class="o">=</span> <span class="n">versions_tags</span><span class="o">[</span><span class="n">version</span><span class="o">]</span>
-<span class="lineno">436</span>   <span class="k">end</span>
-<span class="lineno">437</span>   <span class="n">data</span>
-<span class="lineno">438</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L418">lib/cocoapods/command/spec.rb:418</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_spec_template"><h2>spec_template</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">spec_template</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">440</span> <span class="k">def</span> <span class="nf">spec_template</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="lineno">441</span>     <span class="k">return</span> <span class="o">&lt;&lt;-</span><span class="no">SPEC</span>
-<span class="lineno">442</span> <span class="sh">#</span>
-<span class="lineno">443</span> <span class="sh"># Be sure to run `pod spec lint #{data[:name]}.podspec&#39; to ensure this is a</span>
-<span class="lineno">444</span> <span class="sh"># valid spec.</span>
-<span class="lineno">445</span> <span class="sh">#</span>
-<span class="lineno">446</span> <span class="sh"># Remove all comments before submitting the spec. Optional attributes are commented.</span>
-<span class="lineno">447</span> <span class="sh">#</span>
-<span class="lineno">448</span> <span class="sh"># For details see: https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format</span>
-<span class="lineno">449</span> <span class="sh">#</span>
-<span class="lineno">450</span> <span class="sh">Pod::Spec.new do |s|</span>
-<span class="lineno">451</span> <span class="sh">  s.name         = &quot;#{data[:name]}&quot;</span>
-<span class="lineno">452</span> <span class="sh">  s.version      = &quot;#{data[:version]}&quot;</span>
-<span class="lineno">453</span> <span class="sh">  s.summary      = &quot;#{data[:summary]}&quot;</span>
-<span class="lineno">454</span> <span class="sh">  # s.description  = &lt;&lt;-DESC</span>
-<span class="lineno">455</span> <span class="sh">  #                   An optional longer description of #{data[:name]}</span>
-<span class="lineno">456</span> <span class="sh">  #</span>
-<span class="lineno">457</span> <span class="sh">  #                   * Markdown format.</span>
-<span class="lineno">458</span> <span class="sh">  #                   * Don&#39;t worry about the indent, we strip it!</span>
-<span class="lineno">459</span> <span class="sh">  #                  DESC</span>
-<span class="lineno">460</span> <span class="sh">  s.homepage     = &quot;#{data[:homepage]}&quot;</span>
-<span class="lineno">461</span> 
-<span class="lineno">462</span> <span class="sh">  # Specify the license type. CocoaPods detects automatically the license file if it is named</span>
-<span class="lineno">463</span> <span class="sh">  # &#39;LICENCE*.*&#39; or &#39;LICENSE*.*&#39;, however if the name is different, specify it.</span>
-<span class="lineno">464</span> <span class="sh">  s.license      = &#39;MIT (example)&#39;</span>
-<span class="lineno">465</span> <span class="sh">  # s.license      = { :type =&gt; &#39;MIT (example)&#39;, :file =&gt; &#39;FILE_LICENSE&#39; }</span>
-<span class="lineno">466</span> <span class="sh">  #</span>
-<span class="lineno">467</span> <span class="sh">  # Only if no dedicated file is available include the full text of the license.</span>
-<span class="lineno">468</span> <span class="sh">  #</span>
-<span class="lineno">469</span> <span class="sh">  # s.license      = {</span>
-<span class="lineno">470</span> <span class="sh">  #   :type =&gt; &#39;MIT (example)&#39;,</span>
-<span class="lineno">471</span> <span class="sh">  #   :text =&gt; &lt;&lt;-LICENSE</span>
-<span class="lineno">472</span> <span class="sh">  #             Copyright (C) &lt;year&gt; &lt;copyright holders&gt;</span>
-<span class="lineno">473</span> 
-<span class="lineno">474</span> <span class="sh">  #             All rights reserved.</span>
-<span class="lineno">475</span> 
-<span class="lineno">476</span> <span class="sh">  #             Redistribution and use in source and binary forms, with or without</span>
-<span class="lineno">477</span> <span class="sh">  #             ...</span>
-<span class="lineno">478</span> <span class="sh">  #   LICENSE</span>
-<span class="lineno">479</span> <span class="sh">  # }</span>
-<span class="lineno">480</span> 
-<span class="lineno">481</span> <span class="sh">  # Specify the authors of the library, with email addresses. You can often find</span>
-<span class="lineno">482</span> <span class="sh">  # the email addresses of the authors by using the SCM log. E.g. $ git log</span>
-<span class="lineno">483</span> <span class="sh">  #</span>
-<span class="lineno">484</span> <span class="sh">  s.author       = { &quot;#{data[:author_name]}&quot; =&gt; &quot;#{data[:author_email]}&quot; }</span>
-<span class="lineno">485</span> <span class="sh">  # s.authors      = { &quot;#{data[:author_name]}&quot; =&gt; &quot;#{data[:author_email]}&quot;, &quot;other author&quot; =&gt; &quot;and email address&quot; }</span>
-<span class="lineno">486</span> <span class="sh">  #</span>
-<span class="lineno">487</span> <span class="sh">  # If absolutely no email addresses are available, then you can use this form instead.</span>
-<span class="lineno">488</span> <span class="sh">  #</span>
-<span class="lineno">489</span> <span class="sh">  # s.author       = &#39;#{data[:author_name]}&#39;, &#39;other author&#39;</span>
-<span class="lineno">490</span> 
-<span class="lineno">491</span> <span class="sh">  # Specify the location from where the source should be retrieved.</span>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">344</span> <span class="k">def</span> <span class="nf">spec_and_source_from_set</span><span class="p">(</span><span class="n">set</span><span class="p">)</span>
+<span class="lineno">345</span>   <span class="n">sources</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="n">sources</span>
+<span class="lineno">346</span> 
+<span class="lineno">347</span>   <span class="n">best_source</span> <span class="o">=</span> <span class="n">sources</span><span class="o">.</span><span class="n">first</span>
+<span class="lineno">348</span>   <span class="n">best_version</span> <span class="o">=</span> <span class="n">best_source</span><span class="o">.</span><span class="n">versions</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
+<span class="lineno">349</span>   <span class="n">sources</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">source</span><span class="o">|</span>
+<span class="lineno">350</span>     <span class="n">version</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">versions</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
+<span class="lineno">351</span>     <span class="k">if</span> <span class="n">version</span> <span class="o">&gt;</span> <span class="n">best_version</span>
+<span class="lineno">352</span>         <span class="n">best_source</span> <span class="o">=</span> <span class="n">source</span>
+<span class="lineno">353</span>         <span class="n">best_version</span> <span class="o">=</span> <span class="n">version</span>
+<span class="lineno">354</span>     <span class="k">end</span>
+<span class="lineno">355</span>   <span class="k">end</span>
+<span class="lineno">356</span> 
+<span class="lineno">357</span>   <span class="k">return</span> <span class="n">best_source</span><span class="o">.</span><span class="n">specification</span><span class="p">(</span><span class="n">set</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">best_version</span><span class="p">),</span> <span class="n">best_source</span>
+<span class="lineno">358</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L344">lib/cocoapods/command/spec.rb:344</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_podspecs_to_lint"><h2>podspecs_to_lint</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">podspecs_to_lint</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">360</span> <span class="k">def</span> <span class="nf">podspecs_to_lint</span>
+<span class="lineno">361</span>   <span class="vi">@podspecs_to_lint</span> <span class="o">||=</span> <span class="k">begin</span>
+<span class="lineno">362</span>     <span class="n">files</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="lineno">363</span>     <span class="vi">@podspecs_paths</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;.&#39;</span> <span class="k">if</span> <span class="vi">@podspecs_paths</span><span class="o">.</span><span class="n">empty?</span>
+<span class="lineno">364</span>     <span class="vi">@podspecs_paths</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
+<span class="lineno">365</span>       <span class="k">if</span> <span class="n">path</span> <span class="o">=~</span> <span class="sr">/https?:\/\//</span>
+<span class="lineno">366</span>         <span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+<span class="lineno">367</span>         <span class="n">output_path</span> <span class="o">=</span> <span class="n">podspecs_tmp_dir</span> <span class="o">+</span> <span class="no">File</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="lineno">368</span>         <span class="n">output_path</span><span class="o">.</span><span class="n">dirname</span><span class="o">.</span><span class="n">mkpath</span>
+<span class="lineno">369</span>         <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">io</span><span class="o">|</span>
+<span class="lineno">370</span>           <span class="n">output_path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span> <span class="o">&lt;&lt;</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span> <span class="p">}</span>
+<span class="lineno">371</span>         <span class="k">end</span>
+<span class="lineno">372</span>         <span class="n">files</span> <span class="o">&lt;&lt;</span> <span class="n">output_path</span>
+<span class="lineno">373</span>       <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pathname</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">path</span><span class="p">))</span><span class="o">.</span><span class="n">directory?</span>
+<span class="lineno">374</span>         <span class="n">files</span> <span class="o">+=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">pathname</span> <span class="o">+</span> <span class="s1">&#39;**/*.podspec&#39;</span><span class="p">)</span>
+<span class="lineno">375</span>         <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;No specs found in the current directory.&quot;</span> <span class="k">if</span> <span class="n">files</span><span class="o">.</span><span class="n">empty?</span>
+<span class="lineno">376</span>       <span class="k">else</span>
+<span class="lineno">377</span>         <span class="n">files</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">pathname</span> <span class="o">=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+<span class="lineno">378</span>         <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;Unable to find a spec named `</span><span class="si">#{</span><span class="n">path</span><span class="si">}</span><span class="s2">&#39;.&quot;</span> <span class="k">unless</span> <span class="n">pathname</span><span class="o">.</span><span class="n">exist?</span> <span class="o">&amp;&amp;</span> <span class="n">path</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s1">&#39;.podspec&#39;</span><span class="p">)</span>
+<span class="lineno">379</span>       <span class="k">end</span>
+<span class="lineno">380</span>     <span class="k">end</span>
+<span class="lineno">381</span>   <span class="k">end</span>
+<span class="lineno">382</span>     <span class="n">files</span>
+<span class="lineno">383</span>   <span class="k">end</span>
+<span class="lineno">384</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L360">lib/cocoapods/command/spec.rb:360</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_podspecs_tmp_dir"><h2>podspecs_tmp_dir</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">podspecs_tmp_dir</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">386</span> <span class="k">def</span> <span class="nf">podspecs_tmp_dir</span>
+<span class="lineno">387</span>    <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/tmp/CocoaPods/Lint_podspec&#39;</span><span class="p">)</span>
+<span class="lineno">388</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L386">lib/cocoapods/command/spec.rb:386</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_default_data_for_template"><h2>default_data_for_template</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">default_data_for_template</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">398</span> <span class="k">def</span> <span class="nf">default_data_for_template</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="lineno">399</span>   <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">400</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:name</span><span class="o">]</span>          <span class="o">=</span> <span class="nb">name</span>
+<span class="lineno">401</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:version</span><span class="o">]</span>       <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
+<span class="lineno">402</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:summary</span><span class="o">]</span>       <span class="o">=</span> <span class="s2">&quot;A short description of </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.&quot;</span>
+<span class="lineno">403</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:homepage</span><span class="o">]</span>      <span class="o">=</span> <span class="s2">&quot;http://EXAMPLE/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="lineno">404</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:author_name</span><span class="o">]</span>   <span class="o">=</span> <span class="sb">`git config --get user.name`</span><span class="o">.</span><span class="n">strip</span>
+<span class="lineno">405</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:author_email</span><span class="o">]</span>  <span class="o">=</span> <span class="sb">`git config --get user.email`</span><span class="o">.</span><span class="n">strip</span>
+<span class="lineno">406</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:source_url</span><span class="o">]</span>    <span class="o">=</span> <span class="s2">&quot;http://EXAMPLE/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.git&quot;</span>
+<span class="lineno">407</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:ref_type</span><span class="o">]</span>      <span class="o">=</span> <span class="s1">&#39;:tag&#39;</span>
+<span class="lineno">408</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:ref</span><span class="o">]</span>           <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
+<span class="lineno">409</span>   <span class="n">data</span>
+<span class="lineno">410</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L398">lib/cocoapods/command/spec.rb:398</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_github_data_for_template"><h2>github_data_for_template</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">github_data_for_template</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">412</span> <span class="k">def</span> <span class="nf">github_data_for_template</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span>
+<span class="lineno">413</span>   <span class="n">repo</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">repo</span><span class="p">(</span><span class="n">repo_id</span><span class="p">)</span>
+<span class="lineno">414</span>   <span class="n">user</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">user</span><span class="p">(</span><span class="n">repo</span><span class="o">[</span><span class="s1">&#39;owner&#39;</span><span class="o">][</span><span class="s1">&#39;login&#39;</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">415</span>   <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">416</span> 
+<span class="lineno">417</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:name</span><span class="o">]</span>          <span class="o">=</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span>
+<span class="lineno">418</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:summary</span><span class="o">]</span>       <span class="o">=</span> <span class="p">(</span><span class="n">repo</span><span class="o">[</span><span class="s1">&#39;description&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[&quot;]/</span><span class="p">,</span> <span class="s1">&#39;\&quot;&#39;</span><span class="p">)</span>
+<span class="lineno">419</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:homepage</span><span class="o">]</span>      <span class="o">=</span> <span class="p">(</span><span class="n">repo</span><span class="o">[</span><span class="s1">&#39;homepage&#39;</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">repo</span><span class="o">[</span><span class="s1">&#39;homepage&#39;</span><span class="o">].</span><span class="n">empty?</span> <span class="p">)</span> <span class="p">?</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;homepage&#39;</span><span class="o">]</span> <span class="p">:</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;html_url&#39;</span><span class="o">]</span>
+<span class="lineno">420</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:author_name</span><span class="o">]</span>   <span class="o">=</span> <span class="n">user</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span>  <span class="o">||</span> <span class="n">user</span><span class="o">[</span><span class="s1">&#39;login&#39;</span><span class="o">]</span>
+<span class="lineno">421</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:author_email</span><span class="o">]</span>  <span class="o">=</span> <span class="n">user</span><span class="o">[</span><span class="s1">&#39;email&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;email@address.com&#39;</span>
+<span class="lineno">422</span>   <span class="n">data</span><span class="o">[</span><span class="ss">:source_url</span><span class="o">]</span>    <span class="o">=</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;clone_url&#39;</span><span class="o">]</span>
+<span class="lineno">423</span> 
+<span class="lineno">424</span>   <span class="n">data</span><span class="o">.</span><span class="n">merge</span> <span class="n">suggested_ref_and_version</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span>
+<span class="lineno">425</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L412">lib/cocoapods/command/spec.rb:412</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_suggested_ref_and_version"><h2>suggested_ref_and_version</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">suggested_ref_and_version</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">427</span> <span class="k">def</span> <span class="nf">suggested_ref_and_version</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span>
+<span class="lineno">428</span>   <span class="n">tags</span> <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">tags</span><span class="p">(</span><span class="ss">:username</span> <span class="o">=&gt;</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;owner&#39;</span><span class="o">][</span><span class="s1">&#39;login&#39;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:repo</span> <span class="o">=&gt;</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">tag</span><span class="o">|</span> <span class="n">tag</span><span class="o">[</span><span class="s2">&quot;name&quot;</span><span class="o">]</span><span class="p">}</span>
+<span class="lineno">429</span>   <span class="n">versions_tags</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">430</span>   <span class="n">tags</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="o">|</span>
+<span class="lineno">431</span>     <span class="n">clean_tag</span> <span class="o">=</span> <span class="n">tag</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^v(er)? ?/</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="lineno">432</span>     <span class="n">versions_tags</span><span class="o">[</span><span class="ss">Gem</span><span class="p">:</span><span class="ss">:Version</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">clean_tag</span><span class="p">)</span><span class="o">]</span> <span class="o">=</span> <span class="n">tag</span> <span class="k">if</span> <span class="ss">Gem</span><span class="p">:</span><span class="ss">:Version</span><span class="o">.</span><span class="n">correct?</span><span class="p">(</span><span class="n">clean_tag</span><span class="p">)</span>
+<span class="lineno">433</span>   <span class="k">end</span>
+<span class="lineno">434</span>   <span class="n">version</span> <span class="o">=</span> <span class="n">versions_tags</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">last</span> <span class="o">||</span> <span class="s1">&#39;0.0.1&#39;</span>
+<span class="lineno">435</span>   <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:version</span> <span class="o">=&gt;</span> <span class="n">version</span><span class="p">}</span>
+<span class="lineno">436</span>   <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="s1">&#39;0.0.1&#39;</span>
+<span class="lineno">437</span>     <span class="n">branches</span>        <span class="o">=</span> <span class="no">Octokit</span><span class="o">.</span><span class="n">branches</span><span class="p">(</span><span class="ss">:username</span> <span class="o">=&gt;</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;owner&#39;</span><span class="o">][</span><span class="s1">&#39;login&#39;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:repo</span> <span class="o">=&gt;</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">438</span>     <span class="n">master_name</span>     <span class="o">=</span> <span class="n">repo</span><span class="o">[</span><span class="s1">&#39;master_branch&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;master&#39;</span>
+<span class="lineno">439</span>     <span class="n">master</span>          <span class="o">=</span> <span class="n">branches</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span><span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="n">master_name</span> <span class="p">}</span><span class="o">.</span><span class="n">first</span>
+<span class="lineno">440</span>     <span class="n">data</span><span class="o">[</span><span class="ss">:ref_type</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;:commit&#39;</span>
+<span class="lineno">441</span>     <span class="n">data</span><span class="o">[</span><span class="ss">:ref</span><span class="o">]</span>      <span class="o">=</span> <span class="n">master</span><span class="o">[</span><span class="s1">&#39;commit&#39;</span><span class="o">][</span><span class="s1">&#39;sha&#39;</span><span class="o">]</span>
+<span class="lineno">442</span>   <span class="k">else</span>
+<span class="lineno">443</span>     <span class="n">data</span><span class="o">[</span><span class="ss">:ref_type</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;:tag&#39;</span>
+<span class="lineno">444</span>     <span class="n">data</span><span class="o">[</span><span class="ss">:ref</span><span class="o">]</span>      <span class="o">=</span> <span class="n">versions_tags</span><span class="o">[</span><span class="n">version</span><span class="o">]</span>
+<span class="lineno">445</span>   <span class="k">end</span>
+<span class="lineno">446</span>   <span class="n">data</span>
+<span class="lineno">447</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L427">lib/cocoapods/command/spec.rb:427</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_spec_template"><h2>spec_template</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">spec_template</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">449</span> <span class="k">def</span> <span class="nf">spec_template</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="lineno">450</span>     <span class="k">return</span> <span class="o">&lt;&lt;-</span><span class="no">SPEC</span>
+<span class="lineno">451</span> <span class="sh">#</span>
+<span class="lineno">452</span> <span class="sh"># Be sure to run `pod spec lint #{data[:name]}.podspec&#39; to ensure this is a</span>
+<span class="lineno">453</span> <span class="sh"># valid spec.</span>
+<span class="lineno">454</span> <span class="sh">#</span>
+<span class="lineno">455</span> <span class="sh"># Remove all comments before submitting the spec. Optional attributes are commented.</span>
+<span class="lineno">456</span> <span class="sh">#</span>
+<span class="lineno">457</span> <span class="sh"># For details see: https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format</span>
+<span class="lineno">458</span> <span class="sh">#</span>
+<span class="lineno">459</span> <span class="sh">Pod::Spec.new do |s|</span>
+<span class="lineno">460</span> <span class="sh">  s.name         = &quot;#{data[:name]}&quot;</span>
+<span class="lineno">461</span> <span class="sh">  s.version      = &quot;#{data[:version]}&quot;</span>
+<span class="lineno">462</span> <span class="sh">  s.summary      = &quot;#{data[:summary]}&quot;</span>
+<span class="lineno">463</span> <span class="sh">  # s.description  = &lt;&lt;-DESC</span>
+<span class="lineno">464</span> <span class="sh">  #                   An optional longer description of #{data[:name]}</span>
+<span class="lineno">465</span> <span class="sh">  #</span>
+<span class="lineno">466</span> <span class="sh">  #                   * Markdown format.</span>
+<span class="lineno">467</span> <span class="sh">  #                   * Don&#39;t worry about the indent, we strip it!</span>
+<span class="lineno">468</span> <span class="sh">  #                  DESC</span>
+<span class="lineno">469</span> <span class="sh">  s.homepage     = &quot;#{data[:homepage]}&quot;</span>
+<span class="lineno">470</span> 
+<span class="lineno">471</span> <span class="sh">  # Specify the license type. CocoaPods detects automatically the license file if it is named</span>
+<span class="lineno">472</span> <span class="sh">  # &#39;LICENCE*.*&#39; or &#39;LICENSE*.*&#39;, however if the name is different, specify it.</span>
+<span class="lineno">473</span> <span class="sh">  s.license      = &#39;MIT (example)&#39;</span>
+<span class="lineno">474</span> <span class="sh">  # s.license      = { :type =&gt; &#39;MIT (example)&#39;, :file =&gt; &#39;FILE_LICENSE&#39; }</span>
+<span class="lineno">475</span> <span class="sh">  #</span>
+<span class="lineno">476</span> <span class="sh">  # Only if no dedicated file is available include the full text of the license.</span>
+<span class="lineno">477</span> <span class="sh">  #</span>
+<span class="lineno">478</span> <span class="sh">  # s.license      = {</span>
+<span class="lineno">479</span> <span class="sh">  #   :type =&gt; &#39;MIT (example)&#39;,</span>
+<span class="lineno">480</span> <span class="sh">  #   :text =&gt; &lt;&lt;-LICENSE</span>
+<span class="lineno">481</span> <span class="sh">  #             Copyright (C) &lt;year&gt; &lt;copyright holders&gt;</span>
+<span class="lineno">482</span> 
+<span class="lineno">483</span> <span class="sh">  #             All rights reserved.</span>
+<span class="lineno">484</span> 
+<span class="lineno">485</span> <span class="sh">  #             Redistribution and use in source and binary forms, with or without</span>
+<span class="lineno">486</span> <span class="sh">  #             ...</span>
+<span class="lineno">487</span> <span class="sh">  #   LICENSE</span>
+<span class="lineno">488</span> <span class="sh">  # }</span>
+<span class="lineno">489</span> 
+<span class="lineno">490</span> <span class="sh">  # Specify the authors of the library, with email addresses. You can often find</span>
+<span class="lineno">491</span> <span class="sh">  # the email addresses of the authors by using the SCM log. E.g. $ git log</span>
 <span class="lineno">492</span> <span class="sh">  #</span>
-<span class="lineno">493</span> <span class="sh">  s.source       = { :git =&gt; &quot;#{data[:source_url]}&quot;, #{data[:ref_type]} =&gt; &quot;#{data[:ref]}&quot; }</span>
-<span class="lineno">494</span> <span class="sh">  # s.source       = { :svn =&gt; &#39;http://EXAMPLE/#{data[:name]}/tags/1.0.0&#39; }</span>
-<span class="lineno">495</span> <span class="sh">  # s.source       = { :hg  =&gt; &#39;http://EXAMPLE/#{data[:name]}&#39;, :revision =&gt; &#39;1.0.0&#39; }</span>
-<span class="lineno">496</span> 
-<span class="lineno">497</span> <span class="sh">  # If this Pod runs only on iOS or OS X, then specify the platform and</span>
-<span class="lineno">498</span> <span class="sh">  # the deployment target.</span>
-<span class="lineno">499</span> <span class="sh">  #</span>
-<span class="lineno">500</span> <span class="sh">  # s.platform     = :ios, &#39;5.0&#39;</span>
-<span class="lineno">501</span> <span class="sh">  # s.platform     = :ios</span>
-<span class="lineno">502</span> 
-<span class="lineno">503</span> <span class="sh">  # ――― MULTI-PLATFORM VALUES ――――――――――――――――――――――――――――――――――――――――――――――――― #</span>
-<span class="lineno">504</span> 
-<span class="lineno">505</span> <span class="sh">  # If this Pod runs on both platforms, then specify the deployment</span>
-<span class="lineno">506</span> <span class="sh">  # targets.</span>
-<span class="lineno">507</span> <span class="sh">  #</span>
-<span class="lineno">508</span> <span class="sh">  # s.ios.deployment_target = &#39;5.0&#39;</span>
-<span class="lineno">509</span> <span class="sh">  # s.osx.deployment_target = &#39;10.7&#39;</span>
-<span class="lineno">510</span> 
-<span class="lineno">511</span> <span class="sh">  # A list of file patterns which select the source files that should be</span>
-<span class="lineno">512</span> <span class="sh">  # added to the Pods project. If the pattern is a directory then the</span>
-<span class="lineno">513</span> <span class="sh">  # path will automatically have &#39;*.{h,m,mm,c,cpp}&#39; appended.</span>
-<span class="lineno">514</span> <span class="sh">  #</span>
-<span class="lineno">515</span> <span class="sh">  # Alternatively, you can use the FileList class for even more control</span>
-<span class="lineno">516</span> <span class="sh">  # over the selected files.</span>
-<span class="lineno">517</span> <span class="sh">  # (See http://rake.rubyforge.org/classes/Rake/FileList.html.)</span>
-<span class="lineno">518</span> <span class="sh">  #</span>
-<span class="lineno">519</span> <span class="sh">  s.source_files = &#39;Classes&#39;, &#39;Classes/**/*.{h,m}&#39;</span>
-<span class="lineno">520</span> 
-<span class="lineno">521</span> <span class="sh">  # A list of file patterns which select the header files that should be</span>
-<span class="lineno">522</span> <span class="sh">  # made available to the application. If the pattern is a directory then the</span>
-<span class="lineno">523</span> <span class="sh">  # path will automatically have &#39;*.h&#39; appended.</span>
-<span class="lineno">524</span> <span class="sh">  #</span>
-<span class="lineno">525</span> <span class="sh">  # Also allows the use of the FileList class like `source_files&#39; does.</span>
-<span class="lineno">526</span> <span class="sh">  #</span>
-<span class="lineno">527</span> <span class="sh">  # If you do not explicitly set the list of public header files,</span>
-<span class="lineno">528</span> <span class="sh">  # all headers of source_files will be made public.</span>
-<span class="lineno">529</span> <span class="sh">  #</span>
-<span class="lineno">530</span> <span class="sh">  # s.public_header_files = &#39;Classes/**/*.h&#39;</span>
-<span class="lineno">531</span> 
-<span class="lineno">532</span> <span class="sh">  # A list of resources included with the Pod. These are copied into the</span>
-<span class="lineno">533</span> <span class="sh">  # target bundle with a build phase script.</span>
-<span class="lineno">534</span> <span class="sh">  #</span>
-<span class="lineno">535</span> <span class="sh">  # Also allows the use of the FileList class like `source_files&#39; does.</span>
-<span class="lineno">536</span> <span class="sh">  #</span>
-<span class="lineno">537</span> <span class="sh">  # s.resource  = &quot;icon.png&quot;</span>
-<span class="lineno">538</span> <span class="sh">  # s.resources = &quot;Resources/*.png&quot;</span>
-<span class="lineno">539</span> 
-<span class="lineno">540</span> <span class="sh">  # A list of paths to preserve after installing the Pod.</span>
-<span class="lineno">541</span> <span class="sh">  # CocoaPods cleans by default any file that is not used.</span>
-<span class="lineno">542</span> <span class="sh">  # Please don&#39;t include documentation, example, and test files.</span>
-<span class="lineno">543</span> <span class="sh">  # Also allows the use of the FileList class like `source_files&#39; does.</span>
-<span class="lineno">544</span> <span class="sh">  #</span>
-<span class="lineno">545</span> <span class="sh">  # s.preserve_paths = &quot;FilesToSave&quot;, &quot;MoreFilesToSave&quot;</span>
-<span class="lineno">546</span> 
-<span class="lineno">547</span> <span class="sh">  # Specify a list of frameworks that the application needs to link</span>
-<span class="lineno">548</span> <span class="sh">  # against for this Pod to work.</span>
-<span class="lineno">549</span> <span class="sh">  #</span>
-<span class="lineno">550</span> <span class="sh">  # s.framework  = &#39;SomeFramework&#39;</span>
-<span class="lineno">551</span> <span class="sh">  # s.frameworks = &#39;SomeFramework&#39;, &#39;AnotherFramework&#39;</span>
-<span class="lineno">552</span> 
-<span class="lineno">553</span> <span class="sh">  # Specify a list of libraries that the application needs to link</span>
-<span class="lineno">554</span> <span class="sh">  # against for this Pod to work.</span>
-<span class="lineno">555</span> <span class="sh">  #</span>
-<span class="lineno">556</span> <span class="sh">  # s.library   = &#39;iconv&#39;</span>
-<span class="lineno">557</span> <span class="sh">  # s.libraries = &#39;iconv&#39;, &#39;xml2&#39;</span>
-<span class="lineno">558</span> 
-<span class="lineno">559</span> <span class="sh">  # If this Pod uses ARC, specify it like so.</span>
-<span class="lineno">560</span> <span class="sh">  #</span>
-<span class="lineno">561</span> <span class="sh">  # s.requires_arc = true</span>
-<span class="lineno">562</span> 
-<span class="lineno">563</span> <span class="sh">  # If you need to specify any other build settings, add them to the</span>
-<span class="lineno">564</span> <span class="sh">  # xcconfig hash.</span>
-<span class="lineno">565</span> <span class="sh">  #</span>
-<span class="lineno">566</span> <span class="sh">  # s.xcconfig = { &#39;HEADER_SEARCH_PATHS&#39; =&gt; &#39;$(SDKROOT)/usr/include/libxml2&#39; }</span>
+<span class="lineno">493</span> <span class="sh">  s.author       = { &quot;#{data[:author_name]}&quot; =&gt; &quot;#{data[:author_email]}&quot; }</span>
+<span class="lineno">494</span> <span class="sh">  # s.authors      = { &quot;#{data[:author_name]}&quot; =&gt; &quot;#{data[:author_email]}&quot;, &quot;other author&quot; =&gt; &quot;and email address&quot; }</span>
+<span class="lineno">495</span> <span class="sh">  #</span>
+<span class="lineno">496</span> <span class="sh">  # If absolutely no email addresses are available, then you can use this form instead.</span>
+<span class="lineno">497</span> <span class="sh">  #</span>
+<span class="lineno">498</span> <span class="sh">  # s.author       = &#39;#{data[:author_name]}&#39;, &#39;other author&#39;</span>
+<span class="lineno">499</span> 
+<span class="lineno">500</span> <span class="sh">  # Specify the location from where the source should be retrieved.</span>
+<span class="lineno">501</span> <span class="sh">  #</span>
+<span class="lineno">502</span> <span class="sh">  s.source       = { :git =&gt; &quot;#{data[:source_url]}&quot;, #{data[:ref_type]} =&gt; &quot;#{data[:ref]}&quot; }</span>
+<span class="lineno">503</span> <span class="sh">  # s.source       = { :svn =&gt; &#39;http://EXAMPLE/#{data[:name]}/tags/1.0.0&#39; }</span>
+<span class="lineno">504</span> <span class="sh">  # s.source       = { :hg  =&gt; &#39;http://EXAMPLE/#{data[:name]}&#39;, :revision =&gt; &#39;1.0.0&#39; }</span>
+<span class="lineno">505</span> 
+<span class="lineno">506</span> <span class="sh">  # If this Pod runs only on iOS or OS X, then specify the platform and</span>
+<span class="lineno">507</span> <span class="sh">  # the deployment target.</span>
+<span class="lineno">508</span> <span class="sh">  #</span>
+<span class="lineno">509</span> <span class="sh">  # s.platform     = :ios, &#39;5.0&#39;</span>
+<span class="lineno">510</span> <span class="sh">  # s.platform     = :ios</span>
+<span class="lineno">511</span> 
+<span class="lineno">512</span> <span class="sh">  # ――― MULTI-PLATFORM VALUES ――――――――――――――――――――――――――――――――――――――――――――――――― #</span>
+<span class="lineno">513</span> 
+<span class="lineno">514</span> <span class="sh">  # If this Pod runs on both platforms, then specify the deployment</span>
+<span class="lineno">515</span> <span class="sh">  # targets.</span>
+<span class="lineno">516</span> <span class="sh">  #</span>
+<span class="lineno">517</span> <span class="sh">  # s.ios.deployment_target = &#39;5.0&#39;</span>
+<span class="lineno">518</span> <span class="sh">  # s.osx.deployment_target = &#39;10.7&#39;</span>
+<span class="lineno">519</span> 
+<span class="lineno">520</span> <span class="sh">  # A list of file patterns which select the source files that should be</span>
+<span class="lineno">521</span> <span class="sh">  # added to the Pods project. If the pattern is a directory then the</span>
+<span class="lineno">522</span> <span class="sh">  # path will automatically have &#39;*.{h,m,mm,c,cpp}&#39; appended.</span>
+<span class="lineno">523</span> <span class="sh">  #</span>
+<span class="lineno">524</span> <span class="sh">  # Alternatively, you can use the FileList class for even more control</span>
+<span class="lineno">525</span> <span class="sh">  # over the selected files.</span>
+<span class="lineno">526</span> <span class="sh">  # (See http://rake.rubyforge.org/classes/Rake/FileList.html.)</span>
+<span class="lineno">527</span> <span class="sh">  #</span>
+<span class="lineno">528</span> <span class="sh">  s.source_files = &#39;Classes&#39;, &#39;Classes/**/*.{h,m}&#39;</span>
+<span class="lineno">529</span> 
+<span class="lineno">530</span> <span class="sh">  # A list of file patterns which select the header files that should be</span>
+<span class="lineno">531</span> <span class="sh">  # made available to the application. If the pattern is a directory then the</span>
+<span class="lineno">532</span> <span class="sh">  # path will automatically have &#39;*.h&#39; appended.</span>
+<span class="lineno">533</span> <span class="sh">  #</span>
+<span class="lineno">534</span> <span class="sh">  # Also allows the use of the FileList class like `source_files&#39; does.</span>
+<span class="lineno">535</span> <span class="sh">  #</span>
+<span class="lineno">536</span> <span class="sh">  # If you do not explicitly set the list of public header files,</span>
+<span class="lineno">537</span> <span class="sh">  # all headers of source_files will be made public.</span>
+<span class="lineno">538</span> <span class="sh">  #</span>
+<span class="lineno">539</span> <span class="sh">  # s.public_header_files = &#39;Classes/**/*.h&#39;</span>
+<span class="lineno">540</span> 
+<span class="lineno">541</span> <span class="sh">  # A list of resources included with the Pod. These are copied into the</span>
+<span class="lineno">542</span> <span class="sh">  # target bundle with a build phase script.</span>
+<span class="lineno">543</span> <span class="sh">  #</span>
+<span class="lineno">544</span> <span class="sh">  # Also allows the use of the FileList class like `source_files&#39; does.</span>
+<span class="lineno">545</span> <span class="sh">  #</span>
+<span class="lineno">546</span> <span class="sh">  # s.resource  = &quot;icon.png&quot;</span>
+<span class="lineno">547</span> <span class="sh">  # s.resources = &quot;Resources/*.png&quot;</span>
+<span class="lineno">548</span> 
+<span class="lineno">549</span> <span class="sh">  # A list of paths to preserve after installing the Pod.</span>
+<span class="lineno">550</span> <span class="sh">  # CocoaPods cleans by default any file that is not used.</span>
+<span class="lineno">551</span> <span class="sh">  # Please don&#39;t include documentation, example, and test files.</span>
+<span class="lineno">552</span> <span class="sh">  # Also allows the use of the FileList class like `source_files&#39; does.</span>
+<span class="lineno">553</span> <span class="sh">  #</span>
+<span class="lineno">554</span> <span class="sh">  # s.preserve_paths = &quot;FilesToSave&quot;, &quot;MoreFilesToSave&quot;</span>
+<span class="lineno">555</span> 
+<span class="lineno">556</span> <span class="sh">  # Specify a list of frameworks that the application needs to link</span>
+<span class="lineno">557</span> <span class="sh">  # against for this Pod to work.</span>
+<span class="lineno">558</span> <span class="sh">  #</span>
+<span class="lineno">559</span> <span class="sh">  # s.framework  = &#39;SomeFramework&#39;</span>
+<span class="lineno">560</span> <span class="sh">  # s.frameworks = &#39;SomeFramework&#39;, &#39;AnotherFramework&#39;</span>
+<span class="lineno">561</span> 
+<span class="lineno">562</span> <span class="sh">  # Specify a list of libraries that the application needs to link</span>
+<span class="lineno">563</span> <span class="sh">  # against for this Pod to work.</span>
+<span class="lineno">564</span> <span class="sh">  #</span>
+<span class="lineno">565</span> <span class="sh">  # s.library   = &#39;iconv&#39;</span>
+<span class="lineno">566</span> <span class="sh">  # s.libraries = &#39;iconv&#39;, &#39;xml2&#39;</span>
 <span class="lineno">567</span> 
-<span class="lineno">568</span> <span class="sh">  # Finally, specify any Pods that this Pod depends on.</span>
+<span class="lineno">568</span> <span class="sh">  # If this Pod uses ARC, specify it like so.</span>
 <span class="lineno">569</span> <span class="sh">  #</span>
-<span class="lineno">570</span> <span class="sh">  # s.dependency &#39;JSONKit&#39;, &#39;~&gt; 1.4&#39;</span>
-<span class="lineno">571</span> <span class="sh">end</span>
-<span class="lineno">572</span> <span class="no">  SPEC</span>
-<span class="lineno">573</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L440">lib/cocoapods/command/spec.rb:440</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_semantic_versioning_notice"><h2>semantic_versioning_notice</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">semantic_versioning_notice</span><span class="p">(</span><span class="n">repo_id</span><span class="p">,</span> <span class="n">repo</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">575</span> <span class="k">def</span> <span class="nf">semantic_versioning_notice</span><span class="p">(</span><span class="n">repo_id</span><span class="p">,</span> <span class="n">repo</span><span class="p">)</span>
-<span class="lineno">576</span>   <span class="k">return</span> <span class="o">&lt;&lt;-</span><span class="no">EOS</span>
-<span class="lineno">577</span> 
-<span class="lineno">578</span> <span class="sh">#{&#39;――― MARKDOWN TEMPLATE ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――&#39;.reversed}</span>
-<span class="lineno">579</span> 
-<span class="lineno">580</span> <span class="sh">I’ve recently added [#{repo}](https://github.com/CocoaPods/Specs/tree/master/#{repo}) to the [CocoaPods](https://github.com/CocoaPods/CocoaPods) package manager repo.</span>
-<span class="lineno">581</span> 
-<span class="lineno">582</span> <span class="sh">CocoaPods is a tool for managing dependencies for OSX and iOS Xcode projects and provides a central repository for iOS/OSX libraries. This makes adding libraries to a project and updating them extremely easy and it will help users to resolve dependencies of the libraries they use.</span>
-<span class="lineno">583</span> 
-<span class="lineno">584</span> <span class="sh">However, #{repo} doesn&#39;t have any version tags. I’ve added the current HEAD as version 0.0.1, but a version tag will make dependency resolution much easier.</span>
-<span class="lineno">585</span> 
-<span class="lineno">586</span> <span class="sh">[Semantic version](http://semver.org) tags (instead of plain commit hashes/revisions) allow for [resolution of cross-dependencies](https://github.com/CocoaPods/Specs/wiki/Cross-dependencies-resolution-example).</span>
-<span class="lineno">587</span> 
-<span class="lineno">588</span> <span class="sh">In case you didn’t know this yet; you can tag the current HEAD as, for instance, version 1.0.0, like so:</span>
-<span class="lineno">589</span> 
-<span class="lineno">590</span> <span class="sh">```</span>
-<span class="lineno">591</span> <span class="sh">$ git tag -a 1.0.0 -m &quot;Tag release 1.0.0&quot;</span>
-<span class="lineno">592</span> <span class="sh">$ git push --tags</span>
-<span class="lineno">593</span> <span class="sh">```</span>
+<span class="lineno">570</span> <span class="sh">  # s.requires_arc = true</span>
+<span class="lineno">571</span> 
+<span class="lineno">572</span> <span class="sh">  # If you need to specify any other build settings, add them to the</span>
+<span class="lineno">573</span> <span class="sh">  # xcconfig hash.</span>
+<span class="lineno">574</span> <span class="sh">  #</span>
+<span class="lineno">575</span> <span class="sh">  # s.xcconfig = { &#39;HEADER_SEARCH_PATHS&#39; =&gt; &#39;$(SDKROOT)/usr/include/libxml2&#39; }</span>
+<span class="lineno">576</span> 
+<span class="lineno">577</span> <span class="sh">  # Finally, specify any Pods that this Pod depends on.</span>
+<span class="lineno">578</span> <span class="sh">  #</span>
+<span class="lineno">579</span> <span class="sh">  # s.dependency &#39;JSONKit&#39;, &#39;~&gt; 1.4&#39;</span>
+<span class="lineno">580</span> <span class="sh">end</span>
+<span class="lineno">581</span> <span class="no">  SPEC</span>
+<span class="lineno">582</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L449">lib/cocoapods/command/spec.rb:449</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_semantic_versioning_notice"><h2>semantic_versioning_notice</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">semantic_versioning_notice</span><span class="p">(</span><span class="n">repo_id</span><span class="p">,</span> <span class="n">repo</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">584</span> <span class="k">def</span> <span class="nf">semantic_versioning_notice</span><span class="p">(</span><span class="n">repo_id</span><span class="p">,</span> <span class="n">repo</span><span class="p">)</span>
+<span class="lineno">585</span>   <span class="k">return</span> <span class="o">&lt;&lt;-</span><span class="no">EOS</span>
+<span class="lineno">586</span> 
+<span class="lineno">587</span> <span class="sh">#{&#39;――― MARKDOWN TEMPLATE ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――&#39;.reversed}</span>
+<span class="lineno">588</span> 
+<span class="lineno">589</span> <span class="sh">I’ve recently added [#{repo}](https://github.com/CocoaPods/Specs/tree/master/#{repo}) to the [CocoaPods](https://github.com/CocoaPods/CocoaPods) package manager repo.</span>
+<span class="lineno">590</span> 
+<span class="lineno">591</span> <span class="sh">CocoaPods is a tool for managing dependencies for OSX and iOS Xcode projects and provides a central repository for iOS/OSX libraries. This makes adding libraries to a project and updating them extremely easy and it will help users to resolve dependencies of the libraries they use.</span>
+<span class="lineno">592</span> 
+<span class="lineno">593</span> <span class="sh">However, #{repo} doesn&#39;t have any version tags. I’ve added the current HEAD as version 0.0.1, but a version tag will make dependency resolution much easier.</span>
 <span class="lineno">594</span> 
-<span class="lineno">595</span> <span class="sh">#{&#39;――― TEMPLATE END ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――&#39;.reversed}</span>
+<span class="lineno">595</span> <span class="sh">[Semantic version](http://semver.org) tags (instead of plain commit hashes/revisions) allow for [resolution of cross-dependencies](https://github.com/CocoaPods/Specs/wiki/Cross-dependencies-resolution-example).</span>
 <span class="lineno">596</span> 
-<span class="lineno">597</span> <span class="sh">#{&#39;[!] This repo does not appear to have semantic version tags.&#39;.yellow}</span>
+<span class="lineno">597</span> <span class="sh">In case you didn’t know this yet; you can tag the current HEAD as, for instance, version 1.0.0, like so:</span>
 <span class="lineno">598</span> 
-<span class="lineno">599</span> <span class="sh">After commiting the specification, consider opening a ticket with the template displayed above:</span>
-<span class="lineno">600</span> <span class="sh">  - link:  https://github.com/#{repo_id}/issues/new</span>
-<span class="lineno">601</span> <span class="sh">  - title: Please add semantic version tags</span>
-<span class="lineno">602</span> <span class="no">  EOS</span>
-<span class="lineno">603</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L575">lib/cocoapods/command/spec.rb:575</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_class_options"><h2>options<a class="select-tab" href=""><span class="label label-big">class method</span></a><a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">options</span> <span class="c1">#=&gt; undefined</span>
+<span class="lineno">599</span> <span class="sh">```</span>
+<span class="lineno">600</span> <span class="sh">$ git tag -a 1.0.0 -m &quot;Tag release 1.0.0&quot;</span>
+<span class="lineno">601</span> <span class="sh">$ git push --tags</span>
+<span class="lineno">602</span> <span class="sh">```</span>
+<span class="lineno">603</span> 
+<span class="lineno">604</span> <span class="sh">#{&#39;――― TEMPLATE END ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――&#39;.reversed}</span>
+<span class="lineno">605</span> 
+<span class="lineno">606</span> <span class="sh">#{&#39;[!] This repo does not appear to have semantic version tags.&#39;.yellow}</span>
+<span class="lineno">607</span> 
+<span class="lineno">608</span> <span class="sh">After commiting the specification, consider opening a ticket with the template displayed above:</span>
+<span class="lineno">609</span> <span class="sh">  - link:  https://github.com/#{repo_id}/issues/new</span>
+<span class="lineno">610</span> <span class="sh">  - title: Please add semantic version tags</span>
+<span class="lineno">611</span> <span class="no">  EOS</span>
+<span class="lineno">612</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command/spec.rb#L584">lib/cocoapods/command/spec.rb:584</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/functional/command/spec_spec.rb">spec/functional/command/spec_spec.rb</a></p></div><div class="tab-pane" id="tab_class_options"><h2>options<a class="select-tab" href=""><span class="label label-big">class method</span></a><a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">options</span> <span class="c1">#=&gt; undefined</span>
 </pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">15</span> <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">options</span>
 <span class="lineno">16</span>   <span class="o">[</span>
 <span class="lineno">17</span>     <span class="o">[</span><span class="s1">&#39;--silent&#39;</span><span class="p">,</span>   <span class="s1">&#39;Show nothing&#39;</span><span class="o">]</span><span class="p">,</span>
@@ -334,51 +341,52 @@ set.</p>
 </pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">22</span> <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
 <span class="lineno">23</span>   <span class="n">command</span> <span class="o">=</span> <span class="k">super</span>
 <span class="lineno">24</span>   <span class="k">unless</span> <span class="no">SourcesManager</span><span class="o">.</span><span class="n">master_repo_functional?</span> <span class="o">||</span> <span class="n">command</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Setup</span><span class="p">)</span> <span class="o">||</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;SKIP_SETUP&#39;</span><span class="o">]</span>
-<span class="lineno">25</span>     <span class="no">Setup</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">CLAide</span><span class="o">::</span><span class="no">ARGV</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">[]</span><span class="p">))</span><span class="o">.</span><span class="n">run</span>
+<span class="lineno">25</span>     <span class="no">Setup</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">CLAide</span><span class="p">:</span><span class="ss">:ARGV</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">[]</span><span class="p">))</span><span class="o">.</span><span class="n">run</span>
 <span class="lineno">26</span>   <span class="k">end</span>
 <span class="lineno">27</span>   <span class="n">command</span>
 <span class="lineno">28</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L22">lib/cocoapods/command.rb:22</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_class_run"><h2>run<a class="select-tab" href=""><span class="label label-big">class method</span></a><a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">run</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
 </pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">30</span> <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
-<span class="lineno">31</span>   <span class="n">argv</span> <span class="o">=</span> <span class="no">CLAide</span><span class="o">::</span><span class="no">ARGV</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+<span class="lineno">31</span>   <span class="n">argv</span> <span class="o">=</span> <span class="ss">CLAide</span><span class="p">:</span><span class="ss">:ARGV</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
 <span class="lineno">32</span>   <span class="k">if</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;version&#39;</span><span class="p">)</span>
 <span class="lineno">33</span>     <span class="nb">puts</span> <span class="no">VERSION</span>
 <span class="lineno">34</span>     <span class="nb">exit!</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="lineno">35</span>   <span class="k">end</span>
 <span class="lineno">36</span>   <span class="k">super</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
-<span class="lineno">37</span> <span class="k">end</span>
+<span class="lineno">37</span>   <span class="no">UI</span><span class="o">.</span><span class="n">print_warnings</span>
+<span class="lineno">38</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L30">lib/cocoapods/command.rb:30</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_class_report_error"><h2>report_error<a class="select-tab" href=""><span class="label label-big">class method</span></a><a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">report_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">39</span> <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">report_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-<span class="lineno">40</span>   <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Interrupt</span><span class="p">)</span>
-<span class="lineno">41</span>     <span class="nb">puts</span> <span class="s2">&quot;[!] Cancelled&quot;</span><span class="o">.</span><span class="n">red</span>
-<span class="lineno">42</span>     <span class="no">Config</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">verbose?</span> <span class="p">?</span> <span class="k">raise</span> <span class="p">:</span> <span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="lineno">43</span>   <span class="k">else</span>
-<span class="lineno">44</span>     <span class="nb">puts</span> <span class="no">UI</span><span class="o">::</span><span class="no">ErrorReport</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-<span class="lineno">45</span>     <span class="nb">exit</span> <span class="mi">1</span>
-<span class="lineno">46</span>   <span class="k">end</span>
-<span class="lineno">47</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L39">lib/cocoapods/command.rb:39</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_initialize"><h2>initialize<a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Command </span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">40</span> <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">report_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+<span class="lineno">41</span>   <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Interrupt</span><span class="p">)</span>
+<span class="lineno">42</span>     <span class="nb">puts</span> <span class="s2">&quot;[!] Cancelled&quot;</span><span class="o">.</span><span class="n">red</span>
+<span class="lineno">43</span>     <span class="no">Config</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">verbose?</span> <span class="p">?</span> <span class="k">raise</span> <span class="p">:</span> <span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="lineno">44</span>   <span class="k">else</span>
+<span class="lineno">45</span>     <span class="nb">puts</span> <span class="ss">UI</span><span class="p">:</span><span class="ss">:ErrorReport</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+<span class="lineno">46</span>     <span class="nb">exit</span> <span class="mi">1</span>
+<span class="lineno">47</span>   <span class="k">end</span>
+<span class="lineno">48</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L40">lib/cocoapods/command.rb:40</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_initialize"><h2>initialize<a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="kp">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="c1">#=&gt; Command </span>
 </pre></div><h4>Returns</h4><p><code><a href="../index.html">Command</a></code> A new instance of Command
-</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">54</span> <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
-<span class="lineno">55</span>   <span class="n">config</span><span class="o">.</span><span class="n">silent</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;silent&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">silent</span><span class="p">)</span>
-<span class="lineno">56</span>   <span class="n">config</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;verbose&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">verbose?</span><span class="p">)</span>
-<span class="lineno">57</span>   <span class="nb">String</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="ss">:define_method</span><span class="p">,</span> <span class="ss">:colorize</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">string</span> <span class="p">,</span> <span class="n">_</span><span class="o">|</span> <span class="n">string</span> <span class="p">}</span> <span class="k">unless</span> <span class="nb">self</span><span class="o">.</span><span class="n">colorize_output?</span>
-<span class="lineno">58</span>   <span class="k">super</span>
-<span class="lineno">59</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L54">lib/cocoapods/command.rb:54</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_verify_podfile_exists_bang"><h2>verify_podfile_exists!<a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">verify_podfile_exists!</span> <span class="c1">#=&gt; void </span>
-</pre></div><h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">73</span> <span class="k">def</span> <span class="nf">verify_podfile_exists!</span>
-<span class="lineno">74</span>   <span class="k">unless</span> <span class="n">config</span><span class="o">.</span><span class="n">podfile</span>
-<span class="lineno">75</span>     <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;No `Podfile&#39; found in the current working directory.&quot;</span>
-<span class="lineno">76</span>   <span class="k">end</span>
-<span class="lineno">77</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L73">lib/cocoapods/command.rb:73</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_verify_lockfile_exists_bang"><h2>verify_lockfile_exists!<a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">verify_lockfile_exists!</span> <span class="c1">#=&gt; void </span>
-</pre></div><h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">85</span> <span class="k">def</span> <span class="nf">verify_lockfile_exists!</span>
-<span class="lineno">86</span>   <span class="k">unless</span> <span class="n">config</span><span class="o">.</span><span class="n">lockfile</span>
-<span class="lineno">87</span>     <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;No `Podfile.lock&#39; found in the current working directory, run `pod install&#39;.&quot;</span>
-<span class="lineno">88</span>   <span class="k">end</span>
-<span class="lineno">89</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L85">lib/cocoapods/command.rb:85</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_config"><h2>config<a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">config</span> <span class="c1">#=&gt; undefined</span>
-</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">233</span> <span class="k">def</span> <span class="nf">config</span>
-<span class="lineno">234</span>   <span class="no">Config</span><span class="o">.</span><span class="n">instance</span>
-<span class="lineno">235</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/config.rb#L233">lib/cocoapods/config.rb:233</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/config_spec.rb">spec/unit/config_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">55</span> <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+<span class="lineno">56</span>   <span class="n">config</span><span class="o">.</span><span class="n">silent</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;silent&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">silent</span><span class="p">)</span>
+<span class="lineno">57</span>   <span class="n">config</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">argv</span><span class="o">.</span><span class="n">flag?</span><span class="p">(</span><span class="s1">&#39;verbose&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">verbose?</span><span class="p">)</span>
+<span class="lineno">58</span>   <span class="nb">String</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="ss">:define_method</span><span class="p">,</span> <span class="ss">:colorize</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">string</span> <span class="p">,</span> <span class="n">_</span><span class="o">|</span> <span class="n">string</span> <span class="p">}</span> <span class="k">unless</span> <span class="nb">self</span><span class="o">.</span><span class="n">colorize_output?</span>
+<span class="lineno">59</span>   <span class="k">super</span>
+<span class="lineno">60</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L55">lib/cocoapods/command.rb:55</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_verify_podfile_exists_bang"><h2>verify_podfile_exists!<a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">verify_podfile_exists!</span> <span class="c1">#=&gt; void </span>
+</pre></div><h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">74</span> <span class="k">def</span> <span class="nf">verify_podfile_exists!</span>
+<span class="lineno">75</span>   <span class="k">unless</span> <span class="n">config</span><span class="o">.</span><span class="n">podfile</span>
+<span class="lineno">76</span>     <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;No `Podfile&#39; found in the current working directory.&quot;</span>
+<span class="lineno">77</span>   <span class="k">end</span>
+<span class="lineno">78</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L74">lib/cocoapods/command.rb:74</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_verify_lockfile_exists_bang"><h2>verify_lockfile_exists!<a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">verify_lockfile_exists!</span> <span class="c1">#=&gt; void </span>
+</pre></div><h4>Returns</h4><p><code>void</code> </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">86</span> <span class="k">def</span> <span class="nf">verify_lockfile_exists!</span>
+<span class="lineno">87</span>   <span class="k">unless</span> <span class="n">config</span><span class="o">.</span><span class="n">lockfile</span>
+<span class="lineno">88</span>     <span class="k">raise</span> <span class="no">Informative</span><span class="p">,</span> <span class="s2">&quot;No `Podfile.lock&#39; found in the current working directory, run `pod install&#39;.&quot;</span>
+<span class="lineno">89</span>   <span class="k">end</span>
+<span class="lineno">90</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/command.rb#L86">lib/cocoapods/command.rb:86</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/command_spec.rb">spec/unit/command_spec.rb</a></p></div><div class="tab-pane" id="tab_config"><h2>config<a class="select-tab" href=""><span class="label label-big">inherited</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">config</span> <span class="c1">#=&gt; undefined</span>
+</pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">231</span> <span class="k">def</span> <span class="nf">config</span>
+<span class="lineno">232</span>   <span class="no">Config</span><span class="o">.</span><span class="n">instance</span>
+<span class="lineno">233</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/config.rb#L231">lib/cocoapods/config.rb:231</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/config_spec.rb">spec/unit/config_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>

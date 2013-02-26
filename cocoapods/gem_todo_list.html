@@ -1,80 +1,51 @@
 <!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>CocoaPods</title><link href="../favicon.ico" rel="icon" type="image/ico" /><link href="../css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="../css/style2-21e98761.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../js/bootstrap-308e23ce.js" type="text/javascript"></script>
+<link href="../css/style2-b98e7dcd.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../js/bootstrap-308e23ce.js" type="text/javascript"></script>
 <script src="../js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
 <script src="../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../index.html">Docs</a><span class="divider">/</span></li><li><a href="index.html">CocoaPods</a><span class="divider">/</span></li><li class="active">CocoaPods</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><div id="content-container"><h2>CocoaPods Todos</h2><h4><a href="/cocoapods/pod/command#initialize/index.html">Pod::Command#initialize</a></h4><div class="alert"><i class="icon-warning-sign"></i> If a command is run inside another one some settings which where
 true might return false.
 </div><div class="alert"><i class="icon-warning-sign"></i> We should probably not even load colored unless needed.
 </div><h4><a href="/cocoapods/pod/command/push#add_specs_to_repo/index.html">Pod::Command::Push#add_specs_to_repo</a></h4><div class="alert"><i class="icon-warning-sign"></i> Raise if the source is not under git source control.
+</div><h4><a href="/cocoapods/pod/command/spec#default_data_for_template/index.html">Pod::Command::Spec#default_data_for_template</a></h4><div class="alert"><i class="icon-warning-sign"></i> It would be nice to have a template class that accepts options
+and uses the default ones if not provided.
+</div><div class="alert"><i class="icon-warning-sign"></i> The template is outdated.
+</div><h4><a href="/cocoapods/pod/coreui#class_puts/index.html">Pod::CoreUI::puts</a></h4><div class="alert"><i class="icon-warning-sign"></i> Enable in CocoaPods 0.17.0 release
 </div><h4><a href="/cocoapods/pod/coreui#class_warn/index.html">Pod::CoreUI::warn</a></h4><div class="alert"><i class="icon-warning-sign"></i> Enable in CocoaPods 0.17.0 release
 </div><h4><a href="/cocoapods/pod/executable#class_execute_command/index.html">Pod::Executable::execute_command</a></h4><div class="alert"><i class="icon-warning-sign"></i> Find a way to display the live output of the commands.
-</div><h4><a href="/cocoapods/pod/externalsources/abstractexternalsource#store_podspec/index.html">Pod::ExternalSources::AbstractExternalSource#store_podspec</a></h4><div class="alert"><i class="icon-warning-sign"></i> This could be done by the sandbox.
-</div><div class="alert"><i class="icon-warning-sign"></i> Store all the specifications (including those not originating
-from external sources) so users can check them.
-</div><div class="alert"><i class="icon-warning-sign"></i> The check for the podspec string is a bit primitive.
 </div><h4><a href="/cocoapods/pod/generator/documentation#generate/index.html">Pod::Generator::Documentation#generate</a></h4><div class="alert"><i class="icon-warning-sign"></i> Passing the files explicitly clutters output and chokes on very
 long list (AWSiOSSDK).  It is possible to just pass the dir of
 the pod, however this would include other files like demo
 projects.
+</div><h4><a href="/cocoapods/pod/generator/documentation#company/index.html">Pod::Generator::Documentation#company</a></h4><div class="alert"><i class="icon-warning-sign"></i> Set to CocoaPods?
 </div><h4><a href="/cocoapods/pod/generator/prefixheader#generate/index.html">Pod::Generator::PrefixHeader#generate</a></h4><div class="alert"><i class="icon-warning-sign"></i> Subspecs can specify prefix header information too.
-</div><h4><a href="/cocoapods/pod/installer#generate_local_pods/index.html">Pod::Installer#generate_local_pods</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#535] LocalPods should resolve the path of the specifications
-passing the library as arguments.
-</div><div class="alert"><i class="icon-warning-sign"></i> Why the local pods are generated by the sandbox? I guess because
-some where pre-downloaded? However the sandbox should just store
-the name of those Pods.
-</div><h4><a href="/cocoapods/pod/installer#generate_names_of_pods_to_install/index.html">Pod::Installer#generate_names_of_pods_to_install</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#534] Detect if the folder of a Pod is empty (even if it exits).
-</div><div class="alert"><i class="icon-warning-sign"></i> There could be issues with the current implementation regarding
-external specs.
-</div><h4><a href="/cocoapods/pod/installer#prepare_sandbox/index.html">Pod::Installer#prepare_sandbox</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#247] Clean the headers of only the pods to install.
-</div><div class="alert"><i class="icon-warning-sign"></i> [#534] Clean all the Pods folder that are not unchanged
-</div><div class="alert"><i class="icon-warning-sign"></i> Use the local pod implode.
-</div><div class="alert"><i class="icon-warning-sign"></i> Clean the podspecs of all the pods that aren&#39;t unchanged so the
-resolution process doesn&#39;t get confused by them.
+</div><h4><a href="/cocoapods/pod/installer#clean_sandbox/index.html">Pod::Installer#clean_sandbox</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#247] Clean the headers of only the pods to install.
 </div><h4><a href="/cocoapods/pod/installer#prepare_pods_project/index.html">Pod::Installer#prepare_pods_project</a></h4><div class="alert"><i class="icon-warning-sign"></i> Clean and modify the project if it exists.
-</div><h4><a href="/cocoapods/pod/installer#add_file_references_to_pods_project/index.html">Pod::Installer#add_file_references_to_pods_project</a></h4><div class="alert"><i class="icon-warning-sign"></i> Clean the groups of the deleted Pods and add only the Pods that
-should be installed.
-</div><h4><a href="/cocoapods/pod/installer#run_pre_install_hooks/index.html">Pod::Installer#run_pre_install_hooks</a></h4><div class="alert"><i class="icon-warning-sign"></i> Run the hooks only for the installed pods.
-</div><div class="alert"><i class="icon-warning-sign"></i> Print a message with the names of the specs.
-</div><h4><a href="/cocoapods/pod/installer#run_post_install_hooks/index.html">Pod::Installer#run_post_install_hooks</a></h4><div class="alert"><i class="icon-warning-sign"></i> Run the hooks only for the installed pods.
-</div><div class="alert"><i class="icon-warning-sign"></i> Print a message with the names of the specs.
+</div><h4><a href="/cocoapods/pod/installer#write_lockfiles/index.html">Pod::Installer#write_lockfiles</a></h4><div class="alert"><i class="icon-warning-sign"></i> Pass the checkout options to the Lockfile.
 </div><h4><a href="/cocoapods/pod/installer#integrate_user_project/index.html">Pod::Installer#integrate_user_project</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#397] The libraries should be cleaned and the re-added on every
 installation. Maybe a clean_user_project phase should be added.
 In any case it appears to be a good idea store target definition
 information in the lockfile.
-</div><div class="alert"><i class="icon-warning-sign"></i> [#588] The resources should be added through a build phase
-instead of using a script.
-</div><h4><a href="/cocoapods/pod/installer#download_pod/index.html">Pod::Installer#download_pod</a></h4><div class="alert"><i class="icon-warning-sign"></i> Store the source of non specific downloads in the lockfile.
 </div><h4><a href="/cocoapods/pod/installer/analyzer#generate_podfile_state/index.html">Pod::Installer::Analyzer#generate_podfile_state</a></h4><div class="alert"><i class="icon-warning-sign"></i> [CocoaPods &gt; 0.18] If there isn&#39;t a Lockfile all the Pods should
 be marked as added.
-</div><h4><a href="/cocoapods/pod/installer/analyzer#generate_sandbox_state/index.html">Pod::Installer::Analyzer#generate_sandbox_state</a></h4><div class="alert"><i class="icon-warning-sign"></i> [CocoaPods &gt; 0.18] Version 0.17 falls back to the lockfile of the
-Podfile for the sandbox manifest to prevent the full
-re-installation for upgrading users (this was the old behaviour
-pre sandbox manifest) of all the pods. Drop in 0.18.
 </div><h4><a href="/cocoapods/pod/installer/analyzer#compute_platform_for_target_definition/index.html">Pod::Installer::Analyzer#compute_platform_for_target_definition</a></h4><div class="alert"><i class="icon-warning-sign"></i> Is assigning the platform to the target definition the best way
 to go?
-</div><h4><a href="/cocoapods/pod/installer/targetinstaller#prefix_header_filename/index.html">Pod::Installer::TargetInstaller#prefix_header_filename</a></h4><div class="alert"><i class="icon-warning-sign"></i> This has to be removed, but this means the specs have to be
-updated if they need a reference to the prefix header.
+</div><h4><a href="/cocoapods/pod/installer/analyzer/sandboxanalyzer#lockfile/index.html">Pod::Installer::Analyzer::SandboxAnalyzer#lockfile</a></h4><div class="alert"><i class="icon-warning-sign"></i> Remove for CP 0.18.
 </div><h4><a href="/cocoapods/pod/installer/targetinstaller#add_target/index.html">Pod::Installer::TargetInstaller#add_target</a></h4><div class="alert"><i class="icon-warning-sign"></i> Add integration test for build configurations and don&#39;t add the
 build configurations to the project if they are not needed.
-</div><h4><a href="/cocoapods/pod/installer/userprojectintegrator#project_root/index.html">Pod::Installer::UserProjectIntegrator#project_root</a></h4><div class="alert"><i class="icon-warning-sign"></i> This is only used to compute the workspace path in case that it
+</div><h4><a href="/cocoapods/pod/installer/userprojectintegrator#installation_root/index.html">Pod::Installer::UserProjectIntegrator#installation_root</a></h4><div class="alert"><i class="icon-warning-sign"></i> This is only used to compute the workspace path in case that it
 should be inferred by the project. If the workspace should be in
 the same dir of the project, this could be removed.
 </div><h4><a href="/cocoapods/pod/installer/userprojectintegrator#initialize/index.html">Pod::Installer::UserProjectIntegrator#initialize</a></h4><div class="alert"><i class="icon-warning-sign"></i> Too many initialization arguments
 </div><h4><a href="/cocoapods/pod/installer/userprojectintegrator/targetintegrator#add_xcconfig_base_configuration/index.html">Pod::Installer::UserProjectIntegrator::TargetIntegrator#add_xcconfig_base_configuration</a></h4><div class="alert"><i class="icon-warning-sign"></i> If the xcconfig is already set don&#39;t override it and inform
 the user.
-</div><h4><a href="/cocoapods/pod/localpod#initialize/index.html">Pod::LocalPod#initialize</a></h4><div class="alert"><i class="icon-warning-sign"></i> The local pod should be initialized with all the activated
-specifications passed as an array, in order to be able to cache the
-computed values. In other words, it should be immutable.
-</div><h4><a href="/cocoapods/pod/localpod#clean_bang/index.html">Pod::LocalPod#clean!</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#529] Podspecs should not be preserved anymore to prevent user
-confusion. Currently we are copying the ones form external sources
-in <code>Local Podspecs</code> and this feature is not needed anymore.
-I think that copying all the used podspecs would be helpful for
-debugging.
-</div><h4><a href="/cocoapods/pod/localpod#header_mappings/index.html">Pod::LocalPod#header_mappings</a></h4><div class="alert"><i class="icon-warning-sign"></i> This is being overridden in the RestKit 0.9.4 spec and that
-override should be fixed.
-</div><h4><a href="/cocoapods/pod/localpod#expanded_paths/index.html">Pod::LocalPod#expanded_paths</a></h4><div class="alert"><i class="icon-warning-sign"></i> Implement case insensitive search
+</div><h4><a href="/cocoapods/pod/sandbox#specifications_dir/index.html">Pod::Sandbox#specifications_dir</a></h4><div class="alert"><i class="icon-warning-sign"></i> Migrate old installations and store the for all the pods.
+Two folders should be created <code>External Sources</code> and <code>Podspecs</code>.
+</div><h4><a href="/cocoapods/pod/sandbox#store_podspec/index.html">Pod::Sandbox#store_podspec</a></h4><div class="alert"><i class="icon-warning-sign"></i> Store all the specifications (including those not originating
+from external sources) so users can check them.
+</div><h4><a href="/cocoapods/pod/sandbox/fileaccessor#glob_for_attribute/index.html">Pod::Sandbox::FileAccessor#glob_for_attribute</a></h4><div class="alert"><i class="icon-warning-sign"></i> Move to the cocoapods-core so it appears in the docs?
+</div><h4><a href="/cocoapods/pod/sandbox/fileaccessor#expanded_paths/index.html">Pod::Sandbox::FileAccessor#expanded_paths</a></h4><div class="alert"><i class="icon-warning-sign"></i> Implement case insensitive search
 </div><h4><a href="/cocoapods/pod/userinterface#class_section/index.html">Pod::UserInterface::section</a></h4><div class="alert"><i class="icon-warning-sign"></i> Refactor to title (for always visible titles like search)
 and sections (titles that represent collapsible sections).
 </div><h4><a href="/cocoapods/pod/userinterface#class_message/index.html">Pod::UserInterface::message</a></h4><div class="alert"><i class="icon-warning-sign"></i> Clean interface.
-</div></div></div><div id="footer"><hr /><p class="note">Generated for CocoaPods Core HEAD.</p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
+</div></div></div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
