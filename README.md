@@ -7,10 +7,10 @@ User and developer documentation for CocoaPods.
 
 This application gathers information from the following sources:
 
-- Guides: https://github.com/CocoaPods/cocoapods.github.com/tree/develop/guides
-- Podfile: https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/dsl.rb
-- Specification: https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb
-- Command Line: https://github.com/CocoaPods/CocoaPods/tree/master/lib/cocoapods/command
+- [Podfile](https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/dsl.rb)
+- [Specification](https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb)
+- [Command Line](https://github.com/CocoaPods/CocoaPods/tree/master/lib/cocoapods/command)
+- [Guides](https://github.com/CocoaPods/cocoapods.github.com/tree/develop/source/guides)
 
 If you find any area which could be improved, pull requests are welcome and
 make good karma.
