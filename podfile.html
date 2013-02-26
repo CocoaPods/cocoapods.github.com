@@ -36,4 +36,191 @@ settings.</p>
 installation process.</p>
 
 <p>Hooks are <strong>global</strong> and not stored per target definition.</p>
-</div></div></div></div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
+</div><div class="tab-pane" id="tab_pod"><h2>pod</h2><p>Specifies a dependency of the project.</p>
+
+<p>A dependency requirement is defined by the name of the Pod and
+optionally a list of version requirements.</p>
+
+<hr>
+
+<p>When starting out with a project it is likely that you will want to use
+the latest version of a Pod. If this is the case, simply omit the
+version requirements.</p>
+<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;SSZipArchive&#39;</span>
+</pre></div>
+<p>Later on in the project you may want to freeze to a specific version of
+a Pod, in which case you can specify that version number.</p>
+<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;Objection&#39;</span><span class="p">,</span> <span class="s1">&#39;0.9&#39;</span>
+</pre></div>
+<p>Besides no version, or a specific one, it is also possible to use
+operators:</p>
+
+<ul>
+<li><code>&gt; 0.1</code>    Any version higher than 0.1</li>
+<li><code>&gt;= 0.1</code>   Version 0.1 and any higher version</li>
+<li><code>&lt; 0.1</code>    Any version lower than 0.1</li>
+<li><code>&lt;= 0.1</code>   Version 0.1 and any lower version</li>
+<li><code>~&gt; 0.1.2</code> Version 0.1.2 and the versions up to 0.2, not including 0.2</li>
+</ul>
+
+<p>A list of version requirements can be specified for even more fine
+grained control.</p>
+
+<p>For more information, regarding versioning policy, see:</p>
+
+<ul>
+<li><a href="http://semver.org">Semantic Versioning</a></li>
+<li><a href="http://docs.rubygems.org/read/chapter/7">RubyGems Versioning Policies</a></li>
+</ul>
+
+<p>Finally, instead of a version, you can specify the <code>:head</code> flag. This
+will use the pod’s latest version spec version, but force the download
+of the ‘bleeding edge’ version. Use this with caution, as the spec
+might not be compatible anymore.</p>
+<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;Objection&#39;</span><span class="p">,</span> <span class="ss">:head</span>
+</pre></div>
+<hr>
+
+<p>Dependencies can be obtained also from external sources.</p>
+
+<h3>From a podspec in the root of a library repo.</h3>
+
+<p>Sometimes you may want to use the bleeding edge version of a Pod. Or a
+specific revision. If this is the case, you can specify that with your
+pod declaration.</p>
+
+<p>To use the <code>master</code> branch of the repo:</p>
+<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/gowalla/AFNetworking.git&#39;</span>
+</pre></div>
+<p>Or specify a commit:</p>
+<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/gowalla/AFNetworking.git&#39;</span><span class="p">,</span> <span class="ss">:commit</span> <span class="o">=&gt;</span> <span class="s1">&#39;082f8319af&#39;</span>
+</pre></div>
+<p>Or specify a local folder in the machine:</p>
+<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="ss">:local</span> <span class="o">=&gt;</span> <span class="s1">&#39;~/Documents/AFNetworking&#39;</span>
+</pre></div>
+<p>It is important to note, though, that this means that the version will
+have to satisfy any other dependencies on the Pod by other Pods.</p>
+
+<p>The <code>podspec</code> file is expected to be in the root of the repo, if this
+library does not have a <code>podspec</code> file in its repo yet, you will have
+to use one of the approaches outlined in the sections below.</p>
+
+<h3>From a podspec outside a spec repo, for a library without podspec.</h3>
+
+<p>If a podspec is available from another source outside of the library’s
+repo. Consider, for instance, a podspec available via HTTP:</p>
+<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;JSONKit&#39;</span><span class="p">,</span> <span class="ss">:podspec</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://raw.github.com/gist/1346394/1d26570f68ca27377a27430c65841a0880395d72/JSONKit.podspec&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_podspec"><h2>podspec</h2><p>Use the dependencies of a Pod defined in the given podspec file. If no
+arguments are passed the first podspec in the root of the Podfile is
+used. It is intended to be used by the project of a library.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">podspec</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">podspec</span> <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s1">&#39;QuickDialog&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">podspec</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s1">&#39;/Documents/PrettyKit/PrettyKit.podspec&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_target"><h2>target</h2><p>Defines a new static library target and scopes dependencies defined from
+the given block. The target will by default include the dependencies
+defined outside of the block, unless the <code>:exclusive =&gt; true</code> option is
+given.</p>
+
+<hr>
+
+<p>The Podfile creates a global target named <code>:default</code> which produces the
+<code>libPods.a</code> file. This target is linked with the first target of user
+project if not value is specified for the <code>link_with</code> attribute.</p>
+<hr /><h3>Examples:</h3><p>Defining a target</p><div class="highlight"><pre><span class="n">target</span> <span class="ss">:ZipApp</span> <span class="k">do</span>
+  <span class="n">pod</span> <span class="s1">&#39;SSZipArchive&#39;</span>
+<span class="k">end</span>
+</pre></div><p>Defining an exclusive target</p><div class="highlight"><pre><span class="n">target</span> <span class="ss">:ZipApp</span> <span class="k">do</span>
+  <span class="n">pod</span> <span class="s1">&#39;SSZipArchive&#39;</span>
+  <span class="n">target</span> <span class="ss">:test</span><span class="p">,</span> <span class="ss">:exclusive</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">&#39;JSONKit&#39;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></div><div class="tab-pane" id="tab_platform"><h2>platform</h2><p>Specifies the platform for which a static library should be build.</p>
+
+<hr>
+
+<p>CocoaPods provides a default deployment target if one is not specified.
+The current default values are <code>4.3</code> for iOS and <code>10.6</code> for OS X.</p>
+
+<hr>
+
+<p>If the deployment target requires it (iOS &lt; <code>4.3</code>), <code>armv6</code>
+architecture will be added to <code>ARCHS</code>.</p>
+<hr /><h3>Examples:</h3><p>Specifying the platform</p><div class="highlight"><pre><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s2">&quot;4.0&quot;</span>
+<span class="n">platform</span> <span class="ss">:ios</span>
+</pre></div></div><div class="tab-pane" id="tab_xcodeproj"><h2>xcodeproj</h2><p>Specifies the Xcode project that contains the target that the Pods library
+should be linked with.</p>
+
+<hr>
+
+<p>If no explicit project is specified, it will use the Xcode project of
+the parent target. If none of the target definitions specify an
+explicit project and there is only <strong>one</strong> project in the same
+directory as the Podfile then that project will be used.</p>
+<hr /><h3>Examples:</h3><p>Specifying the user project</p><div class="highlight"><pre><span class="c1"># Look for target to link with in an Xcode project called</span>
+<span class="c1"># `MyProject.xcodeproj`.</span>
+<span class="n">xcodeproj</span> <span class="sb">`MyProject`</span>
+
+<span class="n">target</span> <span class="ss">:test</span> <span class="k">do</span>
+  <span class="c1"># This Pods library links with a target in another project.</span>
+  <span class="n">xcodeproj</span> <span class="sb">`TestProject`</span>
+<span class="k">end</span>
+</pre></div></div><div class="tab-pane" id="tab_link_with"><h2>link_with</h2><p>Specifies the target(s) in the user’s project that this Pods library
+should be linked in.</p>
+
+<hr>
+
+<p>If no explicit target is specified, then the Pods target will be linked
+with the first target in your project. So if you only have one target
+you do not need to specify the target to link with.</p>
+<hr /><h3>Examples:</h3><p>Link with an user project target</p><div class="highlight"><pre><span class="n">link_with</span> <span class="s1">&#39;MyApp&#39;</span>
+</pre></div><p>Link with a more user project targets</p><div class="highlight"><pre><span class="n">link_with</span> <span class="o">[</span><span class="s1">&#39;MyApp&#39;</span><span class="p">,</span> <span class="s1">&#39;MyOtherApp&#39;</span><span class="o">]</span>
+</pre></div></div><div class="tab-pane" id="tab_inhibit_all_warnings_bang"><h2>inhibit_all_warnings!</h2><p>Inhibits <strong>all</strong> the warnings from the CocoaPods libraries.</p>
+
+<hr>
+
+<p>This attribute is inherited by child target definitions.</p>
+</div><div class="tab-pane" id="tab_workspace"><h2>workspace</h2><p>Specifies the Xcode workspace that should contain all the projects.</p>
+
+<hr>
+
+<p>If no explicit Xcode workspace is specified and only <strong>one</strong> project
+exists in the same directory as the Podfile, then the name of that
+project is used as the workspace’s name.</p>
+<hr /><h3>Examples:</h3><p>Specifying a workspace</p><div class="highlight"><pre><span class="n">workspace</span> <span class="s1">&#39;MyWorkspace&#39;</span>
+</pre></div></div><div class="tab-pane" id="tab_generate_bridge_support_bang"><h2>generate_bridge_support!</h2><p>Specifies that a BridgeSupport metadata document should be generated
+from the headers of all installed Pods.</p>
+
+<hr>
+
+<p>This is for scripting languages such as <a href="http://macruby.org">MacRuby</a>,
+<a href="http://programming.nu/index">Nu</a>, and
+<a href="http://inexdo.com/JSCocoa">JSCocoa</a>, which use it to bridge types,
+functions, etc.</p>
+</div><div class="tab-pane" id="tab_set_arc_compatibility_flag_bang"><h2>set_arc_compatibility_flag!</h2><p>Specifies that the -fobjc-arc flag should be added to the
+<code>OTHER_LD_FLAGS</code>.</p>
+
+<hr>
+
+<p>This is used as a workaround for a compiler bug with non-ARC projects
+(see #142). This was originally done automatically but libtool as of
+Xcode 4.3.2 no longer seems to support the <code>-fobjc-arc</code> flag. Therefore
+it now has to be enabled explicitly using this method.</p>
+
+<p>Support for this method might be dropped in CocoaPods <code>1.0</code>.</p>
+</div><div class="tab-pane" id="tab_pre_install"><h2>pre_install</h2><p>This hook allows you to make any changes to the Pods after they have
+been downloaded but before they are installed.</p>
+<hr /><h3>Examples:</h3><p>Defining a pre install hook in a Podfile.</p><div class="highlight"><pre><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer</span><span class="o">|</span>
+  <span class="c1"># Do something fancy!</span>
+<span class="k">end</span>
+</pre></div></div><div class="tab-pane" id="tab_post_install"><h2>post_install</h2><p>This hook allows you to make any last changes to the generated Xcode
+project before it is written to disk, or any other tasks you might want
+to perform.</p>
+<hr /><h3>Examples:</h3><p>Customizing the `OTHER_LDFLAGS` of all targets</p><div class="highlight"><pre><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer</span><span class="o">|</span>
+  <span class="n">installer</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">build_configurations</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+      <span class="n">config</span><span class="o">.</span><span class="n">build_settings</span><span class="o">[</span><span class="s1">&#39;GCC_ENABLE_OBJC_GC&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;supported&#39;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></div></div></div></div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
