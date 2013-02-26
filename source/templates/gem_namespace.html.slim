@@ -84,7 +84,7 @@
                     code == linkify_from_obect(type, name_space)
 
                 / FIXME
-                == ' ' + param.html.gsub(/<p>(.*)<\/p>/,'\1')
+                == ' ' + param.html.force_encoding('utf-8').gsub(/<p>(.*)<\/p>/,'\1')
 
           - unless signature.aliases.empty?
             h4 Aliases

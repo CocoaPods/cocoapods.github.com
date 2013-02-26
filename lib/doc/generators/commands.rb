@@ -70,6 +70,12 @@ module Pod
               "pod repo lint",
               "pod setup",
             ],
+
+           'IPC' => [
+              "pod ipc spec",
+              "pod ipc podfile",
+              "pod ipc list",
+            ],
           }
 
         end

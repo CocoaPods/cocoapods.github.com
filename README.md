@@ -3,6 +3,18 @@ cocoapods.github.com
 
 User and developer documentation for CocoaPods.
 
+## Information Sources
+
+This application gathers information from the following sources:
+
+- Guides: https://github.com/CocoaPods/cocoapods.github.com/tree/develop/guides
+- Podfile: https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/podfile/dsl.rb
+- Specification: https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl.rb
+- Command Line: https://github.com/CocoaPods/CocoaPods/tree/master/lib/cocoapods/command
+
+If you find any area which could be improved, pull requests are welcome and
+make good karma.
+
 ## Architecture
 
 This application builds a static site by using the [Middleman](http://middlemanapp.com).

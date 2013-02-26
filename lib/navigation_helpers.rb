@@ -1,3 +1,5 @@
+require 'active_support'
+
 module NavigationHelpers
 
   # The title of the current page. If not specified with YAML
@@ -10,14 +12,11 @@ module NavigationHelpers
   def page_title(resource = nil)
     resource ||= current_resource
 
-    resource.metadata[:page]['title'] \
-      ||
-      resource.metadata[:locals][:code_object] && resource.metadata[:locals][:code_object].name \
-      ||
-      resource.metadata[:locals][:name] \
-      ||
-      (warn "[WARN] Missing title for resource #{resource.path}"
-       File.basename(resource.path, ".html"))
+    title = resource.metadata[:page]['title']
+    title ||= resource.metadata[:locals][:code_object].name if resource.metadata[:locals][:code_object]
+    title ||= resource.metadata[:locals][:name]
+    title ||= File.basename(resource.path, ".html").to_s.humanize
+    title.to_s.gsub('cocoapods', 'CocoaPods')
   end
 
 
@@ -150,8 +149,7 @@ module NavigationHelpers
 
     groups_and_methods = []
     # methods_by_group = methods.group_by(&:group)
-    groups.each do |group|
-      puts group.name
+  groups.each do |group|
       if !group.meths.nil? || !group.meths.empty? || show_empty_groups
         groups_and_methods << group
         groups_and_methods.concat(group.meths)
@@ -233,7 +231,7 @@ module NavigationHelpers
   #
   def link_doc_string(html)
     return nil unless html
-    html.gsub(/\{([^\}]+)\}/) do |match|
+    html.force_encoding('utf-8').gsub(/\{([^\}]+)\}/) do |match|
       "<code>#{linkify(match[1..-2])}</code>"
     end
   end

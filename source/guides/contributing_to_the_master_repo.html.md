@@ -1,18 +1,18 @@
-# Contributing to the master repo
-
-    This guide is a stub
-
+## Contributing to the master repo
 
 The master repo contains specifications of open-source Objective-C libraries.
 
-## Details
+### Details
 
 - installation path: `~/.cocoapods/master`
 - home: https://github.com/CocoaPods/Specs
 
-## Contributing
+### Contributing
 
-To ensure a high quality and reliable collection of Pods the master repo is strict about the acceptable specifications. The CocoaPods linter (see the `pod spec lint` command) is used to validate specification and no errors or warnings are accepted.
+To ensure a high quality and reliable collection of Pods the master repo is
+strict about the acceptable specifications. The CocoaPods linter (see the `pod
+spec lint` command) is used to validate specification and no errors or warnings
+are accepted.
 
 The highest priority of the master repo is to guarantee the integrity of existing
 CocoaPods installations.
@@ -29,7 +29,7 @@ CocoaPods uses a versioning scheme known as [Semantic
 Versioning](http://semver.org/), necessary for [cross resolution of
 dependencies](https://github.com/CocoaPods/Specs/wiki/Cross-dependencies-resolution-example).
 
-## Unversioned libraries
+### Unversioned libraries
 
 One of the CocoaPods goals is to promote the discovery of open-source software,
 for this reason new Pods for libraries which are not versioned are accepted in
@@ -55,7 +55,7 @@ If you need to update an unversione library you can:
 - Create a podspec and use it in a private repo.
 
 
-## Creating podspecs
+### Creating podspecs
 
 Creating a podspec is very easy as we provide templates full of examples.
 
@@ -71,7 +71,7 @@ A this point you need edit compile the template (a pod specification is a Ruby s
 
     $ pod spec lint Bananas.podspec --verbose
 
-## Sharing podspecs
+### Sharing podspecs
 
 When a podspec lints you can submit it to the master repo.
 

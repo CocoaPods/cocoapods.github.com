@@ -1,4 +1,6 @@
-# Creating a project that uses CocoaPods
+## Integrating a project
+
+    This guide is a stub
 
 ### Preliminary version of the basic usage howto.
 
@@ -53,10 +55,6 @@ _“A curse a day keeps the Xcode doctor away.”_
     * In Xcode "Build Settings", find "Skip Install". Set the value for "Release" to "NO" on your application target. Build again and it should work. 
 
 _Different Xcode versions can have various problems. Ask for help and tell us what version you're using._
-
-### TODO:
-
-* Add images for each step and expand on steps. Feel free to improve.
 
 [creating-a-workspace]: http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4/#creating_a_workspace
 [adding-projects-to-workspace]: http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4/#adding_projects_to_a_workspace

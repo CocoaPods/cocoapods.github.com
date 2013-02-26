@@ -1,0 +1,61 @@
+---
+title: Guides
+---
+
+/ The margins have been changed from teh default of bootstrap so currently
+/ there are less than 12 spans.
+
+/ Todo the title tags in the css need to be offset by one. I.e. the style of h1
+/ needs to be the style of h2
+
+#index
+  #content-container
+    h2 Guides
+    .link-list
+          p
+            == link_to 'CocoaPods Philosophy', "philosophy.html"
+
+          h3 Getting started
+          p
+            == link_to 'Installing CocoaPods', "installing_cocoapods.html"
+          p
+            == link_to 'Integrating a project', "integrating_a_project.html"
+          p
+            == link_to 'Dependency versioning', "dependency_versioning.html"
+
+          h3 Intermediate
+          p
+            == link_to 'Working with teams', "working_with_teams.html"
+
+          h3 Advanced
+          p
+            == link_to 'Contributing to the master repo', "contributing_to_the_master_repo.html"
+          p
+            == link_to 'Creating and maintaining a Pod', "creating_and_maintaining_a_pod.html"
+          p
+            == link_to 'Creating your own repository', "creating_your_own_repository.html"
+
+          h3 Articles from third parties
+          // Sort in inverse cronological order
+          p
+            | 2013/01/20 - 
+            == link_to 'theonlylars - Creating a Pod Spec', "http://theonlylars.com/blog/2013/01/20/cocoapods-creating-a-pod-spec/"
+          p
+            | 2013/01/17 - 
+            == link_to 'Cocoanetics - Digging into CocoaPods', "http://www.cocoanetics.com/2013/01/digging-into-cocoapods/"
+          p
+            | 2013/01/16 - 
+            == link_to 'IO 9elements - Continuous Integration of iOS Projects using Jenkins, CocoaPods, and Kiwi', "http://9elements.com/io/index.php/continuous-integration-of-ios-projects-using-jenkins-cocoapods-and-kiwi/"
+          p
+            | 2013/01/16 - 
+            == link_to 'Chasing the Power Curve - Private Cocoapods', "http://blog.herlein.com/wp-content/plugins/really-static/static/2013/01/private-cocoapods/index.html"
+          p
+            | 2012/05/22 - 
+            == link_to 'raywenderlich.com - Introduction to CocoaPods', "http://www.raywenderlich.com/12139/introduction-to-cocoapods"
+          p
+            | 2012/04/05 - 
+            == link_to 'The Changelog', "http://thechangelog.com/episode-0-7-8-cocoapods-macruby-and-more-with-eloy-dur-n/"
+          p
+            | 2012/02/03 - 
+            == link_to 'NSScreenCast', "http://nsscreencast.com/episodes/5-cocoapods"
+

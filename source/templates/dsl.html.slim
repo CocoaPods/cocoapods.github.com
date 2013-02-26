@@ -32,7 +32,7 @@ ruby:
     - for group in name_space.groups
       div.tab-pane id="tab_group_#{parameterize group.name}"
         h2 = group.name
-        == link_doc_string group.html_description
+        == link_doc_string(group.html_description)
 
     - for method in name_space.meths
       div.tab-pane id="tab_#{parameterize method.name}"

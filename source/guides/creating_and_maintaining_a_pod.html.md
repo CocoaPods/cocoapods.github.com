@@ -1,4 +1,4 @@
-## Creation
+## Creating and maintaining a pod
 
 The following file structure is suggested:
 

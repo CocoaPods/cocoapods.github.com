@@ -123,18 +123,28 @@ namespace :generate do
   end
 
   task :all => [:dsl, :gems, :commands, :search]
+  task :default => 'all'
 end
 
 #-----------------------------------------------------------------------------#
 
-desc "Generates the data for the commands."
-task :build => 'generate:all' do
-  sh "middleman build"
+namespace :middleman do
+
+  desc "Builds the site with middleman."
+  task :build => 'generate:all' do
+    sh "middleman build"
+  end
+
+  desc "Builds the site with middleman."
+  task :server do
+    sh "middleman"
+  end
+
 end
 
 #-----------------------------------------------------------------------------#
 
-desc "deploy build directory to github pages"
+desc "creates the build directory which contains the master branch"
 task :bootstrap_build do
   FileUtils.rm_rf 'build'
   sh 'git clone git@github.com:CocoaPods/cocoapods.github.com.git build'
@@ -146,6 +156,7 @@ desc "deploy build directory to github pages"
 task :deploy do
   puts "\e[1;33mDeploying branch to master brach\e[0m"
   cd "build" do
+    sh "git pull"
     sh "git add ."
     sh "git add -u"
     sh "git commit -m 'Site updated at #{Time.now.utc}'"
