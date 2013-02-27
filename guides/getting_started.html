@@ -1,0 +1,186 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="documenation cocoapods objective-c packcage manager" name="keywords" /><title>Getting started</title><link href="../favicon.ico" rel="icon" type="image/ico" /><link href="../css/bootstrap.min-52b04d8e.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../css/font-awesome-a5000aac.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../css/style2-b98e7dcd.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../js/bootstrap-308e23ce.js" type="text/javascript"></script>
+<script src="../js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
+<script src="../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../index.html">Docs</a><span class="divider">/</span></li><li><a href="index.html">Guides</a><span class="divider">/</span></li><li class="active">Getting started</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><h2>Getting started</h2>
+
+<pre><code>This guide is a stub
+</code></pre>
+
+<h3>Search</h3>
+
+<p>You can search for Pods either from <a href="cocoapods.org">cocoapods.org</a> or from the
+command line search for Pods by name or description.</p>
+
+<pre><code>$ pod search json
+
+-&gt; JSONKit (1.5pre)
+   A Very High Performance Objective-C JSON Library.
+   - Homepage: https://github.com/johnezang/JSONKit
+   - Source:   https://github.com/johnezang/JSONKit.git
+   - Versions: 1.5pre, 1.4 [master repo]
+
+-&gt; SBJson (3.2)
+   This library implements strict JSON parsing and generation in Objective-C.
+   - Homepage: http://stig.github.com/json-framework/
+   - Source:   https://github.com/stig/json-framework.git
+   - Versions: 3.2, 3.1.1, 3.1, 3.0.4, 2.2.3 [master repo]
+</code></pre>
+
+<h3>Create a Podfile</h3>
+
+<p>After you&#39;ve found your favorite dependencies you can create a Podfile. The
+Podfile is usually created in the same directory of your project. You can learn
+more about the Podfile and its DSL
+<a href="../podfile.html">here</a>.</p>
+
+<pre><code>$ edit Podfile
+</code></pre>
+
+<pre><code class="ruby">pod &#39;JSONKit&#39;,           &#39;~&gt; 1.4&#39;
+pod &#39;Reachability&#39;,      &#39;~&gt; 2.0.4&#39;
+</code></pre>
+
+<h3>Integrate a project</h3>
+
+<p>To integrate a project with CocoaPods you can run from the its directory:</p>
+
+<pre><code>$ pod install
+</code></pre>
+
+<p>Remember to always open the Xcode workspace instead of the project file when
+you&#39;re building.</p>
+
+<pre><code>$ open App.xcworkspace
+</code></pre>
+
+<h3>Update a project</h3>
+
+<p>To install the changes you have made to your Podfile, or to bootstrap your
+installation for a project which doesn&#39;t keep the Pods folder under version
+control, use:</p>
+
+<pre><code>$ pod install
+</code></pre>
+
+<p>Pod install will not update your dependencies even if a new version is available,
+to update them you can use:</p>
+
+<pre><code>$ pod update
+</code></pre>
+
+<p>This workflow avoids issues related to updates when you just want to install a
+new dependency.</p>
+
+<h3>Adding new specifications</h3>
+
+<p>Sometimes CocoaPods doesn&#39;t have a Pod for one of your dependencies yet.
+Fortunately <a href="https://github.com/CocoaPods/CocoaPods/wiki/A-pod-specification">creating a
+Pod</a> is really
+easy.</p>
+
+<pre><code>$ pod spec create Peanuts
+$ edit Peanuts.podspec
+$ pod spec lint Peanuts.podspec
+</code></pre>
+
+<p>Once you&#39;ve got it running <a href="https://github.com/CocoaPods/CocoaPods/issues">create a
+ticket</a> and upload the Pod. If
+you&#39;re familiar with Git you can also fork the <a href="https://github.com/CocoaPods/Specs">CocoaPods
+specs</a> repository and send a pull request.
+We really love contributions!</p>
+
+<p>There are several other ways to start using <strong>any</strong> library without a Pod
+specification, which can be seen in the <a href="https://github.com/CocoaPods/CocoaPods/blob/master/examples/SSCatalog/Podfile">SSCatalog
+example</a>.</p>
+
+<h3>What this does</h3>
+
+<p>In Xcode, it:</p>
+
+<ol>
+<li>[Creates or updates a workspace.][creating-a-workspace]</li>
+<li>[Adds your project to the workspace if needed.][adding-projects-to-workspace]</li>
+<li>[Adds the CocoaPods static library project to the workspace if needed.][adding-projects-to-workspace]</li>
+<li>[Adds libPods.a to: targets =&gt; build phases =&gt; link with libraries.][adding-build-target-dependencies]</li>
+<li>Adds the CocoaPods Xcode configuration file to your app’s project.</li>
+<li>[Changes your app&#39;s target configurations to be based on CocoaPods&#39;s.]<a href="Expand the ‘To add a new build configuration…’ section of the linked page for a howto.">basing-target-configurations-on-xcconfig</a></li>
+<li>Adds a build phase to copy resources from any pods you installed to your app bundle. i.e. a ‘Script build phase’ after all other build phases with the following:
+
+<ul>
+<li>Shell: <code>/bin/sh</code></li>
+<li>Script: <code>${SRCROOT}/Pods/PodsResources.sh</code></li>
+</ul></li>
+</ol>
+
+<p>Note that steps 3 onwards are skipped if the CocoaPods static library is already in your project.</p>
+
+<p>This is largely based on <a href="http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4">http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4</a>.</p>
+
+<h3>FAQ</h3>
+
+<p><em>“A curse a day keeps the Xcode doctor away.”</em></p>
+
+<ol>
+<li>If something doesn’t seem to work, first of all ensure that you are not
+completely overriding any options set from the <code>Pods.xcconfig</code> file in your
+project’s build settings. To add values to options from your project’s build
+settings, prepend the value list with <code>$(inherited)</code>.</li>
+</ol>
+
+<ul>
+<li><p>If Xcode can’t find the headers of the dependencies:</p>
+
+<ul>
+<li>Check if the pod header files are correctly symlinked in <code>Pods/Headers</code>
+and you are not overriding the <code>HEADER_SEARCH_PATHS</code> (see #1).</li>
+<li>Make sure your project is using the <code>Pods.xcconfig</code>. To check this select
+your project file, then select it in the second pane again and open the
+<code>Info</code> section in the third pane. Under configurations you should select
+<code>Pods.xcconfig</code> for each configurations requiring your installed pods.</li>
+<li>If Xcode still can’t find them, as a last resort you can prepend your
+imports, e.g. <code>#import &quot;Pods/SSZipArchive.h&quot;</code>.</li>
+</ul></li>
+<li><p>If you&#39;re getting errors about unrecognized C compiler command line options, e.g. <code>cc1obj: error: unrecognized command line option &quot;-Wno-sign-conversion&quot;</code>:</p>
+
+<ul>
+<li>Make sure your project build settings are
+<a href="https://img.skitch.com/20111120-brfn4mp8qwrju8w8325wphan9h.png">configured</a>
+to use &ldquo;Apple LLVM compiler&rdquo; (clang)</li>
+<li>Are you setting the <code>CC</code>, <code>CPP</code> or <code>CXX</code> environment variable, e.g. in
+your <code>~/.profile</code>? This may interfere with the Xcode build process. Remove
+the environment variable from your <code>~/.profile</code>.</li>
+</ul></li>
+<li><p>If Xcode complains when linking, e.g. <code>Library not found for -lPods</code>, it doesn&#39;t detect the implicit dependencies:</p>
+
+<ul>
+<li>Go to Product &gt; Edit Scheme</li>
+<li>Click on Build</li>
+<li>Add the <code>Pods</code> static library, and make sure it&#39;s at the top of the list</li>
+<li>Clean and build again</li>
+<li>If that doesn&#39;t work, verify that the source for the spec you are trying
+to include has been pulled from github. Do this by looking in &lt;Project
+Dir&gt;/Pods/&lt;Name of spec you are trying to include&gt;. If it is empty (it
+should not be), verify that the
+~/.cocoapods/master/&lt;spec&gt;/&lt;spec&gt;.podspec has the correct git hub
+url in it.</li>
+<li><p>If still doesn&#39;t work, check your XCode build locations settings. Go to
+Preferences -&gt; Locations -&gt; Derived Data -&gt; Advanced and set build
+location to &ldquo;Relative to Workspace&rdquo;.</p>
+
+<p><img alt="Xcode build location settings" src="https://img.skitch.com/20120426-chmda3m5suhcfrhjge6brjhesk.png" /></p></li>
+</ul></li>
+<li><p>If you tried to submit app to App Store, and found that &ldquo;Product&rdquo; &gt; &ldquo;Archive&rdquo;
+produce nothing in &ldquo;Organizer&rdquo;:</p>
+
+<ul>
+<li>In Xcode &ldquo;Build Settings&rdquo;, find &ldquo;Skip Install&rdquo;. Set the value for
+&ldquo;Release&rdquo; to &ldquo;NO&rdquo; on your application target. Build again and it should
+work.</li>
+</ul></li>
+</ul>
+
+<p><em>Different Xcode versions can have various problems. Ask for help and tell us
+what version you&#39;re using.</em></p>
+</div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
