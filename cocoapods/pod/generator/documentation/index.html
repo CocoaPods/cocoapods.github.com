@@ -79,7 +79,7 @@ with the appledoc tool.</p>
 <span class="lineno">126</span>   <span class="n">absolute_paths</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">relative_path_from</span><span class="p">(</span><span class="n">pod_root</span><span class="p">)</span><span class="o">.</span><span class="n">to_s</span> <span class="p">}</span>
 <span class="lineno">127</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/generator/documentation.rb#L124">lib/cocoapods/generator/documentation.rb:124</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/generator/documentation_spec.rb">spec/unit/generator/documentation_spec.rb</a></p></div><div class="tab-pane" id="tab_index_file"><h2>index_file</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">index_file</span> <span class="c1">#=&gt; String </span>
-</pre></div><h4>Returns</h4><p><code>String</code> <p>The path of the file to use ad index of the
+</pre></div><h4>Returns</h4><p><code>String</code> <p>The path of the file to use as the index of
 documentation relative to the root of the Pod.</p>
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">132</span> <span class="k">def</span> <span class="nf">index_file</span>
 <span class="lineno">133</span>   <span class="n">readme_file</span> <span class="o">=</span> <span class="n">file_accessors</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">readme</span>
@@ -87,14 +87,14 @@ documentation relative to the root of the Pod.</p>
 <span class="lineno">135</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/generator/documentation.rb#L132">lib/cocoapods/generator/documentation.rb:132</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/generator/documentation_spec.rb">spec/unit/generator/documentation_spec.rb</a></p></div><div class="tab-pane" id="tab_spec_appledoc_options"><h2>spec_appledoc_options</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">spec_appledoc_options</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
 </pre></div><h4>Returns</h4><p><code>Array<String></code> <p>The list of the appledoc options followed by
-their value as defined in the specification.</p>
+their values as defined in the specification.</p>
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">146</span> <span class="k">def</span> <span class="nf">spec_appledoc_options</span>
 <span class="lineno">147</span>   <span class="k">return</span> <span class="o">[]</span> <span class="k">unless</span> <span class="n">specification</span><span class="o">.</span><span class="n">documentation</span>
 <span class="lineno">148</span>   <span class="n">specification</span><span class="o">.</span><span class="n">documentation</span><span class="o">[</span><span class="ss">:appledoc</span><span class="o">]</span>
 <span class="lineno">149</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/generator/documentation.rb#L146">lib/cocoapods/generator/documentation.rb:146</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/generator/documentation_spec.rb">spec/unit/generator/documentation_spec.rb</a></p></div><div class="tab-pane" id="tab_appledoc_options"><h2>appledoc_options</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">appledoc_options</span> <span class="c1">#=&gt; Array&lt;String&gt; </span>
 </pre></div><h4>Returns</h4><p><code>Array<String></code> <p>The list of the appledoc options followed by
-their value.</p>
+their values.</p>
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">157</span> <span class="k">def</span> <span class="nf">appledoc_options</span>
 <span class="lineno">158</span>   <span class="n">options</span> <span class="o">=</span> <span class="o">[</span>
 <span class="lineno">159</span>     <span class="s1">&#39;--project-name&#39;</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span>
@@ -124,7 +124,7 @@ tool, properly escaped.</p>
 <span class="lineno">186</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/generator/documentation.rb#L180">lib/cocoapods/generator/documentation.rb:180</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/generator/documentation_spec.rb">spec/unit/generator/documentation_spec.rb</a></p></div><div class="tab-pane" id="tab_target_path"><h2>target_path</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">target_path</span> <span class="c1">#=&gt; undefined</span>
 </pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">194</span> <span class="k">def</span> <span class="nf">target_path</span>
-<span class="lineno">195</span>   <span class="n">sandbox</span><span class="o">.</span><span class="n">root</span> <span class="o">+</span> <span class="s1">&#39;Documentation&#39;</span> <span class="o">+</span> <span class="n">specification</span><span class="o">.</span><span class="n">name</span>
+<span class="lineno">195</span>   <span class="n">sandbox</span><span class="o">.</span><span class="n">documentation_dir</span> <span class="o">+</span> <span class="n">specification</span><span class="o">.</span><span class="n">name</span>
 <span class="lineno">196</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/generator/documentation.rb#L194">lib/cocoapods/generator/documentation.rb:194</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/generator/documentation_spec.rb">spec/unit/generator/documentation_spec.rb</a></p></div><div class="tab-pane" id="tab_pod_root"><h2>pod_root</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">pod_root</span> <span class="c1">#=&gt; undefined</span>
 </pre></div><h3>Source</h3><div class="highlight"><pre><span class="lineno">198</span> <span class="k">def</span> <span class="nf">pod_root</span>

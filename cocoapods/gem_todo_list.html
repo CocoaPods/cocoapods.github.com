@@ -7,7 +7,9 @@
 true might return false.
 </div><div class="alert"><i class="icon-warning-sign"></i> We should probably not even load colored unless needed.
 </div><div class="alert"><i class="icon-warning-sign"></i> Move silent flag to CLAide.
-</div><h4><a href="/cocoapods/pod/command/push#add_specs_to_repo/index.html">Pod::Command::Push#add_specs_to_repo</a></h4><div class="alert"><i class="icon-warning-sign"></i> Raise if the source is not under git source control.
+</div><h4><a href="/cocoapods/pod/command/push#check_repo_status/index.html">Pod::Command::Push#check_repo_status</a></h4><div class="alert"><i class="icon-warning-sign"></i> Add specs for staged and unstaged files.
+</div><div class="alert"><i class="icon-warning-sign"></i> Gracefully handle the case where source is not under git 
+source control.
 </div><h4><a href="/cocoapods/pod/command/spec#default_data_for_template/index.html">Pod::Command::Spec#default_data_for_template</a></h4><div class="alert"><i class="icon-warning-sign"></i> It would be nice to have a template class that accepts options
 and uses the default ones if not provided.
 </div><div class="alert"><i class="icon-warning-sign"></i> The template is outdated.
@@ -34,6 +36,8 @@ be marked as added.
 </div><h4><a href="/cocoapods/pod/installer/analyzer#compute_platform_for_target_definition/index.html">Pod::Installer::Analyzer#compute_platform_for_target_definition</a></h4><div class="alert"><i class="icon-warning-sign"></i> Is assigning the platform to the target definition the best way
 to go?
 </div><h4><a href="/cocoapods/pod/installer/analyzer/sandboxanalyzer#lockfile/index.html">Pod::Installer::Analyzer::SandboxAnalyzer#lockfile</a></h4><div class="alert"><i class="icon-warning-sign"></i> Remove for CP 0.18.
+</div><h4><a href="/cocoapods/pod/installer/podsourceinstaller#clean_bang/index.html">Pod::Installer::PodSourceInstaller#clean!</a></h4><div class="alert"><i class="icon-warning-sign"></i> As the pre install hooks need to run before cleaning this
+method should be refactored.
 </div><h4><a href="/cocoapods/pod/installer/targetinstaller#add_target/index.html">Pod::Installer::TargetInstaller#add_target</a></h4><div class="alert"><i class="icon-warning-sign"></i> Add integration test for build configurations and don&#39;t add the
 build configurations to the project if they are not needed.
 </div><h4><a href="/cocoapods/pod/installer/userprojectintegrator#installation_root/index.html">Pod::Installer::UserProjectIntegrator#installation_root</a></h4><div class="alert"><i class="icon-warning-sign"></i> This is only used to compute the workspace path in case that it
