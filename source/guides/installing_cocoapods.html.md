@@ -21,11 +21,11 @@ creates bad effects.
 
 To update CocoaPods you can run:
 
-    $ [sudo] gem update CocoaPods
+    $ [sudo] gem update cocoapods
 
 If you would like to try a pre-release version of CocoaPods you can run:
 
-    $ [sudo] gem update CocoaPods --pre
+    $ [sudo] gem update cocoapods --pre
 
 
 ### Troubleshooting
