@@ -38,8 +38,10 @@ to go?
 </div><h4><a href="/cocoapods/pod/installer/analyzer/sandboxanalyzer#lockfile/index.html">Pod::Installer::Analyzer::SandboxAnalyzer#lockfile</a></h4><div class="alert"><i class="icon-warning-sign"></i> Remove for CP 0.18.
 </div><h4><a href="/cocoapods/pod/installer/podsourceinstaller#clean_bang/index.html">Pod::Installer::PodSourceInstaller#clean!</a></h4><div class="alert"><i class="icon-warning-sign"></i> As the pre install hooks need to run before cleaning this
 method should be refactored.
-</div><h4><a href="/cocoapods/pod/installer/targetinstaller#add_target/index.html">Pod::Installer::TargetInstaller#add_target</a></h4><div class="alert"><i class="icon-warning-sign"></i> Add integration test for build configurations and don&#39;t add the
-build configurations to the project if they are not needed.
+</div><h4><a href="/cocoapods/pod/installer/targetinstaller#add_target/index.html">Pod::Installer::TargetInstaller#add_target</a></h4><div class="alert"><i class="icon-warning-sign"></i> CocoaPods 0.16 used to add the build configurations to the build
+configuration list of the project (<code>root object</code>) as well with
+an empty build settings. This behaviour was changed in 0.17.
+Restore if needed.
 </div><h4><a href="/cocoapods/pod/installer/userprojectintegrator#installation_root/index.html">Pod::Installer::UserProjectIntegrator#installation_root</a></h4><div class="alert"><i class="icon-warning-sign"></i> This is only used to compute the workspace path in case that it
 should be inferred by the project. If the workspace should be in
 the same dir of the project, this could be removed.

@@ -210,18 +210,9 @@ means the Pod is supported on all platforms.</p>
 </pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="ss">:ios</span>
 </pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="ss">:osx</span>
 </pre></div></div><div class="tab-pane" id="tab_deployment_target"><h2>deployment_target</h2><p>The deployment targets of the supported platforms.</p>
-
-<p>@example</p>
-
-<p>spec.ios.deployment_target = &quot;6.0&quot;</p>
-
-<p>@example</p>
-
-<p>spec.osx.deployment_target = &quot;10.8&quot;</p>
-
-<p>@param    [String] deployment_target
-           The deployment target of the platform.</p>
-</div><div class="tab-pane" id="tab_dependency"><h2>dependency</h2><p>Any dependency on other Pods or to a ‘sub-specification’.</p>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">deployment_target</span> <span class="o">=</span> <span class="s2">&quot;6.0&quot;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">osx</span><span class="o">.</span><span class="n">deployment_target</span> <span class="o">=</span> <span class="s2">&quot;10.8&quot;</span>
+</pre></div></div><div class="tab-pane" id="tab_dependency"><h2>dependency</h2><p>Any dependency on other Pods or to a ‘sub-specification’.</p>
 
 <hr>
 
@@ -306,32 +297,34 @@ of the other file pattern.</p>
 </pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">preserve_paths</span> <span class="o">=</span> <span class="s2">&quot;Frameworks/*.framework&quot;</span>
 </pre></div></div><div class="tab-pane" id="tab_pre_install"><h2>pre_install</h2><p>This is a convenience method which gets called after all pods have been
 downloaded but before they have been installed, and the Xcode project
-and related files have been generated.</p>
+and related files have been generated.  Note that this hook is called
+for each Pods library.</p>
 
-<p>It receives the <code>Pod::LocalPod</code> instance generated form the
-specification and the <code>Pod::Podfile::TargetDefinition</code> instance for the
+<p>It receives the
+<code>[Pod::Hooks::PodRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/podrepresentation/)</code>
+instance generated form the
+specification and the
+<code>[Pod::Hooks::LibraryRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/libraryrepresentation/)</code>
+instance for the
 current target.</p>
 
 <p>Override this to, for instance, to run any build script.</p>
-<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="ss">Pod</span><span class="p">:</span><span class="ss">:Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
-  <span class="n">spec</span><span class="o">.</span><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">pod</span><span class="p">,</span> <span class="n">target_definition</span><span class="o">|</span>
-    <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">pod</span><span class="o">.</span><span class="n">root</span><span class="p">){</span> <span class="sb">`sh make.sh`</span> <span class="p">}</span>
-  <span class="k">end</span>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">pod</span><span class="p">,</span> <span class="n">target_definition</span><span class="o">|</span>
+  <span class="no">Dir</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">pod</span><span class="o">.</span><span class="n">root</span><span class="p">){</span> <span class="sb">`sh make.sh`</span> <span class="p">}</span>
 <span class="k">end</span>
 </pre></div></div><div class="tab-pane" id="tab_post_install"><h2>post_install</h2><p>This is a convenience method which gets called after all pods have been
 downloaded, installed, and the Xcode project and related files have
-been generated.</p>
+been generated. Note that this hook is called for each Pods library.</p>
 
-<p>It receives the <code>Pod::Installer::TargetInstaller</code> instance for the
-current target.</p>
+<p>It receives a
+<code>[Pod::Hooks::LibraryRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/libraryrepresentation/)</code>
+instance for the current target.</p>
 
 <p>Override this to, for instance, add to the prefix header.</p>
-<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="ss">Pod</span><span class="p">:</span><span class="ss">:Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">spec</span><span class="o">|</span>
-  <span class="n">spec</span><span class="o">.</span><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">target_installer</span><span class="o">|</span>
-    <span class="n">prefix_header</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">project_pods_root</span> <span class="o">+</span> <span class="n">target_installer</span><span class="o">.</span><span class="n">prefix_header_filename</span>
-    <span class="n">prefix_header</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
-      <span class="n">file</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s1">&#39;#ifdef __OBJC__\n#import &quot;SSToolkitDefines.h&quot;\n#endif&#39;</span><span class="p">)</span>
-    <span class="k">end</span>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">library_representation</span><span class="o">|</span>
+  <span class="n">prefix_header</span> <span class="o">=</span> <span class="n">library_representation</span><span class="o">.</span><span class="n">prefix_header_path</span>
+  <span class="n">prefix_header</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s1">&#39;#ifdef __OBJC__\n#import &quot;SSToolkitDefines.h&quot;\n#endif&#39;</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </pre></div></div><div class="tab-pane" id="tab_subspec"><h2>subspec</h2><p>Represents specification for a module of the library.</p>

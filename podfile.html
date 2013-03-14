@@ -157,6 +157,10 @@ should be linked with.</p>
 the parent target. If none of the target definitions specify an
 explicit project and there is only <strong>one</strong> project in the same
 directory as the Podfile then that project will be used.</p>
+
+<p>It is possible also to specify whether the build settings of your
+custom build configurations should be modeled after the Release or
+the Debug build configuration.</p>
 <hr /><h3>Examples:</h3><p>Specifying the user project</p><div class="highlight"><pre><span class="c1"># Look for target to link with in an Xcode project called</span>
 <span class="c1"># `MyProject.xcodeproj`.</span>
 <span class="n">xcodeproj</span> <span class="sb">`MyProject`</span>
@@ -165,6 +169,7 @@ directory as the Podfile then that project will be used.</p>
   <span class="c1"># This Pods library links with a target in another project.</span>
   <span class="n">xcodeproj</span> <span class="sb">`TestProject`</span>
 <span class="k">end</span>
+</pre></div><p>Using custom build configurations</p><div class="highlight"><pre><span class="n">xcodeproj</span> <span class="sb">`TestProject`</span><span class="p">,</span> <span class="s1">&#39;Mac App Store&#39;</span> <span class="o">=&gt;</span> <span class="ss">:release</span><span class="p">,</span> <span class="s1">&#39;Test&#39;</span> <span class="o">=&gt;</span> <span class="ss">:debug</span>
 </pre></div></div><div class="tab-pane" id="tab_link_with"><h2>link_with</h2><p>Specifies the target(s) in the user’s project that this Pods library
 should be linked in.</p>
 
@@ -210,14 +215,22 @@ it now has to be enabled explicitly using this method.</p>
 <p>Support for this method might be dropped in CocoaPods <code>1.0</code>.</p>
 </div><div class="tab-pane" id="tab_pre_install"><h2>pre_install</h2><p>This hook allows you to make any changes to the Pods after they have
 been downloaded but before they are installed.</p>
-<hr /><h3>Examples:</h3><p>Defining a pre install hook in a Podfile.</p><div class="highlight"><pre><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer</span><span class="o">|</span>
+
+<p>It receives the
+<code>[Pod::Hooks::InstallerRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/installerrepresentation/)</code>
+as its only argument.</p>
+<hr /><h3>Examples:</h3><p>Defining a pre install hook in a Podfile.</p><div class="highlight"><pre><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer_representation</span><span class="o">|</span>
   <span class="c1"># Do something fancy!</span>
 <span class="k">end</span>
 </pre></div></div><div class="tab-pane" id="tab_post_install"><h2>post_install</h2><p>This hook allows you to make any last changes to the generated Xcode
 project before it is written to disk, or any other tasks you might want
 to perform.</p>
-<hr /><h3>Examples:</h3><p>Customizing the `OTHER_LDFLAGS` of all targets</p><div class="highlight"><pre><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer</span><span class="o">|</span>
-  <span class="n">installer</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>
+
+<p>It receives the
+<code>[Pod::Hooks::InstallerRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/installerrepresentation/)</code>
+as its only argument.</p>
+<hr /><h3>Examples:</h3><p>Customizing the `OTHER_LDFLAGS` of all targets</p><div class="highlight"><pre><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer_representation</span><span class="o">|</span>
+  <span class="n">installer_representation</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>
     <span class="n">target</span><span class="o">.</span><span class="n">build_configurations</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
       <span class="n">config</span><span class="o">.</span><span class="n">build_settings</span><span class="o">[</span><span class="s1">&#39;GCC_ENABLE_OBJC_GC&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;supported&#39;</span>
     <span class="k">end</span>
