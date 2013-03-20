@@ -159,8 +159,10 @@ explicit project and there is only <strong>one</strong> project in the same
 directory as the Podfile then that project will be used.</p>
 
 <p>It is possible also to specify whether the build settings of your
-custom build configurations should be modeled after the Release or
-the Debug build configuration.</p>
+custom build configurations should be modeled after the release or
+the debug presets. To do so you need to specify a hash where the name
+of each build configuration is associated to either <code>:release</code> or
+<code>:debug</code>.</p>
 <hr /><h3>Examples:</h3><p>Specifying the user project</p><div class="highlight"><pre><span class="c1"># Look for target to link with in an Xcode project called</span>
 <span class="c1"># `MyProject.xcodeproj`.</span>
 <span class="n">xcodeproj</span> <span class="sb">`MyProject`</span>

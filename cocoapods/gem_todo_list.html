@@ -25,6 +25,7 @@ projects.
 </div><h4><a href="/cocoapods/pod/generator/documentation#company/index.html">Pod::Generator::Documentation#company</a></h4><div class="alert"><i class="icon-warning-sign"></i> Set to CocoaPods?
 </div><h4><a href="/cocoapods/pod/generator/prefixheader#generate/index.html">Pod::Generator::PrefixHeader#generate</a></h4><div class="alert"><i class="icon-warning-sign"></i> Subspecs can specify prefix header information too.
 </div><h4><a href="/cocoapods/pod/installer#clean_sandbox/index.html">Pod::Installer#clean_sandbox</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#247] Clean the headers of only the pods to install.
+</div><h4><a href="/cocoapods/pod/installer#clean_pod_sources/index.html">Pod::Installer#clean_pod_sources</a></h4><div class="alert"><i class="icon-warning-sign"></i> Why the @pod_installers might be empty?
 </div><h4><a href="/cocoapods/pod/installer#prepare_pods_project/index.html">Pod::Installer#prepare_pods_project</a></h4><div class="alert"><i class="icon-warning-sign"></i> Clean and modify the project if it exists.
 </div><h4><a href="/cocoapods/pod/installer#write_lockfiles/index.html">Pod::Installer#write_lockfiles</a></h4><div class="alert"><i class="icon-warning-sign"></i> Pass the checkout options to the Lockfile.
 </div><h4><a href="/cocoapods/pod/installer#integrate_user_project/index.html">Pod::Installer#integrate_user_project</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#397] The libraries should be cleaned and the re-added on every
@@ -38,6 +39,9 @@ to go?
 </div><h4><a href="/cocoapods/pod/installer/analyzer/sandboxanalyzer#lockfile/index.html">Pod::Installer::Analyzer::SandboxAnalyzer#lockfile</a></h4><div class="alert"><i class="icon-warning-sign"></i> Remove for CP 0.18.
 </div><h4><a href="/cocoapods/pod/installer/podsourceinstaller#clean_bang/index.html">Pod::Installer::PodSourceInstaller#clean!</a></h4><div class="alert"><i class="icon-warning-sign"></i> As the pre install hooks need to run before cleaning this
 method should be refactored.
+</div><h4><a href="/cocoapods/pod/installer/podsourceinstaller#clean_paths/index.html">Pod::Installer::PodSourceInstaller#clean_paths</a></h4><div class="alert"><i class="icon-warning-sign"></i> The paths are down-cased for the comparison as issues similar
+to #602 lead the files not being matched and so cleaning all
+the files. This solution might create side effects.
 </div><h4><a href="/cocoapods/pod/installer/targetinstaller#add_target/index.html">Pod::Installer::TargetInstaller#add_target</a></h4><div class="alert"><i class="icon-warning-sign"></i> CocoaPods 0.16 used to add the build configurations to the build
 configuration list of the project (<code>root object</code>) as well with
 an empty build settings. This behaviour was changed in 0.17.
