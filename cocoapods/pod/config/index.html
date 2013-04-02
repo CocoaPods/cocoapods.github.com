@@ -115,26 +115,26 @@ options.</p>
 <span class="lineno">89</span>   <span class="vi">@aggressive_cache</span>
 <span class="lineno">90</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/config.rb#L88">lib/cocoapods/config.rb:88</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/config_spec.rb">spec/unit/config_spec.rb</a></p></div><div class="tab-pane" id="tab_repos_dir"><h2>repos_dir<a class="select-tab" href=""><span class="label label-big">readwrite attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">repos_dir</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../pathname/index.html">Pathname</a></code> The directory where the CocoaPods sources are stored.
+</pre></div><h4>Returns</h4><p><code>Pathname</code> The directory where the CocoaPods sources are stored.
 </p><h3>Signature</h3><div class="highlight"><pre><span class="n">repos_dir</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
 </pre></div><h4>Parameters</h4><p><b> value</b></p><p>The value to set the attribute repos_dir to.</p>
 <h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/config.rb#L114">lib/cocoapods/config.rb:114</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/config_spec.rb">spec/unit/config_spec.rb</a></p></div><div class="tab-pane" id="tab_installation_root"><h2>installation_root<a class="select-tab" href=""><span class="label label-big">readwrite attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">installation_root</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../pathname/index.html">Pathname</a></code> <p>The root of the CocoaPods installation where the
+</pre></div><h4>Returns</h4><p><code>Pathname</code> <p>The root of the CocoaPods installation where the
 Podfile is located.</p>
 </p><h4>Aliases</h4><code>Pod::Config#project_root</code><h3>Signature</h3><div class="highlight"><pre><span class="n">installation_root</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
 </pre></div><h4>Parameters</h4><p><b> value</b></p><p>The value to set the attribute installation_root to.</p>
 <h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/config.rb#L123">lib/cocoapods/config.rb:123</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/config_spec.rb">spec/unit/config_spec.rb</a></p></div><div class="tab-pane" id="tab_project_root"><h2>project_root</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">project_root</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../pathname/index.html">Pathname</a></code> <p>The root of the CocoaPods installation where the
+</pre></div><h4>Returns</h4><p><code>Pathname</code> <p>The root of the CocoaPods installation where the
 Podfile is located.</p>
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">128</span> <span class="k">def</span> <span class="nf">installation_root</span>
 <span class="lineno">129</span>   <span class="vi">@installation_root</span> <span class="o">||=</span> <span class="no">Pathname</span><span class="o">.</span><span class="n">pwd</span>
 <span class="lineno">130</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/config.rb#L128">lib/cocoapods/config.rb:128</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/config_spec.rb">spec/unit/config_spec.rb</a></p></div><div class="tab-pane" id="tab_sandbox_root"><h2>sandbox_root<a class="select-tab" href=""><span class="label label-big">readwrite attribute</span></a></h2><h3>Signature</h3><div class="highlight"><pre><span class="n">sandbox_root</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../pathname/index.html">Pathname</a></code> The root of the sandbox.
+</pre></div><h4>Returns</h4><p><code>Pathname</code> The root of the sandbox.
 </p><h4>Aliases</h4><code>Pod::Config#project_pods_root</code><h3>Signature</h3><div class="highlight"><pre><span class="n">sandbox_root</span><span class="o">=</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="c1">#=&gt; undefined</span>
 </pre></div><h4>Parameters</h4><p><b> value</b></p><p>The value to set the attribute sandbox_root to.</p>
 <h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/config.rb#L132">lib/cocoapods/config.rb:132</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/config_spec.rb">spec/unit/config_spec.rb</a></p></div><div class="tab-pane" id="tab_project_pods_root"><h2>project_pods_root</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">project_pods_root</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../pathname/index.html">Pathname</a></code> The root of the sandbox.
+</pre></div><h4>Returns</h4><p><code>Pathname</code> The root of the sandbox.
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">137</span> <span class="k">def</span> <span class="nf">sandbox_root</span>
 <span class="lineno">138</span>   <span class="vi">@sandbox_root</span> <span class="o">||=</span> <span class="n">installation_root</span> <span class="o">+</span> <span class="s1">&#39;Pods&#39;</span>
 <span class="lineno">139</span> <span class="k">end</span>
@@ -153,7 +153,7 @@ Podfile is located.</p>
 <span class="lineno">155</span>   <span class="vi">@lockfile</span> <span class="o">||=</span> <span class="no">Lockfile</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">lockfile_path</span><span class="p">)</span> <span class="k">if</span> <span class="n">lockfile_path</span><span class="o">.</span><span class="n">exist?</span>
 <span class="lineno">156</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/config.rb#L154">lib/cocoapods/config.rb:154</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/config_spec.rb">spec/unit/config_spec.rb</a></p></div><div class="tab-pane" id="tab_user_settings_file"><h2>user_settings_file</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">user_settings_file</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../pathname/index.html">Pathname</a></code> The path of the file which contains the user settings.
+</pre></div><h4>Returns</h4><p><code>Pathname</code> The path of the file which contains the user settings.
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">166</span> <span class="k">def</span> <span class="nf">user_settings_file</span>
 <span class="lineno">167</span>   <span class="n">repos_dir</span> <span class="o">+</span> <span class="s2">&quot;config.yaml&quot;</span>
 <span class="lineno">168</span> <span class="k">end</span>

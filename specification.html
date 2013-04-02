@@ -222,9 +222,9 @@ between control on the version without being too restrictive.</p>
 
 <p>Pods with too restrictive dependencies, limit their compatibility with
 other Pods.</p>
-<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.0&#39;</span>
-</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;RestKit/CoreData&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 0.20.0&#39;</span>
-</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">dependency</span> <span class="o">=</span> <span class="s1">&#39;MBProgressHUD&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 0.5&#39;</span>
+<hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.0&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">dependency</span> <span class="s1">&#39;RestKit/CoreData&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 0.20.0&#39;</span>
+</pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">ios</span><span class="o">.</span><span class="n">dependency</span> <span class="s1">&#39;MBProgressHUD&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 0.5&#39;</span>
 </pre></div></div><div class="tab-pane" id="tab_requires_arc"><h2>requires_arc</h2><p>Wether the library requires ARC to be compiled. If true the
 <code>-fobjc-arc</code> flag will be added to the compiler flags.</p>
 
@@ -297,16 +297,15 @@ of the other file pattern.</p>
 </pre></div><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">preserve_paths</span> <span class="o">=</span> <span class="s2">&quot;Frameworks/*.framework&quot;</span>
 </pre></div></div><div class="tab-pane" id="tab_pre_install"><h2>pre_install</h2><p>This is a convenience method which gets called after all pods have been
 downloaded but before they have been installed, and the Xcode project
-and related files have been generated.  Note that this hook is called
-for each Pods library.</p>
+and related files have been generated. Note that this hook is called
+for each Pods library and only for installations where the Pod is
+installed.</p>
 
 <p>It receives the
-<code>[Pod::Hooks::PodRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/podrepresentation/)</code>
-instance generated form the
-specification and the
-<code>[Pod::Hooks::LibraryRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/libraryrepresentation/)</code>
-instance for the
-current target.</p>
+<a href="http://docs.cocoapods.org/cocoapods/pod/hooks/podrepresentation/"><code>Pod::Hooks::PodRepresentation</code></a>
+and the
+<a href="http://docs.cocoapods.org/cocoapods/pod/hooks/libraryrepresentation/"><code>Pod::Hooks::LibraryRepresentation</code></a>
+instances.</p>
 
 <p>Override this to, for instance, to run any build script.</p>
 <hr /><h3>Examples:</h3><p></p><div class="highlight"><pre><span class="n">spec</span><span class="o">.</span><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">pod</span><span class="p">,</span> <span class="n">target_definition</span><span class="o">|</span>
@@ -314,10 +313,11 @@ current target.</p>
 <span class="k">end</span>
 </pre></div></div><div class="tab-pane" id="tab_post_install"><h2>post_install</h2><p>This is a convenience method which gets called after all pods have been
 downloaded, installed, and the Xcode project and related files have
-been generated. Note that this hook is called for each Pods library.</p>
+been generated. Note that this hook is called for each Pods library and
+only for installations where the Pod is installed.</p>
 
 <p>It receives a
-<code>[Pod::Hooks::LibraryRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/libraryrepresentation/)</code>
+<a href="http://docs.cocoapods.org/cocoapods/pod/hooks/libraryrepresentation/"><code>Pod::Hooks::LibraryRepresentation</code></a>
 instance for the current target.</p>
 
 <p>Override this to, for instance, add to the prefix header.</p>

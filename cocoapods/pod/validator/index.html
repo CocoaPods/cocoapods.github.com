@@ -26,7 +26,7 @@ Core.</p>
 <span class="lineno">33</span>   <span class="vi">@linter</span><span class="o">.</span><span class="n">spec</span>
 <span class="lineno">34</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/validator.rb#L32">lib/cocoapods/validator.rb:32</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/validator_spec.rb">spec/unit/validator_spec.rb</a></p></div><div class="tab-pane" id="tab_file"><h2>file</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">file</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../pathname/index.html">Pathname</a></code> <p>The path of the <code>podspec</code> file where {#spec} is
+</pre></div><h4>Returns</h4><p><code>Pathname</code> <p>The path of the <code>podspec</code> file where {#spec} is
 defined.</p>
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">39</span> <span class="k">def</span> <span class="nf">file</span>
 <span class="lineno">40</span>   <span class="vi">@linter</span><span class="o">.</span><span class="n">file</span>
@@ -110,7 +110,7 @@ on warnings.</p>
 <span class="lineno">148</span>   <span class="k">else</span> <span class="ss">:green</span> <span class="k">end</span>
 <span class="lineno">149</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/validator.rb#L144">lib/cocoapods/validator.rb:144</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/validator_spec.rb">spec/unit/validator_spec.rb</a></p></div><div class="tab-pane" id="tab_validation_dir"><h2>validation_dir</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">validation_dir</span> <span class="c1">#=&gt; Pathname </span>
-</pre></div><h4>Returns</h4><p><code><a href="../../pathname/index.html">Pathname</a></code> The temporary directory used by the linter.
+</pre></div><h4>Returns</h4><p><code>Pathname</code> The temporary directory used by the linter.
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">153</span> <span class="k">def</span> <span class="nf">validation_dir</span>
 <span class="lineno">154</span>   <span class="no">Pathname</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;/tmp/CocoaPods/Lint&#39;</span><span class="p">)</span>
 <span class="lineno">155</span> <span class="k">end</span>

@@ -188,7 +188,7 @@ reference to this object.</p>
 <span class="lineno">245</span> 
 <span class="lineno">246</span>   <span class="k">unless</span> <span class="n">object_plist</span><span class="o">.</span><span class="n">empty?</span>
 <span class="lineno">247</span>     <span class="k">raise</span> <span class="s2">&quot;[!] Xcodeproj doesn&#39;t know about the following attributes &quot;</span> <span class="p">\</span>
-<span class="lineno">248</span>           <span class="s2">&quot;</span><span class="si">#{</span><span class="n">object_plist</span><span class="si">}</span><span class="s2"> for the &#39;</span><span class="si">#{</span><span class="n">isa</span><span class="si">}</span><span class="s2">&#39; isa.</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">\</span>
+<span class="lineno">248</span>           <span class="s2">&quot;</span><span class="si">#{</span><span class="n">object_plist</span><span class="o">.</span><span class="n">inspect</span><span class="si">}</span><span class="s2"> for the &#39;</span><span class="si">#{</span><span class="n">isa</span><span class="si">}</span><span class="s2">&#39; isa.</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">\</span>
 <span class="lineno">249</span>           <span class="s2">&quot;Please file an issue: https://github.com/CocoaPods/Xcodeproj/issues/new&quot;</span>
 <span class="lineno">250</span>   <span class="k">end</span>
 <span class="lineno">251</span> <span class="k">end</span>
