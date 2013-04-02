@@ -9,4 +9,7 @@ gem 'activesupport'
 gem 'pygments.rb'
 gem 'github-markup'
 gem 'claide'
+gem 'rake'
+
+gem 'xcodeproj'
 

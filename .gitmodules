@@ -10,3 +10,6 @@
 [submodule "gems/CocoaPods"]
 	path = gems/CocoaPods
 	url = git@github.com:CocoaPods/CocoaPods.git
+[submodule "gems/cocoapods-downloader"]
+	path = gems/cocoapods-downloader
+	url = git@github.com:CocoaPods/cocoapods-downloader.git

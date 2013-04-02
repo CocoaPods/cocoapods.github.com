@@ -122,6 +122,7 @@ namespace :generate do
     File.open('source/typeahead.json', 'w') { |f| f.puts(result.to_json) }
   end
 
+  desc "Generates all the metadata necessary for the middleman"
   task :all => [:dsl, :gems, :commands, :search]
   task :default => 'all'
 end
