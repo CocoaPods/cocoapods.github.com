@@ -72,9 +72,11 @@ module Pod
             ],
 
            'IPC' => [
+              "pod ipc repl",
               "pod ipc spec",
               "pod ipc podfile",
               "pod ipc list",
+              "pod ipc update-search-index",
             ],
           }
 

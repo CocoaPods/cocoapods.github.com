@@ -12,4 +12,6 @@ gem 'claide'
 gem 'rake'
 
 gem 'xcodeproj'
+gem 'cocoapods'
+gem 'cocoapods-core'
 

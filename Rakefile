@@ -74,8 +74,8 @@ namespace :generate do
     puts "\e[1;33mBuilding Commands Data\e[0m"
     files = FileList[(ROOT + "gems/CocoaPods/lib/cocoapods/command/*.rb").to_s]
     # These should probably not be in that directory.
-    files.exclude /advanced_linter/
-    files.exclude /error_report/
+    files.exclude(/advanced_linter/)
+    files.exclude(/error_report/)
     generator = Pod::Doc::Generators::Commands.new(files)
     generator.output_file = "docs_data/commands.yaml"
     generator.save
@@ -149,6 +149,9 @@ desc "creates the build directory which contains the master branch"
 task :bootstrap_build do
   FileUtils.rm_rf 'build'
   sh 'git clone git@github.com:CocoaPods/cocoapods.github.com.git build'
+  Dir.chdir('build') do
+    sh 'git checkout master'
+  end
 end
 
 # From http://stackoverflow.com/questions/11809180/middleman-and-github-pages
@@ -166,4 +169,4 @@ task :deploy do
   puts "\e[1;32mGithub Pages deployed at https://github.com/CocoaPods/cocoapods.github.com\e[0m"
 end
 
-task :default => 'generate:all'
+task :default => 'middleman:server'
