@@ -29,8 +29,7 @@ individual libraries or from the Markdown files available in this repo.
 
 ```console
 $ rake bootstrap
-$ rake build
-$ middleman
+$ rake middleman:build
 ```
 
 To see all the availible rake taks:
