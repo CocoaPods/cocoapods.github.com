@@ -83,7 +83,24 @@ might not be compatible anymore.</p>
 
 <p>Dependencies can be obtained also from external sources.</p>
 
-<h3>From a podspec in the root of a library repo.</h3>
+<h3 id="toc_0">Using the files from a folder local to the machine.</h3>
+
+<p>If you wold like to use develop a Pod in tandem with its client
+ project you can use the <code>local</code> option.</p>
+<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="ss">:local</span> <span class="o">=&gt;</span> <span class="s1">&#39;~/Documents/AFNetworking&#39;</span>
+</pre></div>
+<p>Using this option CocoaPods will assume the given folder to be the
+ root of the Pod and will link the files directly from there in the
+ Pods project. This means that your edits will persist to CocoaPods
+ installations.</p>
+
+<p>The referenced folder can be a checkout of your your favorite SCM or
+ even a git submodule of the current repo.</p>
+
+<p>Note that the <code>podspec</code> of the Pod file is expected to be in the
+ folder.</p>
+
+<h3 id="toc_1">From a podspec in the root of a library repo.</h3>
 
 <p>Sometimes you may want to use the bleeding edge version of a Pod. Or a
 specific revision. If this is the case, you can specify that with your
@@ -95,9 +112,6 @@ pod declaration.</p>
 <p>Or specify a commit:</p>
 <div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://github.com/gowalla/AFNetworking.git&#39;</span><span class="p">,</span> <span class="ss">:commit</span> <span class="o">=&gt;</span> <span class="s1">&#39;082f8319af&#39;</span>
 </pre></div>
-<p>Or specify a local folder in the machine:</p>
-<div class="highlight"><pre><span class="n">pod</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="ss">:local</span> <span class="o">=&gt;</span> <span class="s1">&#39;~/Documents/AFNetworking&#39;</span>
-</pre></div>
 <p>It is important to note, though, that this means that the version will
 have to satisfy any other dependencies on the Pod by other Pods.</p>
 
@@ -105,7 +119,7 @@ have to satisfy any other dependencies on the Pod by other Pods.</p>
 library does not have a <code>podspec</code> file in its repo yet, you will have
 to use one of the approaches outlined in the sections below.</p>
 
-<h3>From a podspec outside a spec repo, for a library without podspec.</h3>
+<h3 id="toc_2">From a podspec outside a spec repo, for a library without podspec.</h3>
 
 <p>If a podspec is available from another source outside of the library’s
 repo. Consider, for instance, a podspec available via HTTP:</p>
