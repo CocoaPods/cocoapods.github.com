@@ -9,9 +9,9 @@ The master repo contains specifications of open-source Objective-C libraries.
 
 ### Contributing
 
-To ensure a high quality and reliable collection of Pods the master repo is
+To ensure a high quality, reliable collection of Pods, the master repo is
 strict about the acceptable specifications. The CocoaPods linter (see the `pod
-spec lint` command) is used to validate specification and no errors or warnings
+spec lint` command) is used to validate specifications, and no errors or warnings
 are accepted.
 
 The highest priority of the master repo is to guarantee the integrity of existing
@@ -20,7 +20,7 @@ CocoaPods installations.
 In general this means that:
 
 - A specification cannot be deleted.
-- Specifications can be updated only if they don't affect existing installation.
+- Specifications can be updated only if they don't affect existing installations.
   - Broken specifications can be updated.
   - Subspecs can be added as they are included by the parent specification by default.
 - Only authoritative versions are accepted.
@@ -46,8 +46,9 @@ for this.
 __To prevent collisions with possible future versions, unversioned libraries
 can't be updated until the author starts to tag them.__
 
-If you need to update an unversione library you can:
-- Asks the author to versione the library.
+If you need to update an unversioned library you can:
+
+- Ask the author to version the library.
 - Maintain a fork which is versioned. This fork should be clearly namespaced
   from the original library according the `NAME@USER` convention (e.g.
   `Reachability@irrationalfab`). It should also mention in the summary that it
@@ -86,7 +87,7 @@ You need to fork the master repo on github, then you need to :
     git push myfork
     git checkout master
 
-Once you pushed you changes you can make a pull request on CocoaPods/Specs.
+Once you push your changes, you can make a pull request on CocoaPods/Specs.
 
 ##### With push access
 
