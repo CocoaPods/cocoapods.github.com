@@ -13,9 +13,8 @@ To install CocoaPods you can run:
 
     $ [sudo] gem install cocoapods
 
-To enjoy performance benefits you can install a modern Ruby like 2.0.0 trough a
-Ruby manager like RVM. If you don't use the system Ruby avoid to use sudo as it
-creates bad effects.
+To enjoy performance benefits you can install a modern Ruby like 2.0.0 through a
+Ruby version manager like [RVM](http://rvm.io). If you are using RVM, or equivalent, we suggest not using `sudo` as it may have some unintended effects on other parts of your system.
 
 ### Update
 
