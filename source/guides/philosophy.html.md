@@ -2,7 +2,7 @@
 
 ### Goal
 
-CocoaPods goal is to improve discoverability of, and engagement in, third party
+CocoaPods' goal is to improve discoverability of, and engagement in, third party
 open-source libraries, by creating a more centralized ecosystem.
 
 ### Common Misconceptions
@@ -10,7 +10,7 @@ open-source libraries, by creating a more centralized ecosystem.
 #### 1. “CocoaPods is not ready for prime-time yet.”
 
 Correct. Version 1.0.0 will be the milestone where we feel confident that all
-the basic requirements of a Objective-C dependency manager are fulfilled.
+the basic requirements of an Objective-C dependency manager are fulfilled.
 
 Once we reach the 1.0.0 milestone, we will, for the first time ever, contact
 the community at large through mailing-lists such as cocoa-dev.
@@ -20,13 +20,12 @@ the community at large through mailing-lists such as cocoa-dev.
 First see point #1, then consider that unless you tell us about the missing
 feature and why it is important, it won’t happen at all. We don’t scour Twitter
 to look for work, so please file a
-[ticket](https://github.com/CocoaPods/CocoaPods/issues/new), or, better yet, in
-the form of a pull-request.
+[ticket](https://github.com/CocoaPods/CocoaPods/issues/new), or, better yet, start a pull-request.
 
 #### 3. “CocoaPods doesn’t do dependency resolution.”
 
 CocoaPods does in fact do dependency resolution, but it does not automatically
-resolve conflicts. This means that, when a conflict occurs, CocoaPods will
+resolve conflicts. This means that when a conflict occurs, CocoaPods will
 raise an error and leave conflict resolving up to the user. (The user can do
 this by depending on a specific version of a common dependency _before_
 requiring the dependencies that lead to the conflict.)
@@ -39,10 +38,10 @@ Adding conflict resolution to CocoaPods is on our TODO list and we will try to
 work with the Bundler team to see if we can share their algorithm, but this
 will be one of the last things we’ll work on. A feature like this will require
 a stable basis and since we’re not there yet, working on it now would only make
-working on the basis more complex than necessary.
+working on the basics more complex than necessary.
 
 Finally, while conflict resolving is a definite must-have, you should ask
-yourself if you’re not using too much dependencies whenever you run into
+yourself if you’re not using too many dependencies whenever you run into
 conflicts, as this is in general a good indicator. See the link to a blog post
 about this in #4.
 
@@ -69,7 +68,7 @@ purpose](http://developer.apple.com/library/ios/#featuredarticles/XcodeConcepts/
 
 Since then, they have also added workspace files to each xcodeproj document,
 leading people to believe that a workspace is user data only. This is simply
-incorrect and you should **not** ignore workspace documents any longer, if you
+incorrect and you should **not** ignore workspace documents any longer if you
 were doing so.
 
 Note that CocoaPods itself does not require the use of a workspace. If you
