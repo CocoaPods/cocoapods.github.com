@@ -1,11 +1,11 @@
 ## Dependency versioning
 
-There is, unfortunately, often an issue of devs not interpreting version
+There is, unfortunately, often an issue of developers not interpreting version
 numbers well or assigning emotional value to certain version numbers.
 
 However, arbitrary revisions as version is not a good idea for a library
-manager vs a proper version number (see [Semantic
-Versioning](http://semver.org)). Let me explain how, in an ideal world ;), I’d
+manager instead of a proper version number (see [Semantic
+Versioning](http://semver.org)). Let us explain how, in an ideal world, we’d
 prefer people to interact with it:
 
 * “I want to start using CocoaLumberjack, the current version will be fine for
@@ -14,7 +14,7 @@ prefer people to interact with it:
 
         pod 'CocoaLumberjack'
 
-* Some time into the future, the dev wants to update the dependencies so runs
+* Some time into the future, the dev wants to update the dependencies, and to do so runs
   the install command again, which will now install the version of the lib
   which is the latest version _at that time_.
 
@@ -29,7 +29,7 @@ prefer people to interact with it:
         pod 'CocoaLumberjack', '~> 1.0.7'
 
 
-The point is that devs can easily keep track of newer versions of dependencies,
+The point is that developers can easily keep track of newer versions of dependencies,
 by simply running `pod install` again, which they might otherwise do less if
 they had to change everything manually.
 
@@ -38,8 +38,8 @@ they had to change everything manually.
 CocoaPods uses RubyGems versions for specifying pod spec versions. The
 [RubyGems Versioning Policies](http://docs.rubygems.org/read/chapter/7)
 describes the rules used for interpreting version numbers. The [RubyGems
-version specifiers](http://docs.rubygems.org/read/chapter/16#page74) describe
-exactly how to use the comparison operators which specify dependency versions.
+version specifiers](http://docs.rubygems.org/read/chapter/16#page74) describes
+exactly how to use the comparison operators that specify dependency versions.
 
 Following the pattern established in RubyGems, pre-release versions can also be
 specified in CocoaPods. A pre-release of version 1.2, for example, can be

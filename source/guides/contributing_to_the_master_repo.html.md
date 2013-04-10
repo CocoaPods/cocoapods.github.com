@@ -78,14 +78,14 @@ When a podspec lints you can submit it to the master repo.
 
 ##### Without push access
 
-You need to fork the master repo on github, then you need to :
+You need to fork the master repo on github, then you need to:
 
-    cd ~/.cocoapods/master
-    git checkout -b fork
-    git remote add myfork https://github.com/YOUR_USER_NAME/Specs.git
-    cp ~/Bananas.podspec ~/.cocoapods/master/Bananas/VERSION/
-    git push myfork
-    git checkout master
+    $ cd ~/.cocoapods/master
+    $ git checkout -b fork
+    $ git remote add myfork https://github.com/YOUR_USER_NAME/Specs.git
+    $ cp ~/Bananas.podspec ~/.cocoapods/master/Bananas/VERSION/
+    $ git push myfork
+    $ git checkout master
 
 Once you push your changes, you can make a pull request on CocoaPods/Specs.
 
