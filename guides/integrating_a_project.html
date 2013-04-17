@@ -3,20 +3,31 @@
 <link href="../css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../css/style2-b98e7dcd.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../js/bootstrap-308e23ce.js" type="text/javascript"></script>
 <script src="../js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
-<script src="../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../index.html">Docs</a><span class="divider">/</span></li><li><a href="index.html">Guides</a><span class="divider">/</span></li><li class="active">Integrating a project</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><h2 id="toc_0">Integrating a project</h2>
+<script src="../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../index.html">Docs</a><span class="divider">/</span></li><li><a href="index.html">Guides</a><span class="divider">/</span></li><li class="active">Integrating a project</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><h1 id="toc_0">Integrating with an Xcode project</h1>
 
-<pre><code>This guide is a stub
-</code></pre>
-
-<h3 id="toc_1">Preliminary version of the basic usage howto.</h3>
+<h2 id="toc_1">Before you begin</h2>
 
 <ol>
-<li>Create a <a href="A-Podfile">Podfile</a> with dependencies.</li>
-<li>Run <code>pod install</code>.</li>
-<li>Open <code>App.xcworkspace</code> and build away.</li>
+<li>Check the <a href="http://github.com/CocoaPods/Specs">Specs</a> repository to make sure the libraries you would like to use are available.</li>
+<li><a href="installing_cocoapods.html">Install CocoaPods on your computer</a>.</li>
 </ol>
 
-<h3 id="toc_2">What this does</h3>
+<h2 id="toc_2">Installation</h2>
+
+<ol>
+<li>Create a <a href="../podfile.html">Podfile</a>, and add your dependencies:</li>
+</ol>
+
+<pre><code>    pod &#39;AFNetworking&#39;, &#39;~&gt; 1.0&#39;  
+    pod &#39;ObjectiveSugar&#39;, &#39;~&gt; 0.5&#39;
+</code></pre>
+
+<ol>
+<li>Run <code>$ pod install</code> in your project directory.</li>
+<li>Open <code>App.xcworkspace</code> and build.</li>
+</ol>
+
+<h3 id="toc_3">What this does</h3>
 
 <p>In Xcode, it:</p>
 
@@ -37,9 +48,9 @@
 
 <p>Note that steps 3 onwards are skipped if the CocoaPods static library is already in your project.</p>
 
-<p>This is largely based on <a href="http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4">http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4</a>.</p>
+<p>This is largely based on <a href="http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4">http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4</a>.  </p>
 
-<h3 id="toc_3">FAQ</h3>
+<h2 id="toc_4">FAQ &amp; Troubleshooting</h2>
 
 <p><em>“A curse a day keeps the Xcode doctor away.”</em></p>
 
@@ -49,8 +60,9 @@
 
 <ul>
 <li>Check if the pod header files are correctly symlinked in <code>Pods/Headers</code> and you are not overriding the <code>HEADER_SEARCH_PATHS</code> (see #1).</li>
-<li>Make sure your project is using the <code>Pods.xcconfig</code>. To check this select your project file, then select it in the second pane again and open the <code>Info</code> section in the third pane. Under configurations you should select <code>Pods.xcconfig</code> for each configurations requiring your installed pods.</li>
-<li>If Xcode still can’t find them, as a last resort you can prepend your imports, e.g. <code>#import &quot;Pods/SSZipArchive.h&quot;</code>.</li>
+<li>Make sure your project is using the <code>Pods.xcconfig</code>.<br>
+<em>To check this select your project file, then select it in the second pane again and open the <code>Info</code> section in the third pane. Under configurations you should select <code>Pods.xcconfig</code> for each configurations requiring your installed pods.</em></li>
+<li>If Xcode still can’t find them, as a last resort you can prepend your imports, e.g. <code>#import &lt;Pods/SSZipArchive.h&gt;</code>.<br></li>
 </ul></li>
 <li><p>If you&#39;re getting errors about unrecognized C compiler command line options, e.g. <code>cc1obj: error: unrecognized command line option &quot;-Wno-sign-conversion&quot;</code>:</p>
 
@@ -65,15 +77,12 @@
 <li>Click on Build</li>
 <li>Add the <code>Pods</code> static library, and make sure it&#39;s at the top of the list</li>
 <li>Clean and build again</li>
-<li>If that doesn&#39;t work, verify that the source for the spec you are trying to include has been pulled from github. Do this by looking in &lt;Project Dir&gt;/Pods/&lt;Name of spec you are trying to include&gt;. If it is empty (it should not be), verify that the ~/.cocoapods/master/&lt;spec&gt;/&lt;spec&gt;.podspec has the correct git hub url in it.</li>
+<li>If that doesn&#39;t work, verify that the source for the spec you are trying to include has been pulled from github. Do this by looking in &lt;Project Dir&gt;/Pods/&lt;Name of spec you are trying to include&gt;. If it is empty (it should not be), verify that the ~/.cocoapods/master/&lt;spec&gt;/&lt;spec&gt;.podspec has the correct Github url in it.</li>
 <li>If still doesn&#39;t work, check your XCode build locations settings. Go to Preferences -&gt; Locations -&gt; Derived Data -&gt; Advanced and set build location to &ldquo;Relative to Workspace&rdquo;.</li>
-</ul></li>
-</ol>
+</ul>
 
-<p><img alt="Xcode build location settings" src="https://img.skitch.com/20120426-chmda3m5suhcfrhjge6brjhesk.png" /></p>
-
-<ol>
-<li>If you tried to submit app to App Store, and found that &ldquo;Product&rdquo; &gt; &ldquo;Archive&rdquo; produce nothing in &ldquo;Organizer&rdquo;:
+<p><img alt="Xcode build location settings" src="https://img.skitch.com/20120426-chmda3m5suhcfrhjge6brjhesk.png" /></p></li>
+<li><p>If you tried to submit app to App Store, and found that &ldquo;Product&rdquo; &gt; &ldquo;Archive&rdquo; produces nothing in &ldquo;Organizer&rdquo;:</p>
 
 <ul>
 <li>In Xcode &ldquo;Build Settings&rdquo;, find &ldquo;Skip Install&rdquo;. Set the value for &ldquo;Release&rdquo; to &ldquo;NO&rdquo; on your application target. Build again and it should work. </li>

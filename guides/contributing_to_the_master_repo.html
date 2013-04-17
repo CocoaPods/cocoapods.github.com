@@ -16,9 +16,9 @@
 
 <h3 id="toc_2">Contributing</h3>
 
-<p>To ensure a high quality and reliable collection of Pods the master repo is
+<p>To ensure a high quality, reliable collection of Pods, the master repo is
 strict about the acceptable specifications. The CocoaPods linter (see the <code>pod
-spec lint</code> command) is used to validate specification and no errors or warnings
+spec lint</code> command) is used to validate specifications, and no errors or warnings
 are accepted.</p>
 
 <p>The highest priority of the master repo is to guarantee the integrity of existing
@@ -28,7 +28,7 @@ CocoaPods installations.</p>
 
 <ul>
 <li>A specification cannot be deleted.</li>
-<li>Specifications can be updated only if they don&#39;t affect existing installation.
+<li>Specifications can be updated only if they don&#39;t affect existing installations.
 
 <ul>
 <li>Broken specifications can be updated.</li>
@@ -58,13 +58,16 @@ for this.</p>
 <p><strong>To prevent collisions with possible future versions, unversioned libraries
 can&#39;t be updated until the author starts to tag them.</strong></p>
 
-<p>If you need to update an unversione library you can:
-- Asks the author to versione the library.
-- Maintain a fork which is versioned. This fork should be clearly namespaced
-  from the original library according the <code>NAME@USER</code> convention (e.g.
-  <code>Reachability@irrationalfab</code>). It should also mention in the summary that it
-  is a versioned fork.
-- Create a podspec and use it in a private repo.</p>
+<p>If you need to update an unversioned library you can:</p>
+
+<ul>
+<li>Ask the author to version the library.</li>
+<li>Maintain a fork which is versioned. This fork should be clearly namespaced
+from the original library according the <code>NAME@USER</code> convention (e.g.
+<code>Reachability@irrationalfab</code>). It should also mention in the summary that it
+is a versioned fork.</li>
+<li>Create a podspec and use it in a private repo.</li>
+</ul>
 
 <h3 id="toc_4">Creating podspecs</h3>
 
@@ -91,20 +94,23 @@ can&#39;t be updated until the author starts to tag them.</strong></p>
 
 <h5 id="toc_6">Without push access</h5>
 
-<p>You need to fork the master repo on github, then you need to :</p>
+<p>You need to fork the master repo on github, then you need to:</p>
 
-<pre><code>cd ~/.cocoapods/master
-git checkout -b fork
-git remote add myfork https://github.com/YOUR_USER_NAME/Specs.git
-cp ~/Bananas.podspec ~/.cocoapods/master/Bananas/VERSION/
-git push myfork
-git checkout master
+<pre><code>$ cd ~/.cocoapods/master
+$ git checkout -b fork
+$ git remote add myfork https://github.com/YOUR_USER_NAME/Specs.git
+$ cp ~/Bananas.podspec ~/.cocoapods/master/Bananas/VERSION/
+$ git push myfork
+$ git checkout master
 </code></pre>
 
-<p>Once you pushed you changes you can make a pull request on CocoaPods/Specs.</p>
+<p>Once you push your changes, you can make a pull request on CocoaPods/Specs.</p>
 
 <h5 id="toc_7">With push access</h5>
 
 <pre><code>$ pod push Bananas.podspec
 </code></pre>
+
+<p>The master repo is in a transitional phase, push access is granted on request
+only if the contributor plans to add specifications for multiple Pods.</p>
 </div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
