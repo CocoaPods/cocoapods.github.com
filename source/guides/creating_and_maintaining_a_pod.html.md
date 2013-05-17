@@ -28,10 +28,10 @@ The `podspec` is a shortcut to require all the dependencies specified in `NAME.p
 
 ### Development
 
-You can work on the library from its project. Alternatively you can work from an application project using the `:local` option:
+You can work on the library from its project. Alternatively you can work from an application project using the `:path` option:
 
 ```ruby
-pod 'Name', :local => '~/code/Pods/NAME'
+pod 'Name', :path => '~/code/Pods/NAME'
 ```
 
 You can also lint the pod against the files of its directory:
