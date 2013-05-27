@@ -18,11 +18,6 @@ and uses the default ones if not provided.
 </div><h4><a href="/cocoapods/pod/executable#class_execute_command/index.html">Pod::Executable::execute_command</a></h4><div class="alert"><i class="icon-warning-sign"></i> Find a way to display the live output of the commands.
 </div><h4><a href="/cocoapods/pod/externalsources/abstractexternalsource#pre_download/index.html">Pod::ExternalSources::AbstractExternalSource#pre_download</a></h4><div class="alert"><i class="icon-warning-sign"></i> The downloader configuration is the same of the
 #{PodSourceInstaller} and it needs to be kept in sync.
-</div><h4><a href="/cocoapods/pod/generator/documentation#generate/index.html">Pod::Generator::Documentation#generate</a></h4><div class="alert"><i class="icon-warning-sign"></i> Passing the files explicitly clutters output and chokes on very
-long list (AWSiOSSDK).  It is possible to just pass the dir of
-the pod, however this would include other files like demo
-projects.
-</div><h4><a href="/cocoapods/pod/generator/documentation#company/index.html">Pod::Generator::Documentation#company</a></h4><div class="alert"><i class="icon-warning-sign"></i> Set to CocoaPods?
 </div><h4><a href="/cocoapods/pod/generator/prefixheader#generate/index.html">Pod::Generator::PrefixHeader#generate</a></h4><div class="alert"><i class="icon-warning-sign"></i> Subspecs can specify prefix header information too.
 </div><h4><a href="/cocoapods/pod/installer#clean_sandbox/index.html">Pod::Installer#clean_sandbox</a></h4><div class="alert"><i class="icon-warning-sign"></i> [#247] Clean the headers of only the pods to install.
 </div><h4><a href="/cocoapods/pod/installer#clean_pod_sources/index.html">Pod::Installer#clean_pod_sources</a></h4><div class="alert"><i class="icon-warning-sign"></i> Why the @pod_installers might be empty?
@@ -56,6 +51,7 @@ the user.
 Two folders should be created <code>External Sources</code> and <code>Podspecs</code>.
 </div><h4><a href="/cocoapods/pod/sandbox#store_podspec/index.html">Pod::Sandbox#store_podspec</a></h4><div class="alert"><i class="icon-warning-sign"></i> Store all the specifications (including those not originating
 from external sources) so users can check them.
+</div><h4><a href="/cocoapods/pod/sandbox#local_pods/index.html">Pod::Sandbox#local_pods</a></h4><div class="alert"><i class="icon-warning-sign"></i> Rename (e.g. <code>pods_with_local_path</code>)
 </div><h4><a href="/cocoapods/pod/sandbox/fileaccessor#glob_for_attribute/index.html">Pod::Sandbox::FileAccessor#glob_for_attribute</a></h4><div class="alert"><i class="icon-warning-sign"></i> Move to the cocoapods-core so it appears in the docs?
 </div><h4><a href="/cocoapods/pod/sandbox/fileaccessor#expanded_paths/index.html">Pod::Sandbox::FileAccessor#expanded_paths</a></h4><div class="alert"><i class="icon-warning-sign"></i> Implement case insensitive search
 </div><h4><a href="/cocoapods/pod/userinterface#class_section/index.html">Pod::UserInterface::section</a></h4><div class="alert"><i class="icon-warning-sign"></i> Refactor to title (for always visible titles like search)

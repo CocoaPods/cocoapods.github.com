@@ -100,7 +100,7 @@ are upgrading from CP &lt; 0.17.</p>
 <span class="lineno">151</span>   <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">sandbox</span><span class="o">.</span><span class="n">predownloaded?</span><span class="p">(</span><span class="n">pod</span><span class="p">)</span>
 <span class="lineno">152</span>   <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">folder_empty?</span><span class="p">(</span><span class="n">pod</span><span class="p">)</span>
 <span class="lineno">153</span>   <span class="k">if</span> <span class="n">update_mode</span>
-<span class="lineno">154</span>     <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">spec</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">head?</span>
+<span class="lineno">154</span>     <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">sandbox</span><span class="o">.</span><span class="n">head_pod?</span><span class="p">(</span><span class="n">pod</span><span class="p">)</span>
 <span class="lineno">155</span>   <span class="k">end</span>
 <span class="lineno">156</span>   <span class="k">return</span> <span class="kp">false</span>
 <span class="lineno">157</span> <span class="k">end</span>

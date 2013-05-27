@@ -3,16 +3,16 @@
 <link href="../css/style-653251cd.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="../css/style2-b98e7dcd.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script src="../js/bootstrap-308e23ce.js" type="text/javascript"></script>
 <script src="../js/mousetrap.min-c31ccc6e.js" type="text/javascript"></script>
-<script src="../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../index.html">Docs</a><span class="divider">/</span></li><li><a href="index.html">Guides</a><span class="divider">/</span></li><li class="active">Integrating a project</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><h1 id="toc_0">Integrating with an Xcode project</h1>
+<script src="../js/javascript-ea658cd3.js" type="text/javascript"></script></head><body><div class="container"><div id="body"><div id="sections-container"><div class="row"><div class="span8"><ul class="breadcrumb"><li id="logo"><a href="http://cocoapods.org">CocoaPods</a><span class="divider">/</span></li><li><a href="../index.html">Docs</a><span class="divider">/</span></li><li><a href="index.html">Guides</a><span class="divider">/</span></li><li class="active">Integrating a project</li></ul></div><div class="span2"><div class="form navbar-search"><input class="search-query typeahead" placeholder="Search - shortcut: s" type="text" /><i class="icon-search icon-search"></i></div></div></div></div><div class="page-container"><h1>Integrating with an Xcode project</h1>
 
-<h2 id="toc_1">Before you begin</h2>
+<h2>Before you begin</h2>
 
 <ol>
 <li>Check the <a href="http://github.com/CocoaPods/Specs">Specs</a> repository to make sure the libraries you would like to use are available.</li>
 <li><a href="installing_cocoapods.html">Install CocoaPods on your computer</a>.</li>
 </ol>
 
-<h2 id="toc_2">Installation</h2>
+<h2>Installation</h2>
 
 <ol>
 <li>Create a <a href="../podfile.html">Podfile</a>, and add your dependencies:</li>
@@ -27,7 +27,7 @@
 <li>Open <code>App.xcworkspace</code> and build.</li>
 </ol>
 
-<h3 id="toc_3">What this does</h3>
+<h3>What this does</h3>
 
 <p>In Xcode, it:</p>
 
@@ -37,7 +37,7 @@
 <li><a href="http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4/#adding_projects_to_a_workspace">Adds the CocoaPods static library project to the workspace if needed.</a></li>
 <li><a href="http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4/#adding_build_target_dependencies">Adds libPods.a to: targets =&gt; build phases =&gt; link with libraries.</a></li>
 <li>Adds the CocoaPods Xcode configuration file to your app’s project.</li>
-<li><a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/025-Configure_Your_Project/configure_project.html">Changes your app&#39;s target configurations to be based on CocoaPods&#39;s.</a> (Expand the ‘To add a new build configuration…’ section of the linked page for a howto.)</li>
+<li><a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/025-Configure_Your_Project/configure_project.html">Changes your app&rsquo;s target configurations to be based on CocoaPods&rsquo;s.</a> (Expand the ‘To add a new build configuration…’ section of the linked page for a howto.)</li>
 <li>Adds a build phase to copy resources from any pods you installed to your app bundle. i.e. a ‘Script build phase’ after all other build phases with the following:
 
 <ul>
@@ -50,7 +50,7 @@
 
 <p>This is largely based on <a href="http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4">http://blog.carbonfive.com/2011/04/04/using-open-source-static-libraries-in-xcode-4</a>.  </p>
 
-<h2 id="toc_4">FAQ &amp; Troubleshooting</h2>
+<h2>FAQ &amp; Troubleshooting</h2>
 
 <p><em>“A curse a day keeps the Xcode doctor away.”</em></p>
 
@@ -64,21 +64,21 @@
 <em>To check this select your project file, then select it in the second pane again and open the <code>Info</code> section in the third pane. Under configurations you should select <code>Pods.xcconfig</code> for each configurations requiring your installed pods.</em></li>
 <li>If Xcode still can’t find them, as a last resort you can prepend your imports, e.g. <code>#import &lt;Pods/SSZipArchive.h&gt;</code>.<br></li>
 </ul></li>
-<li><p>If you&#39;re getting errors about unrecognized C compiler command line options, e.g. <code>cc1obj: error: unrecognized command line option &quot;-Wno-sign-conversion&quot;</code>:</p>
+<li><p>If you&rsquo;re getting errors about unrecognized C compiler command line options, e.g. <code>cc1obj: error: unrecognized command line option &quot;-Wno-sign-conversion&quot;</code>:</p>
 
 <ul>
 <li>Make sure your project build settings are <a href="https://img.skitch.com/20111120-brfn4mp8qwrju8w8325wphan9h.png">configured</a> to use &ldquo;Apple LLVM compiler&rdquo; (clang)</li>
 <li>Are you setting the <code>CC</code>, <code>CPP</code> or <code>CXX</code> environment variable, e.g. in your <code>~/.profile</code>? This may interfere with the Xcode build process. Remove the environment variable from your <code>~/.profile</code>.</li>
 </ul></li>
-<li><p>If Xcode complains when linking, e.g. <code>Library not found for -lPods</code>, it doesn&#39;t detect the implicit dependencies:</p>
+<li><p>If Xcode complains when linking, e.g. <code>Library not found for -lPods</code>, it doesn&rsquo;t detect the implicit dependencies:</p>
 
 <ul>
 <li>Go to Product &gt; Edit Scheme</li>
 <li>Click on Build</li>
-<li>Add the <code>Pods</code> static library, and make sure it&#39;s at the top of the list</li>
+<li>Add the <code>Pods</code> static library, and make sure it&rsquo;s at the top of the list</li>
 <li>Clean and build again</li>
-<li>If that doesn&#39;t work, verify that the source for the spec you are trying to include has been pulled from github. Do this by looking in &lt;Project Dir&gt;/Pods/&lt;Name of spec you are trying to include&gt;. If it is empty (it should not be), verify that the ~/.cocoapods/master/&lt;spec&gt;/&lt;spec&gt;.podspec has the correct Github url in it.</li>
-<li>If still doesn&#39;t work, check your XCode build locations settings. Go to Preferences -&gt; Locations -&gt; Derived Data -&gt; Advanced and set build location to &ldquo;Relative to Workspace&rdquo;.</li>
+<li>If that doesn&rsquo;t work, verify that the source for the spec you are trying to include has been pulled from github. Do this by looking in &lt;Project Dir&gt;/Pods/&lt;Name of spec you are trying to include&gt;. If it is empty (it should not be), verify that the ~/.cocoapods/master/&lt;spec&gt;/&lt;spec&gt;.podspec has the correct Github url in it.</li>
+<li>If still doesn&rsquo;t work, check your XCode build locations settings. Go to Preferences -&gt; Locations -&gt; Derived Data -&gt; Advanced and set build location to &ldquo;Relative to Workspace&rdquo;.</li>
 </ul>
 
 <p><img alt="Xcode build location settings" src="https://img.skitch.com/20120426-chmda3m5suhcfrhjge6brjhesk.png" /></p></li>
@@ -89,5 +89,5 @@
 </ul></li>
 </ol>
 
-<p><em>Different Xcode versions can have various problems. Ask for help and tell us what version you&#39;re using.</em></p>
+<p><em>Different Xcode versions can have various problems. Ask for help and tell us what version you&rsquo;re using.</em></p>
 </div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
