@@ -37,10 +37,6 @@ method should be refactored.
 </div><h4><a href="/cocoapods/pod/installer/podsourceinstaller#clean_paths/index.html">Pod::Installer::PodSourceInstaller#clean_paths</a></h4><div class="alert"><i class="icon-warning-sign"></i> The paths are down-cased for the comparison as issues similar
 to #602 lead the files not being matched and so cleaning all
 the files. This solution might create side effects.
-</div><h4><a href="/cocoapods/pod/installer/targetinstaller#add_target/index.html">Pod::Installer::TargetInstaller#add_target</a></h4><div class="alert"><i class="icon-warning-sign"></i> CocoaPods 0.16 used to add the build configurations to the build
-configuration list of the project (<code>root object</code>) as well with
-an empty build settings. This behaviour was changed in 0.17.
-Restore if needed.
 </div><h4><a href="/cocoapods/pod/installer/userprojectintegrator#installation_root/index.html">Pod::Installer::UserProjectIntegrator#installation_root</a></h4><div class="alert"><i class="icon-warning-sign"></i> This is only used to compute the workspace path in case that it
 should be inferred by the project. If the workspace should be in
 the same dir of the project, this could be removed.

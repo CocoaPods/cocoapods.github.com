@@ -237,7 +237,7 @@ it now has to be enabled explicitly using this method.</p>
 been downloaded but before they are installed.</p>
 
 <p>It receives the
-<code>[Pod::Hooks::InstallerRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/installerrepresentation/)</code>
+<a href="http://docs.cocoapods.org/cocoapods/pod/hooks/installerrepresentation/"><code>Pod::Hooks::InstallerRepresentation</code></a>
 as its only argument.</p>
 <hr /><h3>Examples:</h3><p>Defining a pre install hook in a Podfile.</p><div class="highlight"><pre><span class="n">pre_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer_representation</span><span class="o">|</span>
   <span class="c1"># Do something fancy!</span>
@@ -247,7 +247,7 @@ project before it is written to disk, or any other tasks you might want
 to perform.</p>
 
 <p>It receives the
-<code>[Pod::Hooks::InstallerRepresentation](http://docs.cocoapods.org/cocoapods/pod/hooks/installerrepresentation/)</code>
+<a href="http://docs.cocoapods.org/cocoapods/pod/hooks/installerrepresentation/"><code>Pod::Hooks::InstallerRepresentation</code></a>
 as its only argument.</p>
 <hr /><h3>Examples:</h3><p>Customizing the `OTHER_LDFLAGS` of all targets</p><div class="highlight"><pre><span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer_representation</span><span class="o">|</span>
   <span class="n">installer_representation</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>

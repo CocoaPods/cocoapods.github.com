@@ -123,28 +123,14 @@ specification or auto-detected.</p>
 <span class="lineno">169</span>   <span class="n">globs</span><span class="o">[</span><span class="n">attrbute</span><span class="o">]</span>
 <span class="lineno">170</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/sandbox/file_accessor.rb#L164">lib/cocoapods/sandbox/file_accessor.rb:164</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/sandbox/file_accessor_spec.rb">spec/unit/sandbox/file_accessor_spec.rb</a></p></div><div class="tab-pane" id="tab_expanded_paths"><h2>expanded_paths</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">expanded_paths</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span> <span class="c1">#=&gt; Array&lt;Pathname&gt; </span>
-</pre></div><h4>Parameters</h4><p><code>Array&lt;String, FileList&gt;</code><span> </span><b> patterns</b></p><p>The patterns to expand.</p>
+</pre></div><h4>Parameters</h4><p><code>Array&lt;String&gt;</code><span> </span><b> patterns</b></p><p>The patterns to expand.</p>
 <p><code>String</code><span> </span><b> dir_pattern</b></p><p>The pattern to add to directories.</p>
 <p><code>Array&lt;String&gt;</code><span> </span><b> exclude_patterns</b></p><p>The exclude patterns to pass to the PathList.</p>
 <h4>Returns</h4><p><code>Array<Pathname></code> A list of the paths.
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">190</span> <span class="k">def</span> <span class="nf">expanded_paths</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
 <span class="lineno">191</span>   <span class="k">return</span> <span class="o">[]</span> <span class="k">if</span> <span class="n">patterns</span><span class="o">.</span><span class="n">empty?</span>
-<span class="lineno">192</span> 
-<span class="lineno">193</span>   <span class="n">file_lists</span> <span class="o">=</span> <span class="n">patterns</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="nb">p</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">FileList</span><span class="p">)</span> <span class="p">}</span>
-<span class="lineno">194</span>   <span class="n">glob_patterns</span> <span class="o">=</span> <span class="n">patterns</span> <span class="o">-</span> <span class="n">file_lists</span>
-<span class="lineno">195</span> 
-<span class="lineno">196</span>   <span class="n">result</span> <span class="o">=</span> <span class="o">[]</span>
-<span class="lineno">197</span>   <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">path_list</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">glob_patterns</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
-<span class="lineno">198</span>   <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">file_lists</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">file_list</span><span class="o">|</span>
-<span class="lineno">199</span>     <span class="n">file_list</span><span class="o">.</span><span class="n">prepend_patterns</span><span class="p">(</span><span class="n">path_list</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
-<span class="lineno">200</span>     <span class="n">file_list</span><span class="o">.</span><span class="n">glob</span>
-<span class="lineno">201</span>   <span class="k">end</span>
-<span class="lineno">202</span> 
-<span class="lineno">203</span>   <span class="k">unless</span> <span class="n">file_lists</span><span class="o">.</span><span class="n">empty?</span>
-<span class="lineno">204</span>     <span class="c1"># TODO Restore warning in 0.17 proper</span>
-<span class="lineno">205</span>     <span class="c1"># UI.warn &quot;[#{spec_consumer.spec.name}] The usage of Rake FileList is deprecated. Use `exclude_files`.&quot;</span>
-<span class="lineno">206</span>   <span class="k">end</span>
-<span class="lineno">207</span> 
-<span class="lineno">208</span>   <span class="n">result</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span><span class="o">.</span><span class="n">uniq</span>
-<span class="lineno">209</span> <span class="k">end</span>
+<span class="lineno">192</span>   <span class="n">result</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="lineno">193</span>   <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">path_list</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+<span class="lineno">194</span>   <span class="n">result</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span><span class="o">.</span><span class="n">uniq</span>
+<span class="lineno">195</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/sandbox/file_accessor.rb#L190">lib/cocoapods/sandbox/file_accessor.rb:190</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/CocoaPods/blob/master/spec/unit/sandbox/file_accessor_spec.rb">spec/unit/sandbox/file_accessor_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>

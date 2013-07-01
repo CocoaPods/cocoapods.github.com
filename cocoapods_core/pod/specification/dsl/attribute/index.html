@@ -135,30 +135,26 @@ on the DSL.</p>
 <span class="lineno">219</span>           <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">to_s</span><span class="si">}</span><span class="s2">. Allowed keys: `</span><span class="si">#{</span><span class="n">allowed_keys</span><span class="o">.</span><span class="n">inspect</span><span class="si">}</span><span class="s2">`&quot;</span>
 <span class="lineno">220</span>       <span class="k">end</span>
 <span class="lineno">221</span>     <span class="k">end</span>
-<span class="lineno">222</span> 
-<span class="lineno">223</span>     <span class="k">if</span> <span class="n">defined?</span><span class="p">(</span><span class="no">Rake</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">value</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="ss">Rake</span><span class="p">:</span><span class="ss">:FileList</span><span class="p">)</span>
-<span class="lineno">224</span>       <span class="c1"># UI.warn &quot;Rake::FileList is deprecated, use `exclude_files` (#{attrb.name}).&quot;</span>
-<span class="lineno">225</span>     <span class="k">end</span>
-<span class="lineno">226</span>   <span class="k">end</span>
-<span class="lineno">227</span> 
-<span class="lineno">228</span>   <span class="c1"># @return [Array] the flattened list of the allowed keys for the</span>
-<span class="lineno">229</span>   <span class="c1"># hash of a given specification.</span>
-<span class="lineno">230</span>   <span class="c1">#</span>
-<span class="lineno">231</span>   <span class="k">def</span> <span class="nf">allowed_keys</span>
-<span class="lineno">232</span>     <span class="k">if</span> <span class="n">keys</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
-<span class="lineno">233</span>       <span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span><span class="p">)</span>
-<span class="lineno">234</span>     <span class="k">else</span>
-<span class="lineno">235</span>       <span class="n">keys</span>
-<span class="lineno">236</span>     <span class="k">end</span>
-<span class="lineno">237</span>   <span class="k">end</span>
-<span class="lineno">238</span> <span class="k">end</span>
+<span class="lineno">222</span>   <span class="k">end</span>
+<span class="lineno">223</span> 
+<span class="lineno">224</span>   <span class="c1"># @return [Array] the flattened list of the allowed keys for the</span>
+<span class="lineno">225</span>   <span class="c1"># hash of a given specification.</span>
+<span class="lineno">226</span>   <span class="c1">#</span>
+<span class="lineno">227</span>   <span class="k">def</span> <span class="nf">allowed_keys</span>
+<span class="lineno">228</span>     <span class="k">if</span> <span class="n">keys</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+<span class="lineno">229</span>       <span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span><span class="p">)</span>
+<span class="lineno">230</span>     <span class="k">else</span>
+<span class="lineno">231</span>       <span class="n">keys</span>
+<span class="lineno">232</span>     <span class="k">end</span>
+<span class="lineno">233</span>   <span class="k">end</span>
+<span class="lineno">234</span> <span class="k">end</span>
 </pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L210">lib/cocoapods-core/specification/dsl/attribute.rb:210</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/dsl/attribute_spec.rb">spec/specification/dsl/attribute_spec.rb</a></p></div><div class="tab-pane" id="tab_allowed_keys"><h2>allowed_keys</h2><h3>Signature</h3><div class="highlight"><pre><span class="n">allowed_keys</span> <span class="c1">#=&gt; Array </span>
 </pre></div><h4>Returns</h4><p><code>Array</code> The flattened list of the allowed keys for the
-</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">231</span> <span class="k">def</span> <span class="nf">allowed_keys</span>
-<span class="lineno">232</span>   <span class="k">if</span> <span class="n">keys</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
-<span class="lineno">233</span>     <span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span><span class="p">)</span>
-<span class="lineno">234</span>   <span class="k">else</span>
-<span class="lineno">235</span>     <span class="n">keys</span>
-<span class="lineno">236</span>   <span class="k">end</span>
-<span class="lineno">237</span> <span class="k">end</span>
-</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L231">lib/cocoapods-core/specification/dsl/attribute.rb:231</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/dsl/attribute_spec.rb">spec/specification/dsl/attribute_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
+</p><h3>Source</h3><div class="highlight"><pre><span class="lineno">227</span> <span class="k">def</span> <span class="nf">allowed_keys</span>
+<span class="lineno">228</span>   <span class="k">if</span> <span class="n">keys</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+<span class="lineno">229</span>     <span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">compact</span><span class="p">)</span>
+<span class="lineno">230</span>   <span class="k">else</span>
+<span class="lineno">231</span>     <span class="n">keys</span>
+<span class="lineno">232</span>   <span class="k">end</span>
+<span class="lineno">233</span> <span class="k">end</span>
+</pre></div><h3>Source Files</h3><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/lib/cocoapods-core/specification/dsl/attribute.rb#L227">lib/cocoapods-core/specification/dsl/attribute.rb:227</a></p><p class="source_file"><i class="icon-link"></i> <a href="https://github.com/CocoaPods/Core/blob/master/spec/specification/dsl/attribute_spec.rb">spec/specification/dsl/attribute_spec.rb</a></p></div></div></div></div><div id="footer"><hr /><p class="note">Alpha app ❤ Help us to improve this website at: <a href="https://github.com/CocoaPods/cocoapods.github.com">cocoapods/cocoapods.github.com</a></p></div></div></div><div class="modal hide" id="search"><div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button><h3>Search</h3></div><div class="modal-body"><p>test</p></div></div></body></html>
