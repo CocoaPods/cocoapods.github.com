@@ -47,12 +47,14 @@ module Pod
               'pod install',
               'pod update',
               'pod outdated',
+              'pod help',
             ],
 
             'Browse' => [
               "pod search",
               "pod list",
               "pod list new",
+              "pod podfile-info",
             ],
 
             'Specifications' => [
