@@ -43,7 +43,7 @@ $ rake -T
 
 All CocoaPods development happens on GitHub, there is a repository for CocoaPods and one for the CocoaPods specs. Contributing patches or Pods is really easy and gratifying. You even get push access when one of your specs or patches is accepted.
 
-Follow @CocoaPodsOrg to get up to date information about what's going on in the CocoaPods world.
+Follow @CocoaPods to get up to date information about what's going on in the CocoaPods world.
 
 ## License
 
