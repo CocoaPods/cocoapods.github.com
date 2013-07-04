@@ -23,7 +23,7 @@ In general this means that:
 - Specifications can be updated only if they don't affect existing installations.
   - Broken specifications can be updated.
   - Subspecs can be added as they are included by the parent specification by default.
-- Only authoritative versions are accepted.
+- Only authoritative version numbers are accepted.
 
 CocoaPods uses a versioning scheme known as [Semantic
 Versioning](http://semver.org/), necessary for [cross resolution of
@@ -36,7 +36,7 @@ for this reason new Pods for libraries which are not versioned are accepted in
 the master repo. The specifications of those pods should carry the version
 `0.0.1` under the assumption that, if the author starts versioning, she/he is
 unlikely to pick `0.0.1`. This is the only exception for authoritative
-versions.
+version numbers.
 
 If you add an unversioned Pod it is your responsibility to ask the author of
 the library to tag versions, luckily we have a
