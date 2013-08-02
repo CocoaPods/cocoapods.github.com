@@ -20,11 +20,11 @@ Ruby version manager like [RVM](http://rvm.io). If you are using RVM, or equival
 
 To update CocoaPods you can run:
 
-    $ [sudo] gem update cocoapods
+    $ [sudo] gem install cocoapods
 
 If you would like to try a pre-release version of CocoaPods you can run:
 
-    $ [sudo] gem update cocoapods --pre
+    $ [sudo] gem install cocoapods --pre
 
 
 ### Troubleshooting
