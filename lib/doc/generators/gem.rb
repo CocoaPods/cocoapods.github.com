@@ -97,11 +97,11 @@ module Pod
         # @note   The order of the methods determines the order of the groups.
         #
         def generate_groups(yard_name_space, name_space)
-          yard_groups = yard_name_space.meths.map(&:group).uniq
+          yard_groups = yard_name_space.meths.map(&:group).uniq.compact
           groups = yard_groups.map do |yard_group|
             group = Doc::CodeObjects::Group.new
             group.parent           = name_space
-            group.name             = yard_group.lines.first.chomp if yard_group
+            group.name             = yard_group.lines.first.chomp if yard_group && !yard_group.lines.count.zero?
             group.html_description = markdown_h(yard_group.lines.drop(1).join) if yard_group
             group.meths = []
             group
@@ -131,8 +131,11 @@ module Pod
             method.parent           = name_space
 
             rep_yard_method = yard_methods.first
-            method.group            = groups.find { |g| g.name == (rep_yard_method.group.nil? ? nil : rep_yard_method.group.lines.first.chomp) }
-            raise "Missing group for method #{name} with name `#{rep_yard_method.group.lines.first.chomp}`" unless method.group
+            method.group            = groups.find { |g| g.name == ((rep_yard_method.group.nil? || rep_yard_method.group.lines.first.nil?) ? nil : rep_yard_method.group.lines.first.chomp) }
+            unless method.group
+              puts "[!!!] Missing group for method #{name} with name `#{rep_yard_method.group ? rep_yard_method.group.lines.first.chomp : 'nil'}`" 
+              return nil
+            end
             method.group.meths ||= []
             method.group.meths << method
 

@@ -73,6 +73,11 @@ module Pod
               "pod setup",
             ],
 
+            'Libraries' => [
+              "pod lib create",
+              "pod lib lint",
+          ],
+
            'IPC' => [
               "pod ipc repl",
               "pod ipc spec",
