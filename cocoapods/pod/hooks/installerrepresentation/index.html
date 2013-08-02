@@ -30,8 +30,8 @@ libraries.</p>
 specifications grouped by target definition.</p>
 </p><h4>Aliases</h4><code>Pod::Hooks::InstallerRepresentation#specs_by_target</code><h3>Source</h3><div class="highlight"><pre><span class="lineno">60</span> <span class="k">def</span> <span class="nf">specs_by_lib</span>
 <span class="lineno">61</span>   <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="lineno">62</span>   <span class="n">installer</span><span class="o">.</span><span class="n">pod_targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">lib</span><span class="o">|</span>
-<span class="lineno">63</span>     <span class="n">result</span><span class="o">[</span><span class="n">installer</span><span class="o">.</span><span class="n">library_rep</span><span class="p">(</span><span class="n">lib</span><span class="p">)</span><span class="o">]</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">specs</span>
+<span class="lineno">62</span>   <span class="n">installer</span><span class="o">.</span><span class="n">aggregate_targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">aggregate_target</span><span class="o">|</span>
+<span class="lineno">63</span>     <span class="n">result</span><span class="o">[</span><span class="n">installer</span><span class="o">.</span><span class="n">library_rep</span><span class="p">(</span><span class="n">aggregate_target</span><span class="p">)</span><span class="o">]</span> <span class="o">=</span> <span class="n">aggregate_target</span><span class="o">.</span><span class="n">specs</span>
 <span class="lineno">64</span>   <span class="k">end</span>
 <span class="lineno">65</span>   <span class="n">result</span>
 <span class="lineno">66</span> <span class="k">end</span>
@@ -58,8 +58,8 @@ libraries.</p>
 specifications grouped by target definition.</p>
 </p><h3>Source</h3><div class="highlight"><pre><span class="lineno">89</span> <span class="k">def</span> <span class="nf">specs_by_lib</span>
 <span class="lineno">90</span>   <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="lineno">91</span>   <span class="n">installer</span><span class="o">.</span><span class="n">pod_targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">lib</span><span class="o">|</span>
-<span class="lineno">92</span>     <span class="n">result</span><span class="o">[</span><span class="n">installer</span><span class="o">.</span><span class="n">library_rep</span><span class="p">(</span><span class="n">lib</span><span class="p">)</span><span class="o">]</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">specs</span>
+<span class="lineno">91</span>   <span class="n">installer</span><span class="o">.</span><span class="n">aggregate_targets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">aggregate_target</span><span class="o">|</span>
+<span class="lineno">92</span>     <span class="n">result</span><span class="o">[</span><span class="n">installer</span><span class="o">.</span><span class="n">library_rep</span><span class="p">(</span><span class="n">aggregate_target</span><span class="p">)</span><span class="o">]</span> <span class="o">=</span> <span class="n">aggregate_target</span><span class="o">.</span><span class="n">specs</span>
 <span class="lineno">93</span>   <span class="k">end</span>
 <span class="lineno">94</span>   <span class="n">result</span>
 <span class="lineno">95</span> <span class="k">end</span>
