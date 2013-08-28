@@ -80,10 +80,10 @@ When a podspec lints you can submit it to the master repo.
 
 You need to fork the master repo on github, then you need to:
 
-    $ cd ~/.cocoapods/master
+    $ cd ~/.cocoapods/repos/master
     $ git checkout -b fork
     $ git remote add myfork https://github.com/YOUR_USER_NAME/Specs.git
-    $ cp ~/Bananas.podspec ~/.cocoapods/master/Bananas/VERSION/
+    $ cp ~/Bananas.podspec ~/.cocoapods/repos/master/Bananas/VERSION/
     $ git push myfork
     $ git checkout master
 
