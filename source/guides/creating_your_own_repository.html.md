@@ -7,7 +7,7 @@ NAME/VERSION/NAME.podspec
 ```
 
 ```console
-$ cd ~/.cocoapods/master
+$ cd ~/.cocoapods/repos/master
 $ tree | head
 .
 └── A2DynamicDelegate
@@ -23,13 +23,13 @@ $ tree | head
 
 Although the master repo is backed by a git repository, this is not required. For a repository to be valid it is only required to respect the above described file structure.
 
-CocoaPods stores its repositories in the `~/.cocoapods/` folder.
+CocoaPods stores its repositories in the `~/.cocoapods/repos` folder.
 
 ### Adding a new repo
 
 ###### Manually
 
-1. Make a folder with the name of the repo in `~/.cocoapods/`.
+1. Make a folder with the name of the repo in `~/.cocoapods/repos`.
 2. Populate the repository with podspecs respecting the required folder structure.
 
 ###### From an existing git remote
