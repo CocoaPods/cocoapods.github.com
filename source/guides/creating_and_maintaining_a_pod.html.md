@@ -38,7 +38,7 @@ You can also lint the pod against the files of its directory:
 
 ```shell
 $ cd ~/code/Pods/NAME
-$ pod spec lint --local
+$ pod spec lint --quick
 ```
 
 ### Release
@@ -50,7 +50,7 @@ $ cd ~/code/Pods/NAME
 $ edit NAME.podspec
 # set the new version to 0.0.1
 # set the new tag to 0.0.1
-$ pod spec lint --local
+$ pod spec lint --quick
 
 $ git add -A && git commit -m "Release 0.0.1."
 $ git tag '0.0.1'
