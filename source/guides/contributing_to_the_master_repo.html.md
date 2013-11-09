@@ -4,7 +4,7 @@ The master repo contains specifications of open-source Objective-C libraries.
 
 ### Details
 
-- installation path: `~/.cocoapods/master`
+- installation path: `~/.cocoapods/repos/master`
 - home: https://github.com/CocoaPods/Specs
 
 ### Contributing
