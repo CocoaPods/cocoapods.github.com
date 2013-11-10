@@ -158,7 +158,7 @@ end
 #
 desc "deploy build directory to github pages"
 task :deploy do
-  puts "\e[1;33mDeploying branch to master brach\e[0m"
+  puts "\e[1;33mDeploying branch to master branch\e[0m"
   cd "build" do
     sh "git pull"
     sh "git add ."
