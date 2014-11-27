@@ -1,7 +1,7 @@
-cocoapods.github.com
+cocoapods.github.com (deprecated)
 ====================
 
-User and developer documentation for CocoaPods.
+User and developer documentation for the old CocoaPods website, now being dealt with by the [CocoaPods Guides](http://guides.cocoapods.org).
 
 ## Information Sources
 
